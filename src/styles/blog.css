@@ -1,0 +1,132 @@
+.blog-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  font-family: 'Rubik', sans-serif;
+  padding: 0px 10px;
+}
+
+.blog-header__title {
+  font-family: 'Rubik', sans-serif;
+  font-size: 50px;
+  color: #333;
+  margin-top: 100px;
+  margin-bottom: 48px;
+}
+
+.blog-categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blog-categories__category {
+  border: 1px solid #f93;
+  background-color: transparent;
+  padding: 9px 30px;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  color: #ff8000;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color .15s, color .15s;
+}
+
+.blog-categories__category.selected {
+  background-color: #f93;
+  color: white;
+}
+
+.blog-categories__category:not(.selected):hover {
+  background-color: rgba(255, 153, 51, .1);
+}
+
+.blog-categories__category:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+/* home page blog card styles */
+.blog-post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 380px);
+  justify-content: center;
+  max-width: 1140px;
+  margin: 32px auto;
+  opacity: 1;
+  transition: opacity .15s;
+}
+
+.blog-post-list.hidden {
+  opacity: 0;
+}
+
+.blog-card {
+  margin: 10px;
+  text-decoration: none;
+}
+
+.blog-card:hover {
+  text-decoration: none;
+}
+
+.blog-card:hover .blog-card__title {
+  color: var(--color-primary);
+}
+
+.blog-card__image {
+  width: 360px;
+  height: 160px;
+  border-radius: 4px;
+}
+
+.blog-card__date {
+  margin: 24px 0px 0px;
+  font-weight: 500;
+  color: #808080;
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.blog-card__title {
+  color: #222;
+  font-size: 21px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  line-height: 27px;
+  margin: 8px 0px 16px;
+}
+
+.blog-card__excerpt {
+  color: #222;
+  font-size: 14px;
+  font-family: 'Rubik', sans-serif;
+  margin: 0px;
+}
+
+/* media queries for Mobile device size */
+@media screen and (max-width: 480px) {
+  .blog-header__title {
+    font-size: 35px;
+  }
+
+  .blog-post-list {
+    grid-template-columns: 300px;
+    padding: 0px 10px;
+  }
+
+  .blog-card {
+    margin: 0px auto 10px;
+  }
+  
+  .blog-card__image {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .blog-post-list {
+    justify-content: flex-start;
+  }
+}
