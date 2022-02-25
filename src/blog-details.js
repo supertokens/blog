@@ -1,4 +1,4 @@
-export const webflowBlogsList = [
+module.exports = [
   {
     fields: {
       slug: "/revoking-access-with-a-jwt-blacklist",
