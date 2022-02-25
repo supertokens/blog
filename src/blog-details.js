@@ -25,18 +25,6 @@ module.exports = [
   },
   {
     fields: {
-      slug: "/adding-social-login-to-your-website-with-supertokens",
-    },
-    frontmatter: {
-      title: "Adding social login to your website with SuperTokens (custom UI only)",
-      description: "This blog walks you through integrating your frontend with social login APIs provided by SuperTokens.",
-      category: "programming",
-      date: "January 26, 2022",
-      cover: "adding-social-login-to-your-website-with-supertokens.png"
-    }
-  },
-  {
-    fields: {
       slug: "/how-to-customise-supertokens-apis",
     },
     frontmatter: {
