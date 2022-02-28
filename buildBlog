@@ -1,0 +1,62 @@
+#!/bin/bash
+
+GREEN='\033[32m'
+RED='\033[0;31m'
+NC='\033[0m' # No color
+
+# check if the blog should be built for supertokens backend
+target="blog_server"
+while getopts ":hg" opt; do
+  case ${opt} in
+  h)
+    echo "Usage:"
+    echo "To build for local blog server run ./buildBlog"
+    echo "To build for main website run ./buildBlog -g"
+    exit 0
+    ;;
+  g)
+    target="supertokens_backend"
+    ;;
+  \?)
+    echo "Invalid Option: -$OPTARG" 1>&2
+    echo "Usage:"
+    echo "To build for local blog server run ./buildBlog"
+    echo "To build for main website run ./buildBlog -g"
+    exit 1
+    ;;
+  esac
+done
+shift $((OPTIND - 1))
+
+# build the blog
+echo -e "${GREEN}Building blog...${NC}"
+
+npm run build >/dev/null 2>/dev/null
+doesBuild=$?
+
+if [ $doesBuild -ne 0 ]
+then
+  echo -e "${RED}Blog build failed.${NC}"
+  exit 1
+fi
+
+if [ "$target" = "blog_server" ]
+then
+  echo -e "${GREEN}Blog built successfully.${NC}"
+fi
+
+if [ "$target" = "supertokens_backend" ]
+then
+  cd ..
+  currentDir=$(pwd)
+
+  # check if the blog directory exists
+  if [ ! -d supertokens-backend-website/app/blog ]; then
+    mkdir supertokens-backend-website/app/blog
+  fi
+
+  # remove all the files of old blog and replace with newly built blog
+  rm -rf supertokens-backend-website/app/blog/*
+  cp -r blog/public/* supertokens-backend-website/app/blog/
+  echo -e "${GREEN}Blog built successfully and moved to supertokens-backend-website.${NC}"
+fi
