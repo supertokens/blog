@@ -1,7 +1,8 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Bio = () => {
+const Bio = ({ discordButtonId }) => {
+
   return (
     <>
       <div className="bio">
@@ -20,7 +21,7 @@ const Bio = () => {
           Written by the Folks at SuperTokens — hope you enjoyed! We are always available on our Discord server. Join us if you have any questions or need any help.
         </p>
       </div>
-      <a href="/discord">
+      <a id={discordButtonId} href="/discord">
         <img
           src="/discord.png"
           formats={["auto", "webp", "avif"]}

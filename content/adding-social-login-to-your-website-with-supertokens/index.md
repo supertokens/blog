@@ -5,6 +5,7 @@ description: "This blog walks you through integrating your frontend with social 
 cover: "adding-social-login-to-your-website-with-supertokens.png"
 category: "programming"
 author: "SuperTokens Team"
+discord_button_id: "discord_adding_social_login_to_website_with_supertokens"
 ---
 
 This tutorial walks you through integrating your frontend with social login APIs provided by SuperTokens.
