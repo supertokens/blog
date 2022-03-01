@@ -12,7 +12,7 @@ jobs:
       - node/install-packages:
           app-dir: '~/project'
       - run: cd ../ && git clone git@github.com:supertokens/supertokens-backend-website.git
-      - run: cd blog && ./buildBlog -g
+      - run: cd ~/project && ./buildBlog -g
       - run: git config --global user.email "$EMAIL"
       - run: git config --global user.name "$NAME"
       - run: cd ../supertokens-backend-website && git add --all && git commit -m "blog build" && git push && ./releaseDev.sh

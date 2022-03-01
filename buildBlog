@@ -40,15 +40,12 @@ then
   exit 1
 fi
 
-if [ "$target" = "blog_server" ]
-then
-  echo -e "${GREEN}Blog built successfully.${NC}"
-fi
+echo -e "${GREEN}Blog built successfully.${NC}"
 
 if [ "$target" = "supertokens_backend" ]
 then
+  projectDir=$(pwd)
   cd ..
-  currentDir=$(pwd)
 
   # check if the blog directory exists
   if [ ! -d supertokens-backend-website/app/blog ]; then
@@ -57,6 +54,6 @@ then
 
   # remove all the files of old blog and replace with newly built blog
   rm -rf supertokens-backend-website/app/blog/*
-  cp -r blog/public/* supertokens-backend-website/app/blog/
-  echo -e "${GREEN}Blog built successfully and moved to supertokens-backend-website.${NC}"
+  cp -r $projectDir/public/* supertokens-backend-website/app/blog/
+  echo -e "${GREEN}Blog moved to supertokens-backend-website.${NC}"
 fi
