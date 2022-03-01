@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link, withPrefix } from "gatsby"
+import { withPrefix } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"

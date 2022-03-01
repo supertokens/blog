@@ -10,14 +10,15 @@ Clone the project by running the following command
 git clone https://github.com/supertokens/blog.git
 ```
 
-Once it is cloned, install the dependencies
+Once it is cloned, install the dependencies and run the site
 
 ```sh
 cd blog
 npm install
+npm start
 ```
 
-To start the project, do `npm start`.
+Visit `http://localhost:8000/blog` to see the blog.
 
 ## Adding blog posts
 All the blog posts exist inside their own directory in the `content` directory present at the root of this project. The name of the posts' director serves as the slug for the blog post. For example, to have a post at the route `/blog/my-new-blog-post`, we create a directory named `my-new-blog-post` inside the `content` directory and add all the post-related content inside this directory.
