@@ -8,7 +8,6 @@ import Seo from "../components/seo"
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  console.log(post.frontmatter)
 
   return (
     <Layout location={location} title={siteTitle}>
