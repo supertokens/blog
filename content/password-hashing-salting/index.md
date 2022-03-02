@@ -2,7 +2,7 @@
 title: How to hash, salt, and verify passwords in NodeJS, Python, Golang, and Java
 date: "2022-03-02"
 description: "How to hash and salt passwords in different languages and why it's important to do so"
-cover: "TODO.png"
+cover: "password_hashing_and_salting.png"
 category: "programming"
 author: "SuperTokens Team"
 discord_button_id: "discord_password_hashing_salting"
