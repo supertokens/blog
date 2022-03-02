@@ -1,0 +1,19 @@
+name: File checks
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  yarn_lock_check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Check if yarn.lock exists
+      run: |
+        if [ -f yarn.lock ]
+        then
+        echo "yarn.lock exists."
+        exit 1
+        fi
