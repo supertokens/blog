@@ -17,6 +17,8 @@ export default function HTML(props) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&amp;display=swap" rel="stylesheet"></link>
+        <link href="/static/webflow/home/css/normalize.css" rel="stylesheet" type="text/css" />
+        <link href="/static/webflow/home/css/webflow.css" rel="stylesheet" type="text/css" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
@@ -32,6 +34,7 @@ export default function HTML(props) {
         <div id="supertokens-webflow-footer"></div>
         <script src="/static/bundle.js" type="text/javascript"></script>
         <script src="/static/antcs.js" type="text/javascript"></script>
+        <script src="/static/drift.js" type="text/javascript"></script>
       </body>
     </html>
   )

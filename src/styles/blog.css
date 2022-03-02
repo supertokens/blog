@@ -71,7 +71,7 @@
 }
 
 .blog-card:hover .blog-card__title {
-  color: var(--color-primary);
+  color: var(--gatsbyColor-primary);
 }
 
 .blog-card__image {
