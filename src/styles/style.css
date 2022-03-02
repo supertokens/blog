@@ -185,6 +185,7 @@ ul li,
 ol li {
   padding-left: var(--gatsbySpacing-0);
   margin-bottom: calc(var(--gatsbySpacing-8) / 2);
+  line-height: var(--gatsbyLineHeight-relaxed);
 }
 
 li > p {
@@ -202,13 +203,13 @@ li > ul {
 
 blockquote {
   color: var(--gatsbyColor-text-light);
-  margin-left: 0px;
-  margin-right: var(--gatsbySpacing-8);
-  padding: var(--gatsbySpacing-0) var(--gatsbySpacing-0) var(--gatsbySpacing-0) var(--gatsbySpacing-4);
-  border-left: var(--gatsbySpacing-1) solid var(--gatsbyColor-primary);
+  background-color: rgba(255, 153, 51, .16);
+  border-radius: var(--gatsbySpacing-1);
+  border: 1px solid rgba(255, 153, 51, .3);
+  padding: var(--gatsbySpacing-3) var(--gatsbySpacing-4);
   font-size: var(--gatsbyFontSize-1);
   font-style: italic;
-  margin-bottom: var(--gatsbySpacing-8);
+  margin: 0px 0px var(--gatsbySpacing-8);
 }
 
 blockquote > :last-child {
@@ -338,18 +339,14 @@ a:focus {
 /* Media queries */
 
 @media (max-width: 42rem) {
-  blockquote {
-    padding: var(--gatsbySpacing-0) var(--gatsbySpacing-0) var(--gatsbySpacing-0) var(--gatsbySpacing-4);
-    margin-left: var(--gatsbySpacing-0);
-  }
   ul,
   ol {
     list-style-position: inside;
   }
 }
 
-:not(pre) > code.language-text {
-  word-break: break-all !important;
+:not(pre) > code.language-text, .footnote-list-item code {
+  word-break: break-word !important;
   background-color: #f2f2f2 !important;
   color: #d65078 !important;
   padding-left: 4px !important;
