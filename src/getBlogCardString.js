@@ -1,7 +1,14 @@
 module.exports = function (post) {
+  // if the url or slug of the post has a trailing '/'
+  // we remove it
+  let href = post.fields.slug ? `/blog${post.fields.slug}` : post.fields.url;
+  if (href.endsWith("/")) {
+    href = href.substring(0, href.length - 1);
+  }
+
   try {
     const renderedPost = `
-      <a href="${post.fields.slug ? `/blog${post.fields.slug}` : post.fields.url}" class="blog-card">
+      <a href="${href}" class="blog-card">
         <img
           src="${"/covers/" + post.frontmatter.cover}"
           alt="Blog cover"
