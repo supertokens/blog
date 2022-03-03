@@ -74,10 +74,19 @@
   color: var(--gatsbyColor-primary);
 }
 
-.blog-card__image {
+.blog-card__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   width: 360px;
   height: 160px;
   border-radius: 4px;
+}
+
+.blog-card__image {
+  min-height: 100%;
+  width: 100%;
 }
 
 .blog-card__date {

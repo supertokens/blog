@@ -33,24 +33,28 @@ const BlogHomeTemplate = (props) => {
 
         <div className="blog-categories">
           <button
+            id="tab-1-id"
             className={`blog-categories__category ${selectedCategory === "all" && "selected"}`}
             onClick={() => updateCategory("all")}
-          >
+            >
             All
           </button>
           <button
+            id="tab-2-id"
             className={`blog-categories__category ${selectedCategory === "sessions" && "selected"}`}
             onClick={() => updateCategory("sessions")}
-          >
+            >
             Sessions
           </button>
           <button
+            id="tab-3-id"
             className={`blog-categories__category ${selectedCategory === "featured" && "selected"}`}
             onClick={() => updateCategory("featured")}
-          >
+            >
             Featured
           </button>
           <button
+            id="tab-4-id"
             className={`blog-categories__category ${selectedCategory === "programming" && "selected"}`}
             onClick={() => updateCategory("programming")}
           >
