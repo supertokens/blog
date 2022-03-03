@@ -1,4 +1,5 @@
 # Related Issue
+Link to the Github Issue created for this blog post
 
 # Checklist
 - [ ] Has cover image been added
