@@ -22,6 +22,7 @@ labels:
 - [ ] Adding to sitemap.xml
 - [ ] Release on test
     - [ ] Check landscape and portrait view of blog 
+- [ ] Check for SEO (via SEO agent)
 - [ ] Release to prod
 - [ ] Clone the blog on
    - [ ] Medium

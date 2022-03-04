@@ -5,6 +5,7 @@ Link to the Github Issue created for this blog post
 - [ ] Has cover image been added
 - [ ] Have all content images been added. Do they render correctly? (aspect ratio etc)
 - [ ] The code inside code blocks gives no errors
+- [ ] Check for SEO keyword?
 
 # Remaining TODOs
 - [ ] ...
