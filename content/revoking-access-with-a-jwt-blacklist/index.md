@@ -1,7 +1,7 @@
 ---
-title: Revoking Access with a JWT Blacklist/Deny List
+title: Revoking Access to JWT tokens with a Blacklist/Deny List
 date: "2022-02-10"
-description: "Learn how to maintain a JWT blacklist / deny list using an in-memory data cache"
+description: "Learn how to maintain a JWT token blacklist / deny list using an in-memory data cache"
 cover: "revoking-access-with-a-jwt-blacklist.png"
 category: "programming"
 author: "SuperTokens Team"
@@ -10,7 +10,41 @@ discord_button_id: "discord_end_of_blog_jwt_blacklisting"
 
 Depending on who you listen to, JWTs are either a panacea for all your authentication problems or should be avoided like the plague. We're in two minds here at SuperTokens.
 
-## Advantages of JWTs
+## What is a JWT token?
+A JWT, or JSON Web Token, is a string / token issued by the server that asserts properties contained in its "payload". Its most common use case is for authentication (OAuth 2.0 + Open ID Connect) and session management.
+
+As the name suggests, a JWT can contain any information inside it in JSON form. This is also known as "JWT claims". For example, for session management, the JSON would at least need to contain the logged in user's `userId`:
+```json
+{
+    "userId": "...",
+    "expiry": 1646472008501,
+    ...
+}
+```
+
+If the JWT containing this information needs to expire, the JSON can also contain the token's expiry time (as shown above). There is also a [convention for the names](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1) of the keys to these fields. In our example above those are:
+- `userId` -> `sub`
+- `expiry` -> `exp`
+
+Taking an example of the login process, a JSON containing the above information will be sent to the client, and then on each request, the client can send this JSON back to the server. This way, the server knows which userID is querying its APIs. If the JSON has expired, then the server can reject the request, and the user must login again.
+
+However, from a security point of view, it's very easy for the client to change the `userId` value in the JSON and spoof being another user. To prevent this, the server sends the original JSON's "signature" along with the JSON. This "signature" is created using a secret that is known only by the server, so the client cannot create a signature of a JSON by itself. Therefore, if the client changes the JSON, the server will fail to match the original JSON's signature with the incoming / changed JSON's signature (this is known as verifying the signature) and can then reject the request.
+
+There are several algorithms that a server can use to generate a signature for a JSON:
+- HMAC + SHA256
+- RSASSA-PKCS1-v1_5 + SHA256
+- ECDSA + P-256 + SHA256
+
+The signing method chosen to create the signature must somehow be encoded in the JWT so that the same method is used when verifying the signature.
+
+All in all, a JWT contains three parts:
+- The header string containing information about the signing algorithm used.
+- The body string containing the actual JSON.
+- The signature string that can be used to verify that the JWT has not been changed by the client.
+
+These three sections are concatenated with a `.` separator to form the full JWT Token. An example JWT can be later seen in this blog post. 
+
+## Advantages of JWT Tokens
 The JWT approach certainly has its advantages over opaque tokens. JWTs are:
 
 - **Self-contained**: The JWT can contain the user's details (not just a session ID, like a cookie but other custom data such as user name and even permissions), together with the token's expiry time so you don't need to query a database for that information. This is completely unlike an opaque token which, by its very nature, is just a meaningless jumble of alphanumeric characters.
@@ -18,7 +52,7 @@ The JWT approach certainly has its advantages over opaque tokens. JWTs are:
 - **Stored only on the client**: You generate JWTs on the server and send them to the client. The client then submits the JWT with every request. This saves database space.
 - **Efficient**: It’s quick to verify a JWT, because it doesn’t require a database lookup.
 
-## Disadvantages of JWTs
+## Disadvantages of JWT Tokens
 The fact that JWTs are only stored client-side leads to a fundamental disadvantage with JWTs. And that is: how do you revoke a user's access?
 
 Sure, JWTs have an expiry time and this can be as short-lived as you like. As soon as the access token expires however, the JWT is invalid and the client must re-authenticate with your server. This, of course, has a negative effect on the user experience.. 
@@ -128,7 +162,7 @@ const authenticateToken = async (request, response, next) => {
     const inDenyList = await redisClient.get(`bl_${token}`);
     if (inDenyList) {
         return response.status(401).send({
-            message: "Token in deny list",
+            message: "JWT Rejected",
         });
     }
 
@@ -175,7 +209,7 @@ curl --location --request GET 'http://localhost:3000/' \
 --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRlcmVrIiwiaWF0IjoxNjQxMzA4NTQwLCJleHAiOjE2NDEzMTIxNDB9.nlJJe7XtK3PJVgvjevrHabeImqJyRoUDiXejDhVK5yM'
 ```
 
-Now the user’s JWT is technically still valid (until it expires), but now it’s in the blacklist/deny list and will therefore be intercepted on subsequent requests. Repeat the `POST` request to the home route above and you’ll get an HTTP 403 Forbidden error, with a message `"Token in deny list"`.
+Now the user’s JWT is technically still valid (until it expires), but now it’s in the blacklist/deny list and will therefore be intercepted on subsequent requests. Repeat the `POST` request to the home route above and you’ll get an HTTP 403 Forbidden error, with a message `"JWT Rejected"`.
 
 However, this won’t help if you want to deny access to a user who hasn’t logged out and whose token is still valid. The problem is that you won’t know what the user’s access token is at that time, and therefore you won’t know what to put in the cache. 
 
