@@ -8,6 +8,9 @@ A description of what problem we intend to solve with this PR
 A description of how we intend to solve the problem discussed above
 
 ## Summary of changes
+
+## Related issue:
+- ...
 ### Feature updates
 - Feature update description
 
