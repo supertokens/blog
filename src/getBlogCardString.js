@@ -9,11 +9,13 @@ module.exports = function (post) {
   try {
     const renderedPost = `
       <a href="${href}" class="blog-card">
-        <img
-          src="${"/covers/" + post.frontmatter.cover}"
-          alt="Blog cover"
-          class="blog-card__image"
-        />
+        <div class="blog-card__image-container">
+          <img
+            src="${"/covers/" + post.frontmatter.cover}"
+            alt="Blog cover"
+            class="blog-card__image"
+          />
+        </div>
         <p class="blog-card__date">${post.frontmatter.date}</p>
         <p class="blog-card__title">${post.frontmatter.title}</p>
         <p class="blog-card__excerpt">${post.frontmatter.description || post.excerpt}</p>
