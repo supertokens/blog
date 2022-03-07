@@ -74,18 +74,14 @@
 .blog-card__image-container {
   overflow: hidden;
   width: 360px;
-  padding-top: 52.5%;
+  height: 189px;
   border-radius: 4px;
-  position: relative;
 }
 
 .blog-card__image {
+  height: 100%;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  object-fit: cover;
 }
 
 .blog-card__date {
@@ -130,6 +126,7 @@
   
   .blog-card__image-container {
     width: 300px;
+    height: 158px;
   }
 }
 
