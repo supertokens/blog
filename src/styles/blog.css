@@ -74,7 +74,7 @@
 .blog-card__image-container {
   overflow: hidden;
   width: 360px;
-  height: calc(360px / 1.904); /* calculate the width using the aspect ratio 1.904 */
+  height: calc(360px / 1.9); /* calculate the width using the aspect ratio 1.9 */
   border-radius: 4px;
 }
 
@@ -126,7 +126,7 @@
   
   .blog-card__image-container {
     width: 300px;
-    height: calc(300px / 1.904); /* calculate the width using the aspect ratio 1.904 */
+    height: calc(300px / 1.9); /* calculate the width using the aspect ratio 1.9 */
   }
 }
 
