@@ -9,8 +9,5 @@ Link to the Github Issue created for this blog post
 - [ ] Added call to action to link to supertokens and to link to other blogs.
 - [ ] Add reference to how SuperTokens solves this blog's problem (if relevant).
 
-# Related issue (optional):
-- ...
-
 # Remaining TODOs
 - [ ] ...
