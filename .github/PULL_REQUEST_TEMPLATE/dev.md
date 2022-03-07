@@ -9,8 +9,6 @@ A description of how we intend to solve the problem discussed above
 
 ## Summary of changes
 
-## Related issue:
-- ...
 ### Feature updates
 - Feature update description
 
