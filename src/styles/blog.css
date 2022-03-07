@@ -72,18 +72,20 @@
 }
 
 .blog-card__image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   width: 360px;
-  height: 160px;
+  padding-top: 52.5%;
   border-radius: 4px;
+  position: relative;
 }
 
 .blog-card__image {
-  min-height: 100%;
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .blog-card__date {
