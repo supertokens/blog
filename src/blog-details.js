@@ -1,18 +1,6 @@
 module.exports = [
   {
     fields: {
-      slug: "/revoking-access-with-a-jwt-blacklist",
-    },
-    frontmatter: {
-      title: "Revoking Access with a JWT Blacklist/Deny List",
-      description: "Learn how to maintain a JWT blacklist / deny list using an in-memory data cache",
-      category: "programming",
-      date: "February 10, 2022",
-      cover: "revoking-access-with-a-jwt-blacklist.png"
-    }
-  },
-  {
-    fields: {
       slug: "/how-to-set-up-social-and-email-password-login-with-reactjs",
     },
     frontmatter: {
