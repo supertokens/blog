@@ -91,4 +91,35 @@ Finally, we append the generated secret like `<header>.<body>.<secret>` to creat
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJhYmNkMTIzIiwiZXhwaXJ5IjoxNjQ2NjM1NjExMzAxfQ.3Thp81rDFrKXr3WrY1MyMnNK8kKoZBX9lg-JwFznR-M
 ```
 
+### 6) Verifying the JWT
+
+Once the client sends the JWT back to the server, the server does the following steps:
+- Fetches the header part of the JWT (`eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9`).
+- Does base64 decoding on it to get the plain text JSON: `{"typ":"JWT","alg":"HS256"}`
+- Verifies that the `typ` field's value is `JWT` and the `alg` is `HS256`. If not, it would reject the JWT.
+- Fetches its secret key and runs the same `Base64URLSafe(HMACSHA256(...))` operation as step number (4) on the header and body of the incoming JWT. Note that if the incoming JWT's body is different, this step will generate a different signature than in step (4).
+- Checks that the generated signature is the same as what signature in the incoming JWT. If it's not, then the JWT is rejected.
+- We base64 decode the body of the JWT (`eyJ1c2VySWQiOiJhYmNkMTIzIiwiZXhwaXJ5IjoxNjQ2NjM1NjExMzAxfQ`) to give us `{"userId":"abcd123","expiry":1646635611301}`.
+- We reject the JWT is the current time (in milliseconds) is greater then the JSON's `expiry` time (since the JWT as expired).
+
+We can trust the incoming JWT only if it passes all of the checks above.
+
+> To summarize, a JWT is a token that is sent from the server to the client, so that the client can be identified in a secure and trusted manner when making API calls. The security and trust comes due to the signing and verification process.
+
+## What is OAuth?
+OAuth is a protocol that is used to authenticate a user via an authentication server. As part of the protocol, it issues a JWT which can be used by the client application to verify the identity of the user that authenticated themselves by logging into the authentication server.
+
+> We will be focusing on OAuth version 2.0 in this article as that is the most widely used (as of this writing).
+
+## Why do we need a protocol?
+An industry standard protocol allows the decoupling of the auth logic between the client application and the authentication server. This means that anyone, or any company, can write their own authentication server and as long as it follows the OAuth 2.0 protocol, any client, or app, that follows it too can easily integrate with the auth server. This enables apps to integrate easily with services like sign in with Google, Facebook etc.
+
+## How does it work?
+Before we can get into details about this, we must define a few terms:
+- **Resource Owner** — This is the end user who is using your application.
+- **Resource Server** — This is your application's API layer. The objective of OAuth is to let your application's APIs securely identify the end user, or the Resource Owner.
+- **Client** — This is your application's frontend that queries your application's backend / Resource Server.
+- **Authorization Server** — This is a server responsible for accepting credentials from the end user or Resource Owner. It checks if they entered the right credentials and it generates a JWT that can be verified and consumed by the Resource Server. The JWT contains information about who the Resource Owner is (like their `userId`). 
+
+
 [^1]: Please do not use this key in your application, since this is public
