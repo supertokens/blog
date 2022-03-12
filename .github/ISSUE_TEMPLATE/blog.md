@@ -1,10 +1,12 @@
 ---
 name: Blog
-about: Blog post checklist
+about: Blog post checklist and gdoc link
 labels:
 ---
 
-# Checklist
+## Link to google doc
+
+## Checklist
 
 - [ ] Define the outcome (value) that the post will have for the reader (i.e. what will they learn or gain)
 - [ ] Who is it for? (i.e. someone building auth - junior / senior, previous knowledge required etc, specific tech stacks)
