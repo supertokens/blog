@@ -2,7 +2,7 @@
 title: "OAuth vs JWT (JSON Web Tokens) Token: An In-Depth Comparison"
 date: "2022-03-07"
 description: "Learn about the difference between JWT Token and OAuth"
-cover: "TODO.png"
+cover: "oauth_vs_jwt.png"
 category: "sessions"
 author: "SuperTokens Team"
 discord_button_id: "discord_oauth_vs_jwt"
@@ -17,7 +17,7 @@ On a high level, OAuth is a protocol that is used to authenticate a user via an 
 
 Visually, the process looks like this:
 
-<TODO: OAuth protocol diagram>
+![OAuth_JWT_Flow](./flow_oauth_vs_jwt.png)
 
 ### When to use OAuth?
 This protocol is meant to be used when your application (the "Client") needs to authenticate the end user (the "Resource Owner") using an authentication provider (the "Authorization Server"). For example, when you implement Sign in wih Google, you are using the OAuth 2.0 protocol.
