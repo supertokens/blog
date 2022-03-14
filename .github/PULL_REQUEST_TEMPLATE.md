@@ -1,6 +1,9 @@
 # Related Issue
 Link to the Github Issue created for this blog post
 
+# Link to Google Doc
+TODO
+
 # Checklist
 - [ ] Has cover image been added
 - [ ] Have all content images been added. Do they render correctly? (aspect ratio etc)
