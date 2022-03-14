@@ -11,10 +11,10 @@ export default function ({page, logSuccess, logFailure}: Parameters): Promise<bo
     try {
       const canonical = await page.$("link[rel=\"canonical\"]");
       if (canonical === null || canonical === undefined) {
-        logFailure("no canonical link provided");
+        logFailure("no canonical link present");
         resolve(false);
       } else {
-        logSuccess("canonical link provided");
+        logSuccess("canonical link present");
         resolve(true);
       }
     } catch (error) {

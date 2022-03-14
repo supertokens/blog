@@ -149,8 +149,8 @@ async function testHtmlPages (parent: string, currentDirectory: string) {
 }
 
 function printTestResults () {
-  console.log(`\n\t${GREEN} Total ${successfulTests} tests passed.`);
-  console.log(`\t${RED} Total ${failedTests} tests failed.`);
+  console.log(`\n\t${GREEN} Total ${successfulTests} tests passed.${RESET}`);
+  console.log(`\t${RED} Total ${failedTests} tests failed.${RESET}`);
 }
 
 // create the puppeteer browser and initiate tests

@@ -1,0 +1,20 @@
+name: Run SEO Tests
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  run_seo_tests:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Setup node
+      uses: actions/setup-node@v2
+    - name: Install dependencies in the root project
+      run: npm install
+    - name: Install dependencies in the seo test project
+      run: cd seo; npm install; cd ..
+    - name: Run SEO tests
+      run: ./verifySeo

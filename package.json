@@ -6,6 +6,7 @@
   "author": "",
   "dependencies": {
     "gatsby": "^4.7.1",
+    "gatsby-plugin-canonical-urls": "^4.9.0",
     "gatsby-plugin-gatsby-cloud": "^4.7.0",
     "gatsby-plugin-image": "^2.7.0",
     "gatsby-plugin-react-helmet": "^5.7.0",
@@ -40,7 +41,7 @@
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
   "scripts": {
-    "build": "gatsby build",
+    "build": "npm run clean && gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
