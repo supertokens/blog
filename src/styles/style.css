@@ -430,6 +430,7 @@ a:focus {
   width: fit-content;
 }
 
+/* footnote styles */
 sup > .footnote-ref::before {
   content: "[";
   display: inline-block;
@@ -438,4 +439,13 @@ sup > .footnote-ref::before {
 sup > .footnote-ref::after {
   content: "]";
   display: inline-block;
+}
+
+.footnotes > ol {
+  padding-left: 16px;
+}
+
+.footnotes > ol > li {
+  font-style: italic;
+  margin-bottom: var(--gatsbySpacing-5);
 }
