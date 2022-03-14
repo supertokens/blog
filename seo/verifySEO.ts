@@ -73,6 +73,11 @@ const minimal_args = [
   "--use-mock-keychain"
 ];
 
+// directory to be tested, and it's absolute and relative path
+const testedDir = "public/blog";
+const testedDirRelativePath = `../${testedDir}`;
+const testedDirAbsolutePath = path.join(__dirname, testedDirRelativePath);
+
 /**
  * returns lists of HTML files and directories in a specific directory
  * @param parent path of the parent directory
@@ -128,7 +133,9 @@ async function testHtmlPages (parent: string, currentDirectory: string) {
 
         for (const file of files) {
           const filePath = path.join(pathToDirectory, file.name);
-          console.log("\n\t📄 %s", filePath);
+          const filePathInsideTestedDir = filePath.split(testedDirAbsolutePath)[1];
+
+          console.log("\n\t📄 %s", filePathInsideTestedDir);
           await runTestsOnPage(filePath);
         }
       }
@@ -149,15 +156,20 @@ async function testHtmlPages (parent: string, currentDirectory: string) {
 }
 
 function printTestResults () {
-  console.log(`\n\t${GREEN} Total ${successfulTests} tests passed.${RESET}`);
-  console.log(`\t${RED} Total ${failedTests} tests failed.${RESET}`);
+  console.log(`\n${GREEN}Total ${successfulTests} tests passed.${RESET}`);
+
+  if (failedTests > 0) {
+    console.log(`${RED}Total ${failedTests} tests failed.${RESET}`);
+  } else {
+    console.log(`Total ${failedTests} tests failed.`);
+  }
 }
 
 // create the puppeteer browser and initiate tests
 // close it once the tests are done
 (async () => {
   try {
-    console.log("⏳ Spinning up a browser...");
+    console.log("\n⏳ Spinning up a browser...");
 
     browser = await puppeteer.launch({
       headless: true,
@@ -167,13 +179,15 @@ function printTestResults () {
 
     console.log("🚀 Browser started.");
 
-    await testHtmlPages(__dirname, "../public/blog");
+    console.log("\n📁 %s", testedDir);
+
+    await testHtmlPages(__dirname, testedDirRelativePath);
 
     printTestResults();
 
     await browser.close();
 
-    console.log(`\n👋 Browser closed.`);
+    console.log(`\n👋 Browser closed.\n`);
 
     if (failedTests > 0) {
       process.exitCode = 1;
