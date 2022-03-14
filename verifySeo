@@ -1,0 +1,21 @@
+#!/bin/bash
+
+currentDir=$(pwd)
+
+./buildBlog
+didBuildPass=$?
+
+if [ $didBuildPass -ne 0 ]; then
+  echo "Build failed. Aborting tests."
+  exit 1
+fi
+
+npx ts-node seo/verifySEO.ts
+didTestsPass=$?
+
+if [ $didTestsPass -ne 0 ]; then
+  echo "SEO tests failed."
+  exit 1
+fi
+
+echo "All SEO tests passed 🎉"
