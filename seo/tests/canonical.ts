@@ -1,3 +1,6 @@
+/**
+ * Test if the page has a canonical link defined
+ */
 import { Page } from "puppeteer";
 
 interface Parameters {

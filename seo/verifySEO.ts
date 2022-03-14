@@ -9,6 +9,7 @@ import { Browser, Page } from "puppeteer";
 
 // tests
 import canonicalTest from "./tests/canonical";
+import h1TagCheck from "./tests/single-h1";
 
 // console log colors
 const RESET = "\x1b[0m";
@@ -114,7 +115,17 @@ function runTestsOnPage (path: string) {
   return new Promise(async (resolve, reject) => {
     try {
       await page.goto(`file://${path}`);
-      await canonicalTest({page, logSuccess, logFailure});
+
+      const testParameters = {
+        page,
+        logSuccess,
+        logFailure
+      };
+
+      // tests to run on this page
+      await canonicalTest(testParameters);
+      await h1TagCheck(testParameters);
+
       resolve(true);
     } catch (error) {
       reject(error);
