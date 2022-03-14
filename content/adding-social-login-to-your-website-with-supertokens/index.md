@@ -143,6 +143,6 @@ Furthermore, our frontend SDK handles these session tokens for you automatically
 
 These features are a part of the session recipe that you initialised when following the quick setup guide.
 
-<h2 id="last-section-social-login-with-supertokens">Conclusion</h2>
+<h4 id="last-section-social-login-with-supertokens">Conclusion</h4>
 
 We have seen how to integrate your custom UI with the social login API exposed by SuperToken’s backend SDK. It involves calling the GET `/authorisationurl` and the POST `/signinup` API. Furthermore, we see that on successful login, we are issued cookie based session tokens which are handled automatically via our frontend SDK.

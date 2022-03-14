@@ -28,7 +28,7 @@ const BlogPostTemplate = ({ data, location }) => {
               alt="Cover"
             />
           )}
-          <p>{post.frontmatter.date}</p>
+          <p className="blog-date">{post.frontmatter.date}</p>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           {post.frontmatter.author && (
             <p style={{
@@ -43,7 +43,6 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <hr />
         <footer>
           <Bio discordButtonId={post.frontmatter.discord_button_id} />
         </footer>
