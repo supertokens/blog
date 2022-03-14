@@ -1,6 +1,6 @@
 ---
 title: Building a login screen with React and Bootstrap
-date: "2022-03-02"
+date: "2022-03-14"
 description: "Build an elegant login screen super fast using React and Bootstrap"
 cover: "building-a-login-screen-with-react-and-bootstrap.png"
 category: "programming"
@@ -46,23 +46,20 @@ npm install –save bootstrap
 Edit `App.js` and add an import statement for bootstrap
 
 ```jsx
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css"
 ```
 
 We will also go ahead and remove the boilerplate code that the default React app adds to App.js. The file should now look like this:
 
 ```jsx
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css"
+import "./App.css"
 
 function App() {
-  return (
-    <div className="App">
-    </div>
-  );
+  return <div className="App"></div>
 }
 
-export default App;
+export default App
 ```
 
 ## Setup Routes
@@ -70,14 +67,10 @@ export default App;
 First we will create a new component Auth in Auth.js. We will work on the actual Auth component later for now we need this to set up routes.
 
 ```jsx
-import React from "react";
+import React from "react"
 
 export default function (props) {
-    return (
-        <div>
-            Auth Screen
-        </div>
-    );
+  return <div>Auth Screen</div>
 }
 ```
 
@@ -90,26 +83,22 @@ npm install --save react-router-dom
 Modify the `App.js` file to set up the default and login routes. We will show the login UI on the `/auth` route.
 
 ```jsx
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
-import Auth from "./Auth";
+import "bootstrap/dist/css/bootstrap.min.css"
+import "./App.css"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Auth from "./Auth"
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/auth' element={<Auth />} />
+        <Route path="/auth" element={<Auth />} />
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 ## Create the Login form
@@ -117,32 +106,42 @@ export default App;
 Modify `Auth.js` that we created earlier
 
 ```jsx
-import React from "react";
+import React from "react"
 
 export default function (props) {
-    return (
-        <div className="Auth-form-container">
-            <form className="Auth-form">
-                <div className="Auth-form-content">
-                    <h3 className="Auth-form-title">Sign In</h3>
-                    <div className="form-group mt-3">
-                        <label>Email address</label>
-                        <input type="email" className="form-control mt-1" placeholder="Enter email" />
-                    </div>
-                    <div className="form-group mt-3">
-                        <label>Password</label>
-                        <input type="password" className="form-control mt-1" placeholder="Enter password" />
-                    </div>
-                    <div className="d-grid gap-2 mt-3">
-                        <button type="submit" className="btn btn-primary">Submit</button>
-                    </div>
-                    <p className="forgot-password text-right mt-2">
-                        Forgot <a href="#">password?</a>
-                    </p>
-                </div>
-            </form>
+  return (
+    <div className="Auth-form-container">
+      <form className="Auth-form">
+        <div className="Auth-form-content">
+          <h3 className="Auth-form-title">Sign In</h3>
+          <div className="form-group mt-3">
+            <label>Email address</label>
+            <input
+              type="email"
+              className="form-control mt-1"
+              placeholder="Enter email"
+            />
+          </div>
+          <div className="form-group mt-3">
+            <label>Password</label>
+            <input
+              type="password"
+              className="form-control mt-1"
+              placeholder="Enter password"
+            />
+          </div>
+          <div className="d-grid gap-2 mt-3">
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
+          </div>
+          <p className="forgot-password text-right mt-2">
+            Forgot <a href="#">password?</a>
+          </p>
         </div>
-    );
+      </form>
+    </div>
+  )
 }
 ```
 
@@ -199,74 +198,104 @@ If you open the `/auth` route you should see the form
 Typically you want to allow users to register if they haven’t already. Modify the `Auth.js` component
 
 ```jsx
-import React, { useState } from "react";
+import React, { useState } from "react"
 
 export default function (props) {
-    let [authMode, setAuthMode] = useState("signin");
+  let [authMode, setAuthMode] = useState("signin")
 
-    const changeAuthMode = () => {
-        setAuthMode(authMode === "signin" ? "signup" : "signin");
-    }
+  const changeAuthMode = () => {
+    setAuthMode(authMode === "signin" ? "signup" : "signin")
+  }
 
-    if (authMode === "signin") {
-        return (
-            <div className="Auth-form-container">
-                <form className="Auth-form">
-                    <div className="Auth-form-content">
-                        <h3 className="Auth-form-title">Sign In</h3>
-                        <div className="text-center">
-                            Not registered yet? <span className="link-primary" onClick={changeAuthMode}>Sign Up</span>
-                        </div>
-                        <div className="form-group mt-3">
-                            <label>Email address</label>
-                            <input type="email" className="form-control mt-1" placeholder="Enter email" />
-                        </div>
-                        <div className="form-group mt-3">
-                            <label>Password</label>
-                            <input type="password" className="form-control mt-1" placeholder="Enter password" />
-                        </div>
-                        <div className="d-grid gap-2 mt-3">
-                            <button type="submit" className="btn btn-primary">Submit</button>
-                        </div>
-                        <p className="text-center mt-2">
-                            Forgot <a href="#">password?</a>
-                        </p>
-                    </div>
-                </form>
-            </div>
-        );
-    }
-
+  if (authMode === "signin") {
     return (
-        <div className="Auth-form-container">
-            <form className="Auth-form">
-                <div className="Auth-form-content">
-                    <h3 className="Auth-form-title">Sign In</h3>
-                    <div className="text-center">
-                        Already registered? <span className="link-primary" onClick={changeAuthMode}>Sign In</span>
-                    </div>
-                    <div className="form-group mt-3">
-                        <label>Full Name</label>
-                        <input type="email" className="form-control mt-1" placeholder="e.g Jane Doe" />
-                    </div>
-                    <div className="form-group mt-3">
-                        <label>Email address</label>
-                        <input type="email" className="form-control mt-1" placeholder="Email Address" />
-                    </div>
-                    <div className="form-group mt-3">
-                        <label>Password</label>
-                        <input type="password" className="form-control mt-1" placeholder="Password" />
-                    </div>
-                    <div className="d-grid gap-2 mt-3">
-                        <button type="submit" className="btn btn-primary">Submit</button>
-                    </div>
-                    <p className="text-center mt-2">
-                        Forgot <a href="#">password?</a>
-                    </p>
-                </div>
-            </form>
+      <div className="Auth-form-container">
+        <form className="Auth-form">
+          <div className="Auth-form-content">
+            <h3 className="Auth-form-title">Sign In</h3>
+            <div className="text-center">
+              Not registered yet?{" "}
+              <span className="link-primary" onClick={changeAuthMode}>
+                Sign Up
+              </span>
+            </div>
+            <div className="form-group mt-3">
+              <label>Email address</label>
+              <input
+                type="email"
+                className="form-control mt-1"
+                placeholder="Enter email"
+              />
+            </div>
+            <div className="form-group mt-3">
+              <label>Password</label>
+              <input
+                type="password"
+                className="form-control mt-1"
+                placeholder="Enter password"
+              />
+            </div>
+            <div className="d-grid gap-2 mt-3">
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+            </div>
+            <p className="text-center mt-2">
+              Forgot <a href="#">password?</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    )
+  }
+
+  return (
+    <div className="Auth-form-container">
+      <form className="Auth-form">
+        <div className="Auth-form-content">
+          <h3 className="Auth-form-title">Sign In</h3>
+          <div className="text-center">
+            Already registered?{" "}
+            <span className="link-primary" onClick={changeAuthMode}>
+              Sign In
+            </span>
+          </div>
+          <div className="form-group mt-3">
+            <label>Full Name</label>
+            <input
+              type="email"
+              className="form-control mt-1"
+              placeholder="e.g Jane Doe"
+            />
+          </div>
+          <div className="form-group mt-3">
+            <label>Email address</label>
+            <input
+              type="email"
+              className="form-control mt-1"
+              placeholder="Email Address"
+            />
+          </div>
+          <div className="form-group mt-3">
+            <label>Password</label>
+            <input
+              type="password"
+              className="form-control mt-1"
+              placeholder="Password"
+            />
+          </div>
+          <div className="d-grid gap-2 mt-3">
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
+          </div>
+          <p className="text-center mt-2">
+            Forgot <a href="#">password?</a>
+          </p>
         </div>
-    );
+      </form>
+    </div>
+  )
 }
 ```
 
