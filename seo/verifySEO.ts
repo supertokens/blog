@@ -1,11 +1,7 @@
 // packages
 import * as fs from "fs";
 import * as path from "path";
-import * as puppeteer from "puppeteer";
-
-// types
-import { Dirent } from "fs";
-import { Browser, Page } from "puppeteer";
+import * as cheerio from "cheerio";
 
 // tests
 import canonicalTest from "./tests/canonical";
@@ -15,10 +11,6 @@ import h1TagCheck from "./tests/single-h1";
 const RESET = "\x1b[0m";
 const GREEN = "\x1b[32m";
 const RED = "\x1b[31m";
-
-// global variables for browser and page
-let browser: Browser;
-let page: Page;
 
 // global counters for tests passed and failed.
 let successfulTests = 0;
@@ -35,45 +27,6 @@ const logSuccess = (msg: string) => {
   successfulTests++;
 };
 
-// minimal args for puppeteer
-const minimal_args = [
-  "--autoplay-policy=user-gesture-required",
-  "--disable-background-networking",
-  "--disable-background-timer-throttling",
-  "--disable-backgrounding-occluded-windows",
-  "--disable-breakpad",
-  "--disable-client-side-phishing-detection",
-  "--disable-component-update",
-  "--disable-default-apps",
-  "--disable-dev-shm-usage",
-  "--disable-domain-reliability",
-  "--disable-extensions",
-  "--disable-features=AudioServiceOutOfProcess",
-  "--disable-hang-monitor",
-  "--disable-ipc-flooding-protection",
-  "--disable-notifications",
-  "--disable-offer-store-unmasked-wallet-cards",
-  "--disable-popup-blocking",
-  "--disable-print-preview",
-  "--disable-prompt-on-repost",
-  "--disable-renderer-backgrounding",
-  "--disable-setuid-sandbox",
-  "--disable-speech-api",
-  "--disable-sync",
-  "--hide-scrollbars",
-  "--ignore-gpu-blacklist",
-  "--metrics-recording-only",
-  "--mute-audio",
-  "--no-default-browser-check",
-  "--no-first-run",
-  "--no-pings",
-  "--no-sandbox",
-  "--no-zygote",
-  "--password-store=basic",
-  "--use-gl=swiftshader",
-  "--use-mock-keychain"
-];
-
 // directory to be tested, and it's absolute and relative path
 const testedDir = "public/blog";
 const testedDirRelativePath = `../${testedDir}`;
@@ -86,8 +39,8 @@ const testedDirAbsolutePath = path.join(__dirname, testedDirRelativePath);
  * @returns an object with lists of files and directories in a directory as properties
  */
 async function getDirectoriesAndFiles (pathToDirectory: string): Promise<{
-  files: Dirent[],
-  directories: Dirent[]
+  files: fs.Dirent[],
+  directories: fs.Dirent[]
 }> {
   return new Promise((resolve, reject) => {
     try {
@@ -95,18 +48,15 @@ async function getDirectoriesAndFiles (pathToDirectory: string): Promise<{
         withFileTypes: true
       });
 
-      const files = contents.filter((item: Dirent) => item.isFile() && item.name.endsWith(".html"));
-      const directories = contents.filter((item: Dirent) => !item.isFile());
+      const files = contents.filter((item: fs.Dirent) => item.isFile() && item.name.endsWith(".html"));
+      const directories = contents.filter((item: fs.Dirent) => !item.isFile());
 
       resolve({
         files,
         directories
       });
-    } catch {
-      reject({
-        files: [],
-        directories: []
-      });
+    } catch (error) {
+      reject(error);
     }
   });
 }
@@ -114,10 +64,13 @@ async function getDirectoriesAndFiles (pathToDirectory: string): Promise<{
 function runTestsOnPage (path: string) {
   return new Promise(async (resolve, reject) => {
     try {
-      await page.goto(`file://${path}`);
+      // await page.goto(`file://${path}`);
+
+      const fileContent = fs.readFileSync(path);
+      const dom = cheerio.load(fileContent);
 
       const testParameters = {
-        page,
+        dom,
         logSuccess,
         logFailure
       };
@@ -141,7 +94,6 @@ async function testHtmlPages (parent: string, currentDirectory: string) {
 
       // html files exist
       if (files !== null && files !== undefined && files.length > 0) {
-
         for (const file of files) {
           const filePath = path.join(pathToDirectory, file.name);
           const filePathInsideTestedDir = filePath.split(testedDirAbsolutePath)[1];
@@ -160,19 +112,18 @@ async function testHtmlPages (parent: string, currentDirectory: string) {
 
       resolve(true);
     } catch (error) {
-      console.log(error);
       reject(error);
     }
   });
 }
 
 function printTestResults () {
-  console.log(`\n${GREEN}Total ${successfulTests} tests passed.${RESET}`);
+  console.log(`\n${GREEN}Total ${successfulTests} test(s) passed.${RESET}`);
 
   if (failedTests > 0) {
-    console.log(`${RED}Total ${failedTests} tests failed.${RESET}`);
+    console.log(`${RED}Total ${failedTests} test(s) failed.${RESET}`);
   } else {
-    console.log(`Total ${failedTests} tests failed.`);
+    console.log(`Total ${failedTests} test(s) failed.`);
   }
 }
 
@@ -180,15 +131,7 @@ function printTestResults () {
 // close it once the tests are done
 (async () => {
   try {
-    console.log("\n⏳ Spinning up a browser...");
-
-    browser = await puppeteer.launch({
-      headless: true,
-      args: minimal_args
-    });
-    page = await browser.newPage();
-
-    console.log("🚀 Browser started.");
+    console.log("\n⏳ Testing the built files for SEO issues...");
 
     console.log("\n📁 %s", testedDir);
 
@@ -196,14 +139,13 @@ function printTestResults () {
 
     printTestResults();
 
-    await browser.close();
-
-    console.log(`\n👋 Browser closed.\n`);
+    console.log("\n👋 All tests completed.\n");
 
     if (failedTests > 0) {
       process.exitCode = 1;
     }
   } catch (error) {
     console.log(error);
+    process.exitCode = 2;
   }
 })();

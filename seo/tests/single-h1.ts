@@ -1,18 +1,18 @@
 /**
  * Test if the page has exactly 1 h1 tag defined.
  */
-import { Page } from "puppeteer";
+import { load } from "cheerio";
 
 interface Parameters {
-  page: Page;
+  dom: ReturnType<typeof load>;
   logSuccess: Function;
   logFailure: Function;
 }
 
-export default function ({page, logSuccess, logFailure}: Parameters): Promise<boolean> {
+export default function ({dom, logSuccess, logFailure}: Parameters): Promise<boolean> {
   return new Promise(async (resolve, reject) => {
     try {
-      const h1Tags = await page.$$("h1");
+      const h1Tags = await dom("h1");
 
       if (h1Tags.length === 1) {
         logSuccess("Exactly 1 h1 tag present.");

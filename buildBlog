@@ -29,7 +29,7 @@ done
 shift $((OPTIND - 1))
 
 # build the blog
-echo -e "${GREEN}Building blog...${NC}"
+echo -e "Building blog..."
 
 npm run build >/dev/null 2>/dev/null
 doesBuild=$?

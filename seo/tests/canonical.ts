@@ -1,18 +1,18 @@
 /**
  * Test if the page has a canonical link defined
  */
-import { Page } from "puppeteer";
+import { load } from "cheerio";
 
 interface Parameters {
-  page: Page;
+  dom: ReturnType<typeof load>;
   logSuccess: Function;
   logFailure: Function;
 }
 
-export default function ({page, logSuccess, logFailure}: Parameters): Promise<boolean> {
+export default function ({dom, logSuccess, logFailure}: Parameters): Promise<boolean> {
   return new Promise(async (resolve, reject) => {
     try {
-      const canonical = await page.$("link[rel=\"canonical\"]");
+      const canonical = (await dom("link[rel=\"canonical\"]")).html();
       if (canonical === null || canonical === undefined) {
         logFailure("no canonical link present");
         resolve(false);
