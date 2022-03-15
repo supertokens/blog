@@ -129,8 +129,6 @@ exports.createSchemaCustomization = ({ actions }) => {
       author: String
       cover: String
       category: String
-      discord_button_id: String
-      last_section_id: String
     }
 
     type Fields {
