@@ -43,6 +43,7 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
+        <div id={post.frontmatter.last_section_id} />
         <hr />
         <footer>
           <Bio discordButtonId={post.frontmatter.discord_button_id} />

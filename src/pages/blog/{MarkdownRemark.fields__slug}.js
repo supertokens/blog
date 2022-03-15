@@ -22,6 +22,7 @@ export const pageQuery = graphql`
         cover
         author
         discord_button_id
+        last_section_id
       }
     }
     site {
