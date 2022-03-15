@@ -21,7 +21,9 @@ export const pageQuery = graphql`
         title
         cover
         author
-        discord_button_id
+      }
+      fields {
+        slug
       }
     }
     site {
