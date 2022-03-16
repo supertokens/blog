@@ -59,11 +59,11 @@
 }
 
 .blog-card {
-  margin: 10px;
+  margin: 15px 10px;
   text-decoration: none;
 }
 
-.blog-card:hover {
+.blog-card:hover, .blog-card:focus {
   text-decoration: none;
 }
 
@@ -98,13 +98,14 @@
   font-size: 21px;
   font-family: 'Rubik', sans-serif;
   font-weight: bold;
-  line-height: 27px;
+  line-height: 28px;
   margin: 8px 0px 16px;
 }
 
 .blog-card__excerpt {
   color: #222;
   font-size: 14px;
+  line-height: 21px;
   font-family: 'Rubik', sans-serif;
   margin: 0px;
 }
@@ -121,7 +122,7 @@
   }
 
   .blog-card {
-    margin: 0px auto 20px;
+    margin: 15px auto;
   }
   
   .blog-card__image-container {
