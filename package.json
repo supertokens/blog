@@ -28,7 +28,8 @@
   "devDependencies": {
     "gatsby-remark-code-buttons": "^2.0.7",
     "gatsby-remark-code-titles": "^1.1.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "start-server-and-test": "^1.14.0"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
@@ -47,6 +48,9 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "seo-tests": "start-server-and-test start-backend http://localhost:9001 seo-script",
+    "start-backend": "cd ../supertokens-backend-website/app && npm run build-dev",
+    "seo-script": "./verifySeo"
   }
 }

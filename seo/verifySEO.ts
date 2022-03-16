@@ -2,6 +2,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import * as cheerio from "cheerio";
+import Axios from "axios";
 
 // tests
 import canonicalTest from "./tests/canonical";
@@ -15,6 +16,9 @@ const RED = "\x1b[31m";
 // global counters for tests passed and failed.
 let successfulTests = 0;
 let failedTests = 0;
+
+// list of routes that returned 404s
+const routesThatReturned404: string[] = [];
 
 // helper functions to print stuff
 const logFailure = (msg: string) => {
@@ -31,6 +35,25 @@ const logSuccess = (msg: string) => {
 const testedDir = "public/blog";
 const testedDirRelativePath = `../${testedDir}`;
 const testedDirAbsolutePath = path.join(__dirname, testedDirRelativePath);
+const urlPathPrefix = "/blog";
+
+// path blacklist
+const blacklist: string[] = [];
+
+// path redirect
+const redirectList: {
+  [key: string]: string
+} = {};
+
+// paths that cannot be generated from files
+const otherPathsToTest: string[] = [];
+
+// returns a localhost url using the path
+function buildUrl (path: string): string {
+  return path.startsWith("/")
+  ? `http://localhost:9001${urlPathPrefix}${path}`
+  : `http://localhost:9001${urlPathPrefix}/${path}`;
+}
 
 /**
  * returns lists of HTML files and directories in a specific directory
@@ -62,11 +85,12 @@ async function getDirectoriesAndFiles (pathToDirectory: string): Promise<{
 }
 
 function runTestsOnPage (path: string) {
+  const url = buildUrl(path);
+
   return new Promise(async (resolve, reject) => {
     try {
-      // await page.goto(`file://${path}`);
-
-      const fileContent = fs.readFileSync(path);
+      const response = await Axios.get(url);
+      const fileContent = response.data;
       const dom = cheerio.load(fileContent);
 
       const testParameters = {
@@ -81,7 +105,11 @@ function runTestsOnPage (path: string) {
 
       resolve(true);
     } catch (error) {
-      reject(error);
+      if (error.response.status === 404) {
+        console.log("\t\tError 404: ", url);
+        routesThatReturned404.push(url);
+      }
+      resolve(error);
     }
   });
 }
@@ -96,10 +124,28 @@ async function testHtmlPages (parent: string, currentDirectory: string) {
       if (files !== null && files !== undefined && files.length > 0) {
         for (const file of files) {
           const filePath = path.join(pathToDirectory, file.name);
-          const filePathInsideTestedDir = filePath.split(testedDirAbsolutePath)[1];
 
-          console.log("\n\t📄 %s", filePathInsideTestedDir);
-          await runTestsOnPage(filePath);
+          let directoryPathInsideTestedDir = pathToDirectory.split(testedDirAbsolutePath)[1];
+
+          // go to the next file if this file should be blacklisted.
+          const shouldBeBlacklisted = blacklist.some((path) => {
+            return directoryPathInsideTestedDir.startsWith(path);
+          });
+          if (shouldBeBlacklisted) {
+            continue;
+          }
+
+          // check if the path of this file needs to be replaced
+          if (
+            directoryPathInsideTestedDir !== undefined &&
+            Object.keys(redirectList).includes(directoryPathInsideTestedDir)
+          ) {
+            directoryPathInsideTestedDir = redirectList[directoryPathInsideTestedDir];
+          }
+
+          console.log("\n\t📄 %s", directoryPathInsideTestedDir);
+          console.log("\t🔗 %s", buildUrl(directoryPathInsideTestedDir));
+          await runTestsOnPage(directoryPathInsideTestedDir);
         }
       }
 
@@ -117,6 +163,23 @@ async function testHtmlPages (parent: string, currentDirectory: string) {
   });
 }
 
+// tests for routes that cannot be generated from files e.g. React pages
+function testRoutesWithoutHTML () {
+  return new Promise(async (resolve, reject) => {
+    try {
+      console.log("\n\n📁 Running tests on paths without HTML files");
+
+      for (const otherPath of otherPathsToTest) {
+        console.log("\n\t🔗 %s", buildUrl(otherPath));
+        await runTestsOnPage(otherPath);
+      }
+      resolve(true);
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
 function printTestResults () {
   console.log(`\n${GREEN}Total ${successfulTests} test(s) passed.${RESET}`);
 
@@ -125,10 +188,16 @@ function printTestResults () {
   } else {
     console.log(`Total ${failedTests} test(s) failed.`);
   }
+
+  if (routesThatReturned404.length > 0) {
+    console.log(`\t${RED}The following routes returned error 404.${RESET}`);
+    for (const route of routesThatReturned404) {
+      console.log(`\t${RED}${route}${RESET}`);
+    }
+  }
 }
 
-// create the puppeteer browser and initiate tests
-// close it once the tests are done
+// run the tests
 (async () => {
   try {
     console.log("\n⏳ Testing the built files for SEO issues...");
@@ -136,12 +205,13 @@ function printTestResults () {
     console.log("\n📁 %s", testedDir);
 
     await testHtmlPages(__dirname, testedDirRelativePath);
+    await testRoutesWithoutHTML();
 
     printTestResults();
 
     console.log("\n👋 All tests completed.\n");
 
-    if (failedTests > 0) {
+    if (failedTests > 0 || routesThatReturned404.length > 0) {
       process.exitCode = 1;
     }
   } catch (error) {

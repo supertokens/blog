@@ -9,12 +9,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
+      with:
+        path: blog
+    - name: Checkout supertokens-backend-website
+      uses: actions/checkout@v3
+      with:
+        repository: supertokens/supertokens-backend-website
+        token: ${{ secrets.GH_PAT }}
+        path: supertokens-backend-website
     - name: Setup node
       uses: actions/setup-node@v2
     - name: Install dependencies in the root project
-      run: npm install
+      run: cd blog; npm install
     - name: Install dependencies in the seo test project
       run: cd seo; npm install; cd ..
+    - name: Install dependencies in the supertokens-backend-website project
+      run: cd ../supertokens-backend-website/app && npm install && cd ../..
+    - name: builg blog and move the content to supertokens-backend-website
+      run: cd blog; ./buildBlog
     - name: Run SEO tests
-      run: ./verifySeo
+      run: npm run seo-tests
