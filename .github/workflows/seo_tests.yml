@@ -26,7 +26,5 @@ jobs:
       run: cd blog/seo; npm install
     - name: Install dependencies in the supertokens-backend-website project
       run: cd supertokens-backend-website/app && npm install
-    - name: builg blog and move the content to supertokens-backend-website
-      run: cd blog; ./buildBlog
-    - name: Run SEO tests
-      run: npm run seo-tests
+    - name: build the blog and run SEO tests
+      run: cd blog; ./buildBlog; npm run seo-tests
