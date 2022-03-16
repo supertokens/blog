@@ -8,6 +8,7 @@ import Seo from "../components/seo"
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const postSlugWithUnderscores = post.fields.slug.replaceAll("/", "").replaceAll("-", "_");
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -43,8 +44,9 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
+        <div id={`last_section_${postSlugWithUnderscores}`} />
         <footer>
-          <Bio discordButtonId={post.frontmatter.discord_button_id} />
+          <Bio discordButtonId={`discord_${postSlugWithUnderscores}`} />
         </footer>
       </article>
     </Layout>
