@@ -5,7 +5,6 @@ description: "This blog walks you through integrating your frontend with social 
 cover: "adding-social-login-to-your-website-with-supertokens.png"
 category: "programming"
 author: "SuperTokens Team"
-discord_button_id: "discord_adding_social_login_to_website_with_supertokens"
 ---
 
 This tutorial walks you through integrating your frontend with social login APIs provided by SuperTokens.
@@ -143,6 +142,6 @@ Furthermore, our frontend SDK handles these session tokens for you automatically
 
 These features are a part of the session recipe that you initialised when following the quick setup guide.
 
-<h2 id="last-section-social-login-with-supertokens">Conclusion</h2>
+## Conclusion
 
 We have seen how to integrate your custom UI with the social login API exposed by SuperToken’s backend SDK. It involves calling the GET `/authorisationurl` and the POST `/signinup` API. Furthermore, we see that on successful login, we are issued cookie based session tokens which are handled automatically via our frontend SDK.
