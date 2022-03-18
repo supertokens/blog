@@ -2,7 +2,7 @@
 
 currentDir=$(pwd)
 
-npx ts-node seo/verifySEO.ts
+npx ts-node seo-tests/verifyBlogSEO.ts
 didTestsPass=$?
 
 if [ $didTestsPass -ne 0 ]; then

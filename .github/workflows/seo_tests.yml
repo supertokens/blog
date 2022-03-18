@@ -18,12 +18,18 @@ jobs:
         repository: supertokens/supertokens-backend-website
         token: ${{ secrets.GH_PAT }}
         path: supertokens-backend-website
+    - name: Checkout seo-tests
+      uses: actions/checkout@v3
+      with:
+        repository: supertokens/seo-tests
+        token: ${{ secrets.GH_PAT }}
+        path: blog/seo-tests
     - name: Setup node
       uses: actions/setup-node@v2
     - name: Install dependencies in the blog project
       run: cd blog; npm install
     - name: Install dependencies in blog/seo project
-      run: cd blog/seo; npm install
+      run: cd blog/seo-tests; npm install
     - name: Install dependencies in the supertokens-backend-website project
       run: cd supertokens-backend-website/app && npm install
     - name: build the blog and run SEO tests
