@@ -451,3 +451,7 @@ sup > .footnote-ref::after {
   font-style: italic;
   margin-bottom: var(--gatsbySpacing-5);
 }
+
+.footnotes a {
+  word-break: break-all;
+}
