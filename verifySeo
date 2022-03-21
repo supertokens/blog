@@ -2,6 +2,11 @@
 
 currentDir=$(pwd)
 
+# create files to store meta tags info and sitemap on backend
+mkdir ../supertokens-backend-website/app/website/seo
+touch ../supertokens-backend-website/app/website/seo/dev-sitemap.json
+touch ../supertokens-backend-website/app/website/seo/dev-meta-content.json
+
 npx ts-node seo-tests/verifyBlogSEO.ts
 didTestsPass=$?
 
