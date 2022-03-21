@@ -29,7 +29,7 @@ const BlogPostTemplate = ({ data, location }) => {
               alt="Cover"
             />
           )}
-          <p>{post.frontmatter.date}</p>
+          <p className="blog-date">{post.frontmatter.date}</p>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           {post.frontmatter.author && (
             <p style={{
@@ -45,7 +45,6 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <div id={`last_section_${postSlugWithUnderscores}`} />
-        <hr />
         <footer>
           <Bio discordButtonId={`discord_${postSlugWithUnderscores}`} />
         </footer>
