@@ -264,8 +264,8 @@ a:focus {
 
 @media screen and (max-width: 572px) {
   .global-wrapper {
-    width: 340px;
-    padding: 60px 10px 10px;
+    width: 100%;
+    padding: 60px 24px 10px;
   }
 }
 
@@ -353,15 +353,6 @@ a:focus {
 
 .gatsby-highlight {
   margin-bottom: var(--gatsbySpacing-8);
-}
-
-/* Media queries */
-
-@media (max-width: 42rem) {
-  ul,
-  ol {
-    list-style-position: inside;
-  }
 }
 
 :not(pre) > code.language-text, .footnote-list-item code {
