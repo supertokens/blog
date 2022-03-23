@@ -53,6 +53,7 @@
   --gatsbyFontSize-1: 1rem;
   --gatsbyFontSize-2: 1.2rem;
   --gatsbyFontSize-3: 1.44rem;
+  --gatsbyFontSize-25px: 1.5625rem;
   --gatsbyFontSize-4: 1.728rem;
   --gatsbyFontSize-32px: 2rem;
   --gatsbyFontSize-5: 2.074rem;
@@ -133,9 +134,9 @@ h2 {
 }
 
 h3 {
-  font-size: var(--gatsbyFontSize-4);
+  font-size: var(--gatsbyFontSize-25px);
   padding-bottom: var(--gatsbySpacing-4);
-  border-bottom: 1px solid #DDD;
+  line-height: 2.1875rem;
 }
 
 h4 {
@@ -181,7 +182,8 @@ ol {
   margin-right: var(--gatsbySpacing-0);
   padding: var(--gatsbySpacing-0);
   padding-left: var(--gatsbySpacing-10);
-  margin-bottom: var(--gatsbySpacing-8);
+  margin-bottom: var(--gatsbySpacing-5);
+  margin-top: 0rem;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -190,6 +192,7 @@ ul li,
 ol li {
   padding-left: var(--gatsbySpacing-0);
   line-height: var(--gatsbyLineHeight-relaxed);
+  margin-bottom: .625rem;
 }
 
 li > p {
@@ -201,8 +204,7 @@ li *:last-child {
 }
 
 li > ul {
-  margin-left: var(--gatsbySpacing-8);
-  margin-top: calc(var(--gatsbySpacing-8) / 2);
+  margin-top: .625rem;
 }
 
 blockquote {
