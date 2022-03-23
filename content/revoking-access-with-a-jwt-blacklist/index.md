@@ -5,7 +5,6 @@ description: "Learn how to maintain a JWT token blacklist / deny list using an i
 cover: "revoking-access-with-a-jwt-blacklist.png"
 category: "programming"
 author: "SuperTokens Team"
-discord_button_id: "discord_end_of_blog_jwt_blacklisting"
 ---
 
 Depending on who you listen to, JWTs are either a panacea for all your authentication problems or should be avoided like the plague. We're in two minds here at SuperTokens.

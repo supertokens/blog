@@ -58,7 +58,7 @@ module.exports = {
               footnoteBackRefInnerText: "^",
               footnoteBackRefAnchorStyle: `text-decoration: none;`,
               useFootnoteMarkerText: false,
-              useCustomDivider: "<hr/><h2>Footnotes:</h2>"
+              useCustomDivider: "<h2>Footnotes:</h2>"
             }
           },
           // `gatsby-remark-code-buttons`,
