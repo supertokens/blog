@@ -441,7 +441,7 @@ sup > .footnote-ref::after {
 }
 
 .footnotes > ol {
-  padding-left: 16px;
+  padding-left: 1rem;
   counter-reset: footnotes-li;
 }
 
