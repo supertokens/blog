@@ -131,12 +131,15 @@ h2 {
   padding-bottom: var(--gatsbySpacing-4);
   border-bottom: 1px solid #DDD;
   line-height: 2.375rem;
+  margin-top: 2.5rem;
 }
 
 h3 {
   font-size: var(--gatsbyFontSize-25px);
   padding-bottom: var(--gatsbySpacing-4);
   line-height: 2.1875rem;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
 }
 
 h4 {
@@ -215,7 +218,7 @@ blockquote {
   padding: var(--gatsbySpacing-3) var(--gatsbySpacing-4);
   font-size: var(--gatsbyFontSize-1);
   font-style: italic;
-  margin: 0px 0px var(--gatsbySpacing-8);
+  margin: 0px 0px var(--gatsbySpacing-5);
 }
 
 blockquote > :last-child {
@@ -438,11 +441,17 @@ sup > .footnote-ref::after {
 
 .footnotes > ol {
   padding-left: 16px;
+  counter-reset: footnotes-li;
 }
 
 .footnotes > ol > li {
   font-style: italic;
   margin-bottom: var(--gatsbySpacing-5);
+  counter-increment: footnotes-li;
+}
+
+.footnotes > ol > li::marker {
+  content: "[" counter(footnotes-li) "] ";
 }
 
 .footnotes a {
