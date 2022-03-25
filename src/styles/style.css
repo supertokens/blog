@@ -124,13 +124,14 @@ h1 {
   font-weight: var(--gatsbyFontWeight-black);
   font-size: var(--gatsbyFontSize-6);
   color: var(--gatsbyColor-heading-black);
+  line-height: 3.4375rem;
 }
 
 h2 {
   font-size: var(--gatsbyFontSize-32px);
   padding-bottom: var(--gatsbySpacing-4);
   border-bottom: 1px solid #DDD;
-  line-height: 2.375rem;
+  line-height: 2.625rem;
   margin-top: 2.5rem;
 }
 
@@ -333,7 +334,7 @@ a:focus {
 .blog-post header h1 {
   margin: var(--gatsbySpacing-0) var(--gatsbySpacing-0) var(--gatsbySpacing-8) var(--gatsbySpacing-0);
   font-size: 39px;
-  line-height: 54px;
+  line-height: 3.4375rem;
   margin: 20px 0px 20px;
 }
 
