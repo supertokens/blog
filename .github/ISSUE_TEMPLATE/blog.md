@@ -20,7 +20,10 @@ labels:
 - [ ] Adding title meta
 - [ ] Adding description meta
 - [ ] Adding OG meta
-- [ ] Adding analytics
+- [ ] Added analytics for the following events to `main-website`
+  - [ ] `page_blog_article`
+  - [ ] `page_blog_lastsection_markasdone`
+  - [ ] `page_blog_discord_article`
 - [ ] Adding to sitemap.xml
 - [ ] Release on test
     - [ ] Check landscape and portrait view of blog 
