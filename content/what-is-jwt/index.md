@@ -2,7 +2,7 @@
 title: What is a JWT? Understanding JSON Web Tokens 
 date: "2022-03-24"
 description: "Learn about JWTs, their pros & cons, and how they work."
-cover: "TODO.png"
+cover: "what-is-jwt-cover.png"
 category: "session"
 author: "SuperTokens Team"
 ---
@@ -60,7 +60,9 @@ A JWT contains three parts:
 - **Payload**: The payload contains the claims or the JSON object.
 - **Signature**: A string that is generated via a cryptographic algorithm that can be used to verify the integrity of the JSON payload.
 
+
 ![JWT_Structure](./jwt-structure.png)
+
 
 We will make our own JWT from scratch later on in this post!
 
