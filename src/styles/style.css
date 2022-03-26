@@ -53,6 +53,7 @@
   --gatsbyFontSize-1: 1rem;
   --gatsbyFontSize-2: 1.2rem;
   --gatsbyFontSize-3: 1.44rem;
+  --gatsbyFontSize-25px: 1.5625rem;
   --gatsbyFontSize-4: 1.728rem;
   --gatsbyFontSize-32px: 2rem;
   --gatsbyFontSize-5: 2.074rem;
@@ -123,19 +124,23 @@ h1 {
   font-weight: var(--gatsbyFontWeight-black);
   font-size: var(--gatsbyFontSize-6);
   color: var(--gatsbyColor-heading-black);
+  line-height: 3.4375rem;
 }
 
 h2 {
   font-size: var(--gatsbyFontSize-32px);
   padding-bottom: var(--gatsbySpacing-4);
   border-bottom: 1px solid #DDD;
-  line-height: 2.375rem;
+  line-height: 2.625rem;
+  margin-top: 2.5rem;
 }
 
 h3 {
-  font-size: var(--gatsbyFontSize-4);
+  font-size: var(--gatsbyFontSize-25px);
   padding-bottom: var(--gatsbySpacing-4);
-  border-bottom: 1px solid #DDD;
+  line-height: 2.1875rem;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
 }
 
 h4 {
@@ -181,7 +186,8 @@ ol {
   margin-right: var(--gatsbySpacing-0);
   padding: var(--gatsbySpacing-0);
   padding-left: var(--gatsbySpacing-10);
-  margin-bottom: var(--gatsbySpacing-8);
+  margin-bottom: var(--gatsbySpacing-5);
+  margin-top: 0rem;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -190,6 +196,7 @@ ul li,
 ol li {
   padding-left: var(--gatsbySpacing-0);
   line-height: var(--gatsbyLineHeight-relaxed);
+  margin-bottom: .625rem;
 }
 
 li > p {
@@ -201,8 +208,7 @@ li *:last-child {
 }
 
 li > ul {
-  margin-left: var(--gatsbySpacing-8);
-  margin-top: calc(var(--gatsbySpacing-8) / 2);
+  margin-top: .625rem;
 }
 
 blockquote {
@@ -213,7 +219,7 @@ blockquote {
   padding: var(--gatsbySpacing-3) var(--gatsbySpacing-4);
   font-size: var(--gatsbyFontSize-1);
   font-style: italic;
-  margin: 0px 0px var(--gatsbySpacing-8);
+  margin: 0px 0px var(--gatsbySpacing-5);
 }
 
 blockquote > :last-child {
@@ -328,7 +334,7 @@ a:focus {
 .blog-post header h1 {
   margin: var(--gatsbySpacing-0) var(--gatsbySpacing-0) var(--gatsbySpacing-8) var(--gatsbySpacing-0);
   font-size: 39px;
-  line-height: 54px;
+  line-height: 3.4375rem;
   margin: 20px 0px 20px;
 }
 
@@ -417,8 +423,8 @@ a:focus {
 }
 
 .gatsby-code-button-toaster-text {
-  font-size: 16px;
-  padding: 12px;
+  font-size: 1rem;
+  padding: 0.75rem;
   height: fit-content;
   width: fit-content;
 }
@@ -435,12 +441,18 @@ sup > .footnote-ref::after {
 }
 
 .footnotes > ol {
-  padding-left: 16px;
+  padding-left: 1rem;
+  counter-reset: footnotes-li;
 }
 
 .footnotes > ol > li {
   font-style: italic;
   margin-bottom: var(--gatsbySpacing-5);
+  counter-increment: footnotes-li;
+}
+
+.footnotes > ol > li::marker {
+  content: "[" counter(footnotes-li) "] ";
 }
 
 .footnotes a {
