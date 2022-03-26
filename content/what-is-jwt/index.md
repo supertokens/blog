@@ -3,7 +3,7 @@ title: What is a JWT? Understanding JSON Web Tokens
 date: "2022-03-24"
 description: "Learn about JWTs, their pros & cons, and how they work."
 cover: "what-is-jwt-cover.png"
-category: "session"
+category: "sessions"
 author: "SuperTokens Team"
 ---
 
