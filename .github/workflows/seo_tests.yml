@@ -3,6 +3,8 @@ name: Run SEO Tests
 on:
   pull_request:
     branches: [ master ]
+    types:
+      - review_requested
 
 jobs:
   run_seo_tests:

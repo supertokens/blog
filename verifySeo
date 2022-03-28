@@ -7,7 +7,8 @@ mkdir ../supertokens-backend-website/app/website/seo
 touch ../supertokens-backend-website/app/website/seo/dev-sitemap.json
 touch ../supertokens-backend-website/app/website/seo/dev-meta-content.json
 
-npx ts-node seo-tests/verifyBlogSEO.ts
+cd seo-tests
+npm run test:blog
 didTestsPass=$?
 
 if [ $didTestsPass -ne 0 ]; then
@@ -16,3 +17,5 @@ if [ $didTestsPass -ne 0 ]; then
 fi
 
 echo "All SEO tests passed 🎉"
+
+cd $currentDir
