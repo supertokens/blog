@@ -17,5 +17,3 @@ For any queries, or support requests, please email us at team@supertokens.com, o
 ## Authors
 
 Created with :heart: by the folks at [SuperTokens](https://supertokens.com).
-
-change for a pr
