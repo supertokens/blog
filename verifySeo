@@ -1,0 +1,21 @@
+#!/bin/bash
+
+currentDir=$(pwd)
+
+# create files to store meta tags info and sitemap on backend
+mkdir ../supertokens-backend-website/app/website/seo
+touch ../supertokens-backend-website/app/website/seo/dev-sitemap.json
+touch ../supertokens-backend-website/app/website/seo/dev-meta-content.json
+
+cd seo-tests
+npm run test:blog
+didTestsPass=$?
+
+if [ $didTestsPass -ne 0 ]; then
+  echo "SEO tests failed."
+  exit 1
+fi
+
+echo "All SEO tests passed 🎉"
+
+cd $currentDir
