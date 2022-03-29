@@ -1,4 +1,5 @@
 import * as React from "react"
+import * as cheerio from "cheerio";
 import { withPrefix } from "gatsby"
 
 import Bio from "../components/bio"
@@ -11,31 +12,23 @@ const BlogPostTemplate = ({ data, location }) => {
   const postSlugWithUnderscores = post.fields.slug.replaceAll("/", "").replaceAll("-", "_");
 
   const getUpdatedHtml = (html) => {
-    const parentHtml = document.createElement("div");
-    parentHtml.innerHTML = html.trim();
+    const htmlStr = `<div>${html.trim()}</div>`;
+    const $ = cheerio.load(htmlStr, null, false);
 
-    // remove <hr> from footnotes container and add a 'footnotes' title
-    const footnotesContainer = parentHtml.getElementsByClassName("footnotes")[0];
-    if (footnotesContainer !== null || footnotesContainer !== undefined) {
-      // remove the <hr> which is always the first element
-      const hr = footnotesContainer.children[0];
-      if (hr) {
-        footnotesContainer.removeChild(hr);
-      }
+    // remove the <hr> which is always the first element
+    $(".footnotes > hr").each((i, hr) => {
+      $(hr).remove();
+    })
 
-      // Adds a "Footnotes" title to footnotes container
-      const footnotesTitle = document.createElement("h2");
-      footnotesTitle.innerText = "Footnotes:";
-      footnotesContainer.prepend(footnotesTitle);
+    // Adds a "Footnotes" title to footnotes container
+    $(".footnotes > ol").before("<h2>Footnotes:</h2>");
 
-      // changes the innerText of backref links inside footnotes to "^"
-      const footnotesBackrefLinks = footnotesContainer.getElementsByClassName("footnote-backref");
-      for (const backrefLink of footnotesBackrefLinks) {
-        backrefLink.innerText = " ^";
-      }
-    }
+    // changes the innerText of backref links inside footnotes to "^"
+    $(".footnotes > ol > li .footnote-backref").each((i, backref) => {
+      $(backref).text(" ^");
+    });
 
-    return parentHtml.innerHTML;
+    return $.html();
   }
 
   return (

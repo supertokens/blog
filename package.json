@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
     "gatsby": "^4.7.1",
     "gatsby-plugin-gatsby-cloud": "^4.7.0",
     "gatsby-plugin-image": "^2.7.0",
