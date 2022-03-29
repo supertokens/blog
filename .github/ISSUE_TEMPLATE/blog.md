@@ -6,6 +6,8 @@ labels:
 
 ## Link to google doc
 
+### Assigned to
+
 ## Checklist
 
 - [ ] Define the outcome (value) that the post will have for the reader (i.e. what will they learn or gain)
