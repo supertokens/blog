@@ -10,6 +10,34 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const postSlugWithUnderscores = post.fields.slug.replaceAll("/", "").replaceAll("-", "_");
 
+  const getUpdatedHtml = (html) => {
+    const parentHtml = document.createElement("div");
+    parentHtml.innerHTML = html.trim();
+
+    // remove <hr> from footnotes container and add a 'footnotes' title
+    const footnotesContainer = parentHtml.getElementsByClassName("footnotes")[0];
+    if (footnotesContainer !== null || footnotesContainer !== undefined) {
+      // remove the <hr> which is always the first element
+      const hr = footnotesContainer.children[0];
+      if (hr) {
+        footnotesContainer.removeChild(hr);
+      }
+
+      // Adds a "Footnotes" title to footnotes container
+      const footnotesTitle = document.createElement("h2");
+      footnotesTitle.innerText = "Footnotes:";
+      footnotesContainer.prepend(footnotesTitle);
+
+      // changes the innerText of backref links inside footnotes to "^"
+      const footnotesBackrefLinks = footnotesContainer.getElementsByClassName("footnote-backref");
+      for (const backrefLink of footnotesBackrefLinks) {
+        backrefLink.innerText = " ^";
+      }
+    }
+
+    return parentHtml.innerHTML;
+  }
+
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
@@ -41,7 +69,7 @@ const BlogPostTemplate = ({ data, location }) => {
           )}
         </header>
         <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
+          dangerouslySetInnerHTML={{ __html: getUpdatedHtml(post.html) }}
           itemProp="articleBody"
         />
         <div id={`last_section_${postSlugWithUnderscores}`} />
