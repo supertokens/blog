@@ -6,9 +6,14 @@ module.exports = function (post) {
     href = href.substring(0, href.length - 1);
   }
 
+  let nofollowAttribute = "";
+  if (post.fields.nofollow) {
+    nofollowAttribute = "rel=\"nofollow\" target=\"_blank\"";
+  }
+
   try {
     const renderedPost = `
-      <a href="${href}" class="blog-card">
+      <a href="${href}" ${nofollowAttribute} class="blog-card">
         <div class="blog-card__image-container">
           <img
             src="${"/covers/" + post.frontmatter.cover}"

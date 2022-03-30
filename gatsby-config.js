@@ -56,6 +56,12 @@ module.exports = {
               toasterText: "Copied!"
             }
           },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              rel: "nofollow noopener"
+            }
+          },
           `gatsby-remark-code-titles`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
