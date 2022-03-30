@@ -59,7 +59,7 @@ module.exports = {
           {
             resolve: "gatsby-remark-external-links",
             options: {
-              rel: "nofollow noopener"
+              rel: "nofollow"
             }
           },
           `gatsby-remark-code-titles`,
