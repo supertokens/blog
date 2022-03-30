@@ -1,4 +1,5 @@
 import * as React from "react"
+import * as cheerio from "cheerio";
 import { withPrefix } from "gatsby"
 
 import Bio from "../components/bio"
@@ -9,6 +10,26 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const postSlugWithUnderscores = post.fields.slug.replaceAll("/", "").replaceAll("-", "_");
+
+  const getUpdatedHtml = (html) => {
+    const htmlStr = `<div>${html.trim()}</div>`;
+    const $ = cheerio.load(htmlStr, null, false);
+
+    // remove the <hr> which is always the first element
+    $(".footnotes > hr").each((i, hr) => {
+      $(hr).remove();
+    })
+
+    // Adds a "Footnotes" title to footnotes container
+    $(".footnotes > ol").before("<h2>Footnotes:</h2>");
+
+    // changes the innerText of backref links inside footnotes to " ^"
+    $(".footnotes > ol > li .footnote-backref").each((i, backref) => {
+      $(backref).text(" ^");
+    });
+
+    return $.html();
+  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -41,7 +62,7 @@ const BlogPostTemplate = ({ data, location }) => {
           )}
         </header>
         <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
+          dangerouslySetInnerHTML={{ __html: getUpdatedHtml(post.html) }}
           itemProp="articleBody"
         />
         <div id={`last_section_${postSlugWithUnderscores}`} />

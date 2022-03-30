@@ -51,18 +51,6 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-footnotes`,
-            options: {
-              footnoteBackRefPreviousElementDisplay: "inline",
-              footnoteBackRefDisplay: "inline",
-              footnoteBackRefInnerText: "^",
-              footnoteBackRefAnchorStyle: `text-decoration: none;`,
-              useFootnoteMarkerText: false,
-              useCustomDivider: "<h2>Footnotes:</h2>"
-            }
-          },
-          // `gatsby-remark-code-buttons`,
-          {
             resolve: `gatsby-remark-code-buttons`,
             options: {
               toasterText: "Copied!"
