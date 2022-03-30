@@ -4,9 +4,12 @@ about: Blog post checklist and gdoc link
 labels:
 ---
 
-Title:
-Reference articles:
-Link to Doc:
+Title
+
+Reference articles
+
+Link to Doc
+
 Assignee:
 
 
@@ -20,8 +23,9 @@ Assignee:
 - [ ] Level of depth on the topic
 - [ ] Define real world application / relevance. Why is this topic important?
 
-### [ ] Draft Reviewed
-### [ ] Final content approved
+### Post draft
+- [ ] Draft Reviewed
+- [ ] Final content approved
 
 ### SEO checklist
 - [ ] Define meta title, meta description, meta image tags (for social)
@@ -41,8 +45,8 @@ Assignee:
     - [ ] Check landscape and portrait view of blog 
 - [ ] Check for SEO (via SEO agent)
 
-
-### [ ] Release to prod
+### Release
+- [ ] Release to prod
 
 ### Distribution checklist
 - [ ] Clone the blog on
