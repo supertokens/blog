@@ -23,7 +23,7 @@ const BlogPostTemplate = ({ data, location }) => {
     // Adds a "Footnotes" title to footnotes container
     $(".footnotes > ol").before("<h2>Footnotes:</h2>");
 
-    // changes the innerText of backref links inside footnotes to "^"
+    // changes the innerText of backref links inside footnotes to " ^"
     $(".footnotes > ol > li .footnote-backref").each((i, backref) => {
       $(backref).text(" ^");
     });
