@@ -86,6 +86,7 @@ module.exports = [
   {
     fields: {
       url: "https://www.youtube.com/watch?v=6Vzit514kZY&list=PLE5w09cAseKTIFCImkqFbSeYMHPzW7M_f&index=17",
+      nofollow: true
     },
     frontmatter: {
       title: "Detecting session hijacking using rotating refresh tokens - OSW 2020",

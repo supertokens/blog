@@ -28,6 +28,15 @@ const BlogPostTemplate = ({ data, location }) => {
       $(backref).text(" ^");
     });
 
+    // removes rel="nofollow noreferrer" and target="_blank"
+    // from links having domain `https://supertokens.com`
+    $("a").each((_, a) => {
+      if ($(a).attr("href").startsWith("https://supertokens.com")) {
+        $(a).removeAttr("rel");
+        $(a).removeAttr("target");
+      }
+    });
+
     return $.html();
   }
 
