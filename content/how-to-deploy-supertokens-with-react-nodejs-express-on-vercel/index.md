@@ -1,7 +1,7 @@
 ---
-title: How to deploy SuperTokens with react + nodejs express on Vercel
+title: How to deploy Supertokens with react + nodejs express on Vercel
 date: "2022-04-14"
-description: "This tutorial will guide you on adding a social login + email password authentication to your React- Nodejs applications using Supertokens and deploying the application on Vercel."
+description: "This tutorial wil guide you on how to add Supertokens to react + express app deployed on Vercel"
 cover: "adding-social-login-to-your-website-with-supertokens.png"
 category: "programming"
 author: "SuperTokens Team"
@@ -11,16 +11,13 @@ Have you ever considered implementing easy and safe authentication on your web a
 
 In this tutorial, you’ll learn how to add a social login + email password authentication to your React- Nodejs applications using Supertokens and deploy the application on Vercel.
 
-
 ## What is Supertokens
 
-Supertokens is a developer's first open-source flexible alternative to Firebase, AWS Cognito, and Auth0. Supertokens allow you to add secure authentication to your web application in minutes with a prebuilt UI that you can easily customize. 
-
+Supertokens is a developer's first open-source flexible alternative to Firebase, AWS Cognito, and Auth0. Supertokens allow you to add secure authentication to your web application in minutes with a prebuilt UI that you can easily customize.
 
 ## Why use Supertokens
 
 Supertokens has lots of amazing features that make it the best authentication service for your web application.
-
 
 * **Pre-built UI**: Supertokens has pre-built Sign up / sign-in forms (via our frontend SDK) that can be embedded on your website natively.
 * **Feature segmentation:** with Supertokens, you can pick only the features you need and see docs relevant to your use case (we call it ‘recipes’)
@@ -28,124 +25,102 @@ Supertokens has lots of amazing features that make it the best authentication se
 * **Priced for startups:** Supertokend has a generous limit and pricing for our managed service, and it's free forever for self-hosted.
 * **Integrate with any service:** You can set up your content delivery service (e.g., SMS or email) for free.
 
-
 ## What is Vercel
 
 Vercel is a platform for frontend frameworks and static sites that can be integrated with your headless content, commerce, or database. It offers a frictionless developer experience to handle the difficult tasks of deploying instantaneously, scaling automatically, and presenting tailored content globally. It's built for the frontend experience; create hybrid frontends using tools like Next.js, create lightweight event-driven APIs, and deploy to our Global Edge Network.
-
 
 ## Getting started
 
 To get started with this tutorial, first set up an **email password + social login with express and react** on the local computer. For that, see this [blog](https://supertokens.com/blog/how-to-set-up-social-and-email-password-login-with-reactjs). After creating and testing your application on your local computer, follow the steps below to set up the application for deployment on vercel.
 
-
-
-1. Create an **api** folder in the frontend (**my-demo-app**) part of the application.
-2. Copy the folders and files in the backend part of the application to the **api** folder.
-3. Rename the **server.js** file in the backend to **index.js**
-4. Open the **index.js** and export **app** at the end of the file as shown below
+1. Create an `api` folder in the frontend (`my-demo-app`) part of the application.
+2. Copy the folders and files in the backend part of the application to the `api` folder.
+3. Rename the `server.js` file in the backend to `index.js`
+4. Open the `index.js` and export `app` at the end of the file as shown below
 
     ```js
     module.exports = app;
 
     ```
 
-
-> Note: We are deploying our backend as a standalone express app, not with the default **/pages/api** serverless functions that Vercel implements.
+> Note: We are deploying our backend as a standalone express app, and not with `/pages/api` serverless functions that Vercel provides.
 
 You can find an example repository for SuperTokens + emailpassword + Vercel auth [on our Github](https://github.com/supertokens/supertokens-auth-react/tree/master/examples/with-emailpassword-vercel).
 
-
 ## Test application locally
 
-In order to run the application locally, you need to make sure that the websiteDomain and apiDomain values on the frontend and backend point to localhost. In our [example app](https://github.com/supertokens/supertokens-auth-react/tree/master/examples/with-emailpassword-vercel), we make the apiDomain [http://localhost:3001](http://localhost:3001) and websiteDomain http://localhost:3000.
-
+In order to run the application locally, you need to make sure that the `websiteDomain` and `apiDomain` values on the frontend and backend point to `localhost`. In our [example app](https://github.com/supertokens/supertokens-auth-react/tree/master/examples/with-emailpassword-vercel), we set the `apiDomain` to [http://localhost:3001](http://localhost:3001) and `websiteDomain` to [http://localhost:3000](http://localhost:3000).
 
 ## When deploying to vercel
 
-To enable project run in production and the inspect sites for vercel, you need to make the websiteDomain and appDomain point to the URLs generated by vercel. The production URL is always the same for an app, but the inspect URL keeps changing. To allow it to work in this dynamic condition, we must set the values of apiDomain and websiteDomain dynamically.
+To enable project run in production and the inspect sites for vercel, you need to make the `websiteDomain` and `appDomain` point to the URLs generated by vercel. The production URL is always the same for an app, but the inspect URL keeps changing. To allow it to work in this dynamic condition, we must set the values of `apiDomain` and `websiteDomain` dynamically.
 
 **On the backend**
 
-
 ```js
-    appInfo: {
-        appName: "TodoApp",
-        apiDomain: 'process.env.VERCEL_URL',
-        websiteDomain: 'process.env.VERCEL_URL',
-        apiBasePath: "/api/auth",
-        websiteBasePath: "/auth",
- },
+appInfo: {
+    appName: "TodoApp",
+    apiDomain: 'process.env.VERCEL_URL',
+    websiteDomain: 'process.env.VERCEL_URL',
+    apiBasePath: "/api/auth",
+    websiteBasePath: "/auth",
+},
 ```
 
-
-Vercel provides an env var - process.env.VERCEL_URL - to the backend which is equal to the inspect URL / production URL (depending on the site that’s loaded). So we use this to set the apiDomain and websiteDomain values dynamically.
+Vercel provides an env var - `process.env.VERCEL_URL` - to the backend which is equal to the inspect URL / production URL (depending on the site that’s loaded). So we use this to set the `apiDomain` and `websiteDomain` values dynamically.
 
 **On the frontend**
 
-We can use window.location.origin to get the currently loaded URL and set those to the apiDomain and websiteDomain. This way, even if the inspect URL keeps on changing, it will still point to the current domain.
-
+We can use window.location.origin to get the currently loaded URL and set those to the `apiDomain` and `websiteDomain`. This way, even if the inspect URL keeps on changing, it will still point to the current domain.
 
 ```js
-    appInfo: {
-        appName: "TodoApp",
-        apiDomain: window.location.origin,
-        websiteDomain: window.location.origin,
-        apiBasePath: "/api/auth",
-        websiteBasePath: "/auth",
- },
+appInfo: {
+    appName: "TodoApp",
+    apiDomain: window.location.origin,
+    websiteDomain: window.location.origin,
+    apiBasePath: "/api/auth",
+    websiteBasePath: "/auth",      
+},
+
 ```
 
-
-Note that this only works if the frontend and backend of our application have the same domain. This will always be the case since they are deployed together, within the same vercel app. If your backend is hosted elsewhere and you use Vercel only for the frontend, be sure to change the apiDomain on the frontend and backend to point to your backend server.
-
+Note that this only works if the frontend and backend of our application have the same domain. This will always be the case since they are deployed together, within the same vercel app. If your backend is hosted elsewhere and you use Vercel only for the frontend, be sure to change the `apiDomain` on the frontend and backend to point to your backend server.
 
 ## Update the Cors Middleware
 
-You also need to update the Cors middleware origin with the **VERCEL_URL** environment variable.
-
+You also need to update the Cors middleware origin with the `VERCEL_URL` environment variable.
 
 ```js
 app.use(
- cors({
-   origin: process.env.VERCEL_URL,
-   allowedHeaders: ['content-type', ...SuperTokens.getAllCORSHeaders()],
-   credentials: true,
- })
+    cors({
+        origin: process.env.VERCEL_URL,
+        allowedHeaders: ['content-type', ...SuperTokens.getAllCORSHeaders()],credentials: true,
+    })
 );
 ```
 
-
-
 ## Configure Vercel and Deploy
 
-With the backend and frontend of your application code updated, create a **Vercel.json** file in the root directory of the **frontend** folder and add a rewrite to push all traffic on **/api** to our **index.js** file with the code snippet below:
-
+With the backend and frontend of your application code updated, create a `Vercel.json` file in the root directory of the `frontend` folder and add a rewrite to push all traffic on `/api` to our `index.js` file with the code snippet below:
 
 ```js
 {
-   "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]
+    "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]
 }
 ```
 
+To deploy the app to vercel, you need to run the vercel command on the root of your project:
 
-To deploy the app to vercel, you need to run the vercel command on the root of your project: 
-
-
-```shell
+```sh
 vercel
 ```
 
-
 At first, the above command will prompt for your login credentials, enter your credentials to continue. Then you’ll be prompted to select the configurations for your project. Once you have completed the prompts, Vercel will generate two URLs:
-
-
 
 * **Inspect**: To inspect your project on Vercel
 * **Preview**: To preview and test the application.
 
-Also, a **.vercel/package.json** file will be created in the project’s root directory with the project details and the application will be deployed to Vercel. Once the deployment is completed, your application should be working in a production environment. You can now test your application using the preview URL or inspect the code using the inspect URL.
-
+Also, a `.vercel/package.json` file will be created in the project’s root directory with the project details and the application will be deployed to Vercel. Once the deployment is completed, your application should be working in a production environment. You can now test your application using the preview URL or inspect the code using the inspect URL.
 
 ## Conclusion
 
