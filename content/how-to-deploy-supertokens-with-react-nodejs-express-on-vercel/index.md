@@ -1,27 +1,27 @@
 ---
-title: How to deploy Supertokens with react + nodejs express on Vercel
+title: How to deploy SuperTokens with react + nodejs express on Vercel
 date: "2022-04-14"
-description: "This tutorial wil guide you on how to add Supertokens to react + express app deployed on Vercel"
-cover: "adding-social-login-to-your-website-with-supertokens.png"
+description: "This tutorial wil guide you on how to add SuperTokens to react + express app deployed on Vercel"
+cover: "adding-social-login-to-your-website-with-superTokens.png"
 category: "programming"
 author: "SuperTokens Team"
 ---
 
 Have you ever considered implementing easy and safe authentication on your web application at no cost? Have you considered integrating authentication with minimal or no initial environment setup? Then hang on for the next 10 minutes.
 
-In this tutorial, you’ll learn how to add a social login + email password authentication to your React- Nodejs applications using Supertokens and deploy the application on Vercel.
+In this tutorial, you’ll learn how to add a social login + email password authentication to your React- Nodejs applications using SuperTokens and deploy the application on Vercel.
 
-## What is Supertokens
+## What is SuperTokens
 
-Supertokens is a developer's first open-source flexible alternative to Firebase, AWS Cognito, and Auth0. Supertokens allow you to add secure authentication to your web application in minutes with a prebuilt UI that you can easily customize.
+SuperTokens is a developer's first open-source flexible alternative to Firebase, AWS Cognito, and Auth0. SuperTokens allow you to add secure authentication to your web application in minutes with a prebuilt UI that you can easily customize.
 
-## Why use Supertokens
+## Why use SuperTokens
 
-Supertokens has lots of amazing features that make it the best authentication service for your web application.
+SuperTokens has lots of amazing features that make it the best authentication service for your web application.
 
-* **Pre-built UI**: Supertokens has pre-built Sign up / sign-in forms (via our frontend SDK) that can be embedded on your website natively.
-* **Feature segmentation:** with Supertokens, you can pick only the features you need and see docs relevant to your use case (we call it ‘recipes’)
-* **Simple data model:** Supertokens has a modular structure that allows you to add database tables with fewer configurations.
+* **Pre-built UI**: SuperTokens has pre-built Sign up / sign-in forms (via our frontend SDK) that can be embedded on your website natively.
+* **Feature segmentation:** with SuperTokens, you can pick only the features you need and see docs relevant to your use case (we call it ‘recipes’)
+* **Simple data model:** SuperTokens has a modular structure that allows you to add database tables with fewer configurations.
 * **Priced for startups:** Supertokend has a generous limit and pricing for our managed service, and it's free forever for self-hosted.
 * **Integrate with any service:** You can set up your content delivery service (e.g., SMS or email) for free.
 
@@ -71,7 +71,7 @@ Vercel provides an env var - `process.env.VERCEL_URL` - to the backend which is 
 
 **On the frontend**
 
-We can use window.location.origin to get the currently loaded URL and set those to the `apiDomain` and `websiteDomain`. This way, even if the inspect URL keeps on changing, it will still point to the current domain.
+We can use `window.location.origin` to get the currently loaded URL and set those to the `apiDomain` and `websiteDomain`. This way, even if the inspect URL keeps on changing, it will still point to the current domain.
 
 ```js
 appInfo: {
@@ -124,4 +124,4 @@ Also, a `.vercel/package.json` file will be created in the project’s root dire
 
 ## Conclusion
 
-By building a React demo application, you've learned how to add authentication with SuperTokens and deploy it to Vercel. We started with the introduction of Supertokens and Vercel. Then we looked at how to deploy your Superkens powered auth application to Vercel. Now that you have the knowledge you seek, how would you authenticate users' in your next projects? Perhaps learn more about [Supertokens](https://supertokens.com/).
+By building a React demo application, you've learned how to add authentication with SuperTokens and deploy it to Vercel. We started with the introduction of SuperTokens and Vercel. Then we looked at how to deploy your Superkens powered auth application to Vercel. Now that you have the knowledge you seek, how would you authenticate users' in your next projects? Perhaps learn more about [SuperTokens](https://supertokens.com/).
