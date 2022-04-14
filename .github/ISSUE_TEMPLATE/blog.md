@@ -49,6 +49,7 @@ Assignee:
 - [ ] Release to prod
 
 ### Distribution checklist
+- [ ]  Link to it from docs / website
 - [ ] Clone the blog on
    - [ ] Medium
    - [ ] Hackernoon
