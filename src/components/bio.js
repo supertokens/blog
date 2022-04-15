@@ -4,7 +4,7 @@ const Bio = ({ discordButtonId }) => {
 
   return (
     <>
-      <b>In case you have any questions please join our discord server by clicking the button below</b>
+      <b>In case you have any questions please join our Discord server by clicking the button below</b>
       <a id={discordButtonId} href="/discord">
         <img
           src="/discord.png"
