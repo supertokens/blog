@@ -4,7 +4,7 @@ const Bio = ({ discordButtonId }) => {
 
   return (
     <>
-      <b>In case you have any questions please join our Discord server by clicking the button below</b>
+      <b>Written by the Folks at <a href="https://supertokens.com">SuperTokens</a> — hope you enjoyed! We are always available on our Discord server. Join us if you have any questions or need any help.</b>
       <a id={discordButtonId} href="/discord">
         <img
           src="/discord.png"
