@@ -2,7 +2,7 @@
 title: How to deploy SuperTokens with React and NodeJS on Vercel
 date: "2022-04-14"
 description: "This tutorial wil guide you on how to add SuperTokens to a React and Express app deployed on Vercel"
-cover: "TODO.png"
+cover: "vercel.png"
 category: "programming"
 author: "SuperTokens Team"
 ---
