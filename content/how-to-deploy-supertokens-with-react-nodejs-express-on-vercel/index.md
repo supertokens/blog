@@ -56,10 +56,10 @@ To enable your project to run on production and the inspect sites for Vercel, yo
 ### On the backend
 
 ```js
-appInfo: {
+appInfo = {
     appName: "My App",
-    apiDomain: 'process.env.VERCEL_URL',
-    websiteDomain: 'process.env.VERCEL_URL',
+    apiDomain: process.env.VERCEL_URL,
+    websiteDomain: process.env.VERCEL_URL,
     apiBasePath: "/api/auth",
     websiteBasePath: "/auth",
 },
@@ -72,7 +72,7 @@ Vercel provides an env var - `process.env.VERCEL_URL` - to the backend which is 
 We can use `window.location.origin` to get the currently loaded URL and set those to the `apiDomain` and `websiteDomain`. This way, even if the inspect URL keeps on changing, it will still point to the current domain.
 
 ```js
-appInfo: {
+appInfo = {
     appName: "TodoApp",
     apiDomain: window.location.origin,
     websiteDomain: window.location.origin,
