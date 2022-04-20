@@ -7,27 +7,7 @@ category: "programming"
 author: "SuperTokens Team"
 ---
 
-Have you ever considered implementing easy and safe authentication on your web application at no cost? Have you considered integrating authentication with minimal or no initial environment setup? Then hang on for the next 10 minutes.
-
 In this tutorial, you’ll learn how to add SuperTokens authentication to your React and NodeJS application and deploy it on Vercel.
-
-## What is SuperTokens
-
-[SuperTokens](https://supertokens.com) is a developer first, open-source, flexible alternative to Firebase, AWS Cognito, and Auth0. SuperTokens allow you to add secure authentication to your web application in minutes with a prebuilt UI that you can easily customize.
-
-## Why use SuperTokens
-
-SuperTokens has lots of amazing features:
-
-* **Pre-built UI**: SuperTokens has pre-built Sign up / sign-in forms (via our frontend SDK) that can be embedded on your website natively.
-* **Feature segmentation:** With SuperTokens, you can pick only the features you need and see docs relevant to your use case (we call it "recipes")
-* **Priced for startups:** SuperTokens has a generous limit and pricing for our managed service, and it's free for self-hosted.
-* **Integrate with any service:** You can set up your own content delivery service (e.g., SMS or email).
-* **Secure**: Aside from login security, SuperTokens provides out of the box session security using `HttpOnly` cookies and `anti-CSRF` tokens. It also implements advanced token rotation techniques to detect against session hijacking.
-
-## What is Vercel
-
-Vercel is a platform for frontend frameworks and static sites that can be integrated with your headless content, commerce, or database. It offers a frictionless developer experience to handle the difficult tasks of deploying instantaneously, scaling automatically, and presenting tailored content globally. It's built for the frontend experience; create hybrid frontends using tools like Next.js, create lightweight event-driven APIs, and deploy to our Global Edge Network.
 
 ## Getting started
 
