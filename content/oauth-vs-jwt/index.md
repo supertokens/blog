@@ -121,5 +121,3 @@ At [SuperTokens](https://supertokens.com), we provide an auth solution that miti
 - We encourage the use of OAuth [only when really needed](https://supertokens.com/blog/oauth-2-vs-session-management).
 - We offer a way to [revoke JWTs / access tokens easily](https://supertokens.com/blog/revoking-access-with-a-jwt-blacklist) without reducing the verification efficiency.
 - We offer a [secure session management solution](https://supertokens.com/blog/the-best-way-to-securely-manage-user-sessions) which is the missing piece in the OAuth protocol.
-
-Want to learn more about authentication, OAuth or JWT? Join our Discord [link] of open source authentication developers.
