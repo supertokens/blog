@@ -16,7 +16,7 @@ module.exports = function (post) {
       <a href="${href}" ${nofollowAttribute} class="blog-card">
         <div class="blog-card__image-container">
           <img
-            src="${"/covers/" + post.frontmatter.cover}"
+            src="${"/card_covers/" + post.frontmatter.cover}"
             alt="Blog cover"
             class="blog-card__image"
           />
