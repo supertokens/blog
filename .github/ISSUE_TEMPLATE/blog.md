@@ -49,6 +49,7 @@ Assignee:
 - [ ] Release to prod
 
 ### Distribution checklist
+- [ ]  Link to it from docs / website
 - [ ] Clone the blog on
    - [ ] Medium
    - [ ] Hackernoon
@@ -58,6 +59,8 @@ Assignee:
    - [ ] Hashnode
    - [ ] lobste.rs
    - [ ] For each of these platforms, remember to put in the seo  title, meta description, OG image and adding canonical tags. 
+   - [ ] https://lobste.rs/  
+   - [ ] better programming
 
 - [ ] Distribute on 
    - [ ] Reddit
