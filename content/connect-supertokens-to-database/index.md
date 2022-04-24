@@ -76,3 +76,6 @@ Please feel free to navigate to the correct section based on your setup. In each
   ```
 
   If you get back a `Hello` reply, the core setup is done!
+
+
+## 1b) Running SuperTokens with Docker and MySQL without docker
