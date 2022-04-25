@@ -22,7 +22,7 @@ module.exports = function (post) {
           />
         </div>
         <p class="blog-card__date">${post.frontmatter.date}</p>
-        <p class="blog-card__title">${post.frontmatter.title}</p>
+        <h2 class="blog-card__title">${post.frontmatter.title}</h2>
         <p class="blog-card__excerpt">${post.frontmatter.description || post.excerpt}</p>
       </a>
     `
