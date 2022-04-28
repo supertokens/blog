@@ -1,8 +1,8 @@
 ---
 title: How to deploy SuperTokens with react + nodejs express on Vercel
-date: "2022-04-14"
+date: "2022-04-16"
 description: "This tutorial wil guide you on how to add SuperTokens to react + express app deployed on Vercel"
-cover: "adding-social-login-to-your-website-with-superTokens.png"
+cover: "how-to-deploy-supertokens-with-react-nodejs-express-on-vercel.png"
 category: "programming"
 author: "SuperTokens Team"
 ---
