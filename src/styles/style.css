@@ -367,7 +367,7 @@ a:focus {
   color: #d65078 !important;
   padding-left: 4px !important;
   padding-right: 4px !important;
-  font-size: 16px !important;
+  font-size: inherit !important;
   border: 1px solid #d9d9d9 !important;
   white-space: pre-wrap !important;
   border-radius: 3px;

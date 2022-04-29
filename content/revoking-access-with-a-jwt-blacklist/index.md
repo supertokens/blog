@@ -242,5 +242,3 @@ In this way, you keep one of the key benefits of using JWTs and that’s the fac
 If this sounds ideal for your use case, check out SuperTokens’ implementation of this session flow. SuperTokens uses this method to harness all the benefits of using JWTs while mitigating many of their disadvantages by combining them with opaque tokens.
 
 Furthermore, changing the refresh token on each use adds additional security benefits like being able to [detect session hijacking](https://supertokens.com/blog/the-best-way-to-securely-manage-user-sessions).
-
-Written by the Folks at [SuperTokens](https://supertokens.com) — hope you enjoyed! We are always available on our Discord server. Join us if you have any questions or need any help.
