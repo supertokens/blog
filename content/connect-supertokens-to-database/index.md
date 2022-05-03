@@ -117,22 +117,20 @@ For this setup to work, we must connect SuperTokens and MySQL via the host machi
 - Run the SuperTokens docker image with the env var specifying the MySQL connection URI:
   ```
   docker run \
-	-p 3567:3567 \
-	-e MYSQL_CONNECTION_URI="mysql://supertokens_user:somePassword@192.168.1.1:3306/supertokens" \
-	registry.supertokens.io/supertokens/supertokens-mysql
+    -p 3567:3567 \
+    --network=host \
+    -e MYSQL_CONNECTION_URI="mysql://supertokens_user:somePassword@192.168.1.1:3306/supertokens" \
+    -d registry.supertokens.io/supertokens/supertokens-mysql
   ```
 
   > Be sure to replace `192.168.1.1` with the correct IP of your system.
 
-  You should see the following output from the above command
-  ```bash
-  supertokens start
-
-  Loading storage layer.
-  Loading MySQL config.
-  ...
-  Started SuperTokens on localhost:3567 with PID: ...
+  This will start the docker image in the background. You can find it by running:
   ```
+  docker ps
+  ```
+
+  If you want to run it in the foreground, you can remove the `-d` option from the `docker run` command.
 - Verify that it is setup correctly by querying the core service:
   
   ```bash
