@@ -79,3 +79,64 @@ Please feel free to navigate to the correct section based on your setup. In each
 
 
 ## 1b) Running SuperTokens with Docker and MySQL without docker
+For this setup to work, we must connect SuperTokens and MySQL via the host machine's network. For this, we will have to expose the MySQL db to the local IP.
+
+- Start by pulling the SuperTokens docker image that is compatible with MySQL:
+  ```
+  docker pull registry.supertokens.io/supertokens/supertokens-mysql
+  ```
+
+- Expose MySQL server to all network interfaces on your machine. To do this, edit the `my.cnf` file (MySQL config file) to include:
+  ```
+  bind-address = 0.0.0.0
+  ```
+
+  Be sure to restart your MySQL server after saving the file.
+
+- Connect to the MySQL server on your local machine and create a database for SuperTokens to write to:
+
+  ```sql
+  create database supertokens;
+  ```
+
+  If you already have a database for your application and want SuperTokens to create tables in that, you can skip this step.
+- Create a MySQL user that has full access to the database created in the previous step. This user will be used by SuperTokens to create and write to the database tables:
+
+  ```sql
+  CREATE USER 'supertokens_user'@'%' IDENTIFIED BY 'somePassword';
+  ```
+
+  ```sql
+  GRANT ALL ON supertokens.* TO 'supertokens_user'@'%';
+  ```
+
+  ```sql
+  FLUSH PRIVILEGES;
+  ```
+
+- Run the SuperTokens docker image with the env var specifying the MySQL connection URI:
+  ```
+  docker run \
+	-p 3567:3567 \
+	-e MYSQL_CONNECTION_URI="mysql://supertokens_user:somePassword@192.168.1.1:3306/supertokens" \
+	registry.supertokens.io/supertokens/supertokens-mysql
+  ```
+
+  > Be sure to replace `192.168.1.1` with the correct IP of your system.
+
+  You should see the following output from the above command
+  ```bash
+  supertokens start
+
+  Loading storage layer.
+  Loading MySQL config.
+  ...
+  Started SuperTokens on localhost:3567 with PID: ...
+  ```
+- Verify that it is setup correctly by querying the core service:
+  
+  ```bash
+  curl http://localhost:3567/hello
+  ```
+
+  If you get back a `Hello` reply, the core setup is done!
