@@ -82,7 +82,7 @@ Please feel free to navigate to the correct section based on your setup. In each
 For this setup to work, we must connect SuperTokens and MySQL via the host machine's network. For this, we will have to expose the MySQL db to the local IP.
 
 - Start by pulling the SuperTokens docker image that is compatible with MySQL:
-  ```
+  ```bash
   docker pull registry.supertokens.io/supertokens/supertokens-mysql
   ```
 
@@ -115,7 +115,7 @@ For this setup to work, we must connect SuperTokens and MySQL via the host machi
   ```
 
 - Run the SuperTokens docker image with the env var specifying the MySQL connection URI:
-  ```
+  ```bash
   docker run \
     -p 3567:3567 \
     --network=host \
@@ -131,6 +131,151 @@ For this setup to work, we must connect SuperTokens and MySQL via the host machi
   ```
 
   If you want to run it in the foreground, you can remove the `-d` option from the `docker run` command.
+- Verify that it is setup correctly by querying the core service:
+  
+  ```bash
+  curl http://localhost:3567/hello
+  ```
+
+  If you get back a `Hello` reply, the core setup is done!
+
+## 1c) Running SuperTokens without Docker and MySQL with docker
+- Install SuperTokens on your local machine by following the [self-hosted, without docker, instructions in the SuperTokens’ documentation](https://supertokens.com/docs/thirdpartyemailpassword/quick-setup/core/without-docker).
+
+- Start the MySQL docker container:
+  ```bash
+  docker run \
+    -e MYSQL_ROOT_PASSWORD=root \
+    -e MYSQL_USER=supertokens_user \
+    -e MYSQL_PASSWORD=somePassword \
+    -e MYSQL_DATABASE=supertokens \
+    --network=host \
+    -p 3306:3306 \
+    -d mysql
+  ```
+
+  The above will start the mysql db with a new database called `supertokens`. SuperTokens core will store the data in this database. If instead, you want the data to be stored in an existing db, please provide that db's name instead.
+
+- Edit the SuperTokens `config.yaml` file (located in `/usr/lib/supertokens/config.yaml`) to add the following config:
+
+  ```yaml
+  mysql_connection_uri: "mysql://supertokens_user:somePassword@localhost:3306/supertokens"
+  ```
+  > Make sure that you put in the right values for the user, password, database name and location of your MySQL instance in the above connection uri string.
+- Run SuperTokens by running `supertokens start` on your terminal:
+  
+  ```bash
+  supertokens start
+
+  Loading storage layer.
+  Loading MySQL config.
+  ...
+  Started SuperTokens on localhost:3567 with PID: ...
+  ```
+- Verify that it is setup correctly by querying the core service:
+  
+  ```bash
+  curl http://localhost:3567/hello
+  ```
+
+  If you get back a `Hello` reply, the core setup is done!
+
+## 1d) Running SuperTokens and MySQL with docker, but without docker-compose
+- Start by pulling the SuperTokens docker image that is compatible with MySQL:
+  ```bash
+  docker pull registry.supertokens.io/supertokens/supertokens-mysql
+  ```
+
+- Start the MySQL docker container:
+  ```bash
+  docker run \
+    -e MYSQL_ROOT_PASSWORD=root \
+    -e MYSQL_USER=supertokens_user \
+    -e MYSQL_PASSWORD=somePassword \
+    -e MYSQL_DATABASE=supertokens \
+    --network=host \
+    -p 3306:3306 \
+    -d mysql
+  ```
+
+  The above will start the mysql db with a new database called `supertokens`. SuperTokens core will store the data in this database. If instead, you want the data to be stored in an existing db, please provide that db's name instead.
+
+- Run the SuperTokens docker image with the env var specifying the MySQL connection URI:
+  ```bash
+  docker run \
+    -p 3567:3567 \
+    --network=host \
+    -e MYSQL_CONNECTION_URI="mysql://supertokens_user:somePassword@192.168.1.1:3306/supertokens" \
+    -d registry.supertokens.io/supertokens/supertokens-mysql
+  ```
+
+  > Be sure to replace `192.168.1.1` with the correct IP of your system.
+
+  This will start the docker image in the background. You can find it by running:
+  ```
+  docker ps
+  ```
+
+  If you want to run it in the foreground, you can remove the `-d` option from the `docker run` command.
+- Verify that it is setup correctly by querying the core service:
+  
+  ```bash
+  curl http://localhost:3567/hello
+  ```
+
+  If you get back a `Hello` reply, the core setup is done!
+
+## 1e) Running SuperTokens and MySQL with docker, with docker-compose
+- Use the following docker compose file. You can call it `docker-compose.yaml`
+  ```yaml
+  version: '3'
+
+  services:
+    db:
+      image: mysql:latest
+      environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_USER: supertokens_user
+        MYSQL_PASSWORD: somePassword
+        MYSQL_DATABASE: supertokens
+      ports:
+        - 3306:3306
+      networks:
+        - app_network
+      restart: unless-stopped
+      healthcheck:
+        test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+        timeout: 20s
+        retries: 10
+
+    supertokens:
+      image: registry.supertokens.io/supertokens/supertokens-mysql
+      depends_on:
+        - db
+      ports:
+        - 3567:3567
+      environment:
+        MYSQL_CONNECTION_URI: mysql://supertokens_user:somePassword@db:3306/supertokens
+      networks:
+        - app_network
+      restart: unless-stopped
+      healthcheck:
+        test: >
+          bash -c 'exec 3<>/dev/tcp/127.0.0.1/3567 && echo -e "GET /hello HTTP/1.1\r\nhost: 127.0.0.1:3567\r\nConnection: close\r\n\r\n" >&3 && cat <&3 | grep "Hello"'
+        interval: 10s
+        timeout: 5s
+        retries: 5
+
+  networks:
+    app_network:
+      driver: bridge
+  ```
+
+- You can run the following command to start the service:
+  ```
+  docker-compose up
+  ```
+
 - Verify that it is setup correctly by querying the core service:
   
   ```bash
