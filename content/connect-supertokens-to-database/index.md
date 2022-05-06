@@ -29,9 +29,8 @@ Please feel free to navigate to the correct section based on your setup. In each
 
 > All the sections below assume that you will be using a Linux based operating system. For Windows, the syntax for some of the steps might be different, but the overall steps that need to be performed will be the same.
 
-## 1 Running with MySQL:
 
-### 1a) Running SuperTokens and MySQL without docker
+## 1a) Running SuperTokens and MySQL without docker
 - Install SuperTokens on your local machine by following the [self-hosted, without docker, instructions in the SuperTokens’ documentation](https://supertokens.com/docs/thirdpartyemailpassword/quick-setup/core/without-docker).
 - Connect to the MySQL server on your local machine and create a database for SuperTokens to write to:
 
@@ -80,7 +79,7 @@ Please feel free to navigate to the correct section based on your setup. In each
   If you get back a `Hello` reply, the core setup is done!
 
 
-### 1b) Running SuperTokens with Docker and MySQL without docker
+## 1b) Running SuperTokens with Docker and MySQL without docker
 For this setup to work, we must connect SuperTokens and MySQL via the host machine's network. For this, we will have to expose the MySQL db to the local IP.
 
 - Start by pulling the SuperTokens docker image that is compatible with MySQL:
@@ -141,7 +140,7 @@ For this setup to work, we must connect SuperTokens and MySQL via the host machi
 
   If you get back a `Hello` reply, the core setup is done!
 
-### 1c) Running SuperTokens without Docker and MySQL with docker
+## 1c) Running SuperTokens without Docker and MySQL with docker
 - Install SuperTokens on your local machine by following the [self-hosted, without docker, instructions in the SuperTokens’ documentation](https://supertokens.com/docs/thirdpartyemailpassword/quick-setup/core/without-docker).
 
 - Start the MySQL docker container:
@@ -182,7 +181,7 @@ For this setup to work, we must connect SuperTokens and MySQL via the host machi
 
   If you get back a `Hello` reply, the core setup is done!
 
-### 1d) Running SuperTokens and MySQL with docker, but without docker-compose
+## 1d) Running SuperTokens and MySQL with docker, but without docker-compose
 - Start by pulling the SuperTokens docker image that is compatible with MySQL:
   ```bash
   docker pull registry.supertokens.io/supertokens/supertokens-mysql
@@ -227,7 +226,7 @@ For this setup to work, we must connect SuperTokens and MySQL via the host machi
 
   If you get back a `Hello` reply, the core setup is done!
 
-### 1e) Running SuperTokens and MySQL with docker, with docker-compose
+## 1e) Running SuperTokens and MySQL with docker, with docker-compose
 - Use the following docker compose file. You can call it `docker-compose.yaml`
   ```yaml
   version: '3'
@@ -286,9 +285,8 @@ For this setup to work, we must connect SuperTokens and MySQL via the host machi
 
   If you get back a `Hello` reply, the core setup is done!
 
-## 2 Running with PostgreSQL:
 
-### 2a) Running SuperTokens and PostgreSQL without docker
+## 2a) Running SuperTokens and PostgreSQL without docker
 - Install SuperTokens on your local machine by following the [self-hosted, without docker, instructions in the SuperTokens’ documentation](https://supertokens.com/docs/thirdpartyemailpassword/quick-setup/core/without-docker).
 - Connect to the PostgreSQL server on your local machine and create a database for SuperTokens to write to:
 
@@ -300,7 +298,7 @@ For this setup to work, we must connect SuperTokens and MySQL via the host machi
 - Create a PostgreSQL user that has full access to the database created in the previous step. This user will be used by SuperTokens to create and write to the database tables:
 
   ```sql
-  CREATE USER supertokens_user with encrypted password 'somePassword';
+  CREATE USER supertokens_user WITH ENCRYPTED PASSWORD 'somePassword';
   ```
 
   ```sql
@@ -332,7 +330,7 @@ For this setup to work, we must connect SuperTokens and MySQL via the host machi
 
   If you get back a `Hello` reply, the core setup is done!
 
-### 2b) Running SuperTokens with Docker and PostgreSQL without docker
+## 2b) Running SuperTokens with Docker and PostgreSQL without docker
 
 For this setup to work, we must connect SuperTokens and PostgreSQL via the host machine’s network. For this, we will have to allow PostgreSQL to allow incomming client connections over the network.
 
@@ -397,10 +395,10 @@ For this setup to work, we must connect SuperTokens and PostgreSQL via the host 
 
   If you get back a `Hello` reply, the core setup is done!
 
-### 2c) Running SuperTokens without Docker and PostgreSQL with docker
+## 2c) Running SuperTokens without Docker and PostgreSQL with docker
 - Install SuperTokens on your local machine by following the [self-hosted, without docker, instructions in the SuperTokens’ documentation](https://supertokens.com/docs/thirdpartyemailpassword/quick-setup/core/without-docker).
 
-- Start the MySQL docker container:
+- Start the PostgreSQL docker container:
   ```bash
   docker run \
     -e POSTGRES_USER=root \
@@ -454,7 +452,7 @@ For this setup to work, we must connect SuperTokens and PostgreSQL via the host 
   If you get back a `Hello` reply, the core setup is done!
 
 
-### 2d) Running SuperTokens and PostgreSQL with docker, but without docker-compose
+## 2d) Running SuperTokens and PostgreSQL with docker, but without docker-compose
 - Start by pulling the SuperTokens docker image that is compatible with PostgreSQL:
   ```bash
   docker pull registry.supertokens.io/supertokens/supertokens-postgresql
@@ -515,7 +513,7 @@ For this setup to work, we must connect SuperTokens and PostgreSQL via the host 
   If you get back a `Hello` reply, the core setup is done!
 
 
-  ### 2e) Running SuperTokens and PostgreSQL with docker, with docker-compose
+  ## 2e) Running SuperTokens and PostgreSQL with docker, with docker-compose
 - Use the following docker compose file. You can call it `docker-compose.yaml`
   ```yaml
   version: '3'
