@@ -457,7 +457,7 @@ For this setup to work, we must connect SuperTokens and PostgreSQL via the host 
   docker pull registry.supertokens.io/supertokens/supertokens-postgresql
   ```
 
-- Start the MySQL docker container:
+- Start the PostgreSQL docker container:
   ```bash
   docker run \
     -e POSTGRES_USER=root \
