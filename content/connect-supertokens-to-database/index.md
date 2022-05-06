@@ -403,7 +403,7 @@ For this setup to work, we must connect SuperTokens and PostgreSQL via the host 
     -e POSTGRES_USER=root \
     -e POSTGRES_PASSWORD=root \
     --network=host \
-    -p 3306:3306 \
+    -p 5432:5432 \
     -d postgres \
     -c listen_addresses=0.0.0.0
   ```
@@ -463,7 +463,7 @@ For this setup to work, we must connect SuperTokens and PostgreSQL via the host 
     -e POSTGRES_USER=root \
     -e POSTGRES_PASSWORD=root \
     --network=host \
-    -p 3306:3306 \
+    -p 5432:5432 \
     -d postgres \
     -c listen_addresses=0.0.0.0
   ```
