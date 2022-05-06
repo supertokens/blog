@@ -29,7 +29,6 @@ Please feel free to navigate to the correct section based on your setup. In each
 
 > All the sections below assume that you will be using a Linux based operating system. For Windows, the syntax for some of the steps might be different, but the overall steps that need to be performed will be the same.
 
-
 ## 1a) Running SuperTokens and MySQL without docker
 - Install SuperTokens on your local machine by following the [self-hosted, without docker, instructions in the SuperTokens’ documentation](https://supertokens.com/docs/thirdpartyemailpassword/quick-setup/core/without-docker).
 - Connect to the MySQL server on your local machine and create a database for SuperTokens to write to:
