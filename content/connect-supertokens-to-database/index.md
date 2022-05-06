@@ -524,7 +524,6 @@ For this setup to work, we must connect SuperTokens and PostgreSQL via the host 
         POSTGRES_USER: supertokens_user 
         POSTGRES_PASSWORD: somePassword 
         POSTGRES_DB: supertokens
-      command: "postgres -c listen_addresses=0.0.0.0"
       ports:
         - 5432:5432
       networks:
@@ -543,7 +542,7 @@ For this setup to work, we must connect SuperTokens and PostgreSQL via the host 
       ports:
         - 3567:3567
       environment:
-        POSTGRESQL_CONNECTION_URI: "postgresql://supertokens_user:somePassword@172.17.0.1:5432/supertokens"
+        POSTGRESQL_CONNECTION_URI: "postgresql://supertokens_user:somePassword@db:5432/supertokens"
       networks:
         - app_network
       restart: unless-stopped
