@@ -16,13 +16,13 @@ module.exports = function (post) {
       <a href="${href}" ${nofollowAttribute} class="blog-card">
         <div class="blog-card__image-container">
           <img
-            src="${"/covers/" + post.frontmatter.cover}"
+            src="${"/card_covers/" + post.frontmatter.cover}"
             alt="Blog cover"
             class="blog-card__image"
           />
         </div>
         <p class="blog-card__date">${post.frontmatter.date}</p>
-        <p class="blog-card__title">${post.frontmatter.title}</p>
+        <h2 class="blog-card__title">${post.frontmatter.title}</h2>
         <p class="blog-card__excerpt">${post.frontmatter.description || post.excerpt}</p>
       </a>
     `

@@ -45,7 +45,7 @@ author: "John Doe"
 - **title:** Title of the blog post.
 - **description:** Description of the post that will be visible on the blog's card.
 - **date:** Date on which the post was created. It is a string of the format `YYYY-MM-DD`.
-- **cover:** Name of the cover image file for this post. The cover image should be placed inside the `static/covers` directory which is present at the root of the project. Only the name of the cover image file should be specified in the frontmatter's `cover` property.
+- **cover:** Name of the cover image files for this post. Two cover image files need to be added, a high resolution image which will be visible inside the blog post and a low resolution (maximum height of `250px`) image which will be shown as the cover image in the blog cards on blog listing page. The high resolution image should be placed inside the `static/covers` directory and the low resolution image should be placed inside the `static/card_covers` directory, both present at the root of the project. Both the images should have the same name and this name should be specified in the frontmatter's `cover` property.
 - **category:** The `category` property should be a string having all the categories for the blog post separated by a comma. For e.g. if we want a post that is visible in the _Featured_ and _Sessions_ tabs, the value would be `featured, sessions`.
 - **author:** Name of the author of this post.
 
