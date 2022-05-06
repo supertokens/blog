@@ -346,7 +346,7 @@ For this setup to work, we must connect SuperTokens and PostgreSQL via the host 
 
   `postgresql.conf`
   ```
-  listen_addresses = '*'
+  listen_addresses = '0.0.0.0'
   ```
 
   `pg_hba.conf`
@@ -520,41 +520,46 @@ For this setup to work, we must connect SuperTokens and PostgreSQL via the host 
   ```yaml
   version: '3'
 
-services:
-  db:
-    image: 'postgres:latest'
-    environment:
-      POSTGRES_USER: supertokens_user 
-      POSTGRES_PASSWORD: somePassword 
-      POSTGRES_DB: supertokens
-    command: "postgres -c listen_addresses=*"
-    ports:
-      - 5432:5432
-    networks:
-      - app_network
-    restart: unless-stopped
+  services:
+    db:
+      image: 'postgres:latest'
+      environment:
+        POSTGRES_USER: supertokens_user 
+        POSTGRES_PASSWORD: somePassword 
+        POSTGRES_DB: supertokens
+      command: "postgres -c listen_addresses=0.0.0.0"
+      ports:
+        - 5432:5432
+      networks:
+        - app_network
+      restart: unless-stopped
+      healthcheck:
+        test: ['CMD', 'pg_isready -U supertokens_user']
+        interval: 5s
+        timeout: 5s
+        retries: 5
 
-  supertokens:
-    image: registry.supertokens.io/supertokens/supertokens-postgresql
-    depends_on:
-      - db
-    ports:
-      - 3567:3567
-    environment:
-      POSTGRESQL_CONNECTION_URI: "postgresql://supertokens_user:somePassword@172.17.0.1:5432/supertokens"
-    networks:
-      - app_network
-    restart: unless-stopped
-    healthcheck:
-      test: >
-        bash -c 'exec 3<>/dev/tcp/127.0.0.1/3567 && echo -e "GET /hello HTTP/1.1\r\nhost: 127.0.0.1:3567\r\nConnection: close\r\n\r\n" >&3 && cat <&3 | grep "Hello"'
-      interval: 10s
-      timeout: 5s
-      retries: 5
+    supertokens:
+      image: registry.supertokens.io/supertokens/supertokens-postgresql
+      depends_on:
+        - db
+      ports:
+        - 3567:3567
+      environment:
+        POSTGRESQL_CONNECTION_URI: "postgresql://supertokens_user:somePassword@172.17.0.1:5432/supertokens"
+      networks:
+        - app_network
+      restart: unless-stopped
+      healthcheck:
+        test: >
+          bash -c 'exec 3<>/dev/tcp/127.0.0.1/3567 && echo -e "GET /hello HTTP/1.1\r\nhost: 127.0.0.1:3567\r\nConnection: close\r\n\r\n" >&3 && cat <&3 | grep "Hello"'
+        interval: 10s
+        timeout: 5s
+        retries: 5
 
-networks:
-  app_network:
-    driver: bridge
+  networks:
+    app_network:
+      driver: bridge
     
   ```
 
