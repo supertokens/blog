@@ -137,10 +137,9 @@ h2 {
 
 h3 {
   font-size: var(--gatsbyFontSize-25px);
-  padding-bottom: var(--gatsbySpacing-4);
+  margin-bottom: var(--gatsbySpacing-4);
   line-height: 2.1875rem;
   margin-top: 2rem;
-  margin-bottom: 0rem;
 }
 
 h4 {
