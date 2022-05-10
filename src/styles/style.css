@@ -53,6 +53,7 @@
   --gatsbyFontSize-1: 1rem;
   --gatsbyFontSize-2: 1.2rem;
   --gatsbyFontSize-3: 1.44rem;
+  --gatsbyFontSize-21px: 1.3125rem;
   --gatsbyFontSize-25px: 1.5625rem;
   --gatsbyFontSize-4: 1.728rem;
   --gatsbyFontSize-32px: 2rem;
@@ -143,7 +144,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.3125rem;
+  font-size: var(--gatsbyFontSize-21px);
   margin-top: 1.75rem;
   line-height: 2.125rem;
   margin-bottom: 0rem;
