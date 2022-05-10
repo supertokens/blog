@@ -54,17 +54,17 @@ As mentioned previously Okta’s main focus is workforce identity. Although they
 
 ### Disadvantages of using Auth0
 
- - #### Expensive
-   - One of the biggest reasons people switch away from Auth0 is how expensive their pricing can get. To give some context Auth0’s free plan allows for up to **7000 MAUs** and up to two social connections. This is fine for small projects but as your business starts to scale, Auth0’s pricing starts to scale much faster. For example, if you have around **7000 MAUs** and have enterprise connections enabled you can expect to pay around **$1800/month**.
-   - If you need to migrate your users, you would need to have an enterprise plan to export your user's password hashes.
+ #### Expensive
+- One of the biggest reasons people switch away from Auth0 is how expensive their pricing can get. To give some context Auth0’s free plan allows for up to **7000 MAUs** and up to two social connections. This is fine for small projects but as your business starts to scale, Auth0’s pricing starts to scale much faster. For example, if you have around **7000 MAUs** and have enterprise connections enabled you can expect to pay around **$1800/month**.
+- If you need to migrate your users, you would need to have an enterprise plan to export your user's password hashes.
 
-- #### Opaque Pricing:
-  - After **10000 MAUs**, Auth0’s pricing for plans becomes completely custom. This makes it hard for developers who are evaluating Auth0 to know how much they would have to pay once their product scales past the boundaries of the base plans.
+#### Opaque Pricing:
+- After **10000 MAUs**, Auth0’s pricing for plans becomes completely custom. This makes it hard for developers who are evaluating Auth0 to know how much they would have to pay once their product scales past the boundaries of the base plans.
 
-- #### Extensibility:
-  - Auth0's rules, hooks, and actions all provide ways for extending and customizing Auth0s service but you are limited by the number of flows they allow you to customize.
-  - Auth0’s extensibility options don't allow you to change the logic of a flow.
-  - To use this feature you have to add your code to their dashboard. This makes maintaining the code a hassle.
+#### Extensibility:
+- Auth0's rules, hooks, and actions all provide ways for extending and customizing Auth0s service but you are limited by the number of flows they allow you to customize.
+- Auth0’s extensibility options don't allow you to change the logic of a flow.
+- To use this feature you have to add your code to their dashboard. This makes maintaining the code a hassle.
 
 ### Auth0 Pricing:
 
@@ -101,23 +101,23 @@ Cognito supports multiple compliance programs and can scale to millions of users
 
 ### Advantages of using Cognito
 
-- #### Pricing:
-  - One reason why so many people use Cognito is its price. It offers its basic authentication flow for free for the first **50000 MAUs** and it is $0.0055 per MAU after that.
-- #### Integration with other AWS services:
-  - Cognito’s tight integration with other AWS services such as API Gateway, AppSync, and ALB removes a whole layer of custom code you’d have to write if you use AWS's services.
+#### Pricing:
+- One reason why so many people use Cognito is its price. It offers its basic authentication flow for free for the first **50000 MAUs** and it is $0.0055 per MAU after that.
+#### Integration with other AWS services:
+- Cognito’s tight integration with other AWS services such as API Gateway, AppSync, and ALB removes a whole layer of custom code you’d have to write if you use AWS's services.
 
 ### Disadvantages of using Cognito
 
-- #### Developer Experience:
-  - Cognito's documentation can vary in quality with some features not being documented at all. This can make working with the product very confusing and frustrating.
-  - Cognito is also not just a user management system but a single service with 3 distinct features. These are User Pools, Identity Pools, and Sync. This can be very confusing for newcomers.
-  - There have also been complaints about Cognito being slow to respond to bugs and feedback. For example, at the time of writing this article, [this issue](https://github.com/aws-amplify/amplify-js/issues/987) about email verification has been ongoing for 4 years now with no resolution and is breaking the flow for many users.
-- #### Features:
-  - Cognito's core feature set is limited and it relies on other services in AWS’s stack to make up for this gap. This results in the user having to deal with AWS services when they require more advanced features.
-- #### UI Customization:
-  - Cognito’s built-in UI offers basic branding and colour customization through their dashboard. If you need a more custom design you will need to create your own UI.
-- #### Migration:
-  - Cognito does not allow you to export user password hashes. This can make migration to another database or service much harder.
+#### Developer Experience:
+- Cognito's documentation can vary in quality with some features not being documented at all. This can make working with the product very confusing and frustrating.
+- Cognito is also not just a user management system but a single service with 3 distinct features. These are User Pools, Identity Pools, and Sync. This can be very confusing for newcomers.
+- There have also been complaints about Cognito being slow to respond to bugs and feedback. For example, at the time of writing this article, [this issue](https://github.com/aws-amplify/amplify-js/issues/987) about email verification has been ongoing for 4 years now with no resolution and is breaking the flow for many users.
+#### Features:
+- Cognito's core feature set is limited and it relies on other services in AWS’s stack to make up for this gap. This results in the user having to deal with AWS services when they require more advanced features.
+#### UI Customization:
+- Cognito’s built-in UI offers basic branding and colour customization through their dashboard. If you need a more custom design you will need to create your own UI.
+#### Migration:
+- Cognito does not allow you to export user password hashes. This can make migration to another database or service much harder.
 
 ### AWS Cognito Pricing
 Cognito’s free tier offers up to **50,000 MAUs** for free. Included are the Identity pool features which cover access control and RBAC. 
@@ -156,19 +156,19 @@ SuperTokens differentiates itself from its competitors with its flexibility. If 
 
 
 ### Advantages of using SuperTokens:
-- #### Completely Open Source:
-  - All of SuperTokens SDKs including the core service are open source. This allows developers to poke around the code for vulnerabilities and contribute to features.
-- #### Simple Setup:
-  - SuperTokens modular architecture makes the setup simple. It allows the developer to pick and choose what functionality they want and only see documentation relevant to their use case.
-  - Pre-built Auth UI that can be embedded in your website natively
-  - Support over [Discord](https://supertokens.com/discord).
-- ####  Flexibility: 
-  - As mentioned previously Supertokens has a managed service with reasonable pricing as well as a completely free self-hosted version.
-  - SuperTokens provides an override feature that enables you to fully customise authentication flows on both your frontend and backend. SuperTokens also provides pre-built UI components that can be rendered directly on your frontend
+#### Completely Open Source:
+- All of SuperTokens SDKs including the core service are open source. This allows developers to poke around the code for vulnerabilities and contribute to features.
+#### Simple Setup:
+- SuperTokens modular architecture makes the setup simple. It allows the developer to pick and choose what functionality they want and only see documentation relevant to their use case.
+- Pre-built Auth UI that can be embedded in your website natively
+- Support over [Discord](https://supertokens.com/discord).
+####  Flexibility: 
+- As mentioned previously Supertokens has a managed service with reasonable pricing as well as a completely free self-hosted version.
+- SuperTokens provides an override feature that enables you to fully customise authentication flows on both your frontend and backend. SuperTokens also provides pre-built UI components that can be rendered directly on your frontend
 
 ###  Disadvantages of using SuperTokens:
-- #### Enterprise features:
-  - SuperTokens currently doesn't offer certain enterprise features like enterprise connections (Active directory,/SAML) or compliance certifications.
+#### Enterprise features:
+- SuperTokens currently doesn't offer certain enterprise features like enterprise connections (Active directory,/SAML) or compliance certifications.
 
 ### SuperTokens Pricing:
 At the time of writing this article, the SuperTokens feature set is completely free. If you decide to use the self-hosted version you can download the core and use it for free for an unlimited amount of users. 
