@@ -11,10 +11,6 @@ In this tutorial, you’ll learn how to add SuperTokens authentication to your R
 
 ## Getting started
 
-### Heading 3
-
-#### Heading 4
-
 To get started with SuperTokens, please visit the [Recipe Guides page](https://supertokens.com/docs/guides) and pick the login method you want for your application. After choosing a guide, follow the quick setup section or one of the sections for integrating with a framework that you have chosen.
 
 We also have a blog post for how to integrate [email password + social login with express and react](https://supertokens.com/blog/how-to-set-up-social-and-email-password-login-with-reactjs), if that is what you are looking for.
