@@ -2,7 +2,7 @@
 title: How to connect SuperTokens to a MySQL or to a PostgreSQL database
 date: "2022-04-24"
 description: "Learn how to connect a self-hosted SuperTokens core to a database with or without Docker"
-cover: "TODO.png"
+cover: "supertokens-db.png"
 category: "programming"
 author: "SuperTokens Team"
 ---
