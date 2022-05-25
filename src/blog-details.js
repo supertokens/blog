@@ -61,18 +61,6 @@ module.exports = [
   },
   {
     fields: {
-      slug: "/the-real-reason-okta-spent-on-auth0",
-    },
-    frontmatter: {
-      title: "The real reason Okta spent $6.5B on Auth0",
-      description: "Why did Okta spend $6.5B on Auth0? What does this mean for app developers? See reactions from customers and employees.",
-      category: "featured",
-      date: "March 05, 2021",
-      cover: "the-real-reason-okta-spent-on-auth0.png"
-    },
-  },
-  {
-    fields: {
       slug: "/speed-up-your-web-development-time-by-integrating-webflow-into-a-react-application",
     },
     frontmatter: {
