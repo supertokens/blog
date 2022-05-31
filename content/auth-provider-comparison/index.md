@@ -2,7 +2,7 @@
 title: "Top Auth0 alternatives: Auth0 vs Okta vs Cognito vs SuperTokens [2022]"
 description: "An in depth review of Auth0 alternatives for 2022: Auth0 vs Okta vs Cognito vs SuperTokens"
 date: "2022-05-09"
-cover: "TODO.png"
+cover: "auth_comparison_header.png"
 category: "featured"
 author: "SuperTokens team"
 ---
@@ -23,7 +23,7 @@ In today's post, we will be looking at some of the leading Authentication provid
 
 ## <a name="auth0-and-okta" href=""> Auth0 and Okta</a>
 
-![Auth0 logo](./okta-and-auth0.png)
+![Auth0 logo](./auth_okta.png)
 
 ### Auth0
 
@@ -168,7 +168,7 @@ SuperTokens differentiates itself from its competitors with its flexibility. If 
 
 ###  Disadvantages of using SuperTokens:
 #### Enterprise features:
-- SuperTokens currently doesn't offer some enterprise features.
+- At the time of writing this post SuperTokens doesn't offer some enterprise features like SCIM provisioning, admin and organization support.
 
 #### Tech Stack Support
 - As of writing this article supertokens supports `Nodejs`, `Golang` and `Python` on the backend with `Reactjs(All Features)`, `VanillaJS(only session management)` and `React Native(only session management)` on the frontend. They currently do not support many popular languages like `Java` and `Php` and they do not have pre-built UI for popular frontend frameworks like `Angular` and `Vue`. 
