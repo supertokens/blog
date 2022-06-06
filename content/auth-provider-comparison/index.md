@@ -196,5 +196,3 @@ Well in the end it depends on your use case.
 - If your costs can scale with Auth0’s pricing and you don't need to customise their flows too much, then Auth0 is the way to go. 
 - AWS Cognito’s generous free tier and tight integration with other AWS services make it a great option if you can deal with sub-par documentation and support.
 - If you are a startup or mid-level organisation looking for an open-source solution that can grow with your organisation, with extensive customization options and the ability to self-host or use a managed service, SuperTokens is the clear choice. 
-
-![comparison chart](./auth_comparison.png)
