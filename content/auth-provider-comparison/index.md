@@ -111,7 +111,8 @@ Cognito supports multiple compliance programs and can scale to millions of users
 #### Developer Experience:
 - Cognito's documentation can vary in quality with some features not being documented at all. This can make working with the product very confusing and frustrating.
 - Cognito is also not just a user management system but a single service with 3 distinct features. These are User Pools, Identity Pools, and Sync. This can be very confusing for newcomers.
-- There have also been complaints about Cognito being slow to respond to bugs and feedback. For example, at the time of writing this article, [this issue](https://github.com/aws-amplify/amplify-js/issues/987) about email verification has been ongoing for 4 years now with no resolution and is breaking the flow for many users.
+- There have also been complaints about Cognito being slow to respond to bugs and feedback. For example [this issue](https://github.com/aws-amplify/amplify-js/issues/987) about email verification was breaking the flow for many users and was only recently fixed after 4 years.
+
 #### Features:
 - Cognito's core feature set is limited and it relies on other services in AWS’s stack to make up for this gap. This results in the user having to deal with AWS services when they require more advanced features.
 #### UI Customization:
