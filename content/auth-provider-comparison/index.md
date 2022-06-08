@@ -139,7 +139,7 @@ Cognito offers pricing tiers for additional MAUs and users with SAML/OIDC connec
 - SMS charges for multi-factor: 
   - Inbound charges:
   ![sms inbound charge](./cognito_sms_pricing_inbound.png)
-  - Outbound changes:
+  - Outbound charges:
   ![sms outbound charge](./cognito_sms_pricing_outbound.png)
 
 ### So is Cognito the way to go?
