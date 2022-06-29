@@ -465,5 +465,6 @@ sup > .footnote-ref::after {
 /* display GIFs in center */
 section[itemprop="articleBody"] img[src$=".gif"] {
   display: block;
+  max-width: 100%;
   margin: 0 auto;
 }

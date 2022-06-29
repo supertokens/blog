@@ -11,7 +11,7 @@ JSON Web Tokens (or JWTs) have become incredibly popular and you’ve likely hea
 
 While the use of JWTs for OAuth is widely accepted, its use for authenticating users sessions is controversial (see [this](https://news.ycombinator.com/item?id=22354534) post). In this article, I will attempt to make a comprehensive list of the pros and cons of using JWT for this context. I do not intend to solve this debate, since devs (especially devs) are often strongly opinionated. I only aim to summarize all the perspectives.
 
-However, I do offer my opinion on the best solution for [session management](https://supertokens.com/blog/the-best-way-to-securely-manage-user-sessions) (spoiler: it has the advantages of JWTs without any of its disadvantages!)
+However, I do offer my opinion on the best solution for [session management](/blog/the-best-way-to-securely-manage-user-sessions) (spoiler: it has the advantages of JWTs without any of its disadvantages!)
 
 The flow of the content is as follows:
 
@@ -107,7 +107,7 @@ Like the above section, the following is a list of all the cons that I have thou
 
 One solution that people recommend is to use revocation lists. This is where you keep a list of revoked JWTs and check against that list when verifying the JWT. But if we do this, it’s almost the same as opaque tokens since we will have to do a database / cache lookup in each API. **I say *almost* since here, we have the option to choose which APIs should check against the blacklist and which should not**. So this may be an advantage in certain scenarios over opaque tokens.
 
-One more solution is to keep the lifetime of the JWT very small (~10 mins). However, this also means that users will be logged out every 10 mins. There are various session flows that one can implement to have short lived JWTs while maintaining a long session as explained in [this blog post](https://supertokens.com/blog/all-you-need-to-know-about-user-session-security). We will be exploring the recommended method later in this post.
+One more solution is to keep the lifetime of the JWT very small (~10 mins). However, this also means that users will be logged out every 10 mins. There are various session flows that one can implement to have short lived JWTs while maintaining a long session as explained in [this blog post](/blog/all-you-need-to-know-about-user-session-security). We will be exploring the recommended method later in this post.
 
 **2) Fact: Bottlenecked against one secret key**: If the signing key of the JWTs is compromised, then the attacker can use that to change the userId in their JWT to any other user’s. This allows them to hijack any user’s account in a system. This secret key can be compromised in a variety of ways like employees making a mistake (by pushing the key to github) or purposely leaking the key. Attacks to your servers might also leak this key.
 
@@ -173,8 +173,8 @@ If you like the session flow I described, please checkout [SuperTokens](/). It i
 
 If you liked this blog, you may also like other blogs from us:
 
-- [All you need to know about user session security](https://supertokens.com/blog/all-you-need-to-know-about-user-session-security)
-- [The best way to securely manage user sessions](https://supertokens.com/blog/the-best-way-to-securely-manage-user-sessions)
+- [All you need to know about user session security](/blog/all-you-need-to-know-about-user-session-security)
+- [The best way to securely manage user sessions](/blog/the-best-way-to-securely-manage-user-sessions)
 
 [^1]: A typical JWT contains the following information:
     - iss (issuer): site name (20 bytes is a good upper limit)
