@@ -461,3 +461,9 @@ sup > .footnote-ref::after {
 .footnotes a {
   word-break: break-all;
 }
+
+/* display GIFs in center */
+section[itemprop="articleBody"] img[src$=".gif"] {
+  display: block;
+  margin: 0 auto;
+}
