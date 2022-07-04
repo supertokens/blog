@@ -93,7 +93,7 @@ Auth0 has all the functionality you need and is easy to set up and integrate wit
 
 ## <a name="cognito" href=""> Amazon Cognito</a>
 
-![Conigto logo](./cognito_image.jpg)
+![Conigto logo](./cognito_image.png)
 
 Cognito is a service that provides authentication, authorization, and user management for web and mobile apps. It is part of the AWS suite of products and can be used easily with any of their other offerings such as Lambda.
 
