@@ -134,18 +134,6 @@ module.exports = [
   },
   {
     fields: {
-      slug: "/are-you-using-jwts-for-user-sessions-in-the-correct-way",
-    },
-    frontmatter: {
-      title: "Are you using JWTs for user sessions in the correct way?",
-      description: "JWTs were originally designed for use in OAuth. This article covers the pros and cons of using JWT and talks about a solution which has the advantages of JWTs without any of its disadvantages.",
-      category: "sessions, featured",
-      date: "March 18, 2020",
-      cover: "are-you-using-jwts-for-user-sessions-in-the-correct-way.png"
-    }
-  },
-  {
-    fields: {
       slug: "/the-best-way-to-securely-manage-user-sessions",
     },
     frontmatter: {
