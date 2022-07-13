@@ -2,7 +2,7 @@
 title: How to use SuperTokens' pre built UI with VueJS
 date: "2022-07-13"
 description: "A step by step guide on how to integrate SuperTokens' pre built UI in a VueJS app"
-cover: ""
+cover: "vue-st.png"
 category: "programming"
 author: "SuperTokens team"
 ---
