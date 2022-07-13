@@ -40,7 +40,7 @@ The SuperTokens core service can be either self hosted (and connected to your ow
 
 Create a new Vue + Typescript app:
 
-```shell
+```bash
 npm init vue@latest
 ```
 
@@ -50,45 +50,38 @@ In the prompt, select Typescript and Vue Router:
 
 Once that’s done, head inside the project and install the following dependencies:
 
-```shell
-npm i cors express npm-run-all react supertokens-auth-react react-dom supertokens-node
+```bash
+npm i --save cors express npm-run-all react supertokens-auth-react react-dom supertokens-node
 ```
 
-The supertokens-auth-react library will be used on the frontend to render the login UI, and the supertokens-node library will be used on the backend to expose auth API routes that the frontend can call. 
+The `supertokens-auth-react` library will be used on the frontend to render the login UI, and the `supertokens-node` library will be used on the backend to expose the auth API routes.
 
-### 2. Call the supertokens-auth-react and supertokens-web-js **```init```** function
+### 2. Call the `supertokens-auth-react` and `supertokens-web-js` `init` function
 
-The AuthView component will render the SuperTokens React component to handle authentication on the frontend. 
-Create the ```AuthView``` component inside ```/src/views```:
+Start by create the `AuthView` component inside `/src/views` folder. This component will render the SuperTokens React component to handle authentication on the frontend:
 
-```vue
+```html
 <script lang="ts">
-
-
-export default{
-
- 
-
- }
-
+    export default {
+        // See next sections
+    }
 </script>
 
 <template>
- <main>
-  </main>
+    <main>
+        <div id="authId" />
+    </main>
 </template>
 ```
 
-Next we will create the SuperTokensReactComponent inside ```/src/components/Supertokens.tsx```. 
+Notice that we have made a `<div>` element with the `id="authId"`. This is where we will render the react components provided by SuperTokens.
 
-Inside this, we will initialize the supertokens-auth-react-SDK. This will tell SuperTokens which UI to show when the user visits the login page:
+Next, let's create a file - `/src/components/Supertokens.tsx` which is the actual React component that we will be rendering. Inside this file, we will initialize the `supertokens-auth-react` SDK and use it in the React `render` function.
 
-```typescript
+```ts
 import * as React from "react";
 import * as SuperTokens from "supertokens-auth-react";
-
 import * as ThirdPartyEmailPassword from "supertokens-auth-react/recipe/thirdpartyemailpassword";
-
 import { Github, Google } from "supertokens-auth-react/recipe/thirdpartyemailpassword";
 import Session from "supertokens-auth-react/recipe/session";
 
@@ -102,10 +95,7 @@ SuperTokens.init({
        ThirdPartyEmailPassword.init({
            signInAndUpFeature: {
                providers: [Github.init(), Google.init()],
-           },
-           emailVerificationFeature: {
-               mode: "REQUIRED",
-           },
+           }
        }),
        Session.init(),
    ],
@@ -123,34 +113,31 @@ class SuperTokensReactComponent extends React.Component {
 export default SuperTokensReactComponent;
 ```
 
-Next, we will load this **SuperTokensReactComponent** inside the **AuthView** component component:
+> The snippet above uses the `ThirdPartyEmailPassword` recipe (social + email / password login). You can choose another recipe as well by following the quick setup section in the [guides on supertokens.com](https://supertokens.com/docs/guides).
 
-```vue
+Next, we will load this `SuperTokensReactComponent` inside the `AuthView` component:
+
+```html
 <script lang="ts">
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import SuperTokensReactComponent from "../components/Supertokens";
 
 export default{
-
-   mounted(){
-      ReactDOM.render(React.createElement(SuperTokensReactComponent), document.getElementById('app'));
-
-   },
-   beforeDestroy(){
-       ReactDOM.unmountComponentAtNode(document.getElementById('app') as Element);
-   },
-
+    mounted(){
+        ReactDOM.render(React.createElement(SuperTokensReactComponent),
+            document.getElementById('authId'));
+    }
+    beforeDestroy(){
+        ReactDOM.unmountComponentAtNode(document.getElementById('authId') as Element);
+    }
 }
-
 </script>
-
-...
 ```
 
-The above takes care of the auth related routes. For all the other pages in our app, we want to be able to know if a sessino exists and extract information from it. To do this, we will use the supertokens-web-js SDK. We initialize this SDK in our Vue app’s root file ```/src/main.ts```:
+The above takes care of the `/auth/*` related routes. For all the other pages in our app, we want to be able to know if a session exists and extract information from it. To do this, we will use the `supertokens-web-js` SDK. We initialize this SDK in our Vue app's root file `/src/main.ts`:
 
-```typescript
+```ts
 import Vue from "vue";
 import VueCompositionAPI, { createApp, h } from "@vue/composition-api";
 import * as SuperTokens from "supertokens-web-js";
@@ -160,31 +147,30 @@ import App from "./App.vue";
 import router from "./router";
 
 SuperTokens.init({
-   appInfo: {
-       appName: "SuperTokens Demo",
-       apiDomain: "http://localhost:3001",
-   },
-   recipeList: [Session.init()],
+    appInfo: {
+        appName: "SuperTokens Demo",
+        apiDomain: "http://localhost:3001",
+    },
+    recipeList: [Session.init()],
 });
 
 Vue.use(VueCompositionAPI);
 
 const app = createApp({
-   router,
-   render: () => h(App),
+    router,
+    render: () => h(App),
 });
 
 app.mount("#app");
-
 ```
 
-Note that the config for Session.init call, the apiDomain and appName for both the init functions (supertokens-auth-react and supertokens-web-js) should always be the same.
+> The config for the `Session.init` call, the `apiDomain` and the `appName` for both the `init` functions (`supertokens-auth-react` and `supertokens-web-js`) should always be the same.
 
 ### 3. Setup Routing to show the Login UI
 
-Vue CLI already generates the initial routing for our app inside ```/src/router.index.ts ```file. We’ll update this file so that all ```/auth/*``` rotues load the ```AuthView``` component we created earlier:
+Vue CLI already generates the initial routing for our app inside `/src/router.index.ts`. We'll update this file so that all `/auth/*` routes load the `AuthView` component we created earlier:
 
-```typescript
+```ts
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
@@ -192,31 +178,29 @@ import HomeView from '../views/HomeView.vue'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
- mode: 'history',
- base: import.meta.env.BASE_URL,
- routes: [
-   {
-   path:'/auth*',
-   name:'auth',
-   component: ()=> import('../views/AuthView.vue'),
-  },
- ]
+    mode: 'history',
+    base: import.meta.env.BASE_URL,
+    routes: [{
+        path:'/auth*',
+        name:'auth',
+        component: () => import('../views/AuthView.vue'),
+    }]
 })
 
 export default router
 ```
 
-The path for the AuthView component is ```/auth*```. The asterisk indicates that any sub/nested paths with ```/auth``` as the parent path should be rendered by the ```AuthView``` component. 
+The path for the `AuthView` component is `/auth*`. The `*` indicates that any sub / nested paths with `/auth` as the parent path should be rendered by the `AuthView` component. The `AuthView` component will in turn render the ReactJS component we created earlier which will use the `supertokens-auth-react` SDK to show the auth UI. 
 
-We also lazy load the ```/auth``` route because the ```AuthView``` component loads some React related dependencies. Lazy loading makes sure that these dependencies are only injected in the ```AuthView``` component when you visit the ```/auth``` route. For all of the other routes, these dependencies are not imported thereby maintaining the overall bundle size of the application.
+We lazy load the `/auth` route because the `AuthView` component loads ReactJS as a dependency. Lazy loading makes sure that these dependencies are only injected in the `AuthView` component when you visit the `/auth/*` routes. For all of the other routes, these dependencies are not imported thereby maintaining the overall bundle size of the application.
 
 ### 4. View the Login UI
 
-If you now visit [http://localhost:4200/auth](http://localhost:3001/auth), you should see the Login UI as shown below:
+If you now visit [http://localhost:4200/auth](http://localhost:4200/auth), you should see the login UI as shown below:
 
 ![img](./Auth_View_Demo.png)
 
-### 5.Backend Setup
+## Backend Integration
 
 You can see the backend quick setup section [in our docs on supertokens.com](https://supertokens.com/docs/thirdpartyemailpassword/quick-setup/backend), or even copy the code from [our example app](https://github.com/supertokens/supertokens-auth-react/blob/master/examples/with-vue-thirdpartyemailpassword/server.ts). As a summary:
 
@@ -226,7 +210,7 @@ You can see the backend quick setup section [in our docs on supertokens.com](htt
 
 Once you’ve successfully setup your server, you can now try and sign up on the frontend.
 
-### 6. Managing Session
+## Session management
 
 Inside ```/src/views/HomeView.vue``` file we’ll check if the user is authenticated and conditionally render a template. So for authenticated users, we can show them a logout button with information about their session like their userId. For unauthenticated users, we can show them a button to route to the ```/auth``` page. 
 
