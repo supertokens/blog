@@ -196,7 +196,7 @@ We lazy load the `/auth` route because the `AuthView` component loads ReactJS as
 
 ### 4. View the Login UI
 
-If you now visit [http://localhost:4200/auth](http://localhost:4200/auth), you should see the login UI as shown below:
+If you now visit http://localhost:4200/auth, you should see the login UI as shown below:
 
 ![img](./Auth_View_Demo.png)
 
@@ -204,91 +204,81 @@ If you now visit [http://localhost:4200/auth](http://localhost:4200/auth), you s
 
 You can see the backend quick setup section [in our docs on supertokens.com](https://supertokens.com/docs/thirdpartyemailpassword/quick-setup/backend), or even copy the code from [our example app](https://github.com/supertokens/supertokens-auth-react/blob/master/examples/with-vue-thirdpartyemailpassword/server.ts). As a summary:
 
-- You need to initialise the supertokens-node SDK and provide it the recipe list (similar to how you did on the frontend).
-- Then you need to setup CORS, add the SuperTokens middleware and errorHandlers to your app. The SuperTokens middleware exposes all the auth related API routes (like sign in, sign up, signout etc) to the frontend.
-- Finally, you need to provide the connectionURI (location) of the SuperTokens core. To get started quickly, you can provide it https://try.supertokens.com. This is a core that we host for demo purposes. 
+- You need to initialize the `supertokens-node` SDK and provide it the `recipeList` (similar to how you did on the frontend).
+- Then you need to setup `CORS`, add the SuperTokens `middleware` and `errorHandler` to your app. The SuperTokens `middleware` exposes all the auth related API routes (like sign in, sign up, sign out etc) to the frontend.
+- Finally, you need to provide the `connectionURI` (location) of the SuperTokens core. To get started quickly, you can provide it `https://try.supertokens.com` (this is a core that we host for demo purposes). 
 
 Once you’ve successfully setup your server, you can now try and sign up on the frontend.
 
 ## Session management
 
-Inside ```/src/views/HomeView.vue``` file we’ll check if the user is authenticated and conditionally render a template. So for authenticated users, we can show them a logout button with information about their session like their userId. For unauthenticated users, we can show them a button to route to the ```/auth``` page. 
+Inside `/src/views/HomeView.vue` file we'll check if the user is authenticated and conditionally render a template. For authenticated users, we can show them a logout button with information about their session (like their `userId`). For unauthenticated users, we can show them a button to route to the `/auth` page. 
 
-```vue
- <script lang="ts">
+```ts
+<script lang="ts">
 import * as Session from "supertokens-web-js/recipe/session";
-
 export default {
-   data() {
-       return {
-           session: false,
-           userId: "",
-       };
-   },
-   mounted() {
-       this.getUserInfo();
-   },
-   methods: {
-       redirectToLogin() {
-           window.location.href = "/auth";
-       },
-       async getUserInfo() {
-           this.session = await Session.doesSessionExist();
-           if (this.session) {
-               this.userId = await Session.getUserId();
-           }
-       },
-       async onLogout() {
-           await Session.signOut();
-           window.location.reload();
-       },
-   },
+    data() {
+        return {
+            session: false,
+            userId: "",
+        };
+    },
+    mounted() {
+        this.getUserInfo();
+    },
+    methods: {
+        redirectToLogin() {
+            window.location.href = "/auth";
+        },
+        async getUserInfo() {
+            this.session = await Session.doesSessionExist();
+            if (this.session) {
+                this.userId = await Session.getUserId();
+            }
+        },
+        async onLogout() {
+            await Session.signOut();
+            window.location.reload();
+        },
+    },
 };
 </script>
 
 <template>
-   <main>
-       
- 		<div class="body">
-           <h1>Hello</h1>
+    <main>
+        <div class="body">
+            <h1>Hello</h1>
 
-           <div v-if="session">
-               <span>UserId:</span>
-               <h3>{{ userId }}</h3>
+            <div v-if="session">
+                <span>UserId:</span>
+                <h3>{{ userId }}</h3>
 
-               <button @click="onLogout">Sign Out</button>
-           </div>
-           <div v-else>
-               <p>
-                   Visit the <a href="https://supertokens.com">SuperTokens 											tutorial</a> to learn how to build Auth
-                   under a day.
-               </p>
-               <button @click="redirectToLogin">Sign in</button>
-           </div>
-       </div>
-   </main>
+                <button @click="onLogout">Sign Out</button>
+            </div>
+            <div v-else>
+                <p>
+                    Visit the <a href="https://supertokens.com">SuperTokens tutorial</a> to learn how to build Auth
+                    under a day.
+                </p>
+                <button @click="redirectToLogin">Sign in</button>
+            </div>
+        </div>
+    </main>
 </template>
-...
 ```
 
-To load the `HomeView` component on ``/`` we’ll update the ```/src/router/index.ts``` file:
+To load the `HomeView` component on `/` we'll update the `/src/router/index.ts` file:
 
-```typescript
-...
-
+```ts
 const router = new VueRouter({
-  ...
-   routes: [
-       {
-           path: "/",
-           name: "home",
-           component: HomeView,
-       },
-      ...
-   ],
+    // ...
+    routes: [{
+        path: "/",
+        name: "home",
+        component: HomeView,
+    }, /*...*/],
 });
-
-export default router;
 ```
 
 If you now visit http://localhost:4200, you should see the following page:
@@ -297,11 +287,11 @@ If you now visit http://localhost:4200, you should see the following page:
 
 ## SuperTokens Core Setup
 
-Whilst doing the backend setup, we are using https://try.supertokens.com as the connectionURI for the core. This is a demo core instance hosted by the team of SuperTokens. You can use this for as long as you like, but when you are commited to using SuperTokens, you should switch to a [self hosted](https://supertokens.com/docs/thirdpartyemailpassword/quick-setup/core/with-docker) or a [managed version](https://supertokens.com/docs/thirdpartyemailpassword/quick-setup/core/saas-setup) of the core.
+Whilst doing the backend setup, we are using `https://try.supertokens.com` as the `connectionURI` for the core. This is a demo core instance hosted by the team of SuperTokens. You can use this for as long as you like, but when you are committed to using SuperTokens, you should switch to a [self hosted](https://supertokens.com/docs/thirdpartyemailpassword/quick-setup/core/with-docker) or a [managed version](https://supertokens.com/docs/thirdpartyemailpassword/quick-setup/core/saas-setup) of the core.
 
 ## Conclusion
 
-To summarise, we used the React SDK provided by SuperTokens to show the pre-built login UI for our Vue app. We also optimised the bundle size so that the React SDK is only loaded for auth related routes.
+To summarise, we used the ReactJS SDK provided by SuperTokens to show the pre-built login UI for our Vue app. We also optimised the bundle size so that the ReactJS SDK is only loaded for auth related routes.
 Useful links:
 
 - [Example Vue app](https://github.com/supertokens/supertokens-auth-react/tree/master/examples/with-vue-thirdpartyemailpassword)
