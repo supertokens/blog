@@ -1,39 +1,38 @@
 ---
-
-title: How to use SuperTokens pre built UI with VueJS"
-date: "2022-07-12"
-description: "Learn how to use add authentication in a VueJS application with SuperTokens"
+title: How to use SuperTokens' pre built UI with VueJS
+date: "2022-07-13"
+description: "A step by step guide on how to integrate SuperTokens' pre built UI in a VueJS app"
 cover: ""
 category: "programming"
-author: "Siddhant Varma"
-
+author: "SuperTokens team"
 ---
 
-# How to use SuperTokens pre built UI with VueJS
-
-Every app needs authentication at some point. However, building your own auth service can be tedious, complex and time-consuming. Not to mention the security pitfalls you can introduce by poorly implementing authentication in your app.
-
-This is why developers often resort to using third party auth services like SuperTokens. So in this post, I’ll show you how to add authentication to a VueJS and Typescript app with SuperTokens. 
+Building your own auth service can be tedious, complex and time-consuming. To save time, developers often resort to using third party auth services for auth. This post will guide you on how to add authentication to a VueJS app with SuperTokens. 
 
 ## What is SuperTokens?
 
-SuperTokens is an open source project which enables you to add auth to your app quickly. It gives you a pre-built auth UI and backend APIs for an end-to-end auth experience. 
+[SuperTokens](https://supertokens.com) is an open source project which enables you to add auth to your app quickly. It gives you a pre-built auth UI and backend APIs for an end-to-end integration experience. 
 
-Let’s discuss the overall architecture when using SuperTokens in a Vue app. 
+Before we dive into the code, let’s discuss the overall architecture.
 
 ## Architecture
 
-SuperTokens is built out of three components - a frontend SDK, a backend SDK and a core microservice.
+SuperTokens is built out of three components:
+- Frontend SDK
+- Backend SDK
+- Core microservice that talks to a database.
 
-We’ll use the SuperTokens frontend SDK in our Vue app to add all the auth forms (logi,n signup, reset password etc) . You can also build your own UI, but we will focus on the pre built UI in this blog. 
+We’ll use the SuperTokens frontend SDK in our Vue app to add all the auth forms (login, signup, reset password etc). You can also build your own UI using the helper functions from frontend SDKs, but we will focus on the pre built UI in this blog. 
 
-The pre built UI provided by SuperTokens is in the form of ReactJS components (via the supertokens-auth-react library), so in order to use that, we will have to render react components in our VueJS app.
+The pre built UI are ReactJS components (provided by the [`supertokens-auth-react` library](https://github.com/supertokens/supertokens-auth-react)). In order to use them, we will have to render React components in our VueJS app.
 
-Note that in order to keep the app’s bundle small, we will use the supertokens-auth-react SDK only for all of the auth related routes, and use a lighter weight, vanilla JS SDK (supertokens-web-js) for all other routes in our app. We will then use code splitting to make sure that the supertokens-auth-react SDK is only bundled when visting the auth related routes.
+For the backend, we will use the NodeJS SDK provided by SuperTokens ([`supertokens-node` library](https://github.com/supertokens/supertokens-node)). This SDK exposes all of the auth APIs (like `/auth/signin`, `/auth/signout` etc) via a middleware, for the frontend to call. When these APIs are called, the SDK will talk to the SuperTokens Core microservice to read and write information to the database.
 
-For the backend, we will use the NodeJS SDK provided by SuperTokens (supertokens-node), which will be used to expose all the auth APIs for the frontend to call. When those APIs are called from the frontend, the SDK will talk to the SuperTokens Core microservice to write or read information from the database.
+The SuperTokens core service can be either self hosted (and connected to your own db), or be hosted by the team behind SuperTokens (sign up on [supertokens.com](https://supertokens.com)).
 
-The SuperTokens core service can be either self hosted, and connected to your own db, or hosted by the team behind SuperTokens (sign up on supertokens.com)
+> In order to keep the app’s bundle size small, we will limit the use of the `supertokens-auth-react` SDK to all of the auth related routes (`/auth/*` by default), and use a lighter weight, vanilla JS SDK ([`supertokens-web-js` library](https://github.com/supertokens/supertokens-web-js)) for all other routes in our app. Finally, we will then use code splitting and lazy importing to make sure that the `supertokens-auth-react` SDK is only bundled when visiting the `/auth/*` routes.
+
+![img](./self_hosted.png)
 
 ## Frontend Integration
 
