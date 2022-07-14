@@ -19,6 +19,7 @@ export default function HTML(props) {
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&amp;display=swap" rel="stylesheet"></link>
         <link href="/static/webflow/home/css/normalize.css" rel="stylesheet" type="text/css" />
         <link href="/static/webflow/home/css/webflow.css" rel="stylesheet" type="text/css" />
+        <link href="/static/cookieconsent.min.css" rel="stylesheet" type="text/css" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
