@@ -1,4 +1,4 @@
-module.exports = function (post) {
+module.exports = function (post, addLazyLoadingToImage) {
   // if the url or slug of the post has a trailing '/'
   // we remove it
   let href = post.fields.slug ? `/blog${post.fields.slug}` : post.fields.url;
@@ -16,6 +16,7 @@ module.exports = function (post) {
       <a href="${href}" ${nofollowAttribute} class="blog-card">
         <div class="blog-card__image-container">
           <img
+            ${addLazyLoadingToImage ? "loading=\"lazy\"" : ""}
             src="${"/card_covers/" + post.frontmatter.cover}"
             alt="Blog cover"
             class="blog-card__image"

@@ -63,8 +63,9 @@ exports.createPages = async ({ actions, graphql }) => {
       }
 
       return post.frontmatter.category === filter || post.frontmatter.category.includes(filter);
-    }).map((post) => {
-      return getBlogCardString(post);
+    }).map((post, index) => {
+      // add `loading="lazy"` to blog cards after the first 3 cards
+      return getBlogCardString(post, index >= 3);
     }).join("");
   });
 
