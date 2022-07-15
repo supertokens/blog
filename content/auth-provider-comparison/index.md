@@ -196,3 +196,35 @@ Well in the end it depends on your use case.
 - If your costs can scale with Auth0’s pricing and you don't need to customise their flows too much, then Auth0 is the way to go. 
 - AWS Cognito’s generous free tier and tight integration with other AWS services make it a great option if you can deal with sub-par documentation and support.
 - If you are a startup or mid-level organisation looking for an open-source solution that can grow with your organisation, with extensive customization options and the ability to self-host or use a managed service, SuperTokens is the clear choice. 
+
+|  | SuperTokens | Auth0 | AWS Cognito |
+|:---:|:---:|:---:|:---:|
+| Pricing | $$ / Free | $$$$ | $$$ |
+| User Satisfaction | High | Medium | Low |
+| UI and backend customisability | High | Medium | Low |
+| Size of the company offering services | Startup | Enterprise | Enterprise |
+| Company provided support for free tiers | High | Low | Low  |
+| Self Hostable | Yes | Yes | No |
+| Open Source | Yes | No | No |
+| Managed Service | Yes | Yes | Yes |
+| Supported Cloud Providers | All | All | AWS |
+| Compliance (SOC2, GDPR... | In Progress  (not required for self hosted) | Yes | Yes | Self hosted -  so not required 
+| User management dashboard | No | Yes | Yes | 
+| Passwordless login (email + phone no) | Yes | Yes | Yes |
+| Social and Email Password login | Yes | Yes | Yes |
+| Custom Open ID connector | Yes | Yes (Enterprise Tier) | Yes |
+| SAML Login | Yes | Yes (Essential Tier) | Yes |
+| Being an OAuth 2.0 provider | No | Yes | Yes |
+| External Database | No | Yes (Essential Tier) | No |
+| SLA gaurantees | Yes | Yes | Yes |
+| Single sign on | Partial | Yes | Yes |
+| 2FA | Partial | Yes | Yes | Yes |
+| External Database | No | Yes (Essential Tier) | No |
+| Roles and permissions | Yes | Yes | Yes |
+| Web3 login | No | Yes | No |
+| Machine to machine | Partial (only using JWT) | Yes | Yes |
+| Multi tenancy | Partial | Yes | Yes |
+| Cookie based session management (Out of the box) | Yes | No | No |
+| Customise Emails and SMS | Yes | Yes | Yes |
+
+Find the full comparsion chart on our [pricing page](https://supertokens.com/pricing)
