@@ -139,3 +139,69 @@
     justify-content: flex-start;
   }
 }
+
+/* blog post sign up banner */
+.blog-post-sign-up-banner {
+  width: 680px;
+  background: linear-gradient(to bottom, #ff8a15, #f93, #ff8815);
+  padding: 36px 65px 44px;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0px auto;
+}
+
+.sign-up-banner-backdrop {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 132px;
+  height: 241px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity: .5;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sign-up-banner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  color: white;
+  position: relative;
+}
+
+.sign-up-banner-content-title {
+  color: white;
+  font-family: 'Rubik';
+  text-decoration: none;
+  border-bottom: none;
+  padding: 0px;
+  margin: 0px 0px 28px;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.sign-up-banner-content-paragraph {
+  font-family: 'Rubik';
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 28px;
+}
+
+.sign-up-banner-content-cta {
+  font-family: 'Rubik';
+  display: block;
+  padding: 8px 20px;
+  background-color: white;
+  color: #f93;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, .16);
+  font-size: 16px;
+  line-height: 28px;
+  border-radius: 8px;
+  font-weight: 500;
+}
