@@ -261,7 +261,7 @@ For this setup to work, we must connect SuperTokens and MySQL via the host machi
       restart: unless-stopped
       healthcheck:
         test: >
-          bash -c 'exec 3<>/dev/tcp/127.0.0.1/3567 && echo -e "GET /hello HTTP/1.1\r\nhost: 127.0.0.1:3567\r\nConnection: close\r\n\r\n" >&3 && cat <&3 | grep "Hello"'
+          bash -c 'exec 3<>/dev/tcp/127.0.0.1/3567 && echo -e "GET /hello HTTP/1.1\\r\\nhost: 127.0.0.1:3567\\r\\nConnection: close\\r\\n\\r\\n" >&3 && cat <&3 | grep "Hello"'
         interval: 10s
         timeout: 5s
         retries: 5
@@ -548,7 +548,7 @@ For this setup to work, we must connect SuperTokens and PostgreSQL via the host 
       restart: unless-stopped
       healthcheck:
         test: >
-          bash -c 'exec 3<>/dev/tcp/127.0.0.1/3567 && echo -e "GET /hello HTTP/1.1\r\nhost: 127.0.0.1:3567\r\nConnection: close\r\n\r\n" >&3 && cat <&3 | grep "Hello"'
+          bash -c 'exec 3<>/dev/tcp/127.0.0.1/3567 && echo -e "GET /hello HTTP/1.1\\r\\nhost: 127.0.0.1:3567\\r\\nConnection: close\\r\\n\\r\\n" >&3 && cat <&3 | grep "Hello"'
         interval: 10s
         timeout: 5s
         retries: 5
