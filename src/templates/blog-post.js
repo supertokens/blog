@@ -5,6 +5,7 @@ import { withPrefix } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import SignUpBanner from "../components/SignUpBanner";
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -79,6 +80,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <Bio discordButtonId={`discord_${postSlugWithUnderscores}`} />
         </footer>
       </article>
+      <SignUpBanner />
     </Layout>
   )
 }
