@@ -2,9 +2,9 @@ import * as React from "react"
 import * as cheerio from "cheerio";
 import { withPrefix } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import BlogPostFooter from "../components/BlogPostFooter";
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -74,10 +74,9 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: getUpdatedHtml(post.html) }}
           itemProp="articleBody"
         />
-        <div id={`last_section_${postSlugWithUnderscores}`} />
-        <footer>
-          <Bio discordButtonId={`discord_${postSlugWithUnderscores}`} />
-        </footer>
+        <BlogPostFooter
+          idSlug={postSlugWithUnderscores}
+        />
       </article>
     </Layout>
   )

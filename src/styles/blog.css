@@ -139,3 +139,119 @@
     justify-content: flex-start;
   }
 }
+
+/* blog post sign up banner */
+.blog-post-sign-up-banner {
+  width: 680px;
+  background: linear-gradient(to bottom, #ff8a15, #f93, #ff8815);
+  padding: 36px 65px 44px;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 32px auto;
+}
+
+.sign-up-banner-backdrop {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 132px;
+  height: 241px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity: .5;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sign-up-banner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  color: #ffffff;
+  position: relative;
+}
+
+.sign-up-banner-content-title {
+  color: #ffffff;
+  font-family: 'Rubik';
+  text-decoration: none;
+  border-bottom: none;
+  padding: 0px;
+  margin: 0px 0px 28px;
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: bold;
+}
+
+.sign-up-banner-content-paragraph {
+  font-family: 'Rubik';
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 28px;
+}
+
+.sign-up-banner-buttons-container {
+  display: flex;
+  align-items: center;
+}
+
+.sign-up-banner-buttons-container a {
+  height: 44px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Rubik';
+}
+
+.sign-up-banner-content-cta {
+  background-color: #ffffff;
+  color: #f93;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, .16);
+  font-size: 16px;
+  line-height: 28px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color .15s;
+}
+
+.sign-up-banner-content-cta:hover {
+  text-decoration: none;
+  background-color: #E6E6E6;
+}
+
+.sign-up-banner-content-discord-button {
+  margin-left: 28px;
+  padding: 11px 48px;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+}
+
+.sign-up-banner-content-discord-button img {
+  width: 82px;
+  height: 22px;
+}
+
+@media screen and (max-width: 768px) {
+  .blog-post-sign-up-banner {
+    width: 100%;
+    padding: 36px 18px;
+  }
+
+  .sign-up-banner-buttons-container {
+    flex-flow: column;
+  }
+
+  .sign-up-banner-content-title {
+    text-align: center;
+  }
+
+  .sign-up-banner-content-discord-button {
+    margin-left: 0px;
+    margin-top: 18px;
+  }
+}
