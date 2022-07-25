@@ -32,10 +32,12 @@ These are known as permissions. In a grid form, the roles and permissions for ou
 
 |Role|read:all|delete:all|delete:self|edit:all|edit:self|
 |-|-|-|-|-|-|
-|admin|✅|✅|✅|✅|✅|
+|admin|✅|✅|-|✅|-|
 |regular-user|✅|-|✅|-|✅|
 
 </div>
+
+> The `"edit:all"` permission implies `"edit:self"` as well. Same goes for the `"delete"` permission.
 
 ### Advantages of RBAC
 - **Easy to understand**: The structure of roles and permissions is very intuitive. It can be understood by new employees fairly quickly.
@@ -61,11 +63,24 @@ These are known as permissions. In a grid form, the roles and permissions for ou
 
 
 ## Example usage (with code)
-Let's continue with our example above and see how we can actually implement it in an app using [SuperTokens](https://supertokens.com) - an open source authentication / authorization provider. The code snippets below are for a NodeJS backend, but similar logic applies for the other backend SDKs offered by SuperTokens as well.
+Let's continue with our example above and see how we can actually implement it in an app using [SuperTokens](https://supertokens.com) - an open source authentication / authorization provider.
 
-TODO
+> The code snippets below are for a NodeJS backend, but similar logic applies for the other backend SDKs offered by SuperTokens as well.
 
-#### 1) Creating the roles and permissions
+#### Step 1) Creating the roles and permissions
+SuperTokens needs to know about the roles and permissions before they can be assigned to users. For that, we can use the `createNewRoleOrAddPermissions` function exposed by the SuperTokens Node SDK:
+
+```ts
+import UserRoles from "supertokens-node/recipe/userroles";
+
+// creating the admin role and adding permissions to it.
+await UserRoles.createNewRoleOrAddPermissions("admin", ["read:all", "delete:all", "edit:all"])
+
+// creating the regular-user role and adding permissions to it.
+await UserRoles.createNewRoleOrAddPermissions("regular-user", ["read:all", "delete:self", "edit:self"])
+```
+
+#### Step 2) Assigning roles to user on sign up
 TODO
 
 ### Alternate libraries
