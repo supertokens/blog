@@ -227,7 +227,7 @@ For this setup to work, we must connect SuperTokens and MySQL via the host machi
 
 ## <a name="running-supertokens-and-mysql-with-docker-with-docker-compose" href=""> 1e) Running SuperTokens and MySQL with docker, with docker-compose </a>
 - Use the following docker compose file. You can call it `docker-compose.yaml`
-  ```yaml
+  ```yaml:clipboard=false
   version: '3'
 
   services:
@@ -514,7 +514,7 @@ For this setup to work, we must connect SuperTokens and PostgreSQL via the host 
 
   ## <a name="running-supertokens-and-postgresql-with-docker-with-docker-compose" href=""> 2e) Running SuperTokens and PostgreSQL with docker, with docker-compose</a>
 - Use the following docker compose file. You can call it `docker-compose.yaml`
-  ```yaml
+  ```yaml:clipboard=false
   version: '3'
 
   services:
