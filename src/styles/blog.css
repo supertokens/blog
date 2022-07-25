@@ -148,7 +148,7 @@
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  margin: 0px auto;
+  margin: 32px auto;
 }
 
 .sign-up-banner-backdrop {
@@ -170,12 +170,12 @@
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  color: white;
+  color: #ffffff;
   position: relative;
 }
 
 .sign-up-banner-content-title {
-  color: white;
+  color: #ffffff;
   font-family: 'Rubik';
   text-decoration: none;
   border-bottom: none;
@@ -193,15 +193,64 @@
   margin-bottom: 28px;
 }
 
-.sign-up-banner-content-cta {
+.sign-up-banner-buttons-container {
+  display: flex;
+  align-items: center;
+}
+
+.sign-up-banner-buttons-container a {
+  height: 44px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Rubik';
-  display: block;
-  padding: 8px 20px;
-  background-color: white;
+}
+
+.sign-up-banner-content-cta {
+  background-color: #ffffff;
   color: #f93;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, .16);
   font-size: 16px;
   line-height: 28px;
   border-radius: 8px;
   font-weight: 500;
+  transition: background-color .15s;
+}
+
+.sign-up-banner-content-cta:hover {
+  text-decoration: none;
+  background-color: #E6E6E6;
+}
+
+.sign-up-banner-content-discord-button {
+  margin-left: 28px;
+  padding: 11px 48px;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+}
+
+.sign-up-banner-content-discord-button img {
+  width: 82px;
+  height: 22px;
+}
+
+@media screen and (max-width: 768px) {
+  .blog-post-sign-up-banner {
+    width: 100%;
+    padding: 36px 18px;
+  }
+
+  .sign-up-banner-buttons-container {
+    flex-flow: column;
+  }
+
+  .sign-up-banner-content-title {
+    text-align: center;
+  }
+
+  .sign-up-banner-content-discord-button {
+    margin-left: 0px;
+    margin-top: 18px;
+  }
 }
