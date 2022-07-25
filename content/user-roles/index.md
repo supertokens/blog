@@ -28,10 +28,14 @@ In formal notation, the actions that can be taken can be represented as strings 
 
 These are known as permissions. In a grid form, the roles and permissions for our example app will look like this:
 
-|Role|`read:all`|`delete:all`|`delete:self`|`edit:all`|`edit:self`|
+<div style="overflow-y:auto; font-size: 13px">
+
+|Role|read:all|delete:all|delete:self|edit:all|edit:self|
 |-|-|-|-|-|-|
-|`admin`|✅|✅|✅|✅|✅|
-|`regular-user`|✅|-|✅|-|✅|
+|admin|✅|✅|✅|✅|✅|
+|regular-user|✅|-|✅|-|✅|
+
+</div>
 
 ### Advantages of RBAC
 - **Easy to understand**: The structure of roles and permissions is very intuitive. It can be understood by new employees fairly quickly.
@@ -62,7 +66,7 @@ Let's continue with our example above and see how we can actually implement it i
 TODO
 
 #### 1) Creating the roles and permissions
-
+TODO
 
 ### Alternate libraries
 TODO
