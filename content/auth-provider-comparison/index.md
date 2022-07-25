@@ -198,6 +198,8 @@ Well in the end it depends on your use case.
 - AWS Cognito’s generous free tier and tight integration with other AWS services make it a great option if you can deal with sub-par documentation and support.
 - If you are a startup or mid-level organisation looking for an open-source solution that can grow with your organisation, with extensive customization options and the ability to self-host or use a managed service, SuperTokens is the clear choice. 
 
+<div style="overflow-y:auto;">
+
 |  | SuperTokens | Auth0 | AWS Cognito |
 |:---:|:---:|:---:|:---:|
 | Pricing | $$ / Free | $$$$ | $$$ |
@@ -227,5 +229,7 @@ Well in the end it depends on your use case.
 | Multi tenancy | Partial | Yes | Yes |
 | Cookie based session management (Out of the box) | Yes | No | No |
 | Customise Emails and SMS | Yes | Yes | Yes |
+
+</div>
 
 Find the full comparsion chart on our [pricing page](https://supertokens.com/pricing)
