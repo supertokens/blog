@@ -57,7 +57,7 @@ These are known as permissions. In a grid form, the roles and permissions for ou
     }
     // ...
     ```
-    It may cause issues if a user has the `"admin"` and `"regular-user"` role - despite having the `"admin"` role, they will not be able to edit all the blogs cause it will execute into the first `if` statement above.
+    It may cause issues if a user has the `"admin"` and `"regular-user"` roles - despite having the `"admin"` role, they will not be able to edit all the blogs cause it will execute into the first `if` statement above.
 
 
 ## Example usage (with code)
