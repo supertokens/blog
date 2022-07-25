@@ -65,10 +65,10 @@ These are known as permissions. In a grid form, the roles and permissions for ou
 ## Example usage (with code)
 Let's continue with our example above and see how we can actually implement it in an app using [SuperTokens](https://supertokens.com) - an open source authentication / authorization provider.
 
-> The code snippets below are for a NodeJS backend, but similar logic applies for the other backend SDKs offered by SuperTokens as well.
+> The code snippets below are for a NodeJS backend, but similar logic applies for the other backend SDKs offered by SuperTokens as well. All the code snippets are as per SuperTokens Node SDK version `v11.0.1`
 
 #### Step 1) Creating the roles and permissions
-SuperTokens needs to know about the roles and permissions before they can be assigned to users. For that, we can use the `createNewRoleOrAddPermissions` function exposed by the SuperTokens Node SDK:
+SuperTokens needs to know about the roles and permissions before they can be assigned to users. For that, we can use the `createNewRoleOrAddPermissions` function exposed by the SDK:
 
 ```ts
 import UserRoles from "supertokens-node/recipe/userroles";
