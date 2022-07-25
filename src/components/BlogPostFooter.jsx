@@ -15,16 +15,16 @@ const BlogPostFooter = ({ idSlug }) => {
         />
 
         <div className="sign-up-banner-content">
-          <h2 className="sign-up-banner-content-title">Get started for free</h2>
+          <p className="sign-up-banner-content-title">Get started for free</p>
           <p className="sign-up-banner-content-paragraph">SuperTokens' free plan lets you go live and start signing up users (no credit card required)</p>
           <div className="sign-up-banner-buttons-container">
             <a
-              href="/auth"
+              href="https://supertokens.com/auth"
               className="sign-up-banner-content-cta"
               id={`sign_up_${idSlug}`}
             >Sign up</a>
             <a
-              href="/discord"
+              href="https://supertokens.com/discord"
               className="sign-up-banner-content-discord-button"
               id={`discord_${idSlug}`}
             >
