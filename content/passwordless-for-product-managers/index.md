@@ -26,7 +26,7 @@ One of the downsides to using magic links for authentication is that the email m
 
 ### 2. One-time passwords / codes (OTP / OTC)
 In this method, the user  receives a password / code via email or SMS that they can use to log in to the website or mobile application. Unlike magic links, an OTP is easier to view on one device and type on the other device quickly. It solves the problem magic links have where the user needs to login to the email ID on the device where they want to authenticate. Which is why it is highly recommended to use OTP alongwith magic links. It improves the user experience and allows you to create a more secure system.
-> > Note: The longer (in character length) the OTP, the higher the security of the system. Similarly, it is advisable to use diverse characters in the OTP (e.g. alphanumerics versus just numerics - X4A3Xi98B) to increase system security.
+> **Note:** The longer (in character length) the OTP, the higher the security of the system. Similarly, it is advisable to use diverse characters in the OTP (e.g. alphanumerics versus just numerics - X4A3Xi98B) to increase system security.
 
 ![Login with SMS / OTP](./OTP_SMS_login.gif)
 
@@ -39,7 +39,7 @@ One of the downsides of using biometric authentication is that the user requires
 Using this method, users can choose to sign up or sign in via their social media accounts. It’s quick, super easy and is heavily used by developers — especially when building the MVP or version 1 of their mobile / web app.
 
 One of the downsides to using social login is that social media companies (like Facebook, Instagram) can track users across sites that they login to, and therefore some users may not prefer this method.
-> > Note: Social login is mostly referred to as third-party login although it is a form of passwordless login. Most users today stay logged in to their social media accounts and therefore they hardly ever need to enter a password when using this type of login method.
+> **Note:** Social login is mostly referred to as third-party login although it is a form of passwordless login. Most users today stay logged in to their social media accounts and therefore they hardly ever need to enter a password when using this type of login method.
 
 ### 5. Push notifications
 Push Notification Authentication enables user authentication by sending a notification directly to a secure application on the user’s device, alerting them that an authentication attempt is taking place. Users can view authentication details and approve or deny access, typically via a simple press of a button. Like SMS, push notification also shares an OTP with the user and is a more secure authentication method (since attacks like SIM swapping are not possible). It is often deployed as part of a multi-factor authentication (MFA) solution.
@@ -57,13 +57,15 @@ Here’s how you could approach implementing passwordless authentication:
 2. **Number of factors:** It’s recommended to use multiple authentication factors with or without passwordless. Reliance on one single factor, regardless of how safe it may seem, is not recommended.
 3. **Buy required hardware / software:** The user or the organisation may have to buy equipment to implement biometric-based passwordless authentication (like a fingerprint or retina scanner). For other modes, like magic links or mobile OTPs, one may have to use an email / sms sending service such as Twilio or MailChimp.
 4. **Provision users:** Start registering people on your authentication system. E.g., For a fingerprint scanning system, you will need to scan the fingers of all your users / employees.
-> > Note: Combining Passwordless Authentication with Adaptive (Behavioural) Authentication can bring the optimum balance between user experience vs security. For example, suppose a user logs in to the system, via their laptop, early in the morning, every weekday. Over time, the system learns that this is their typical login behaviour. Then one day, all of a sudden, the user logs in to the system on a Saturday. They used the same laptop to login and it was still early in the morning, and their geographical location was also the same. The system calculates a relatively higher risk score for this behaviour, which warrants the use of a secondary authentication factor, like an SMS OTP.
+> **Note:** Combining Passwordless Authentication with Adaptive (Behavioural) Authentication can bring the optimum balance between user experience vs security. For example, suppose a user logs in to the system, via their laptop, early in the morning, every weekday. Over time, the system learns that this is their typical login behaviour. Then one day, all of a sudden, the user logs in to the system on a Saturday. They used the same laptop to login and it was still early in the morning, and their geographical location was also the same. The system calculates a relatively higher risk score for this behaviour, which warrants the use of a secondary authentication factor, like an SMS OTP.
 
 ![Combining Passwordless Authentication with Adaptive (Behavioural) Authentication](./adaptive_auth.png)
 
 ## Is the Future Passwordless?
 Even though passwords are far less prevalent than ever before, they are still being used all around the world. However, we at SuperTokens expect passwordless authentication to get more and more popular, especially as a second factor of authentication.
+
 Records already indicate that passwordless authentication helps in solving [CX pain points](https://www.the-future-of-commerce.com/2022/05/10/passwordless-authentication-solve-cx-pain-points-boost-revenue/) and leads to a boost in revenue. Plus, keep in mind that the average person has to keep track of [about 100+ passwords](https://tech.co/password-managers/how-many-passwords-average-person#:~:text=According%20to%20new%20research%20from,has%20100%20passwords%20to%20remember!) and spends almost [12 minutes](https://resources.yubico.com/53ZDUYE6/at/q3tmql-974v8g-73e8p5/YubicoPonemon_2019_State_of_Password_and_Authentication_Security_Behaviors_Report.pdf?format=pdf) every week resetting those passwords.
+
 Also, a frictionless UX can be a powerful competitive advantage for businesses at every level. Often, B2C companies are particularly concerned about the negative impact of login friction on conversion / retention rates and revenue. By enabling a frictionless customer experience, investment in passwordless supports **customer retention** and **revenue growth.**
 
 Plus, Apple, Google and Microsoft [have already committed](https://www.apple.com/in/newsroom/2022/05/apple-google-and-microsoft-commit-to-expanded-support-for-fido-standard/) to expand support for the FIDO standard to accelerate availability of passwordless sign-ins. This will definitely help boost adoption of passwordless login methods.
