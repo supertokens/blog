@@ -80,7 +80,26 @@ await UserRoles.createNewRoleOrAddPermissions("admin", ["read:all", "delete:all"
 await UserRoles.createNewRoleOrAddPermissions("regular-user", ["read:all", "delete:self", "edit:self"])
 ```
 
-#### Step 2) Assigning roles to user on sign up
+#### Step 2) Assigning roles to users on sign up
+
+You can add the code snippet below in your override function for the sign up API
+```ts
+import UserRoles from "supertokens-node/recipe/userroles";
+
+// the value of roleToAssign needs to be fetched by you.
+// For example, you could check if the user's email is of a certain domain,
+// and if it is, then they would be an admin, else not.
+if (roleToAssign === "admin") {
+    // the userId belongs to the user who just signed up.
+    await UserRoles.addRoleToUser(userId, "admin");
+} else {
+    await UserRoles.addRoleToUser(userId, "regular-user");
+}
+```
+
+You can even [add the roles and permissions to the user's session payload](https://supertokens.com/docs/userroles/managing-roles-and-sessions) so that accessing them later (on the frontend or backend) is efficient. 
+
+#### Step 3) Guarding APIs based on a user's role or permissions
 TODO
 
 ### Alternate libraries
