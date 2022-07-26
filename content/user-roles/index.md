@@ -62,7 +62,7 @@ These are known as permissions. In a grid form, the roles and permissions for ou
     It may cause issues if a user has the `"admin"` and `"regular-user"` roles - despite having the `"admin"` role, they will not be able to edit all the blogs cause it will execute into the first `if` statement above.
 
 
-## Example usage (with code)
+## Code example
 Let's continue with our example above and see how we can actually implement it in an app using [SuperTokens](https://supertokens.com) - an open source authentication / authorization provider.
 
 > The code snippets below are for a NodeJS backend, but similar logic applies for the other backend SDKs offered by SuperTokens as well. All the code snippets are as per SuperTokens Node SDK version `v11.0.1`
@@ -100,7 +100,45 @@ if (roleToAssign === "admin") {
 You can even [add the roles and permissions to the user's session payload](https://supertokens.com/docs/userroles/managing-roles-and-sessions) so that accessing them later (on the frontend or backend) is efficient. 
 
 #### Step 3) Guarding APIs based on a user's role or permissions
-TODO
+
+Once you have completed session verification in your APIs, you can retrieve the user ID of the logged in user and get their roles and permissions using that:
+```ts
+import { verifySession } from "supertokens-node/recipe/session/framework/express";
+import UserRoles from "supertokens-node/recipe/userroles";
+
+app.delete("/blog", verifySession(), async (req, res) => {
+    let blogId = req.body.blogId
+    let userId = req.session.getUserId();
+
+    let roles = await UserRoles.getRolesForUser(userId).roles
+    // if the user is an admin, we will be ["admin"], else we will get ["regular-user"]
+
+    let permissions = await UserRoles.getPermissionsForRole(roles[0]).permissions
+    // if the role is "admin", we get ["read:all", "delete:all", "edit:all"]
+    // else we get ["read:all", "delete:self", "edit:self"]
+
+    if (permissions.includes("delete:all")) {
+        // allow delete
+    } else if (permissions.includes("delete:self")) {
+        if (getOwnerOfBlog(blogId) === userId) {
+            // allow delete
+        } else {
+            // return access denied error
+        }
+    }
+})
+```
+
+> You can learn more about how to use user roles and permissions feature using SuperTokens via the [recipe guides docs on supertokens.com](https://supertokens.com/docs/userroles/introduction).
 
 ### Alternate libraries
-TODO
+Whilst SuperTokens allows you to guard your frontend and backend routes via a mapping of roles and permissions, access control goes beyond that. You may want to:
+- Organize roles in a hierarchy such that a parent role inherits permissions from child roles.
+- Be able to specify permission precedence with the authorization framework as opposed to in your API code.
+- Visualize the roles and permissions relations.
+- Define complicated policies that combine roles and permissions to determine if a user has access to a resource.
+
+For these use cases, there are dedicated authorization solutions which you can integrate with your existing authentication provider. Some examples are:
+- [Casbin](https://casbin.org/)
+- [Osohq](https://www.osohq.com/)
+- [Permit.io](https://permit.io/)
