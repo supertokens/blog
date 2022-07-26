@@ -10,7 +10,7 @@ author: "SuperTokens Team"
 ## What is Authorization?
 Authorization is all about answering the question *"Is this user allowed to do a certain operation?"*. This is different from Authentication in which we answer the question *"Which user is this request coming from?"*
 
-Both are essential to most applications, and as such, we first go through authentication flows to identify who the user is, and then we go through authorization flows in which we decide if the user has the permissions to do a certain operation.
+Both are essential to most applications, and as such, we first go through authentication flows to identify who the user is, and then we go through authorization flows in which we decide if the user has the permissions to do certain operations.
 
 <TODO: add graphic for authentication -> authorisation>
 
