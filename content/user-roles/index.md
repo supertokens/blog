@@ -12,7 +12,7 @@ Authorization is all about answering the question *"Is this user allowed to do a
 
 Both are essential to most applications, and as such, we first go through authentication flows to identify who the user is, and then we go through authorization flows in which we decide if the user has the permissions to do certain operations.
 
-<TODO: add graphic for authentication -> authorisation>
+![Set-Cookie Header](./authn-to-authz.png)
 
 ## What is Roles based access control (RBAC)?
 RBAC is one of the ways in which Authorization can be implemented. It allows developers to create "groups" of users that can all do the same set of operations. The name of the group is essentially the role of those users.
