@@ -2,7 +2,7 @@
 title: "Authorization with user roles (RBAC)"
 date: "2022-07-21"
 description: "Learn about how to add authorization to your app with RBAC"
-cover: "TODO.png"
+cover: "user_roles.png"
 category: "programming"
 author: "SuperTokens Team"
 ---
