@@ -12,7 +12,7 @@ Authorization is all about answering the question *"Is this user allowed to do a
 
 Both are essential to most applications, and as such, we first go through authentication flows to identify who the user is, and then we go through authorization flows in which we decide if the user has the permissions to do certain operations.
 
-![Set-Cookie Header](./authn-to-authz.png)
+![AuthN to AuthZ](./authn-to-authz.png)
 
 ## What is Roles based access control (RBAC)?
 RBAC is one of the ways in which Authorization can be implemented. It allows developers to create "groups" of users that can all do the same set of operations. The name of the group is essentially the role of those users.
@@ -28,14 +28,7 @@ In formal notation, the actions that can be taken can be represented as strings 
 
 These are known as permissions. In a grid form, the roles and permissions for our example app will look like this:
 
-<div style="overflow-y:auto; font-size: 13px">
-
-|Role|read:all|delete:all|delete:self|edit:all|edit:self|
-|-|-|-|-|-|-|
-|admin|✅|✅|-|✅|-|
-|regular-user|✅|-|✅|-|✅|
-
-</div>
+![Permission grid](./permission_grid.png)
 
 > The `"edit:all"` permission implies `"edit:self"` as well. Same goes for the `"delete"` permission.
 
