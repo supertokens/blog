@@ -33,10 +33,10 @@ These are known as permissions. In a grid form, the roles and permissions for ou
 > The `"edit:all"` permission implies `"edit:self"` as well. Same goes for the `"delete"` permission.
 
 ### Advantages of RBAC
-- **Easy to understand**: The structure of roles and permissions is very intuitive. It can be understood by new employees fairly quickly.
-- **Easy changes**: As the org structure changes, assigning new roles to employees automatically gives them all the right access - there is no extra coding required, and the change can be made via a dashboard in minutes.
-- **Improving compliance**: Using RBAC forces executives to think about and organize access control. This information can then be used by compliance officers during audit.
-- **Decrease risk of data breaches / leakage**: Due to its ease of use, developers can easily implement the right access control policies in their APIs reducing the chances of data leaks.
+- **Easy to understand**: The structure of roles and permissions is very intuitive. It can be understood by new developers who start working on an app fairly quickly.
+- **Easy changes**: As the application structure and features change, assigning new roles to users automatically gives them all the right access.
+- **Improving compliance**: Using RBAC forces developers to think about and organize application permissions and access control. This information can then be used by compliance officers during audit.
+- **Decrease risk of data breaches / leakage**: Due to its ease of use, developers can easily implement the right access control policies in their APIs, reducing the chances of data leaks.
 
 ### Disadvantages of RBAC
 - **Difficult to make exceptions**: It can be complex to make exceptions to how a role works. In our example above, if we want to add a rule that users with `"regular-user"` role cannot edit their own post if they have already made ten edits, it will have to be added in the API logic as an exception. There is no way for the roles / permissions system to express it easily. This causes issues since we have to make sure to encode this rule in all places where we are checking for the `"edit:self"` permission.
