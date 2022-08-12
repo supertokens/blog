@@ -1,7 +1,7 @@
 ---
 title: Why you should choose SuperTokens to protect your Supabase App
 date: "2022-08-11"
-description: "There are a lot of authentication solutions out there including Supabase's built in Auth solution, but, here are a couple of reasons why you might want to SuperTokens to protect your Supabase App."
+description: "When building an app with Supabase you will have to choose an authentication. Here are some reasons why you should choose SuperTokens as you auth provider and why it paris so well with Supabase"
 cover: "TODO.png"
 category: "featured"
 author: "SuperTokens Team"
