@@ -11,7 +11,7 @@ This post will guide you on how to add authentication to a VueJS app with SuperT
 
 ## What is SuperTokens
 
-SuperTokens is an open source project that lets you add authentication to your app quickly. It offers various recipes for different authentication methods. You can use their pre-built auth UIs and backend APIs to integrate authentication end to end in your application.
+SuperTokens is an open source project that lets you add authentication to your app quickly. It offers various authentication methods (called recipes).
 
  It also offers a vanilla JS SDK called supertokens-web-js that you can use with any type of frontend framework, to build your own UI. In this tutorial we’ll learn how to use the supertokens-web-js to add authentication to a VueJS application. We’ll focus on the email password and social login flow only, but you can choose another recipe as well by following the quick setup section in the[ guides on supertokens.com](https://supertokens.com/docs/guides).
 
