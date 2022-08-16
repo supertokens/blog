@@ -429,7 +429,7 @@ In the HTML template, we conditionally render a form based on a variable called 
 
 Since  `tokenPresent` is `false`, we render the form where the user will enter their email to get the reset password link. When the user enters their email on this form and submits it, we call the `sendPasswordResetEmail` method from `supertokens-web-js` and pass in their email. This function interacts with a backend API to send a password reset link on the user’s email, if that email exists in SuperTokens.
 
-The password reset link is of the form [http://localhost:3000/auth/reset-password?token=&rid=thirdpartyemailpassword]( http://localhost:3000/auth/reset-password?token=&rid=thirdpartyemailpassword). This link has the same path as the forgot password page, however, since the URL has the token query parameter, it will render the form where the user can enter their new password. 
+The password reset link is of the form `http://localhost:3000/auth/reset-password?token=....&rid=thirdpartyemailpassword`. This link has the same path as the forgot password page, however, since the URL has the `token` query parameter, it should render the form where the user can enter their new password. 
 
 When they enter their new password in the form, we call the submitNewPassword method from supertokens-web-js with the new password. This function will read the token from the URL and call the backend API to change the user’s password.
 
