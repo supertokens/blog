@@ -4,7 +4,7 @@ date: "2022-08-11"
 description: "Learn how to integrate supertokens-web-js SDK into your VueJS application."
 cover: ""
 category: "programming"
-author: "Siddhant Varma"
+author: "Team SuperTokens"
 ---
 
 Integrating a third party auth service in your app often doesn't give you full control over the UI. This post will guide you on how to add authentication to a VueJS app with SuperTokens using your own custom UI. 
