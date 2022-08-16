@@ -529,7 +529,7 @@ export default defineComponent({
 
 If the `submitNewPassword` function is successful, it means the user’s password has been successfully reset and we redirect the user back to the `/auth` page so they can now login with their new password. 
 
-To load the ForgotPassword component on the route `/auth/reset-password`, we'll make the following changes in the `/src/router/index.ts` file:
+To load the `ForgotPassword` component on the route `/auth/reset-password`, we'll make the following changes in the `/src/router/index.ts` file:
 
 ```typescript
 ...
