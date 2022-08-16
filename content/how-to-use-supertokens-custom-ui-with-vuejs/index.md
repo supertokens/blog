@@ -56,7 +56,7 @@ Once that's done, head inside the project and install the following dependencies
 npm i supertokens-node supertokens-web-js cors dotenv express npm-run-all
 ```
 
-The `supertokens-web-js` library will be used on the frontend, to add authentication and reset password functionality to our custom UI and the supertokens-node library will be used on the backend to expose the auth API routes, which the frontend calls.
+The `supertokens-web-js` library will be used on the frontend, to add authentication and reset password functionality to your custom UI and the `supertokens-node` library will be used on the backend to expose the auth API routes, which the frontend calls.
 
 
 
