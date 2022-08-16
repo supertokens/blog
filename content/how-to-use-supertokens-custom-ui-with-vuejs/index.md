@@ -180,7 +180,7 @@ If the `status` field in the response body is `"FIELD_ERROR"`, and the `id` of `
 
 ![invalid-email-error](./invalid-email-error.png)
 
-Similarly, we have the `signUp` method where we invoke the `emailPasswordSignUp` function from `supertokens-web-js` to handle the signup flow. 
+Similarly, [we have the `signUp` method](https://github.com/supertokens/supertokens-web-js/blob/master/examples/vuejs/with-thirdpartyemailpassword/src/views/AuthView.vue#L99) where we invoke the `emailPasswordSignUp` function from `supertokens-web-js` to handle the signup flow. 
 
 For social login, we’re using Google and Github Authentication providers. When the `onGithubPressed` or `onGooglePressed` functions are called, we call the `getAuthorisationURLWithQueryParamsAndSetState` method and pass the provider name in the parameters. We also provide a callback URL as `authorisationURL` parameter that each provider will redirect to after the authentication process is completed. In our example, we use http://localhost:3000/auth/callback/google for Google and [http://localhost:3000/auth/callback/github for GitHub . Note that this URL needs to be configured on the provider’s dashbaord.
 
