@@ -433,7 +433,7 @@ The password reset link is of the form `http://localhost:3000/auth/reset-passwor
 
 When they enter their new password in the form, we call the `submitNewPassword` function with the new password. This function will automatically read the token from the URL and call the SuperTokens backend API to change the user’s password.
 
-In case the token was consumed already or had expired, we show a message on the UI to prompt the user to go back to the login screen. 
+In case the token was consumed already or has expired, the function call will return a non `"OK"` status and then we can show a message on the UI to prompt the user to go back to the login screen. 
 
 ```vue
 <script lang="ts">
