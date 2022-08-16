@@ -25,7 +25,7 @@ SuperTokens is built out of three components:
 
 We’ll build our own login, signup and reset password forms. Then we’ll use the `supertokens-web-js` SDK in our Vue app to make these forms functional by invoking the relevant functions for each action. These functions will interact with the APIs exposed via the SuperTokens SDK that is integrated into your backend layer.
 
-For the backend we’ll use the NodeJS SDK provided by SuperTokens. The APIs exposed by this SDK will further talk to the SuperTokens core microservice to read/write information to the database.
+For the backend we’ll use the `supertokens-node` SDK. The APIs exposed by this SDK will further talk to the SuperTokens Core to read/write information to the database.
 
 The SuperTokens core service can be either self hosted (and connected to your own db), or be hosted by the team behind SuperTokens (sign up on[ supertokens.com](https://supertokens.com/)).
 
