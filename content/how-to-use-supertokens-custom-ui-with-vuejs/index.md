@@ -261,8 +261,6 @@ const router = createRouter({
             name: "authcallback",
             component: () => AuthCallbackView,
         }
-
-    
     ],
 });
 
