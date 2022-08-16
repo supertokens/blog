@@ -176,7 +176,7 @@ signIn: async function (_: Event) {
 
 ```
 
-In case of `FIELD_ERROR`, it means that the user entered an invalid email so we store the error state and display the error message on the UI to the user. Here’s how the error message appears underneath the email field:
+If the `status` field in the response body is `"FIELD_ERROR"`, and the `id` of `"email"`, it implies that the user entered a string that does not match an email's format. So we store the error state and display the error message on the UI to the user. Here’s how the error message appears underneath the email field:
 
 ![invalid-email-error](./invalid-email-error.png)
 
