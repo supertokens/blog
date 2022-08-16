@@ -425,7 +425,7 @@ We'll create a component inside `/src/views/ForgotPassword.vue` file where we wi
 ```html
 <template src="../html/forgotPassword.html"></template>
 
-In the HTML template above, we conditionally render a form based on a variable called `tokenPresent` (which is a state variable representing if a password reset token has been generated or not). This `tokenPresent` variable is set based on the token present in the query parameters of the page’s URL. In the case where the user has clicked on the forgot password button, there is no token present in the query parameters of the page’s URL, hence the `tokenPresent` variable is set to false. 
+In the HTML template, we conditionally render a form based on a variable called `tokenPresent`, which is a state variable representing if a password reset token has been generated or not. This `tokenPresent` variable is set based on the token present in the query parameters of the page’s URL. In the case where the user has clicked on the forgot password button (in the sign in page), there is no token present in the query parameters of the page’s URL, hence the `tokenPresent` variable is set to `false`. 
 
 Since  `tokenPresent` is false.  , we render the form where the user will enter their email to get the reset password link. When the user enters their email on this form and submits it, we call the `sendPasswordResetEmail` method from `supertokens-web-js` and pass their email inside it. This function interacts with a backend API to send a password reset link on the user’s email.
 
