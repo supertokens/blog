@@ -214,7 +214,7 @@ onGooglePressed: async function () {
 }
 
 
-After social authentication is completed and the user is redirected to the `/auth/callback/<provider>` route, we call the `thirdPartySignInAndUp` function from `supertokens-web-js` which consumes the authorisation code to sign in the user.
+After the user has finished authentication on the provider's website, they are redirected to the `http://localhost:3000/auth/callback/<provider>` route. Here we call the `thirdPartySignInAndUp` function from `supertokens-web-js` which consumes the authorisation code (that is sent back from the provider) to sign in the user.
 
 Here is the function that handles the above flow in the `AuthCallbackView` component inside `/src/views/AuthCallbackView.vue` file:
 
