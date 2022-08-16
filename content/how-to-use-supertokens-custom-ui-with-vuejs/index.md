@@ -7,7 +7,7 @@ category: "programming"
 author: "Team SuperTokens"
 ---
 
-Integrating a third party auth service in your app often doesn't give you full control over the UI. This post will guide you on how to add authentication to a VueJS app with SuperTokens using your own custom UI. 
+This post will guide you on how to add authentication to a VueJS app with SuperTokens using your own UI. We will be building our own authentication forms and will be using `supertokens-web-js` to make those forms work.
 
 ## What is SuperTokens
 
