@@ -525,9 +525,6 @@ export default defineComponent({
     },
 });
 </script>
-
-
-
 ```
 
 Also, If either the the `sendPasswordResetEmail` or `submitNewPassword` functions throw an error, we store the error message in the `errorMessage` variable and show it on the UI. If the `submitNewPassword` function is successful, it means the user’s password has been successfully reset and we redirect the user back to the `/auth` page so they can now login with their new password. 
