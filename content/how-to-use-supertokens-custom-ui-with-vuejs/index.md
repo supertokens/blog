@@ -98,7 +98,7 @@ The template file calls the following functions to handle social login and signu
 
 ### Create AuthView state and template functions
 
-We'll render this HTML template in an `AuthView` component inside `/src/views/AuthView.vue` which will also contain the implementations for the above functions :
+We'll render this HTML template in an `AuthView` component inside `/src/views/AuthView.vue` which will also contain the implementations for the above functions:
 
 ```vue
 <template src="../html/authView.html"></template>
