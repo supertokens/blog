@@ -27,7 +27,7 @@ We’ll build our own login, signup and reset password forms. Then we’ll use t
 
 For the backend we’ll use the `supertokens-node` SDK. The APIs exposed by this SDK will further talk to the SuperTokens Core to read/write information to the database.
 
-The SuperTokens core service can be either self hosted (and connected to your own db), or be hosted by the team behind SuperTokens (sign up on[ supertokens.com](https://supertokens.com/)).
+The SuperTokens core service can be either self hosted (and connected to your own db), or be hosted by the team behind SuperTokens (sign up on [supertokens.com](https://supertokens.com/)). In the blog, we will be using a free, demo version of the core hosted on `https://try.supertokens.com`
 
 ## Frontend
 
