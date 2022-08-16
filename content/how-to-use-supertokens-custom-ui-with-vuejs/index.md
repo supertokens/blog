@@ -552,7 +552,7 @@ If you enter your email and press the "Email Me" button, you should receive a li
 
 ![reset-password-link-inbox](./reset-password-link-inbox.png)
 
-If you click on the link, you can enter your new password and hit the Change Password button to update your password:
+After clicking the link, you can enter your new password and hit the "Change Password" button to update your password:
 
 ![reset-password](./reset-password.png)
 
