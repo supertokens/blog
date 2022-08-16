@@ -218,23 +218,24 @@ After the user has finished authentication on the provider's website, they are r
 
 Here is the function that handles the above flow in the `AuthCallbackView` component inside `/src/views/AuthCallbackView.vue` file:
 
-```vue
-  mounted: async function () {
-       try {
-      
-           const response = await ThirdPartyEmailPassword.thirdPartySignInAndUp({});
-           if (response.status !== "OK") {
-               return window.location.assign("/auth?error=signin");
-           }
-           // sign in successful. The session tokens are handled
-           // automatically via our SDK.
-           window.location.assign("/");
-       } catch (_) {
-              window.location.assign("/auth?error=signin");
-       }
-   }
-
-```
+```ts
+mounted: async function () {
+     try {
+    
+         const response = await ThirdPartyEmailPassword.thirdPartySignInAndUp();
+         if (response.status !== "OK") {
+         // either the user did not complete the login process, or something else went wrong.
+             return window.location.assign("/auth?error=signin");
+         }
+         
+         // sign in successful.
+         // The session tokens are handled automatically via our SDK.
+         window.location.assign("/");
+         
+     } catch (_) {
+            window.location.assign("/auth?error=signin");
+     }
+}
 
 In the background, we show a small loading animation on the `/auth/callback/<providerId>` page using the HTML template [here](https://github.com/supertokens/supertokens-web-js/blob/master/examples/vuejs/with-thirdpartyemailpassword/src/html/authCallbackView.html). 
 
