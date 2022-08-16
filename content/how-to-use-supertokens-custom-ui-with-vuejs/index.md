@@ -270,7 +270,7 @@ export default router;
 
 ## Backend Integration
 
-You can see the backend quick setup section[ in our docs on supertokens.com](https://supertokens.com/docs/thirdpartyemailpassword/quick-setup/backend), or even copy the code from[ our example app](https://github.com/supertokens/supertokens-web-js/blob/master/examples/vuejs/with-thirdpartyemailpassword/api-server/index.ts). As a summary:
+You can see the backend quick setup section [in our docs on supertokens.com](https://supertokens.com/docs/thirdpartyemailpassword/quick-setup/backend), or even copy the code from [our example app](https://github.com/supertokens/supertokens-web-js/blob/master/examples/vuejs/with-thirdpartyemailpassword/api-server/index.ts). As a summary:
 
 - You need to initialize the `supertokens-node` SDK and provide it the `recipeList` (similar to how you did on the frontend).
 - Then you need to setup `CORS`, add the SuperTokens `middleware` and `errorHandler` to your app. The SuperTokens `middleware` exposes all the auth related API routes (like sign in, sign up, sign out etc) to the frontend.
