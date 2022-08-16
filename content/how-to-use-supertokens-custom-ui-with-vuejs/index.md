@@ -242,7 +242,7 @@ mounted: async function () {
 
 Vue CLI already generates the initial routing for our app inside `/src/router.index.ts`. 
 
-We’ll update this file so that `/auth` route loads the `AuthView` component and the `/auth/callback/:provider` route loads the `AuthCallbackView` component we created earlier: 
+We'll update this file so that the `/auth` route loads the `AuthView` component and the `/auth/callback/:provider` route loads the `AuthCallbackView` component we created earlier:
 
 ```typescript
 import { createRouter, createWebHistory } from "vue-router";
