@@ -313,7 +313,7 @@ After authentication, we'll render a `HomeView` component on the page inside `/s
 
 Then inside` /src/views/HomeView.vue`, we'll check if the user is authenticated using the `doesSessionExist` method exposed by the Session recipe from the `supertokens-web-js` SDK. 
 
-For authenticated users, we render logout button with information about their session (like their userId). When a user clicks this button, we call the `signOut` method from `supertokens-web-js` which clears the user’s session.
+For authenticated users, we render a logout button with information about their session. When a user clicks this button, we call the `signOut` method from `supertokens-web-js` which clears the user’s session.
 
 For unauthenticated users, we can redirect them to the `/auth` page.
 
