@@ -422,10 +422,8 @@ First we'll create the HTML template inside` /src/html/forgotPassword.html`. [He
 
 We'll create a component inside `/src/views/ForgotPassword.vue` file where we will render the above template:
 
-```vue
+```html
 <template src="../html/forgotPassword.html"></template>
-
-```
 
 In the HTML template above, we conditionally render a form based on a variable called `tokenPresent` (which is a state variable representing if a password reset token has been generated or not). This `tokenPresent` variable is set based on the token present in the query parameters of the page’s URL. In the case where the user has clicked on the forgot password button, there is no token present in the query parameters of the page’s URL, hence the `tokenPresent` variable is set to false. 
 
