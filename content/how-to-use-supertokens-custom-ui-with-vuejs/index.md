@@ -106,7 +106,7 @@ We'll render this HTML template in an `AuthView` component inside `/src/views/Au
 
 We'll start by creating states to store the data for authentication such as the email, password, error messages for our template:
 
-```vue
+```ts
 ...
 data() {
       return {
