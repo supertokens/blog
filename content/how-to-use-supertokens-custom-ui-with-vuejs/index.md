@@ -37,7 +37,7 @@ Start by creating a new Vue app:
 npm init vue@latest
 ```
 
-We'll enable Vue Router and Typescript for the project. Chose yes for them in the prompt:
+We'll enable Vue Router and Typescript for the project. Choose yes for them in the prompt:
 
 ```shell
 ✔ Project name: … <your-project-name>
