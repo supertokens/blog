@@ -377,12 +377,6 @@ export default defineComponent({
 </script>
 
 <template src="../html/homeView.html"></template>
-
-<style>
-@import "@/assets/base.css";
-@import "../css/homeview.css";
-</style>
-
 ```
 
 Similarly, if the user is authenticated we'll redirect them to the Home page if they try to visit the `/auth` page. So we'll use `Session.doesSessionExist` in the `/src/views/AuthView.vue` file as well:
