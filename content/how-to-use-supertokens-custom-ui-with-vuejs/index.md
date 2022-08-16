@@ -1,5 +1,5 @@
 ---
-title: How to use SuperTokens' custom UI with VueJS
+title: How to use SuperTokens in a VueJS app with your own UI
 date: "2022-08-11"
 description: "Learn how to integrate SuperTokens' in a VueJS app using your own custom UI"
 cover: ""
