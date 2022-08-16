@@ -132,7 +132,7 @@ data() {
 
 Then we will create a `signIn` function which will use the `supertokens-web-js` SDK. We'll pass the email and password to this method and redirect the user to the `"/"` route if authentication is successful. This `signIn` function will be called from the `onSubmitPressed` function if the `isSignIn` state is `true`.
 
-```vue
+```ts
 signIn: async function (_: Event) {
           const response = await ThirdPartyEmailPassword.emailPasswordSignIn({
               formFields: [
