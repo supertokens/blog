@@ -84,7 +84,7 @@ SuperTokens.init({
 
 ```
 
-In the above code, the `init` function initializes the SuperTokens Web SDK in our Vue application. Since it’s called in the root of our application, it provides session management across the entire application. It also indicates the type of authentication we want to use - in our case, it’s social login + email password (ThirdPartyEmailPassword recipe). 
+In the above code, the `init` function initializes `supertokens-web-js` on the frontend. We call this function in the root file of our application, so that we can use the session management feature across the entire application. It also indicates the type of authentication we want to use - in our case, it's social login + email password (`ThirdPartyEmailPassword` recipe). 
 
 ### Create AuthView HTML template
 
