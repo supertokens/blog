@@ -50,7 +50,7 @@ Scaffolding project in ./<your-project-name>...
 Done.
 ```
 
-Once that’s done, head inside the project and install the following dependencies:
+Once that's done, head inside the project and install the following dependencies:
 
 ```sh
 npm i supertokens-node supertokens-web-js cors dotenv express npm-run-all
