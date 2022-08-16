@@ -414,7 +414,7 @@ If you now visit [http://localhost:3000](http://localhost:3000/) after authentic
 
 ![homeview-after-login](./homeview_after_login.png)
 
-## Forgot Password
+## Forgot Password Flow
 
 In the Sign In UI, we have a link to the forgot password page. On this page the user can enter their email and receive a password reset link in their inbox. When they visit that link, they can then enter their new password on that page to reset their old password. 
 
