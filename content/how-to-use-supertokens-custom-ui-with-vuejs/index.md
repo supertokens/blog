@@ -134,46 +134,42 @@ Then we will create a `signIn` function which will use the `supertokens-web-js` 
 
 ```ts
 signIn: async function (_: Event) {
-          const response = await ThirdPartyEmailPassword.emailPasswordSignIn({
-              formFields: [
-                  {
-                      id: "email",
-                      value: this.email,
-                  },
-                  {
-                      id: "password",
-                      value: this.password,
-                  },
-              ],
-          });
-
-          if (response.status === "WRONG_CREDENTIALS_ERROR") {
-              // the input email / password combination did not match,
-              // so we show an appropriate error message to the user
-              this.errorMessage = "Invalid credentials";
-              this.error = true;
-              return;
-          }
-
-          if (response.status === "FIELD_ERROR") {
-              response.formFields.forEach((item) => {
-                  if (item.id === "email") {
-                      // this means that something was wrong with the entered email.
-                      // probably that it's not a valid email (from a syntax point of view)
-                      this.emailError = item.error;
-                  } else if (item.id === "password") {
-                      this.passwordError = item.error;
-                  }
-              });
-              return;
-          }
-
-          // login is successful, and we redirect the user to the home page.
-          // Note that session cookies are added automatically and nothing needs to be
-          // done here about them.
-          window.location.assign("/");
-      },
-
+    const response = await ThirdPartyEmailPassword.emailPasswordSignIn({
+        formFields: [
+            {
+                id: "email",
+                value: this.email,
+            },
+            {
+                id: "password",
+                value: this.password,
+            },
+        ],
+    });
+    if (response.status === "WRONG_CREDENTIALS_ERROR") {
+        // the input email / password combination did not match,
+        // so we show an appropriate error message to the user
+        this.errorMessage = "Invalid credentials";
+        this.error = true;
+        return;
+    }
+    if (response.status === "FIELD_ERROR") {
+        response.formFields.forEach((item) => {
+            if (item.id === "email") {
+                // this means that something was wrong with the entered email.
+                // probably that it's not a valid email (from a syntax point of view)
+                this.emailError = item.error;
+            } else if (item.id === "password") {
+                this.passwordError = item.error;
+            }
+        });
+        return;
+    }
+    // login is successful, and we redirect the user to the home page.
+    // Note that session cookies are added automatically and nothing needs to be
+    // done here about them.
+    window.location.assign("/");
+}
 ```
 
 If the `status` field in the response body is `"FIELD_ERROR"`, and the `id` of `"email"`, it implies that the user entered a string that does not match an email's format. So we store the error state and display the error message on the UI to the user. Here’s how the error message appears underneath the email field:
@@ -212,7 +208,7 @@ onGooglePressed: async function () {
 
     window.location.assign(authUrl);
 }
-
+```
 
 After the user has finished authentication on the provider's website, they are redirected to the `http://localhost:3000/auth/callback/<provider>` route. Here we call the `thirdPartySignInAndUp` function from `supertokens-web-js` which consumes the authorisation code (that is sent back from the provider) to sign in the user.
 
@@ -220,23 +216,24 @@ Here is the function that handles the above flow in the `AuthCallbackView` compo
 
 ```ts
 mounted: async function () {
-     try {
+    try{
     
-         const response = await ThirdPartyEmailPassword.thirdPartySignInAndUp();
-         if (response.status !== "OK") {
+        const response = await ThirdPartyEmailPassword.thirdPartySignInAndUp();
+        
+        if (response.status !== "OK") {
          // either the user did not complete the login process, or something else went wrong.
              return window.location.assign("/auth?error=signin");
          }
          
-         // sign in successful.
-         // The session tokens are handled automatically via our SDK.
-         window.location.assign("/");
+        // sign in successful.
+        // The session tokens are handled automatically via our SDK.
+        window.location.assign("/");
          
      } catch (_) {
-            window.location.assign("/auth?error=signin");
-     }
+        window.location.assign("/auth?error=signin");
+    }
 }
-
+```
 
 ### Setup Routing to Show the Signup/Login forms
 
@@ -317,7 +314,7 @@ For authenticated users, we render a logout button with information about their 
 
 For unauthenticated users, we can redirect them to the `/auth` page.
 
-```tsx
+```ts
 <script lang="ts">
 import { defineComponent } from "vue";
 import Session from "supertokens-web-js/recipe/session";
@@ -388,6 +385,7 @@ checkForSession: async function () {
                 window.location.assign("/");
             }
  },
+```
 
 Finally, to load the `HomeView` component on `"/"` we’ll update the `/src/router/index.ts` file:
 
@@ -424,6 +422,7 @@ We'll create a component inside `/src/views/ForgotPassword.vue` file where we wi
 
 ```html
 <template src="../html/forgotPassword.html"></template>
+```
 
 In the HTML template, we conditionally render a form based on a variable called `tokenPresent`, which is a state variable representing if a password reset token has been generated or not. This `tokenPresent` variable is set based on the token present in the query parameters of the page’s URL. In the case where the user has clicked on the forgot password button (in the sign in page), there is no token present in the query parameters of the page’s URL, hence the `tokenPresent` variable is set to `false`. 
 
@@ -543,6 +542,7 @@ const router = createRouter({
         },
     ],
 });
+```
 
 Once you do that, if you now visit [http://localhost:3000/auth/reset-password](http://localhost:3000/auth/reset-password), you should see the following page:
 
@@ -564,4 +564,4 @@ We used the `supertokens-web-js` SDK to add email password and social authentica
 
 - [Example Vue app](https://github.com/supertokens/supertokens-web-js/tree/master/examples/vuejs/with-thirdpartyemailpassword)
 - [Discord community (to ask questions)](https://supertokens.com/discord)
-- [List of recipes / auth methods](
+- [List of recipes / auth methods](https://supertokens.com/docs/guides)
