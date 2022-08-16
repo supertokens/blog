@@ -213,7 +213,6 @@ onGooglePressed: async function () {
     window.location.assign(authUrl);
 }
 
-The `getAuthorisationURLWithQueryParamsAndSetState` method returns the callback URL that takes us to the `/auth/callback` page that we discussed above.
 
 After social authentication is completed and the user is redirected to the `/auth/callback/<provider>` route, we call the `thirdPartySignInAndUp` function from `supertokens-web-js` which consumes the authorisation code to sign in the user.
 
