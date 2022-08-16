@@ -597,7 +597,6 @@ If you click on the link, you can enter your new password and hit the Change Pas
 Whilst doing the backend setup, we are using https://try.supertokens.com as the connectionURI for the core. This is a demo core instance hosted by the team of SuperTokens. You can use this for as long as you like, but when you are committed to using SuperTokens, you should switch to a[ self hosted](https://supertokens.com/docs/thirdpartyemailpassword/quick-setup/core/with-docker) or a[ managed version](https://supertokens.com/docs/thirdpartyemailpassword/quick-setup/core/saas-setup) of the core.
 
 ## Conclusion
-
 We used the SuperTokens web-js SDK to add emailpassword and social authentication along with the forgot password functionality to our own UI for our Vue app. Useful links:
 
 - [Example Vue app](https://github.com/supertokens/supertokens-web-js/tree/master/examples/vuejs/with-thirdpartyemailpassword)
