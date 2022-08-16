@@ -86,7 +86,7 @@ SuperTokens.init({
 
 In the above code, the `init` function initializes `supertokens-web-js` on the frontend. We call this function in the root file of our application, so that we can use the session management feature across the entire application. It also indicates the type of authentication we want to use - in our case, it's social login + email password (`ThirdPartyEmailPassword` recipe). 
 
-### Create AuthView HTML template
+### Create `AuthView` HTML template
 
 Now we'll start by creating the HTML template that renders the signup and signin UI. You can refer [this](https://github.com/supertokens/supertokens-web-js/blob/master/examples/vuejs/with-thirdpartyemailpassword/src/html/authView.html) to add the HTML template inside `/src/html/authView.html` .
 
