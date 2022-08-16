@@ -435,7 +435,7 @@ When they enter their new password in the form, we call the `submitNewPassword` 
 
 In case the token was consumed already or has expired, the function call will return a non `"OK"` status and then we can show a message on the UI to prompt the user to go back to the login screen. 
 
-```vue
+```ts
 <script lang="ts">
 import ThirdPartyEmailPassword from "supertokens-web-js/recipe/thirdpartyemailpassword";
 import { defineComponent } from "vue";
