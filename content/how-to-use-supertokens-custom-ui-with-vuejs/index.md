@@ -96,7 +96,7 @@ The template file calls the following functions to handle social login and signu
 - `onGooglePressed`: This function allows users to authenticate via their Google account 
 - `onSubmitPressed`: This function is fired when the user enters their email and password to signup or login. 
 
-### **Create AuthView state and template functions**
+### Create AuthView state and template functions
 
 We'll render this HTML template in an `AuthView` component inside `/src/views/AuthView.vue` which will also contain the implementations for the above functions :
 
