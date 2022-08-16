@@ -531,13 +531,11 @@ If the `submitNewPassword` function is successful, it means the user’s passwor
 
 To load the `ForgotPassword` component on the route `/auth/reset-password`, we'll make the following changes in the `/src/router/index.ts` file:
 
-```typescript
-...
-
+```ts
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
-       ...
+       // ...
         {
             path: "/auth/reset-password",
             name: "resetPassword",
@@ -545,10 +543,6 @@ const router = createRouter({
         },
     ],
 });
-
-...
-
-```
 
 Once you do that, if you now visit[ http://localhost:3000/auth/reset-password](http://localhost:3000/auth/reset-password), you should see the following page:
 
