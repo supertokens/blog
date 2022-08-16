@@ -52,7 +52,7 @@ Done.
 
 Once that's done, head inside the project and install the following dependencies:
 
-```sh
+```shell
 npm i supertokens-node supertokens-web-js cors dotenv express npm-run-all
 ```
 
