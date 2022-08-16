@@ -317,7 +317,7 @@ For authenticated users, we render a logout button with information about their 
 
 For unauthenticated users, we can redirect them to the `/auth` page.
 
-```vue
+```tsx
 <script lang="ts">
 import { defineComponent } from "vue";
 import Session from "supertokens-web-js/recipe/session";
