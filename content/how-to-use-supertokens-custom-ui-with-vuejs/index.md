@@ -381,16 +381,13 @@ export default defineComponent({
 
 For the `/auth` route, we'll redirect the user to the Home page if a session already exists:
 
-```vue
-...
+```ts
 checkForSession: async function () {
             if (await Session.doesSessionExist()) {
                 // since a session already exists, we redirect the user to the HomeView.vue component
                 window.location.assign("/");
             }
  },
-...
-```
 
 To load the `HomeView` component on `/` we’ll update the `/src/router/index.ts` file:
 
