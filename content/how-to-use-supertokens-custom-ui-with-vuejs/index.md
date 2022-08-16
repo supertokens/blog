@@ -309,7 +309,6 @@ After authentication, we'll render a `HomeView` component on the page inside `/s
         <div class="bottom-banner">Vue Demo app. Made with ❤️ using supertokens.com</div>
     </div>
 </div>
-
 ```
 
 Then inside` /src/views/HomeView.vue`, we’ll check if the user is authenticated using the `doesSessionExist` method exposed by the Session recipe from the `supertokens-web-js` SDK. 
