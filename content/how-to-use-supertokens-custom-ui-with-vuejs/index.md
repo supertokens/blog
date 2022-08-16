@@ -88,7 +88,7 @@ In the above code, the `init` function initializes `supertokens-web-js` on the f
 
 ### Create `AuthView` HTML template
 
-Now we'll start by creating the HTML template that renders the signup and signin UI. You can refer [this](https://github.com/supertokens/supertokens-web-js/blob/master/examples/vuejs/with-thirdpartyemailpassword/src/html/authView.html) to add the HTML template inside `/src/html/authView.html` .
+Now we'll start by creating the HTML template that renders the signup and signin UI. As an example, you can refer [this HTML template](https://github.com/supertokens/supertokens-web-js/blob/master/examples/vuejs/with-thirdpartyemailpassword/src/html/authView.html).
 
 The template file calls the following functions to handle social login and signup/login using email and password:
 
