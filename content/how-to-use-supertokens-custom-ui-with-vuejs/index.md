@@ -431,7 +431,7 @@ Since  `tokenPresent` is `false`, we render the form where the user will enter t
 
 The password reset link is of the form `http://localhost:3000/auth/reset-password?token=....&rid=thirdpartyemailpassword`. This link has the same path as the forgot password page, however, since the URL has the `token` query parameter, it should render the form where the user can enter their new password. 
 
-When they enter their new password in the form, we call the submitNewPassword method from supertokens-web-js with the new password. This function will read the token from the URL and call the backend API to change the user’s password.
+When they enter their new password in the form, we call the `submitNewPassword` function with the new password. This function will automatically read the token from the URL and call the SuperTokens backend API to change the user’s password.
 
 In case the token was consumed already or had expired, we show a message on the UI to prompt the user to go back to the login screen. 
 
