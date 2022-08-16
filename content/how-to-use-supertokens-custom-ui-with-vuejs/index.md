@@ -544,7 +544,7 @@ const router = createRouter({
     ],
 });
 
-Once you do that, if you now visit[ http://localhost:3000/auth/reset-password](http://localhost:3000/auth/reset-password), you should see the following page:
+Once you do that, if you now visit [http://localhost:3000/auth/reset-password](http://localhost:3000/auth/reset-password), you should see the following page:
 
 ![forgot-password-enter-email](./forgot-password-enter-email.png)
 
