@@ -267,11 +267,6 @@ const router = createRouter({
 export default router;
 ```
 
-### View the Login UI
-
-If you now visit http://localhost:3000/auth, you should see the login UI as shown below:
-
-![loginui-signin](./loginui-signin.png)
 
 ## Backend Integration
 
