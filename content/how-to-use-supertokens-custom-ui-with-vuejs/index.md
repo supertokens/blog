@@ -69,7 +69,7 @@ We'll initialize the `supertokens-web-js` SDK in our Vue app's root file, ie `/s
 import ThirdPartyEmailPassword from "supertokens-web-js/recipe/thirdpartyemailpassword";
 import Session from "supertokens-web-js/recipe/session";
 
-...
+// ...
 
 
 SuperTokens.init({
