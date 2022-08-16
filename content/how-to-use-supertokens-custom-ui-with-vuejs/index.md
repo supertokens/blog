@@ -389,7 +389,7 @@ checkForSession: async function () {
             }
  },
 
-To load the `HomeView` component on `/` we’ll update the `/src/router/index.ts` file:
+Finally, to load the `HomeView` component on `"/"` we’ll update the `/src/router/index.ts` file:
 
 ```typescript
 ...
