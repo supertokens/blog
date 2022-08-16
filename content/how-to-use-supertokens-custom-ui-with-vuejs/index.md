@@ -548,7 +548,7 @@ Once you do that, if you now visit [http://localhost:3000/auth/reset-password](h
 
 ![forgot-password-enter-email](./forgot-password-enter-email.png)
 
-If you enter your email and press the Email Me button, you should receive a link to reset your password on the entered email:
+If you enter your email and press the "Email Me" button, you should receive a link to reset your password on the entered email:
 
 ![reset-password-link-inbox](./reset-password-link-inbox.png)
 
