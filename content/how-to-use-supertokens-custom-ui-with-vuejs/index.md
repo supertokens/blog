@@ -391,7 +391,7 @@ checkForSession: async function () {
 
 Finally, to load the `HomeView` component on `"/"` we’ll update the `/src/router/index.ts` file:
 
-```typescript
+```ts
 ...
 
 const router = createRouter({
