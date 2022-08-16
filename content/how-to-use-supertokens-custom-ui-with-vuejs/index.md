@@ -244,7 +244,7 @@ Vue CLI already generates the initial routing for our app inside `/src/router.in
 
 We'll update this file so that the `/auth` route loads the `AuthView` component and the `/auth/callback/:provider` route loads the `AuthCallbackView` component we created earlier:
 
-```typescript
+```ts
 import { createRouter, createWebHistory } from "vue-router";
 import AuthView from "../views/AuthView.vue";
 
