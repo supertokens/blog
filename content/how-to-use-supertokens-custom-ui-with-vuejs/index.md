@@ -265,7 +265,6 @@ const router = createRouter({
 });
 
 export default router;
-
 ```
 
 ### View the Login UI
