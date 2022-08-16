@@ -418,7 +418,7 @@ If you now visit [http://localhost:3000](http://localhost:3000/) after authentic
 
 In the Sign In UI, we have a link to the forgot password page. On this page the user can enter their email and receive a password reset link in their inbox. When they visit that link, they can then enter their new password on that page to change their password. 
 
-First we'll create a ForgotPassword HTML template inside` /src/html/forgotPassword.html`. An example of that can be found [here](https://github.com/supertokens/supertokens-web-js/blob/master/examples/vuejs/with-thirdpartyemailpassword/src/html/forgotPassword.html). 
+First we'll create the HTML template inside` /src/html/forgotPassword.html`. [Here is an example](https://github.com/supertokens/supertokens-web-js/blob/master/examples/vuejs/with-thirdpartyemailpassword/src/html/forgotPassword.html) that you can use.
 
 We'll create a component inside `/src/views/ForgotPassword.vue` file where we will render the above template:
 
