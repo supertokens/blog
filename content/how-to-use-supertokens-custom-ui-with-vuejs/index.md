@@ -107,7 +107,7 @@ We'll render this HTML template in an `AuthView` component inside `/src/views/Au
 We'll start by creating states to store the data for authentication such as the email, password, error messages for our template:
 
 ```ts
-...
+// ...
 data() {
       return {
           // we allow the user to switch between sign in and sign up view
