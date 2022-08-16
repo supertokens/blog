@@ -188,32 +188,30 @@ For social login, we're using Google and Github Authentication providers. When t
 
 Here are the functions for Github and Google respectively:
 
-```vue
-...
-      onGithubPressed: async function () {
-          const authUrl = await ThirdPartyEmailPassword.getAuthorisationURLWithQueryParamsAndSetState({
-              providerId: "github",
+```ts
+onGithubPressed: async function () {
+    const authUrl = await ThirdPartyEmailPassword.getAuthorisationURLWithQueryParamsAndSetState({
+        providerId: "github",
 
-              // This is where github should redirect the user back after login or error.
-              // This URL goes on the github dashboard as well.
-              authorisationURL: `http://localhost:3000/auth/callback/github`,
-          });
+        // This is where github should redirect the user back after login or error.
+        // This URL goes on the github dashboard as well.
+        authorisationURL: "http://localhost:3000/auth/callback/github",
+    });
 
-          window.location.assign(authUrl);
-      },
-      onGooglePressed: async function () {
-          const authUrl = await ThirdPartyEmailPassword.getAuthorisationURLWithQueryParamsAndSetState({
-              providerId: "google",
+    window.location.assign(authUrl);
+},
 
-              // This is where google should redirect the user back after login or error.
-              // This URL goes on the google dashboard as well.
-              authorisationURL: `${websiteDomain}/auth/callback/google`,
-          });
+onGooglePressed: async function () {
+    const authUrl = await ThirdPartyEmailPassword.getAuthorisationURLWithQueryParamsAndSetState({
+        providerId: "google",
 
-          window.location.assign(authUrl);
-      },
- ……
-```
+        // This is where google should redirect the user back after login or error.
+        // This URL goes on the google dashboard as well.
+        authorisationURL: "http://localhost:3000/auth/callback/google",
+    });
+
+    window.location.assign(authUrl);
+}
 
 The `getAuthorisationURLWithQueryParamsAndSetState` method returns the callback URL that takes us to the `/auth/callback` page that we discussed above.
 
