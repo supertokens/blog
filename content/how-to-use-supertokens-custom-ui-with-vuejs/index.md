@@ -412,8 +412,6 @@ export default router;
 
 If you now visit [http://localhost:3000](http://localhost:3000/) after authentication,  you should see the following page:
 
-
-
 ![homeview-after-login](./homeview_after_login.png)
 
 
