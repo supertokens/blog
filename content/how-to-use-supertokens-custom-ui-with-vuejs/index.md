@@ -274,7 +274,7 @@ You can see the backend quick setup section [in our docs on supertokens.com](htt
 
 - You need to initialize the `supertokens-node` SDK and provide it the `recipeList` (similar to how you did on the frontend).
 - Then you need to setup `CORS`, and add the SuperTokens `middleware` and `errorHandler` to your app. The SuperTokens `middleware` exposes all the auth related API routes (like sign in, sign up, sign out etc) to the frontend.
-- Finally, you need to provide the `connectionURI` (location) of the SuperTokens core. To get started quickly, you can provide it `https://try.supertokens.com` (this is a core that we host for demo purposes).
+- Finally, you need to provide the `connectionURI` (location) of the SuperTokens core. To get started quickly, you can provide it `"https://try.supertokens.com"` (this is a core that we host for demo purposes).
 
 Once you’ve successfully setup your server, you can now try and sign up on the frontend.
 
