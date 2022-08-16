@@ -80,7 +80,7 @@ SuperTokens.init({
     recipeList: [ThirdPartyEmailPassword.init(), Session.init()],
 });
 
-...
+// ...
 
 ```
 
