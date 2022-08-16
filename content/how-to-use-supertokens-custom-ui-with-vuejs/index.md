@@ -379,7 +379,7 @@ export default defineComponent({
 <template src="../html/homeView.html"></template>
 ```
 
-Similarly, if the user is authenticated we'll redirect them to the Home page if they try to visit the `/auth` page. So we'll use `Session.doesSessionExist` in the `/src/views/AuthView.vue` file as well:
+For the `/auth` route, we'll redirect the user to the Home page if a session already exists:
 
 ```vue
 ...
