@@ -237,7 +237,6 @@ mounted: async function () {
      }
 }
 
-In the background, we show a small loading animation on the `/auth/callback/<providerId>` page using the HTML template [here](https://github.com/supertokens/supertokens-web-js/blob/master/examples/vuejs/with-thirdpartyemailpassword/src/html/authCallbackView.html). 
 
 ### Setup Routing to Show the Signup/Login forms
 
