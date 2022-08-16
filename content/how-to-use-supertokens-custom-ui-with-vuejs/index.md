@@ -64,7 +64,7 @@ The `supertokens-web-js` library will be used on the frontend, to add authentica
 
 We'll initialize the `supertokens-web-js` SDK in our Vue app's root file, ie `/src/main.ts` :  
 
-```typescript
+```ts
 ...
 import ThirdPartyEmailPassword from "supertokens-web-js/recipe/thirdpartyemailpassword";
 import Session from "supertokens-web-js/recipe/session";
