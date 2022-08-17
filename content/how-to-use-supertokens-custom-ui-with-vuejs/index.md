@@ -1,6 +1,6 @@
 ---
 title: How to use SuperTokens in a VueJS app with your own UI
-date: "2022-08-11"
+date: "2022-08-17"
 description: "Learn how to integrate supertokens-web-js SDK into your VueJS application."
 cover: ""
 category: "programming"
@@ -56,21 +56,17 @@ Once that's done, head inside the project and install the following dependencies
 npm i supertokens-node supertokens-web-js cors dotenv express npm-run-all
 ```
 
-The `supertokens-web-js` library will be used on the frontend, to add authentication and reset password functionality to your custom UI and the `supertokens-node` library will be used on the backend to expose the auth API routes, which the frontend calls.
+The `supertokens-web-js` library will be used on the frontend to add authentication and reset password functionality to your custom UI and the `supertokens-node` library will be used on the backend to expose the auth API routes.
 
 
 
 ### Step 1) Call the `supertokens-web-js` `init` function
 
-We'll initialize the `supertokens-web-js` SDK in our Vue app's root file, ie `/src/main.ts` :  
+We'll initialize the `supertokens-web-js` SDK in our Vue app's root file, i.e. `/src/main.ts`:  
 
 ```ts
-...
 import ThirdPartyEmailPassword from "supertokens-web-js/recipe/thirdpartyemailpassword";
 import Session from "supertokens-web-js/recipe/session";
-
-// ...
-
 
 SuperTokens.init({
     appInfo: {
@@ -79,9 +75,6 @@ SuperTokens.init({
     },
     recipeList: [ThirdPartyEmailPassword.init(), Session.init()],
 });
-
-// ...
-
 ```
 
 In the above code, the `init` function initializes `supertokens-web-js` on the frontend. We call this function in the root file of our application, so that we can use the session management feature across the entire application. It also indicates the type of authentication we want to use - in our case, it's social login + email password (`ThirdPartyEmailPassword` recipe). 
@@ -109,25 +102,23 @@ We'll start by creating states to store the data for authentication such as the 
 ```ts
 // ...
 data() {
-      return {
-          // we allow the user to switch between sign in and sign up view
-          isSignIn: true,
+    return {
+        // we allow the user to switch between sign in and sign up view
+        isSignIn: true,
 
-          // this will store the email and password entered by the user.
-          email: "",
-          password: "",
+        // this will store the email and password entered by the user.
+        email: "",
+        password: "",
 
-          // any generic error states
-          error: false,
-          errorMessage: "Something went wrong",
+        // any generic error states
+        error: false,
+        errorMessage: "Something went wrong",
 
-          // any error states specific to the input fields.
-          emailError: "",
-          passwordError: "",
-      };
-  },
-// ...
-
+        // any error states specific to the input fields.
+        emailError: "",
+        passwordError: "",
+    };
+}
 ```
 
 Then we will create a `signIn` function which will use the `supertokens-web-js` SDK. We'll pass the email and password to this method and redirect the user to the `"/"` route if authentication is successful. This `signIn` function will be called from the `onSubmitPressed` function if the `isSignIn` state is `true`.
@@ -172,15 +163,15 @@ signIn: async function (_: Event) {
 }
 ```
 
-If the `status` field in the response body is `"FIELD_ERROR"`, and the `id` of `"email"`, it implies that the user entered a string that does not match an email's format. So we store the error state and display the error message on the UI to the user. Here’s how the error message appears underneath the email field:
+If the `status` field in the response body is `"FIELD_ERROR"`, and the `id` is `"email"`, it implies that the user entered a string that failed the email validation on the backend (most likely because it is not a valid email). So we store the error state and display the error message on the UI to the user. Here's an example of how you can make the error message appear underneath the email field:
 
 ![invalid-email-error](./invalid-email-error.png)
 
-Similarly, [we have the `signUp` method](https://github.com/supertokens/supertokens-web-js/blob/master/examples/vuejs/with-thirdpartyemailpassword/src/views/AuthView.vue#L99) where we invoke the `emailPasswordSignUp` function from `supertokens-web-js` to handle the signup flow. 
+Similarly, [we can implement the `signUp` method](https://github.com/supertokens/supertokens-web-js/blob/master/examples/vuejs/with-thirdpartyemailpassword/src/views/AuthView.vue#L99) where we invoke the `emailPasswordSignUp` function from `supertokens-web-js` to handle the sign up flow. 
 
-For social login, we're using Google and Github Authentication providers. When the `onGithubPressed` or `onGooglePressed` functions are called, we call the `getAuthorisationURLWithQueryParamsAndSetState` method and pass the provider name in the parameters. We also provide a callback URL as `authorisationURL` parameter that each provider will redirect to after the authentication process is completed. In our example, we use `http://localhost:3000/auth/callback/google` for Google and `http://localhost:3000/auth/callback/github` for GitHub.
+For social login, we're using Google and Github authentication providers. When the `onGithubPressed` or `onGooglePressed` functions are called, we call the `getAuthorisationURLWithQueryParamsAndSetState` method and pass the provider name in the parameters. We also provide a callback URL as `authorisationURL` parameter that the providers will redirect back to after the authentication process is completed. In our example, we use `http://localhost:3000/auth/callback/google` for Google and `http://localhost:3000/auth/callback/github` for GitHub.
 
-> These URLs needs to be configured on the provider’s dashbaord.
+> These URLs needs to be configured on the provider’s dashbaord as well.
 
 Here are the functions for Github and Google respectively:
 
@@ -216,20 +207,18 @@ Here is the function that handles the above flow in the `AuthCallbackView` compo
 
 ```ts
 mounted: async function () {
-    try{
-    
+    try {
         const response = await ThirdPartyEmailPassword.thirdPartySignInAndUp();
         
         if (response.status !== "OK") {
-         // either the user did not complete the login process, or something else went wrong.
-             return window.location.assign("/auth?error=signin");
-         }
-         
+            // either the user did not complete the login process, or something else went wrong.
+            return window.location.assign("/auth?error=signin");
+        }
+
         // sign in successful.
         // The session tokens are handled automatically via our SDK.
         window.location.assign("/");
-         
-     } catch (_) {
+    } catch (_) {
         window.location.assign("/auth?error=signin");
     }
 }
@@ -299,9 +288,9 @@ After authentication, we'll render a `HomeView` component on the page inside `/s
             <a
                 href="https://github.com/supertokens/supertokens-web-js/tree/master/examples/vuejs/with-thirdpartyemailpassword"
                 target="_blank"
-                rel="noreferrer"
-                >View the code on GitHub</a
-            >
+                rel="noreferrer">
+                View the code on GitHub
+            </a>
         </div>
         <div class="bottom-banner">Vue Demo app. Made with ❤️ using supertokens.com</div>
     </div>
@@ -380,18 +369,16 @@ For the `/auth` route, we'll redirect the user to the Home page if a session alr
 
 ```ts
 checkForSession: async function () {
-            if (await Session.doesSessionExist()) {
-                // since a session already exists, we redirect the user to the HomeView.vue component
-                window.location.assign("/");
-            }
- },
+    if (await Session.doesSessionExist()) {
+        // since a session already exists, we redirect the user to the HomeView.vue component
+        window.location.assign("/");
+    }
+},
 ```
 
 Finally, to load the `HomeView` component on `"/"` we’ll update the `/src/router/index.ts` file:
 
 ```ts
-...
-
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
@@ -405,7 +392,6 @@ const router = createRouter({
 });
 
 export default router;
-
 ```
 
 If you now visit [http://localhost:3000](http://localhost:3000/) after authentication,  you should see the following page:
@@ -416,7 +402,7 @@ If you now visit [http://localhost:3000](http://localhost:3000/) after authentic
 
 In the Sign In UI, we have a link to the forgot password page. On this page the user can enter their email and receive a password reset link in their inbox. When they visit that link, they can then enter their new password on that page to change their password. 
 
-First we'll create the HTML template inside` /src/html/forgotPassword.html`. [Here is an example](https://github.com/supertokens/supertokens-web-js/blob/master/examples/vuejs/with-thirdpartyemailpassword/src/html/forgotPassword.html) that you can use.
+First, we'll create the HTML template inside` /src/html/forgotPassword.html`. [Here is an example](https://github.com/supertokens/supertokens-web-js/blob/master/examples/vuejs/with-thirdpartyemailpassword/src/html/forgotPassword.html) that you can use.
 
 We'll create a component inside `/src/views/ForgotPassword.vue` file where we will render the above template:
 
@@ -424,15 +410,15 @@ We'll create a component inside `/src/views/ForgotPassword.vue` file where we wi
 <template src="../html/forgotPassword.html"></template>
 ```
 
-In the HTML template, we conditionally render a form based on a variable called `tokenPresent`, which is a state variable representing if a password reset token has been generated or not. This `tokenPresent` variable is set based on the token present in the query parameters of the page’s URL. In the case where the user has clicked on the forgot password button (in the sign in page), there is no token present in the query parameters of the page’s URL, hence the `tokenPresent` variable is set to `false`. 
+In the HTML template, we conditionally render a form, based on a variable called `tokenPresent`, which is a state variable representing if a password reset token has been generated or not. This `tokenPresent` variable is set based on the token present in the query parameters of the page’s URL. In the case where the user has clicked on the forgot password button (in the sign in page), there is no token present in the query parameters of the page’s URL, hence the `tokenPresent` variable is set to `false`. 
 
 Since  `tokenPresent` is `false`, we render the form where the user will enter their email to get the reset password link. When the user enters their email on this form and submits it, we call the `sendPasswordResetEmail` method from `supertokens-web-js` and pass in their email. This function interacts with a backend API to send a password reset link on the user’s email, if that email exists in SuperTokens.
 
-The password reset link is of the form `http://localhost:3000/auth/reset-password?token=....&rid=thirdpartyemailpassword`. This link has the same path as the forgot password page, however, since the URL has the `token` query parameter, it should render the form where the user can enter their new password. 
+The password reset link is like `http://localhost:3000/auth/reset-password?token=....&rid=thirdpartyemailpassword`. This link has the same path as the forgot password page, however, since the URL has the `token` query parameter, it should render the form where the user can enter their new password. 
 
 When they enter their new password in the form, we call the `submitNewPassword` function with the new password. This function will automatically read the token from the URL and call the SuperTokens backend API to change the user’s password.
 
-In case the token was consumed already or has expired, the function call will return a non `"OK"` status and then we can show a message on the UI to prompt the user to go back to the login screen. 
+In case the password reset token was consumed already or has expired, the function call will return a non `"OK"` status and then we can show a message on the UI to prompt the user to go back to the login screen. 
 
 ```ts
 <script lang="ts">
@@ -534,7 +520,7 @@ To load the `ForgotPassword` component on the route `/auth/reset-password`, we'l
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
-       // ...
+        // ...
         {
             path: "/auth/reset-password",
             name: "resetPassword",
