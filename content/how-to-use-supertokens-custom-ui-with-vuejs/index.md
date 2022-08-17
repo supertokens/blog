@@ -2,7 +2,7 @@
 title: How to use SuperTokens in a VueJS app with your own UI
 date: "2022-08-17"
 description: "Learn how to integrate supertokens-web-js SDK into your VueJS application."
-cover: ""
+cover: "vue-custom-ui.png"
 category: "programming"
 author: "Team SuperTokens"
 ---
