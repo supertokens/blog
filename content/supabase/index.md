@@ -26,7 +26,7 @@ We have a [blog](https://supertokens.com/blog/auth-provider-comparison) that com
 
 ![SuperTokens Logo](./supertokens-logo.png)
 
-SuperTokens is an Open Source Authentication solution. They have a managed service, but if you prefer to manage your own data, you can use their self-hosted solution.
+SuperTokens is an Open Source Authentication solution. They have a managed service, but if you prefer to manage your own data, you can use their self-hosted solution. We built SuperTokens from the ground up to be easy to use and customizable.
 
 > Note: SuperTokens requires you to have a backend server. If your app does not need a backend server, Supabase auth is a more viable option.
 
