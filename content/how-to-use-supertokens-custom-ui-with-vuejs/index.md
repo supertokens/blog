@@ -60,7 +60,7 @@ The `supertokens-web-js` library will be used on the frontend to add authenticat
 
 
 
-### Step 1) Call the `supertokens-web-js` `init` function
+### Call the `supertokens-web-js` `init` function
 
 We'll initialize the `supertokens-web-js` SDK in our Vue app's root file, i.e. `/src/main.ts`:  
 
