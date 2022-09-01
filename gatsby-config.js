@@ -62,12 +62,7 @@ module.exports = {
               rel: "nofollow"
             }
           },
-          {
-            resolve: `gatsby-remark-autolink-headers`,
-            options: {
-              elements: [`h2`, 'h3'],
-            },
-          },
+          `gatsby-remark-autolink-headers`,
           `gatsby-remark-code-titles`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
