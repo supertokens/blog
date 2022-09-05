@@ -62,6 +62,7 @@ module.exports = {
               rel: "nofollow"
             }
           },
+          `gatsby-remark-autolink-headers`,
           `gatsby-remark-code-titles`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
