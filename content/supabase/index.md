@@ -2,7 +2,7 @@
 title: Using SuperTokens authentication to protect your Supabase app.
 date: "2022-08-11"
 description: "When building an app with Supabase you will have to choose an authentication. Here are some reasons why you should choose SuperTokens as you auth provider and why it paris so well with Supabase"
-cover: "TODO.png"
+cover: "supabase-blog-cover.png"
 category: "featured"
 author: "SuperTokens Team"
 ---
@@ -10,6 +10,7 @@ author: "SuperTokens Team"
 So you're creating a web app and have decided to use Supabase to manage your data. You now face the decision of how you want to implement authentication.
 
 Supabase comes with its own authentication solution, based on a fork of [Netlify's goTrue](https://supabase.com/docs/learn/auth-deep-dive/auth-gotrue) it provides authentication flows like email-password, social login, and phone number based OTP.
+
 
 ![Netlify goTrue](./gotrue-supabase-logo.png)
 
@@ -26,7 +27,7 @@ We have a [blog](https://supertokens.com/blog/auth-provider-comparison) that com
 
 ![SuperTokens Logo](./supertokens-logo.png)
 
-SuperTokens is an Open Source Authentication solution. They have a managed service, but if you prefer to manage your own data, you can use their self-hosted solution. We built SuperTokens from the ground up to be easy to use and customizable.
+SuperTokens is an Open Source Authentication solution. They have a managed service, but if you prefer to handle your own data, you can use their self-hosted solution. We built SuperTokens from the ground up to be easy to use and customizable.
 
 > Note: SuperTokens requires you to have a backend server. If your app does not need a backend server, Supabase auth is a more viable option.
 
@@ -41,9 +42,9 @@ SuperTokens has 3 parts:
 
 ![SuperTokens Architecture](st-architecture.png)
 
-Once setup, auth requests from your frontend will call APIs exposed by your backend which will communicate with the SuperTokens core to persist data. The Backend SDK also allows you to `Override` the APIs and functions to extend functionality or even completely replace the logic. 
+Once setup, auth requests from your frontend will call APIs exposed by your backend which will communicate with the SuperTokens core to persist data. The Backend SDK also allows you to `Override` SuperTokens APIs and functions to extend functionality or even completely replace the logic. 
 
-Since these modifications happen in your backend layer, it means all customizations will be in localized to your backend code base in a stack you are comfortable with. This is very different when compared to other solutions like Auth0 which have limited "[Actions](https://auth0.com/docs/customize/actions)" and you have to upload your code to their dashboard which makes managing you code difficult. It also differs from solutions like Keycloak where if you need a custom flow, you will need to deal with a language you are not comfortable with, in Keycloaks case its Java. 
+Since these modifications happen in your backend layer, it means all customizations will be in a language you are comfortable with and the changes will be in your own code base. This is very different when compared to other solutions like Auth0 which have limited "[Actions](https://auth0.com/docs/customize/actions)" where you upload your code to their dashboard making managing your code difficult. It also differs from solutions like Keycloak where, if you need a custom flow, you will need to deal with a language you are not comfortable with, in Keycloaks case it's Java. 
 
 ## Examples of custom flows:
 
@@ -71,6 +72,8 @@ Say you have a custom requirement where you want to verify a user's ownership of
     - Post email verification, we show a UI for the user to set their own password and then call an API that updates their fake password with the new one. 
 - Example app with [email verification before entering the password during sign up](https://github.com/supertokens/supertokens-auth-react/tree/master/examples/with-emailverification-then-password-thirdpartyemailpassword).
 
+![Verify a users email before you enter your password during Sign Up ](./verify-email-before-password.gif)
+
 ### Email Verification with OTP
 Instead of having the user click a link during email verification, maybe you would like them to enter an OTP.
 - This can be achieved in the following manner:
@@ -78,16 +81,20 @@ Instead of having the user click a link during email verification, maybe you wou
     - On the backend, override the Email Verification function which sends the email verification emails to the user to now generate an OTP, map it to the user and send it to the user's email. You will also need to override the API which validates the email verification link to now check if the OTP sent is valid.
 - Example app with [email verification with OTP](https://github.com/supertokens/supertokens-auth-react/tree/master/examples/with-emailverification-with-otp).
 
-### Login with Phone Password:
+![Verify a users email with OTP](./emailverification-with-otp.gif)
+
+### Login with Phone number Password:
 In this flow, users create an account using their phone number and password.
 - You can find a full guide on how to implement this authentication strategy in our [example app](https://github.com/supertokens/supertokens-auth-react/tree/master/examples/with-phone-password).
+
+![Phone number with password based login](./phone-password-login.gif)
 
 These are just some of the use cases that SuperTokens supports. If you have a custom requirement, feel free to join our [discord](https://supertokens.com/discord). We are passionate about Auth and would love to discuss your use case.
 
 ## Integrating SuperTokens into Supabase:
 
-So why does SuperTokens pair so well with Supabase? Well, one of Supabase's key features is authorization Row Level Security. RLS allows you to create powerful authorization policies to suit your business requirements. We provide a [guide](https://supabase.com/docs/guides/integrations/supertokens) on how to integrate SuperTokens with Supabase and leverage RLS to allow authorized users to access their data.
+So why does SuperTokens pair so well with Supabase? Well, one of Supabase's key features is authorization through Row Level Security. RLS allows you to create powerful authorization policies to match your business requirements. We provide a [guide](https://supabase.com/docs/guides/integrations/supertokens) on how to integrate SuperTokens with Supabase and leverage RLS to only allow authorized users to access their data.
 
 ## Conclusion
 
-In the end, the authentication solution you choose depends on your use case. For example, if you don't have a backend, you cant use SuperTokens(since SuperTokens architecture requires you to have a backend) and you will be better served using Supabase's auth solution, but if you fit SuperTokens requirements and need the customization and extensibility, you should look into SuperTokens.
+In the end, the authentication solution you choose depends on your use case. For example, if your app does not need a backend or does not have a custom flow, you could use Supabase's own auth solution. But, if you do have a custom use case, SuperTokens flexibility and extensibility make it an excellent choice to protect your app.
