@@ -17,10 +17,10 @@ It provides authentication flows like email-password, social login, and phone nu
 However, if your app is going to scale to a large number of users or have non standard requirements, it may make sense to consider alternatives since GoTrue has some limitations:
 
 For example:
-- For B2C apps: Features like account linking only like accounts that share the same email.
+- For B2C apps: Features like account linking only link accounts that share the same email.
 - For B2B apps: There is currently no support for multi factor authentication.
 
-So now that we know the limitations, we’ll dive deeper into when to use Supabase auth and when to consider other solutions:
+Now that we know the limitations, lets dive deeper into when to use Supabase auth and when to consider other solutions:
 
 **Use Supabase Auth if**:
 - You are building a simple web app which does not require an api layer and uses Supabase for storage. 
