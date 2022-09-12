@@ -7,6 +7,18 @@ category: "featured"
 author: "SuperTokens Team"
 ---
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [What is SuperTokens?](#what-is-supertokens)
+- [Examples of some customizations you can make with SuperTokens](#examples-of-some-customizations-you-can-make-with-supertokens)
+- [Example apps with custom flows](#example-apps-with-custom-flows)
+- [Integrating SuperTokens into Supabase](#integrating-supertokens-into-supabase)
+- [Conclusion](#conclusion)
+
+
+## Introduction
+
 So you’re creating a web app and have decided to use Supabase. You now face the decision of how you want to implement authentication.
 
 Supabase comes with its own authentication solution, based on a fork of [Netlify's goTrue](https://supabase.com/docs/learn/auth-deep-dive/auth-gotrue).
@@ -80,7 +92,7 @@ Instead of having the user click a link during email verification, maybe you wou
 
 ![Verify a users email with OTP](./emailverification-with-otp.gif)
 
-### Login with Phone number Password:
+### Login with Phone number Password
 In this flow, users create an account using their phone number and password.
 - Example app with [phone number and password login](https://github.com/supertokens/supertokens-auth-react/tree/master/examples/with-phone-password).
 
@@ -88,9 +100,9 @@ In this flow, users create an account using their phone number and password.
 
 These are just some of the use cases that SuperTokens supports. If you have a custom requirement, feel free to join our [discord](https://supertokens.com/discord). We are passionate about Auth and would love to discuss your use case.
 
-## Integrating SuperTokens into Supabase:
+## Integrating SuperTokens into Supabase
 
-We provide a [guide](https://supabase.com/docs/guides/integrations/supertokens) on how to secure you Supabase app with SuperTokens. The guide details the process of leveraging Supabase's Row Level Security feature to create powerful authorization policies.
+We provide a [guide](https://supabase.com/docs/guides/integrations/supertokens) on how to secure you Supabase app with SuperTokens. The guide details the process of leveraging Supabase's Row Level Security feature to create powerful authorization policies so only authorized users can access data.
 
 ## Conclusion
 
