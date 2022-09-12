@@ -106,4 +106,4 @@ We provide a [guide](https://supabase.com/docs/guides/integrations/supertokens) 
 
 ## Conclusion
 
-In the end, the authentication solution you choose depends on your use case. For apps where you need to quickly setup simple authentication flows Supabase Auth is a great choice, but, for startups or mid-level organisations looking for an open-source solution that can grow with their organisation, with extensive customization options SuperTokens is a great choice.
+In the end, the authentication solution you choose depends on your use case. For apps where you need to quickly setup simple authentication flows, Supabase Auth is a great choice, but, for startups or mid-level organisations looking for an open-source authentication solution that can grow with their organisation, SuperTokens is a great choice.
