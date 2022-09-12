@@ -44,11 +44,11 @@ SuperTokens is an Open Source Authentication solution. We have a managed service
 
 ### What does SuperTokens offer?
 - All popular sign up methods such as passwordless (with email or SMS), email and password, social login.
-- A Pre-built UI that is hosted on your domain itself 
+- A Pre-built UI that is hosted on your domain itself. 
 - SDKs that will handle automatically create and manage user’s session tokens (access & refresh tokens).
-- Hosted and self hosted options that enable you to manage your own data
+- Hosted and self hosted options that enable you to manage your own data.
 - 2FA, user roles, SAML and more on the way!
-- The ability to easily customise the end user experience or the backend auth logic within your API layer: This is what makes SuperTokens really powerful
+- The ability to easily customise the end user experience or the backend auth logic within your API layer: This is what makes SuperTokens really powerful.
 
 You can learn more about SuperTokens architecture and how customizations work from our [guide](https://supertokens.com/docs/thirdpartyemailpassword/architecture).
 
