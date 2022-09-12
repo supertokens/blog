@@ -68,13 +68,13 @@ You can learn more about SuperTokens architecture and how customizations work fr
 
 Here is a list of possible use cases and how SuperTokens can help you achieve them.
 
-- **Migration**: SuperTokens allows you to migrate users from other auth providers to SuperTokens and preserve the users' original userId. This allows you to continue to use any data you had mapped to the previous provider's userId.
-
 - **Restrict signups to work emails**: If your app requires users to sign up with their work-related emails or Google workspace-associated domains, you can use the SuperTokens email validator functions to enforce the check.
 
 - **Collect more information on signup**: Collect user’s name and age on the Sign Up or Sign In pages.
 
-- **Use your own SMS / email sending service**: Don’t like the default email and SMS templates? Create your own email and SMS content! You can also choose your own delivery method if you don’t want to use the default service. 
+- **Use your own SMS / email sending service**: Don’t like the default email and SMS templates? Create your own email and SMS content! You can also choose your own delivery method if you don’t want to use the default service.
+
+- **Migration**: SuperTokens allows you to migrate users from other auth providers to SuperTokens and preserve the users' original userId. This allows you to continue to use any data you had mapped to the previous provider's userId.
 
 ## Example apps with custom flows
 Here are some examples of custom flows we've already built:
@@ -106,4 +106,6 @@ We provide a [guide](https://supabase.com/docs/guides/integrations/supertokens) 
 
 ## Conclusion
 
-In the end, the authentication solution you choose depends on your use case. For apps where you need to quickly setup simple authentication flows, Supabase Auth is a great choice, but, for startups or mid-level organisations looking for an open-source authentication solution that can grow with their organisation, SuperTokens is a great choice.
+In the end, the authentication solution you choose depends on your use case.
+- For apps where you need to quickly setup simple authentication flows, Supabase Auth is a great choice.
+- For startups or mid-level organisations looking for an open-source authentication solution that can grow with their organisation, SuperTokens is a great choice.
