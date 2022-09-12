@@ -7,18 +7,29 @@ category: "featured"
 author: "SuperTokens Team"
 ---
 
-So you're creating a web app and have decided to use Supabase to manage your data. You now face the decision of how you want to implement authentication.
+So you’re creating a web app and have decided to use Supabase. You now face the decision of how you want to implement authentication.
 
-Supabase comes with its own authentication solution, based on a fork of [Netlify's goTrue](https://supabase.com/docs/learn/auth-deep-dive/auth-gotrue) it provides authentication flows like email-password, social login, and phone number based OTP.
-
+Supabase comes with its own authentication solution, based on a fork of [Netlify's goTrue](https://supabase.com/docs/learn/auth-deep-dive/auth-gotrue). It provides authentication flows like email-password, social login, and phone number based OTP.
 
 ![Netlify goTrue](./gotrue-supabase-logo.png)
 
-It is ideal for quickly building out authentication with vanilla auth flows, but, say you have custom requirements.
- 
-Maybe you are building a streaming service and would like to limit the number of active devices a user can sign into. Or you want to customize the sign-up authentication flow so that users have to verify their email before they enter their password.
+It's ideal for quickly building out authentication for many use cases.
 
-Supabase auth does not have a way to retrieve active sessions for a user and the API extensibility is limited by goTrues webhooks, so you would run into a wall if you wanted to implement either use case.
+However, if your app is going to scale to a large number of users or have non standard requirements, it may make sense to consider alternatives since GoTrue has some limitations:
+
+For example:
+- For B2C apps, features like account linking only like accounts that share the same email.
+- For B2B apps there is currently no support for multi factor authentication.
+
+So now that we know the limitations, we’ll dive deeper into when to use Supabase auth and when to consider other solutions:
+
+Use Supabase Auth if:
+- You are building a simple web app which does not require an api layer and uses Supabase for storage. 
+
+Consider alternative solutions if:
+- You’re building a high growth startup that will have a large numbers of users or will be selling to big companies
+- Require features such as: language translations, custom form fields and validators.
+- You require a custom flow - For example: You are building a streaming service and would like to limit the number of active sessions for a user or maybe you need to verify a users email before a user enters their password during sign up.
 
 So what third-party options are available that offer the flexibility you need and, are easy to use? 
 We have a [blog](https://supertokens.com/blog/auth-provider-comparison) that compares some of the most popular solutions out there, but today we are looking at SuperTokens, how it can adapt to accommodate your custom requirements and why it pairs so well with Supabase.
@@ -27,38 +38,31 @@ We have a [blog](https://supertokens.com/blog/auth-provider-comparison) that com
 
 ![SuperTokens Logo](./supertokens-logo.png)
 
-SuperTokens is an Open Source Authentication solution. They have a managed service, but if you prefer to handle your own data, you can use their self-hosted solution. We built SuperTokens from the ground up to be easy to use and customizable.
+SuperTokens is an Open Source Authentication solution. We have a managed service, but if you prefer to handle your own data, you can use our self-hosted solution. We built SuperTokens from the ground up to be easy to use and customizable.
 
-> Note: SuperTokens requires you to have a backend server. If your app does not need a backend server, Supabase auth is a more viable option.
+> Note: SuperTokens requires you to have an api layer. If your app does not require a discrete api layer, Supabase auth is a more viable option.
 
-### Customizing SuperTokens with Overrides:
+### What does SuperTokens offer?
+- All popular sign up methods such as passwordless (with email or SMS), email and password, social login.
+- A Pre-built UI that is hosted on your domain itself 
+- SDKs that will handle automatically create and manage user’s session tokens (access & refresh tokens).
+- Hosted and self hosted options that enable you to manage your own data
+- 2FA, user roles, SAML and more on the way!
+- The ability to easily customise the end user experience or the backend auth logic within your API layer: This is what makes SuperTokens really powerful
 
-Before we talk about how to use customize SuperTokens, we first need take a look at it's architecture.
+You can learn more about SuperTokens architecture and how customizations work from our [guide](https://supertokens.com/docs/thirdpartyemailpassword/architecture).
 
-SuperTokens has 3 parts:
-- A Frontend SDK you integrate into your frontend framework (ReactJs, Angular, Vue…)
-- A Backend SDK you integrate into your backend layer (NodeJs, Python, Go).
-- The SuperTokens Core which can be deployed using the SuperTokens managed service or self-hosted.
-
-![SuperTokens Architecture](st-architecture.png)
-
-Once setup, auth requests from your frontend will call APIs exposed by your backend which will communicate with the SuperTokens core to persist data. The Backend SDK also allows you to `Override` SuperTokens APIs and functions to extend functionality or even completely replace the logic. 
-
-Since these modifications happen in your backend layer, it means all customizations will be in a language you are comfortable with and the changes will be in your own code base. This is very different when compared to other solutions like Auth0 which have limited "[Actions](https://auth0.com/docs/customize/actions)" where you upload your code to their dashboard making managing your code difficult. It also differs from solutions like Keycloak where, if you need a custom flow, you will need to deal with a language you are not comfortable with, in Keycloaks case it's Java. 
-
-## Examples of custom flows:
+## Examples of some customizations you can make with SuperTokens:
 
 Here is a list of possible use cases and how SuperTokens can help you achieve them.
 
-- Do you need to migrate users from another auth solution but have data associated with their userIds? With SuperTokens you can use the UserId Mapping feature to continue to use these userIds by mapping the SuperTokens userId to the pre-existing userId during migration. Now when passing the pre-existing Id to any SuperTokens APIs, it will internally resolve the mapping and make sure that the pre-existing id is also returned in the response.
+- **Migration**: SuperTokens allows you to migrate users from other auth providers to SuperTokens and preserve the users' original userId. This allows you to continue to use any data you had mapped to the previous provider's userId.
 
-- If your app requires users to sign up with their work-related emails or Google workspace-associated domains, you can use the SuperTokens email validator functions to enforce the check.
+- **Restrict signups to work emails**: If your app requires users to sign up with their work-related emails or Google workspace-associated domains, you can use the SuperTokens email validator functions to enforce the check.
 
-- Add additional form fields to the Sign Up or Sign In pages to retrieve more information like the user's name and age.
+- **Collect more information on signup**: Collect user’s name and age on the Sign Up or Sign In pages.
 
-- Streaming services need to limit the number of active devices associated with an account. If you are building a streaming service, you will use the SuperTokens Session recipe to enable this feature set.
-
-- Don't like the default email and SMS templates? Create your own email and SMS content! You can also choose your own delivery method if you don't want to use the default service.
+- **Use your own SMS / email sending service**: Don’t like the default email and SMS templates? Create your own email and SMS content! You can also choose your own delivery method if you don’t want to use the default service. 
 
 ## Example apps with custom flows
 Here are some examples of custom flows we've already built:
@@ -66,26 +70,19 @@ Here are some examples of custom flows we've already built:
 ### Verify a users email before they enter their password during Sign Up.
 Say you have a custom requirement where you want to verify a user's ownership of an email before they type in a password during sign-up.
 
-- The overall approach can be achieved in the following manner:
-    - On first sign up via email, we set a fake, random password against the user's info. This is some unguessable string but is common for all users.
-    - The above step allows us to create a new session for the user and go through the email verification flow as usual.
-    - Post email verification, we show a UI for the user to set their own password and then call an API that updates their fake password with the new one. 
 - Example app with [email verification before entering the password during sign up](https://github.com/supertokens/supertokens-auth-react/tree/master/examples/with-emailverification-then-password-thirdpartyemailpassword).
 
 ![Verify a users email before you enter your password during Sign Up ](./verify-email-before-password.gif)
 
 ### Email Verification with OTP
 Instead of having the user click a link during email verification, maybe you would like them to enter an OTP.
-- This can be achieved in the following manner:
-    - Override the Email Verification screen on the frontend to display a custom component that has an input to enter the OTP.
-    - On the backend, override the Email Verification function which sends the email verification emails to the user to now generate an OTP, map it to the user and send it to the user's email. You will also need to override the API which validates the email verification link to now check if the OTP sent is valid.
 - Example app with [email verification with OTP](https://github.com/supertokens/supertokens-auth-react/tree/master/examples/with-emailverification-with-otp).
 
 ![Verify a users email with OTP](./emailverification-with-otp.gif)
 
 ### Login with Phone number Password:
 In this flow, users create an account using their phone number and password.
-- You can find a full guide on how to implement this authentication strategy in our [example app](https://github.com/supertokens/supertokens-auth-react/tree/master/examples/with-phone-password).
+- Example app with [phone number and password login](https://github.com/supertokens/supertokens-auth-react/tree/master/examples/with-phone-password).
 
 ![Phone number with password based login](./phone-password-login.gif)
 
@@ -93,8 +90,8 @@ These are just some of the use cases that SuperTokens supports. If you have a cu
 
 ## Integrating SuperTokens into Supabase:
 
-So why does SuperTokens pair so well with Supabase? Well, one of Supabase's key features is authorization through Row Level Security. RLS allows you to create powerful authorization policies to match your business requirements. We provide a [guide](https://supabase.com/docs/guides/integrations/supertokens) on how to integrate SuperTokens with Supabase and leverage RLS to only allow authorized users to access their data.
+We provide a [guide](https://supabase.com/docs/guides/integrations/supertokens) on how to secure you Supabase app with SuperTokens. The guide details the process of leveraging Supabase's Row Level Security feature to create powerful authorization policies.
 
 ## Conclusion
 
-In the end, the authentication solution you choose depends on your use case. For example, if your app does not need a backend or does not have a custom flow, you could use Supabase's own auth solution. But, if you do have a custom use case, SuperTokens flexibility and extensibility make it an excellent choice to protect your app.
+In the end, the authentication solution you choose depends on your use case. For simple apps Supabase auth is a convenient solution if it matches your requirements. But, if you require a custom use case, SuperTokens flexibility and extensibility make it an excellent choice to protect your app.
