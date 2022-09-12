@@ -9,12 +9,13 @@ author: "SuperTokens Team"
 
 So you’re creating a web app and have decided to use Supabase. You now face the decision of how you want to implement authentication.
 
-Supabase comes with its own authentication solution, based on a fork of [Netlify's goTrue](https://supabase.com/docs/learn/auth-deep-dive/auth-gotrue). 
+Supabase comes with its own authentication solution, based on a fork of [Netlify's goTrue](https://supabase.com/docs/learn/auth-deep-dive/auth-gotrue).
+
 ![Netlify goTrue](./gotrue-supabase-logo.png)
 
 It provides authentication flows like email-password, social login, and phone number based OTP and is ideal for quickly building out authentication for many use cases.
 
-However, if your app is going to scale to a large number of users or have non standard requirements, it may make sense to consider alternatives since GoTrue has some limitations:
+However, if your app is going to scale to a large number of users or have non-standard requirements, it may make sense to consider alternatives since GoTrue has some limitations:
 
 For example:
 - For B2C apps: Features like account linking only link accounts that share the same email.
@@ -26,8 +27,8 @@ Now that we know the limitations, lets dive deeper into when to use Supabase aut
 - You are building a simple web app which does not require an api layer and uses Supabase for storage. 
 
 **Consider alternative solutions if**:
-- You’re building a high growth startup that will have a large numbers of users or will be selling to big companies
-- Require features such as: language translations, custom form fields and validators.
+- You’re building a high growth startup that will have a large numbers of users or will be selling to big companies.
+- Require features such as: language translations, custom form fields and field validators.
 - You require a custom flow - For example: You are building a streaming service and would like to limit the number of active sessions for a user or maybe you need to verify a users email before a user enters their password during sign up.
 
 So what third-party options are available that offer the flexibility you need and, are easy to use? 
