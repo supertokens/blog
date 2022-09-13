@@ -66,7 +66,7 @@ As mentioned previously Okta’s main focus is workforce identity. Although they
 - Auth0’s extensibility options don't allow you to change the logic of a flow.
 - To use this feature you have to add your code to their dashboard. This makes maintaining the code a hassle.
 
-### Auth0 Pricing:
+## Auth0 Pricing:
 
 #### Free Plan
 Auth0’s free plan allows having up to **7000 MAUs** and up to 2 social connections and 3 Actions, Rules, and hooks. 
@@ -120,7 +120,7 @@ Cognito supports multiple compliance programs and can scale to millions of users
 #### Migration:
 - Cognito does not allow you to export user password hashes. This can make migration to another database or service much harder.
 
-### AWS Cognito Pricing
+## AWS Cognito Pricing
 Cognito’s free tier offers up to **50,000 MAUs** for free. Included are the Identity pool features which cover access control and RBAC. 
 
 #### Free:
@@ -174,7 +174,7 @@ SuperTokens differentiates itself from its competitors with its flexibility. If 
 #### Tech Stack Support
 - As of writing this article supertokens supports `Nodejs`, `Golang` and `Python` on the backend with `Reactjs(All Features)`, `VanillaJS(only session management)` and `React Native(only session management)` on the frontend. They currently do not support many popular languages like `Java` and `Php` and they do not have pre-built UI for popular frontend frameworks like `Angular` and `Vue`. 
 
-### SuperTokens Pricing:
+## SuperTokens Pricing:
 At the time of writing this article, the SuperTokens feature set is completely free. If you decide to use the self-hosted version you can download the core and use it for free for an unlimited amount of users. 
 
 ![supertokens pricing](./supertokens_pricing_choice.png)
