@@ -44,7 +44,7 @@ Now that we know the limitations, lets dive deeper into when to use Supabase aut
 - You require a custom flow - For example: You are building a streaming service and would like to limit the number of active sessions for a user or maybe you need to verify a users email before a user enters their password during sign up.
 
 So what third-party options are available that offer the flexibility you need and, are easy to use? 
-We have a [blog](https://supertokens.com/blog/auth-provider-comparison) that compares some of the most popular solutions out there, but today we are looking at SuperTokens, how it can adapt to accommodate your custom requirements and why it pairs so well with Supabase.
+We have a [blog](https://supertokens.com/blog/auth0-vs-okta-cognito-supertokens) that compares some of the most popular solutions out there, but today we are looking at SuperTokens, how it can adapt to accommodate your custom requirements and why it pairs so well with Supabase.
 
 ## What is SuperTokens?
 
