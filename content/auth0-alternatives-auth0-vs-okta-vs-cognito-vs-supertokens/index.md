@@ -11,7 +11,7 @@ Need authentication but not sure who to go with? Read on for an in-depth compari
 
 ## Table Of Contents:
 - [Introduction](#introduction)
-- [Auth0 and Okta](#auth0-and-okta)
+- [Auth0 and Okta](#auth0-vs-okta)
 - [Amazon Cognito](#cognito)
 - [SuperTokens](#supertokens)
 - [Conclusion](#conclusion)
@@ -21,7 +21,7 @@ Solutions that authenticate and manage users’ access to a system have never be
 
 In today's post, we will be looking at some of the leading Authentication providers, breaking down their features and pricing so you can decide if they fit your requirements.
 
-## <a name="auth0-and-okta" href=""> Auth0 and Okta</a>
+## <a name="auth0-vs-okta" href=""> Auth0 vs Okta</a>
 
 ![Auth0 logo](./auth_okta.png)
 
@@ -90,6 +90,12 @@ Auth0 splits its paid plans into two sections based on your use case, with each 
 
 ### So is Auth0 the way to go?
 Auth0 has all the functionality you need and is easy to set up and integrate with, but their pricing doesn't scale well and it can become very expensive as your userbase grows and you require more features.
+
+### Auth0 Alternatives
+Auth0 is one of the biggest competitors in the space, but, it's high price tag has resulted in a demand for alternatives. In this post we are going to be looking at: 
+- [Amazon Cognito](#cognito) 
+- [SuperTokens](#supertokens)
+
 
 ## <a name="cognito" href=""> Amazon Cognito</a>
 
