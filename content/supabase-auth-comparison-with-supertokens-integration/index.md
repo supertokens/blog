@@ -36,15 +36,16 @@ For example:
 Now that we know the limitations, lets dive deeper into when to use Supabase auth and when to consider other solutions:
 
 **Use Supabase Auth if**:
-- You are building a simple web app which does not require an api layer and uses Supabase for storage. 
+- You need to quickly setup an app with Email-Password, Social Login or Phone number based authentication methods.
+- Your app does not need a custom flow or you do not require multi-factor authentication.
 
 **Consider alternative solutions if**:
 - You’re building a high growth startup that will have a large numbers of users or will be selling to big companies.
-- Require features such as: language translations, custom form fields and field validators.
+- Require features such as: language translations, multi-factor authentication and field validators.
 - You require a custom flow - For example: You are building a streaming service and would like to limit the number of active sessions for a user or maybe you need to verify a users email before a user enters their password during sign up.
 
 So what third-party options are available that offer the flexibility you need and, are easy to use? 
-We have a [blog](https://supertokens.com/blog/auth-provider-comparison) that compares some of the most popular solutions out there, but today we are looking at SuperTokens, how it can adapt to accommodate your custom requirements and why it pairs so well with Supabase.
+We have a [blog](https://supertokens.com/blog/auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens) that compares some of the most popular solutions out there, but today we are looking at SuperTokens, how it can adapt to accommodate your custom requirements and why it pairs so well with Supabase.
 
 ## What is SuperTokens?
 
