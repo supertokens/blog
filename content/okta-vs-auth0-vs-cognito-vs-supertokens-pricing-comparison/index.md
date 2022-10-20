@@ -2,8 +2,8 @@
 title: Okta vs Auth0 vs AWS Cognito vs SuperTokens Pricing (2022/2023)
 date: "2022-10-19"
 description: "An in depth pricing comparison of Authentication solutions: Auth0 vs Okta vs Cognito vs SuperTokens"
-cover: "TODO"
-category: "programming"
+cover: "okta-vs-auth0-vs-cognito-vs-supertokens-pricing-comparison.png"
+category: "featured"
 author: "SuperTokens Team"
 ---
 
