@@ -31,12 +31,10 @@ In a previous [post](https://supertokens.com/blog/auth0-alternatives-auth0-vs-ok
 With an emphasis on workforce identity solutions, Okta is a leader in the enterprise authentication space, offering [identity products](https://www.okta.com/pricing/#workforce-identity-pricing) to secure employees and business resources within an organization.
 
 
-After [acquiring Auth0 in 2021](https://supertokens.com/blog/the-real-reason-okta-spent-on-auth0), Okta now has a strong foothold in customer identity and has deprecated its own customer identity offering in favor of Auth0. Hence its customer identity pricing is the same as Auth0’s.
+After [acquiring Auth0 in 2021](https://supertokens.com/blog/the-real-reason-okta-spent-on-auth0), Okta now has a strong foothold in customer identity and has deprecated its own customer identity offering in favor of Auth0's. Hence its customer identity pricing is the same as Auth0’s.
 
-### Should you use Okta?
-As mentioned previously Okta is a leader in the workforce identity space and is a top option for organizations looking to secure their employees and internal resources. 
 
-Since it offers Auth0 products as the default customer identity solution, let's look at Auth0 next.
+Since it offers Auth0 products as the default customer identity solution, we’ll look at Auth0’s pricing. 
 
 ## Auth0 Pricing
 
@@ -56,7 +54,7 @@ Auth0’s offerings can be broadly categorized into their free and paid plans.
 ![Auth0 free plan](../auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens/auth0_free.png)
 
 #### Paid Plans
-Auth0 splits its paid plans into 2 sections based on your use case, with each use case having an Essential, Professional, and Enterprise tier. In both cases, the Enterprise tier has fully custom pricing.
+Auth0 splits its paid plans into 2 sections based on whether your app is “B2C” or “B2B”. , Each use case has it's own Essential, Professional, and Enterprise tiers. In both cases, the Enterprise tier has fully custom pricing.
 
 **Use Case 1: Business to Consumer**
 
@@ -72,7 +70,7 @@ Auth0 splits its paid plans into 2 sections based on your use case, with each us
 
 - **Enterprise:**
   - The Enterprise plan has 99.99% SLA & Enterprise Support and advanced cloud deployment options. This tier also allows private deployments.
-  - Enterprise pricing is completely custom and requires you to talk with an Auth0 sales representative.
+  - Enterprise pricing is completely custom and requires you to talk with an Auth0 sales representative. From our research, it seems enterprise plans start at $30,000 / year ($2,500 / month) but scales to 6 and 7 figures as well.
 
   ![Auth0 B2C](../auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens/auth0_B2C_pricing.png)
 
@@ -91,7 +89,7 @@ Auth0 splits its paid plans into 2 sections based on your use case, with each us
 **Enterprise:**
 - The Enterprise plan has 99.99% SLA & Enterprise Support and advanced cloud deployment options. This tier also allows private deployments.
 - It removes restrictions on the number of Monthly Active Users.
-- Enterprise pricing is completely custom and requires you to talk with an Auth0 sales representative.
+- Enterprise pricing is completely custom and requires you to talk with an Auth0 sales representative. From our research, it seems enterprise plans start at $30,000 / year ($2,500 / month) but scales to 6 and 7 figures as well.
 
 ![Auth0 B2B](../auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens/auth0_B2B_pricing.png)
 
