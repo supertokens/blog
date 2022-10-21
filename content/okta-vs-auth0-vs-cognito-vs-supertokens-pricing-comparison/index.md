@@ -9,10 +9,10 @@ author: "SuperTokens Team"
 
 ## Table Of Contents:
 - [Introduction](#introduction)
-- [Okta Pricing](#okta)
-- [Auth0 Pricing](#auth0)
-- [Amazon Cognito Pricing](#cognito)
-- [SuperTokens](#supertokens)
+- [Okta Pricing](#okta-pricing)
+- [Auth0 Pricing](#auth0-pricing)
+- [Amazon Cognito Pricing](#aws-cognito-pricing)
+- [SuperTokens Pricing](#supertokens-pricing)
 - [Pricing Comparison Table](#pricing-comparison-table)
 - [Conclusion](#conclusion)
 
