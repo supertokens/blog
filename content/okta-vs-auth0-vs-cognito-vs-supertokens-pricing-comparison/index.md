@@ -62,11 +62,11 @@ Auth0 splits its paid plans into 2 sections based on whether your app is â€œB2Câ
 
 - **Essential:**
   - The essential plan allows for unlimited social connections, custom domains, and user role management. You also get 2 more Actions, Rules and Hooks.
-  - Pricing starts at $23/month for 1,000 users and scales to $228/month for 10,000 users.
+  - Pricing starts at **$23/month** for **1,000 users** and scales to **$228/month** for **10,000 users**.
 
 - **Professional:**
   - The professional plan adds multifactor authentication, admin roles, the ability to connect an external database, and additional action, rules, and hooks.
-  - Pricing starts at $240/month for 1,000 and scales to $1,500/month
+  - Pricing starts at **$240/month** for **1,000** and scales to **$1,500/month** for **10,000** users.
 
 - **Enterprise:**
   - The Enterprise plan has 99.99% SLA & Enterprise Support and advanced cloud deployment options. This tier also allows private deployments.
@@ -76,20 +76,20 @@ Auth0 splits its paid plans into 2 sections based on whether your app is â€œB2Câ
 
 **Use Case 2: Business to Business**
 
-> **Note**: Both the Essential and Professional tiers allow for up to 10,000 monthly active users. If you cross these thresholds you will be asked to move to the Enterprise tier.
+> **Note**: Both the Essential and Professional tiers allow for up to 7,000 monthly active users. If you cross these thresholds you will be asked to move to the Enterprise tier.
 
 **Essential:**
 - The essential plan offers enterprise connections, multi-factor authentication, user role management, and organizations.
-- Pricing starts at $130/month for 500 users and scales to $1,420/month for 7,000 users.
+- Pricing starts at **$130/month** for **500 users** and scales to **$1,420/month** for **7,000 users**.
 
 **Professional:**
 - The professional plan allows you to connect your database and increases the number of organizations and the actions, rules, and hooks.
-- Pricing starts at $800/month for 500 users and scales to $1,800/month for 7,000 users.
+- Pricing starts at **$800/month** for **500 users** and scales to **$1,800/month** for **7,000 users**.
 
 **Enterprise:**
 - The Enterprise plan has 99.99% SLA & Enterprise Support and advanced cloud deployment options. This tier also allows private deployments.
 - It removes restrictions on the number of Monthly Active Users.
-- Enterprise pricing is completely custom and requires you to talk with an Auth0 sales representative. From our research, it seems enterprise plans start at $30,000 / year ($2,500 / month) but scales to 6 and 7 figures as well.
+- Enterprise pricing is completely custom and requires you to talk with an Auth0 sales representative. From our research, it seems enterprise plans start at **$30,000/year** ($2,500/month) but scales to 6 and 7 figures as well.
 
 ![Auth0 B2B](../auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens/auth0_B2B_pricing.png)
 
