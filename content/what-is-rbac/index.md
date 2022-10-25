@@ -48,13 +48,6 @@ Easy to understand: Because of its intuitive structure, the underlying business 
 - Role explosion: Because the only way to add granularity to a RBAC system is by creating a new role, we can end up with hundreds of different roles that are impossible to manage.
 - Can cause conflicts in permissions: There could be situations in which a user is assigned two roles that have conflicting information. In our example above, if a user is assigned the `editor` role and the `regular-user`, they have `edit:self` and `edit:all` permission. Which one should take precedence? The precedence logic can be coded in the APIs, but this opens the possibility for errors.
 
-```
-// ...
-if (permissions.contains("edit:self")) 
-	{// only allow editing if the blog post belongs to the current user } 
-else if (permissions.contains("edit:all")) 
-	{// allow editing }// ...
-```
 
 This may cause issues if a user has both the `admin` and `regular-user` roles – despite having the `admin` role, they will not be able to edit all the blogs because the `edit:self` statement is executed first while the `edit:all` rules get skipped in the following else-if statement.
 
