@@ -77,7 +77,7 @@ Post Auth0 acquisition, Okta deprecated their own line of customer identity prod
 
 You can find a complete guide to Auth0’s pricing [here](https://supertokens.com/blog/auth0-pricing-the-complete-guide).
 
-## Okta Alternative: Supertokens
+## Okta Alternative: SuperTokens
 
 ### What is SuperTokens?
 SuperTokens is an open-source authentication solution that provides a managed service for hassle-free auth and an on-prem solution so developers can manage their data.

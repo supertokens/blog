@@ -77,7 +77,7 @@ Similar to the first use case, the B2B plan also has essential, professional, an
 - Auth0 does offer a plan for startups. For a year they will provide the entire platform for free but will revert to the default pricing model once the startup plan expires.
 
 
-## Auth0 Alternative: Supertokens
+## Auth0 Alternative: SuperTokens
 
 ### What is SuperTokens?
 SuperTokens is an open-source authentication solution that provides a managed service for hassle-free auth and an on-prem solution so developers can manage their data.
