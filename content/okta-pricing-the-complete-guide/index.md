@@ -40,34 +40,34 @@ Here are some of the main products they offer:
 **Single Sign-on:**
 SSO is an authentication tool that enables users to securely access multiple applications with the same set of credentials. 
 This feature is priced at(Monthly pricing):
-- Regular SSO: $2 per user 
-- Adaptive SSO(context-based SSO): $5 per user
+- Regular SSO: **$2 per user**
+- Adaptive SSO(context-based SSO): **$5 per user**
 
-[okta sso pricing](./workforce_identity_sso.png)
+![okta sso pricing](./workforce_identity_sso.png)
 
 **Multi-factor Autentication:**
 This authentication method requires the user to provide two or more verification factors to access their account.
 
 This feature is priced at(Monthly pricing):
-- MFA: $3 per user
-- Adaptive MFA: $6 per user
+- MFA: **$3 per user**
+- Adaptive MFA: **$6 per user**
 
-[okta mfa pricing](./workforce_identity_mfa.png)
+![okta mfa pricing](./workforce_identity_mfa.png)
 
 **Advanced Server Access:**
 Advanced Sever Access allows organizations to manage employee access to windows and Linux servers.
 This feature is priced at(Monthly pricing):
 - $15 per user
 
-[okta advanced server access](./workforce_identity_advanced_server_access.png)
+![okta advanced server access](./workforce_identity_advanced_server_access.png)
 
 
 **API Access Management:**
 API Access Management is Okta's implementation of the OAuth 2.0 standard, allowing organizations to secure their APIs.
 This feature is priced at(Monthly pricing):
-- $2 per user
+- **$2 per user**
 
-[okta api access management](./workforce_identity_api_access_management.png)
+![okta api access management](./workforce_identity_api_access_management.png)
 
 
 ### Customer Identity Products
@@ -75,9 +75,7 @@ Customer Identity products are aimed at B2C organizations that want to manage an
 
 Post Auth0 acquisition, Okta deprecated their own line of customer identity products and now serves Auth0’s products as their default customer identity solution.
 
-You can find a complete guide to Auth0’s pricing here.
-
-
+You can find a complete guide to Auth0’s pricing [here](https://supertokens.com/blog/auth0-pricing-the-complete-guide).
 
 ## Okta Alternative: Supertokens
 
@@ -87,8 +85,7 @@ SuperTokens is an open-source authentication solution that provides a managed se
 ## SuperTokens Pricing:
 At the time of writing this article, the SuperTokens feature set is completely free. If you decide to use the self-hosted version you can download the core and use it for free for an unlimited number of users.
 
-
-![SuperTokens pricing plan](./supertokens_pricing.png)
+![SuperTokens pricing](./supertokens_pricing.png)
 
 - **Self-Hosted:**
   - Free forever for unlimited users.
