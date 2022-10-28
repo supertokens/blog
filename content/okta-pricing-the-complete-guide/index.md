@@ -70,6 +70,8 @@ This feature is priced at(Monthly pricing):
 ![okta api access management](./workforce_identity_api_access_management.png)
 
 
+You can find the full listing of Okta's product pricing [here](https://www.okta.com/pricing/#workforce-identity-pricing)
+
 ### Customer Identity Products
 Customer Identity products are aimed at B2C organizations that want to manage and protect external identities like customers and partners.
 
