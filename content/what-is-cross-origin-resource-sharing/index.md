@@ -119,7 +119,7 @@ One common mistake in configuring CORS is around the use of wildcards. Often, de
 
 While wildcards will work for simple requests (requests without [HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) or HTTP authentication information), requests with credentials will often encounter a CORS not authorized error.
 
-That's because in requests with credentials (cookies), the wildcard is treated as the literal method name or origin name "*" without special semantics. This occurs both in `Access-Control-Allow-Origin` and `Access-Control-Allow-Methods`. And some browsers like Safari simply don't have support for wildcards at all, simple request or not.
+That's because in requests with credentials (cookies), the wildcard is treated as the literal method name or origin name `"*"` without special semantics. This occurs both in `Access-Control-Allow-Origin` and `Access-Control-Allow-Methods`, and some browsers like Safari simply don't have support for wildcards at all.
 
 All in all, it's good hygiene to avoid the wildcard and use a comma-separated list when configuring CORS.
 
