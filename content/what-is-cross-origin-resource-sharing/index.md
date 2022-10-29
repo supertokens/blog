@@ -44,7 +44,7 @@ So now, let's get into the actual motion of what happens when requesting resourc
 
 We've set up an example website at `emailpassword.demo.supertokens.com` where we can see the full CORS motion. This website calls an API on `api-emailpassword.demo.supertokens.com`. Even though both domains are subdomains of `demo.supertokens.com`, our browsers register them as different origins. And thus, CORS comes into the picture. If we had two websites like `example.com` and `fonts.com`, our browser will also register them as different origins. 
 
-During sign in, if you open the browser's dev tools and see the network tab, you will see the preflight request being made. More specifically, the preflight request is an OPTIONS request made to our API domain with a couple of headers. Let's take a look at what happens when we click sign in -
+During sign in, if you open the browser's dev tools and see the network tab, you will see the preflight request being made. More specifically, the preflight request is an `OPTIONS` request made to our API domain with a couple of headers. Let's take a look at what happens when we click sign in -
 
 ```
 OPTIONS /auth/user/email/verify HTTP/1.1
@@ -57,7 +57,7 @@ Origin: https://emailpassword.demo.supertokens.com
 So that's our pre-flight request. Breaking this down, we have four key things to look at.
 
 -   Host - The "host" of the resource that we're requesting. For us, that's `api-emailpassword.demo.supertokens.com`
--   Access-Control-Request-Method - The method of the request being made by our operation. This can be any of the HTTP request methods, including GET, POST, PUT, DELETE, and CONNECT.
+-   Access-Control-Request-Method - The method of the request being made by our operation. This can be any of the HTTP request methods, including `GET`, `POST`, `PUT`, `DELETE`, and `CONNECT`.
 -   Access-Control-Request-Headers - A comma-separated list of [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) that would be used in the actual request.
 -   Origin - Where the request is coming from. For us, that's our previous domain - `emailpassword.demo.supertokens.com`
 
@@ -82,7 +82,7 @@ The browser then takes this response from the API server to determine if the act
 
 ## CORS actual request
 
-If the response from the API includes the requested origin, it's time to send the actual POST request to sign in.
+If the response from the API includes the requested origin, it's time to send the actual `POST` request to sign in.
 
 ```
 POST /auth/signin HTTP/1.1
@@ -93,7 +93,7 @@ Content-Length: 92
 Origin: https://emailpassword.demo.supertokens.com/
 ```
 
-Note that this request includes both the Host and Origin headers. In addition, we see the content-type header show up in the request (near the end of the Host request line). Looking back to the pre-flight response, we can see that content-type is one of the allowed headers.
+Note that this request includes both the `Host` and `Origin` headers. In addition, we see the content-type header show up in the request (near the end of the `Host` request line). Looking back to the pre-flight response, we can see that content-type is one of the allowed headers.
 
 Now let's take a look at the response from the server.
 
@@ -143,12 +143,12 @@ The best approach here to avoid potential abuse is to explicitly define origins 
 
 Another common misconfiguration is whitelisting origins with the value null. Browsers might send the value null in the origin header in situations such as:
 
--   Request with file:.
--   Sandboxed cross-origin requests.
+-   Request with file:
+-   Sandboxed cross-origin requests
 
 In this case, an attacker can use various tricks to generate a request containing the value null as the origin which is whitelisted in our configurations. For example, the attacker could use the following sandboxed iframe exploit -
 
-```
+```html
 <iframe src="data:text/html" sandbox="allow-scripts allow-top-navigation allow-forms allow-same-origin">
 function reqlistener() { console.log(this.responseText) }
 var req = new XMLHttpRequest();
