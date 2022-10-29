@@ -35,7 +35,7 @@ With ABAC, companies must first define variables and configure different attribu
 
 ## Advantages of RBAC
 
-Easy to understand: Because of its intuitive structure, the underlying business logic with RBAC is simple to communicate and understand – even with dozens of different roles.
+- Easy to understand: Because of its intuitive structure, the underlying business logic with RBAC is simple to communicate and understand – even with dozens of different roles.
 
 - Extendibility: As you ship new features or change the application structure, adding or modifying roles can easily extend access to new resources for users that need them.
 - Improving compliance: Using RBAC forces developers to think about and organize application permissions and access control. This information can then be used by compliance officers during audits.
