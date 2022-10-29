@@ -101,7 +101,8 @@ Now let's take a look at the response from the server.
 ```
 HTTP/1.1 200 OK
 Access-Control-Allow-Origin: https://emailpassword.demo.supertokens.com/
-Access-Control-Allow-Credentials: truefront-token: ...
+Access-Control-Allow-Credentials: true
+front-token: ...
 Access-Control-Expose-Headers: front-token, id-refresh-token
 Set-Cookie: ...
 ```
