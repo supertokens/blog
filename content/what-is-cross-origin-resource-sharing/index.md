@@ -125,7 +125,7 @@ All in all, it's good hygiene to avoid the wildcard and use a comma-separated li
 
 ## CORS vulnerability
 
-When configured improperly, CORS can also lead to major vulnerabilities. Below, we'll list a couple of common issues when configuring CORS.
+When configured improperly, CORS can lead to major vulnerabilities. Below, we'll list a couple of common issues when configuring CORS.
 
 ### Mishandling origin whitelist
 
