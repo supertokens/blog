@@ -49,8 +49,7 @@ Easy to understand: Because of its intuitive structure, the underlying business 
 ```ts
 if (permissions.contains("edit:self")) {
 	// only allow editing if the blog post belongs to the current user 
-} 
-else if (permissions.contains("edit:all")) {
+} else if (permissions.contains("edit:all")) {
 	// allow editing 
 }  
 ```  
