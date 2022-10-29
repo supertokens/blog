@@ -127,7 +127,7 @@ All in all, it's good hygiene to avoid the wildcard and use a comma-separated li
 
 When configured improperly, CORS can also lead to major vulnerabilities. Below, we'll list a couple of common issues when configuring CORS.
 
-**Mishandling origin whitelist**
+### Mishandling origin whitelist
 
 One of the easiest mistakes to make when implementing CORS is mishandling the origin whitelist. When whitelisting origins, it's often easy to do simple matches with URL prefixes or suffixes, or using regular expressions. However this can lead to quite a few issues. Let's look at some examples below.
 
