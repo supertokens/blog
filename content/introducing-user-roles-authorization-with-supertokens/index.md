@@ -153,7 +153,7 @@ app.delete("/blog", verifySession(), async (req, res) => {
 
     // if the role is "admin", we get ["read:all", "delete:all", "edit:all"]
     // else we get ["read:all", "delete:self", "edit:self"]
-    let permissions = await session.getClaimValue(UserRoles.PermissionClaim)
+    let permissions = await req.session.getClaimValue(UserRoles.PermissionClaim)
 
     if (permissions.includes("delete:all")) {
         // allow delete
