@@ -86,7 +86,8 @@ If the response from the API includes the requested origin, it's time to send th
 
 ```
 POST /auth/signin HTTP/1.1
-Host: http://api-emailpassword.demo.supertokens.com/content-type: application/json
+Host: http://api-emailpassword.demo.supertokens.com/
+content-type: application/json
 fdi-version: 1.15
 rid: emailpassword
 Content-Length: 92
