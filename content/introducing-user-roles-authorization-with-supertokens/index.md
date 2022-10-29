@@ -149,7 +149,7 @@ app.delete("/blog", verifySession(), async (req, res) => {
 
     // if the user is an admin, we will get ["admin"], 
     // else we will get ["regular-user"]
-    let roles = session.getClaimValue(UserRoles.UserRoleClaim)
+    let roles = req.session.getClaimValue(UserRoles.UserRoleClaim)
 
     // if the role is "admin", we get ["read:all", "delete:all", "edit:all"]
     // else we get ["read:all", "delete:self", "edit:self"]
