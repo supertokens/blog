@@ -1,6 +1,6 @@
 ---
-title: "Introducing User Roles Authorization with SuperTokens"
-description: "With user roles, you can now use Supertokens to easily attach a different set of permissions to each user."
+title: "What is Cross Origin Resource Sharing (CORS)"
+description: "Cross-Origin Resource Sharing (CORS) is a mechanism that supports secure requests and data transfers from outside origins (domain, scheme, or port)."
 date: "2022-10-27"
 cover: "cors-cover.png"
 category: "featured"
