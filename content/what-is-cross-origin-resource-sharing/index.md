@@ -146,7 +146,7 @@ Another common misconfiguration is whitelisting origins with the value null. Bro
 -   Request with file:
 -   Sandboxed cross-origin requests
 
-In this case, an attacker can use various tricks to generate a request containing the value null as the origin which is whitelisted in our configurations. For example, the attacker could use the following sandboxed iframe exploit -
+In this case, an attacker can use various tricks to generate a request containing the value `null` as the origin which is whitelisted in our configurations. For example, the attacker could use the following sandboxed `iframe` exploit -
 
 ```html
 <iframe src="data:text/html" sandbox="allow-scripts allow-top-navigation allow-forms allow-same-origin">
