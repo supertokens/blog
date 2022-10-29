@@ -109,7 +109,7 @@ Set-Cookie: ...
 
 Here, we get the response from the server with cookies and tokens that allows us to proceed with the sign-in operation. One thing to note is that compared to our pre-flight, we now also have an additional `Access-Control-Expose-Headers` header.
 
-- `Access-Control-Expose-Headers` - The server indicating which response headers are available to scripts running in the browser.
+- `Access-Control-Expose-Headers` - The server indicating which response headers are available for the scripts running in the browser. Interestingly, the reason this exists is not because of security, but because of backward compatibility to when CORS did not exist.
 
 With this, we've now completed our first pre-flight request/response as well as our actual request/response for signing in!
 
