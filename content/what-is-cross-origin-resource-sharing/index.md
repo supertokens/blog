@@ -59,7 +59,7 @@ So that's our pre-flight request. Breaking this down, we have four key things to
 -   `Host` - The "host" of the resource that we're requesting. For us, that's `api-emailpassword.demo.supertokens.com`
 -   `Access-Control-Request-Method` - The method of the request being made by our operation. This can be any of the HTTP request methods, including `GET`, `POST`, `PUT`, `DELETE`, and `CONNECT`.
 -   `Access-Control-Request-Headers` - A comma-separated list of [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) that would be used in the actual request.
--   `Origin` - Where the request is coming from. For us, that's our previous domain - `emailpassword.demo.supertokens.com`
+-   `Origin` - Where the request is coming from. For us, that's `https://emailpassword.demo.supertokens.com`
 
 After getting this pre-flight / `OPTIONS` request, the API server sends over a pre-flight response. Here's our response from `api-emailpassword.demo.supertokens.com`.
 
