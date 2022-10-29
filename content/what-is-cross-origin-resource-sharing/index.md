@@ -94,7 +94,7 @@ Content-Length: 92
 Origin: https://emailpassword.demo.supertokens.com/
 ```
 
-Note that this request includes both the `Host` and `Origin` headers. In addition, we see the content-type header show up in the request (near the end of the `Host` request line). Looking back to the pre-flight response, we can see that content-type is one of the allowed headers.
+Note that the origin and the headers that are sent (`fdi-version`, `rid`, `content-type`), are whitelisted by the server, and the browser knows this because of the pre-flight response.
 
 Now let's take a look at the response from the server.
 
