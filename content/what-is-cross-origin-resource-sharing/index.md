@@ -141,7 +141,7 @@ The best approach here to avoid potential abuse is to explicitly define origins 
 
 **Requests with null origin**
 
-Another common misconfiguration is whitelisting origins with the value null. Browsers might send the value null in the origin header in situations such as:
+Another misconfiguration is whitelisting origins with the value null. Browsers might send the value null in the origin header in situations such as:
 
 -   Request with file:
 -   Sandboxed cross-origin requests
