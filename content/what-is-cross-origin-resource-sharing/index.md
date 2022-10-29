@@ -42,7 +42,7 @@ However, sometimes, we still need to access resources from other origins - such 
 
 So now, let's get into the actual motion of what happens when requesting resources from another domain.
 
-We've set up an example website at `emailpassword.demo.supertokens.com` where we can see the full CORS motion. This website calls an API on `api-emailpassword.demo.supertokens.com`. Even though both domains are subdomains of `demo.supertokens.com`, our browsers register them as different origins. And thus, CORS comes into the picture. If we had two websites like `example.com` and `fonts.com`, our browser will also register them as different origins. 
+We've set up an example website at [emailpassword.demo.supertokens.com](https://emailpassword.demo.supertokens.com) where we can see the full CORS motion. This website calls an API on `https://api-emailpassword.demo.supertokens.com`. Even though both domains are subdomains of `demo.supertokens.com`, our browsers register them as different origins, and thus, CORS comes into the picture.
 
 During sign in, if you open the browser's dev tools and see the network tab, you will see the preflight request being made. More specifically, the preflight request is an `OPTIONS` request made to our API domain with a couple of headers. Let's take a look at what happens when we click sign in -
 
