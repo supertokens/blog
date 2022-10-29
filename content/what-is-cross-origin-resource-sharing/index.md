@@ -161,6 +161,6 @@ req.send();
 
 ## Conclusion
 
-We hope this article helps you understand the basic tenets behind CORS as well as some common pitfalls when implementing CORS. Happy hacking. 
+We hope this article helps you understand the basic tenets behind CORS as well as some common pitfalls when implementing CORS. 
 
 SuperTokens is building open-source user authentication. We help companies manage authentication nuances, including handling CORS when calling an authentication server. If you encounter CORS related issues when implementing SuperTokens, [head over to our docs](https://supertokens.com/docs/thirdpartyemailpassword/troubleshooting/cors-issues) to debug common issues or ask us directly on our Discord!
