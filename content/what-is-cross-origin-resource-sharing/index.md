@@ -135,7 +135,7 @@ Let's say that we grant access to all websites with the prefix `whitelisted-webs
 
 But a malicious actor might come around and use the origin - `whitelisted-website.com.malicious.com` and bypass our security measures.
 
-Another approach that we could use is to grant all websites with the suffix `whitelisted-website.com`. This makes it easy for us to grant access to `api.whitelisted-website.com`.
+Another approach that we could use is to grant all websites with the suffix `whitelisted-website.com`. This makes it easy for us to grant access to `user1.whitelisted-website.com`.
 
 But an attacker could use a website such as `maliciouswhitelisted-website.com` and gain access.
 
