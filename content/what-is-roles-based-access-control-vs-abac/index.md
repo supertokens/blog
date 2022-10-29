@@ -54,7 +54,7 @@ if (permissions.contains("edit:self")) {
 }  
 ```  
 
-Even thought our user has both the `admin` and `regular-user` roles, they will not be able to edit all the blogs because the `edit:self` statement is executed first while the `edit:all` rule get skipped in the following else-if statement.
+Even though our user has both the `admin` and `regular-user` roles, they will not be able to edit all the blogs because the `edit:self` statement is executed first while the `edit:all` rule get skipped in the following else-if statement.
 
 ## Implementing RBAC
 
