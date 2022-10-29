@@ -47,9 +47,9 @@ We've set up an example website at [emailpassword.demo.supertokens.com](https://
 During sign in, if you open the browser's dev tools and see the network tab, you will see the preflight request being made. More specifically, the preflight request is an `OPTIONS` request made to our API domain with a couple of headers. Let's take a look at what happens when we click sign in -
 
 ```
-OPTIONS /auth/user/email/verify HTTP/1.1
-Host: http://api-emailpassword.demo.supertokens.com
-Access-Control-Request-Method: GET
+OPTIONS /auth/signin HTTP/1.1
+Host: api-emailpassword.demo.supertokens.com
+Access-Control-Request-Method: POST
 Access-Control-Request-Headers: content-type,fdi-version,rid
 Origin: https://emailpassword.demo.supertokens.com
 ```
@@ -129,26 +129,22 @@ When configured improperly, CORS can lead to major vulnerabilities. Below, we'll
 
 ### Mishandling origin whitelist
 
-One of the easiest mistakes to make when implementing CORS is mishandling the origin whitelist. When whitelisting origins, it's often easy to do simple matches with URL prefixes or suffixes, or using regular expressions. However this can lead to quite a few issues. Let's look at some examples below.
+One of the easiest mistakes to make when implementing CORS is mishandling the origin whitelist. When whitelisting origins, it's often easy to do simple matches with URL prefixes or suffixes, or using regular expressions. However, this can lead to quite a few issues. 
 
-Let's say that we grant access to all websites with the prefix `whitelisted-website.com`. This helps us grant access to origins such as `whitelisted-website.com/blog` or `whitelisted-website.com/login`.
-
-But a malicious actor might come around and use the origin - `whitelisted-website.com.malicious.com` and bypass our security measures.
-
-Another approach that we could use is to grant all websites with the suffix `whitelisted-website.com`. This makes it easy for us to grant access to `user1.whitelisted-website.com`.
+Let's say that we grant access to all websites with the suffix `whitelisted-website.com`. This makes it easy for us to grant access to `api.whitelisted-website.com`.
 
 But an attacker could use a website such as `maliciouswhitelisted-website.com` and gain access.
 
-The best approach here to avoid potential abuse is to explicitly define origins on the whitelist for sensitive operations when implementing CORS - for example, specify the string `https://whitelisted-website.com` which will grant access to all paths on that domain.
+The best approach here to avoid potential abuse is to explicitly define origins on the whitelist for sensitive operations when implementing CORS - for example, specify the string `"https://whitelisted-website.com"` which will grant access to only that domain.
 
 ### Requests with null origin
 
-Another misconfiguration is whitelisting origins with the value null. Browsers might send the value null in the origin header in situations such as:
+Another common misconfiguration is whitelisting origins with the value `null`. Browsers might send the value `null` in the origin header in situations such as:
 
--   Request with file:
+-   Request with file
 -   Sandboxed cross-origin requests
 
-In this case, an attacker can use various tricks to generate a request containing the value `null` as the origin which is whitelisted in our configurations. For example, the attacker could use the following sandboxed `iframe` exploit -
+In this case, an attacker can use various tricks to generate a request containing the value `null` as the origin which is whitelisted in our configurations. For example, the attacker could use the following sandboxed iframe exploit -
 
 ```html
 <iframe src="data:text/html" sandbox="allow-scripts allow-top-navigation allow-forms allow-same-origin">
