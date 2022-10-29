@@ -141,7 +141,7 @@ But an attacker could use a website such as `maliciouswhitelisted-website.com` a
 
 The best approach here to avoid potential abuse is to explicitly define origins on the whitelist for sensitive operations when implementing CORS - for example, specify the string `https://whitelisted-website.com` which will grant access to all paths on that domain.
 
-**Requests with null origin**
+### Requests with null origin
 
 Another misconfiguration is whitelisting origins with the value null. Browsers might send the value null in the origin header in situations such as:
 
