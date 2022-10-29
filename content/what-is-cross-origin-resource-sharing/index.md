@@ -73,7 +73,7 @@ Access-Control-Allow-Headers: content-type,rid,fdi-version,anti-csrf
 
 Let's break this response down.
 
--   `Access-Control-Allow-Origin` - The origins that the API server has whitelisted
+-   `Access-Control-Allow-Origin` - The origins that the API server has whitelisted. Notice that the value of this is the same as our website domain. This tells the browser that the server expects requests from this client.
 -   `Access-Control-Allow-Credentials` - The server telling us whether the actual request can include cookies in it, or that the response of the actual request can set-cookies. In our case, cookies refer to the session tokens of the user, which act as the credentials of the user once they're signed in.
 -   `Access-Control-Allow-Methods` - A comma-separated list of HTTP methods that the API domain allows for cross-origin requests
 -   `Access-Control-Allow-Headers` - A comma-separated list of HTTP headers that the API domain allows for cross-origin requests
