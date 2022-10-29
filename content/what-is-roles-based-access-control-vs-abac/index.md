@@ -4,7 +4,7 @@ date: "2022-10-20"
 description: "Learn about RBAC and advantages + disadvantages compared to ABAC."
 cover: "what-is-rbac-cover.png"
 category: "programming"
-author: "SuperTokens Team"
+author: "Rishabh Poddar, CTO"
 ---
 
 
