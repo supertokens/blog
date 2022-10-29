@@ -36,7 +36,7 @@ Same origin policy is essentially what the name suggests - resources can only be
 
 From a technical perspective, an origin can still request a resource from another origin, but the browser prevents the response from being readable.
 
-However, sometimes, we still need to access resources from other origins - such as from fonts.com. That's where CORS comes in. CORS relaxes the Same Origin Policy by defining trusted or allowed origins, methods, and headers.
+However, sometimes, we still need to access resources from other origins - such as from `fonts.com`. That's where CORS comes in. CORS relaxes the Same Origin Policy by defining trusted or allowed origins, methods, and headers.
 
 ## CORS preflight request
 
@@ -56,12 +56,12 @@ Origin: https://emailpassword.demo.supertokens.com
 
 So that's our pre-flight request. Breaking this down, we have four key things to look at.
 
--   Host - The "host" of the resource that we're requesting. For us, that's `api-emailpassword.demo.supertokens.com`
--   Access-Control-Request-Method - The method of the request being made by our operation. This can be any of the HTTP request methods, including `GET`, `POST`, `PUT`, `DELETE`, and `CONNECT`.
--   Access-Control-Request-Headers - A comma-separated list of [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) that would be used in the actual request.
--   Origin - Where the request is coming from. For us, that's our previous domain - `emailpassword.demo.supertokens.com`
+-   `Host` - The "host" of the resource that we're requesting. For us, that's `api-emailpassword.demo.supertokens.com`
+-   `Access-Control-Request-Method` - The method of the request being made by our operation. This can be any of the HTTP request methods, including `GET`, `POST`, `PUT`, `DELETE`, and `CONNECT`.
+-   `Access-Control-Request-Headers` - A comma-separated list of [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) that would be used in the actual request.
+-   `Origin` - Where the request is coming from. For us, that's our previous domain - `emailpassword.demo.supertokens.com`
 
-After getting this pre-flight / OPTIONS request, the API server sends over a pre-flight response. Here's our response from `api-emailpassword.demo.supertokens.com`.
+After getting this pre-flight / `OPTIONS` request, the API server sends over a pre-flight response. Here's our response from `api-emailpassword.demo.supertokens.com`.
 
 ```
 HTTP/1.1 204 No Content
@@ -73,10 +73,10 @@ Access-Control-Allow-Headers: content-type,rid,fdi-version,anti-csrf
 
 Let's break this response down.
 
--   Access-Control-Allow-Origin - The origins that the API server has whitelisted
--   Access-Control-Allow-Credentials - The server telling us whether the actual request can include cookies in it, or that the response of the actual request can set-cookies. In our case, cookies refer to the session tokens of the user, which act as the credentials of the user once they're signed in.
--   Access-Control-Allow-Methods - A comma-separated list of HTTP methods that the API domain allows for cross-origin requests
--   Access-Control-Allow-Headers - A comma-separated list of HTTP headers that the API domain allows for cross-origin requests
+-   `Access-Control-Allow-Origin` - The origins that the API server has whitelisted
+-   `Access-Control-Allow-Credentials` - The server telling us whether the actual request can include cookies in it, or that the response of the actual request can set-cookies. In our case, cookies refer to the session tokens of the user, which act as the credentials of the user once they're signed in.
+-   `Access-Control-Allow-Methods` - A comma-separated list of HTTP methods that the API domain allows for cross-origin requests
+-   `Access-Control-Allow-Headers` - A comma-separated list of HTTP headers that the API domain allows for cross-origin requests
 
 The browser then takes this response from the API server to determine if the actual request should be sent. If the response from the API doesn't include the requested origin, methods, or headers from the preflight request, then the browser will not send the actual request.
 
@@ -105,9 +105,9 @@ Access-Control-Expose-Headers: front-token, id-refresh-token
 Set-Cookie: ...
 ```
 
-Here, we get the response from the server with cookies and tokens that allows us to proceed with the sign-in operation. One thing to note is that compared to our pre-flight, we now also have an additional Access-Control-Expose-Headers header.
+Here, we get the response from the server with cookies and tokens that allows us to proceed with the sign-in operation. One thing to note is that compared to our pre-flight, we now also have an additional `Access-Control-Expose-Headers` header.
 
-- Access-Control-Expose-Headers - The server indicating which response headers are available to scripts running in the browser.
+- `Access-Control-Expose-Headers` - The server indicating which response headers are available to scripts running in the browser.
 
 With this, we've now completed our first pre-flight request/response as well as our actual request/response for signing in!
 
@@ -117,7 +117,7 @@ One common mistake in configuring CORS is around the use of wildcards. Often, de
 
 While wildcards will work for simple requests (requests without [HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) or HTTP authentication information), requests with credentials will often encounter a CORS not authorized error.
 
-That's because in requests with credentials (cookies), the wildcard is treated as the literal method name or origin name "*" without special semantics. This occurs both in access-control-allow-origin and access-control-allow-methods. And some browsers like Safari simply don't have support for wildcards at all, simple request or not.
+That's because in requests with credentials (cookies), the wildcard is treated as the literal method name or origin name "*" without special semantics. This occurs both in `Access-Control-Allow-Origin` and `Access-Control-Allow-Methods`. And some browsers like Safari simply don't have support for wildcards at all, simple request or not.
 
 All in all, it's good hygiene to avoid the wildcard and use a comma-separated list when configuring CORS.
 
