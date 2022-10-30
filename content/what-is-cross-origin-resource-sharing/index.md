@@ -20,7 +20,7 @@ author: "SuperTokens team"
 ## Introduction 
 Cross-Origin Resource Sharing (CORS) is a mechanism that supports secure requests and data transfers from outside origins (domain, scheme, or port).
 
-For example, `example.com` uses a text font that's hosted on `fonts.com`. When visiting `example.com`, the user's browser will make a request for the font from `fonts.com`. If `fonts.com` allows cross-origin resource sharing to `example.com`, then the browser will proceed with loading the font. Otherwise, the browser will cancel the request.
+For example, `example.com` uses a text font that's hosted on `fonts.com`. When visiting `example.com`, the user's browser will make a request for the font from `fonts.com`. Because `fonts.com` and `example.com` are two different origins, this is a cross-origin request. If `fonts.com` allows cross-origin resource sharing to `example.com`, then the browser will proceed with loading the font. Otherwise, the browser will cancel the request.
 
 More concretely, CORS is a way for web servers to say "Accept cross-origin requests from this origin" or "Do not accept cross-origin requests from this origin".
 
