@@ -135,7 +135,7 @@ Let's say that we grant access to all websites with the suffix `whitelisted-webs
 
 But an attacker could use a website such as `maliciouswhitelisted-website.com` and gain access.
 
-The best approach here to avoid potential abuse is to explicitly define origins on the whitelist for sensitive operations when implementing CORS - for example, specify the string `"https://whitelisted-website.com"` which will grant access to only that domain.
+The best approach here to avoid potential abuse is to explicitly define origins on the whitelist for sensitive operations when implementing CORS - for example, specify the strings `"https://whitelisted-website.com"` and `"https://api.whitelisted-website.com"` which will grant access to only these domains.
 
 ### Requests with null origin
 
