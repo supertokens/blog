@@ -4,7 +4,7 @@ description: "With user roles, you can now use SuperTokens to easily attach a di
 date: "2022-10-27"
 cover: "user_roles_cover.png"
 category: "featured"
-author: "Advait Ruia, CEO"
+author: "SuperTokens team"
 ---
 
 ### Table of Contents
