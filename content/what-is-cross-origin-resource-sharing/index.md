@@ -3,7 +3,7 @@ title: "What is Cross Origin Resource Sharing (CORS)?"
 description: "Cross-Origin Resource Sharing (CORS) is a mechanism that supports secure requests and data transfers from outside origins (domain, scheme, or port)."
 date: "2022-10-27"
 cover: "cors-cover.png"
-category: "featured"
+category: "programming"
 author: "SuperTokens team"
 ---
 
