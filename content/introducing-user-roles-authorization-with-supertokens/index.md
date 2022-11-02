@@ -3,7 +3,7 @@ title: "Introducing User Roles Authorization with SuperTokens"
 description: "With user roles, you can now use SuperTokens to easily attach a different set of permissions to each user."
 date: "2022-10-27"
 cover: "user_roles_cover.png"
-category: "featured"
+category: "programming"
 author: "SuperTokens team"
 ---
 
