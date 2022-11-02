@@ -63,7 +63,7 @@ These are known as permissions. In a grid form, the roles and permissions for ou
 
 The `edit:all` permission implies `edit:self` as well. Same goes for the `delete` permission.
 
-To learn more about RBAC, check out our [blog post going in depth on RBAC](http://supertokens.com/blog/roles-based-access-control-with-supertokens).
+To learn more about RBAC, check out our [blog post going in depth on RBAC](http://supertokens.com/blog/what-is-roles-based-access-control-vs-abac).
 
 ### User Roles and SuperTokens
 
@@ -82,7 +82,7 @@ Today, you can create new roles and permissions, assign them to users, and prote
 
 ### Enabling user roles with SuperTokens
 
-We've built user roles based on the principles of [RBAC](http://supertokens.com/blog/roles-based-access-control-with-supertokens).
+We've built user roles based on the principles of [RBAC](http://supertokens.com/blog/what-is-roles-based-access-control-vs-abac).
 
 Let's use our previous example again. A quick reminder -
 - we have a `regular-user` role which will allow users to read all blog posts, but only edit or delete posts created by them.
