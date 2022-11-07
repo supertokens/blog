@@ -4,7 +4,7 @@
         "metaTags": [
             "<meta name=\"description\" content=\"Learn about RBAC and advantages + disadvantages compared to ABAC.\" />",
             "",
-            "<meta name=\"keywords\" content=\"What is RBAC, user roles, user management, authentication />",
+            "<meta name=\"keywords\" content=\"What is RBAC, user roles, user management, authentication\" />",
             "<!--OG Tags-->",
             "<meta property=\"og:title\" content=\"What is Roles-Based Access Control (RBAC)?\" />",
             "<meta property=\"og:type\" content=\"article\" />",
