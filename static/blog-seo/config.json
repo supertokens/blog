@@ -1,0 +1,25 @@
+[
+    {
+        "path": "/blog/what-is-roles-based-access-control-vs-abac",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn about RBAC and advantages + disadvantages compared to ABAC.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"What is RBAC, user roles, user management, authentication\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What is Roles-Based Access Control (RBAC)?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/what-is-roles-based-access-control-vs-abac\" />",
+            "<meta property=\"og:description\" content=\"Learn about RBAC and advantages + disadvantages compared to ABAC.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/static/assets/meta_images/blog/rbacvsabac.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"What is Roles-Based Access Control (RBAC)??\" />",
+            "<meta name=\"twitter:description\" content=\"Learn about RBAC and advantages + disadvantages compared to ABAC.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-is-roles-based-access-control-vs-abac\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/static/assets/meta_images/blog/rbacvsabac.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "What is Roles-Based Access Control (RBAC)?",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-roles-based-access-control-vs-abac\"},\"headline\":\"What is Roles-Based Access Control (RBAC)?\",\"description\":\"Learn about RBAC and advantages + disadvantages compared to ABAC.\",\"image\":\"https://supertokens.com/static/assets/meta_images/blog/rbacvsabac.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }
+]
