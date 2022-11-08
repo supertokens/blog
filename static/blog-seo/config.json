@@ -69,7 +69,7 @@
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/okta-pricing-the-complete-guide\"},\"headline\":\"Okta Pricing: The Complete Guide [2022]\",\"description\":\"An in depth guide covering Okta's pricing model.\",\"image\":\"https://supertokens.com/blog-meta-images/okta-pricing.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     },
     {
-        "path": "/blog/Auth0-pricing-the-complete-guide",
+        "path": "/blog/auth0-pricing-the-complete-guide",
         "metaTags": [
             "<meta name=\"description\" content=\"An in depth guide covering Auth0's pricing model.\" />",
             "",
