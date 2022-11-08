@@ -1,7 +1,7 @@
 ---
 title: "Auth0 Pricing: The Complete Guide [2022]"
 description: "An in depth guide covering Auth0's pricing model"
-date: "2022-11-01"
+date: "2022-11-08"
 cover: "auth0-pricing-the-complete-guide.png"
 category: "featured"
 author: "SuperTokens team"
