@@ -143,7 +143,7 @@
 /* blog post sign up banner */
 .blog-post-sign-up-banner {
   width: 680px;
-  background: linear-gradient(to bottom, #ff8a15, #f93, #ff8815);
+  background: linear-gradient(180deg, #363636 0%, #1A1A1A 51.36%, #171717 100%);
   padding: 36px 65px 44px;
   position: relative;
   border-radius: 15px;
@@ -160,7 +160,6 @@
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
-  opacity: .5;
   z-index: 0;
   pointer-events: none;
 }
@@ -176,22 +175,27 @@
 
 .sign-up-banner-content-title {
   color: #ffffff;
-  font-family: 'Rubik';
+  font-family: 'Inter';
   text-decoration: none;
   border-bottom: none;
   padding: 0px;
-  margin: 0px 0px 28px;
+  margin-bottom: 12px;
   font-size: 35px;
-  line-height: 41px;
-  font-weight: bold;
+  line-height: 42px;
+  font-weight: 700;
+}
+
+.sign-up-banner-content-title-highlight {
+  color: #FF9933;
 }
 
 .sign-up-banner-content-paragraph {
-  font-family: 'Rubik';
+  font-family: 'Inter';
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 30px;
   margin-bottom: 28px;
+  font-weight: 400;
 }
 
 .sign-up-banner-buttons-container {

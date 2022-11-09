@@ -15,7 +15,7 @@ const BlogPostFooter = ({ idSlug }) => {
         />
 
         <div className="sign-up-banner-content">
-          <p className="sign-up-banner-content-title">Get started for free</p>
+          <p className="sign-up-banner-content-title">Get started for <span className="sign-up-banner-content-title-highlight">free</span></p>
           <p className="sign-up-banner-content-paragraph">SuperTokens' free plan lets you go live and start signing up users (no credit card required)</p>
           <div className="sign-up-banner-buttons-container">
             <a
