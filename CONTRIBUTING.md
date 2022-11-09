@@ -59,6 +59,44 @@ Following are some examples-
 ![Alt text for the image](./flow.png)
 ```
 
+#### SEO for blogs
+
+##### Adding OG images
+
+Images that are meant to be used as the source for `og:image`, `twitter:image` etc should be added to the `/static/blog-meta-images` folder. Then when setting the URL in meta tags you can use `https://supertokens.com/blog-meta-images/<IMAGE_NAME>`
+
+##### Meta Tags
+
+Meta tags for blog images are picked up from `/static/blog-seo/config.json`, for each blog you add an item to the array following the format
+
+```json
+{
+    "path": "/blog/<SLUG>",
+    "metaTags": [
+        "<meta name=\"description\" content=\"<TODO>\" />",
+        "",
+        "<meta name=\"keywords\" content=\"<TODO>\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"<TODO>\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/<SLUG>\" />",
+        "<meta property=\"og:description\" content=\"<TODO>\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/<IMAGE_NAME>.ext\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"<TODO>\" />",
+        "<meta name=\"twitter:description\" content=\"<TODO>\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/<SLUG>\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/<IMAGE_NAME>.ext\" /> ",
+        "<!--OG Tags-->"
+    ],
+    "title": "<TODO>",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/<SLUG>\"},\"headline\":\"<TODO>\",\"description\":\"<TODO>\",\"image\":\"https://supertokens.com/blog-meta-images/<IMAGE_NAME>.ext\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+```
+
+Then after the blog is published these meta tags will be used (on both the test and production site)
+
 ## Viewing the blogs
 You can view the blog landing page by visiting `http://localhost:8000/blog`. All the posts placed inside the `content` directory are visible here, as well as all the posts details that are added in the `src/blog-details.js`'s `webflowBlogList` array.
 
