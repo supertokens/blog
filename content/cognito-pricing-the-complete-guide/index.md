@@ -16,11 +16,11 @@ author: "SuperTokens team"
 
 ## What is AWS Cognito?
 
-Cognito is a service that provides authentication, authorization, and user management for web and mobile apps. It is part of the AWS suite of products and can be used easily with any of their other offerings such as Lambda.
+AWS Cognito is a service that provides authentication, authorization, and user management for web and mobile apps. It’s part of the AWS suite of products and can be used easily with their other offerings such as AWS Lambdas.
 
 ## AWS Cognito Pricing
 
-Cognito’s free tier offers up to **50,000 MAUs** for free. Included are the Identity pool features which cover access control and RBAC.
+Cognito’s free tier supports up to **50,000 MAUs**. Included are the Identity pool features which cover access control through RBAC.
 
 #### Free:
 - User pools free for up to **50000 MAUs**
