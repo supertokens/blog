@@ -83,7 +83,7 @@ You can find a complete guide to Auth0’s pricing [here](https://supertokens.co
 ### What is SuperTokens?
 SuperTokens is an open-source authentication solution that provides a managed service for hassle-free auth and an on-prem solution so developers can manage their data.
 
-## SuperTokens Pricing:
+### SuperTokens Pricing:
 At the time of writing this article, the SuperTokens feature set is completely free. If you decide to use the self-hosted version you can download the core and set up authentication for free for an unlimited number of users.
 
 ![SuperTokens pricing](./supertokens_pricing.png)
