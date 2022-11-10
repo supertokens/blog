@@ -263,9 +263,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .blog-post-sign-up-banner {
+  .sign-up-banner-content-border {
     width: 100%;
-    padding: 36px 18px;
+  }
+
+  .blog-post-sign-up-banner {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   .sign-up-banner-buttons-container {
