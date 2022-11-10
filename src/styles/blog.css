@@ -141,14 +141,24 @@
 }
 
 /* blog post sign up banner */
-.blog-post-sign-up-banner {
+.sign-up-banner-content-border {
+  padding: 2px;
   width: 680px;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #FF9933 0%, #CF4B00 100%);
+  margin: 32px auto;
+}
+
+.blog-post-sign-up-banner {
+  width: 100%;
   background: linear-gradient(180deg, #363636 0%, #1A1A1A 51.36%, #171717 100%);
-  padding: 36px 65px 44px;
+  padding-left: 56px;
+  padding-right: 56px;
+  padding-top: 24px;
+  padding-bottom: 40px;
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  margin: 32px auto;
 }
 
 .sign-up-banner-backdrop {
@@ -179,10 +189,11 @@
   text-decoration: none;
   border-bottom: none;
   padding: 0px;
-  margin-bottom: 12px;
-  font-size: 35px;
-  line-height: 42px;
+  margin-bottom: 16px;
+  font-size: 32px;
+  line-height: 38px;
   font-weight: 700;
+  text-align: center;
 }
 
 .sign-up-banner-content-title-highlight {
@@ -194,7 +205,8 @@
   text-align: center;
   font-size: 20px;
   line-height: 30px;
-  margin-bottom: 28px;
+  margin-bottom: 40px;
+  font-style: normal;
   font-weight: 400;
 }
 
@@ -203,22 +215,32 @@
   align-items: center;
 }
 
+.sign-up-banner-button-outer-container {
+  padding: 4px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .sign-up-banner-buttons-container a {
-  height: 44px;
-  width: 180px;
+  height: 48px;
+  width: 184px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Rubik';
+  font-family: 'Inter';
 }
 
 .sign-up-banner-content-cta {
   background-color: #ffffff;
-  color: #f93;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, .16);
-  font-size: 16px;
-  line-height: 28px;
-  border-radius: 8px;
+  color: #191919;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 6px;
   font-weight: 500;
   transition: background-color .15s;
 }
@@ -228,16 +250,16 @@
   background-color: #E6E6E6;
 }
 
-.sign-up-banner-content-discord-button {
-  margin-left: 28px;
-  padding: 11px 48px;
-  border: 1px solid #ffffff;
-  border-radius: 6px;
+.sign-up-banner-top-icon-container {
+  height: 57px;
+  width: 51px;
+  margin-bottom: 18px;
 }
 
-.sign-up-banner-content-discord-button img {
-  width: 82px;
-  height: 22px;
+.sign-up-banner-top-icon {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
@@ -252,10 +274,5 @@
 
   .sign-up-banner-content-title {
     text-align: center;
-  }
-
-  .sign-up-banner-content-discord-button {
-    margin-left: 0px;
-    margin-top: 18px;
   }
 }
