@@ -198,6 +198,7 @@
 
 .sign-up-banner-content-title-highlight {
   color: #FF9933;
+  white-space: nowrap;
 }
 
 .sign-up-banner-content-paragraph {
