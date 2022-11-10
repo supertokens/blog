@@ -2,6 +2,7 @@
 
 /* Rubik font */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
   --gatsbyMaxWidth-none: "none";
@@ -30,10 +31,10 @@
   --gatsbySpacing-20: 5rem;
   --gatsbySpacing-24: 6rem;
   --gatsbySpacing-32: 8rem;
-  --gatsbyFontFamily-sans: "Noto Serif", "Rubik", Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
+  --gatsbyFontFamily-sans: "Noto Serif", "Inter", "Rubik", Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --gatsbyFontFamily-serif: "Noto Serif", "Rubik", "Merriweather", "Georgia", Cambria, "Times New Roman",
+  --gatsbyFontFamily-serif: "Noto Serif", "Inter", "Rubik", "Merriweather", "Georgia", Cambria, "Times New Roman",
     Times, serif;
   --gatsbyFont-body: var(--gatsbyFontFamily-serif);
   --gatsbyFont-heading: var(--gatsbyFontFamily-sans);

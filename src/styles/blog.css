@@ -141,26 +141,35 @@
 }
 
 /* blog post sign up banner */
-.blog-post-sign-up-banner {
+.sign-up-banner-content-border {
+  padding: 2px;
   width: 680px;
-  background: linear-gradient(to bottom, #ff8a15, #f93, #ff8815);
-  padding: 36px 65px 44px;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #FF9933 0%, #CF4B00 100%);
+  margin: 32px auto;
+}
+
+.blog-post-sign-up-banner {
+  width: 100%;
+  background: linear-gradient(180deg, #363636 0%, #1A1A1A 51.36%, #171717 100%);
+  padding-left: 127px;
+  padding-right: 127px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  margin: 32px auto;
 }
 
 .sign-up-banner-backdrop {
   position: absolute;
   right: 0;
   top: 50%;
-  width: 132px;
-  height: 241px;
+  width: 98px;
+  height: 179px;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
-  opacity: .5;
   z-index: 0;
   pointer-events: none;
 }
@@ -176,22 +185,30 @@
 
 .sign-up-banner-content-title {
   color: #ffffff;
-  font-family: 'Rubik';
+  font-family: 'Inter';
   text-decoration: none;
   border-bottom: none;
   padding: 0px;
-  margin: 0px 0px 28px;
-  font-size: 35px;
-  line-height: 41px;
-  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.sign-up-banner-content-title-highlight {
+  color: #FF9933;
+  white-space: nowrap;
 }
 
 .sign-up-banner-content-paragraph {
-  font-family: 'Rubik';
+  font-family: 'Inter';
   text-align: center;
-  font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 28px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 32px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .sign-up-banner-buttons-container {
@@ -199,22 +216,31 @@
   align-items: center;
 }
 
+.sign-up-banner-button-outer-container {
+  padding: 4px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .sign-up-banner-buttons-container a {
-  height: 44px;
-  width: 180px;
+  height: 36px;
+  width: 134px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Rubik';
+  font-family: 'Inter';
 }
 
 .sign-up-banner-content-cta {
   background-color: #ffffff;
-  color: #f93;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, .16);
+  color: #191919;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
   font-size: 16px;
-  line-height: 28px;
-  border-radius: 8px;
+  border-radius: 6px;
   font-weight: 500;
   transition: background-color .15s;
 }
@@ -224,22 +250,26 @@
   background-color: #E6E6E6;
 }
 
-.sign-up-banner-content-discord-button {
-  margin-left: 28px;
-  padding: 11px 48px;
-  border: 1px solid #ffffff;
-  border-radius: 6px;
+.sign-up-banner-top-icon-container {
+  height: 39px;
+  width: 35px;
+  margin-bottom: 24px;
 }
 
-.sign-up-banner-content-discord-button img {
-  width: 82px;
-  height: 22px;
+.sign-up-banner-top-icon {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
-  .blog-post-sign-up-banner {
+  .sign-up-banner-content-border {
     width: 100%;
-    padding: 36px 18px;
+  }
+
+  .blog-post-sign-up-banner {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .sign-up-banner-buttons-container {
@@ -250,8 +280,14 @@
     text-align: center;
   }
 
-  .sign-up-banner-content-discord-button {
-    margin-left: 0px;
-    margin-top: 18px;
+  .sign-up-banner-content-paragraph {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+  
+  .sign-up-banner-backdrop {
+    -webkit-transform: translateY(-20%);
+    -moz-transform: translateY(-20%);
+    transform: translateY(-20%);
   }
 }

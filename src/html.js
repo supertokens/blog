@@ -17,6 +17,7 @@ export default function HTML(props) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&amp;display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></link>
         <link href="/static/webflow/home/css/normalize.css" rel="stylesheet" type="text/css" />
         <link href="/static/webflow/home/css/webflow.css" rel="stylesheet" type="text/css" />
         <link href="/static/cookieconsent.min.css" rel="stylesheet" type="text/css" />
