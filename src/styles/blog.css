@@ -152,10 +152,10 @@
 .blog-post-sign-up-banner {
   width: 100%;
   background: linear-gradient(180deg, #363636 0%, #1A1A1A 51.36%, #171717 100%);
-  padding-left: 56px;
-  padding-right: 56px;
-  padding-top: 24px;
-  padding-bottom: 40px;
+  padding-left: 127px;
+  padding-right: 127px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   position: relative;
   border-radius: 15px;
   overflow: hidden;
@@ -165,8 +165,8 @@
   position: absolute;
   right: 0;
   top: 50%;
-  width: 132px;
-  height: 241px;
+  width: 98px;
+  height: 179px;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -189,9 +189,9 @@
   text-decoration: none;
   border-bottom: none;
   padding: 0px;
-  margin-bottom: 16px;
-  font-size: 32px;
-  line-height: 38px;
+  margin-bottom: 8px;
+  font-size: 24px;
+  line-height: 28px;
   font-weight: 700;
   text-align: center;
 }
@@ -204,9 +204,9 @@
 .sign-up-banner-content-paragraph {
   font-family: 'Inter';
   text-align: center;
-  font-size: 20px;
-  line-height: 30px;
-  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 32px;
   font-style: normal;
   font-weight: 400;
 }
@@ -223,8 +223,8 @@
 }
 
 .sign-up-banner-buttons-container a {
-  height: 48px;
-  width: 184px;
+  height: 36px;
+  width: 134px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -239,8 +239,7 @@
   -webkit-box-sizing: border-box;
   border: 2px solid #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 16px;
   border-radius: 6px;
   font-weight: 500;
   transition: background-color .15s;
@@ -252,9 +251,9 @@
 }
 
 .sign-up-banner-top-icon-container {
-  height: 57px;
-  width: 51px;
-  margin-bottom: 18px;
+  height: 39px;
+  width: 35px;
+  margin-bottom: 24px;
 }
 
 .sign-up-banner-top-icon {
@@ -269,8 +268,8 @@
   }
 
   .blog-post-sign-up-banner {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .sign-up-banner-buttons-container {
@@ -279,5 +278,16 @@
 
   .sign-up-banner-content-title {
     text-align: center;
+  }
+
+  .sign-up-banner-content-paragraph {
+    margin-right: 28px;
+    margin-left: 28px;
+  }
+  
+  .sign-up-banner-backdrop {
+    -webkit-transform: translateY(-20%);
+    -moz-transform: translateY(-20%);
+    transform: translateY(-20%);
   }
 }
