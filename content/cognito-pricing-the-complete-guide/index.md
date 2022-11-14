@@ -1,7 +1,7 @@
 ---
 title: "AWS Cognito Pricing: The Complete Guide [2022]"
 description: "An in depth guide covering AWS Cognito's pricing model"
-date: "2022-11-08"
+date: "2022-11-15"
 cover: "cognito-pricing-the-complete-guide.png"
 category: "featured"
 author: "SuperTokens team"

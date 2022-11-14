@@ -1,7 +1,7 @@
 ---
 title: "Okta Pricing: The Complete Guide [2022]"
 description: "An in depth guide covering Okta's pricing model"
-date: "2022-11-08"
+date: "2022-11-15"
 cover: "okta-pricing-the-complete-guide.png"
 category: "featured"
 author: "SuperTokens team"
