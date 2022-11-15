@@ -74,7 +74,7 @@ You can find a full list of the products they offer [here](https://www.okta.com/
 ### Customer Identity Products
 Customer Identity products are aimed at organizations that want to manage and protect external identities like customers and partners.
 
-Post Auth0 acquisition, Okta deprecated their own line of customer identity products and now serves Auth0’s Post the Auth0 acquisition, Okta deprecated its own line of customer identity products and now serves Auth0’s products as its default customer identity solution.
+Okta deprecated its own line of customer identity products and now serves Auth0’s products as its default customer identity solution.
 
 You can find a complete guide to Auth0’s pricing [here](https://supertokens.com/blog/auth0-pricing-the-complete-guide).
 
