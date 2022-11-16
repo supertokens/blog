@@ -16,7 +16,7 @@ author: "SuperTokens team"
 
 ## What is AWS Cognito?
 
-AWS Cognito is a service that provides authentication, authorization, and user management for web and mobile apps. It’s part of the AWS suite of products and can be used easily with their other offerings such as AWS Lambdas.
+AWS Cognito is a service that provides authentication, authorization, and user management for web and mobile apps. It’s part of the AWS suite of products and can be used easily with their other offerings such as AWS Lambda.
 
 ## AWS Cognito Pricing
 
