@@ -13,7 +13,7 @@
             "<meta property=\"og:image\" content=\"https://supertokens.com/static/assets/meta_images/blog/rbacvsabac.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"What is Roles-Based Access Control (RBAC)??\" />",
+            "<meta name=\"twitter:title\" content=\"What is Roles-Based Access Control (RBAC)?\" />",
             "<meta name=\"twitter:description\" content=\"Learn about RBAC and advantages + disadvantages compared to ABAC.\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-is-roles-based-access-control-vs-abac\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/static/assets/meta_images/blog/rbacvsabac.png\" /> ",
@@ -21,5 +21,74 @@
         ],
         "title": "What is Roles-Based Access Control (RBAC)?",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-roles-based-access-control-vs-abac\"},\"headline\":\"What is Roles-Based Access Control (RBAC)?\",\"description\":\"Learn about RBAC and advantages + disadvantages compared to ABAC.\",\"image\":\"https://supertokens.com/static/assets/meta_images/blog/rbacvsabac.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/cognito-pricing-the-complete-guide",
+        "metaTags": [
+            "<meta name=\"description\" content=\"An in depth guide covering AWS Cognito's pricing model.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"AWS Cognito, Cognito pricing, authentication, security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"AWS Cognito Pricing: The Complete Guide [2022]\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/cognito-pricing-the-complete-guide\" />",
+            "<meta property=\"og:description\" content=\"An in depth guide covering AWS Cognito's pricing model.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/cognito-pricing.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"AWS Cognito Pricing: The Complete Guide [2022]\" />",
+            "<meta name=\"twitter:description\" content=\"An in depth guide covering AWS Cognito's pricing model.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/cognito-pricing-the-complete-guide\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/cognito-pricing.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "AWS Cognito Pricing: The Complete Guide [2022]",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/cognito-pricing-the-complete-guide\"},\"headline\":\"AWS Cognito Pricing: The Complete Guide [2022]\",\"description\":\"An in depth guide covering AWS Cognito's pricing model.\",\"image\":\"https://supertokens.com/blog-meta-images/cognito-pricing.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/okta-pricing-the-complete-guide",
+        "metaTags": [
+            "<meta name=\"description\" content=\"An in depth guide covering Okta's pricing model.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Okta, Okta pricing, authentication, security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Okta Pricing: The Complete Guide [2022]\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/okta-pricing-the-complete-guide\" />",
+            "<meta property=\"og:description\" content=\"An in depth guide covering Okta's pricing model.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/okta-pricing.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Okta Pricing: The Complete Guide [2022]\" />",
+            "<meta name=\"twitter:description\" content=\"An in depth guide covering Okta's pricing model.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/okta-pricing-the-complete-guide\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/okta-pricing.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Okta Pricing: The Complete Guide [2022]",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/okta-pricing-the-complete-guide\"},\"headline\":\"Okta Pricing: The Complete Guide [2022]\",\"description\":\"An in depth guide covering Okta's pricing model.\",\"image\":\"https://supertokens.com/blog-meta-images/okta-pricing.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/auth0-pricing-the-complete-guide",
+        "metaTags": [
+            "<meta name=\"description\" content=\"An in depth guide covering Auth0's pricing model.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Auth0, Auth0 pricing, authentication, security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Auth0 Pricing: The Complete Guide [2022]\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/auth0-pricing-the-complete-guide\" />",
+            "<meta property=\"og:description\" content=\"An in depth guide covering Auth0's pricing model.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/auth0-pricing.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Auth0 Pricing: The Complete Guide [2022]\" />",
+            "<meta name=\"twitter:description\" content=\"An in depth guide covering Auth0's pricing model.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/auth0-pricing-the-complete-guide\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/auth0-pricing.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Auth0 Pricing: The Complete Guide [2022]",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/auth0-pricing-the-complete-guide\"},\"headline\":\"Auth0 Pricing: The Complete Guide [2022]\",\"description\":\"An in depth guide covering Auth0's pricing model.\",\"image\":\"https://supertokens.com/blog-meta-images/auth0-pricing.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
