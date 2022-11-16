@@ -104,3 +104,46 @@ You can view the blog landing page by visiting `http://localhost:8000/blog`. All
 
 ## Creating a Pull Request
 If you are creating a pull request for changes other than adding a new blog post, use the [PR template for dev](https://github.com/supertokens/blog/tree/master/.github/PULL_REQUEST_TEMPLATE/dev.md) by adding the `template=dev.md` query parameter (Learn more about the query parameter [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/using-query-parameters-to-create-a-pull-request)).
+
+
+## Internal guide for posting a blog
+
+### Content Process
+- Setup content calendar for the month with timelines for each component
+  - Graphic design: Designers
+  - Review: CTO + CEO - leave anywhere from 5-14 days for review
+  - Setup publication timeline
+- Research SEO keywords using Ahrefs
+  - Target keywords with fewer than 30 difficulty and 100+ volume
+  - Focus on authentication related keywords
+  - Look at competitors to see what keywords they rank for
+  - Add tags for each article, 4 #s
+- Write blog post
+  - Focus on providing value upfront
+- Write channel content for blog post
+  - Hackernews, Product Hunt, Twitter, Discord, Email
+- Review with CTO + CEO on Google Docs
+- Ping designers for cover image + graphics where applicable
+- Come up with the seo data for the publication process
+  - Description
+  - keywords
+  - title
+  - url
+  - og image(Ask designers)
+
+### Publication process
+- Create an issue on Zenhub tracking the blog post
+- Submit PR to supertokens/blog repo
+  - Upload cover image to static/cover folder
+  - Upload a reduced 250px height cover image to static/card-cover folder
+  - Upload title, description, category, and author
+    - “Programming” - if it has code - even if it’s a product launch
+    - “Featured” - general educational content
+    - “Sessions” - if it relates to sessions
+  - Upload the og image to `/static/blog-meta-images` in the blog repo
+  - Add the seo data(description, keywords, title, url, og image) to `/static/blog-seo/config.json` in the blog repo
+  - Link to Github Issue (not the Zenhub issue).
+- Place Zenhub issue into the Engineering Review column 
+
+### Once blog is published in prod
+- Go to https://socialsharepreview.com/, paste the url of the new blog and you should see in preview the og image, the title and the description that you inserted in the meta tags sheet
