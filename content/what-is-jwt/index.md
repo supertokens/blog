@@ -128,14 +128,16 @@ This contains the information about which signing algorithm is used. Like the pa
     We base64 encode it only as an industry convention.
 
 ### 5) Creating the JWT
-Finally, we append the generated secret like `<header>.<body>.<secret>` to create our JWT:
+Finally, we append the generated signiture like `<header>.<body>.<signiture>` to create our JWT:
 
 ```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJhYmNkMTIzIiwiZXhwaXJ5IjoxNjQ2NjM1NjExMzAxfQ.3Thp81rDFrKXr3WrY1MyMnNK8kKoZBX9lg-JwFznR-M
 ```
 
 ### 6) Verifying the JWT
-Once the client sends the JWT back to the server, the server does the following steps:
+
+The auth server will send the JWT back to the client's frontend. The frontend will attach the JWT to network requests to the client's api layer. The api layer will do the following steps to verify the JWT:
+
 - Fetches the header part of the JWT (`eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9`).
 - Does base64 decoding on it to get the plain text JSON: `{"typ":"JWT","alg":"HS256"}`
 - Verifies that the `typ` field's value is `JWT` and the `alg` is `HS256`. If not, it would reject the JWT.
