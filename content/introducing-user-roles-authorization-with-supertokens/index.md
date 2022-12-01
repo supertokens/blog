@@ -82,7 +82,7 @@ Today, you can create new roles and permissions, assign them to users, and prote
 
 ### Enabling user roles with SuperTokens
 
-We've built user roles based on the principles of [RBAC](http://supertokens.com/blog/what-is-roles-based-access-control-vs-abac).
+We've built user roles based on the principles of [RBAC](https://supertokens.com/blog/what-is-roles-based-access-control-vs-abac).
 
 Let's use our previous example again. A quick reminder -
 - we have a `regular-user` role which will allow users to read all blog posts, but only edit or delete posts created by them.
