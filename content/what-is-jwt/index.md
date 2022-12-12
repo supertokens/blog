@@ -128,7 +128,7 @@ This contains the information about which signing algorithm is used. Like the pa
     We base64 encode it only as an industry convention.
 
 ### 5) Creating the JWT
-Finally, we append the generated signiture like `<header>.<body>.<signiture>` to create our JWT:
+Finally, we append the generated signature like `<header>.<body>.<signature>` to create our JWT:
 
 ```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJhYmNkMTIzIiwiZXhwaXJ5IjoxNjQ2NjM1NjExMzAxfQ.3Thp81rDFrKXr3WrY1MyMnNK8kKoZBX9lg-JwFznR-M
@@ -172,7 +172,7 @@ This error implies that the verification process of a JWT failed. This could hap
 The claims in a JWT can represent the scopes or permissions that a user has granted. For example, the end-user may only have agreed that the application can read their data, but not modify it. However, the application may be expecting that the user agrees to modify the data as well. In this case, the scope required by the app is not what’s in the JWT.
 
 ### JWT Decode failed
-This error can arise if the JWT is malformed. For example, the client may be expecting the JWT is base64 encoded, but the auth server did not bas63 encode it.
+This error can arise if the JWT is malformed. For example, the client may be expecting the JWT is base64 encoded, but the auth server did not base64 encode it.
 
 ## Further reading material
 Overall, the topic of JWTs is vast. If you would like to learn more about them, do explore these topics:
