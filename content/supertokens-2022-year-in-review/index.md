@@ -65,8 +65,12 @@ Authorization has also been another highly requested feature. The user roles and
 
 Mobile SDKs for iOS, Android and React Native were also released this year.
 
+![SuperTokens mobile sdk support](./mobile_sdk_support.png)
 
-We also issued hundreds of bug fixes, under-the-hood improvements, and security updates and also committed to growing our team, almost doubling its size.
+
+These are just some of the features we worked on...
+
+We also issued hundreds of bug fixes, under-the-hood improvements, security updates and also committed to growing our team, almost doubling its size.
 
 
 ## Conclusion
