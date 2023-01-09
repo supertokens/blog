@@ -21,11 +21,13 @@ author: "SuperTokens Team"
 ## Introduction
 
 2022 has been the biggest year to date at SuperTokens.
-
-- Website traffic and NPM downloads increased by **600%**
-- Listed in the Ross Index’s fastest-growing startups, with **7800** GitHub stars, a **260%** increase since the start of the year. 
-- The discord community grew by almost **1600** members.
-- SuperTokens is now SOC2 compliant
+- **1x**: We held our first-ever company offsite! 
+- **2x**: Our team size doubled 
+- **3x**: Our Github Stars grew 3x to ~7,800 
+- **4th**: We were the 4th fastest growing OSS startups in the world in [Q1 '22](https://runacap.com/ross-index/q1-2022/) 
+- **5x**: Growth in our Discord community 
+- **6x**: Growth in our Website traffic and NPM downloads
+- There are 1000's of apps globally being powered by SuperTokens.
 
 We also released some incredible updates - based on all the feedback we received from our users:
 
