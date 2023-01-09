@@ -1,6 +1,6 @@
 ---
 title: SuperTokens 2022 Year in Review
-date: "2023-01-06"
+date: "2023-01-09"
 description: "2022 had been an amazing year for SuperTokens, here are some of the top highlights"
 cover: "supertokens_year_in_review_banner.png"
 category: "featured"
