@@ -90,5 +90,28 @@
         ],
         "title": "Auth0 Pricing: The Complete Guide [2022]",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/auth0-pricing-the-complete-guide\"},\"headline\":\"Auth0 Pricing: The Complete Guide [2022]\",\"description\":\"An in depth guide covering Auth0's pricing model.\",\"image\":\"https://supertokens.com/blog-meta-images/auth0-pricing.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/supertokens-2022-year-in-review",
+        "metaTags": [
+            "<meta name=\"description\" content=\"2022 had been an amazing year for SuperTokens, here are some of the top highlights\" />",
+            "",
+            "<meta name=\"keywords\" content=\"2022, retrospective, updates\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"SuperTokens 2022 Year in Review\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/supertokens-2022-year-in-review\" />",
+            "<meta property=\"og:description\" content=\"2022 had been an amazing year for SuperTokens, here are some of the top highlights\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/supertokens_year_in_review_banner.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"SuperTokens 2022 Year in Review\" />",
+            "<meta name=\"twitter:description\" content=\"2022 had been an amazing year for SuperTokens, here are some of the top highlights\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/supertokens-2022-year-in-review\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/supertokens_year_in_review_banner.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "SuperTokens 2022 Year in Review",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/supertokens-2022-year-in-review\"},\"headline\":\"SuperTokens 2022 Year in Review\",\"description\":\"2022 had been an amazing year for SuperTokens, here are some of the top highlights\",\"image\":\"https://supertokens.com/blog-meta-images/supertokens_year_in_review_banner.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
