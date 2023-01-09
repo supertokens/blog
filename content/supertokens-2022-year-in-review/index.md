@@ -35,48 +35,49 @@ We also released some incredible updates - based on all the feedback we received
 
 ![SuperTokens passwordless login form](./passwordless.png)
 
-Passwordless had been the number one requested feature for a while, so we wanted to ensure we got it right. With the SuperTokens passwordless recipe, you can add passwordless based authentication with magic links and OTP sent through either phone number or email.
+Passwordless authentication has been the number one requested feature for a while, so we 
+wanted to ensure we got it right. With the SuperTokens [passwordless recipe](https://supertokens.com/docs/passwordless/introduction), you can add passwordless based authentication with magic links and OTP sent through either phone number or email.
 
 
 ## SuperTokens CLI  
 
-Improving the developer experience has always been at the core SuperTokens.
-With the SuperTokens CLI, we want to make setting up an app with SuperTokens as simple as possible. By running “npx create-supertokens-app@latest” you can generate a complete web app protected by SuperTokens in less than 60 seconds.
+Improving the developer experience has always been at the core of SuperTokens.
+With our CLI, we wanted to simplify the process of setting up an app with SuperTokens. By running “npx create-supertokens-app@latest” you can generate a complete web app protected by SuperTokens in less than 60 seconds.
 
 ![supertokens cli](./supertokens_cli.png)
 
 ## Documentation Revamp
 
-We also wanted to support the growing part of the community who wanted to use their own UI with SuperTokens, so we revamped our documentation to add guides to setup SuperTokens with custom UI.
+We also wanted to support the growing part of the community who wanted to use their own UI with SuperTokens, so we revamped our [documentation](https://supertokens.com/docs/guides) to add guides to set up SuperTokens with custom UI.
 
 ![SuperTokens new documentation](./documentation_revamp.png)
 
 ## User Management Dashboard
 
-With the user management dashboard, you can view the list of users on SuperTokens and be able to easily modify or delete sessions, update metadata, and account info.
+With the [user management dashboard](https://supertokens.com/docs/emailpassword/pre-built-ui/setup/dashboard), you can view the list of users on SuperTokens and easily modify or delete sessions, update metadata, and account info.
 
 ![SuperTokens user management dashboard](./user_management_and_roles.png)
 
 ## User Roles and Permissions
 
-Authorization has also been another highly requested feature. The user roles and permissions recipe allows you to create roles and permissions and assign them to users. You can then guard frontend routes and backend APIs to only allow access if the user has a certain role or permission.
+Authorization has been another highly requested feature. The [user roles and permissions recipe](https://supertokens.com/docs/userroles/introduction) allows you to create roles and permissions and assign them to users. You can then guard frontend routes and backend APIs to only allow access if the user has a certain role or permission.
 
 ![SuperTokens user management dashboard](./supertokens_user_roles_and_permissions.png)
 
 ## Support for mobile frameworks
 
-Mobile SDKs for iOS, Android and React Native were also released this year.
+Mobile SDKs for iOS, Android and React Native was also released this year. You can get started [here](https://supertokens.com/docs/thirdpartyemailpassword/custom-ui/init/frontend)
 
 ![SuperTokens mobile sdk support](./mobile_sdk_support.png)
 
 
 These are just some of the features we worked on...
 
-We also issued hundreds of bug fixes, under-the-hood improvements, security updates and also committed to growing our team, almost doubling its size.
+We also issued hundreds of bug fixes, under-the-hood improvements, security updates and also committed to growing our team, doubling its size.
 
 
 ## Conclusion
 
 And that's a wrap!
 
-2022 was a year of growth and progress for the SuperTokens team. We released some amazing features, hit several growth milestones, and nearly doubled our team size. We are thankful to our community for placing their trust in us, and we hope to make 2023 an even better year!
+2022 was a year of growth and progress for the SuperTokens team. We released some amazing movies, hit several growth milestones, and nearly doubled our team size. We are thankful to our community for placing their trust in us, and we hope to make 2023 an even better year!
