@@ -36,7 +36,7 @@ We also released some incredible updates - based on all the feedback we received
 ![SuperTokens passwordless login form](./passwordless.png)
 
 Passwordless authentication has been the number one requested feature for a while, so we 
-wanted to ensure we got it right. With the SuperTokens [passwordless recipe](https://supertokens.com/docs/passwordless/introduction), you can add passwordless based authentication with magic links and OTP sent through either phone number or email.
+wanted to get it right. With the SuperTokens [passwordless recipe](https://supertokens.com/docs/passwordless/introduction), you can add passwordless based authentication with magic links and OTP sent through either phone number or email.
 
 
 ## SuperTokens CLI  
@@ -80,4 +80,4 @@ We also issued hundreds of bug fixes, under-the-hood improvements, security upda
 
 And that's a wrap!
 
-2022 was a year of growth and progress for the SuperTokens team. We released some amazing movies, hit several growth milestones, and nearly doubled our team size. We are thankful to our community for placing their trust in us, and we hope to make 2023 an even better year!
+2022 was a year of growth and progress for the SuperTokens team. We released some amazing features, hit several growth milestones, and nearly doubled our team size. We are thankful to our community for placing their trust in us, and we hope to make 2023 an even better year!
