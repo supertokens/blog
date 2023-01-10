@@ -1,7 +1,7 @@
 ---
 title: What do pre-built authentication UIs look like? 
 date: "2023-01-11"
-description: "Authentication is an important part of every application’s user journey. A poorly made auth screen can be jarring or even discourage users from signing up. Let’s look at some pre-built UIs from current authentication providers and how to customize them"
+description: "A comparison of the pre-built UIs from current authentication providers and how to customize them"
 cover: "prebuilt-auth-ui-comparison-banner.png"
 category: "featured"
 author: "SuperTokens Team"
