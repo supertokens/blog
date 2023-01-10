@@ -2,12 +2,18 @@
 title: What do pre-built authentication UIs look like? 
 date: "2023-01-11"
 description: "Authentication is an important part of every application’s user journey. A poorly made auth screen can be jarring or even discourage users from signing up. Let’s look at some pre-built UIs from current authentication providers and how to customize them"
-cover: "TODO"
+cover: "prebuilt-auth-ui-comparison-banner.png"
 category: "featured"
 author: "SuperTokens Team"
 ---
 
 ## Table of contents
+- [Introduction](#introduction)
+- [AWS Cognito Hosted UI](#aws-cognito-hosted-ui)
+- [Auth0 Universal Login](#auth0-universal-login)
+- [Firebase Authentication](#firebase-authentication)
+- [Keycloak](#keycloak)
+- [SuperTokens](#supertokens)
 
 
 ## Introduction
