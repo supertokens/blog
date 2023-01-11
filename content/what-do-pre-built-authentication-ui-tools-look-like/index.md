@@ -44,8 +44,8 @@ Here’s a list of steps on how to change the UI from the AWS Management Console
 6. Edit the CSS stylesheet based on Cognito docs
 7. Upload the CSS stylesheet into the “Choose file” box and hit the “Save changes” button
 8. To check on the customized UI, go to the following domain -https://<*your_domain*>/login?response_type=code&client_id=<*your_app_client_id*>&redirect_uri=<*your_callback_url*>
-  - The domain is found on the App integration tab under the Domain section
-  - The app client ID and callback URL can be found by clicking on the correct client name under the App clients name section at the bottom. From there, the Client ID is at the top while the callback URL is under the Hosted UI section.
+    - The domain is found on the App integration tab under the Domain section
+    - The app client ID and callback URL can be found by clicking on the correct client name under the App clients name section at the bottom. From there, the Client ID is at the top while the callback URL is under the Hosted UI section.
 
 Beyond this complicated chain of steps, each of the customization fields within the style sheet only support a very limited amount of change.
 
