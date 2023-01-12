@@ -1,8 +1,8 @@
 ---
-title: What do pre-built authentication UIs look like? 
-date: "2023-01-11"
-description: "A comparison of the pre-built UIs from current authentication providers and how to customize them"
-cover: "prebuilt-auth-ui-comparison-banner.png"
+title: 5 Tips for Optimizing Your React App’s Performance 
+date: "2023-01-12"
+description: "Poor app performance can reduce user engagement and will negatively affect SEO, here are 5 tips to optimize your react app"
+cover: "optimize-react-app-performance.png"
 category: "featured"
 author: "SuperTokens Team"
 ---
@@ -31,19 +31,18 @@ export default myComponent;
 
 You can find the React documentation on how to use React memo [here](https://beta.reactjs.org/reference/react/memo).
 
-### shouldComponentUpdate lifecycle hook
-If you are using class-based components and need even more control on when your component re-renders, you can use the shouldComponentUpdate lifecycle method.
+### useCallback:
 
-Depending on changes to state or props you can specify whether or not the component should be re-rendered. By returning false from shouldComponentUpdate, you can prevent the rerendering even if its props or state have changed.
+`useCallback` will return a memoized version of the callback that only changes if one of the dependencies has changed. This is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders
 
-```tsx  
-class myComponent extends Component {
-  shouldComponentUpdate(nextProps) {
-   // Condition for whether the component should update
-  }
-}
+```tsx
+const memoizedCallback = useCallback(
+  () => {
+    doSomething(a, b);
+  },
+  [a, b],
+);
 ```
-
 
 ## Tip 2: Lazy loading with code splitting
 
@@ -79,15 +78,21 @@ function MyComponent() {
 You can find the complete docs on code splitting [here](https://reactjs.org/docs/code-splitting.html).
 
 
-## Tip 3: Tip 3: Use a caching layer
+## Tip 3: Debouncing and Throttling Event Actions
 
-If your app frequently requests data from an external API, you may want to consider implementing a caching layer to store repeatedly used data. Reducing the number of API requests can significantly speed up your app.
+Debouncing is a technique used to improve the performance of frequently executed actions, by delaying them, grouping them and only executing the last call. For example, if you had a search field where results are queried as you are typing, you would 
 
-## Tip 4: User a Performance Monitoring Tools
 
-Trying to manually diagnose a performance bottleneck in your application can also be a frustrating experience. This is where tools like React Performance Devtool and React Profiler come in handy. React Performance Devtool is a browser extension for inspecting the performance of React Components. It statistically examines the performance of React components based on the measures which are collected by React using `window.performance` API. The React Profiler API is more specific and its primary purpose is to measure the cost of rendering a component. This can be used to find which parts of your application are slow and might benefit from caching suggestion mentioned in Tip 1.
+Throttling is a technique used to improve the performance of frequently executed actions, by limiting the rate of execution. It is similar to debounce, except it guarantees the regular execution of an action.
 
-By incorporating these tools into your workflow, you can catch performance issues early on and fix them before they become a problem.
+
+
+## Tip 4: Virtualize long lists
+
+There may be times where you need to display a large table or list that contains many rows. Loading every single item on such a list can affect performance significantly.
+
+List virtualization, or "windowing", is the concept of only rendering what is visible to the user. The number of elements that are rendered at first is a very small subset of the entire list and the "window" of visible content moves when the user continues to scroll. This improves both the rendering and scrolling performance of the list
+
 
 ## Tip 5: Optimizing your images
 
