@@ -115,7 +115,7 @@ You can use the [react-window](https://www.npmjs.com/package/react-window) libra
 
 ## Tip 5: Optimizing your images
 
-Although it may seem obvious, large images can significantly impact the performance of your app. From poor load times to sluggish performance, there are clear demerits to non-optimized large images. To avoid these performance penalties, you can compress them, resize them, and serve them in an appropriate format (such as webp). The best way about going about doing this 
+Although it may seem obvious, large images can significantly impact the performance of your app. From poor load times to sluggish performance, there are clear demerits to non-optimized large images. To avoid these performance penalties, you can compress them, resize them, and serve them in an appropriate format (such as webp). The best way about going about doing this is using an image CDN service which will automate the step of optimizing the images it serves
 
 ## Conclusion:
 
