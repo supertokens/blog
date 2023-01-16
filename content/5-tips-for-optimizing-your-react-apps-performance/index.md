@@ -34,7 +34,7 @@ By leveraging some of React's built-in hooks, we can keep unnecessary renders at
 
 In React, components will re-render when state or prop values change. This also applies to child components where props might remain the same but the parent component’s props change. 
 
-In this case, we can use “React.memo()”, a higher-order component to cache the output of the child component. Now the child component will be rendered only when its props change. This can be very useful for components that have many props that do not change frequently.
+In this case, we can use `React.memo()`, a higher-order component to cache the output of the child component. Now the child component will be rendered only when its props change. This can be very useful for components that have many props that do not change frequently.
 
 
 ```tsx
