@@ -14,6 +14,7 @@ author: "SuperTokens Team"
 - [Tip 3: Debouncing and Throttling](#tip-3-debouncing-and-throttling-event-actions)
 - [Tip 4: Virtualize long lists](#tip-4-virtualize-long-lists)
 - [Tip 5: Optimizing your images](#tip-5-optimizing-your-images)
+- [Conclusion](#conclusion)
 
 ## Introduction:
 
