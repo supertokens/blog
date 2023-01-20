@@ -20,13 +20,7 @@ author: "SuperTokens Team"
 
 Authentication is an important part of every application’s user journey. A poorly made auth screen can be jarring or even discourage users from signing up. Let’s look at some pre-built UIs from current authentication providers and how to customize them.
 
-|  	| Prebuilt Design 	| Customization possibilities 	| Customization Difficulty 	|
-|---	|---	|---	|---	|
-| AWS Cognito 	| Basic 	| Limited 	| Hard 	|
-| Auth0 	| Good 	| Ample 	| Easy 	|
-| Firebase 	| Basic 	| Limited 	| Hard 	|
-| Keycloak 	| Basic 	| Ample 	| Hard 	|
-| SuperTokens 	| Basic 	| Unlimited 	| Easy 	|
+![Auth Comparison Chart](./auth_comparison_chart.png)
 
 ## AWS Cognito Hosted UI
 
