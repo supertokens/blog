@@ -2,7 +2,7 @@
 title: Creating Great Authentication Experiences with Custom UI
 date: "2023-01-16"
 description: "A guide on creating great authentication experiences with custom UI"
-cover: "TODO"
+cover: "custom_ui.png"
 category: "featured"
 author: "SuperTokens Team"
 ---
