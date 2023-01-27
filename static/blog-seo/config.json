@@ -159,5 +159,28 @@
         ],
         "title": "What do pre-built authentication UIs look like",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/5-tips-for-optimizing-your-react-apps-performance\"},\"headline\":\"5 Tips for Optimizing Your React App’s Performance\",\"description\":\"One of the most frustrating things as a React developer is investing time and effort into building an application only to find it slow and unresponsive. In this post, we’ll go over 5 tips to improve the performance of your React app.\",\"image\":\"https://supertokens.com/blog-meta-images/optimize-react-app-performance.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/creating-great-authentication-experiences-with-custom-ui",
+        "metaTags": [
+            "<meta name=\"description\" content=\"A guide on creating great authentication experiences with custom UI\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Pre-built UI\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Creating Great Authentication Experiences with Custom UI\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/creating-great-authentication-experiences-with-custom-ui\" />",
+            "<meta property=\"og:description\" content=\"A guide on creating great authentication experiences with custom UI\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/custom_ui.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Creating Great Authentication Experiences with Custom UI\" />",
+            "<meta name=\"twitter:description\" content=\"A guide on creating great authentication experiences with custom UI\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/creating-great-authentication-experiences-with-custom-ui\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/custom_ui.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "What do pre-built authentication UIs look like",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/creating-great-authentication-experiences-with-custom-ui\"},\"headline\":\"Creating Great Authentication Experiences with Custom UI\",\"description\":\"A guide on creating great authentication experiences with custom UI.\",\"image\":\"https://supertokens.com/blog-meta-images/custom_ui.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
