@@ -13,5 +13,8 @@
     },
     {
         "location": "https://supertokens.com/blog/creating-great-authentication-experiences-with-custom-ui"
+    },
+    {
+        "location": "https://supertokens.com/blog/self-hosted-authentication"
     }
 ]

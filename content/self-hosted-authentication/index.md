@@ -1,6 +1,6 @@
 ---
 title: Self-hosted Authentication
-date: "2023-01-27"
+date: "2023-01-30"
 description: "By self-hosting auth users gain finer control over their data.To shed some light on the matter, let’s compare several authentication providers which offer self-hosting functionality"
 cover: "self_hosted_auth.png"
 category: "programming"
@@ -32,17 +32,17 @@ To shed some light on the matter, let’s compare several authentication provide
 
 Also be sure to check out [our piece on auth UI comparison](https://supertokens.com/blog/what-do-pre-built-authentication-ui-tools-look-like) and our [auth provider deep-dive](https://supertokens.com/blog/auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens).
 
-### Keycloak
+## Keycloak
 
 Keycloak was first released in 2014. Its primary developer is WildFly, a division of Red Hat.
 
-**Open Source**
+### **Open Source**
 
 Keycloak was designed as an open-source solution for identity and access management, and was intended to provide a simpler and more effective alternative to existing solutions on the market.
 
 Today, Red Hat’s Single Sign-On (SSO) product is based on the Keycloak project. 
 
-**Functionality**
+### **Functionality**
 
 Keycloak supports various authentication mechanisms such as OpenID Connect, OAuth 2.0, and SAML, and can be easily integrated with other systems and protocols. Keycloak also includes features for managing users, roles, and permissions, as well as for implementing multi-factor authentication and social login.
 
@@ -50,7 +50,7 @@ While Keycloak has broad functionality, it’s not always sufficient for larger 
 
 As a result, many customers often need to extend the functionality of Keycloak with support from Red Hat or third-party Keycloak experts. 
 
-**Pricing**
+### **Pricing**
 
 Keycloak is free for all users. 
 
@@ -58,23 +58,23 @@ For larger enterprise users, Red Hat offers the Red Hat SSO product.
 
 Monthly pricing for Red Hat SSO runs from $138/month to $3,600/month depending on server capabilities.
 
-**Support**
+### **Support**
 
 Because Keycloak is an open-source project, it doesn’t provide any company-based support. Instead, it relies on a large community of Github contributors to help [debug and answer user questions](https://github.com/keycloak/keycloak/issues).  
 
 Red Hat SSO offers 24/7 support on paid plans. 
 
-**Target Customer**
+### **Target Customer**
 
 Keycloak is aimed at smaller projects looking to set up low-cost authentication. When it was first released, Keycloak quickly gained traction as an open-source alternative to costly authentication providers. Today, most of Keycloak’s functionality has been replicated by competitors. 
 
 Red Hat SSO primarily targets larger enterprise-based clients. 
 
-### Ory
+## Ory
 
 Founded in 2016, Ory is the largest open-source community in the world for cloud software application security. 
 
-**Open Source**
+### **Open Source**
 
 Ory has a family of product - all of which are open source. Its user authentication product, Kratos, was released in 2018. 
 
@@ -84,7 +84,7 @@ Ory’s other products include:
 - Oathkeeper - access control for API endpoints
 - Keto - authorization, define advanced permission rules ("Access Control Policies")
 
-**Functionality**
+### **Functionality**
 
 Ory Kratos provides features such as - 
 
@@ -98,31 +98,31 @@ A potential downside to Kratos is the authentication UI. While Kratos handles al
 
 This can be either a negative due to the extra engineering time, or a positive for teams looking for 100% control over their user experience.
 
-**Pricing**
+### **Pricing**
 
 Kratos is free for self-hosting with all functionality intact.
 
 Launched in November 2022, the Ory Network is a managed solution hosted by Ory themselves. Pricing ranges from $18/month to $240/month. 
 
-**Support**
+### **Support**
 
 As an open-source company, Ory only has community-based support for self-hosted users. 
 
 For dedicated support, users need to be on the Ory Network’s Business plan which runs $240/month. 
 
-**Target Customer**
+### **Target Customer**
 
 With a low price point and open-source strategy, Ory’s target customers are lean startups. Although implementing Ory requires a bit of elbow grease, the end product is a highly secure authentication flow.
 
-### FusionAuth
+## FusionAuth
 
 Founded in 2016, FusionAuth’s tagline is:  “Auth. Built for Devs, by Devs.” 
 
-**Open Source**
+### **Open Source**
 
 Unlike other companies on this list, FusionAuth is not open source. Based on a previous Q&A thread, FusionAuth’s services will continue to function for an undisclosed amount of time even after the company shuts down. Further, Enterprise clients can request a source code release clause in the event FusionAuth goes out of business.
 
-**Functionality**
+### **Functionality**
 
 Self-hosting with FusionAuth’s core authentication features is free. Users have access to email+password, third-party/social, and even passwordless authentication methods. 
 
@@ -134,7 +134,7 @@ In addition, certain third-party integrations such as sign in with Nintendo, Pla
 
 Certain security features such as advanced security are also locked behind the Essentials or Enterprise plans. 
 
-**Pricing**
+### **Pricing**
 
 Pricing for self-hosting FusionAuth is on the higher end compared to other authentication providers.
 
@@ -142,7 +142,7 @@ Community plan (free) is free for unlimited users.
 
 The remaining plans tiers are effective for the first 10k users, with Starter plan at $125/month, Essentials at $850/month, and Enterprise at $3,300/month.
 
-**Support**
+### **Support**
 
 FusionAuth gates support to three tiers. 
 
@@ -152,19 +152,19 @@ Essentials users ($850/month) are guaranteed a 24-48 hour response time via emai
 
 Enterprise users ($3,300/month) have both 24/7 email and phone support and a dedicated Slack channel with FusionAuth engineers. 
 
-**Target Customer**
+### **Target Customer**
 
 FusionAuth is geared towards larger enterprise customers similar to Auth0. However, FusionAuth’s key differentiators are its self-hosting options and advanced security features like biometric authentication.
 
-### SuperTokens
+## SuperTokens
 
 SuperTokens was founded in February 2019 with the tagline: “Build fast. Maintain control. Reasonably priced.”
 
-**Open Source**
+### **Open Source**
 
 SuperTokens is an open-source company and one of the [fastest growing OSS startups in Q1 2022](https://runacap.com/ross-index/q1-2022/).  
 
-**Functionality**
+### **Functionality**
 
 SuperTokens offers a variety of functions such as:
 
@@ -186,23 +186,23 @@ We provide step-by-step guides for [a variety of authentication recipes](https:/
 
 ![SuperTokens Architecture Page](./supertokens_architecture_page.png)
 
-**Pricing**
+### **Pricing**
 
 A self-hosted SuperTokens implementation is 100% free for unlimited users.
 
 ![SuperTokens Pricing Page](./supertokens_pricing_page.png)
 
-**Support**
+### **Support**
 
 We love talking with our users. In fact, we have an incredibly active Discord community where we usually respond to questions within 15 minutes, 18 hours/day.
 
 For our larger enterprise customers, we also offer dedicated Slack channels and additional support.
 
-**Target Customer**
+### **Target Customer**
 
 Our best customers are startups. Our enterprise feature set is still being developed, and we’ve recently been certified for both SOC 2 and GDPR.
 
-### Conclusion
+## Conclusion
 
 While you can tell we’re a little biased ;) - we hope you found this breakdown useful.
 
