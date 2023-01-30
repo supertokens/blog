@@ -204,7 +204,7 @@ And here are some the final versions of the sections we tweaked based on user fe
 ![SuperTokens Final design 2](./st_final_2.png)
 ![SuperTokens Final design 3](./st_final_3.png)
 
-### Step 4: Webflow
+### Step 7: Webflow
 
 ![SuperTokens webflow](./supertokens_webflow.png)
 
