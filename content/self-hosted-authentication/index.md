@@ -7,6 +7,17 @@ category: "programming"
 author: "SuperTokens Team"
 ---
 
+## Table of content
+
+- [Introduction](#introduction)
+- [Keycloak](#keycloak)
+- [Ory](#ory)
+- [FusionAuth](#fusionauth)
+- [SuperTokens](#supertokens)
+- [Conclusion](#conclusion) 
+
+## Introduction
+
 Most companies view authentication simply as a checkbox - as long as users can log in and use the product with no security breaches - they call it good enough. Understandably, they’d rather work on their core product.
 
 And it’s for this exact reason that many companies outsource authentication to a dedicated auth service like Auth0, one of the largest providers today.
@@ -25,10 +36,12 @@ In recent years, self-hosting has grown in popularity. By transporting authentic
 
 To shed some light on the matter, let’s compare several authentication providers which offer self-hosting functionality:
 
-- FusionAuth
 - Keycloak
 - Ory
+- FusionAuth
 - SuperTokens
+
+![Self-hosted authentication tables](./self_hosted_auth_comparison_table.png)
 
 Also be sure to check out [our piece on auth UI comparison](https://supertokens.com/blog/what-do-pre-built-authentication-ui-tools-look-like) and our [auth provider deep-dive](https://supertokens.com/blog/auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens).
 
