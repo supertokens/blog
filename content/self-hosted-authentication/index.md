@@ -1,6 +1,6 @@
 ---
 title: Self-hosted Authentication
-date: "2023-01-30"
+date: "2023-02-03"
 description: "By self-hosting auth users gain finer control over their data.To shed some light on the matter, let’s compare several authentication providers which offer self-hosting functionality"
 cover: "self_hosted_auth.png"
 category: "programming"
@@ -47,6 +47,8 @@ Also be sure to check out [our piece on auth UI comparison](https://supertokens.
 
 ## Keycloak
 
+![Keycloak logo](./keycloak_logo.png)
+
 Keycloak was first released in 2014. Its primary developer is WildFly, a division of Red Hat.
 
 ### **Open Source**
@@ -84,6 +86,8 @@ Keycloak is aimed at smaller projects looking to set up low-cost authentication.
 Red Hat SSO primarily targets larger enterprise-based clients. 
 
 ## Ory
+
+![Ory logo](./ory_logo.png)
 
 Founded in 2016, Ory is the largest open-source community in the world for cloud software application security. 
 
@@ -128,6 +132,7 @@ For dedicated support, users need to be on the Ory Network’s Business plan whi
 With a low price point and open-source strategy, Ory’s target customers are lean startups. Although implementing Ory requires a bit of elbow grease, the end product is a highly secure authentication flow.
 
 ## FusionAuth
+![FusionAuth logo](./fusion_auth.png)
 
 Founded in 2016, FusionAuth’s tagline is:  “Auth. Built for Devs, by Devs.” 
 
@@ -170,6 +175,8 @@ Enterprise users ($3,300/month) have both 24/7 email and phone support and a ded
 FusionAuth is geared towards larger enterprise customers similar to Auth0. However, FusionAuth’s key differentiators are its self-hosting options and advanced security features like biometric authentication.
 
 ## SuperTokens
+
+![SuperTokens Logo](./supertokens_logo.png)
 
 SuperTokens was founded in February 2019 with the tagline: “Build fast. Maintain control. Reasonably priced.”
 
