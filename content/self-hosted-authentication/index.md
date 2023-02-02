@@ -99,7 +99,7 @@ Ory’s other products include:
 
 ### **Functionality**
 
-Ory Kratos provides features such as - 
+Ory Kratos provides features such as: 
 
 - Self Service Login and Registration
 - Multifactor Authentication
