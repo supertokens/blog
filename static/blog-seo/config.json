@@ -182,5 +182,28 @@
         ],
         "title": "What do pre-built authentication UIs look like",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/creating-great-authentication-experiences-with-custom-ui\"},\"headline\":\"Creating Great Authentication Experiences with Custom UI\",\"description\":\"A guide on creating great authentication experiences with custom UI.\",\"image\":\"https://supertokens.com/blog-meta-images/custom_ui.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/self-hosted-authentication",
+        "metaTags": [
+            "<meta name=\"description\" content=\"By self-hosting auth users gain finer control over their data.To shed some light on the matter, let’s compare several authentication providers which offer self-hosting functionality\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Self-hosting, Keycloak, FusionAuth, Ory\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Self-hosted Authentication\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/self-hosted-authentication\" />",
+            "<meta property=\"og:description\" content=\"By self-hosting auth users gain finer control over their data.To shed some light on the matter, let’s compare several authentication providers which offer self-hosting functionality\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/self_hosted_auth.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Self-hosted Authentication\" />",
+            "<meta name=\"twitter:description\" content=\"By self-hosting auth users gain finer control over their data.To shed some light on the matter, let’s compare several authentication providers which offer self-hosting functionality\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/self-hosted-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/self_hosted_auth.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Self-hosted Authentication",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/self-hosted-authentication\"},\"headline\":\"Self-hosted Authentication\",\"description\":\"By self-hosting auth users gain finer control over their data.To shed some light on the matter, let’s compare several authentication providers which offer self-hosting functionality\",\"image\":\"https://supertokens.com/blog-meta-images/self_hosted_auth.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
