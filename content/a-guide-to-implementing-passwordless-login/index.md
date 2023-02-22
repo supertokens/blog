@@ -1,8 +1,8 @@
 ---
 title: A Guide to Implementing Passwordless Login
-date: "2023-02-20"
+date: "2023-02-23"
 description: "Passwordless is one of the most popular authentication methods"
-cover: "TODO.png"
+cover: "passwordless_banner.png"
 category: "programming"
 author: "SuperTokens Team"
 ---
@@ -11,15 +11,13 @@ author: "SuperTokens Team"
 
 Passwordless authentication is becoming an increasingly popular choice for developers. Even notable names like Slack, Notion, and PayPal are all transitioning to SMS, email, or social logins for their authentication.
 
-
+![Passwordless Login screens](./passwordless_login_screens.png)
 
 A driving factor for its increasing adoption is that it’s inherently less prone to cyberattacks. Since not even password hashes are stored in a database (which have varying degrees of security based on the hashing & salting scheme used), there’s no exposed attack surface with user credentials for malicious actors to target.
 
 There are a few downsides to passwordless. UX becomes more complicated when the user navigates away from the page. Additionally, some implementations come with increased cost (e.g. with physical tokens), and of course - no system is completely infallible against malicious actors.
 
-If you’re looking for a good primer on the different options possible with passworldess, you can refer to this guide:
-
-[https://supertokens.com/blog/passwordless-for-product-managers](https://supertokens.com/blog/passwordless-for-product-managers)
+If you’re looking for a good primer on the different options possible with passworldess, you can refer to this [guide](https://supertokens.com/blog/passwordless-for-product-managers)
 
 For the sake of this post, we’ll focus on a software-based implementation - in our example it’ll be with email magic links.
 
@@ -153,8 +151,6 @@ Depending on how you decide to implement login, there are a few considerations t
 
 While we encourage for you to refer to this as a general guide for implementing passwordless auth, security is a critical component to implementing any form of authentication.
 
-For more details and to get started with passwordless authentication within just a few minutes, we invite you to try our recipe which uses SuperTokens:
-
-[https://supertokens.com/docs/passwordless/introduction](https://supertokens.com/docs/passwordless/introduction)
+For more details and to get started with passwordless authentication within just a few minutes, we invite you to try out the [SuperTokens Passwordless](https://supertokens.com/docs/passwordless/introduction) recipe
 
 Happy building!

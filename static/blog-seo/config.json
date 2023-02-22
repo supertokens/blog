@@ -205,5 +205,28 @@
         ],
         "title": "Self-hosted Authentication",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/self-hosted-authentication\"},\"headline\":\"Self-hosted Authentication\",\"description\":\"By self-hosting auth users gain finer control over their data.To shed some light on the matter, let’s compare several authentication providers which offer self-hosting functionality\",\"image\":\"https://supertokens.com/blog-meta-images/self_hosted_auth.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/a-guide-to-implementing-passwordless-login",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Passwordless authentication is becoming an increasingly popular choice for developers. In this guide we will go over how you can implement passwordless authentication in your application\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Passwordless, Magic link, OTP\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"A Guide to Implementing Passwordless Login\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/a-guide-to-implementing-passwordless-login\" />",
+            "<meta property=\"og:description\" content=\"Passwordless authentication is becoming an increasingly popular choice for developers. In this guide we will go over how you can implement passwordless authentication in your application\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/passwordless_banner.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"A Guide to Implementing Passwordless Login\" />",
+            "<meta name=\"twitter:description\" content=\"Passwordless authentication is becoming an increasingly popular choice for developers. In this guide we will go over how you can implement passwordless authentication in your application\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/a-guide-to-implementing-passwordless-login\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/passwordless_banner.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Self-hosted Authentication",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/a-guide-to-implementing-passwordless-login\"},\"headline\":\"A Guide to Implementing Passwordless Login\",\"description\":\"Passwordless authentication is becoming an increasingly popular choice for developers. In this guide we will go over how you can implement passwordless authentication in your application\",\"image\":\"https://supertokens.com/blog-meta-images/passwordless_banner.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
