@@ -1,6 +1,6 @@
 ---
 title: OAuth 2.0 vs Session Management
-date: "2020-04-24"
+date: "2020-04-23"
 description: "A lot of developers confuse OAuth with web session management and hence end up using the wrong protocol. This article will clarify when to use what solution."
 cover: "oauth-2-vs-session-management.png"
 category: "sessions"
@@ -17,21 +17,21 @@ While using user sessions, it is assumed that one of the two communicating parti
 
 As a result, session management generally refers to communication between your own app’s backend and frontend. Whereas, OAuth is used when your app (frontend or backend) needs to communicate with a third party’s backend – if you use Google / Facebook Sign in for your app or if your app uses Okta / Auth0 for managing users.
 
-![OAuth flow](https://supertokens.com/static/webflow/blog/oauth2-session/images/image343x-p-800.png)
+![OAuth flow](./oauth_flow.png)
 
-Think about this like global trade. OAuth is the system that lets countries trade with each other, whereas session management is the system that enables trade within a country. You always require local trade – regardless of whether you exchange goods (data) with other countries or not (see “OAuth depends on Session management” section).
+*Think about this like global trade. OAuth is the system that lets countries trade with each other, whereas session management is the system that enables trade within a country. You always require local trade – regardless of whether you exchange goods (data) with other countries or not (see “OAuth depends on Session management” section).*
 
 ## About Trust
 
-![Trusted](https://supertokens.com/static/webflow/blog/oauth2-session/images/image353x-p-800.png)
+![Trusted](./trust.png)
 
-Put simply, in any app, the frontend is untrusted, whereas the backend is trusted. This is because the backend is under strict control of the app developers who generally mean no harm to the users or to the app[1]. In contrast, the app developers have no control over the frontend. The frontend device could be compromised via social engineering techniques or malware, and there is nothing the app developers can do to mitigate that.
+Put simply, in any app, the frontend is untrusted, whereas the backend is trusted. This is because the backend is under strict control of the app developers who generally mean no harm to the users or to the app[[1]](#footnote). In contrast, the app developers have no control over the frontend. The frontend device could be compromised via social engineering techniques or malware, and there is nothing the app developers can do to mitigate that.
 
 If a frontend is compromised, then the attacker may have an easy way to “harm” the app or its users. Hence, it is advisable that no data being sent from the frontend be blindly trusted. We must always verify and sanitize the incoming data, and try to minimise risk as far as possible.
 
 ## OAuth depends on Session management
 
-In order to show this dependency, let’s examine the different ways two apps can communicate with each other using the Authorisation code grant flow[2]. The setup is that we have two apps: “<span style="color:#36f; font-weight: bold; font-style: italic">YourApp</span>” and “<span style="color:#ff9f09; font-weight: bold; font-style: italic">OtherApp</span>”.
+In order to show this dependency, let’s examine the different ways two apps can communicate with each other using the Authorisation code grant flow[[2]](#footnote). The setup is that we have two apps: “<span style="color:#36f; font-weight: bold; font-style: italic">YourApp</span>” and “<span style="color:#ff9f09; font-weight: bold; font-style: italic">OtherApp</span>”.
 
 <span style="color:#36f; font-weight: bold; font-style: italic">YourApp</span> has the following components:
 
@@ -56,18 +56,18 @@ Now, let’s see the different access patterns:
 
 ### Access pattern 1a)
 
-![Architecture](https://supertokens.com/static/webflow/blog/oauth2-session/images/image363x-p-800.png)
+![Architecture](./architecture.png)
 
 One way of doing this is to simply use session management between your frontend and backend. Another method, if you are using an external identity management solution like Okta or Auth0, is:
 
 1. <span style="color:#36f; font-weight: bold; font-style: italic">YourApp</span>’s frontend redirects the user to <span style="color:#ff9f09; font-weight: bold; font-style: italic">OtherApp</span> (1.1) where the user logs into <span style="color:#ff9f09; font-weight: bold; font-style: italic">OtherApp</span>’s frontend which talks to its backend via session management (1.2).
-2. Upon successful authentication, <span style="color:#ff9f09; font-weight: bold; font-style: italic">OtherApp</span>’s backend issues a short lived access token[3] which is stored on <span style="color:#36f; font-weight: bold; font-style: italic">YourApp</span>’s frontend.
+2. Upon successful authentication, <span style="color:#ff9f09; font-weight: bold; font-style: italic">OtherApp</span>’s backend issues a short lived access token[[3]](#footnote) which is stored on <span style="color:#36f; font-weight: bold; font-style: italic">YourApp</span>’s frontend.
 3. <span style="color:#36f; font-weight: bold; font-style: italic">YourApp</span>’s frontend then uses this access token to talk to <span style="color:#36f; font-weight: bold; font-style: italic">YourApp</span>’s backend.
 4. When this access token expires, the user is redirected to <span style="color:#ff9f09; font-weight: bold; font-style: italic">OtherApp</span>’s frontend. If the session between <span style="color:#ff9f09; font-weight: bold; font-style: italic">OtherApp</span>’s frontend and backend is still alive, then a new access token is immediately issued to <span style="color:#36f; font-weight: bold; font-style: italic">YourApp</span>’s frontend, (via the authorisation code) otherwise, the user must login again.
 
 ### Access pattern 1b)
 
-![Access Pattern](https://supertokens.com/static/webflow/blog/oauth2-session/images/image373x-p-800.png)
+![Access Pattern](./access_pattern_a.png)
 
 1. The user logs into <span style="color:#36f; font-weight: bold; font-style: italic">YourApp</span>’s backend via <span style="color:#36f; font-weight: bold; font-style: italic">YourApp</span>’s frontend. Data between the two is exchanged via session management.
 2. The user authenticates themselves (after a redirection – 2.1) on <span style="color:#ff9f09; font-weight: bold; font-style: italic">OtherApp</span>’s frontend, which talks to its backend via session management (2.2).
@@ -76,21 +76,23 @@ One way of doing this is to simply use session management between your frontend 
 
 ### Access pattern 2a)
 
+![Access Pattern 2a](./access_pattern_2a.png)
+
 1. <span style="color:#36f; font-weight: bold; font-style: italic">YourApp</span>’s frontend redirects the user to <span style="color:#ff9f09; font-weight: bold; font-style: italic">OtherApp</span> (1.1) where the user logs into <span style="color:#ff9f09; font-weight: bold; font-style: italic">OtherApp</span>’s frontend which talks to its backend via session management (1.2).
-2. Upon successful authentication, <span style="color:#ff9f09; font-weight: bold; font-style: italic">OtherApp</span>’s backend issues a short lived access token[3] which is stored on <span style="color:#36f; font-weight: bold; font-style: italic">YourApp</span>’s frontend.
+2. Upon successful authentication, <span style="color:#ff9f09; font-weight: bold; font-style: italic">OtherApp</span>’s backend issues a short lived access token[[3]](#footnote) which is stored on <span style="color:#36f; font-weight: bold; font-style: italic">YourApp</span>’s frontend.
 3. <span style="color:#36f; font-weight: bold; font-style: italic">YourApp</span>’s frontend then uses this access token to talk to <span style="color:#ff9f09; font-weight: bold; font-style: italic">OtherApp</span>’s backend.
 4. When this access token expires, the user is redirected to <span style="color:#ff9f09; font-weight: bold; font-style: italic">OtherApp</span>’s frontend. If the session between <span style="color:#ff9f09; font-weight: bold; font-style: italic">OtherApp</span>’s frontend and backend is still alive, then a new access token is immediately issued to <span style="color:#36f; font-weight: bold; font-style: italic">YourApp</span>’s frontend, (via the authorisation code) otherwise, the user must login again.
 We can see that regardless of how two apps want to communicate with each other, there is always a need for session management.
 
 ## Session management
 
-There are numerous methods to implementing session management. Some are easier to implement, but are also less secure. Just like in OAuth, here too, the concept of short lived access and long lived refresh tokens can come into play. However, unlike OAuth, the refresh token can be sent and stored on the frontend as long as it is “one time use” (a.k.a rotating refresh tokens). Any other session flow is less secure as per the analysis in this blog post.
+There are numerous methods to implementing session management. Some are easier to implement, but are also less secure. Just like in OAuth, here too, the concept of short lived access and long lived refresh tokens can come into play. However, unlike OAuth, the refresh token can be sent and stored on the frontend as long as it is “one time use” (a.k.a [rotating refresh tokens](https://tools.ietf.org/html/rfc6819#section-5.2.2.3)). Any other session flow is less secure as per the analysis in [this blog post](https://supertokens.com/blog/all-you-need-to-know-about-user-session-security).
 
 ## Difference in token types
 
-A final difference is that OAuth and session management may use different types of tokens. In OAuth, if the access token issued by the OtherApp is used for communication between YourApp’s frontend and backend, then this token must be a JWT. This is so that YourApp’s backend can verify this token without having to call OtherApp’s backend. In fact, JWT was invented to fulfill this exact need.
+A final difference is that OAuth and session management may use different types of tokens. In OAuth, the access token issued by the **OtherApp** is used by **YourApp** to make API requests on behalf of the user. This access token allows access to specific parts of a user's data. This access token is opaque (a long, random string).
 
-In session management, the access token can be Opaque (a long, random string) or a JWT. There are pros and cons of using either of them as explained in this blog post.
+In session management, the access token can be Opaque or a JWT(an encoded signed JSON). There are pros and cons of using either of them as explained in this [blog post](https://supertokens.com/blog/are-you-using-jwts-for-user-sessions-in-the-correct-way).
 
 Can do something similar to time to production. Instead of a stopwatch, we show a spanner and servers
 
@@ -100,11 +102,13 @@ The core difference between OAuth and session management is one of trust. Using 
 
 If you liked this blog, you may also like other blogs from us:
 
-All you need to know about user session security
-The best way to securely manage user sessions
+- [All you need to know about user session security](https://supertokens.com/blog/all-you-need-to-know-about-user-session-security)
+- [The best way to securely manage user sessions](https://supertokens.com/blog/the-best-way-to-securely-manage-user-sessions)
 
 ## Footnote:
 
 [1]: Backend data breaches and insider threats do occur. However, these events are much more “controllable” by app developers than, for example, a malware on the end user’s computer.
+
 [2]: When describing the flows, we will not mention the authorisation code step via client secret or PKCE for brevity.
+
 [3]: The backend only issues an access token since that is short lived and it cannot trust the frontend to securely store a non-changing long lived token (refresh token).
