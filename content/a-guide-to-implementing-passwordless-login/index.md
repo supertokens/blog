@@ -87,7 +87,7 @@ app.get('/send-link', (req, res) => {
 });
 ```
 
-3. Create an endpoint for verifying tokens
+### 3. Create an endpoint for verifying tokens
 
 ```tsx
 app.get('/verify-token', (req, res) => {
