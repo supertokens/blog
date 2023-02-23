@@ -19,5 +19,8 @@
     },
     {
         "location": "https://supertokens.com/blog/a-guide-to-implementing-passwordless-login"
+    },
+    {
+        "location": "https://supertokens.com/blog/oauth-2-vs-session-management"
     }
 ]
