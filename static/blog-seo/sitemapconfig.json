@@ -16,5 +16,8 @@
     },
     {
         "location": "https://supertokens.com/blog/self-hosted-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/implementing-the-right-email-verification-flow"
     }
 ]

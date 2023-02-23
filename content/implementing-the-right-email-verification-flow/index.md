@@ -1,5 +1,5 @@
 ---
-title: Implementing Email Verification
+title: Implementing the right Email Verification flow
 date: "2023-02-24"
 description: "Email verification can increase friction and adds another stop to onboarding, but when done correctly can lead to better security and establish better communication with users."
 cover: "email_verification_blog_banner.png"
