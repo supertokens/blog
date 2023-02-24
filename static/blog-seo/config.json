@@ -226,7 +226,7 @@
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/passwordless_banner.png\" /> ",
             "<!--OG Tags-->"
         ],
-        "title": "Self-hosted Authentication",
+        "title": "A Guide to Implementing Passwordless Login",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/a-guide-to-implementing-passwordless-login\"},\"headline\":\"A Guide to Implementing Passwordless Login\",\"description\":\"Passwordless authentication is becoming an increasingly popular choice for developers. In this guide we will go over how you can implement passwordless authentication in your application\",\"image\":\"https://supertokens.com/blog-meta-images/passwordless_banner.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     },
     {
@@ -249,7 +249,7 @@
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/oauth-2-vs-session-management.png\" /> ",
             "<!--OG Tags-->"
         ],
-        "title": "Self-hosted Authentication",
-        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/oauth-2-vs-session-management\"},\"headline\":\"A Guide to Implementing Passwordless Login\",\"description\":\"Passwordless authentication is becoming an increasingly popular choice for developers. In this guide we will go over how you can implement passwordless authentication in your application\",\"image\":\"https://supertokens.com/blog-meta-images/passwordless_banner.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+        "title": "OAuth 2.0 vs Session Management",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/oauth-2-vs-session-management\"},\"headline\":\"OAuth 2.0 vs Session Management\",\"description\":\" lot of developers confuse OAuth with web session management and hence end up using the wrong protocol. This article will clarify when to use what solution.\",\"image\":\"https://supertokens.com/blog-meta-images/oauth-2-vs-session-management.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
