@@ -122,18 +122,6 @@ module.exports = [
   },
   {
     fields: {
-      slug: "/oauth-2-vs-session-management",
-    },
-    frontmatter: {
-      title: "OAuth 2.0 vs Session Management",
-      description: "A lot of developers confuse OAuth with web session management and hence end up using the wrong protocol. This article will clarify when to use what solution.",
-      category: "sessions",
-      date: "April 24, 2020",
-      cover: "oauth-2-vs-session-management.png"
-    }
-  },
-  {
-    fields: {
       slug: "/the-best-way-to-securely-manage-user-sessions",
     },
     frontmatter: {
