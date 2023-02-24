@@ -94,8 +94,6 @@ A final difference is that OAuth and session management may use different types 
 
 In session management, the access token can be Opaque or a JWT(an encoded signed JSON). There are pros and cons of using either of them as explained in this [blog post](https://supertokens.com/blog/are-you-using-jwts-for-user-sessions-in-the-correct-way).
 
-Can do something similar to time to production. Instead of a stopwatch, we show a spanner and servers
-
 ## Conclusion:
 
 The core difference between OAuth and session management is one of trust. Using session management, one can maintain a long lived, authenticated connection between an untrusted party (frontend) and a trusted party (both within the same app). Whereas using OAuth, one can maintain a long lived, authenticated connection between two trusted parties – both being the backend of different services.
