@@ -226,7 +226,7 @@
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/email_verification_blog_banner.png\" /> ",
             "<!--OG Tags-->"
         ],
-        "title": "Self-hosted Authentication",
+        "title": "Implementing the right email verification flow",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/implementing-the-right-email-verification-flow\"},\"headline\":\"Implementing the right email verification flow\",\"description\":\"Email verification can increase friction and adds another stop to onboarding, but when done correctly can lead to better security and establish better communication with users\",\"image\":\"https://supertokens.com/blog-meta-images/email_verification_blog_banner.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
