@@ -7,15 +7,15 @@ category: "programming"
 author: "SuperTokens team"
 ---
 
-### Introduction
+## Introduction
 
 Email verification is contentious, it increases friction and adds yet another step to onboarding. However, when done right, email verification can lead to better communication with users, avoid fake accounts / negative externalities, and maintain high marketing reputation. 
 
 In this post, we’ll break down why email verification is important and how to implement the right verification flow for your application. 
 
-### **Why we need email verification**
+## **Why we need email verification**
 
-**Communicating with users**
+### Communicating with users
 
 The main reason for adding email verification is to have a direct channel to users. 
 
@@ -25,13 +25,13 @@ Company content is in the same boat. Creating engaging content is one of the bes
 
  
 
-**Avoiding fake accounts / negative externalities**
+### Avoiding fake accounts / negative externalities
 
 Email verification helps weed out fake accounts. Generally, fake accounts are meant to abuse a certain feature or product of the application. This can lead to rising server costs and skew data analytics. Adding in the additional friction in email verification can be a low-cost way of reducing the risk for product misuse. 
 
 In particular, some fake accounts might have real email addresses attached. An attacker could sign up with the email john@fbi.gov or susan@irs.gov. The last thing you want to do is badger John and Susan with company content. 
 
-**Account linking**
+### Account linking
 
 Another reason to add email verification is to prevent attackers from hijacking accounts during automatic account linking. 
 
@@ -39,7 +39,7 @@ For example, if a user already has an account using Google Sign-In, an attacker 
 
 To solve this, the system must first verify the email-password account before linking it to the Google Sign-In account. 
 
-**Marketing reputation**
+### Marketing reputation
 
 If a product is shipped but users don’t discover it, was it really worth it?
 
@@ -47,11 +47,11 @@ Companies can email users to celebrate feature updates, product launches, and ca
 
 Email Service Providers (ESPs) don’t take kindly to accounts that see high levels of hard bounces. They automatically assume that the account is a spammer and blacklist the account. That blocks everything from company updates to more vital operations like sending password reset instructions. 
 
-### A how-to guide on email verification
+## A how-to guide on email verification
 
 Implementing a perfect email verification flow is a delicate balance between friction and user verification. 
 
-**Universal verification**
+### Universal verification
 
 The first question to ask is, “Does universal email verification make sense for my application?”
 
@@ -59,7 +59,7 @@ In some cases, like building a financial application, having every user verify t
 
 On the other hand, more trivial applications like image editing, might not have the same luxury. Most users are looking to access the product as quickly as possible, and throwing up an email verification barrier is bound to result in lower conversions or increased churn.
 
-**Verification triggers**
+### Verification triggers
 
 Say we still want to set up email verification - we’ll need to figure out what actions trigger an email verification. We could require email verification as soon as a user signs up, or perhaps when the user comes back for the second session.
 
@@ -71,7 +71,7 @@ For example, if someone is signing up with a [gmail.com](http://gmail.com) email
 
 Either way, it’s critical to define a trigger that will initiate the email verification flow. Once initiated, the flow should tell users that a verification email has been sent and lock features until the user has confirmed the email. If the user has no incentive to verify their email, they’ll simply ignore the verification email.
 
-**Generating verification tokens**
+### Generating verification tokens
 
 Once the email verification process starts, the first step is to design a verification token. With SuperTokens, the verification token is a random 128 character string. You can generate any random 64-128 character token. The length prevents brute force attempts from attackers.
 
@@ -124,7 +124,7 @@ const mailConfigurations = {
 sendMail(mailConfigurations);
 ```
 
-**Storing verification tokens in the database**
+### Storing verification tokens in the database
 
 Occasionally, a user might try to request multiple email verifications. Since we have a generous expiration time, we can reuse the previously generated token in the database and send the same link each time the user requests a new email. If the expiration time is up, we can generate a new token and send the new link to the user. Generally, this makes it easier for us to handle email verification logic without having to create and disable multiple verification tokens. 
 
@@ -132,7 +132,7 @@ On the other hand, if we wanted to tighten security, we could choose to generate
 
 In some cases, it makes sense to disable them. However, it could lead to frustrated users. Alternatively, we could keep all tokens enabled and disable all of them whenever one of the tokens is consumed.
 
-**Passing verification to the backend**
+### Passing verification to the backend
 
 After a user clicks on the verification link, there should be a clear indication for the user that they’ve been email-verified. This can either take the form of a distinct landing page or it could be a pop-up on the home page of the application.
 
@@ -182,6 +182,6 @@ function verifyEmail(token) {
   }
 ```
 
-### Conclusion
+## Conclusion
 
 Email verification is only a small part of the overall onboarding process, but one with a surprising amount of nuance. Poor implementation can lead to frustrated users who will churn out. While you’ll get away with it in the beginning, ignoring this is a bad idea in the long term.
