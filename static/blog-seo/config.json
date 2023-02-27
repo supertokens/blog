@@ -258,7 +258,7 @@
         "metaTags": [
             "<meta name=\"description\" content=\"Email verification can increase friction and adds another stop to onboarding, but when done correctly can lead to better security and establish better communication with users\" />",
             "",
-            "<meta name=\"keywords\" content=\"Authentication, Open Source, Self-hosting, Keycloak, FusionAuth, Ory\" />",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Self-hosting, Email Verification, Guide\" />",
             "<!--OG Tags-->",
             "<meta property=\"og:title\" content=\"Implementing the right email verification flow\" />",
             "<meta property=\"og:type\" content=\"article\" />",
