@@ -1,6 +1,6 @@
 ---
 title: Django Bootstrap Login Template (How-To)
-date: "2023-03-6"
+date: "2023-03-06"
 description: "This tutorial wil guide you on how you can setup a bootstrap login template in Django"
 cover: ""
 category: "programming"
