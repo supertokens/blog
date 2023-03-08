@@ -288,17 +288,17 @@
                 "<meta property=\"og:type\" content=\"article\" />",
                 "<meta property=\"og:url\" content=\"https://supertokens.com/blog/django-bootstrap-login-template\" />",
                 "<meta property=\"og:description\" content=\"In this article we look at how you can build a login form with bootstrap in your Django applications\"/>",
-                "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/email_verification_blog_banner.png\" />",
+                "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/django_bootstrap_banner.png\" />",
                 "",
                 "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-                "<meta name=\"twitter:title\" content=\"Implementing the right email verification flow\" />",
-                "<meta name=\"twitter:description\" content=\"Email verification can increase friction and adds another stop to onboarding, but when done correctly can lead to better security and establish better communication with users\" />",
-                "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/implementing-the-right-email-verification-flow\" />",
-                "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/email_verification_blog_banner.png\" /> ",
+                "<meta name=\"twitter:title\" content=\"Django Bootstrap Login Template (How-To)\" />",
+                "<meta name=\"twitter:description\" content=\"In this article we look at how you can build a login form with bootstrap in your Django applications\" />",
+                "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/django-bootstrap-login-template\" />",
+                "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/django_bootstrap_banner.png\" /> ",
                 "<!--OG Tags-->"
             ],
-            "title": "Implementing the right email verification flow",
-            "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/implementing-the-right-email-verification-flow\"},\"headline\":\"Implementing the right email verification flow\",\"description\":\"Email verification can increase friction and adds another stop to onboarding, but when done correctly can lead to better security and establish better communication with users\",\"image\":\"https://supertokens.com/blog-meta-images/email_verification_blog_banner.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+            "title": "Django Bootstrap Login Template (How-To)",
+            "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/django-bootstrap-login-template\"},\"headline\":\"In this article we look at how you can build a login form with bootstrap in your Django applications\",\"description\":\"Email verification can increase friction and adds another stop to onboarding, but when done correctly can lead to better security and establish better communication with users\",\"image\":\"https://supertokens.com/blog-meta-images/email_verification_blog_banner.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
             
         }
 ]
