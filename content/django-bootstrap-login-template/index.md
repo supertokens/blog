@@ -7,20 +7,20 @@ category: "programming"
 author: "SuperTokens Team"
 ---
 
-### High Level Refresher
+## High Level Refresher
 
 **Django** is a high-level Python framework that follows the model-template-views architectural pattern. Django is one of the most [popular web frameworks](https://www.jetbrains.com/lp/devecosystem-2022/python/) due to its security, scalability, and flexible design. Companies like Instagram, Reddit, and Dropbox all used Django. 
 
 **Bootstrap** is an open-source CSS framework that provides pre-built HTML, CSS, and JavaScript components. This includes elements such as navigation bars, forms, buttons, modals, and more. Originally created by Twitter, Bootstrap is now maintained by a large developer community.
 
-### Prerequisites
+## Prerequisites
 
 - A basic understanding of HTML, CSS, and Javascript
 - A basic understanding of Django
 - [Python3](https://www.python.org/downloads/) installed on your machine
 - [Django](https://docs.djangoproject.com/en/4.1/topics/install/) installed on your machine
 
-### Setting up a Django application
+## Setting up a Django application
 
 Let’s first create a project. In your command line, find the correct directory, and run the following command: 
 
@@ -48,7 +48,7 @@ Below is a command-line screenshot of setting up a Django application from scrat
 
 ![Django setup terminal](./django_terminal.png)
 
-### Editing Project Configs
+## Editing Project Configs
 
 **django_login/settings.py**
 
@@ -74,7 +74,7 @@ urlpatterns = [
 ]
 ```
 
-### Building the login screen with Bootstrap
+## Building the login screen with Bootstrap
 
 **login/templates/registration/login.html**
 
@@ -181,7 +181,7 @@ def index(request):
     return render(request, 'authentication/login.html')
 ```
 
-### Running the application
+## Running the application
 
 Once everything is set up, your `login` folder structure should look like this:
 
@@ -193,7 +193,7 @@ When we run python `manage.py runserver`, the following webpage should show up o
 
 Great success!
 
-### Conclusion
+## Conclusion
 
 Congrats - you’ve created a login screen using Django with Bootstrap! You’ll still need to set up the authentication logic (hashing & storing the user credentials, session management, building the signup and forgot password screens, and redirecting post-login).
 
