@@ -23,7 +23,7 @@ We first launched our website in 2020. By 2022, we had changed so much as a comp
 
 Our core product had rapidly evolved and as new features were released, we added them in piecemeal - nothing was optimized for cleanliness or conversion.
 
-Since we first launched the site, we’ve ****shipped:
+Since we first launched the site, we’ve shipped:
 
 - User Roles
 - 2FA
