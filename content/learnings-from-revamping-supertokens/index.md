@@ -184,7 +184,7 @@ Then, when we were confident we had a couple of good design iterations, we kept 
 
 ![SuperTokens Figma ](./figma.png)
 
-By using both content variation or design variation, we were able isolate which design and content would work best independently and then together.
+By using both content variation or design variation, we were able to isolate which design and content would work best independently, and then in conjunction with one another as well.
 
 ### Step 6: User Interviews
 ![SuperTokens swag](./suoertokens_swag_1.png)
@@ -298,14 +298,24 @@ We were touched to see our efforts get noticed:
 ![Testimony 3](./testimony_3.png)
 
 
-Most importantly, our site was performing way better.
+Most importantly, **our site was performing way better:**
 
-![SuperTokens new stats](./new_stats.png)
+- 50% increase in visitors reaching the bottom of our homepage - from 8.7% to 13%
+- Average increase across all meaningful CTA conversions was 68.5%
+- Signup clicks on our header doubled from 1.9% to 3.8%
 
-While we don’t have exact numbers on our exact performance on the prior homepage - it was clear that it was night and day.
+![SuperTokens new stats](./final_stats.png)
 
-Our visitors are engaged, with a lot less cognitive overload - 11% of our total visitors make it to the bottom of our homepage.
+The difference was night and day!
 
 ---
 
 If you found this valuable, follow us for more build in public content, or check out our docs to get started using the easiest open source auth solution!
+
+- [EmailPassword integration with React-native](https://supertokens.com/docs/emailpassword/custom-ui/init/frontend)
+- [User roles](https://supertokens.com/docs/userroles/introduction)
+- [Disabling signups with an invite flow](https://supertokens.com/docs/emailpassword/common-customizations/disable-sign-up/emailpassword-changes)
+- [AWS lambda docs](https://supertokens.com/docs/emailpassword/serverless/with-aws-lambda/about)
+- [Auth0 rules and hooks alternative in SuperTokens(Overrides)](https://supertokens.com/docs/emailpassword/common-customizations/handling-signup-success)
+- [M2m based authentication](https://supertokens.com/docs/microservice_auth/introduction)
+- [Migration guide](https://supertokens.com/docs/emailpassword/migration/about)
