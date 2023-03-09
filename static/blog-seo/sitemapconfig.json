@@ -28,5 +28,8 @@
     },
     {
         "location": "https://supertokens.com/blog/django-bootstrap-login-template"
+    },
+    {
+        "location": "https://supertokens.com/blog/learnings-from-revamping-supertokens"
     }
 ]

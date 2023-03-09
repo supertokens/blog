@@ -35,7 +35,6 @@ Since we first launched the site, we’ve ****shipped:
 Some screenshots of our old website:
 
 ![SuperTokens Old Homepage 1](./supertokens_homepage_old_1.png)
-
 ![SuperTokens Old Homepage 2](./supertokens_homepage_old_2.png)
 
 We knew we wanted a more breathable, developer-friendly aesthetic that matched our brand and product.
