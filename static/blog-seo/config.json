@@ -157,7 +157,7 @@
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/optimize-react-app-performance.png\" /> ",
             "<!--OG Tags-->"
         ],
-        "title": "What do pre-built authentication UIs look like",
+        "title": "5 Tips for Optimizing Your React App’s Performance",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/5-tips-for-optimizing-your-react-apps-performance\"},\"headline\":\"5 Tips for Optimizing Your React App’s Performance\",\"description\":\"One of the most frustrating things as a React developer is investing time and effort into building an application only to find it slow and unresponsive. In this post, we’ll go over 5 tips to improve the performance of your React app.\",\"image\":\"https://supertokens.com/blog-meta-images/optimize-react-app-performance.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     },
     {
@@ -180,7 +180,125 @@
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/custom_ui.png\" /> ",
             "<!--OG Tags-->"
         ],
-        "title": "What do pre-built authentication UIs look like",
+        "title": "Creating Great Authentication Experiences with Custom UI",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/creating-great-authentication-experiences-with-custom-ui\"},\"headline\":\"Creating Great Authentication Experiences with Custom UI\",\"description\":\"A guide on creating great authentication experiences with custom UI.\",\"image\":\"https://supertokens.com/blog-meta-images/custom_ui.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
-    }
+    },
+    {
+        "path": "/blog/self-hosted-authentication",
+        "metaTags": [
+            "<meta name=\"description\" content=\"By self-hosting auth users gain finer control over their data.To shed some light on the matter, let’s compare several authentication providers which offer self-hosting functionality\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Self-hosting, Keycloak, FusionAuth, Ory\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Self-hosted Authentication\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/self-hosted-authentication\" />",
+            "<meta property=\"og:description\" content=\"By self-hosting auth users gain finer control over their data.To shed some light on the matter, let’s compare several authentication providers which offer self-hosting functionality\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/self_hosted_auth.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Self-hosted Authentication\" />",
+            "<meta name=\"twitter:description\" content=\"By self-hosting auth users gain finer control over their data.To shed some light on the matter, let’s compare several authentication providers which offer self-hosting functionality\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/self-hosted-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/self_hosted_auth.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Self-hosted Authentication",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/self-hosted-authentication\"},\"headline\":\"Self-hosted Authentication\",\"description\":\"By self-hosting auth users gain finer control over their data.To shed some light on the matter, let’s compare several authentication providers which offer self-hosting functionality\",\"image\":\"https://supertokens.com/blog-meta-images/self_hosted_auth.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+
+        "path": "/blog/a-guide-to-implementing-passwordless-login",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Passwordless authentication is becoming an increasingly popular choice for developers. In this guide we will go over how you can implement passwordless authentication in your application\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Passwordless, Magic link, OTP\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"A Guide to Implementing Passwordless Login\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/a-guide-to-implementing-passwordless-login\" />",
+            "<meta property=\"og:description\" content=\"Passwordless authentication is becoming an increasingly popular choice for developers. In this guide we will go over how you can implement passwordless authentication in your application\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/passwordless_banner.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"A Guide to Implementing Passwordless Login\" />",
+            "<meta name=\"twitter:description\" content=\"Passwordless authentication is becoming an increasingly popular choice for developers. In this guide we will go over how you can implement passwordless authentication in your application\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/a-guide-to-implementing-passwordless-login\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/passwordless_banner.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "A Guide to Implementing Passwordless Login",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/a-guide-to-implementing-passwordless-login\"},\"headline\":\"A Guide to Implementing Passwordless Login\",\"description\":\"Passwordless authentication is becoming an increasingly popular choice for developers. In this guide we will go over how you can implement passwordless authentication in your application\",\"image\":\"https://supertokens.com/blog-meta-images/passwordless_banner.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/oauth-2-vs-session-management",
+        "metaTags": [
+            "<meta name=\"description\" content=\"A lot of developers confuse OAuth with web session management and hence end up using the wrong protocol. This article will clarify when to use what solution.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, OAuth2.0, session management, security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"OAuth 2.0 vs Session Management\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/oauth-2-vs-session-management\" />",
+            "<meta property=\"og:description\" content=\"A lot of developers confuse OAuth with web session management and hence end up using the wrong protocol. This article will clarify when to use what solution.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/oauth-2-vs-session-management.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"OAuth 2.0 vs Session Management\" />",
+            "<meta name=\"twitter:description\" content=\"A lot of developers confuse OAuth with web session management and hence end up using the wrong protocol. This article will clarify when to use what solution.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/oauth-2-vs-session-management\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/oauth-2-vs-session-management.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "OAuth 2.0 vs Session Management",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/oauth-2-vs-session-management\"},\"headline\":\"OAuth 2.0 vs Session Management\",\"description\":\" lot of developers confuse OAuth with web session management and hence end up using the wrong protocol. This article will clarify when to use what solution.\",\"image\":\"https://supertokens.com/blog-meta-images/oauth-2-vs-session-management.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/implementing-the-right-email-verification-flow",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Email verification can increase friction and adds another stop to onboarding, but when done correctly can lead to better security and establish better communication with users\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Self-hosting, Email Verification, Guide\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Implementing the right email verification flow\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/implementing-the-right-email-verification-flow\" />",
+            "<meta property=\"og:description\" content=\"Email verification can increase friction and adds another stop to onboarding, but when done correctly can lead to better security and establish better communication with users\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/email_verification_blog_banner.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Implementing the right email verification flow\" />",
+            "<meta name=\"twitter:description\" content=\"Email verification can increase friction and adds another stop to onboarding, but when done correctly can lead to better security and establish better communication with users\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/implementing-the-right-email-verification-flow\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/email_verification_blog_banner.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Implementing the right email verification flow",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/implementing-the-right-email-verification-flow\"},\"headline\":\"Implementing the right email verification flow\",\"description\":\"Email verification can increase friction and adds another stop to onboarding, but when done correctly can lead to better security and establish better communication with users\",\"image\":\"https://supertokens.com/blog-meta-images/email_verification_blog_banner.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+        
+        },
+        {
+            "path": "/blog/django-bootstrap-login-template",
+            "metaTags": [
+                "<meta name=\"description\" content=\"In this article we look at how you can build a login form with bootstrap in your Django applications\" />",
+                "",
+                "<meta name=\"keywords\" content=\"Authentication, Django, Bootstrap, Login, Guide\" />",
+                "<!--OG Tags-->",
+                "<meta property=\"og:title\" content=\"Django Bootstrap Login Template (How-To)\" />",
+                "<meta property=\"og:type\" content=\"article\" />",
+                "<meta property=\"og:url\" content=\"https://supertokens.com/blog/django-bootstrap-login-template\" />",
+                "<meta property=\"og:description\" content=\"In this article we look at how you can build a login form with bootstrap in your Django applications\"/>",
+                "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/django_bootstrap_banner.png\" />",
+                "",
+                "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+                "<meta name=\"twitter:title\" content=\"Django Bootstrap Login Template (How-To)\" />",
+                "<meta name=\"twitter:description\" content=\"In this article we look at how you can build a login form with bootstrap in your Django applications\" />",
+                "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/django-bootstrap-login-template\" />",
+                "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/django_bootstrap_banner.png\" /> ",
+                "<!--OG Tags-->"
+            ],
+            "title": "Django Bootstrap Login Template (How-To)",
+            "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/django-bootstrap-login-template\"},\"headline\":\"Django Bootstrap Login Template (How-To)\",\"description\":\"In this article we look at how you can build a login form with bootstrap in your Django applications\",\"image\":\"https://supertokens.com/blog-meta-images/django_bootstrap_banner.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+            
+        }
 ]
