@@ -1,31 +1,29 @@
 ---
 title: "Learnings from Revamping SuperTokens"
 description: "A #buildinpublic piece on why we designed the SuperTokens homepage"
-date: "2023-02-01"
-cover: "TODO.png"
+date: "2023-03-14"
+cover: "website-revamp-banner.png"
 category: "programming"
 author: "SuperTokens team"
 ---
 
-You may have noticed or heard from us that there’s something different about the SuperTokens website lately. Your eyes don’t deceive you, and the rumors are true.
+You may have noticed that there’s something different about the SuperTokens website lately.
 
-We hope you’re enjoying the revamp as much as we are!
+Your eyes don’t deceive you, and the rumors are true ;)
+
+We’ve revamped our website and onboarding experience - our goal is to empower developers with open source, powerful authentication and the new interface is a step forward to reaching that goal
 
 ![SuperTokens's Revamped Homepage](./supertokens_homepage.png)
 
-This is a short #buildinpublic piece on why we went for the redesign, our approach, and what we learned throughout the process.
+This is a #buildinpublic piece on why we went for the redesign, our approach, and what we learned throughout the process.
 
 ## Why the Revamp?
 
-There have been countless small changes since we first launched the SuperTokens site a few years back. As new features were released, we would add them in piecemeal - nothing was optimized for cleanliness or conversion.
+We first launched our website in 2020. By 2022, we had changed so much as a company, but the website had simply not kept up.
 
-![SuperTokens Old Homepage 1](./supertokens_homepage_old_1.png)
+Our core product had rapidly evolved and as new features were released, we added them in piecemeal - nothing was optimized for cleanliness or conversion.
 
-![SuperTokens Old Homepage 2](./supertokens_homepage_old_2.png)
-
-We knew we wanted a more breathable, developer-friendly aesthetic that matched our brand and product.
-
-Most importantly, the SuperTokens product had rapidly evolved, leaving the homepage stuck in the past. Since we first launched the site, we had shipped:
+Since we first launched the site, we’ve ****shipped:
 
 - User Roles
 - 2FA
@@ -34,35 +32,40 @@ Most importantly, the SuperTokens product had rapidly evolved, leaving the homep
 - Passwordless
 - Account linking & multi-tenancy
 
-We also needed to optimize our webpage to better accommodate the touchpoints in our user journey and gel better with our new CLI strategy.
+Some screenshots of our old website:
+
+![SuperTokens Old Homepage 1](./supertokens_homepage_old_1.png)
+
+![SuperTokens Old Homepage 2](./supertokens_homepage_old_2.png)
+
+We knew we wanted a more breathable, developer-friendly aesthetic that matched our brand and product.
+
+We also needed to optimize our webpage to better accommodate our user journey and gel better with our new CLI strategy.
 
 ## **The New SuperTokens Experience**
 
-During discussions on how we wanted to improve in the new site, we realized that we didn’t really care about signups - the number of signups was a vanity metric.
+During discussions on how we wanted to improve in the new site, we realized that we didn’t really care about signups - the number of signups was a vanity metric. It didn’t matter how many signups we had if users didn’t fully understand how to implement SuperTokens post-signup. 
 
-What we really cared about was in our users getting familiar quickly, and interested users getting started quickly and easily, whether it was with self-hosted or our SaaS. Signing up would simply be one of the steps during implementation, not the end goal.
+We wanted our visitors to easily understand SuperTokens and for interested users to get started quickly and easily - whether it was with a self-hosted implementation or our managed auth solution.
 
-In the past, we had seen large drop-offs between users signing up and implementing SuperTokens because users would sign up without a clear path forward on how to ramp up.
-
-This question became our north star - how do we make the journey to active usership as frictionless as possible?
+This question became our north star: “How do we make the journey to active user as frictionless as possible?”
 
 We wanted to:
 
-- Develop more trust in our users in their first impression
-- Reduce cognitive load in our website copy
+- Reduce cognitive load and technical jargon
 - Reduce the number of steps & friction necessary to try out SuperTokens
-- Update our copy and documentation to reflect new features
+- Update our site to reflect new features
 - Place signup later in the user journey, with more guidance immediately after signup
 
 With our CLI as the no-brainer way to get started with SuperTokens in less than a minute, our CTAs now guided users towards our documentation and our Discord community for questions and support.
 
 The user journey before:
 
-Sign up → docs → implement frontend → implement backend → implement core
+> Sign up → docs → implement frontend → implement backend → implement core
 
 And after:
 
-Consult docs + join Discord → implement frontend → implement backend → sign up → implement core
+> Consult docs + join Discord → implement frontend → implement backend → sign up → implement core
 
 ## Our Approach
 
@@ -80,7 +83,11 @@ Before starting anything, we wanted to make sure we based our design and layout 
 
 *Success leaves clues - Jim Rohn*
 
-To get an understanding for the evolution of design in the dev tool space, we used the Wayback Machine to look at how designs have changed over time.
+To get an understanding of the evolution of design in the dev tool space, we used the Wayback Machine to look at how designs have changed over time. In looking at competitors and other companies in the dev tool space, we wanted to observe what content/messaging was added or subtracted from their sites to truly grasp what worked and what didn’t.
+
+We created a detailed FigJam diagram of all their information architecture and website structures (not shown here) to get an accurate lay of the land.
+
+This research process allowed us to be incredibly thorough and precise with our own design.
 
 ![Auth0 old homepage](./auth0_old_homepage.png)
 
@@ -117,12 +124,6 @@ Outside of the Wayback Machine, we looked at current homepages from other notabl
 
 We learned from our Twitter and Reddit research that developer tools seemed to find success with gradients, dark themes, and minimalist design - all seem to be corroborated by the examples as well.
 
-**Competitor Research**
-
-![Competitor Research](./competitor_research.png)
-
-We also used Figjam to map out what we thought our direct competitors did well (or didn’t). We drew inspiration for what types of content to include, and the order in which we should present it, for good flow on the homepage. 
-
 ### Step 2: Analyze Prior Data
 
 Between our Discord and five to ten calls a week with prospective and active users, we were able to gather a lot of qualitative feedback on our existing site.
@@ -133,30 +134,43 @@ Two spots in particular on our old site come to mind:
 
 **1) The “We Are” section**
 
+We took inspiration from Amazon’s three ‘pillars’ of customer wants: faster deliveries, more inventory, and cheaper prices.
+
+For SuperTokens, we aim to provide our customers a better developer experience, with an open-source solution, and complete sovereignty over their auth implementation.
+
+We wanted to detail each of these pillars here, with details about what we do specifically for each.
+
 ![SuperTokens we are section](./supertokens_we_are_section.png)
 
-Our Hotjar recordings showed that people did not stick around to read it - it was just too much text.
-
+But, our Hotjar recordings showed that people did not stick around to read it - it was just too much text.
 
 **2) The “How It Works” section:**
 
+SuperTokens’ architecture is unique to all other auth providers. Apart from being a valuable selling point, we originally thought that providing context early would make understanding everything else about SuperTokens much simpler.
+
 ![SuperTokens how it works section](./supertokens_how_it_works.png)
 
-Similar to the other section, there’s a lot going on. The ‘Back’ and ‘Next’ buttons at the top step the user through how SuperTokens works. What we found is that very few people clicked on the buttons at all, and only 0.5% percent of our visitors actually clicked all the way to the end.
+But similar to the other section, there’s a lot going on. The ‘Back’ and ‘Next’ buttons at the top walk the user through how SuperTokens works. 
+
+However, it didn’t have the intended effect. Instead of simplifying, it introduced extra cognitive load and made it seem like SuperTokens was difficult to use. Few people clicked on the buttons at all, and only 0.5% percent of our visitors actually clicked all the way to the end.
 
 ![SuperTokens usage graphs](./supertokens_usage_graphs.png)
 
-Since it wasn’t doing what we wanted it to, we decided to nix this as well.
+Since it wasn’t doing what we wanted it to, we decided to remove this section entirely.
+
+Eventually, we found better ways to communicate the architecture in a more complete way through the docs.
 
 ### Step 3: Paper Layouts
 
-![SuperTokens Paper Layout 1](./paperlayout_1.png)
-![SuperTokens Paper Layout 2](./paperlayout_2.png)
-![SuperTokens Paper Layout 3](./paperlayout_3.png)
-![SuperTokens Paper Layout 4](./paperlayout_4.png)
+![SuperTokens paper layouts](./paper_layouts.png)
 
-With our research and a good idea of what we wanted to say, we sketched out our different content sections of the homepage by hand. This proved to be a good way to get things brainstormed prior to designing in a digital medium. As you can tell, it was also easy to annotate and take notes for tweaks.
+With our research and a good idea of what we wanted to say, we sketched out our different content sections of the homepage by hand.
 
+Pro tip: You should use pen and paper for figuring out your layout first, *****then***** move to wireframes.
+
+Why?
+
+Pen and paper are much quicker for prototyping. Sketching different approaches to a design is fast and helps to bring clarity. It's simple to add or remove sections as you go, and we managed to arrive at something we liked within an hour or two.
 ### Step 4: Wireframes
 
 ![SuperTokens Wireframes](./wireframes.png)
@@ -169,9 +183,7 @@ After playing around with our basic wireframes, it was to design and assemble th
 
 Then, when we were confident we had a couple of good design iterations, we kept dummy content the same while switching between different designs to see which ones worked better.
 
-![SuperTokens Figma 1](./figma_1.png)
-![SuperTokens Figma 2](./figma_2.png)
-![SuperTokens Figma 3](./figma_3.png)
+![SuperTokens Figma ](./figma.png)
 
 By using both content variation or design variation, we were able isolate which design and content would work best independently and then together.
 
