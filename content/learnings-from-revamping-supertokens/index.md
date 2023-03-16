@@ -1,7 +1,7 @@
 ---
 title: "Learnings from Revamping SuperTokens"
 description: "A #buildinpublic piece on why we designed the SuperTokens homepage"
-date: "2023-03-14"
+date: "2023-03-16"
 cover: "website-revamp-banner.png"
 category: "programming"
 author: "SuperTokens team"
