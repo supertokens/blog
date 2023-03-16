@@ -35,6 +35,7 @@ Since we first launched the site, we’ve shipped:
 Some screenshots of our old website:
 
 ![SuperTokens Old Homepage 1](./supertokens_homepage_old_1.png)
+
 ![SuperTokens Old Homepage 2](./supertokens_homepage_old_2.png)
 
 We knew we wanted a more breathable, developer-friendly aesthetic that matched our brand and product.
@@ -211,9 +212,9 @@ We incorporated the feedback by playing around - a lot - in Figma.
 
 And here are some the final versions of the sections we tweaked based on user feedback!
 
-![SuperTokens Final design 1](./st_final_1.png)
 ![SuperTokens Final design 2](./st_final_2.png)
-![SuperTokens Final design 3](./st_final_3.png)
+
+![SuperTokens Final design 1](./st_final_1.png)
 
 ### Step 7: Webflow
 
