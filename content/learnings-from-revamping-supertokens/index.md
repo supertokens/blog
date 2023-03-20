@@ -11,7 +11,7 @@ You may have noticed that there’s something different about the SuperTokens we
 
 Your eyes don’t deceive you, and the rumors are true ;)
 
-We’ve revamped our website and onboarding experience - our goal is to empower developers with open source, powerful authentication and the new interface is a step forward to reaching that goal
+We’ve revamped our website and onboarding experience - our goal is to empower developers with open source, powerful authentication and the new interface is a step forward to reaching that goal.
 
 ![SuperTokens's Revamped Homepage](./supertokens_homepage.png)
 
