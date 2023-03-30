@@ -530,7 +530,7 @@ For this setup to work, we must connect SuperTokens and PostgreSQL via the host 
         - app_network
       restart: unless-stopped
       healthcheck:
-        test: ['CMD', 'pg_isready -U supertokens_user']
+        test: ['CMD', 'pg_isready']
         interval: 5s
         timeout: 5s
         retries: 5
