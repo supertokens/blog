@@ -45,7 +45,7 @@ When we looked at existing options to implement custom UI, we found that most au
 
 All SuperTokens users, free or paid, can fully enjoy the benefits of the SuperTokens custom UI. Our philosophy has always been to ensure fair pricing and monetize features specific to enterprise personas. 
 
-Further, our frontend SDK exposes functions that simply the process of building native authentication. Other authentication providers like [Auth0](https://auth0.com/docs/libraries/auth0js#ready-to-go-example) require users to manually call their backend APIs and handle various responses, a fundamentally worse experience. 
+Further, our frontend SDK exposes functions that simplify the process of building native authentication. Other authentication providers like [Auth0](https://auth0.com/docs/libraries/auth0js#ready-to-go-example) require users to manually call their backend APIs and handle various responses, a fundamentally worse experience. 
 
 ### Native experiences, happy users
 
