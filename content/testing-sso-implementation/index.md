@@ -1,7 +1,7 @@
 ---
-title: SSO Test Cases
+title: Testing SSO Implementation
 date: "2023-04-10"
-description: "TODO: "
+description: "A guide into single sign-on implementation and how to perform sso testing for authentication and login"
 cover: "TODO .png"
 category: "programming"
 author: "SuperTokens Team"
