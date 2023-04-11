@@ -7,7 +7,7 @@ category: "featured"
 author: "SuperTokens team"
 ---
 
-As a web developer, you will inevitably have to work on authentication at some point. In this process, you will come across terms like OIDC and OAuth. Although both protocols are used for similar purposes, they have some significant differences that are important to understand. In this article, we will explore the differences between OIDC and OAuth and their use cases.
+As a web developer, you will inevitably have to work on authentication at some point. In this process, you will come across terms like OIDC and OAuth. Although both protocols are used for similar purposes, they have some significant differences that are important to understand.
 
 
 ## What is OAuth?
@@ -35,11 +35,11 @@ OIDC is commonly used in scenarios where the application needs to authenticate u
 
 ## OIDC vs OAuth: Key Differences
 While OIDC and OAuth share some similarities, there are some key differences between the two protocols. Here are the main differences:
-- The primary difference between OIDC and OAuth is that OIDC is primarily used for authentication, while OAuth is used for authorization. OIDC provides information about the user, while OAuth provides access to resources.
+- The primary difference between OIDC and OAuth is that OIDC is used for authentication, while OAuth is used for authorization. OIDC provides information about the user, while OAuth provides access to resources.
 - OIDC is built on top of the OAuth 2.0 protocol, which means that OIDC includes all of the features of OAuth, plus some additional features for authentication.
 
 
 ## Conclusion
 
-n conclusion, OAuth and OIDC are both important protocols for developers to understand with OAuth providing authorization and OIDC providing authentication and identity management. By understanding the differences between these two protocols, developers can make informed decisions on how to go about building authentication and integrating with third-party services.
+In conclusion, OAuth and OIDC are both important protocols for developers to understand with OAuth providing authorization and OIDC providing authentication and identity management. By understanding the differences between these two protocols, developers can make informed decisions on how to go about building authentication and integrating with third-party services.
 
