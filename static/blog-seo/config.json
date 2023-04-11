@@ -322,5 +322,28 @@
             ],
             "title": "Learnings from Revamping SuperTokens",
             "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/learnings-from-revamping-supertokens\"},\"headline\":\"Learnings from Revamping SuperTokens\",\"description\":\"Our goal with revamping the website and onboarding experience  is to further empower developers with powerful open source authentication. This new interface is the next step in reaching that goal\",\"image\":\"https://supertokens.com/blog-meta-images/website_revamp_banner.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+        },
+        {
+            "path": "/blog/testing-sso-implementations",
+            "metaTags": [
+                "<meta name=\"description\" content=\"A guide into single sign-on implementation and how to perform sso testing for authentication and login\" />",
+                "",
+                "<meta name=\"keywords\" content=\"Authentication, SSO, Testing, Tools, Security\" />",
+                "<!--OG Tags-->",
+                "<meta property=\"og:title\" content=\"Testing SSO implementations\" />",
+                "<meta property=\"og:type\" content=\"article\" />",
+                "<meta property=\"og:url\" content=\"https://supertokens.com/blog/testing-sso-implementations\" />",
+                "<meta property=\"og:description\" content=\"A guide into single sign-on implementation and how to perform sso testing for authentication and login\"/>",
+                "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/sso_testing_banner.png\" />",
+                "",
+                "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+                "<meta name=\"twitter:title\" content=\"Testing SSO implementations\" />",
+                "<meta name=\"twitter:description\" content=\"A guide into single sign-on implementation and how to perform sso testing for authentication and login\" />",
+                "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/testing-sso-implementations\" />",
+                "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/sso_testing_banner.png\" /> ",
+                "<!--OG Tags-->"
+            ],
+            "title": "Testing SSO implementations",
+            "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/testing-sso-implementations\"},\"headline\":\"Testing SSO implementations\",\"description\":\"A guide into single sign-on implementation and how to perform sso testing for authentication and login\",\"image\":\"https://supertokens.com/blog-meta-images/sso_testing_banner.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
         }
 ]

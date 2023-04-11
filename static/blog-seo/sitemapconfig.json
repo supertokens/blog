@@ -31,5 +31,8 @@
     },
     {
         "location": "https://supertokens.com/blog/learnings-from-revamping-supertokens"
+    },
+    {
+        "location": "https://supertokens.com/blog/testing-sso-implementation"
     }
 ]
