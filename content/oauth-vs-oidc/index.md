@@ -7,14 +7,13 @@ category: "featured"
 author: "SuperTokens team"
 ---
 
-As a web developer, you will inevitably have to work on authentication at some point. In this process, you will come across terms like OIDC and OAuth. Although both protocols are used for similar purposes, they have some significant differences that are important to understand.
-
+Every web developer comes across authentication and terms like OIDC and OAuth at some point. Although both protocols are used for similar purposes, they have some significant differences that are important to understand. In this article, we will explore the differences between OIDC and OAuth and their use cases.
 
 ## What is OAuth?
-OAuth or “Open Authentication” is not an API or service which you can query, but, an authorization protocol. Applications that implement an OAuth flow can authorize devices to fetch resources on behalf of a user.
+OAuth or “Open Authentication” is not an API or service which you can query but an authorization protocol. Applications that implement an OAuth flow can authorize devices to fetch resources on behalf of a user.
 
 ### Use cases for OAuth
-OAuth is commonly used in scenarios where an application needs to access data from another application or service on behalf of the user. Some examples of use cases for OAuth include:
+OAuth is commonly used in scenarios where an application needs to access data from another application or service on behalf of the user. Some examples use cases for OAuth include:
 
 - Social media integration, where an application can post to a user's social media account on their behalf.
 - Calendar integration, where an application can access a user's calendar to schedule appointments.
@@ -26,7 +25,7 @@ OIDC or OpenID Connect is a simple identity layer built on the OAuth 2.0 protoco
 
 
 ### Use cases for OIDC
-OIDC is commonly used in scenarios where the application needs to authenticate users with an external identity provider. Some examples of use cases for OIDC include:
+OIDC is commonly used when the application needs to authenticate users with an external identity provider. Some examples of use cases for OIDC include:
 
 - Single sign-on (SSO) for enterprise applications.
 - Authentication for mobile applications.
@@ -41,5 +40,4 @@ While OIDC and OAuth share some similarities, there are some key differences bet
 
 ## Conclusion
 
-In conclusion, OAuth and OIDC are both important protocols for developers to understand with OAuth providing authorization and OIDC providing authentication and identity management. By understanding the differences between these two protocols, developers can make informed decisions on how to go about building authentication and integrating with third-party services.
-
+In conclusion, OAuth and OIDC are both important protocols for developers to understand, with OAuth providing authorization and OIDC providing authentication and identity management. By understanding the differences between these two protocols, developers can make informed decisions on how to go about building authentication and integrating with third-party services.
