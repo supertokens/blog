@@ -1,7 +1,7 @@
 ---
 title: "OIDC vs OAuth"
 description: "We break down the OIDC and OAuth standards and explain the key differences between the two"
-date: "2023-04-13"
+date: "2023-04-17"
 cover: "oidc-vs-oauth.png"
 category: "featured"
 author: "SuperTokens team"
