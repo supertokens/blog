@@ -34,5 +34,8 @@
     },
     {
         "location": "https://supertokens.com/blog/testing-sso-implementation"
+    },
+    {
+        "location": "https://supertokens.com/blog/oauth-vs-oidc"
     }
 ]
