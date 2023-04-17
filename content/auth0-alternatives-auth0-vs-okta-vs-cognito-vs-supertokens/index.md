@@ -183,7 +183,7 @@ SuperTokens differentiates itself from its competitors with its flexibility. If 
 ## SuperTokens Pricing:
 At the time of writing this article, the SuperTokens feature set is completely free. If you decide to use the self-hosted version you can download the core and use it for free for an unlimited amount of users. 
 
-![supertokens pricing](./supertokens_pricing_choice.png)
+![supertokens pricing](./supertokens_pricing.png)
 
 - #### Self-Hosted:
   - Free forever for unlimited users.
