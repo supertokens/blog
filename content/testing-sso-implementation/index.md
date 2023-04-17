@@ -1,8 +1,8 @@
 ---
 title: Testing SSO Implementation
-date: "2023-04-10"
+date: "2023-04-17"
 description: "A guide into single sign-on implementation and how to perform sso testing for authentication and login"
-cover: "TODO .png"
+cover: "sso_implementation_banner.png"
 category: "programming"
 author: "SuperTokens Team"
 ---
