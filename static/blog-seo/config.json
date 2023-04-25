@@ -366,7 +366,7 @@
                 "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/oidc-vs-oauth.png\" /> ",
                 "<!--OG Tags-->"
             ],
-            "title": "Testing SSO implementations",
+            "title": "OIDC vs OAuth",
             "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/oauth-vs-oidc\"},\"headline\":\"OIDC vs OAuth\",\"description\":\"We break down the OIDC and OAuth standards and explain the key differences between the two\",\"image\":\"https://supertokens.com/blog-meta-images/oidc-vs-oauth.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
         }
 ]
