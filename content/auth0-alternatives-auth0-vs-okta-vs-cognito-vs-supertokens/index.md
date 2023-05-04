@@ -1,6 +1,6 @@
 ---
-title: "Top Auth0 alternatives: Auth0 vs Okta vs Cognito vs SuperTokens [2022]"
-description: "An in depth review of Auth0 alternatives for 2022: Auth0 vs Okta vs Cognito vs SuperTokens"
+title: "Top Auth0 alternatives: Auth0 vs Okta vs Cognito vs SuperTokens [2023]"
+description: "An in depth review of Auth0 alternatives for 2023: Auth0 vs Okta vs Cognito vs SuperTokens"
 date: "2022-05-09"
 cover: "auth_comparison_header.png"
 category: "featured"
