@@ -57,6 +57,7 @@ As mentioned previously Okta’s main focus is workforce identity. Although they
  #### Expensive
 - One of the biggest reasons people switch away from Auth0 is how expensive their pricing can get. To give some context Auth0’s free plan allows for up to **7000 MAUs** and up to two social connections. This is fine for small projects but as your business starts to scale, Auth0’s pricing starts to scale much faster. For example, if you have around **7000 MAUs** and have enterprise connections enabled you can expect to pay around **$1800/month**.
 - If you need to migrate your users, you would need to have an enterprise plan to export your user's password hashes.
+- There are also hidden costs associated with Auth0, as soon as you hit the limits of essential and professional tiers you will need to upgrade to their enterprise tier plans which start at $30,000/year but scale to 7 and 7 figures.
 
 #### Opaque Pricing:
 - After **10000 MAUs**, Auth0’s pricing for plans becomes completely custom. This makes it hard for developers who are evaluating Auth0 to know how much they would have to pay once their product scales past the boundaries of the base plans.
