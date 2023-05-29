@@ -4,7 +4,7 @@ description: "An in depth review of Auth0 alternatives for 2023: Auth0 vs Okta v
 date: "2022-05-09"
 cover: "auth_comparison_header.png"
 category: "featured"
-author: "SuperTokens team"
+author: "Joel Coutinho"
 ---
 
 Need authentication but not sure who to go with? Read on for an in-depth comparison of the leading authentication providers.

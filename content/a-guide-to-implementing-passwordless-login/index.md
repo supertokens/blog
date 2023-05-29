@@ -4,7 +4,7 @@ date: "2023-02-23"
 description: "Passwordless is one of the most popular authentication methods"
 cover: "passwordless_banner.png"
 category: "programming"
-author: "SuperTokens Team"
+author: "Rishabh Poddar"
 ---
 
 ### Introduction

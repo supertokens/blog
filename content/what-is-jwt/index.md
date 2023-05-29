@@ -4,7 +4,7 @@ date: "2022-03-24"
 description: "Learn about JWTs, their pros & cons, and how they work."
 cover: "what-is-jwt-cover.png"
 category: "sessions"
-author: "SuperTokens Team"
+author: "Rishabh Poddar"
 ---
 
 JWTs or JSON Web Tokens are most commonly used to identify an authenticated user. They are issued by an authentication server and are consumed by the client-server (to secure its APIs).

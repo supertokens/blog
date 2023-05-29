@@ -4,7 +4,7 @@ date: "2022-02-10"
 description: "Learn how to maintain a JWT token blacklist / deny list using an in-memory data cache"
 cover: "revoking-access-with-a-jwt-blacklist.png"
 category: "programming"
-author: "SuperTokens Team"
+author: "Advait Ruia"
 ---
 
 Depending on who you listen to, JWTs are either a panacea for all your authentication problems or should be avoided like the plague. We're in two minds here at SuperTokens.

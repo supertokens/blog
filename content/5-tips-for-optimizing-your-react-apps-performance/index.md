@@ -4,7 +4,7 @@ date: "2023-01-12"
 description: "Poor app performance can reduce user engagement and will negatively affect SEO, here are 5 tips to optimize your react app"
 cover: "optimize-react-app-performance.png"
 category: "featured"
-author: "SuperTokens Team"
+author: "Joel Coutinho"
 ---
 
 ## Table of contents

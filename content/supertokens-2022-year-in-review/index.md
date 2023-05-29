@@ -4,7 +4,7 @@ date: "2023-01-09"
 description: "2022 had been an amazing year for SuperTokens, here are some of the top highlights"
 cover: "supertokens_year_in_review_banner.png"
 category: "featured"
-author: "SuperTokens Team"
+author: "Joel Coutinho"
 ---
 
 ## Table of Contents

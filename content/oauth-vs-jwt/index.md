@@ -4,7 +4,7 @@ date: "2022-03-23"
 description: "Learn about the difference between JWT Token and OAuth"
 cover: "oauth_vs_jwt.png"
 category: "sessions"
-author: "SuperTokens Team"
+author: "Advait Ruia"
 discord_button_id: "discord_oauth_vs_jwt"
 ---
 

@@ -4,7 +4,7 @@ description: "A #buildinpublic piece on why we designed the SuperTokens homepage
 date: "2023-03-16"
 cover: "website-revamp-banner.png"
 category: "programming"
-author: "SuperTokens team"
+author: "Advait Ruia"
 ---
 
 You may have noticed that there’s something different about the SuperTokens website lately.

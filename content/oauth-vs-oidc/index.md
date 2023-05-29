@@ -4,7 +4,7 @@ description: "We break down the OIDC and OAuth standards and explain the key dif
 date: "2023-04-17"
 cover: "oidc-vs-oauth.png"
 category: "featured"
-author: "SuperTokens team"
+author: "Joel Coutinho"
 ---
 
 Every web developer comes across authentication and terms like OIDC and OAuth at some point. Although both protocols are used for similar purposes, they have some significant differences that are important to understand. In this article, we will explore the differences between OIDC and OAuth and their use cases.

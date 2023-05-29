@@ -4,7 +4,7 @@ description: "An in depth guide covering Auth0's pricing model"
 date: "2022-11-15"
 cover: "auth0-pricing-the-complete-guide.png"
 category: "featured"
-author: "SuperTokens team"
+author: "Joel Coutinho"
 ---
 
 ## Table of Contents

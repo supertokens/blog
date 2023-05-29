@@ -4,7 +4,7 @@ description: "An in depth guide covering Okta's pricing model"
 date: "2022-11-15"
 cover: "okta-pricing-the-complete-guide.png"
 category: "featured"
-author: "SuperTokens team"
+author: "Joel Coutinho"
 ---
 
 ## Table of Contents

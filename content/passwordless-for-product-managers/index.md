@@ -4,7 +4,7 @@ description: "A quick overview of different types of passwordless authentication
 date: "2022-07-26"
 cover: "password_less_blog.png"
 category: "featured"
-author: "SuperTokens team"
+author: "Advait Ruia"
 ---
 Passwordless Authentication is an authentication method that allows a user to log in to an app without using a password.
 

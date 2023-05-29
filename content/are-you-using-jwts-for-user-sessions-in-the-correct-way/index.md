@@ -4,7 +4,7 @@ date: "2020-03-18"
 description: "JWTs were originally designed for use in OAuth. This article covers the pros and cons of using JWT and talks about a solution which has the advantages of JWTs without any of its disadvantages."
 cover: "are-you-using-jwts-for-user-sessions-in-the-correct-way.png"
 category: "sessions, featured"
-author: "SuperTokens Team"
+author: "Rishabh Poddar"
 ---
 
 JSON Web Tokens (or JWTs) have become incredibly popular and you’ve likely heard of them before. What you may not have heard is that JWTs were originally designed for use in OAuth – which is fundamentally different to user sessions.
