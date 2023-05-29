@@ -4,7 +4,7 @@ date: "2022-07-13"
 description: "A step by step guide on how to integrate SuperTokens' pre built UI in a VueJS app"
 cover: "vue-st.png"
 category: "programming"
-author: "SuperTokens team"
+author: "Nemi Shah"
 ---
 
 Building your own auth service can be tedious, complex and time-consuming. To save time, developers often resort to using third party auth services for auth. This post will guide you on how to add authentication to a VueJS app with SuperTokens. 

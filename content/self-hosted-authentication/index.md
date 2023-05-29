@@ -4,7 +4,7 @@ date: "2023-02-03"
 description: "By self-hosting auth users gain finer control over their data.To shed some light on the matter, let’s compare several authentication providers which offer self-hosting functionality"
 cover: "self_hosted_auth.png"
 category: "programming"
-author: "SuperTokens Team"
+author: "Advait Ruia"
 ---
 
 ## Table of content

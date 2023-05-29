@@ -4,7 +4,7 @@ description: "Cross-Origin Resource Sharing (CORS) is a mechanism that supports 
 date: "2022-10-27"
 cover: "cors-cover.png"
 category: "programming"
-author: "SuperTokens team"
+author: "Rishabh Poddar"
 ---
 
 ## Table Of Contents:

@@ -4,7 +4,7 @@ date: "2023-04-17"
 description: "A guide into single sign-on implementation and how to perform sso testing for authentication and login"
 cover: "sso_implementation_banner.png"
 category: "programming"
-author: "SuperTokens Team"
+author: "Advait Ruia"
 ---
 
 One of the biggest causes of attrition in the conversion funnel is user registration. As little as one in fifty website visitors take the time to input their email, username, and create a new password to register. That’s a 2% conversion rate. 

@@ -4,7 +4,7 @@ date: "2020-04-24"
 description: "A lot of developers confuse OAuth with web session management and hence end up using the wrong protocol. This article will clarify when to use what solution."
 cover: "oauth-2-vs-session-management.png"
 category: "sessions"
-author: "SuperTokens Team"
+author: "Rishabh Poddar"
 ---
 
 There seems to be a lot of misinformation on when OAuth 2.0 (henceforth referred to as OAuth) is appropriate for use. A lot of developers confuse OAuth with web session management and hence end up using the wrong protocol / set of technologies. This, in turn, leads to security issues. This article will clarify when to use regular session management solutions and when to use any one of the OAuth flows.

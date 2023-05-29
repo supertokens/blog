@@ -4,7 +4,7 @@ date: "2022-08-17"
 description: "Learn how to integrate supertokens-web-js SDK into your VueJS application."
 cover: "vue-custom-ui.png"
 category: "programming"
-author: "Team SuperTokens"
+author: "Nemi Shah"
 ---
 
 This post will guide you on how to add authentication to a VueJS app with SuperTokens using your own UI. We will be building our own authentication forms and will be using `supertokens-web-js` to make those forms work.

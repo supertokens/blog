@@ -4,7 +4,7 @@ date: "2022-01-26"
 description: "This blog walks you through integrating your frontend with social login APIs provided by SuperTokens."
 cover: "adding-social-login-to-your-website-with-supertokens.png"
 category: "programming"
-author: "SuperTokens Team"
+author: "Rishabh Poddar"
 ---
 
 This tutorial walks you through building your own social login UI using SuperTokens.

@@ -4,7 +4,7 @@ date: "2022-03-14"
 description: "Build an elegant login screen super fast using React and Bootstrap"
 cover: "building-a-login-screen-with-react-and-bootstrap.png"
 category: "programming"
-author: "SuperTokens Team"
+author: "Nemi Shah"
 discord_button_id: "discord_building_a_login_screen_with_react_and_bootstrap"
 ---
 

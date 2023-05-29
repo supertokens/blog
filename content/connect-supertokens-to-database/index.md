@@ -4,7 +4,7 @@ date: "2022-04-24"
 description: "Learn how to connect a self-hosted SuperTokens core to a database with or without Docker"
 cover: "supertokens-db.png"
 category: "programming"
-author: "SuperTokens Team"
+author: "Rishabh Poddar"
 ---
 
 This blog will take you through connecting the SuperTokens core service with a MySQL or a PostgreSQL database with and without Docker.

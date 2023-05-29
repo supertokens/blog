@@ -4,7 +4,7 @@ date: "2022-03-02"
 description: "How to hash and salt passwords in different languages and why it's important to do so"
 cover: "password_hashing_and_salting.png"
 category: "programming"
-author: "SuperTokens Team"
+author: "Rishabh Poddar"
 ---
 
 Storing passwords can be a nuance due to the liability of them being compromised. To make matters worse, users tend to reuse passwords across services which makes storing them securely even more important.

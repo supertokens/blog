@@ -4,7 +4,7 @@ date: "2021-03-05"
 description: "Why did Okta spend $6.5B on Auth0? What does this mean for app developers? See reactions from customers and employees"
 cover: "the-real-reason-okta-spent-on-auth0.png"
 category: "featured"
-author: "SuperTokens Team"
+author: "Advait Ruia"
 ---
 
 Okta acquired [Auth0 for $6.5B](https://www.okta.com/press-room/press-releases/okta-signs-agreement-to-acquire-auth0/) in an all stock deal (Okta was valued at ~$35B in the few days preceding the announcement).

@@ -4,7 +4,7 @@ date: "2022-04-14"
 description: "This tutorial wil guide you on how to add SuperTokens to a React and Express app deployed on Vercel"
 cover: "vercel.png"
 category: "programming"
-author: "SuperTokens Team"
+author: "Rishabh Poddar"
 ---
 
 In this tutorial, you’ll learn how to add SuperTokens authentication to your React and NodeJS application and deploy it on Vercel.

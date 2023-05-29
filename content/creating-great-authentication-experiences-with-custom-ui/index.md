@@ -4,7 +4,7 @@ date: "2023-01-16"
 description: "A guide on creating great authentication experiences with custom UI"
 cover: "custom_ui.png"
 category: "featured"
-author: "SuperTokens Team"
+author: "Advait Ruia"
 ---
 
 ## Table of Contents
