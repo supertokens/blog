@@ -7,6 +7,15 @@ category: "programming"
 author: "Advait Ruia"
 ---
 
+## Table of contents
+
+- [Open-Source Authentication Providers](#open-source-authentication-providers)
+- [Ory Kratos / Ory Identities](#ory-kratos--ory-identities)
+- [Keycloak](#keycloak)
+- [SuperTokens](#supertokens)
+- [Choosing an Auth Provider](#choosing-an-auth-provider)
+
+
 ## Open-Source Authentication Providers
 
 Compared to a couple of years ago, open-source authentication has seen huge progress. In this post, we’ll compare three of the leading open-source authentication providers - Ory, Keycloak, and SuperTokens. 
@@ -18,7 +27,7 @@ Each of these providers has its own set of pros and cons. We’ll evaluate each 
 Ory Kratos is an API-first identity and user management system. Ory also offers other products including:
 
 1. Ory Hydra: OAuth 2.0 and OpenID Connect provider 
-2. Ory Oathkeeper: zero-trust networking proxy) 
+2. Ory Oathkeeper: zero-trust networking proxy
 3. Ory Keto: open-source implementation of Google’s Zanzibar. 
 
 Among these products, we’ll focus on Kratos for its relevance to authentication.
