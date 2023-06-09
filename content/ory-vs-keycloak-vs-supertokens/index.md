@@ -22,6 +22,8 @@ Compared to a couple of years ago, open-source authentication has seen huge prog
 
 Each of these providers has its own set of pros and cons. We’ll evaluate each independently and summarize the relative strengths and weaknesses towards the end of the post.
 
+![Open Source Auth provider comparison](./auth-provider-comparison.png)
+
 ## Ory Kratos / Ory Identities
 
 Ory Kratos is an API-first identity and user management system. Ory also offers other products including:
