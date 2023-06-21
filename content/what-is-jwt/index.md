@@ -180,4 +180,6 @@ Overall, the topic of JWTs is vast. If you would like to learn more about them, 
 - [Revoking a JWT](https://supertokens.com/blog/revoking-access-with-a-jwt-blacklist)
 - [Using JWTs in OAuth (Open ID)](https://openid.net/connect/)
 
+Additionally you can use our [JWT Decoder tool](https://supertokens.com/jwt-encoder-decoder) to created and decode your own JWTs
+
 At [SuperTokens](https://supertokens.com), we provide an open-source auth solution that aims to abstract away all the complexities of using a JWT. We take care of creating, verifying, and updating them. Furthermore, we [automatically mitigate some of the cons](https://supertokens.com/blog/the-best-way-to-securely-manage-user-sessions) mentioned above.
