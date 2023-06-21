@@ -1,7 +1,7 @@
 ---
-title: How to hash, salt, and verify passwords in NodeJS, Python, Golang, and Java
+title: "What is Password Hashing and why is it important"
 date: "2022-03-02"
-description: "Password Hashing: How to hash and salt passwords in different languages and why it's important to do so"
+description: "A guide on password hashing and salting in different languages and why it's important to do so"
 cover: "password_hashing_and_salting.png"
 category: "programming"
 author: "Rishabh Poddar"
