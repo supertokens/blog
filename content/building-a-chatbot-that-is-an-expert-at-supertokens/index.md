@@ -1,6 +1,6 @@
 ---
 title: How we built a Chatbot that is an Expert at SuperTokens
-date: "2023-05-30"
+date: "2023-06-23"
 description: "Learn how we built a Q&A bot that is an expert at SuperTokens powered by ChatGPT"
 cover: "supertokens-ai-banner.png"
 category: "programming"
