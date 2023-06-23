@@ -24,9 +24,12 @@ So how do we filter thousands of pages of documentation to figure out what's rel
 
 Vector embeddings is a mathematical model that can take arbitrary pieces of data like text and map it to a long string of numbers. What makes vector embeddings special though is you can find semantic similarity between phrases based on the vector distance between them. Essentially, we can find how related phrases are based on their vector distance.
 
-You can learn more about vector embeddings and Agents in our guide [here].(link to guide)
+Vector embeddings are a mathematical model that can take arbitrary pieces of data like text and map them to a long string of numbers. What makes vector embeddings special though is you can find semantic similarity between phrases based on the vector distance between them. Through this, we can find the most relevant documentation to be used as context
 
-So let's get into how the SuperTokens AI bot works:
+![Vector embeddings](./vector_embedding_model.png)
+
+Now that we know how to filter out the context from the documentation, let's get back to how the SuperTokens AI bot works:
+
 
 ### Step 1: Retrieve the SuperTokens documentation and discord messages and tokenize the data
 - The first step is to retrieve the SuperTokens documentation and discord messages.
