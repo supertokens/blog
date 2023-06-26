@@ -395,7 +395,7 @@
         {
             "path": "/blog/password-hashing-salting",
             "metaTags": [
-                "<meta name=\"description\" content=\"How to hash and salt passwords in different languages and why it's important to do so \" />",
+                "<meta name=\"description\" content=\"How to hash and salt passwords in different languages and why it's important to do so\" />",
                 "",
                 "<meta name=\"keywords\" content=\"Authentication, password hashing, security, salting, SuperTokens\" />",
                 "<!--OG Tags-->",
@@ -412,7 +412,30 @@
                 "<meta name=\"twitter:image\" content=\"https://supertokens.com/static/assets/meta_images/blog/passwordhasingandsalting.png\" /> ",
                 "<!--OG Tags-->"
             ],
-            "title": "Ory vs Keycloak vs SuperTokens",
-            "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/oauth-vs-oidc\"},\"headline\":\"Password Hashing: How to hash and salt passwords in different languages and why it's important to do so\",\"description\":\"How to hash and salt passwords in different languages and why it's important to do so \",\"image\":\"https://supertokens.com/static/assets/meta_images/blog/passwordhasingandsalting.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+            "title": "How to hash and salt passwords in different languages and why it's important to do so",
+            "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/password-hashing-salting\"},\"headline\":\"Password Hashing: How to hash and salt passwords in different languages and why it's important to do so\",\"description\":\"How to hash and salt passwords in different languages and why it's important to do so \",\"image\":\"https://supertokens.com/static/assets/meta_images/blog/passwordhasingandsalting.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+        },
+        {
+            "path": "/blog/building-a-chatbot-that-is-an-expert-at-supertokens",
+            "metaTags": [
+                "<meta name=\"description\" content=\"How we built a Chatbot that is an Expert at SuperTokens\" />",
+                "",
+                "<meta name=\"keywords\" content=\"Authentication, chatgpt, AI, chatbot, documentation\" />",
+                "<!--OG Tags-->",
+                "<meta property=\"og:title\" content=\"How we built a Chatbot that is an Expert at SuperTokens\" />",
+                "<meta property=\"og:type\" content=\"article\" />",
+                "<meta property=\"og:url\" content=\"https://supertokens.com/blog/building-a-chatbot-that-is-an-expert-at-supertokens\" />",
+                "<meta property=\"og:description\" content=\"Learn how we built a Q&A bot that is an expert at SuperTokens powered by ChatGPT\"/>",
+                "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/oidc-vs-oauth.png\" />",
+                "",
+                "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+                "<meta name=\"twitter:title\" content=\"How we built a Chatbot that is an Expert at SuperTokens\" />",
+                "<meta name=\"twitter:description\" content=\"Learn how we built a Q&A bot that is an expert at SuperTokens powered by ChatGPT\" />",
+                "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/building-a-chatbot-that-is-an-expert-at-supertokens\" />",
+                "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/supertokens-ai-banner.png\" /> ",
+                "<!--OG Tags-->"
+            ],
+            "title": "How we built a Chatbot that is an Expert at SuperTokens",
+            "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/building-a-chatbot-that-is-an-expert-at-supertokens\"},\"headline\":\"How we built a Chatbot that is an Expert at SuperTokens\",\"description\":\"Learn how we built a Q&A bot that is an expert at SuperTokens powered by ChatGPT\",\"image\":\"https://supertokens.com/blog-meta-images/supertokens-ai-banner.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
         }
 ]
