@@ -131,6 +131,9 @@ For dedicated support, users need to be on the Ory Network’s Business plan whi
 
 With a low price point and open-source strategy, Ory’s target customers are lean startups. Although implementing Ory requires a bit of elbow grease, the end product is a highly secure authentication flow.
 
+
+> You can learn more about how [Ory and Keycloak stack up against SuperTokens in our guide](./ory-vs-keycloak-vs-supertokens). 
+
 ## FusionAuth
 ![FusionAuth logo](./fusion_auth.png)
 

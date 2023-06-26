@@ -351,7 +351,7 @@
             "metaTags": [
                 "<meta name=\"description\" content=\"We break down the OIDC and OAuth standards and explain the key differences between the two\" />",
                 "",
-                "<meta name=\"keywords\" content=\"Authentication, OIDC, OAuth, Authorization, Security\" />",
+                "<meta name=\"keywords\" content=\"Authentication, OIDC, OAuth 2 vs OpenId, OIDC vs OAuth, openid connect\" />",
                 "<!--OG Tags-->",
                 "<meta property=\"og:title\" content=\"OIDC vs OAuth\" />",
                 "<meta property=\"og:type\" content=\"article\" />",
@@ -368,6 +368,52 @@
             ],
             "title": "OIDC vs OAuth",
             "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/oauth-vs-oidc\"},\"headline\":\"OIDC vs OAuth\",\"description\":\"We break down the OIDC and OAuth standards and explain the key differences between the two\",\"image\":\"https://supertokens.com/blog-meta-images/oidc-vs-oauth.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+        },
+        {
+            "path": "/blog/ory-vs-keycloak-vs-supertokens",
+            "metaTags": [
+                "<meta name=\"description\" content=\"A close look and comparison of the most popular open source authentication providers - Ory, Keycloak and SuperTokens \" />",
+                "",
+                "<meta name=\"keywords\" content=\"Authentication, Open Source, Keycloak, Ory, SuperTokens\" />",
+                "<!--OG Tags-->",
+                "<meta property=\"og:title\" content=\"Ory vs Keycloak vs SuperTokens\" />",
+                "<meta property=\"og:type\" content=\"article\" />",
+                "<meta property=\"og:url\" content=\"https://supertokens.com/blog/ory-vs-keycloak-vs-supertokens\" />",
+                "<meta property=\"og:description\" content=\"A close look and comparison of the most popular open source authentication providers - Ory, Keycloak and SuperTokens\"/>",
+                "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/ory-vs-keycloak-vs-supertokens.png\" />",
+                "",
+                "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+                "<meta name=\"twitter:title\" content=\"Ory vs Keycloak vs SuperTokens\" />",
+                "<meta name=\"twitter:description\" content=\"A close look and comparison of the most popular open source authentication providers - Ory, Keycloak and SuperTokens\" />",
+                "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/ory-vs-keycloak-vs-supertokens\" />",
+                "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/ory-vs-keycloak-vs-supertokens.png\" /> ",
+                "<!--OG Tags-->"
+            ],
+            "title": "Ory vs Keycloak vs SuperTokens",
+            "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/ory-vs-keycloak-vs-supertokens\"},\"headline\":\"Ory vs Keycloak vs SuperTokens\",\"description\":\"A close look and comparison of the most popular open source authentication providers - Ory, Keycloak and SuperTokens\",\"image\":\"https://supertokens.com/blog-meta-images/ory-vs-keycloak-vs-supertokens.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+        },
+        {
+            "path": "/blog/password-hashing-salting",
+            "metaTags": [
+                "<meta name=\"description\" content=\"How to hash and salt passwords in different languages and why it's important to do so\" />",
+                "",
+                "<meta name=\"keywords\" content=\"Authentication, password hashing, security, salting, SuperTokens\" />",
+                "<!--OG Tags-->",
+                "<meta property=\"og:title\" content=\"Password Hashing: How to hash and salt passwords in different languages and why it's important to do so\" />",
+                "<meta property=\"og:type\" content=\"article\" />",
+                "<meta property=\"og:url\" content=\"https://supertokens.com/blog/password-hashing-salting\" />",
+                "<meta property=\"og:description\" content=\"How to hash and salt passwords in different languages and why it's important to do so \"/>",
+                "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/ory-vs-keycloak-vs-supertokens.png\" />",
+                "",
+                "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+                "<meta name=\"twitter:title\" content=\"Password Hashing: How to hash and salt passwords in different languages and why it's important to do so\" />",
+                "<meta name=\"twitter:description\" content=\"How to hash and salt passwords in different languages and why it's important to do so \" />",
+                "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/password-hashing-salting\" />",
+                "<meta name=\"twitter:image\" content=\"https://supertokens.com/static/assets/meta_images/blog/passwordhasingandsalting.png\" /> ",
+                "<!--OG Tags-->"
+            ],
+            "title": "How to hash and salt passwords in different languages and why it's important to do so",
+            "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/password-hashing-salting\"},\"headline\":\"Password Hashing: How to hash and salt passwords in different languages and why it's important to do so\",\"description\":\"How to hash and salt passwords in different languages and why it's important to do so \",\"image\":\"https://supertokens.com/static/assets/meta_images/blog/passwordhasingandsalting.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
         },
         {
             "path": "/blog/building-a-chatbot-that-is-an-expert-at-supertokens",

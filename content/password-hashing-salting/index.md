@@ -1,7 +1,7 @@
 ---
-title: How to hash, salt, and verify passwords in NodeJS, Python, Golang, and Java
+title: "What is Password Hashing and why is it important"
 date: "2022-03-02"
-description: "How to hash and salt passwords in different languages and why it's important to do so"
+description: "A guide on password hashing and salting in different languages and why it's important to do so"
 cover: "password_hashing_and_salting.png"
 category: "programming"
 author: "Rishabh Poddar"
@@ -13,7 +13,10 @@ The aim behind storing passwords securely is that even if the database containin
 
 Using encryption may seem to be a good choice since the attacker would not know the actual passwords (because they are encrypted). However, if the database is compromised, then the encryption keys would probably[^1] be compromised as well. Using these keys, the attacker would be able to decrypt the encrypted passwords - making this method of storage weak.
 
-This is where hashing or hash functions come into play.
+This is where password hashing comes into play:
+
+## What is Password Hashing?
+Password hashing involves taking the plaintext password and passing it through a hashing function. Hashing is a one way function which generates a bit string of a fixed size. This is unlike encryption in which given the output and the encryption key, you can know the input. Lets take a look at hash functions in more detail
 
 ## What are hash functions?
 They are functions that have these properties:
@@ -30,7 +33,6 @@ They are functions that have these properties:
 
 6) **Input sensitivity**: A small change in the input (even just one character), should have a large change in the output string. For example, the SHA256 hash of `"hello"` is `"2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"`. But the hash of `"hella"` is `"70de66401b1399d79b843521ee726dcec1e9a8cb5708ec1520f1f3bb4b1dd984"`. As you can see, the outputs are verify different.
 
-All in all, hash functions are “one-way functions”. If you only know the output, it’s impossible/difficult to know its input. This is unlike encryption in which given the output and the encryption key, you can know the input.
 
 Due to this one-way property, storing a hashed value of a password is a good idea since if their hash is compromised (via a database leak), the attacker would not know the original password (which is the input to the hash function). In fact, the only “entity” which would know the input to the hash function would be the end user who generated the password in the first place. This is exactly what we want from a security point of view.
 
