@@ -58,6 +58,8 @@ Finally, the human feedback agent can take additional questions from the user us
 
 ![SuperTokens Agent](./supertokens_agent.png)
 
+> Note: Work on the chatbot is in progress and you might encounter bugs.
+
 ## Conclusion:
 
 It seems like there is a new breakthrough tool coming out every day in the AI space and that can be really overwhelming. We hope that by taking you through our project, we could inspire you to get started on your own AI-powered documentation bot and create powerful tools to help your business. 
