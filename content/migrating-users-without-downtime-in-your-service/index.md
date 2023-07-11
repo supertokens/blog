@@ -1,7 +1,7 @@
 ---
-title: OAuth 2.0 vs Session Management
-date: "2020-04-24"
-description: "A lot of developers confuse OAuth with web session management and hence end up using the wrong protocol. This article will clarify when to use what solution."
+title: Migrating users without downtime in your service (The Lazy Migration Strategy)
+date: "2023-07-12"
+description: "User Migration can be a challenging process, in this article we go over some user migration scenarios and break down the lazy migration strategy"
 cover: "TODO.png"
 category: "sessions"
 author: "Joel Coutinho"
