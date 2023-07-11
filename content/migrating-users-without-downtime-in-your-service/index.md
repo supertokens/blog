@@ -3,7 +3,7 @@ title: Migrating users without downtime in your service (The Lazy Migration Stra
 date: "2023-07-12"
 description: "User Migration can be a challenging process, in this article we go over some user migration scenarios and break down the lazy migration strategy"
 cover: "TODO.png"
-category: "sessions"
+category: "programming"
 author: "Joel Coutinho"
 ---
 
