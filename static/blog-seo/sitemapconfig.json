@@ -40,5 +40,8 @@
     },
     {
         "location": "https://supertokens.com/blog/ory-vs-keycloak-vs-supertokens"
+    },
+    {
+        "location": "https://supertokens.com/blog/migrating-users-without-downtime-in-your-service"
     }
 ]
