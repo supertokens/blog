@@ -437,5 +437,28 @@
             ],
             "title": "How we built a Chatbot that is an Expert at SuperTokens",
             "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/building-a-chatbot-that-is-an-expert-at-supertokens\"},\"headline\":\"How we built a Chatbot that is an Expert at SuperTokens\",\"description\":\"Learn how we built a Q&A bot that is an expert at SuperTokens powered by ChatGPT\",\"image\":\"https://supertokens.com/blog-meta-images/supertokens-ai-banner.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+        },
+        {
+            "path": "/blog/migrating-users-without-downtime-in-your-service",
+            "metaTags": [
+                "<meta name=\"description\" content=\"User Migration can be a challenging process, in this article we go over some user migration scenarios and break down the lazy migration strategy\" />",
+                "",
+                "<meta name=\"keywords\" content=\"Authentication, user migration, lazy migration, migration strategy\" />",
+                "<!--OG Tags-->",
+                "<meta property=\"og:title\" content=\"Migrating users without downtime in your service (The Lazy Migration Strategy)\" />",
+                "<meta property=\"og:type\" content=\"article\" />",
+                "<meta property=\"og:url\" content=\"https://supertokens.com/blog/migrating-users-without-downtime-in-your-service\" />",
+                "<meta property=\"og:description\" content=\"User Migration can be a challenging process, in this article we go over some user migration scenarios and break down the lazy migration strategy\"/>",
+                "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/migrating-users-without-downtime-in-your-service.png\" />",
+                "",
+                "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+                "<meta name=\"twitter:title\" content=\"Migrating users without downtime in your service (The Lazy Migration Strategy)\" />",
+                "<meta name=\"twitter:description\" content=\"User Migration can be a challenging process, in this article we go over some user migration scenarios and break down the lazy migration strategy\" />",
+                "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/migrating-users-without-downtime-in-your-service\" />",
+                "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/migrating-users-without-downtime-in-your-service.png\" /> ",
+                "<!--OG Tags-->"
+            ],
+            "title": "Migrating users without downtime in your service (The Lazy Migration Strategy)",
+            "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/migrating-users-without-downtime-in-your-service\"},\"headline\":\"Migrating users without downtime in your service (The Lazy Migration Strategy)\",\"image\":\"https://supertokens.com/blog-meta-images/migrating-users-without-downtime-in-your-service.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
         }
 ]
