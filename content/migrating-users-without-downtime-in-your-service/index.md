@@ -11,6 +11,7 @@ author: "Joel Coutinho"
 
 - [Introduction](#introduction)
 - [Real world migration scenarios](#real-world-migration-scenarios)
+- [Our experience of migrating customers over to SuperTokens](#our-experience-of-migrating-customers-over-to-supertokens)
 - [Understanding Lazy Migration](#understanding-lazy-migration)
 - [The benefits of Lazy Migration](#the-benefits-of-lazy-migration)
 - [Conclusion](#conclusion) 
@@ -39,18 +40,37 @@ In  their approach, they split the migration into 2 phases:
 #### Phase 2: Bulk Import:
 - Once the rate of users being migrated per day leveled out they initiated the second phase of their migration strategy which was to bulk import the remaining user accounts. A number of scripts had to be written in order to load and format the user profile data to be imported into Auth0 while being cognizant of the rate limits.
 
-### Parquet 
-In this [article](https://kevcodez.medium.com/migrating-125-000-users-from-auth0-to-supabase-81c0568de307) by Kevin Grüneberg, he goes over how they migrated users from Auth0 to Supabase. They had reached the end of Auth0's startup plan and the revised pricing was too expensive, which resulted in the decision to migrate away from Auth0. Similarly, they had to go through similar processes like managing linked accounts and facilitating the password hash export but they faced an additional challenge since Supabase did not support an in house OAuth endpoint, so they had to build an in house solution to integrate with Circle, their community platform.
+### Parquet’s user migration from Auth0 to Supabase
+In this [article](https://kevcodez.medium.com/migrating-125-000-users-from-auth0-to-supabase-81c0568de307) by Kevin Grüneberg, he goes over how they migrated users from Auth0 to Supabase. They had reached the end of Auth0’s startup plan and the revised pricing was too expensive, which resulted in the decision to migrate away from Auth0. Similarly, they had to go through similar processes like managing linked accounts and facilitating the password hash export but they faced an additional challenge since Supabase did not support an in house OAuth endpoint, so they had to build an in house solution to integrate with Circle, their community platform.
 
-### Migration within the product
+### Migrating users when auth schema is inconsistent
 Finally changes in the user auth schema between providers or within the same provider can also cause issues during migration as seen with [Juan Alvardo](https://twitter.com/Jalvarado91/status/1653740848889180164) and [Aggelos Arvanitakis](https://twitter.com/AggArvanitakis/status/1218429561404370944)
+
+
+## Our experience of migrating customers over to SuperTokens:
+
+At SuperTokens, we have helped hundreds of customers migrate to SuperTokens and are familiar with some of the common pitfalls users encounter during their migration. Here are some of the users we have migrated over
+
+### Built Intelligence
+
+Originally using Auth0 as its provider, Built Intelligence was forced to switch to a new provider after Auth0 revised its pricing. The new pricing structure would increase Built Intelligence’s bill by nearly 700%.  After evaluating a number of auth providers, they finally settled on using SuperTokens. Adrian, the Technical Director at Built Intelligence found the  documentation to be straightforward forward and after speaking to the SuperTokens team they had he had a clear vision of how the migration should be implemented.It took them two weeks to prepare a POC and test the migration for a single user. Within the span of 4 weeks, they had all their users migrated over and removed the legacy provider from their product.
+
+You can learn more about how Built Intelligence integrated with SuperTokens in our [case study](https://supertokens.com/customers/builtintelligence).
+
+### Poppy
+For Poppy, they needed to make sure that the solution they were choosing had the extensibility required to meet their needs due to issues arising from fraudulent sms requests. Poppy opted for a Lazy migration strategy slowly migrating users over to SuperTokens over the course of 6 months. Once there were only a few thousand people left on Auth0, Poppy simply asked the remaining users to reset their passwords and was able to disable Auth0 completely.
+
+
+Apart from these users we also had to make provisions for users who were migrating from Firebase Auth. Firebase uses a modified version of the [scrypt](https://en.wikipedia.org/wiki/Scrypt) password hashing algorithm. We had to update our import password hash API to support this algorithm to ensure a smooth migration experience.
 
 Here are the most important takeaways from these user migration journeys:
 
+- Validate that the provider you are switching to has the features you need.
 - Plan and test your migration strategy
 - Make sure the auth schema of the new auth solution is compatible with the old one
-- Check that the password hashes are compatible in the new system and can be imported.(Inability to do so will result in all users having to reset their passwords)
+- Check that the password hashes are compatible with the new system and can be imported. (Inability to do so will result in all users having to reset their passwords)
 - Be cognizant of API rate limits, services rate limit their APIs and if not accounted for can result in import failures and user accounts not being transferred over.
+
 
 In most of the examples seen above a commonly adopted strategy for migration is “Lazy Migration”, but, what exactly is that and how does it work?
 
