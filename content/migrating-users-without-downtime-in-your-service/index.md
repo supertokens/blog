@@ -71,7 +71,7 @@ Here are the most important takeaways from these user migration journeys:
 - Make sure the auth schema of the new auth solution is compatible with the old one
 - Check that the password hashes are compatible with the new system and can be imported. (Inability to do so will result in all users having to reset their passwords)
 - Plan and test your migration strategy
-- Be cognizant of API rate limits, services rate limit their APIs and if not accounted for can result in import failures and user accounts not being transferred over.
+- Be cognizant of API rate limits. Services rate limit their APIs, which if not accounted for can result in import failures and user accounts not being transferred over.
 
 
 In most of the examples seen above a commonly adopted strategy for migration is “Lazy Migration”, but, what exactly is that and how does it work?

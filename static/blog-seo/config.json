@@ -460,5 +460,28 @@
             ],
             "title": "Migrating users without downtime in your service (The Lazy Migration Strategy)",
             "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/migrating-users-without-downtime-in-your-service\"},\"headline\":\"Migrating users without downtime in your service (The Lazy Migration Strategy)\",\"image\":\"https://supertokens.com/blog-meta-images/migrating-users-without-downtime-in-your-service.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+        },
+        {
+            "path": "/blog/saml-vs-oauth",
+            "metaTags": [
+                "<meta name=\"description\" content=\"In this article, we delve into the world of SAML and OAuth, exploring their fundamental differences, core objectives, and applications in various scenarios.\" />",
+                "",
+                "<meta name=\"keywords\" content=\"Authentication, SAML, OAuth, Authorization\" />",
+                "<!--OG Tags-->",
+                "<meta property=\"og:title\" content=\"SAML vs OAuth - Choosing the Right Protocol for Authentication\" />",
+                "<meta property=\"og:type\" content=\"article\" />",
+                "<meta property=\"og:url\" content=\"https://supertokens.com/blog/saml-vs-oauth\" />",
+                "<meta property=\"og:description\" content=\"In this article, we delve into the world of SAML and OAuth, exploring their fundamental differences, core objectives, and applications in various scenarios.\" /\"/>",
+                "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/saml-vs-oauth.png\" />",
+                "",
+                "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+                "<meta name=\"twitter:title\" content=\"SAML vs OAuth - Choosing the Right Protocol for Authentication \" />",
+                "<meta name=\"twitter:description\" content=\"In this article, we delve into the world of SAML and OAuth, exploring their fundamental differences, core objectives, and applications in various scenarios.\" />",
+                "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/saml-vs-oauth\" />",
+                "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/saml-vs-oauth.png\" /> ",
+                "<!--OG Tags-->"
+            ],
+            "title": "SAML vs OAuth - Choosing the Right Protocol for Authentication",
+            "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/saml-vs-oauth\"},\"headline\":\"SAML vs OAuth - Choosing the Right Protocol for Authentication\",\"image\":\"https://supertokens.com/blog-meta-images/saml-vs-oauth.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
         }
 ]
