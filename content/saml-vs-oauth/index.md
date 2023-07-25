@@ -25,7 +25,11 @@ SAML (Security Assertion Markup Language) and OAuth (Open Authorization) are key
 
 SAML was established in the early 2000s and was designed to facilitate Single Sign-On (SSO) and federated identity management across multiple domains. Its objective is to securely exchange user identity information between an Identity Provider (IdP) and a Service Provider (SP) through XML-based messages. SAML's focus lies primarily in enterprise environments, where seamless user authentication and trust relationships between systems are crucial.
 
+![SAML flow](./saml-flow.png)
+
 OAuth, a comparatively younger protocol introduced around 2006, addresses the needs of authorization based on social accounts and API integration. Its primary goal is to enable delegated authorization, allowing users to grant limited access to their resources to services without revealing their credentials. OAuth's widespread adoption stems from its ability to securely integrate with popular social platforms, such as Facebook, Twitter, and Google, and provide a standardized framework for granting access to user data through APIs.
+
+![Oauth flow](./oauth-flow.png)
 
 It is important to note that although SAML can do both authentication and authorization, OAuth is primarily an authorization protocol. You can learn more about [OpenID Connect](https://supertokens.com/blog/oauth-vs-oidc), a modification of OAuth which adds support for authentication. 
 
