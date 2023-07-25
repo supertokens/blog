@@ -60,6 +60,8 @@ You can learn more about how Built Intelligence integrated with SuperTokens in o
 ### Poppy
 For Poppy, they needed to make sure that the solution they were choosing had the extensibility required to meet their needs due to issues arising from fraudulent sms requests. Poppy opted for a Lazy migration strategy slowly migrating users over to SuperTokens over the course of 6 months. Once there were only a few thousand people left on Auth0, Poppy simply asked the remaining users to reset their passwords and was able to disable Auth0 completely.
 
+You can learn more about Poppy integrated with SuperTokens in our [case study](https://supertokens.com/customers/poppy)
+
 
 Apart from these users we also had to make provisions for users who were migrating from Firebase Auth. Firebase uses a modified version of the [scrypt](https://en.wikipedia.org/wiki/Scrypt) password hashing algorithm. We had to update our import password hash API to support this algorithm to ensure a smooth migration experience.
 
