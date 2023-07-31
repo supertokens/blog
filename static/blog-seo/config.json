@@ -483,5 +483,28 @@
             ],
             "title": "SAML vs OAuth - Choosing the Right Protocol for Authentication",
             "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/saml-vs-oauth\"},\"headline\":\"SAML vs OAuth - Choosing the Right Protocol for Authentication\",\"image\":\"https://supertokens.com/blog-meta-images/saml-vs-oauth.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+        },
+        {
+            "path": "/blog/authentication-vs-authorization",
+            "metaTags": [
+                "<meta name=\"description\" content=\"Authentication and Authorization represent two fundamentally different aspects of security that work together in order to protect sensitive information. In this blog, we will go over some of the key differences between the two.\" />",
+                "",
+                "<meta name=\"keywords\" content=\"Authentication, Authorization, Security, RBAC, identity\" />",
+                "<!--OG Tags-->",
+                "<meta property=\"og:title\" content=\"Authentication vs Authorization: What's the difference?\" />",
+                "<meta property=\"og:type\" content=\"article\" />",
+                "<meta property=\"og:url\" content=\"https://supertokens.com/blog/authentication-vs-authorization\" />",
+                "<meta property=\"og:description\" content=\"Authentication and Authorization represent two fundamentally different aspects of security that work together in order to protect sensitive information. In this blog, we will go over some of the key differences between the two.\" /\"/>",
+                "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/saml-vs-oauth.png\" />",
+                "",
+                "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+                "<meta name=\"twitter:title\" content=\"Authentication vs Authorization: What's the difference?\" />",
+                "<meta name=\"twitter:description\" content=\"Authentication and Authorization represent two fundamentally different aspects of security that work together in order to protect sensitive information. In this blog, we will go over some of the key differences between the two.\" />",
+                "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/authentication-vs-authorization\" />",
+                "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/authentication-vs-authorization.png\" /> ",
+                "<!--OG Tags-->"
+            ],
+            "title": "Authentication vs Authorization: What's the difference?",
+            "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/saml-vs-oauth\"},\"headline\":\"Authentication vs Authorization: What's the difference?\",\"image\":\"https://supertokens.com/blog-meta-images/authentication-vs-authorization.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
         }
 ]
