@@ -23,7 +23,8 @@ Authentication is the process of verifying the identity of a user or entity atte
 
 While authentication lays the groundwork by confirming identity, authorization takes it a step further by determining what actions or resources an authenticated user can access. In simpler terms, authorization addresses the question, "What are you allowed to do?" and defines the scope of a user's privileges within the system. This level of granularity is essential for protecting sensitive information and controlling data exposure to prevent unauthorized activities.
 Authorization mechanisms may include:
-Role-based Authorization: Assigning users to predefined roles with associated permissions and restrictions based on their job functions.
+
+Role-based Authorization: Assigning users to predefined roles with associated permissions and restrictions based on their job functions. You can learn more about RBAC in our [guide](what-is-roles-based-access-control-vs-abac). 
 Attribute-based Authorization: Determining access based on specific attributes or characteristics of the user, such as department, location, or clearance level.
 Rule-based Authorization: Enforcing access controls using a set of predefined rules that dictate who can access what resources under certain conditions.
 
