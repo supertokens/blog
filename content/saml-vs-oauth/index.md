@@ -48,7 +48,7 @@ OAuth, with its token-based approach, relies on Transport Layer Security (TLS) t
 
 ## Conclusion
 
-In the realm of authentication and authorization, choosing between SAML and OAuth boils dow to your requirements. SAML, suits complex systems requiring centralized identity management with SSO while OAuth, with its simplicity and emphasis on delegated authorization, can thrive on multiple platforms like mobile and can leverage pre-existing social to accounts to reduce login friction.
+In the realm of authentication and authorization, choosing between SAML and OAuth boils down to your requirements. SAML, suits complex systems requiring centralized identity management with SSO while OAuth, with its simplicity and emphasis on delegated authorization, can thrive on multiple platforms like mobile and can leverage pre-existing social accounts to reduce login friction.
 
 Authentication is ever-evolving, and it is essential to stay ahead of the latest developments and emerging protocols. Ultimately, the selection of SAML or OAuth depends on the specific requirements of the application or system, ensuring the chosen protocol aligns with the desired security, scalability, and user experience goals.
 
