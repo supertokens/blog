@@ -1,8 +1,8 @@
 ---
 title: "Authentication vs Authorization: What's the difference?"
-date: "2023-08-01"
+date: "2023-08-02"
 description: "Authentication and Authorization represent two fundamentally different aspects of security that work together in order to protect sensitive information. In this blog, we will go over some of the key differences between the two."
-cover: "TODO.png"
+cover: "authentication-vs-authorization.png"
 category: "programming"
 author: "Joel Coutinho"
 ---
@@ -24,9 +24,8 @@ Authentication is the process of verifying the identity of a user or entity atte
 While authentication lays the groundwork by confirming identity, authorization takes it a step further by determining what actions or resources an authenticated user can access. In simpler terms, authorization addresses the question, "What are you allowed to do?" and defines the scope of a user's privileges within the system. This level of granularity is essential for protecting sensitive information and controlling data exposure to prevent unauthorized activities.
 Authorization mechanisms may include:
 
+There are a number of Authorization techniques like *attribute* and *rule* based Authorization but one of the most popular methods is *role based* access control where users are assigned to predefined roles with associated permissions and restrictions based on their job functions. You can learn more about RBAC in our [guide]
 Role-based Authorization: Assigning users to predefined roles with associated permissions and restrictions based on their job functions. You can learn more about RBAC in our [guide](what-is-roles-based-access-control-vs-abac). 
-Attribute-based Authorization: Determining access based on specific attributes or characteristics of the user, such as department, location, or clearance level.
-Rule-based Authorization: Enforcing access controls using a set of predefined rules that dictate who can access what resources under certain conditions.
 
 ## Why both matter
 
