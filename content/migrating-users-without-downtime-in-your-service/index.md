@@ -89,6 +89,6 @@ Lazy Migration refers to a phased and strategic approach to migrating systems, a
 - Cost Optimization: By avoiding a complete overhaul in one go, Lazy Migration can help businesses optimize costs. It allows for a more granular allocation of resources, enabling organizations to invest in migration efforts strategically. This cost optimization ensures that budgets are utilized efficiently while achieving the desired outcomes.
 
 ## Conclusion:
-.By breaking down migrations into smaller, manageable steps, Lazy migration can reduce downtime, mitigate risks, optimize costs, and enhance the overall user experience when shifting to a new system.
+By breaking down migrations into smaller, manageable steps, Lazy migration can reduce downtime, mitigate risks, optimize costs, and enhance the overall user experience when shifting to a new system.
 
 

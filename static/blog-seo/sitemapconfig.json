@@ -43,5 +43,11 @@
     },
     {
         "location": "https://supertokens.com/blog/migrating-users-without-downtime-in-your-service"
+    },
+    {
+        "location": "https://supertokens.com/blog/saml-vs-oauth"
+    },
+    {
+        "location": "https://supertokens.com/blog/authentication-vs-authorization"
     }
 ]
