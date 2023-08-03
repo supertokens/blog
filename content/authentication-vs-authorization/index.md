@@ -7,6 +7,17 @@ category: "programming"
 author: "Joel Coutinho"
 ---
 
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [What is Authentication](#the-foundation---what-is-authentication)
+- [Understanding Authorization](#understanding-authorization)
+- [Why both matter](#why-both-matter)
+- [Best Practices](#best-practices-for-a-secure-future)
+- [Conclusion](#conclusion)
+
+
 ## Introduction
 
 Although they are often conflated with each other, Authentication and Authorization represent two fundamentally different aspects of security that work together in order to protect sensitive information. In this blog, we will go over some of the key differences between the two.
@@ -25,7 +36,6 @@ While authentication lays the groundwork by confirming identity, authorization t
 Authorization mechanisms may include:
 
 There are a number of Authorization techniques like *attribute* and *rule* based Authorization but one of the most popular methods is *role based* access control where users are assigned to predefined roles with associated permissions and restrictions based on their job functions. You can learn more about RBAC in our [guide]
-Role-based Authorization: Assigning users to predefined roles with associated permissions and restrictions based on their job functions. You can learn more about RBAC in our [guide](what-is-roles-based-access-control-vs-abac). 
 
 ## Why both matter
 
