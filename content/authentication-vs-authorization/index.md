@@ -35,7 +35,7 @@ Authentication is the process of verifying the identity of a user or entity atte
 While authentication lays the groundwork by confirming identity, authorization takes it a step further by determining what actions or resources an authenticated user can access. In simpler terms, authorization addresses the question, "What are you allowed to do?" and defines the scope of a user's privileges within the system. This level of granularity is essential for protecting sensitive information and controlling data exposure to prevent unauthorized activities.
 Authorization mechanisms may include:
 
-There are a number of Authorization techniques like *attribute* and *rule* based Authorization but one of the most popular methods is *role based* access control where users are assigned to predefined roles with associated permissions and restrictions based on their job functions. You can learn more about RBAC in our [guide]
+There are a number of Authorization techniques like *attribute* and *rule* based Authorization but one of the most popular methods is *role based* access control where users are assigned to predefined roles with associated permissions and restrictions based on their job functions. You can learn more about RBAC in our [guide](https://supertokens.com/blog/what-is-roles-based-access-control-vs-abac)
 
 ## Why both matter
 
