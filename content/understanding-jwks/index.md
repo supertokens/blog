@@ -20,7 +20,7 @@ JSON Web Keys (JWKs) are a JSON data structure that represents cryptographic key
 
 A sample JWKS will have the following layout:
 
-```
+```json
 {"jwk":
   [
     {
@@ -49,7 +49,7 @@ A JWK consists of a JWK Container Object, which is a JSON object that contains a
 
 To make sure a JWT has not been tampered with we need to validate its integrity by verifying the signature. This requires a public key that corresponds to the private key used by the Authorization Server to initially sign the JWT. Typically the JWKS can be retrieved by querying an exposed by the Authorization Server known as a “jwks endpoint”. 
 
-[jwks flow](./jwks-flow.png)
+![jwks flow](./jwks-flow.png)
 
 ## Benefits of Using JWKS
 - **Security**: JWKS enables the separation of concerns by centralizing key management. This segregation reduces the risk of exposing critical keys accidentally and is a much safer approach as opposed to having the keys hardcoded.
