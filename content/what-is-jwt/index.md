@@ -74,8 +74,8 @@ You may have noticed that in the JWT (that is issued by Google) example above, t
 - **at_hash**: The hash of the access token. The OAuth access token is different from the JWT in the sense that it’s an opaque token. The access token’s purpose is so that the client application can query Google to ask for more information about the signed in user.
 - **email**: The end user’s email ID
 - **email_verified**: Whether or not the user has verified their email.
-- **iat**: The time (in milliseconds since epoch) the JWT was created
-- **exp**: The time (in milliseconds since epoch) the JWT was created
+- **iat**: The time (in milliseconds since epoch) the JWT was created.
+- **exp**: The time (in milliseconds since epoch) the JWT will expire.
 - **nonce**: Can be used by the client application to prevent replay attacks.
 - **hd**: The hosted G Suite domain of the user
 
