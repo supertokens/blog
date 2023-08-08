@@ -49,6 +49,8 @@ A JWK consists of a JWK Container Object, which is a JSON object that contains a
 
 To make sure a JWT has not been tampered with we need to validate its integrity by verifying the signature. This requires a public key that corresponds to the private key used by the Authorization Server to initially sign the JWT. Typically the JWKS can be retrieved by querying an exposed by the Authorization Server known as a “jwks endpoint”. 
 
+[jwks flow](./jwks-flow.png)
+
 ## Benefits of Using JWKS
 - **Security**: JWKS enables the separation of concerns by centralizing key management. This segregation reduces the risk of exposing critical keys accidentally and is a much safer approach as opposed to having the keys hardcoded.
 - **Scalability**: As web applications grow in complexity, managing cryptographic keys in a scalable manner becomes crucial. JWKS provides a standardized way to handle keys, simplifying key distribution and rotation as the application scales.
