@@ -65,6 +65,6 @@ For most users, you will be using an authentication provider and will not have t
 
 ## Conclusion
 
-When it comes to authentication there are a number of terms and protocols thrown around which can be confusing when you first get started. We hope that through this article you have a better understanding of JWKS, its relevance to JWTs, and how they are used. If you have additional questions, check our guides on [OAuth and OIDC](https://supertokens.com/blog/oauth-vs-oidc), they are protocols that use JWTs and rely on JWKs for verification.
+When it comes to authentication there are a number of terms and protocols thrown around which can be confusing when you first get started. We hope that through this article you have a better understanding of JWKS, its relevance to JWTs, and how they are used. If you have questions about the protocols that need JWKS, check our guides on [OAuth and OIDC](https://supertokens.com/blog/oauth-vs-oidc), they are protocols that use JWTs and rely on JWKS for verification.
 
 
