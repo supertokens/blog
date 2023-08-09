@@ -49,5 +49,8 @@
     },
     {
         "location": "https://supertokens.com/blog/authentication-vs-authorization"
+    },
+    {
+        "location": "https://supertokens.com/blog/understanding-jwks"
     }
 ]

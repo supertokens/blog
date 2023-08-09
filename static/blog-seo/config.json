@@ -506,5 +506,28 @@
             ],
             "title": "Authentication vs Authorization: What's the difference?",
             "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/saml-vs-oauth\"},\"headline\":\"Authentication vs Authorization: What's the difference?\",\"image\":\"https://supertokens.com/blog-meta-images/authentication-vs-authorization.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+        },
+        {
+            "path": "/blog/understanding-jwks",
+            "metaTags": [
+                "<meta name=\"description\" content=\"JWKS are an important part of the authentication process. In this article we go over what they are and how they are used\" />",
+                "",
+                "<meta name=\"keywords\" content=\"jwks, Authentication, jwks-rsa, jwks endpoint, identity\" />",
+                "<!--OG Tags-->",
+                "<meta property=\"og:title\" content=\"Understanding JWKS (JSON Web Key Set)\" />",
+                "<meta property=\"og:type\" content=\"article\" />",
+                "<meta property=\"og:url\" content=\"https://supertokens.com/blog/understanding-jwks\" />",
+                "<meta property=\"og:description\" content=\"JWKS are an important part of the authentication process. In this article we go over what they are and how they are used\" /\"/>",
+                "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/understanding-jwks.png\" />",
+                "",
+                "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+                "<meta name=\"twitter:title\" content=\"Understanding JWKS (JSON Web Key Set)\" />",
+                "<meta name=\"twitter:description\" content=\"JWKS are an important part of the authentication process. In this article we go over what they are and how they are used\" />",
+                "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/understanding-jwks\" />",
+                "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/understanding-jwks.png\" /> ",
+                "<!--OG Tags-->"
+            ],
+            "title": "Understanding JWKS (JSON Web Key Set)?",
+            "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/understanding-jwks\"},\"headline\":\"Understanding JWKS (JSON Web Key Set)?\",\"image\":\"https://supertokens.com/blog-meta-images/understanding-jwks.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
         }
 ]
