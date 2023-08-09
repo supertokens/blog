@@ -10,7 +10,6 @@ author: "Joel Coutinho"
 ## Table of Content
 - [Introduction](#introduction)
 - [What are JSON Web Keys (JWKS)](#what-are-json-web-keys-jwks)
-- [Structure of the JWKS](#structure-of-the-jwks)
 - [How do JWKS work?](#how-do-jwks-work)
 - [Benefits of using JWKS](#benefits-of-using-jwks)
 - [Considerations for JWKS implementation](#considerations-for-jwks-implementation)
