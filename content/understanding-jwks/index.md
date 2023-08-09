@@ -7,6 +7,15 @@ category: "featured"
 author: "Joel Coutinho"
 ---
 
+## Table of Content
+- [Introduction](#introduction)
+- [What are JSON Web Keys (JWKS)](#what-are-json-web-keys-jwks)
+- [Structure of the JWKS](#structure-of-the-jwks)
+- [How do JWKS work?](#how-do-jwks-work)
+- [Benefits of using JWKS](#benefits-of-using-jwks)
+- [Considerations for JWKS implementation](#considerations-for-jwks-implementation)
+- [Conclusion](#considerations-for-jwks-implementation)
+
 ## Introduction
 
 JWTs or Json Web Tokens play a pivotal role in modern authentication. They are most commonly used to identify authenticated users and validate API requests. Part of this verification process requires the use of cryptographic keys to validate the integrity of the JWT to make sure it has not been tampered with. The set of keys used for this process is called JWKS or Json Web Key Set. In this blog post, we will go over what JWKS are and how they are used. If you are interested in learning more about JWTs and how they work, check out our [guide](https://supertokens.com/blog/what-is-jwt).
@@ -45,7 +54,7 @@ A JWK consists of a JWK Container Object, which is a JSON object that contains a
 - **exp**: exponent value for the RSA public key. It is base64 encoded
 - **kid**: They Key id is used to match a specific key. During key rotation, the kid is used to choose among a set of keys within the JWK.
 
-## How JWKS works
+## How do JWKS work?
 
 To make sure a JWT has not been tampered with we need to validate its integrity by verifying the signature. This requires a public key that corresponds to the private key used by the Authorization Server to initially sign the JWT. Typically the JWKS can be retrieved by querying an exposed by the Authorization Server known as a “jwks endpoint”. 
 
