@@ -52,5 +52,8 @@
     },
     {
         "location": "https://supertokens.com/blog/understanding-jwks"
+    },
+    {
+        "location": "https://supertokens.com/blog/understanding-hashicorp-business-source-license"
     }
 ]
