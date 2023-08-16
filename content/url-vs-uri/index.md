@@ -1,8 +1,8 @@
 ---
-title: "URL vs URI vs URN"
+title: "URI vs URL: The real difference between the two"
 date: "2023-08-16"
-description: "In this blog we break down the differences between URL, URI and URN"
-cover: TODO.png
+description: "In this blog we break down the differences between URL, URI, and URN"
+cover: uri-vs-url.png
 category: "programming"
 author: "Joel Coutinho"
 ---

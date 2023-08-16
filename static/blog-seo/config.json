@@ -550,5 +550,28 @@
         ],
         "title": "Why did HashiCorp adopt the Business Source License?",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/understanding-hashicorp-business-source-license\"},\"headline\":\"Why did HashiCorp adopt the Business Source License?\",\"image\":\"https://supertokens.com/blog-meta-images/hashicorp-bsl.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/url-vs-uri",
+        "metaTags": [
+            "<meta name=\"description\" content=\"In this blog we break down the differences between URL, URI, and URN\" />",
+            "",
+            "<meta name=\"keywords\" content=\"uri vs url, urn, open source, uri stands for\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"URI vs URL: The real difference between the two\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/url-vs-uri\" />",
+            "<meta property=\"og:description\" content=\"In this blog we break down the differences between URL, URI, and URN\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/uri-vs-url.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Understanding why HashiCorp changed to the BSL\" />",
+            "<meta name=\"twitter:description\" content=\"In this blog we break down the differences between URL, URI, and URN\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/url-vs-uri\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/uri-vs-url.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "URI vs URL: The real difference between the two",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/url-vs-uri\"},\"headline\":\"URI vs URL: The real difference between the two\",\"image\":\"https://supertokens.com/blog-meta-images/uri-vs-url.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
