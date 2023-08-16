@@ -7,6 +7,14 @@ category: "programming"
 author: "Joel Coutinho"
 ---
 
+## Table of Content
+
+- [Introduction](#introduction)
+- [What is a URL](#url-uniform-resource-locator)
+- [What is a URI](#uri-uniform-resource-identifier)
+- [What is a URN](#urn-uniform-resource-name)
+- [Conclusion]
+
 ## Introduction
 
 In the ever-evolving landscape of web development, often times it can be confusing navigating the waters of all the acronyms and technical terms. In this blog we are going to be looking at URL, URI, and URN, terms often used interchangeably leading to confusion when describing the address of a webpage.
