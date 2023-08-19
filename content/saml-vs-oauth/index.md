@@ -18,14 +18,22 @@ author: "Joel Coutinho"
 
 ## Introduction
 
-SAML (Security Assertion Markup Language) and OAuth (Open Authorization) are key protocols for authentication and authorization. While both protocols serve essential purposes, they possess distinct characteristics that make them suitable for specific use cases. In this article, we will delve into the world of SAML and OAuth, exploring their differences, objectives, and applications in various scenarios.
+SAML (Security Assertion Markup Language) at its core is an authentication mechanism, used primarily by businesses to federate employee and customer access. For example, most employees when they log into their work computer are probably using SAML.
+
+ OAuth (Open Authorization) on the other hand is an authorization protocol. It allows you to authorize a service to retrieve information from another service on your behalf without having to create new credentials. 
+ An example of this is authorizing an application to pull your profile picture from your Goolge account if you are logged in.
+ 
 
 
-## What is SAML and OAuth?
+## What is SAML?
 
 SAML was established in the early 2000s and was designed to facilitate Single Sign-On (SSO) and federated identity management across multiple domains. Its objective is to securely exchange user identity information between an Identity Provider (IdP) and a Service Provider (SP) through XML-based messages. SAML's focus lies primarily in enterprise environments, where seamless user authentication and trust relationships between systems are crucial.
 
+When SAML authentication is complete the user has access to suite of tools/applications used at a company. SAMl allows the user to operate these resources through a single unified system. Additionally admins can also use SAML to manage users from a central location.
+
 ![SAML flow](./saml-flow.png)
+
+What is OAuth?
 
 OAuth, a comparatively younger protocol introduced around 2006, addresses the needs of authorization based on social accounts and API integration. Its primary goal is to enable delegated authorization, allowing users to grant limited access to their resources to services without revealing their credentials. OAuth's widespread adoption stems from its ability to securely integrate with popular social platforms, such as Facebook, Twitter, and Google, and provide a standardized framework for granting access to user data through APIs.
 
