@@ -1,7 +1,7 @@
 ---
 title: "SAML vs OAuth: Choosing the right protocol"
 date: "2023-07-25"
-description: "Breaking down the differences between SAML and OAuth"
+description: "SAML and OAuth are protocols often used in the authentication but what are the differences between them and which one do you choose?"
 cover: "saml-vs-oauth.png"
 category: "programming"
 author: "Joel Coutinho"
@@ -11,9 +11,10 @@ author: "Joel Coutinho"
 ## Table of contents
 
 - [Introduction](#introduction)
-- [What is SAML and OAuth](#what-is-saml-and-oauth)
-- [What are the use cases?](#what-are-the-use-cases)
-- [Security and mechanisms](#security-and-mechanisms)
+- [What is SAML](#what-is-saml)
+- [What is OAuth](#what-is-oauth)
+- [What are the similarities and differences between OAuth and SAML?](#what-are-the-similarities-and-differences-between-oauth-and-saml)
+- [OpenID Connect(OIDC) and OAuth](#openid-connectoidc-and-oauth)
 - [Conclusion](#conclusion)
 
 ## Introduction
@@ -32,7 +33,7 @@ When SAML authentication is complete the user has access to the suite of tools/a
 
 ![SAML flow](./saml-flow.png)
 
-What is OAuth?
+## What is OAuth?
 
 OAuth, a comparatively younger protocol introduced around 2006, addresses the needs of authorization based on social accounts and API integration.
 
