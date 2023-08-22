@@ -55,5 +55,8 @@
     },
     {
         "location": "https://supertokens.com/blog/understanding-hashicorp-business-source-license"
+    },
+    {
+        "location": "https://supertokens.com/blog/url-vs-uri"
     }
 ]

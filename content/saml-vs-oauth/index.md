@@ -1,7 +1,7 @@
 ---
-title: "SAML vs OAuth: Choosing the right protocol for authentication"
+title: "SAML vs OAuth: Choosing the right protocol"
 date: "2023-07-25"
-description: "Breaking down the differences between SAML and OAuth"
+description: "SAML and OAuth are protocols often used in the authentication but what are the differences between them and which one do you choose?"
 cover: "saml-vs-oauth.png"
 category: "programming"
 author: "Joel Coutinho"
@@ -11,45 +11,61 @@ author: "Joel Coutinho"
 ## Table of contents
 
 - [Introduction](#introduction)
-- [What is SAML and OAuth](#what-is-saml-and-oauth)
-- [What are the use cases?](#what-are-the-use-cases)
-- [Security and mechanisms](#security-and-mechanisms)
+- [What is SAML](#what-is-saml)
+- [What is OAuth](#what-is-oauth)
+- [What are the similarities and differences between OAuth and SAML?](#what-are-the-similarities-and-differences-between-oauth-and-saml)
+- [OpenID Connect(OIDC) and OAuth](#openid-connectoidc-and-oauth)
 - [Conclusion](#conclusion)
 
 ## Introduction
 
-SAML (Security Assertion Markup Language) and OAuth (Open Authorization) are key protocols for authentication and authorization. While both protocols serve essential purposes, they possess distinct characteristics that make them suitable for specific use cases. In this article, we will delve into the world of SAML and OAuth, exploring their differences, objectives, and applications in various scenarios.
+SAML (Security Assertion Markup Language) at its core is an authentication protocol, used primarily by businesses to federate employee and customer access. For example, in a typical office environment when an employee logs into their work computer, they are using a SAML based authentication mechanism.
+
+ OAuth (Open Authorization) on the other hand is an authorization protocol. It allows you to authorize a service to retrieve information from another service on your behalf without having to expose your credentials to the service. 
+ An example of this is authorizing an application to pull your profile picture from your Google account without having to give your Google account credentials to the application.
 
 
-## What is SAML and OAuth?
+## What is SAML?
 
-SAML was established in the early 2000s and was designed to facilitate Single Sign-On (SSO) and federated identity management across multiple domains. Its objective is to securely exchange user identity information between an Identity Provider (IdP) and a Service Provider (SP) through XML-based messages. SAML's focus lies primarily in enterprise environments, where seamless user authentication and trust relationships between systems are crucial.
+SAML was established in the early 2000s and was designed to facilitate Single Sign-On (SSO) and federated identity management across multiple domains. SAML's focus lies primarily in enterprise environments, where seamless user authentication and trust relationships between systems are crucial.
+
+When SAML authentication is complete the user has access to the suite of tools/applications used at a company. SAML allows the user to operate these resources through a single unified system. Additionally admins can use SAML to manage users from a central location.
 
 ![SAML flow](./saml-flow.png)
 
-OAuth, a comparatively younger protocol introduced around 2006, addresses the needs of authorization based on social accounts and API integration. Its primary goal is to enable delegated authorization, allowing users to grant limited access to their resources to services without revealing their credentials. OAuth's widespread adoption stems from its ability to securely integrate with popular social platforms, such as Facebook, Twitter, and Google, and provide a standardized framework for granting access to user data through APIs.
+## What is OAuth?
+
+OAuth, a comparatively younger protocol introduced around 2006, addresses the needs of authorization based on social accounts and API integration.
+
+Its primary goal is to allow delegated authorization, allowing users to grant limited access to their resources to services without revealing their credentials. OAuth's widespread adoption stems from its ability to securely integrate with popular social platforms, such as Facebook, Twitter, and Google, and provide a standardized framework for granting access to user data through APIs.
 
 ![Oauth flow](./oauth-flow.png)
 
-It is important to note that although SAML can do both authentication and authorization, OAuth is primarily an authorization protocol. You can learn more about [OpenID Connect](https://supertokens.com/blog/oauth-vs-oidc), a modification of OAuth which adds support for authentication. 
-
-## What are the use cases?
-
-SAML's intended use case is based around complex enterprise environments as an authentication protocol although it does support authorization by the attribute query route. Its robust XML exchanges and comprehensive infrastructure make it excel in scenarios that necessitate centralized identity management, cross-domain SSO, and federated authentication. SAML's strengths shine when integrating multiple different platforms, such as Enterprise Resource Planning (ERP) systems or Customer Relationship Management (CRM) platforms, where maintaining control over user access and data sharing is paramount.
-
-OAuth, on the other hand, thrives in the realm of the social web and API-driven ecosystems as an authorization protocol. Its simplicity and focus on delegation make it an ideal choice for scenarios that require user consent and granular access controls. OAuth's primary use cases revolve around enabling third-party application integration, empowering developers to leverage existing user bases and resources reducing login friction while maintaining privacy and security boundaries.
 
 
-## Security and Mechanisms
+## What are the similarities and differences between OAuth and SAML?
 
-SAML relies on XML digital signatures and encryption techniques to ensure message integrity and confidentiality. It leverages X.509 certificates and Public Key Infrastructure (PKI) to establish trust between participating entities. SAML's cryptographic mechanisms provide a solid foundation for enterprise-grade security, enabling secure communication between IdPs and SPs.
+OAuth and SAML were created to establish standards of interoperability between applications. With both these protocols users can avoid a growing list of credentials that can block them from accessing important resources but are also be a major security concern.
 
-OAuth, with its token-based approach, relies on Transport Layer Security (TLS) to secure communication channels. By utilizing tokens, OAuth enables dynamic authorization decisions and fine-grained access control. Its flexible nature makes it well-suited for resource-constrained environments and API ecosystems, where lightweight and scalable security mechanisms are essential.
+As mentioned previously though, SAML and OAuth function very differently:
+
+- SAML is an Authentication protocol, which involves the managing of a users identity.
+- OAuth is an authorization protocol, which involves the handling of users privileges, delineating what resources  
+
+
+## When Should You Use SAML or OAuth?
+
+Although both SAML and OAuth allow for SSO like flows, that are imperative for employees, they are not exactly alternatives but protocols that can work together. For example, the [Microsoft environment](https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-vs-authorization) uses both SAML and OAuth to grant access and allow access to protected resources.
+
+Although authentication and authorization are not a requirement for some applications, most businesses need some authentication and authorization system to function effectively.
+
+## OpenID Connect(OIDC) and OAuth
+
+As we have mentioned previously OAuth is primarily an Authorization protocol that traditionally uses , some business may want to allow users to use their social accounts as their identity. Thats where OIDC or OpenID connect comes in, it is a protocol built on top of OAuth, that allows for authentication. You can learn more about [OpenID Connect and how it is different from OAuth in our guide](https://supertokens.com/blog/oauth-vs-oidc).
 
 ## Conclusion
 
-In the realm of authentication and authorization, choosing between SAML and OAuth boils down to your requirements. SAML, suits complex systems requiring centralized identity management with SSO while OAuth, with its simplicity and emphasis on delegated authorization, can thrive on multiple platforms like mobile and can leverage pre-existing social accounts to reduce login friction.
+Authentication is ever-evolving, and it is essential to stay ahead of the latest developments and emerging protocols. Ultimately, the selection of SAML or OAuth depends on the specific requirements of the application or system. SAML is an established standard used by large businesses with complex authentication requirements while OAuth is comparatively newer, easier to use but aimed at authorization.
 
-Authentication is ever-evolving, and it is essential to stay ahead of the latest developments and emerging protocols. Ultimately, the selection of SAML or OAuth depends on the specific requirements of the application or system, ensuring the chosen protocol aligns with the desired security, scalability, and user experience goals.
 
 

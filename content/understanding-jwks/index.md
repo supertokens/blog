@@ -17,7 +17,7 @@ author: "Joel Coutinho"
 
 ## Introduction
 
-JWTs or Json Web Tokens play a pivotal role in modern authentication. They are most commonly used to identify authenticated users and validate API requests. Part of this verification process requires the use of cryptographic keys to validate the integrity of the JWT to make sure it has not been tampered with. The set of keys used for this process is called JWKS or Json Web Key Set. In this blog post, we will go over what JWKS are and how they are used. If you are interested in learning more about JWTs and how they work, check out our [guide](https://supertokens.com/blog/what-is-jwt).
+JWTs or Json Web Tokens are most commonly used to identify authenticated users and validate API requests. Part of this verification process requires the use of cryptographic keys to validate the integrity of the JWT to make sure it has not been tampered with. The set of keys used for this process is called JWKS or Json Web Key Set. In this blog post, we will go over what JWKS are and how they are used. If you are interested in learning more about JWTs and how they work, check out our [guide](https://supertokens.com/blog/what-is-jwt).
 
 
 ## What are JSON Web Keys (JWKs)?
