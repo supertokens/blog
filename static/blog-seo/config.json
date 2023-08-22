@@ -349,7 +349,7 @@
         "metaTags": [
             "<meta name=\"description\" content=\"We break down the OIDC and OAuth standards and explain the key differences between the two\" />",
             "",
-            "<meta name=\"keywords\" content=\"Authentication, OIDC, OAuth 2 vs OpenId, OIDC vs OAuth, openid connect\" />",
+            "<meta name=\"keywords\" content=\"Authentication, OIDC, OAuth2 vs OpenId, OIDC vs OAuth, openid connect\" />",
             "<!--OG Tags-->",
             "<meta property=\"og:title\" content=\"OIDC vs OAuth\" />",
             "<meta property=\"og:type\" content=\"article\" />",
