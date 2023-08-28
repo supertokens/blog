@@ -3,7 +3,6 @@ import * as cheerio from "cheerio";
 import { withPrefix } from "gatsby"
 
 import Layout from "../components/layout"
-import Seo from "../components/seo"
 import BlogPostFooter from "../components/BlogPostFooter";
 
 const BlogPostTemplate = ({ data, location }) => {
@@ -42,10 +41,6 @@ const BlogPostTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
       <article
         className="blog-post"
         itemScope
