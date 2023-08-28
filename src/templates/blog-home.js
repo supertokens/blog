@@ -1,7 +1,5 @@
 import * as React from "react"
 
-import Seo from "../components/seo"
-
 import "../styles/blog.css"
 
 const BlogHomeTemplate = (props) => {
@@ -27,7 +25,6 @@ const BlogHomeTemplate = (props) => {
 
   return (
     <div className="blog-container">
-      <Seo />
       <div className="blog-header">
         <h1 className="blog-header__title">SuperTokens Blog</h1>
 
