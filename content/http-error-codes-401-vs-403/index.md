@@ -2,7 +2,7 @@
 title: Demystifying HTTP Error Codes 401 vs 403
 date: "2023-09-05"
 description: "In this blog we will go over the http protocol error codes 401 and 403 and describe when is it appropriate to use each of them."
-cover: "TODO"
+cover: "http-error-codes-401-vs-403.png"
 category: "programming"
 author: "Joel Coutinho"
 ---

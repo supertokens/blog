@@ -58,5 +58,8 @@
     },
     {
         "location": "https://supertokens.com/blog/url-vs-uri"
+    },
+    {
+        "location": "https://supertokens.com/blog/http-error-codes-401-vs-403"
     }
 ]
