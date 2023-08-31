@@ -573,5 +573,28 @@
         ],
         "title": "URI vs URL: The real difference between the two",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/url-vs-uri\"},\"headline\":\"URI vs URL: The real difference between the two\",\"image\":\"https://supertokens.com/blog-meta-images/uri-vs-url.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/http-error-codes-401-vs-403",
+        "metaTags": [
+            "<meta name=\"description\" content=\"HTTP error codes can be confusing and incorrect usage can result in security vulnerabilities. In  this blog we break down the differences between error codes 401 and 403\" />",
+            "",
+            "<meta name=\"keywords\" content=\"401 vs 403, http error codes, differences between 401 and 403\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Demystifying HTTP Error Codes 401 vs 403\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/http-error-codes-401-vs-403\" />",
+            "<meta property=\"og:description\" content=\"HTTP error codes can be confusing and incorrect usage can result in security vulnerabilities. In  this blog we break down the differences between error codes 401 and 403\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/http-error-codes-401-vs-403.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Demystifying HTTP Error Codes 401 vs 403\" />",
+            "<meta name=\"twitter:description\" content=\"In this blog we will go over the http protocol error codes 401 and 403 and describe when is it appropriate to use each of them.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/http-error-codes-401-vs-403\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/http-error-codes-401-vs-403.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Demystifying HTTP Error Codes 401 vs 403",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/http-error-codes-401-vs-403\"},\"headline\":\"Demystifying HTTP Error Codes 401 vs 403\",\"image\":\"https://supertokens.com/blog-meta-images/http-error-codes-401-vs-403.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
