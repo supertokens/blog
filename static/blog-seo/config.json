@@ -596,5 +596,28 @@
         ],
         "title": "Demystifying HTTP Error Codes 401 vs 403",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/http-error-codes-401-vs-403\"},\"headline\":\"Demystifying HTTP Error Codes 401 vs 403\",\"image\":\"https://supertokens.com/blog-meta-images/http-error-codes-401-vs-403.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/what-is-ldap",
+        "metaTags": [
+            "<meta name=\"description\" content=\"In workforce identity and B2B flows, LDAP is main protocol used to interact with directory services that store user identity and device information. In this blog post we take a look at LDAP and how it works.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"ldap, what is ldap, ldap server, ldap port\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What is LDAP & How does it work?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/what-is-ldap\" />",
+            "<meta property=\"og:description\" content=\"In workforce identity and B2B flows, LDAP is main protocol used to interact with directory services that store user identity and device information. In this blog post we take a look at LDAP and how it works.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-ldap.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"What is LDAP & How does it work?\" />",
+            "<meta name=\"twitter:description\" content=\"In workforce identity and B2B flows, LDAP is main protocol used to interact with directory services that store user identity and device information. In this blog post we take a look at LDAP and how it works.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-is-ldap\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-ldap.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "What is LDAP & How does it work?",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-ldap\"},\"headline\":\"What is LDAP & How does it work?\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-ldap.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]

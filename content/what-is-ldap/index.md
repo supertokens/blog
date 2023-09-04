@@ -1,8 +1,8 @@
 ---
-title: Demystifying HTTP Error Codes 401 vs 403
-date: "2023-09-01"
-description: "In this blog we will go over the http protocol error codes 401 and 403 and describe when is it appropriate to use each of them."
-cover: "http-error-codes-401-vs-403.png"
+title: What is LDAP & How does it work?
+date: "2023-09-04"
+description: "In workforce identity and B2B flows, LDAP is main protocol used to interact with directory services that store user identity and device information. In this blog post we take a look at LDAP and how it works."
+cover: "what-is-ldap.png"
 category: "programming"
 author: "Joel Coutinho"
 ---
@@ -16,6 +16,8 @@ Directory services are repositories that maintain information about users and re
 LDAP enables the secure management of IT resources in a directory, making it possible to control access to different parts of a network.
 
 ### How does LDAP work?
+
+![How does ldap work](./how-does-ldap-work.png)
 
 In the workplace, the average employee can interact with LDAP multiple times a day. Before they can start performing search operations, they will need to authenticate themselves. This can be done in two methods:
 
