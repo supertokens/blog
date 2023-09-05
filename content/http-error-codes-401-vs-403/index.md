@@ -19,7 +19,7 @@ author: "Joel Coutinho"
 Understanding HTTP status codes is imperative since most modern Web APIs leverage this protocolr and on the surface, HTTP status codes are straightforward. A `200` response signifies the request was successfully completed while a `404`  signifies that the address was not found and a `500` means an internal error occurred in the backend server. But there seems to be some confusion between error codes `401 Unauthorized` and `403 Forbidden`. In this blog we will be looking into the differences between the two and when is it appropriate to respond with them.
 
 ## HTTP 401 UNAUTHORIZED
-The HTTP status code 401, often denoted as `UNAUTHORIZED`, signifies that the client lacks proper authentication credentials or has provided invalid credentials. In simpler terms, the server has failed to identify the user
+The HTTP status code 401, often denoted as `UNAUTHORIZED`, signifies that the client lacks proper authentication credentials or has provided invalid credentials. In simpler terms, the server has failed to identify the user.
 
 This could occur due to:
 
