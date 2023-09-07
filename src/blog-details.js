@@ -86,18 +86,6 @@ module.exports = [
   },
   {
     fields: {
-      slug: "/cookies-vs-localstorage-for-sessions-everything-you-need-to-know",
-    },
-    frontmatter: {
-      title: "Cookies vs Localstorage for sessions – everything you need to know",
-      description: "What are the usability and security trade-offs of storing session cookies in cookie storage or browser storage?  Learn more about the best approach and common misconceptions that people have about it.",
-      category: "sessions",
-      date: "June 23, 2020",
-      cover: "cookies-vs-localstorage-for-sessions-everything-you-need-to-know.png"
-    }
-  },
-  {
-    fields: {
       slug: "/express-session-vs-supertokens-for-handling-user-sessions",
     },
     frontmatter: {
