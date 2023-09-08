@@ -61,18 +61,6 @@ module.exports = [
   },
   {
     fields: {
-      slug: "/speed-up-your-web-development-time-by-integrating-webflow-into-a-react-application",
-    },
-    frontmatter: {
-      title: "Speed up your web development time by integrating Webflow into a React application",
-      description: "Writing JSX to build pixel perfect UI elements can be very time consuming and frustrating. Learn how react engineers can inject complex elements / React components into a Webflow generated HTML page.",
-      category: "programming",
-      date: "December 10, 2020",
-      cover: "speed-up-your-web-development-time-by-integrating-webflow-into-a-react-application.png"
-    }
-  },
-  {
-    fields: {
       url: "https://www.youtube.com/watch?v=6Vzit514kZY&list=PLE5w09cAseKTIFCImkqFbSeYMHPzW7M_f&index=17",
       nofollow: true
     },
