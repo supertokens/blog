@@ -89,6 +89,7 @@ module.exports = {
           }
         }
       `,
+        output:'/sitemaps',
         resolveSiteUrl: () => 'https://supertokens.com/',
         resolvePages: ({
           allSitePage: { nodes:allPages }
