@@ -10,6 +10,7 @@
     "gatsby-plugin-gatsby-cloud": "^4.7.0",
     "gatsby-plugin-image": "^2.7.0",
     "gatsby-plugin-sharp": "^4.7.0",
+    "gatsby-plugin-sitemap": "^6.12.0",
     "gatsby-remark-autolink-headers": "^5.22.0",
     "gatsby-remark-copy-linked-files": "^5.7.0",
     "gatsby-remark-external-links": "^0.0.4",
