@@ -1,19 +1,19 @@
 ---
-title: How we cut our AWS costs by more than 60%
-date: "2023-09-14"
+title: How we cut our AWS costs by more than 50%
+date: "2023-09-19"
 description: "Part 1 in a series of  how we were able to cut down our AWS infrastructure costs by more than 60%"
 cover: "how-we-cut-our-aws-costs.png"
 category: "programming"
 author: "Joel Coutinho"
 ---
 
-In this two part series we will go over SuperTokens manged service infrastructure and the changes we made to cut our AWS billing by ore than 60%. 
+In this two part series we will go over SuperTokens manged service infrastructure and the changes we made to cut our AWS billing by more than 50%. 
 
 **Part 1: How does the SuperTokens managed service work and why does it need to change.**
 
 ## Introduction
 
-The SuperTokens managed service powers numerous web products, mobile applications, and services and is primarily hosted on AWS. Our infrastructure leverages a suite of AWS tools, including AWS RDS for our database, EC2 instances for SuperToken deployments, and System Manager for instance management and automation. Over time, we've refined our deployment cycle to enhance stability, fault tolerance, and cost efficiency but our most recent update has yielded our biggest savings yet, slashing costs by over 60% while achieving [record scalability](https://twitter.com/supertokensio/status/1701600309397852270). 
+The SuperTokens managed service powers numerous web products, mobile applications, and services and is primarily hosted on AWS. Our infrastructure leverages a suite of AWS tools, including AWS RDS for our database, EC2 instances for SuperToken deployments, and System Manager for instance management and automation. Over time, we've refined our deployment cycle to enhance stability, fault tolerance, and cost efficiency but our most recent update has yielded our biggest savings yet, slashing costs by over 50% while achieving [record scalability](https://twitter.com/supertokensio/status/1701600309397852270). 
 
 
 ## What was the SuperTokens infrastructure like?
@@ -22,13 +22,13 @@ To gain a better understanding of the SuperTokens infrastructure, it's crucial t
 
 ![SuperTokens Deployment process](./supertokens-deployment-process.png)
 
-SuperTokens deploys two instances of the SuperTokens core for each user, consisting of a development and production core instance. Here's the breakdown of each:
+SuperTokens allow users to use the SuperTokens SAAS service in two modes: development and production. Here’s the breakdown of each:
 
-**Development SuperTokens Core:**
-The Development core instance runs on an *EC2 T3 small* instance. To maximize resource utilization, we deploy up to seven development core instances on the same *T3 small* instance. This configuration results in a remarkably swift setup for new development cores, typically taking a mere 15-20 seconds and is suitable for testing purposes.
+**Development Mode:**
+The Development mode runs on an *EC2 T3.small* instance. To maximize resource utilization, we deploy up to seven development core instances on the same *T3.small* instance. This configuration results in a remarkably swift setup for new development cores, typically taking a mere 15-20 seconds and is suitable for testing purposes.
 
-**Production SuperTokens Core:**
-In contrast, the Production SuperTokens core follows a different deployment strategy. Each production SuperTokens core instance is hosted on a dedicated *EC2 T2 micro* instance. This means that when a new production SuperTokens core instance needs to be created, a fresh *T2 micro* instance is spun up, and the operating system with Docker needs to be installed. Consequently, this process requires additional time compared to the development deployment method, with an average deployment time of around 4-5 minutes.
+**Production mode:**
+In contrast, production mode follows a different deployment strategy. Each production mode deployment is hosted on a dedicated *EC2 T2.micro* instance. This means that when a new production SuperTokens core instance needs to be created, a fresh *T2.micro* instance is spun up, and docker is installed on it using System Manager. Consequently, this process requires additional time compared to the development mode, with an average deployment time of around 4-5 minutes.
 
 
 For example, if 7 users were to sign up for SuperTokens, it would look like the following:
