@@ -281,4 +281,4 @@ This wraps up the best practices to prevent common types of attacks and this sec
 
 Studying all these session flows enabled us to conceptualize a flow (inspired by [IETF RFC 6819](https://datatracker.ietf.org/doc/html/rfc6819)) which enables greater security and detection of theft. We subsequently built the flow for our own service ([Qually.com](https://qually.com)) and, on request of the developer community, decided to open source our code. Click the button below to navigate to a post which discusses this flow and has links to the GitHub repo — should you be interested. Do check it out and let us know what you think!
 
-<!-- TODO add part 2 button. -->
+<a href="/blog/the-best-way-to-securely-manage-user-sessions" target="_blank" class="primary-button">Go to part 2</a>
