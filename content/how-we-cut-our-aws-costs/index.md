@@ -1,7 +1,7 @@
 ---
 title: How we cut our AWS costs by more than 50%
 date: "2023-09-19"
-description: "Part 1 in a series of  how we were able to cut down our AWS infrastructure costs by more than 60%"
+description: "Part 1 in a series of  how we were able to cut down our AWS infrastructure costs by more than 50%"
 cover: "how-we-cut-our-aws-costs.png"
 category: "programming"
 author: "Joel Coutinho"
