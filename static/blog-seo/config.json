@@ -619,5 +619,28 @@
         ],
         "title": "What is LDAP & How does it work?",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-ldap\"},\"headline\":\"What is LDAP & How does it work?\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-ldap.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/how-we-cut-our-aws-costs",
+        "metaTags": [
+            "<meta name=\"description\" content=\"In this two part blog series we will break down how we were able to cut down our AWS costs by over 50%\" />",
+            "",
+            "<meta name=\"keywords\" content=\"aws, cost optimization, open source, authentication\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How we cut our AWS costs by more than 50%\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/how-we-cut-our-aws-costs\" />",
+            "<meta property=\"og:description\" content=\"In this two part blog series we will break down how we were able to cut down our AWS costs by over 50%\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/how-we-cut-our-aws-costs.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"How we cut our AWS costs by more than 50%\" />",
+            "<meta name=\"twitter:description\" content=\"In this two part blog series we will break down how we were able to cut down our AWS costs by over 50%\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/how-we-cut-our-aws-costs\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/how-we-cut-our-aws-costs.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "How we cut our AWS costs by more than 50%",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/how-we-cut-our-aws-costs\"},\"headline\":\"How we cut our AWS costs by more than 50%\",\"image\":\"https://supertokens.com/blog-meta-images/how-we-cut-our-aws-costs.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
