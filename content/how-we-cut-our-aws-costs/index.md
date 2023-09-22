@@ -18,7 +18,7 @@ The SuperTokens managed service powers numerous web products, mobile application
 
 ## What was the SuperTokens infrastructure like?
 
-To gain a better understanding of the SuperTokens infrastructure, it's crucial to grasp the initial deployment cycle. 
+To gain a better understanding of the SuperTokens infrastructure, it's crucial to grasp the deployment cycle. 
 
 ![SuperTokens Deployment process](./supertokens-deployment-process.png)
 
