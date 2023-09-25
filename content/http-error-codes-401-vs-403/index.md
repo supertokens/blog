@@ -7,7 +7,7 @@ category: "programming"
 author: "Joel Coutinho"
 ---
 
-## Table of content
+## Table of contents
 - [Introduction](#introduction)
 - [HTTP 401 UNAUTHORIZED](#http-401-unauthorized)
 - [HTTP 403 FORBIDDEN](#http-403-forbidden)
@@ -16,7 +16,7 @@ author: "Joel Coutinho"
 
 ## Introduction
 
-Understanding HTTP status codes is imperative since most modern Web APIs leverage this protocolr and on the surface, HTTP status codes are straightforward. A `200` response signifies the request was successfully completed while a `404`  signifies that the address was not found and a `500` means an internal error occurred in the backend server. But there seems to be some confusion between error codes `401 Unauthorized` and `403 Forbidden`. In this blog we will be looking into the differences between the two and when is it appropriate to respond with them.
+Understanding HTTP status codes is imperative since most modern Web APIs leverage this protocol and on the surface, HTTP status codes are straightforward. A `200` response signifies the request was successfully completed while a `404`  signifies that the address was not found and a `500` means an internal error occurred in the backend server. But there seems to be some confusion between error codes `401 Unauthorized` and `403 Forbidden`. In this blog post, we will explore the distinctions between the two error codes and provide insights into the specific scenarios where each error code is applicable.
 
 ## HTTP 401 UNAUTHORIZED
 The HTTP status code 401, often denoted as `UNAUTHORIZED`, signifies that the client lacks proper authentication credentials or has provided invalid credentials. In simpler terms, the server has failed to identify the user.
@@ -48,6 +48,6 @@ While both HTTP error codes indicate access denial, their fundamental difference
 ## Conclusion
 
 To summarize the main difference between the two, although both status codes represent access denial, 401 errors address authentication issues, and 403 errors point towards authorization problems.
-It is important to make this distinction as incorrectly handling these responses can leave you suspectable to exploits from malicious attackers.  
+It is important to make this distinction as incorrectly handling these responses can leave you susceptible to exploits from malicious attackers.  
 
 

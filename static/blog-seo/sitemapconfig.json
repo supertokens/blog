@@ -64,5 +64,8 @@
     },
     {
         "location": "https://supertokens.com/blog/what-is-ldap"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-we-cut-our-aws-costs"
     }
 ]
