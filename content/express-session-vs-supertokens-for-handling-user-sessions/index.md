@@ -7,7 +7,7 @@ category: "sessions"
 author: "Advait Ruia"
 ---
 
-This article will be comparing SuperTokens to Node’s most popular [session management](https://www.packetlabs.net/posts/session-management/) library – express-session. The comparison will be done using a point system, where a point will be awarded to a library’s score if it performs well in a given metric. Here are the metrics we will be using:
+This article will be comparing SuperTokens to Node’s most popular session management library – [express-session](https://www.npmjs.com/package/express-session). The comparison will be done using a point system, where a point will be awarded to a library’s score if it performs well in a given metric. Here are the metrics we will be using:
 
 - [**Security**](#security): This is especially relevant because we’re talking about user session management.
 - [**Scalability**](#scalability): Time and space costs. This is relevant because most API calls require session authentication.
