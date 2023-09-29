@@ -46,7 +46,7 @@ So what prompted us to change our deployment process?
 ## Why we had to change our deployment process
 The past year has been quite a ride for SuperTokens. We released a host of new features and saw a big uptick in users. But, as our user numbers climbed, so did our infrastructure costs. With our AWS credits running out soon, we knew we had to do something to cut our expenses.
 
-With the release of our new multi-tenancy feature  we saw the opportunity to consolidate core instances to optimize the utilization of our EC2 instances to cut down our costs while also providing the expected performance. 
+With the release of our new multi-tenancy feature we saw it as an opportunity to optimize the utilization of our EC2 instances by consolidating our core instances. This would cut down our costs while also providing the expected performance.
 
 In part 2 we will go over the changes we made to achieve this. 
 
