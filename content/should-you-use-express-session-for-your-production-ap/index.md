@@ -7,7 +7,7 @@ category: "sessions"
 author: "Rishabh Poddar"
 ---
 
-While being Node’s most popular [session management](https://www.packetlabs.net/posts/session-management/) library, express-session has its set of flaws and weaknesses – especially when it comes to security. This article will analyse the good and bad parts of express-session so that you can make an informed decision for your next app. We will be using a point system where one point will be awarded for performing well on a metric, and one will be deducted for bad performance. At the minimum, we want a positive number at the end of the analysis (and the higher the number is, the better). Here are the metrics we will be using:
+While being Node’s most popular session management library, [express-session](https://www.npmjs.com/package/express-session) has its set of flaws and weaknesses – especially when it comes to security. This article will analyse the good and bad parts of express-session so that you can make an informed decision for your next app. We will be using a point system where one point will be awarded for performing well on a metric, and one will be deducted for bad performance. At the minimum, we want a positive number at the end of the analysis (and the higher the number is, the better). Here are the metrics we will be using:
 
 - [**Security**](#security): This is especially relevant because we’re talking about user session management.
 - [**Scalability**](#scalability): Time and space costs. This is relevant because most API calls require session authentication.
@@ -167,7 +167,7 @@ After speaking to 100+ companies, we observed that close to 75% of startups and 
 
 With a negative final score, it’s clear that Express-session is not optimal for production apps – especially ones that care about user security and will likely scale with time. If you feel that I have judged unfairly, or missed out an important metric, please do comment or send us an [email](mailto:team@supertokens.com).
 
-There are many alternatives to Express-session and it is likely that you are considering building a custom solution. However, as an alternative to Express-session, we have built a secure, open source and feature complete solution called [SuperTokens](https://supertokens.com/). It is already being used by 100s of developers all. We’d love to hear your feedback on whether this is something you would use.
+There are many alternatives to Express-session and it is likely that you are considering building a custom solution. However, as an alternative to Express-session, we have built a secure, open source, and feature complete solution called [SuperTokens](https://supertokens.com/). It is already being used by 100s of developers. We’d love to hear your feedback on whether this is something you would use.
 
 
 To learn more about Sessions, please visit our other blogs and our website:
