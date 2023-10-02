@@ -114,3 +114,38 @@ In the above code snippet, we have provided a custom signIn function that uses t
 
 If we wish, we can even avoid calling the original implementation entirely and define our own logic. For example, if we wanted to use a different password hashing algorithm that is not supported by SuperTokens.
 
+### Special cases for modifying APIs
+
+Sometimes, you may want to modify the default API to:
+
+- Access the request object, for example, to read the origin header
+- Send a custom reply to your frontend UI that deviates from our predefined output types
+- Disable an API we have provided entirely. For example, you may want to do this if you do not want users to self sign up in your application.
+
+The function signature of all the API interface functions has an options parameter that contains the original request and response objects. You can read from the request object and write to the response object as you normally would in your own APIs.
+
+For example, if you want to read the request’s origin header during the sign up API, you can do it as follows:
+
+
+![API's override example](./carbon-2.png)
+
+As you can see above, we can access the request object using *input.options.req*.
+
+Likewise, if we want to send a custom response to the frontend, we can access the response object via *input.options.res*.
+
+Finally, to disable an API that we provide, you can set it to *undefined* as follows:
+
+![disabling API's](./carbon-3.png)
+
+This will disable the sign up API, and requests to /auth/signup will be passed along to your APIs or yield a 404.
+
+### Advantages of the override method:
+
+- Make modifications in the language and web framework you are already familiar with, within your own backend layer. This allows you to reuse your code for connecting to your database, sending a custom reply, logging requests and responses, sending analytics events, handling errors etc. Furthermore, since you already know the language and the web framework, the learning curve is minimal.
+- Easier maintainability: Some auth providers require you to upload code onto their dashboard. This means you need to make sure that changes to that version of the code in your git repo are reflected on the auth provider’s dashboard (and vice versa). This can be a headache, especially with larger team sizes. With SuperTokens, all the mods you will ever need will live in the same codebase as all of your other backend code - SuperTokens is just another library you use.
+- Flexibility in customisations: If you noticed, we don’t provide any special “hook” points (like pre-sign up or post sign up callbacks). You simply create your own implementation based on the original implementation. In fact, you can even copy the original implementation’s code and paste that in your own implementation if required. Hence, your modifications can be at any point in the API logic. In turn, this provides maximum flexibility.
+- Flexibility in integrations: Auth APIs have to interact with several other services like those used for sending emails or SMSs, spam/anomaly detection or rate-limiting. Since the APIs are all within your own backend layer, you can use any such service(s) in the APIs we provide - you are not limited to the ones we (eventually will) support.
+
+### Conclusion
+
+In the post, we saw how we can use the Overrides feature to modify the behaviour of any of the auth APIs exposed by SuperTokens. Whilst this blog focuses on NodeJS, the concept is the same in all the other SDKs we provide.
