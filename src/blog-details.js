@@ -25,18 +25,6 @@ module.exports = [
   },
   {
     fields: {
-      slug: "/why-is-redux-state-immutable",
-    },
-    frontmatter: {
-      title: "Why is redux state immutable?",
-      description: "This blog covers an analysis of why redux state is immutable and how you should go about modifying state in your Redux applications",
-      category: "programming",
-      date: "November 11, 2021",
-      cover: "why-is-redux-state-immutable.png"
-    },
-  },
-  {
-    fields: {
       slug: "/solve-the-problem-of-vendor-lock-in",
     },
     frontmatter: {
