@@ -191,8 +191,7 @@ At the time of writing this article, the SuperTokens feature set is completely f
 
 - #### Managed Service:
   - Free for the first **5000 MAUs** .
-  - **$29/month** for every **5000 MAUs** beyond the free limit of up to **50000 MAUs**.
-  - Custom pricing beyond **50000 MAUs**
+  - 2 cents / MAU post the first **5000 MAUs**.
 
 ### So is SuperTokens the way to go?
 SuperToken's feature set and pricing make it a great choice for startups and mid-level businesses, but it may not be the best fit for large organisations that require enterprise features.
