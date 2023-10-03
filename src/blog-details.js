@@ -108,16 +108,4 @@ module.exports = [
       cover: "the-best-way-to-securely-manage-user-sessions.png"
     }
   },
-  {
-    fields: {
-      slug: "/all-you-need-to-know-about-user-session-security",
-    },
-    frontmatter: {
-      title: "All you need to know about user session security",
-      description: "This article covers extensive conversations with over 70+ developers exploring different session management practices, identifying issues and converging on a solution to these issues. ",
-      category: "sessions, featured",
-      date: "June 07, 2019",
-      cover: "all-you-need-to-know-about-user-session-security.png"
-    }
-  },
 ]
