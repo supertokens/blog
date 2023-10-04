@@ -64,4 +64,5 @@ To summarise, the problem of vendor lokin can be minimised by:
 ## Footnote:
 
 *[1]: I am not a lawyer. Please consult one before implementing / seriously considering the ideas pointed out in this section.*
+
 *[2]: The source code is viewable, but under a proprietary license - limiting the distribution and modification of the code, and usually requiring a license key to run.*
