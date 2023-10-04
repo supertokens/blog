@@ -36,12 +36,12 @@ The table below compares the different storage mechanisms across all the various
 
 The critical auth token is perpetually exposed over two attack surfaces, the frontend, and the backend and occasionally exposed over transit.
 
-*Effect of stolen auth tokens:*
+*Effect of stolen auth tokens:* </br>
 Access token stolen: The attacker will have unauthorised access for a short period of time (until token expiry)
 
 Refresh token stolen: Detection of theft will enable the stolen refresh token to be invalidated, limiting the damage to a short period of time
 
-*Detection of theft:*
+*Detection of theft:* </br>
 ‍Access token stolen: This theft may only be detected through the use of [heuristic algorithms](/blog/all-you-need-to-know-about-user-session-security#eee3) or if the user notifies the provider / developer of the service.
 
 Refresh token stolen: Detection of theft will be possible as long as both the attacker and victim use the refresh token at least once post the attack. This is illustrated through an example below.
@@ -53,7 +53,7 @@ Refresh token stolen: Detection of theft will be possible as long as both the at
 - If both, the victim and the attacker, use RT0 at the same time, then one would get (RT1, AT1), and the other (RT2, AT2). The next request by either of them with the new access token would either invalidate RT1 or RT2, resulting in either the victim or the attacker to be eventually[[1]](#footnotes) logged out. Again, here the backend would get a clear indication of theft.
 
 
-*Once detected:*
+*Once detected:* </br>
 Access tokens need not be revoked since they are short lived. However, if needed, Opaque access tokens can be revoked by removing them from the database.
 
 Refresh tokens can be revoked easily by removing it from the database.
