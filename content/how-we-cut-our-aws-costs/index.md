@@ -11,6 +11,8 @@ In this two part series we will go over SuperTokens manged service infrastructur
 
 **Part 1: How does the SuperTokens managed service work and why does it need to change.**
 
+[**Part 2: Using multi-tenancy to cut our AWS infra costs by by more than 50%**](./how-we-cut-our-aws-costs-part-2/)
+
 ## Introduction
 
 The SuperTokens managed service powers numerous web products, mobile applications, and services and is primarily hosted on AWS. Our infrastructure leverages a suite of AWS tools, including AWS RDS for our database, EC2 instances for SuperToken deployments, and System Manager for instance management and automation. Over time, we've refined our deployment cycle to enhance stability, fault tolerance, and cost efficiency but our most recent update has yielded our biggest savings yet, slashing costs by over 50% while achieving [record scalability](https://twitter.com/supertokensio/status/1701600309397852270). 
@@ -46,7 +48,7 @@ So what prompted us to change our deployment process?
 ## Why we had to change our deployment process
 The past year has been quite a ride for SuperTokens. We released a host of new features and saw a big uptick in users. But, as our user numbers climbed, so did our infrastructure costs. With our AWS credits running out soon, we knew we had to do something to cut our expenses.
 
-With the release of our new multi-tenancy feature  we saw the opportunity to consolidate core instances to optimize the utilization of our EC2 instances to cut down our costs while also providing the expected performance. 
+With the release of our new multi-tenancy feature we saw it as an opportunity to optimize the utilization of our EC2 instances by consolidating our core instances. This would cut down our costs while also providing the expected performance.
 
 In part 2 we will go over the changes we made to achieve this. 
 
