@@ -665,5 +665,28 @@
         ],
         "title": "How to create an invite-only auth flow in 2023",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/how-to-create-an-invite-only-auth-flow\"},\"headline\":\"How to create an invite-only auth flow in 2023\",\"image\":\"https://supertokens.com/blog-meta-images/how-to-create-an-invite-only-auth-flow.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/how-we-cut-our-aws-costs-part-2",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Part 2 in a series of howe we were able to cut down our AWS infrastructure costs by more than 50%\" />",
+            "",
+            "<meta name=\"keywords\" content=\"aws, cost optimization, open source, authentication\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How we used multi-tenancy to cut our AWS costs by 50%\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/how-we-cut-our-aws-costs-part-2\" />",
+            "<meta property=\"og:description\" content=\"Part 2 in a series of howe we were able to cut down our AWS infrastructure costs by more than 50%\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/how-we-cut-our-aws-costs-part-2.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"How we used multi-tenancy to cut our AWS costs by 50%\" />",
+            "<meta name=\"twitter:description\" content=\"part 2 in a series of howe we were able to cut down our AWS infrastructure costs by more than 50%%\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/how-we-cut-our-aws-costs-part-2\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/how-we-cut-our-aws-costs-part-2.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "How we used multi-tenancy to cut our AWS costs by 50%",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/how-we-cut-our-aws-costs\"},\"headline\":\"How we used multi-tenancy to cut our AWS costs by 50%\",\"image\":\"https://supertokens.com/blog-meta-images/how-we-cut-our-aws-costs-part-2.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
