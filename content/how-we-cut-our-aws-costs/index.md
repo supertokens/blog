@@ -11,7 +11,7 @@ In this two part series we will go over SuperTokens manged service infrastructur
 
 **Part 1: How does the SuperTokens managed service work and why does it need to change.**
 
-[**Part 2: Using multi-tenancy to cut our AWS infra costs by by more than 50%**](./how-we-cut-our-aws-costs-part-2/)
+[**Part 2: Using multi-tenancy to cut our AWS infra costs by more than 50%**](./how-we-cut-our-aws-costs-part-2/)
 
 ## Introduction
 
@@ -24,13 +24,13 @@ To gain a better understanding of the SuperTokens infrastructure, it's crucial t
 
 ![SuperTokens Deployment process](./supertokens-deployment-process.png)
 
-SuperTokens allow users to use the SuperTokens SAAS service in two modes: development and production. Here’s the breakdown of each:
+SuperTokens allows users to use the SuperTokens SAAS service in two modes: development and production. Here’s the breakdown of each:
 
 **Development Mode:**
-The Development mode runs on an *EC2 T3.small* instance. To maximize resource utilization, we deploy up to seven development core instances on the same *T3.small* instance. This configuration results in a remarkably swift setup for new development cores, typically taking a mere 15-20 seconds and is suitable for testing purposes.
+The Development mode used to run on an *EC2 T3.small* instance. To maximize resource utilization, we would deploy up to seven development core instances on the same *T3.small* instance. This configuration resulted in a remarkably swift setup for new development cores, typically taking a mere 15-20 seconds and was suitable for testing purposes.
 
 **Production mode:**
-In contrast, production mode follows a different deployment strategy. Each production mode deployment is hosted on a dedicated *EC2 T2.micro* instance. This means that when a new production SuperTokens core instance needs to be created, a fresh *T2.micro* instance is spun up, and docker is installed on it using System Manager. Consequently, this process requires additional time compared to the development mode, with an average deployment time of around 4-5 minutes.
+In contrast, the production mode followed a different deployment strategy. Each production mode deployment was hosted on a dedicated *EC2 T2.micro* instance. This meant that when a new production SuperTokens core instance had to be created, a fresh *T2.micro* instance was spun up, and docker was installed using System Manager. Consequently, this process required additional time when compared to the development mode, with an average deployment time of around 4-5 minutes.
 
 
 For example, if 7 users were to sign up for SuperTokens, it would look like the following:
@@ -39,7 +39,7 @@ For example, if 7 users were to sign up for SuperTokens, it would look like the 
 
 ### Initial Improvements to the deployment cycle
 
-One of our initial optimizations focused on reducing the startup time for generating production instances. We recognized that creating a custom [AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html)(Amazon Machine Image) pre-installed with Docker alongside the operating system that would cut down on start-up time. This change trimmed approximately 45 seconds from the production deployment procedure, reducing the setup time to approximately 3-4 minutes.
+One of our initial optimizations focused on reducing the startup time for generating production instances. We recognized that creating a custom [AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html)(Amazon Machine Image) pre-installed with Docker alongside the operating system would cut down on start-up time. This change trimmed approximately 45 seconds from the production deployment procedure, reducing the setup time to approximately 3-4 minutes.
 
 In retrospect, another avenue for improvement that we identified was the usage of [AWS Reserved Instances](https://aws.amazon.com/ec2/pricing/reserved-instances/). While this approach would have entailed an upfront cost, it would have resulted in substantial long-term savings.
 
@@ -48,7 +48,7 @@ So what prompted us to change our deployment process?
 ## Why we had to change our deployment process
 The past year has been quite a ride for SuperTokens. We released a host of new features and saw a big uptick in users. But, as our user numbers climbed, so did our infrastructure costs. With our AWS credits running out soon, we knew we had to do something to cut our expenses.
 
-With the release of our new multi-tenancy feature we saw it as an opportunity to optimize the utilization of our EC2 instances by consolidating our core instances. This would cut down our costs while also providing the expected performance.
+While working on our new multi-tenancy feature, we saw an opportunity to optimize the utilization of our EC2 instances by consolidating our core instances. This would cut down our costs while also providing the expected performance.
 
-In part 2 we will go over the changes we made to achieve this. 
+In [part 2](./how-we-cut-our-aws-costs-part-2) we will go over the changes we made to achieve this. 
 
