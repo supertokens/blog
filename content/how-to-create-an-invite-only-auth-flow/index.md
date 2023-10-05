@@ -29,13 +29,13 @@ Follow the prompts on-screen and set up an app with a React frontend, and NodeJs
 We can now start customizing the authentication flows to enable invite-only authentication
 
 ## Step 1: Disable Sign Ups
-If you were to run the example application now, you will be greeted with the authentication page. This page allows you to sign users up. We will need to disable the sign-up UI on the frontend and disable the sign up API on the backend.
+If you were to run the example application now, you would be greeted with the authentication page. This page allows you to sign users up. We will need to disable the sign-up UI on the frontend and disable the sign up API on the backend.
 
 ![SuperTokens Sign Up screen](./sign-in-screen.png)
 
 ### Disable the sign up UI in SuperTokens Frontend config
 
-We can customize the frontend UI and use CSS to to hide the sign up button.
+We can customize the frontend UI and use CSS to hide the sign up button.
 
 ```tsx
 import SuperTokens from "supertokens-auth-react";
@@ -102,12 +102,12 @@ SuperTokens.init({
 ## Step 2: Creating the invite-only flow
 
 ### Create a protected API that will create users and send invite links
-To create users and send them an invite links we will need to create an API on the backend which will:
+To create users and send them invite links we will need to create an API on the backend which will:
 
 - Call the `signUp` function from the SuperTokens backend SDK using the user's email and a fake password. This fake password should be unguessable and should be shared across all invited users.
 - Generate a password reset link and send that as an invite link to the user's email.
 - Once the user clicks the link, they will be shown a page asking them to input their password after which, they can login.
-- Finally we add an access control check to make sure that only users with the `admin` role can add additional users.
+- Finally, we add an access control check to make sure that only users with the `admin` role can add additional users.
 
 ```ts
 
@@ -144,7 +144,7 @@ app.post("/create-user", verifySession({
 
 >Note:
 > - The code above uses the default password reset path for the invite link (`/auth/reset-password`). You can create custom UI hosted on another path and use the password reset functions provided by the SuperTOkens frontend SDK to call the password reset token consumption API from the frontend.
-> - Additionally the `sendResetPasswordEmail` function uses the default password reset email(or the one customized using the emailDelivery config). If you would like to create the reset password link and send it yourself, you can use the `createResetPasswordLink` function to generate the password reset string.
+> - Additionally, the `sendResetPasswordEmail` function uses the default password reset email(or the one customized using the emailDelivery config). If you would like to create the reset password link and send it yourself, you can use the `createResetPasswordLink` function to generate the password reset string.
 
 ### Ensure that invited users have reset their passwords
 
@@ -220,4 +220,4 @@ SuperTokens.init({
 And that's it! Your app now only allows invited users to log in. Once a user is invited they will be sent an email asking to reset their password post which they are able to sign in.
 
 ## Conclusion
-Although there a few customizations that needed to be made, setting up an invite only flow with SuperTokens is pretty straight forward. You can find the related [documentation for the invite flow here](https://supertokens.com/docs/emailpassword/common-customizations/disable-sign-up/emailpassword-changes) if you need the code for other languages/frameworks.
+Although there are a few customizations that needed to be made, setting up an invite only flow with SuperTokens is pretty straight forward. You can find the related [documentation for the invite flow here](https://supertokens.com/docs/emailpassword/common-customizations/disable-sign-up/emailpassword-changes) if you need the code for other languages/frameworks.
