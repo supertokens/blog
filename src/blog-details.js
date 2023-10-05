@@ -74,18 +74,6 @@ module.exports = [
   },
   {
     fields: {
-      slug: "/should-you-use-express-session-for-your-production-app",
-    },
-    frontmatter: {
-      title: "Should you use Express-session for your production app?",
-      description: "Being Node’s most popular session management library, express-session has its set of flaws– especially when it comes to security. This article will help you analyse the good and bad parts of it.",
-      category: "sessions",
-      date: "May 06, 2020",
-      cover: "should-you-use-express-session-for-your-production-app.png"
-    }
-  },
-  {
-    fields: {
       slug: "/the-best-way-to-securely-manage-user-sessions",
     },
     frontmatter: {
