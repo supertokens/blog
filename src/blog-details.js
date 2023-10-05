@@ -13,18 +13,6 @@ module.exports = [
   },
   {
     fields: {
-      slug: "/how-to-customise-supertokens-apis",
-    },
-    frontmatter: {
-      title: "How to customise SuperTokens APIs",
-      description: "Any auth solution must provide the ability to customise their APIs. In this blog we discuss how to customise the auth APIs provided by SuperTokens using its “Override” feature",
-      category: "programming",
-      date: "December 13, 2021",
-      cover: "how-to-customise-supertokens-apis.png"
-    }
-  },
-  {
-    fields: {
       slug: "/why-is-redux-state-immutable",
     },
     frontmatter: {
