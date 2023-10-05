@@ -47,17 +47,5 @@ module.exports = [
       date: "July 30, 2020",
       cover: "conference-detecting-session-hijacking.png"
     }
-  },
-  {
-    fields: {
-      slug: "/the-best-way-to-securely-manage-user-sessions",
-    },
-    frontmatter: {
-      title: "The best way to securely manage user sessions",
-      description: "This blog covers an analysis of a new open source session flow that is secure and easy to integrate. Learn more about the customizable library and its implementation details.",
-      category: "sessions, featured",
-      date: "June 08, 2019",
-      cover: "the-best-way-to-securely-manage-user-sessions.png"
-    }
-  },
+  }
 ]
