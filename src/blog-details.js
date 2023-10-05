@@ -1,18 +1,6 @@
 module.exports = [
   {
     fields: {
-      slug: "/solve-the-problem-of-vendor-lock-in",
-    },
-    frontmatter: {
-      title: "Solve the problem of vendor lock-in",
-      description: "What is vendor lock-in? How does it affect your customers? What are the different ways you can minimize it? Read the blog to learn more.",
-      category: "programming",
-      date: "November 10, 2021",
-      cover: "solve-the-problem-of-vendor-lock-in.png"
-    },
-  },
-  {
-    fields: {
       url: "https://www.youtube.com/watch?v=6Vzit514kZY&list=PLE5w09cAseKTIFCImkqFbSeYMHPzW7M_f&index=17",
       nofollow: true
     },
