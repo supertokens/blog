@@ -619,5 +619,74 @@
         ],
         "title": "What is LDAP & How does it work?",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-ldap\"},\"headline\":\"What is LDAP & How does it work?\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-ldap.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/how-we-cut-our-aws-costs",
+        "metaTags": [
+            "<meta name=\"description\" content=\"In this two part blog series we will break down how we were able to cut down our AWS costs by over 50%\" />",
+            "",
+            "<meta name=\"keywords\" content=\"aws, cost optimization, open source, authentication\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How we cut our AWS costs by more than 50%\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/how-we-cut-our-aws-costs\" />",
+            "<meta property=\"og:description\" content=\"In this two part blog series we will break down how we were able to cut down our AWS costs by over 50%\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/how-we-cut-our-aws-costs.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"How we cut our AWS costs by more than 50%\" />",
+            "<meta name=\"twitter:description\" content=\"In this two part blog series we will break down how we were able to cut down our AWS costs by over 50%\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/how-we-cut-our-aws-costs\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/how-we-cut-our-aws-costs.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "How we cut our AWS costs by more than 50%",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/how-we-cut-our-aws-costs\"},\"headline\":\"How we cut our AWS costs by more than 50%\",\"image\":\"https://supertokens.com/blog-meta-images/how-we-cut-our-aws-costs.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/how-to-create-an-invite-only-auth-flow",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Whether aiming to boost referrals, drive exclusivity, or simply enhance user engagement, a well-crafted invite flow can make all the difference. In this blog post, we will delve into the steps of how you can secure your React app with Email-password authentication with SuperTokens, customized to have an invite-only flow.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"authentication, invite-only authentication, open source, user engagement\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How to create an invite-only auth flow in 2023\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/how-to-create-an-invite-only-auth-flow\" />",
+            "<meta property=\"og:description\" content=\"Whether aiming to boost referrals, drive exclusivity, or simply enhance user engagement, a well-crafted invite flow can make all the difference. In this blog post, we will delve into the steps of how you can secure your React app with Email-password authentication with SuperTokens, customized to have an invite-only flow.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/how-to-create-an-invite-only-auth-flow.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"How we cut our AWS costs by more than 50%\" />",
+            "<meta name=\"twitter:description\" content=\"In this two part blog series we will break down how we were able to cut down our AWS costs by over 50%\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/static/covers/how-to-create-an-invite-only-auth-flow.png\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/static/covers/how-to-create-an-invite-only-auth-flow.png.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "How to create an invite-only auth flow in 2023",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/how-to-create-an-invite-only-auth-flow\"},\"headline\":\"How to create an invite-only auth flow in 2023\",\"image\":\"https://supertokens.com/blog-meta-images/how-to-create-an-invite-only-auth-flow.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/how-we-cut-our-aws-costs-part-2",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Part 2 in a series of howe we were able to cut down our AWS infrastructure costs by more than 50%\" />",
+            "",
+            "<meta name=\"keywords\" content=\"aws, cost optimization, open source, authentication\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How we used multi-tenancy to cut our AWS costs by 50%\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/how-we-cut-our-aws-costs-part-2\" />",
+            "<meta property=\"og:description\" content=\"Part 2 in a series of howe we were able to cut down our AWS infrastructure costs by more than 50%\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/how-we-cut-our-aws-costs-part-2.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"How we used multi-tenancy to cut our AWS costs by 50%\" />",
+            "<meta name=\"twitter:description\" content=\"part 2 in a series of howe we were able to cut down our AWS infrastructure costs by more than 50%%\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/how-we-cut-our-aws-costs-part-2\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/how-we-cut-our-aws-costs-part-2.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "How we used multi-tenancy to cut our AWS costs by 50%",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/how-we-cut-our-aws-costs\"},\"headline\":\"How we used multi-tenancy to cut our AWS costs by 50%\",\"image\":\"https://supertokens.com/blog-meta-images/how-we-cut-our-aws-costs-part-2.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]

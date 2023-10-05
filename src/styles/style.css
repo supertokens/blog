@@ -474,3 +474,28 @@ section[itemprop="articleBody"] img[src$=".gif"] {
   max-width: 100%;
   margin: 0 auto;
 }
+
+.primary-button{
+  font-family: Rubik,sans-serif;
+  
+  display: block;
+  width: 200px;
+  margin: 40px auto;
+  border-radius: 6px;
+  background-color: #f93;
+  box-shadow: 2px 2px 6px 0 rgba(0,0,0,.16);
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 700;
+  text-align: center;
+
+  padding: 9px 15px;
+  color: #fff;
+  border: 0;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.primary-button:hover{
+  box-shadow: 2px 2px 20px 0 rgba(0,0,0,.16);
+}
