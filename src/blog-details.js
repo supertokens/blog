@@ -74,18 +74,6 @@ module.exports = [
   },
   {
     fields: {
-      slug: "/express-session-vs-supertokens-for-handling-user-sessions",
-    },
-    frontmatter: {
-      title: "Express-session vs SuperTokens for handling user sessions",
-      description: "This article will be comparing SuperTokens to Node’s most popular session management library– express-session. Learn more about the comparison based on different security and performance metrics.",
-      category: "sessions",
-      date: "June 11, 2020",
-      cover: "express-session-vs-supertokens-for-handling-user-sessions.png"
-    }
-  },
-  {
-    fields: {
       slug: "/the-best-way-to-securely-manage-user-sessions",
     },
     frontmatter: {
@@ -94,18 +82,6 @@ module.exports = [
       category: "sessions, featured",
       date: "June 08, 2019",
       cover: "the-best-way-to-securely-manage-user-sessions.png"
-    }
-  },
-  {
-    fields: {
-      slug: "/all-you-need-to-know-about-user-session-security",
-    },
-    frontmatter: {
-      title: "All you need to know about user session security",
-      description: "This article covers extensive conversations with over 70+ developers exploring different session management practices, identifying issues and converging on a solution to these issues. ",
-      category: "sessions, featured",
-      date: "June 07, 2019",
-      cover: "all-you-need-to-know-about-user-session-security.png"
     }
   },
 ]

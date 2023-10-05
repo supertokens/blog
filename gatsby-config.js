@@ -1,3 +1,8 @@
+const webflowPosts = require("./src/blog-details")
+
+const ignorePaths = ['/','/404']
+
+
 module.exports = {
   siteMetadata: {
     title: `SuperTokens Blog`,
@@ -72,6 +77,51 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+      query:`
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }
+      `,
+        output:'/sitemaps',
+        resolveSiteUrl: () => 'https://supertokens.com/',
+        resolvePages: ({
+          allSitePage: { nodes:allPages }
+        }) => {
+          const webflowBlogsWithTrailingSlashes = webflowPosts.reduce((acc,currentPage)=>{
+
+            if(currentPage.fields.slug === undefined){
+              return acc
+            }
+
+            return [...acc , {path: `blog${currentPage.fields.slug}`}, {path:`blog${currentPage.fields.slug}/`}];
+          },[])
+
+          const allPagesWithTralingSlashes = allPages.reduce((acc,currentPage)=>{
+
+            if(ignorePaths.includes(currentPage.path)){
+              return acc;
+            }
+
+            const pathWithTrailingSlash = { path: currentPage.path + '/' }
+            return [...acc, currentPage, pathWithTrailingSlash]
+          },[])
+          
+          return [...allPagesWithTralingSlashes, ...webflowBlogsWithTrailingSlashes];
+        },
+        serialize: ({ path }) => {
+          return {
+            url: path,
+          }
+        },
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
