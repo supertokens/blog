@@ -25,18 +25,6 @@ module.exports = [
   },
   {
     fields: {
-      slug: "/implementing-a-forgot-password-flow",
-    },
-    frontmatter: {
-      title: "Implementing a forgot password flow (with pseudo code)",
-      description: "What should happen on the backend when a user forgets their password? Read to find a pseudo code implementation of the simplest way to reset passwords securely.",
-      category: "programming",
-      date: "June 01, 2021",
-      cover: "implementing-a-forgot-password-flow.png"
-    },
-  },
-  {
-    fields: {
       url: "https://www.youtube.com/watch?v=6Vzit514kZY&list=PLE5w09cAseKTIFCImkqFbSeYMHPzW7M_f&index=17",
       nofollow: true
     },
