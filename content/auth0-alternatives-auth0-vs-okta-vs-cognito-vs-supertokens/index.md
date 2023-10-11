@@ -182,7 +182,7 @@ SuperTokens differentiates itself from its competitors with its flexibility. If 
 - As of writing this article supertokens supports `Nodejs`, `Golang` and `Python` on the backend with `Reactjs(All Features)`, `VanillaJS(only session management)` and `React Native(only session management)` on the frontend. They currently do not support many popular languages like `Java` and `Php` and they do not have pre-built UI for popular frontend frameworks like `Angular` and `Vue`. 
 
 ## SuperTokens Pricing:
-At the time of writing this article, the SuperTokens feature set is completely free. If you decide to use the self-hosted version you can download the core and use it for free for an unlimited amount of users. 
+At the time of writing this article, the SuperTokens core feature set is completely free and they offer paid add-ons. If you decide to use the self-hosted version you can download the core and use it for free for an unlimited amount of users. 
 
 ![supertokens pricing](./supertokens_pricing.png)
 
@@ -192,6 +192,11 @@ At the time of writing this article, the SuperTokens feature set is completely f
 - #### Managed Service:
   - Free for the first **5000 MAUs** .
   - 2 cents / MAU post the first **5000 MAUs**.
+
+  #### Add-ons
+  - Multi-tenancy
+  - Account Linking
+  - 2FA
 
 ### So is SuperTokens the way to go?
 SuperToken's feature set and pricing make it a great choice for startups and mid-level businesses, but it may not be the best fit for large organisations that require enterprise features.

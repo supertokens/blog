@@ -84,15 +84,20 @@ You can find a complete guide to Auth0’s pricing [here](https://supertokens.co
 SuperTokens is an open-source authentication solution that provides a managed service for hassle-free auth and an on-prem solution so developers can manage their data.
 
 ### SuperTokens Pricing:
-At the time of writing this article, the SuperTokens feature set is completely free. If you decide to use the self-hosted version you can download the core and set up authentication for free for an unlimited number of users.
+At the time of writing this article, the core SuperTokens feature set is completely free and they offer paid add-ons. If you decide to use the self-hosted version, you can download the core and set up authentication for free for an unlimited number of users.
 
-![SuperTokens pricing](./supertokens_pricing.png)
+![SuperTokens pricing plan](./supertokens_pricing.png)
 
 - **Self-Hosted:**
   - Free forever for unlimited users.
 - **Managed Service:**
   - Free for the first 5000 MAUs.
   - 2 cents / MAU post the first 5000 MAUs.
+
+**Add-ons**
+  - Multi-tenancy
+  - Account Linking
+  - 2FA
 
 ### Should you use SuperTokens?
 SuperToken’s feature set and pricing make it an excellent choice when compared to Okta’s Customer Identity solution but it does not have the feature set to compare with Okta’s Workforce Identity products.

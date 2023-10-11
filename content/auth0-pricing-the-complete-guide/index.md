@@ -82,7 +82,7 @@ Similar to the first use case, the B2B plan also has essential, professional, an
 SuperTokens is an open-source authentication solution that provides a managed service for hassle-free auth and an on-prem solution so companies can easily manage their data.
 
 ### SuperTokens Pricing:
-At the time of writing this article, the core SuperTokens feature set is completely free. If you decide to use the self-hosted version, you can download the core and set up authentication for free for an unlimited number of users.
+At the time of writing this article, the core SuperTokens feature set is completely free and they offer paid add-ons. If you decide to use the self-hosted version, you can download the core and set up authentication for free for an unlimited number of users.
 
 ![SuperTokens pricing plan](./supertokens_pricing.png)
 
@@ -91,6 +91,11 @@ At the time of writing this article, the core SuperTokens feature set is complet
 - **Managed Service:**
   - Free for the first 5000 MAUs.
   - 2 cents / MAU post the first 5000 MAUs.
+
+**Add-ons**
+  - Multi-tenancy
+  - Account Linking
+  - 2FA
 
 ### Should you use SuperTokens?
 SuperToken’s feature set and pricing make it an excellent choice for startups and mid-level businesses, but it may not be the best fit for large organizations that require enterprise features.
