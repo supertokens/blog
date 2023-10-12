@@ -7,9 +7,9 @@ category: "programming"
 author: "Nemi Shah"
 ---
 
-Next.js is quickly becoming a really popular framework when it comes to building web applications. The framework recently introduced its `app` directory as a future replacement to the current way of organising the project and creating pages and api routes.
+Next.js has become a popular framework for building web applications. The framework recently introduced its [`app`](https://nextjs.org/docs/app/building-your-application/routing#the-app-router) directory as a future replacement to the current way of organising the project and creating pages and api routes.
 
-This blog will cover how to setup email password and social login with SuperTokens using the app directory in Next.js.
+This blog will cover how to setup email password and social login authentication with SuperTokens using the app directory in Next.js.
 
 ## Setting up the Next.js project
 
@@ -23,10 +23,10 @@ npx create-next-app <PROJECT_NAME>
 
 - Using Typescript
 - Using ESLint
-- Not using Tailwind CSS
-- Not using the `src/` directory
+- **Not** using Tailwind CSS
+- **Not** using the `src/` directory
 - Using the App router
-- Not using import aliases
+- **Not** using import aliases
 
 After the tool has finished, you should have a basic Next.js app setup. You can run the project with `npm run dev`.
 
@@ -40,7 +40,7 @@ npm i supertokens-node supertokens-auth-react
 
 In this example, we are going to be using the Social login + email password recipe of SuperTokens.
 
-### Initialise SuperTokens for our APIs
+### Step 1: Initialise SuperTokens for our APIs
 
 SuperTokens' node SDK provides a set of APIs that we can use for logging in our users and managing their sessions. We will follow the [quick setup guide](https://supertokens.com/docs/thirdpartyemailpassword/pre-built-ui/setup/backend) to initialise the backend SDK. Create a `/app/config/appinfo.ts` file and add the following code to it:
 
@@ -147,7 +147,7 @@ Also modify the `dev` script in the `package.json` to:
 
 We do this because in this example we want the project to run on port `3000`, if you want to keep the default port or use another port you can modify this script. Keep in mind that if you use a different port, you also need to modify the `apiDomain` and `websiteDomain` values inside the `/app/config/backend.ts` file.
 
-### Adding SuperTokens' API routes
+### Step 2: Adding SuperTokens' API routes
 
 The SuperTokens backend SDKs expose a set of API routes that we can use in our project, this makes it easier to add login to our app because we don't have to build this logic ourselves.
 
@@ -205,7 +205,7 @@ And thats it, the SuperTokens backend SDK is setup. To verify that we have set i
 
 You can see the [full API spec](https://supertokens.com/docs/fdi) to know all the API routes that the SuperTokens backend SDKs expose.
 
-### Adding SuperTokens to the frontend
+### Step 3: Adding SuperTokens to the frontend
 
 `supertokens-auth-react` provides a pre built UI that gets added as part of your project so that you dont have to build the login UI yourself. If you want to build your own UI you can use functions exposed by the SDK to interact with your APIs, either way you dont need to call the APIs exposed by the backend SDKs manually.
 
@@ -322,6 +322,8 @@ export default function RootLayout({
   )
 }
 ```
+
+### Step 4: Adding SuperTokens routes to our frontend
 
 Create a new `/app/auth/[[...path]]/page.tsx` file. Adding `[[...path]]` as a folder makes sure that the `page.tsx` file is served for all `/auth/*` routes and also ensures that the `/auth` route itself also serves the `page.tsx` file. Add the following content to the `page.tsx` file
 
