@@ -1,6 +1,6 @@
 ---
 title: Adding login to your Next.js app using the app directory with SuperTokens
-date: "2023-10-12"
+date: "2023-10-23"
 description: "This blog explains how to setup email password and social login with SuperTokens using the app directory in Next.js."
 cover: "adding-social-login-to-your-website-with-supertokens.png"
 category: "programming"
@@ -11,7 +11,19 @@ Next.js has become a popular framework for building web applications. The framew
 
 This blog will cover how to setup email password and social login authentication with SuperTokens using the app directory in Next.js.
 
-## Setting up the Next.js project
+## (Recommended) Use `create-supertokens-app`
+
+`create-supertokens-app` is a command line tool created by the SuperTokens team that lets you create new projects with SuperTokens already integrated. This is the fastest way to get started with SuperTokens. To use this tool, run the following command:
+
+```bash
+npx create-supertokens-app@latest
+```
+
+The tool will prompt you for your tech stack, you can choose between the app directory and the pages directory. 
+
+The rest of this article is relevant only if you are adding SuperTokens to your app manually and if you have not used the tool mentioned above. If you used `create-supertokens-app`, the setup is already complete and you can continue building the rest of the application. To know details about Next.js integration with SuperTokens, refer to their [official documentation](https://supertokens.com/docs)
+
+## Manually Setting up the Next.js project
 
 Run the following command:
 
@@ -417,93 +429,103 @@ In our project we want to do the following:
 Start by creating a `/app/sessionUtils.ts` file and adding the following code to it:
 
 ```ts
-import { cookies } from 'next/headers';
+
+import { cookies, headers } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
-import Session, { SessionContainer } from 'supertokens-node/recipe/session';
-import { ensureSuperTokensInit } from './config/backend';
+import Session, { SessionContainer, VerifySessionOptions } from "supertokens-node/recipe/session";
+import { ensureSuperTokensInit } from '../config/backend';
+import { PreParsedRequest, CollectingResponse } from "supertokens-node/framework/custom";
+import { HTTPMethod } from "supertokens-node/types";
 
 ensureSuperTokensInit();
 
-export async function getSSRSession(req?: NextRequest): Promise<{
+export async function getSSRSession(
+  req?: NextRequest,
+  options?: VerifySessionOptions
+): Promise<{
   session: SessionContainer | undefined;
   hasToken: boolean;
-  resp?: Response;
+  hasInvalidClaims: boolean;
+  baseResponse: CollectingResponse;
+  nextResponse?: NextResponse;
 }> {
-  let token;
-  if (req?.cookies) {
-    token = req.cookies.get('sAccessToken')?.value;
-  } else {
-    token = cookies().get('sAccessToken')?.value;
-  }
+  const query = req !== undefined ? Object.fromEntries(new URL(req.url).searchParams.entries()) : {};
+  const parsedCookies: Record<string, string> = Object.fromEntries(
+      (req !== undefined ? req.cookies : cookies()).getAll().map((cookie) => [cookie.name, cookie.value])
+  );
+  let baseRequest = new PreParsedRequest({
+      method: req !== undefined ? (req.method as HTTPMethod) : "get",
+      url: req !== undefined ? req.url : "",
+      query: query,
+      headers: req !== undefined ? req.headers : headers(),
+      cookies: parsedCookies,
+      getFormBody: () => req!.formData(),
+      getJSONBody: () => req!.json(),
+  });
 
-  if (req?.headers.get("Authorization") !== undefined) {
-    token = req.headers.get("Authorization")!;
-    // We remove the "Bearer" from the token
-    if (token.includes("Bearer")) {
-      token = token.replace("Bearer ", "");
-    }
-  }
-
-  if (token === undefined) {
-    return {
-      session: undefined,
-      hasToken: false,
-      resp: new NextResponse('Authentication required', { status: 401 }),
-    };
-  }
-
-  let session;
-  let resp;
+  let baseResponse = new CollectingResponse();
 
   try {
-    session = await Session.getSessionWithoutRequestResponse(token, undefined, {
-      sessionRequired: false,
-    });
+      let session = await Session.getSession(baseRequest, baseResponse, options);
+      return {
+          session,
+          hasInvalidClaims: false,
+          hasToken: session !== undefined,
+          baseResponse,
+      };
   } catch (err) {
-    if (Session.Error.isErrorFromSuperTokens(err)) {
-      resp = new NextResponse('Authentication required', {
-        status: err.type === Session.Error.INVALID_CLAIMS ? 403 : 401,
-      });
-    } else {
-      throw err;
-    }
+      if (Session.Error.isErrorFromSuperTokens(err)) {
+          return {
+              hasToken: err.type !== Session.Error.UNAUTHORISED,
+              hasInvalidClaims: err.type === Session.Error.INVALID_CLAIMS,
+              session: undefined,
+              baseResponse,
+              nextResponse: new NextResponse("Authentication required", {
+                  status: err.type === Session.Error.INVALID_CLAIMS ? 403 : 401,
+              }),
+          };
+      } else {
+          throw err;
+      }
   }
-
-  return {
-    session,
-    hasToken: true,
-    resp,
-  };
 }
 ```
 
-We create a `getSSRSession` function that can be used to check if a session exists, as the name implies this can be used on the server side during rendering. In this function we check if the request contains an access token and if it doesnt we return `Authentication required` as a response with status `401`. Using the access token we try to get the session information from SuperTokens.
+To know more about what `getSSRSession` does visit the [official documentation](https://supertokens.com/docs/thirdpartyemailpassword/nextjs/app-directory/session-helpers)
 
 Create a `/app/components/tryRefreshClientComponent.tsx` file and add the following code:
 
 ```tsx
-'use client';
+"use client";
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import Session from 'supertokens-auth-react/recipe/session';
-import SuperTokens from 'supertokens-auth-react';
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import Session from "supertokens-auth-react/recipe/session";
+import SuperTokens from "supertokens-auth-react";
 
 export const TryRefreshComponent = () => {
-  const router = useRouter();
-  useEffect(() => {
-    void Session.attemptRefreshingSession()
-      .then((hasSession) => {
-        if (hasSession) {
-          router.refresh();
-        } else {
-          return SuperTokens.redirectToAuth();
-        }
-      })
-      .catch(console.error);
-  }, []);
+    const router = useRouter();
+    const [didError, setDidError] = useState(false);
 
-  return <div>Loading...</div>;
+    useEffect(() => {
+        void Session.attemptRefreshingSession()
+            .then((hasSession) => {
+                if (hasSession) {
+                    router.refresh();
+                } else {
+                    SuperTokens.redirectToAuth();
+                }
+            })
+            .catch(() => {
+                setDidError(true);
+            });
+    }, []);
+
+    if (didError) {
+        return <div>Something went wrong, please reload the page</div>;
+    }
+
+    return <div>Loading...</div>;
 };
 ```
 
@@ -567,48 +589,53 @@ import { cookies, headers } from 'next/headers';
 
 // ...
 
-export function updateSessionInResponse(
-    session: SessionContainer,
-    response?: NextResponse,
-  ) {
-    let tokens = session.getAllSessionTokensDangerously();
-    if (tokens.accessAndFrontTokenUpdated) {
-      const accessTokenCookie = {
-        name: 'sAccessToken',
-        value: tokens.accessToken,
-        httpOnly: true,
-        path: '/',
-        expires: Date.now() + 3153600000000,
-      };
-  
-      if (response) {
-        response.cookies.set(accessTokenCookie);
-        response.headers.set('front-token', tokens.frontToken);
-      } else {
-        cookies().set(accessTokenCookie);
-        headers().set('front-token', tokens.frontToken);
-      }
-    }
+export async function withSession(
+  request: NextRequest,
+  handler: (session: SessionContainer | undefined) => Promise<NextResponse>,
+  options?: VerifySessionOptions
+) {
+  let { session, nextResponse, baseResponse } = await getSSRSession(request, options);
+  if (nextResponse) {
+      return nextResponse;
   }
 
-export async function withSession(
-    request: NextRequest,
-    handler: (session: SessionContainer | undefined) => Promise<NextResponse>,
-  ) {
-    let { session, resp: stResponse } = await getSSRSession(request);
-    if (stResponse) {
-        return stResponse;
-    }
-    let userResponse = await handler(session);
+  let userResponse = await handler(session);
 
-    if (session) {
-        updateSessionInResponse(session, userResponse);
-    }
-    return userResponse;
+  let didAddCookies = false;
+  let didAddHeaders = false;
+
+  for (const respCookie of baseResponse.cookies) {
+      didAddCookies = true;
+      userResponse.headers.append(
+          "Set-Cookie",
+          serialize(respCookie.key, respCookie.value, {
+              domain: respCookie.domain,
+              expires: new Date(respCookie.expires),
+              httpOnly: respCookie.httpOnly,
+              path: respCookie.path,
+              sameSite: respCookie.sameSite,
+              secure: respCookie.secure,
+          })
+      );
+  }
+
+  baseResponse.headers.forEach((value, key) => {
+      didAddHeaders = true;
+      userResponse.headers.set(key, value);
+  });
+
+  if (didAddCookies || didAddHeaders) {
+      if (!userResponse.headers.has("Cache-Control")) {
+          // This is needed for production deployments with Vercel
+          userResponse.headers.set("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
+      }
+  }
+
+  return userResponse;
 }
 ```
 
-The `withSession` is a utility function we will use in all our APIs that require sessions, it will get the session if it exists and then call the handler function which will be our actual API logic. The `updateSessionInResponse` function will take care of attaching the relevant session tokens to the response object.
+The `withSession` is a utility function we will use in all our APIs that require sessions, it will get the session if it exists and then call the handler function which will be our actual API logic. To know more about what this function does visit the [official documentation](https://supertokens.com/docs/thirdpartyemailpassword/nextjs/app-directory/session-helpers)
 
 Lets create a new API route for fetching the user information, create a new file `/app/api/user/route.ts`:
 
@@ -737,76 +764,6 @@ return (
     </div>
 );
 ```
-
-## (OPTIONAL) Using the middleware
-
-While we do not recommend this approach, you can also use the Next.js middleware to provide session information to all your routes and pages.
-
-### Creating the middleware
-
-Create a file `/middleware.ts`, this should be at the same level as the `app` directory:
-
-```tsx
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
-import { SessionContainer } from 'supertokens-node/recipe/session'
-import { ensureSuperTokensInit } from './app/config/backend'
-import { withSession } from './app/sessionUtils';
-
-
-export async function middleware(
-  request: NextRequest & { session?: SessionContainer }
-) {
-  if (request.headers.has("x-user-id")) {
-    console.warn("The FE tried to pass x-user-id, which is only supposed to be a backend internal header. Ignoring.");
-    request.headers.delete("x-user-id");
-  }
-
-  if (request.nextUrl.pathname.startsWith('/api/auth')) {
-    // this hits our pages/api/auth/* endpoints
-    return NextResponse.next()
-  }
-
-  return withSession(request, async (session) => {
-    if (session === undefined) {
-      return NextResponse.next()
-    }
-    return NextResponse.next({
-      headers: {
-        'x-user-id': session.getUserId(),
-      },
-    })
-  })
-}
-
-export const config = {
-  matcher: '/api/:path*',
-}
-```
-
-In the middleware we get the session using `withSession` and then attach the user id as a header which can be used by all your routes. In this example `x-user-id` is an internal header which we attach so if the frontend includes it we remove the header as a security precaution.
-
-You can set any information you need, in this example we only set the user id.
-
-### Reading information set by the middleware
-
-For the sake of an example let us consider a case where you want to access this information in your API. Lets create a new API `/app/api/user-id`:
-
-
-```ts
-import { NextResponse, NextRequest } from 'next/server';
-
-export async function GET(request: NextRequest) {
-  let userId = request.headers.get('x-user-id');
-  return NextResponse.json({
-    userId,
-  });
-}
-```
-
-Since the middleware adds the user id to the headers, we can simply read it from here.
-
-The middleware approach is not recommended because changes in session information will not immediately be available. For example if the session is revoked due to some condition, the request headers will still contain the user id for the current request.
 
 ## Conclusion
 
