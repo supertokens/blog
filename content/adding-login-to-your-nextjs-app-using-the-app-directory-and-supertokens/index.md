@@ -221,7 +221,7 @@ You can see the [full API spec](https://supertokens.com/docs/fdi) to know all th
 
 `supertokens-auth-react` provides a pre built UI that gets added as part of your project so that you dont have to build the login UI yourself. If you want to build your own UI you can use functions exposed by the SDK to interact with your APIs, either way you dont need to call the APIs exposed by the backend SDKs manually.
 
-The full set of steps for initialising SuperTokens on the frontend can be found in the [official frontend setup guide](https://supertokens.com/docs/thirdpartyemailpassword/pre-built-ui/setup/backend)
+The full set of steps for initialising SuperTokens with the pre-built UI can be found in the [official frontend setup guide](https://supertokens.com/docs/thirdpartyemailpassword/pre-built-ui/setup/frontend)
 
 Create a `/app/config/frontend.ts` file and add the following code to it:
 
