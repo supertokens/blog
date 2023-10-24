@@ -2,7 +2,7 @@
 title: Adding login to your Next.js app using the app directory with SuperTokens
 date: "2023-10-23"
 description: "This blog explains how to setup email password and social login with SuperTokens using the app directory in Next.js."
-cover: "adding-social-login-to-your-website-with-supertokens.png"
+cover: "adding-login-to-your-nextjs-app-using-the-app-directory-and-supertokens.png"
 category: "programming"
 author: "Nemi Shah"
 ---
