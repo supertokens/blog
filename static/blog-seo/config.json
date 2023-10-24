@@ -709,7 +709,7 @@
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/adding-login-to-your-nextjs-app-using-the-app-directory-and-supertokens.png\" /> ",
             "<!--OG Tags-->"
         ],
-        "title": "How we used multi-tenancy to cut our AWS costs by 50%",
+        "title": "Adding login to your Next.js app using the app directory with SuperTokens",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/adding-login-to-your-nextjs-app-using-the-app-directory-and-supertokens\"},\"headline\":\"Adding login to your Next.js app using the app directory with SuperTokens\",\"image\":\"https://supertokens.com/blog-meta-images/adding-login-to-your-nextjs-app-using-the-app-directory-and-supertokens.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
