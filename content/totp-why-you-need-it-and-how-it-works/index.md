@@ -1,7 +1,7 @@
 ---
-title: "What is TOTP and why you need it"
+title: "What is TOTP and why do you need it?"
 date: "2023-11-16"
-description: " Time based one-time passwords solve a number of issues that plague traditional authentication methods. In this blog we break down TOTP and why it's so useful."
+description: "Time based one-time passwords solve a number of issues that plague traditional authentication methods. In this blog we break down TOTP and why it's so useful."
 cover: "totp-why-you-need-it-and-how-it-works.png"
 category: "programming"
 author: "Joel Coutinho"
