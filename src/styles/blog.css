@@ -262,6 +262,115 @@
   object-fit: cover;
 }
 
+.author-card-top-container{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+
+  padding-bottom: 36px;
+  margin-bottom: 32px;
+  margin-top: 42px;
+  border-bottom: 1px solid #ddd;
+}
+
+.author-card-top-container img{
+  height: 48px;
+  width: 48px;
+  border-radius: 8px;
+
+}
+
+.author-card-top-container .author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.author-card-top-container .author-info .author-name{
+  color: #222;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.author-card-top-container .author-info .author-title{
+  color: rgb(34 34 34 / 68%);
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.author-card-footer-container{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 23px;
+
+  margin: 38px 0px;
+
+  width: 100%;
+  max-height: 212px;
+}
+
+.author-card-footer-container img{
+  height: 211px;
+  width: 211px;
+  border-radius: 16px;
+}
+
+.author-card-footer-container .author-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  flex-grow: 1;
+}
+
+.author-card-footer-container .author-info .author-name{
+  color: #222;
+
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.author-card-footer-container .author-info .author-title-socials-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.author-card-footer-container .author-info .author-socials{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.author-card-footer-container .author-info .author-title-socials-container .author-title{
+  color: rgb(34 34 34 / 68%);
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.author-card-footer-container .author-info .author-description{
+  color: #333;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0;
+}
+
 @media screen and (max-width: 768px) {
   .sign-up-banner-content-border {
     width: 100%;

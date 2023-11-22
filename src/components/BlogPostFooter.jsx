@@ -2,12 +2,14 @@ import React from "react";
 
 import STBannerBackdrop from "../images/supertokens-logo-backdrop.png";
 import STBannerTop from "../images/bottom-banner-top-icon.png";
+import AuthorCardFooter from "./AuthorCardFooter";
 
-const BlogPostFooter = ({ idSlug }) => {
+const BlogPostFooter = ({ idSlug , author}) => {
 
   return (
     <footer id={`last_section_${idSlug}`}>
       <b>Written by the Folks at <a href="https://supertokens.com">SuperTokens</a> — hope you enjoyed!</b>
+      <AuthorCardFooter author={author}/>
       <div className="sign-up-banner-content-border">
         <div className="blog-post-sign-up-banner">
           <img
