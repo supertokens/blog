@@ -29,7 +29,7 @@ export default function AuthorCard({ author }) {
       />
       <div className="author-info">
         <span className="author-name">By {author}</span>
-        <span className="author-title">{authorDetails.title}</span>
+        <span className="author-title">{authorDetails.jobTitle}</span>
       </div>
     </div>
   )

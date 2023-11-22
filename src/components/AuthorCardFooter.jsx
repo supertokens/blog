@@ -16,22 +16,22 @@ export default function AuthorCardFooter({ author }) {
     <div className="author-card-footer-container">
       <img
         src={authorDetails.image}
-        alt="author image"
+        alt="author"
       />
       <div className="author-info">
         <span className="author-name">{authorDetails.name}</span>
         <div className="author-title-socials-container">
-          <span className="author-title">{authorDetails.title}</span>
+          <span className="author-title">{authorDetails.jobTitle}</span>
           <div className="author-socials">
             {authorDetails.socials.map(({name, url}) => {
               return <LinkIcon key={name} name={name} url={url}/>
             })}
           </div>
         </div>
-        <p className="author-description">{authorDetails.description}</p>
+        <p className="author-description">{authorDetails.bio}</p>
       </div>
     </div>
-    <p className="hidden-md">{authorDetails.description}</p>
+    <p className="hidden-md">{authorDetails.bio}</p>
    </>
   )
 }
