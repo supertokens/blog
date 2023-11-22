@@ -20,6 +20,7 @@ export default function AuthorCard({ author }) {
       </p>
     )
   }
+  
   return (
     <div className="author-card-top-container">
       <img
