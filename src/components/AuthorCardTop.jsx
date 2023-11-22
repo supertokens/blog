@@ -24,7 +24,7 @@ export default function AuthorCard({ author }) {
   return (
     <div className="author-card-top-container">
       <img
-        src={authorDetails.image}
+        src={`/author_images/${authorDetails.image}`}
         alt="author"
       />
       <div className="author-info">

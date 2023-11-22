@@ -1,29 +1,19 @@
 //TODO: data related to each author on the blog posts should be added incrementally here.
 
-module.exports = []
-
-
-/**
- * Example:
- * {
-    name: "Joel Coutinho",
-    jobTitle: "Backend Developer @Supertokens",
-    image: "https://avatars.githubusercontent.com/u/87567452?v=4",
-    socials: [
-      {
-        name: "github",
-        url: "https://github.com/jscyo",
-      },
-      {
-        name: "linkedin",
-        url: "https://github.com/jscyo",
-      },
-      {
-        name: "twitter",
-        url: "https://github.com/jscyo",
-      },
-    ],
-    bio:
-      "The one major downside of TOTP is that the secret key is stored on both the user’s device and the server. If either of these systems were to be compromised, a malicious actor would now be able to generate codes and have unfettered access to the user’s account.",
-  },
- */
+module.exports = [{
+  name: "Joel Coutinho",
+  jobTitle: "Software Developer @Supertokens",
+  image: "joel.jpeg",
+  socials: [
+    {
+      name: "github",
+      url: "https://github.com/jscyo",
+    },
+    {
+      name: "linkedin",
+      url: "https://in.linkedin.com/in/joel-coutinho-7bbb89143",
+    },
+  ],
+  bio:
+    "Joel is a Software Developer at SuperTokens since October 2019. Prior to that, He worked as a Public Relations for the Information Technology Students Association from June 2017 to March 2019. Additionally, He worked as an English Editor at FragMag from January 2018 to January 2019.",
+},]

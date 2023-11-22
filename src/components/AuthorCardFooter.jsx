@@ -15,7 +15,7 @@ export default function AuthorCardFooter({ author }) {
    <>
     <div className="author-card-footer-container">
       <img
-        src={authorDetails.image}
+        src={`/author_images/${authorDetails.image}`}
         alt="author"
       />
       <div className="author-info">
