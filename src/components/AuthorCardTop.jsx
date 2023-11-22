@@ -20,12 +20,12 @@ export default function AuthorCard({ author }) {
       </p>
     )
   }
-  
+
   return (
     <div className="author-card-top-container">
       <img
         src={authorDetails.image}
-        alt="author image"
+        alt="author"
       />
       <div className="author-info">
         <span className="author-name">By {author}</span>

@@ -4,14 +4,11 @@ import authorsDetails from "../authors-details"
 import { Github, Linkedin, Twitter } from "../icons"
 
 export default function AuthorCardFooter({ author }) {
-  if (author === undefined) {
-    return null
-  }
 
   const authorDetails = authorsDetails.find(a => a.name === author)
 
   if (authorDetails === undefined) {
-    return null
+    return <b>Written by the Folks at <a href="https://supertokens.com">SuperTokens</a> — hope you enjoyed!</b>
   }
 
   return (

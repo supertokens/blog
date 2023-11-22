@@ -264,7 +264,7 @@
 
 .author-card-top-container{
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   gap: 8px;
 
@@ -307,8 +307,8 @@
 
 .author-card-footer-container{
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 23px;
 
   margin: 38px 0px;
@@ -325,7 +325,7 @@
 .author-card-footer-container .author-info{
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   flex-grow: 1;
 
   gap: 8px;
