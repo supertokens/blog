@@ -123,6 +123,7 @@ Meta tags for blog images are picked up from `/static/blog-seo/config.json`, for
 {
     "path": "/blog/<SLUG>",
     "metaTags": [
+        "<meta name=\"author\" content=\"<TODO>\" /> ",
         "<meta name=\"description\" content=\"<TODO>\" />",
         "",
         "<meta name=\"keywords\" content=\"<TODO>\" />",
