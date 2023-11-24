@@ -715,6 +715,7 @@
     {
         "path": "/blog/totp-why-you-need-it-and-how-it-works",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"Time based one-time passwords solve a number of issues that plague traditional authentication methods. In this blog we break down TOTP and why it's so useful.\" />",
             "",
             "<meta name=\"keywords\" content=\"totp, authentication, open source, 2fa, security\" />",

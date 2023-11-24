@@ -15,5 +15,5 @@ module.exports = [{
     },
   ],
   bio:
-    "Joel is a Software Developer at SuperTokens since October 2019. Prior to that, He worked as a Public Relations for the Information Technology Students Association from June 2017 to March 2019. Additionally, He worked as an English Editor at FragMag from January 2018 to January 2019.",
+    "I've worked at SuperTokens for over 4 years now and currently help with content and growth. I've also contributed to a number of our backend SDKs,  documentation and also built features for our core service. Authentication and security can be challenging topics to understand but we hope through the content we create we can make it a more accessible.",
 },]
