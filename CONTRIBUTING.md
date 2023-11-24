@@ -106,7 +106,7 @@ module.exports = [
 
 ```
 
-and finally add the image of the author into the `/static/author_images` folder.
+Finally add a image of the author into `/static/author_images` folder and make sure that the author metatag is added to `/static/blog-seo/config.json` as show in the below [metatags](#meta-tags) example.
 
 
 #### SEO for blogs
