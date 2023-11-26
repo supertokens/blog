@@ -48,6 +48,7 @@
     {
         "path": "/blog/okta-pricing-the-complete-guide",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"An in depth guide covering Okta's pricing model.\" />",
             "",
             "<meta name=\"keywords\" content=\"Okta, Okta pricing, authentication, security\" />",
@@ -71,6 +72,7 @@
     {
         "path": "/blog/auth0-pricing-the-complete-guide",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"An in depth guide covering Auth0's pricing model.\" />",
             "",
             "<meta name=\"keywords\" content=\"Auth0, Auth0 pricing, authentication, security\" />",
@@ -94,6 +96,7 @@
     {
         "path": "/blog/supertokens-2022-year-in-review",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"2022 had been an amazing year for SuperTokens, here are some of the top highlights\" />",
             "",
             "<meta name=\"keywords\" content=\"2022, retrospective, updates\" />",
@@ -140,6 +143,7 @@
     {
         "path": "/blog/5-tips-for-optimizing-your-react-apps-performance",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"One of the most frustrating things as a React developer is investing time and effort into building an application only to find it slow and unresponsive. In this post, we’ll go over 5 tips to improve the performance of your React app.\" />",
             "",
             "<meta name=\"keywords\" content=\"React, Open Source, Tips, Optimization\" />",
@@ -347,6 +351,7 @@
     {
         "path": "/blog/oauth-vs-oidc",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"We break down the OIDC and OAuth standards and explain the key differences between the two\" />",
             "",
             "<meta name=\"keywords\" content=\"Authentication, OIDC, OAuth2 vs OpenId, OIDC vs OAuth, openid connect\" />",
@@ -416,6 +421,7 @@
     {
         "path": "/blog/building-a-chatbot-that-is-an-expert-at-supertokens",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"How we built a Chatbot that is an Expert at SuperTokens\" />",
             "",
             "<meta name=\"keywords\" content=\"Authentication, chatgpt, AI, chatbot, documentation\" />",
@@ -439,6 +445,7 @@
     {
         "path": "/blog/migrating-users-without-downtime-in-your-service",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"User Migration can be a challenging process, in this article we go over some user migration scenarios and break down the lazy migration strategy\" />",
             "",
             "<meta name=\"keywords\" content=\"Authentication, user migration, lazy migration, migration strategy\" />",
@@ -462,6 +469,7 @@
     {
         "path": "/blog/saml-vs-oauth",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"In this article, we delve into the world of SAML and OAuth, exploring their fundamental differences, core objectives, and applications in various scenarios.\" />",
             "",
             "<meta name=\"keywords\" content=\"Authentication, SAML, OAuth, Authorization\" />",
@@ -485,6 +493,7 @@
     {
         "path": "/blog/authentication-vs-authorization",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"Authentication and Authorization represent two fundamentally different aspects of security that work together in order to protect sensitive information. In this blog, we will go over some of the key differences between the two.\" />",
             "",
             "<meta name=\"keywords\" content=\"Authentication, Authorization, Security, RBAC, identity\" />",
@@ -508,6 +517,7 @@
     {
         "path": "/blog/understanding-jwks",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"JWKS are an important part of the authentication process. In this article we go over what they are and how they are used\" />",
             "",
             "<meta name=\"keywords\" content=\"jwks, Authentication, jwks-rsa, jwks endpoint, identity\" />",
@@ -554,6 +564,7 @@
     {
         "path": "/blog/url-vs-uri",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"In this blog we break down the differences between URL, URI, and URN\" />",
             "",
             "<meta name=\"keywords\" content=\"uri vs url, urn, open source, uri stands for\" />",
@@ -577,6 +588,7 @@
     {
         "path": "/blog/http-error-codes-401-vs-403",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"HTTP error codes can be confusing and incorrect usage can result in security vulnerabilities. In  this blog we break down the differences between error codes 401 and 403\" />",
             "",
             "<meta name=\"keywords\" content=\"401 vs 403, http error codes, differences between 401 and 403\" />",
@@ -600,6 +612,7 @@
     {
         "path": "/blog/what-is-ldap",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"In workforce identity and B2B flows, LDAP is main protocol used to interact with directory services that store user identity and device information. In this blog post we take a look at LDAP and how it works.\" />",
             "",
             "<meta name=\"keywords\" content=\"ldap, what is ldap, ldap server, ldap port\" />",
@@ -623,6 +636,7 @@
     {
         "path": "/blog/how-we-cut-our-aws-costs",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"In this two part blog series we will break down how we were able to cut down our AWS costs by over 50%\" />",
             "",
             "<meta name=\"keywords\" content=\"aws, cost optimization, open source, authentication\" />",
@@ -646,6 +660,7 @@
     {
         "path": "/blog/how-to-create-an-invite-only-auth-flow",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"Whether aiming to boost referrals, drive exclusivity, or simply enhance user engagement, a well-crafted invite flow can make all the difference. In this blog post, we will delve into the steps of how you can secure your React app with Email-password authentication with SuperTokens, customized to have an invite-only flow.\" />",
             "",
             "<meta name=\"keywords\" content=\"authentication, invite-only authentication, open source, user engagement\" />",
@@ -669,6 +684,7 @@
     {
         "path": "/blog/how-we-cut-our-aws-costs-part-2",
         "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"Part 2 in a series of howe we were able to cut down our AWS infrastructure costs by more than 50%\" />",
             "",
             "<meta name=\"keywords\" content=\"aws, cost optimization, open source, authentication\" />",
