@@ -2,7 +2,7 @@
 
 module.exports = [{
   name: "Joel Coutinho",
-  jobTitle: "Software Developer",
+  jobTitle: "Software Developer at SuperTokens",
   image: "joel.png",
   socials: [
     {
