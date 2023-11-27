@@ -83,7 +83,7 @@ module.exports = [
 {
   // This property's value should match with the frontmatter author value.
   name: "Joel Coutinho",
-  jobTitle: "Backend Developer",
+  jobTitle: "Backend Developer at SuperTokens",
   image: "joel.jpeg",
   socials: [
     {
