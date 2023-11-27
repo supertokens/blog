@@ -4,6 +4,7 @@ import { withPrefix } from "gatsby"
 
 import Layout from "../components/layout"
 import BlogPostFooter from "../components/BlogPostFooter";
+import AuthorCard from "../components/AuthorCardTop";
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -57,12 +58,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <p className="blog-date">{post.frontmatter.date}</p>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           {post.frontmatter.author && (
-            <p style={{
-              fontSize: "16px",
-              fontWeight: "normal",
-              margin: "-16px 0px 32px",
-              color: "#222",
-            }}>By {post.frontmatter.author}</p>
+           <AuthorCard author={post.frontmatter.author}/>
           )}
         </header>
         <section
@@ -71,6 +67,7 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <BlogPostFooter
           idSlug={postSlugWithUnderscores}
+          author={post.frontmatter.author}
         />
       </article>
     </Layout>
