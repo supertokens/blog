@@ -59,6 +59,56 @@ Following are some examples-
 ![Alt text for the image](./flow.png)
 ```
 
+#### Author information for the post.
+To add/edit the author information for existing or new author of the blog that needs to be published you need to add necessary information of that author in `src/authors-details.js` and the name property of the author object should match with the author value in frontmatter in your blogs `index.md` file.
+
+##### Example
+
+```mdx
+---
+title: "What is TOTP and why do you need it?"
+date: "2023-11-16"
+description: "Time based one-time passwords solve a number of issues that plague traditional authentication methods. In this blog we break down TOTP and why it's so useful."
+cover: "totp-why-you-need-it-and-how-it-works.png"
+category: "programming"
+# this author properties value should exactly match with name property in the author object below.
+author: "Joel Coutinho"
+---
+
+```
+
+```js
+
+module.exports = [
+{
+  // This property's value should match with the frontmatter author value.
+  name: "Joel Coutinho",
+  jobTitle: "Backend Developer at SuperTokens",
+  image: "joel.jpeg",
+  socials: [
+    {
+      name: "github",
+      url: "https://github.com/jscyo",
+    },
+    {
+      name: "linkedin",
+      url: "https://linkedin.com/jscyo",
+    },
+    {
+      name: "twitter",
+      url: "https://twitter.com/jscyo",
+    },
+  ],
+  bio:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis enim consequatur obcaecati, modi facilis nemo. Doloribus quia libero iste autem!",
+}
+]
+
+```
+
+Finally add a image of the author into `/static/author_images` folder and make sure that the author metatag is added to `/static/blog-seo/config.json` as show in the below [metatags](#meta-tags) example.
+
+
 #### SEO for blogs
 
 ##### Adding OG images
@@ -73,6 +123,7 @@ Meta tags for blog images are picked up from `/static/blog-seo/config.json`, for
 {
     "path": "/blog/<SLUG>",
     "metaTags": [
+        "<meta name=\"author\" content=\"<TODO>\" /> ",
         "<meta name=\"description\" content=\"<TODO>\" />",
         "",
         "<meta name=\"keywords\" content=\"<TODO>\" />",
