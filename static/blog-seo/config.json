@@ -750,7 +750,31 @@
             "<!--OG Tags-->"
         ],
         "title": "What is TOTP and why do you need it?",
-        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/totp-why-you-need-it-and-how-it-works\"},\"headline\":\"What is TOTP and why do you need it?\",\"image\":\"https://supertokens.com/blog-meta-images/totp-why-you-need-it-and-how-it-works.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/totp-why-you-need-it-and-how-it-works\"},\"headline\":\"Adding login to your Next.js app using the app directory with SuperTokens\",\"image\":\"https://supertokens.com/blog-meta-images/totp-why-you-need-it-and-how-it-works.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/access-control-for-modern-web-applications",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Sara Mashfej\" /> ",
+            "<meta name=\"description\" content=\"Access control plays a key role in protecting our data as we progressively move into an online society. In this blog we will explore the different types of access control and how they safeguard against attackers.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"access control, authentication, open source, web applications\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Access Control for modern web applications\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/access-control-for-modern-web-applications\" />",
+            "<meta property=\"og:description\" content=\"Access control plays a key role in protecting our data as we progressively move into an online society. In this blog we will explore the different types of access control and how they safeguard against attackers.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/access-control-for-modern-web-applications.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Access Control for modern web applications\" />",
+            "<meta name=\"twitter:description\" content=\"Access control plays a key role in protecting our data as we progressively move into an online society. In this blog we will explore the different types of access control and how they safeguard against attackers.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/access-control-for-modern-web-applications\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/access-control-for-modern-web-applications.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Access Control for modern web applications",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/access-control-for-modern-web-applications\"},\"headline\":\"Access Control for modern web applications\",\"image\":\"https://supertokens.com/blog-meta-images/access-control-for-modern-web-applications.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     },
     {
         "path": "/blog/multi-tenancy-in-2024",
