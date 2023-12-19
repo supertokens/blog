@@ -739,17 +739,41 @@
             "<meta property=\"og:title\" content=\"What is TOTP and why do you need it?\" />",
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/totp-why-you-need-it-and-how-it-works\" />",
-            "<meta property=\"og:description\" content=\"This blog explains how to setup email password and social login with SuperTokens using the app directory in Next.js.\" /\"/>",
+            "<meta property=\"og:description\" content=\"Time based one-time passwords solve a number of issues that plague traditional authentication methods. In this blog we break down TOTP and why it's so useful.\" /\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/totp-why-you-need-it-and-how-it-works.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
             "<meta name=\"twitter:title\" content=\"What is TOTP and why do you need it?\" />",
-            "<meta name=\"twitter:description\" content=\"Time based one-time passwords solve a number of issues that plague traditional authentication methods. In this blog we break down TOTP and why it's so useful\" />",
+            "<meta name=\"twitter:description\" content=\"Time based one-time passwords solve a number of issues that plague traditional authentication methods. In this blog we break down TOTP and why it's so useful.\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/totp-why-you-need-it-and-how-it-works\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/totp-why-you-need-it-and-how-it-works.png\" /> ",
             "<!--OG Tags-->"
         ],
         "title": "What is TOTP and why do you need it?",
-        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/totp-why-you-need-it-and-how-it-works\"},\"headline\":\"Adding login to your Next.js app using the app directory with SuperTokens\",\"image\":\"https://supertokens.com/blog-meta-images/totp-why-you-need-it-and-how-it-works.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/totp-why-you-need-it-and-how-it-works\"},\"headline\":\"What is TOTP and why do you need it?\",\"image\":\"https://supertokens.com/blog-meta-images/totp-why-you-need-it-and-how-it-works.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/multi-tenancy-in-2024",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Mostafa Ibrahim\" /> ",
+            "<meta name=\"description\" content=\"Multi-tenant systems allow a single instance of a software application to serve multiple different tenants. This allows for a number of benefits that will be explored in this blog.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"tenants, single-tenant, single-tenant vs multi-tenant, multi-tenant, ldap, ldap authentication, authentication\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Multi-Tenant Authentication in 2024\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog//multi-tenancy-in-2024\" />",
+            "<meta property=\"og:description\" content=\"Multi-tenant systems allow a single instance of a software application to serve multiple different tenants. This allows for a number of benefits that will be explored in this blog.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images//multi-tenancy-in-2024.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Multi-Tenant Authentication in 2024\" />",
+            "<meta name=\"twitter:description\" content=\"Multi-tenant systems allow a single instance of a software application to serve multiple different tenants. This allows for a number of benefits that will be explored in this blog.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog//multi-tenancy-in-2024\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images//multi-tenancy-in-2024.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Multi-Tenant Authentication in 2024",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/multi-tenancy-in-2024\"},\"headline\":\"Multi-Tenant Authentication in 2024\",\"image\":\"https://supertokens.com/blog-meta-images/multi-tenancy-in-2024.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
