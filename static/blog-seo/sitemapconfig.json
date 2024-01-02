@@ -76,5 +76,14 @@
     },
     {
         "location": "https://supertokens.com/blog/adding-login-to-your-nextjs-app-using-the-app-directory-and-supertokens"
+    },
+    {
+        "location": "https://supertokens.com/blog/access-control-for-modern-web-applications"
+    },
+    {  
+        "location": "https://supertokens.com/blog/totp-why-you-need-it-and-how-it-works"
+    },
+    {
+        "location": "https://supertokens.com/blog/multi-tenancy-in-2024"
     }
 ]
