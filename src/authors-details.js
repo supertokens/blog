@@ -15,5 +15,5 @@ module.exports = [{
     },
   ],
   bio:
-    "I am a content writer at SuperTokens. I have also contributed to the SuperTokens core, all the backend SDKs, and the developer docs.",
+    "Software dev and content lead at SuperTokens. Contributed to the SuperTokens core, backend SDKs, and developer documentation.",
 },]
