@@ -2,7 +2,7 @@
 title: The Multifaceted Benefits of Multi-Factor Authentication
 date: "2024-01-10"
 description: "Traditional login mechanisms are plagued by security vulnerabilities and are susceptible to attacks. Multi-factor authentication bolsters security and mitigates a number of these vulnerabilities and has now become an industry standard."
-cover: "benifits-of-multi-factor-authentication.png"
+cover: "benefits-of-multi-factor-authentication.png"
 category: "programming"
 author: "Michiel Mulders"
 ---
