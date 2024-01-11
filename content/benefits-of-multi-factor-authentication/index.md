@@ -1,12 +1,11 @@
 ---
 title: The Multifaceted Benefits of Multi-Factor Authentication
-date: "2023-11-14"
-description: "Traditional login mechanisms are plagued by security vulnerabilities "
-cover: "TODO.png"
+date: "2024-01-10"
+description: "Traditional login mechanisms are plagued by security vulnerabilities and are susceptible to attacks. Multi-factor authentication bolsters security and mitigates a number of these vulnerabilities and has now become an industry standard."
+cover: "benifits-of-multi-factor-authentication.png"
 category: "programming"
-author: ""
+author: "Michiel Mulders"
 ---
-
 
 
 In 2022, over [80% of data breaches](https://www.verizon.com/business/en-gb/resources/2022-data-breach-investigations-report-dbir.pdf) were attributed to compromised passwords.
@@ -82,10 +81,6 @@ FIDO, which stands for Fast Identity Online, is not a specific authentication me
 **Cons:** One drawback is registering your physical device with each service. Additionally, FIDO is still an emerging standard and has yet to be universally adopted. Therefore, when FIDO is not supported, you may still need to resort to different authentication methods.
 
 
-|  	| Pros 	| Cons 	|
-|---	|---	|---	|
-| SMS and Email 	| - Easy to use - Ubiquitous/Universal 	| - Vulnerable to attacks like sim card swapping 	|
-| TOTP 	| - Very short time window for a successful attack 	| - Requires setup 	|
 
 ## Real-world Use Cases of Multi-Factor Authentication
 
