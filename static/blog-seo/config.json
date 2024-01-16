@@ -847,5 +847,28 @@
         ],
         "title": "Demystifying SAML: A Comprehensive Guide",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/demystifying-saml\"},\"headline\":\"Demystifying SAML: A Comprehensive Guide\",\"image\":\"https://supertokens.com/blog-meta-images/demystifying-saml.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/localstorage-vs-session-storage",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Mostafa Ibrahim\" /> ",
+            "<meta name=\"description\" content=\"In this blog we delve into the workings of Local and Session storage breaking down the nuances that set them apart\" />",
+            "",
+            "<meta name=\"keywords\" content=\"local storage, session storage, localstorage vs sessionstorage, cookies, tokens, authentication\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Unveiling the Intricacies of Local Storage and Session Storage\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/localstorage-vs-session-storage\" />",
+            "<meta property=\"og:description\" content=\"In this blog we delve into the workings of Local and Session storage breaking down the nuances that set them apart\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/localstorage-vs-session-storage.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Unveiling the Intricacies of Local Storage and Session Storage\" />",
+            "<meta name=\"twitter:description\" content=\"In this blog we delve into the workings of Local and Session storage breaking down the nuances that set them apart\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/localstorage-vs-session-storage\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/localstorage-vs-session-storage.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Unveiling the Intricacies of Local Storage and Session Storage",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/localstorage-vs-session-storage\"},\"headline\":\"Unveiling the Intricacies of Local Storage and Session Storage\",\"image\":\"https://supertokens.com/blog-meta-images/localstorage-vs-session-storage.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
