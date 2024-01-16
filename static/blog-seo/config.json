@@ -823,5 +823,29 @@
         ],
         "title": "The Multifaceted Benefits of Multi-Factor Authentication",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/benefits-of-multi-factor-authentication\"},\"headline\":\"The Multifaceted Benefits of Multi-Factor Authentication\",\"image\":\"https://supertokens.com/blog-meta-images/benefits-of-multi-factor-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/demystifying-saml",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Michiel Mulders\" /> ",
+            "<meta name=\"description\" content=\"SAML is an authentication standard created to address the growing need of federated identity. In this blog we go over what SAML is and what makes it special.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"SAML, authentication, SAML vs OAuth, Benefits of SAML, Open Source\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Demystifying SAML: A Comprehensive Guide\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/demystifying-saml\" />",
+            "<meta property=\"og:description\" content=\"SAML is an authentication standard created to address the growing need of federated identity. In this blog we go over what SAML is and what makes it special.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/demystifying-saml.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Demystifying SAML: A Comprehensive Guide\" />",
+            "<meta name=\"twitter:description\" content=\"SAML is an authentication standard created to address the growing need of federated identity. In this blog we go over what SAML is and what makes it special.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/demystifying-saml\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/demystifying-saml.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Demystifying SAML: A Comprehensive Guide",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/demystifying-saml\"},\"headline\":\"Demystifying SAML: A Comprehensive Guide\",\"image\":\"https://supertokens.com/blog-meta-images/demystifying-saml.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]

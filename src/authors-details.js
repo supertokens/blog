@@ -16,4 +16,16 @@ module.exports = [{
   ],
   bio:
     "Software dev and content lead at SuperTokens. Contributed to the SuperTokens core, backend SDKs, and developer documentation.",
+},{
+  name: "Michiel Mulders",
+  jobTitle: "Web3 Developer Advocate",
+  image: "michel.jpg",
+  socials: [
+    {
+      name: "twitter",
+      url: "https://twitter.com/michiel_mulders",
+    },
+  ],
+  bio:
+    "Michiel Mulders is a Web3 developer advocate skilled in creating engaging tech tutorials. He specializes in documentation strategy and video content.",
 },]

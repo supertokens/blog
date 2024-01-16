@@ -88,5 +88,8 @@
     },
     {
         "location": "https://supertokens.com/blog/benefits-of-multi-factor-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/demystifying-saml"
     }
 ]
