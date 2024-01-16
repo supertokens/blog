@@ -91,5 +91,8 @@
     },
     {
         "location": "https://supertokens.com/blog/demystifying-saml"
+    },
+    {
+        "location": "https://supertokens.com/blog/localstorage-vs-sessionstorage"
     }
 ]
