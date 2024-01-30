@@ -2,7 +2,7 @@
 title: "Navigating the Complex World of CAPTCHA Technology in Authentication"
 date: "2024-01-30"
 description: "What is Captcha? Why is it needed? In this blog we will answer these questions and more"
-cover: "localstorage-vs-session-storage.png"
+cover: "understanding-captcha.png"
 category: "programming"
 author: "Mostafa Ibrahim"
 ---
