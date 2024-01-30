@@ -870,5 +870,28 @@
         ],
         "title": "Unveiling the Intricacies of Local Storage and Session Storage",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/localstorage-vs-session-storage\"},\"headline\":\"Unveiling the Intricacies of Local Storage and Session Storage\",\"image\":\"https://supertokens.com/blog-meta-images/localstorage-vs-session-storage.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/understanding-captcha",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Mostafa Ibrahim\" /> ",
+            "<meta name=\"description\" content=\"What is Captcha? Why is it needed? In this blog we will answer these questions and more\" />",
+            "",
+            "<meta name=\"keywords\" content=\"captcha, recaptcha, hcaptcha, captcha full form, authentication\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Navigating the Complex World of CAPTCHA Technology in Authentication\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/understanding-captcha\" />",
+            "<meta property=\"og:description\" content=\"What is Captcha? Why is it needed? In this blog we will answer these questions and more\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/understanding_captcha.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Navigating the Complex World of CAPTCHA Technology in Authentication\" />",
+            "<meta name=\"twitter:description\" content=\"What is Captcha? Why is it needed? In this blog we will answer these questions and more\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/understanding-captcha\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/understanding_captcha.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Unveiling the Intricacies of Local Storage and Session Storage",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/understanding_captcha\"},\"headline\":\"Unveiling the Intricacies of Local Storage and Session Storage\",\"image\":\"https://supertokens.com/blog-meta-images/understanding_captcha.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
