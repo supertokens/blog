@@ -1,13 +1,15 @@
 ---
 title: "What is Credential Stuffing"
-description: ""
+description: "Most people are familiar with brute force attacks, where attackers attempt to guess passwords using characters at random paired with common password suggestions, but what is Credential Stuffing? In this we will go over this type of attack and how you can safeguard against it."
 date: ""
 cover: "TODO.png"
 category: "programming"
 author: "Joel Coutinho"
 ---
 
-Understanding Credential Stuffing: How to Protect Your Accounts
+## Introduction
+
+Back in the early 2010's there was a big uptick in brute force attacks. Attackers would employ bots to generate passwords and try to gain access to user accounts. They would also employ a dictionary of commonly used passwords to supplement the attack. The best way to avoid falling victim to such an attack of course is to use a secure password. A unique password between 8-12 characters, with a number, special character and numbers would generally be considered as secure and resistant to a brute force attack. The problem that arises with most users though is that they tend to reuse the same passwords, over different accounts and rarely if ever change them. This makes users susceptible
 
 In today's digital age, where almost every aspect of our lives is connected online, security threats loom large. One such menace that has gained prominence in recent years is credential stuffing. This nefarious technique has become a favorite among cybercriminals seeking unauthorized access to user accounts. In this article, we'll delve into what credential stuffing is, how it works, and most importantly, how you can safeguard your online presence against it.
 
