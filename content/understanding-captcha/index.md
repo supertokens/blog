@@ -41,7 +41,7 @@ These image CAPTCHAs work because computers, while good at reading, weren't grea
 ### AudioBased CAPTCHAs: Deciphering Sounds in Digital Security
 As for audio CAPTCHAs, imagine trying to listen to a given sentence, but with lots of background noise. The audio CAPTCHAs do something similar to that of CAPTCHAs with numbers and letters by adding noise to the audio message, making it hard for computers, which were just starting to get the hang of clean and clear audio, to decipher the jumbled sounds.
 
-![Captcha 4](./Captcha_4.png)
+![Captcha 4](./captcha_4.png)
 
 In recent years, CAPTCHA puzzles have become even trickier, almost like boss levels in games. They now adapt based on how you interact with them, constantly changing the rules of the game to keep the computers guessing. 
 
