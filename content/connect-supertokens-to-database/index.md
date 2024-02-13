@@ -371,7 +371,7 @@ For this setup to work, we must connect SuperTokens and PostgreSQL via the host 
 - Run the SuperTokens docker image with the env var specifying the PostgreSQL connection URI:
 
   ```bash
-  docker run \              
+  docker run \
     -p 3567:3567 \
     --network=host \
     -e POSTGRESQL_CONNECTION_URI="postgresql://supertokens_user:somePassword@192.168.1.1:5432/supertokens" \
@@ -488,7 +488,7 @@ For this setup to work, we must connect SuperTokens and PostgreSQL via the host 
 - Run the SuperTokens docker image with the env var specifying the PostgreSQL connection URI:
 
   ```bash
-  docker run \              
+  docker run \
     -p 3567:3567 \
     --network=host \
     -e POSTGRESQL_CONNECTION_URI="postgresql://supertokens_user:somePassword@192.168.1.1:5432/supertokens" \

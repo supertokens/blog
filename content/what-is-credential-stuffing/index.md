@@ -1,5 +1,5 @@
 ---
-title: "What is Credential Stuffing"
+title: "What is Credential Stuffing?"
 description: "Most people are familiar with brute force attacks, where attackers attempt to guess passwords using characters at random paired with common password suggestions, but what is Credential Stuffing? In this we will go over this type of attack and how you can safeguard against it."
 date: "2024-02-13"
 cover: "what-is-credential-stuffing.png"
