@@ -870,5 +870,28 @@
         ],
         "title": "Unveiling the Intricacies of Local Storage and Session Storage",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/localstorage-vs-session-storage\"},\"headline\":\"Unveiling the Intricacies of Local Storage and Session Storage\",\"image\":\"https://supertokens.com/blog-meta-images/localstorage-vs-session-storage.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/what-is-credential-stuffing",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
+            "<meta name=\"description\" content=\"Most people are familiar with brute force attacks, where attackers attempt to guess passwords using characters at random paired with common password suggestions, but what is Credential Stuffing? In this we will go over this type of attack and how you can safeguard against it.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"credential stuffing, brute force attacks, credential stuffing attacks, what is credential stuffing\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What is Credential Stuffing?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/what-is-credential-stuffing\" />",
+            "<meta property=\"og:description\" content=\"Most people are familiar with brute force attacks, where attackers attempt to guess passwords using characters at random paired with common password suggestions, but what is Credential Stuffing? In this we will go over this type of attack and how you can safeguard against it.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-credential-stuffing.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"What is Credential Stuffing?\" />",
+            "<meta name=\"twitter:description\" content=\"Most people are familiar with brute force attacks, where attackers attempt to guess passwords using characters at random paired with common password suggestions, but what is Credential Stuffing? In this we will go over this type of attack and how you can safeguard against it.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-is-credential-stuffing\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-credential-stuffing.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "What is Credential Stuffing?",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-credential-stuffing\"},\"headline\":\"What is Credential Stuffing?\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-credential-stuffing.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
