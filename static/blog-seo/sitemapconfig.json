@@ -76,5 +76,29 @@
     },
     {
         "location": "https://supertokens.com/blog/adding-login-to-your-nextjs-app-using-the-app-directory-and-supertokens"
+    },
+    {
+        "location": "https://supertokens.com/blog/access-control-for-modern-web-applications"
+    },
+    {  
+        "location": "https://supertokens.com/blog/totp-why-you-need-it-and-how-it-works"
+    },
+    {
+        "location": "https://supertokens.com/blog/multi-tenancy-in-2024"
+    },
+    {
+        "location": "https://supertokens.com/blog/benefits-of-multi-factor-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/demystifying-saml"
+    },
+    {
+        "location": "https://supertokens.com/blog/localstorage-vs-sessionstorage"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-credential-stuffing"
+    },
+    {
+        "location": "https://supertokens.com/blog/understanding-captcha"
     }
 ]
