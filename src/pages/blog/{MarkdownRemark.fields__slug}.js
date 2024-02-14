@@ -21,6 +21,7 @@ export const pageQuery = graphql`
         title
         cover
         author
+        description
       }
       fields {
         slug

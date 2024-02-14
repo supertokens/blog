@@ -40,6 +40,7 @@ const BlogPostTemplate = ({ data, location }) => {
     return $.html();
   }
 
+  console.log({data})
   return (
     <Layout location={location} title={siteTitle}>
       <article
@@ -47,7 +48,7 @@ const BlogPostTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
+         <header>
           {post.frontmatter.cover && (
             <img
               style={{ maxWidth: "100%", marginBottom: "16px" }}
@@ -55,11 +56,14 @@ const BlogPostTemplate = ({ data, location }) => {
               alt="Cover"
             />
           )}
-          <p className="blog-date">{post.frontmatter.date}</p>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          {post.frontmatter.author && (
-           <AuthorCard author={post.frontmatter.author}/>
-          )}
+          <div className="blog-header-content-container">
+            <p className="blog-date">{post.frontmatter.date}</p>
+            <h1 itemProp="headline">{post.frontmatter.title}</h1>
+            <p className="blog-description">{post.frontmatter.description}</p>
+            {post.frontmatter.author && (
+              <AuthorCard author={post.frontmatter.author} />
+            )}
+          </div>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: getUpdatedHtml(post.html) }}
