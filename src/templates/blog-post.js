@@ -40,7 +40,6 @@ const BlogPostTemplate = ({ data, location }) => {
     return $.html();
   }
 
-  console.log({data})
   return (
     <Layout location={location} title={siteTitle}>
       <article
