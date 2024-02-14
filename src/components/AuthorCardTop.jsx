@@ -12,7 +12,7 @@ export default function AuthorCard({ author }) {
         style={{
           fontSize: "16px",
           fontWeight: "normal",
-          margin: "-16px 0px 32px",
+          margin: "16px 0px 32px",
           color: "#222",
         }}
       >
