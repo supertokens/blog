@@ -355,8 +355,8 @@ a:focus {
 
 .blog-post header h1 {
   margin: var(--gatsbySpacing-0) var(--gatsbySpacing-0) var(--gatsbySpacing-8) var(--gatsbySpacing-0);
-  font-size: 39px;
-  line-height: 3.4375rem;
+  font-size: 36px;
+  line-height: 50px;
   margin: 20px 0px 20px;
 }
 
