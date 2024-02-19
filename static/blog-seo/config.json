@@ -916,5 +916,28 @@
         ],
         "title": "Unveiling the Intricacies of Local Storage and Session Storage",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/understanding_captcha\"},\"headline\":\"Unveiling the Intricacies of Local Storage and Session Storage\",\"image\":\"https://supertokens.com/blog-meta-images/understanding_captcha.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/what-is-scim-provisioning",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Sara Mashfej\" /> ",
+            "<meta name=\"description\" content=\"Managing identities can be a pain, in the past administrators would have to manually add identifying information needed by applications about users. This process takes longer and has a high margin of error. SCIM streamlines the management of user groups and devices. In this blog we will explore how it works\" />",
+            "",
+            "<meta name=\"keywords\" content=\"SCIM, SCIM vs SAML, SCIM vs SSO, SCIM benefits, authentication\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What is SCIM provisioning\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/what-is-scim-provisioning\" />",
+            "<meta property=\"og:description\" content=\"Managing identities can be a pain, in the past administrators would have to manually add identifying information needed by applications about users. This process takes longer and has a high margin of error. SCIM streamlines the management of user groups and devices. In this blog we will explore how it works\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-scim-provisioning.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Navigating the Complex World of CAPTCHA Technology in Authentication\" />",
+            "<meta name=\"twitter:description\" content=\"What is Captcha? Why is it needed? In this blog we will answer these questions and more\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-is-scim-provisioning\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-scim-provisioning.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "What is SCIM provisioning",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-scim-provisioning\"},\"headline\":\"Unveiling the Intricacies of Local Storage and Session Storage\",\"image\":\"https://supertokens.com/blog-meta-images/understanding_captcha.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
