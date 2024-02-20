@@ -61,5 +61,20 @@ module.exports = [{
   ],
   bio:
     "Senior software engineer at a Fintech in London. Passionate about content creation, AI and traveling.",
+},{
+  name: "Advait Ruia",
+  jobTitle: "Co-Founder and CEO at SuperTokens",
+  image: "advait.jpg",
+  socials: [
+    {
+      name: "twitter",
+      url: "https://twitter.com/Advait_Ruia",
+    },{
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/advait-ruia-2aa52a85/",
+    }
+  ],
+  bio:
+    "Cofounder and CEO of SuperTokens. Building open source user authentication that is quick and customizable. BEng from Imperial College of London",
 }
 ]
