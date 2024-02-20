@@ -938,6 +938,29 @@
             "<!--OG Tags-->"
         ],
         "title": "What is SCIM provisioning",
-        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-scim-provisioning\"},\"headline\":\"What is SCIM provisioning\",\"image\":\"https://supertokens.com/blog-meta-images/understanding_captcha.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-scim-provisioning\"},\"headline\":\"What is SCIM provisioning\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-scim-provisioning.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/what-is-zero-trust",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Mostafa Ibrahim\" /> ",
+            "<meta name=\"description\" content=\"Zero Trust is an IT security model that emphasizes identity verification for every person or device trying to access resources on a private network. In this blog we go over it's core principles and practical benefits.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"what is zero trust, zero trust, zero trust architecture, zero trust security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"All You Need To Know About the Zero Trust Model\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/what-is-zero-trust\" />",
+            "<meta property=\"og:description\" content=\"Zero Trust is an IT security model that emphasizes identity verification for every person or device trying to access resources on a private network. In this blog we go over it's core principles and practical benefits.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-zero-trust.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Navigating the Complex World of CAPTCHA Technology in Authentication\" />",
+            "<meta name=\"twitter:description\" content=\"What is Captcha? Why is it needed? In this blog we will answer these questions and more\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-is-zero-trust\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-zero-trust.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "All You Need To Know About the Zero Trust Model",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-zero-trust\"},\"headline\":\"All You Need To Know About the Zero Trust Model\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-zero-trust.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
