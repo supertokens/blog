@@ -103,5 +103,8 @@
     },
     {
         "location": "https://supertokens.com/blog/what-is-scim-provisioning"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-zero-trust"
     }
 ]
