@@ -2,7 +2,7 @@
 title: "Understanding Authorization code flow with PKCE"
 description: "Federated identity with OAuth is one of the most popular methods of implementing authentication. It lowers sign-up friction and is more secure than other auth methods like email-password based authentication."
 date: "2024-02-23"
-cover: "TODO.png"
+cover: "authorization-code-flow-with-pkce.png"
 category: "programming"
 author: "Joel Coutinho"
 ---
