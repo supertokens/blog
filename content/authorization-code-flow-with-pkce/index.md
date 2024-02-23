@@ -29,36 +29,26 @@ The problem with authorization code flow, as mentioned above, is that the client
 
 ![Authorization code flow with PKCE](./pkce_flow.png)
 
+### Step 1: Authorization Request and PKCE Challenge creation:
 
+- The user initiates the flow by clicking on the social login button.
+- The client will generate a unique code called a `code_verifier`. This client will proceed to hash the `code_verifier`. This value is called a `code_challenge` and is sent to the Identity provider, during the authorization request.
+ 
+### Step 2: User Authentication:
 
-Authorization Request: The client application initiates the authentication process by redirecting the user to the authorization server. The client includes specific parameters such as the response_type set to "code", client_id, redirect_uri, and scope to define the requested permissions.
+- The user is redirected to the identity providers login screen along with the `code_challenge` and the hashing method. This is stored by the identity provider.
+- On successful verification, the user is redirected back to the client with an authorization code.
 
-User Authentication: The user interacts with the authorization server to authenticate themselves and grant permission to the client application.
-
-Authorization Grant: Upon successful authentication, the authorization server issues an authorization code to the client application via the specified redirect URI.
-
-PKCE Challenge Creation: Before exchanging the authorization code for an access token, the client generates a cryptographically random string called a Code Verifier and transforms it into a Code Challenge using a specified method such as SHA-256.
-
-Token Exchange: The client sends the authorization code along with the Code Verifier to the authorization server to exchange them for an access token. The server verifies the code, along with the Code Verifier, ensuring that the client initiating the token exchange is the same one that initiated the authorization request.
-
-Access Token Issuance: Upon successful verification, the authorization server issues an access token to the client application, allowing it to access protected resources on behalf of the user.
+### Step 3: Token Exchange:
+- To get the access token from the identity provider, the client will send over the authorization code along with the original `code_verifier`.
+- The server verifies the authorization code and will hash the `code_verifier`(using the hashing method shared in Step 2) and compare it to the stored value, ensuring that the client initiating the token exchange is the same one that initiated the authorization request.
 
 ## What are the problems PKCE solves
 
+**Code Interception**: In the standard Authorization Code Flow, a malicious actor can intercept the authorization code during transmission between the authorization server and the client. PKCE negates the fallout of this attack by ensuring that the unique `code_verifier` is needed which is only known by the client and is dynamically generated for each auth request, so it cannot be guessed.
 
+**Client Secrecy**: It removes the reliance of a client secret during the token exchange. So now clients do not store a client secret and are not vulnerabilities.
 
 ## Conclusion
-
-What Problems Does it Solve?
-The Authorization Code Flow with PKCE addresses several security vulnerabilities present in the traditional Authorization Code Flow, particularly in scenarios where clients are incapable of maintaining the secrecy of their client secrets. Some of the key problems it solves include:
-
-Code Interception: In the standard Authorization Code Flow, malicious actors can intercept the authorization code during transmission between the authorization server and the client. PKCE mitigates this risk by introducing the Code Verifier, which is only known to the client.
-
-Code Injection: Attackers may attempt to inject rogue code to intercept the authorization code during the redirect process. PKCE prevents this by requiring the verifier and the code challenge to match, ensuring that the code exchange is legitimate.
-
-Client Secrecy: Unlike the traditional flow, PKCE eliminates the need for clients to store sensitive credentials such as client secrets securely.
-
-Changes Compared to OAuth
-The primary change introduced by PKCE lies in the addition of the Code Verifier and Code Challenge parameters. These parameters ensure that even if an attacker intercepts the authorization code, they cannot exchange it for an access token without the corresponding Code Verifier, significantly enhancing the security of the authentication process.
  
-In conclusion, the adoption of the Authorization Code Flow with PKCE represents a significant step forward in the quest for secure and reliable user authentication and authorization mechanisms in modern web applications. Its deployment can help organizations bolster their security defenses, safeguard user privacy, and foster trust in the digital ecosystem.
+Federated identity with the OAuth protocol's popularity has made it a popular choice for auth due to its ease of use and security benefits. Therefore it's imperative that it is updated whePKCE n vulnerabilities are discovered. With the rise of single page applications and the prevalence of embedded systems.
