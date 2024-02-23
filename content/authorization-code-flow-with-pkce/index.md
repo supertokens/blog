@@ -1,7 +1,7 @@
 ---
 title: "Understanding Authorization code flow with PKCE"
-description: "Zero Trust is an IT security model that emphasizes identity verification for every person or device trying to access resources on a private network. In this blog we go over it's core principles and practical benefits."
-date: "2024-02-20"
+description: "Federated identity with OAuth is one of the most popular methods of implementing authentication. It lowers sign-up friction and is more secure than other auth methods like email-password based authentication."
+date: "2024-02-23"
 cover: "TODO.png"
 category: "programming"
 author: "Joel Coutinho"

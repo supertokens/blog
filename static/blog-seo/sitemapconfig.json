@@ -106,5 +106,8 @@
     },
     {
         "location": "https://supertokens.com/blog/what-is-zero-trust"
+    },
+    {
+        "location": "https://supertokens.com/blog/authorization-code-flow-with-pkce"
     }
 ]
