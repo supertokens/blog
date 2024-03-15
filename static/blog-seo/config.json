@@ -985,5 +985,28 @@
         ],
         "title": "Understanding Authorization code flow with PKCE",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/authorization-code-flow-with-pkce\"},\"headline\":\"Understanding Authorization code flow with PKCE\",\"image\":\"https://supertokens.com/blog-meta-images/authorization-code-flow-with-pkce.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/otp-vs-totp-vs-hotp",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Sara Mashfej\" /> ",
+            "<meta name=\"description\" content=\"One time passwords are a more secure method of authentication. They remedy a number of issues which plague traditional username-password based authentication. But with methods like TOTP and HOTP it can be confusing. In this blog we break down these methods with their benefits and downsides\" />",
+            "",
+            "<meta name=\"keywords\" content=\"totp meaning, what is hotp, what are otps, hmac based one time password\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"The difference between OTP, TOTP and HOTP\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/otp-vs-totp-vs-hotp\" />",
+            "<meta property=\"og:description\" content=\"One time passwords are a more secure method of authentication. They remedy a number of issues which plague traditional username-password based authentication. But with methods like TOTP and HOTP it can be confusing. In this blog we break down these methods with their benefits and downsides\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/otp-vs-totp-vs-hotp.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"The difference between OTP, TOTP and HOTP\" />",
+            "<meta name=\"twitter:description\" content=\"One time passwords are a more secure method of authentication. They remedy a number of issues which plague traditional username-password based authentication. But with methods like TOTP and HOTP it can be confusing. In this blog we break down these methods with their benefits and downsides\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/otp-vs-totp-vs-hotp\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/otp-vs-totp-vs-hotp.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "The difference between OTP, TOTP and HOTP",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/otp-vs-totp-vs-hotp\"},\"headline\":\"The difference between OTP, TOTP and HOTP\",\"image\":\"https://supertokens.com/blog-meta-images/otp-vs-totp-vs-hotp.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]

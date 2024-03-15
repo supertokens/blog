@@ -109,5 +109,8 @@
     },
     {
         "location": "https://supertokens.com/blog/authorization-code-flow-with-pkce"
+    },
+    {
+        "location": "https://supertokens.com/blog/otp-vs-totp-vs-hotp"
     }
 ]
