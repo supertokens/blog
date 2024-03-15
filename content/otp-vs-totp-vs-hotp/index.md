@@ -1,7 +1,7 @@
 ---
 title: "The difference between OTP, TOTP and HOTP"
 description: "One time passwords are a more secure method of authentication. They remedy a number of issues which plague traditional username-password based authentication. But with methods like TOTP and HOTP it can be confusing. In this blog we break down these methods with their benefits and downsides"
-date: "2024-03-7"
+date: "2024-03-07"
 cover: "otp-vs-totp-vs-hotp.png"
 category: "programming"
 author: "Sara Mashfej"
