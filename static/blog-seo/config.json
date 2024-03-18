@@ -1008,5 +1008,28 @@
         ],
         "title": "The difference between OTP, TOTP and HOTP",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/otp-vs-totp-vs-hotp\"},\"headline\":\"The difference between OTP, TOTP and HOTP\",\"image\":\"https://supertokens.com/blog-meta-images/otp-vs-totp-vs-hotp.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/phishing-attacks-in-2024",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Sarah Sanders\" /> ",
+            "<meta name=\"description\" content=\"Over the years phishing attacks have become more sophisticated than ever. In this blog we break down how phishing attacks have evolved and how you can safeguard against them\" />",
+            "",
+            "<meta name=\"keywords\" content=\"phishing, what are phishing attacks, types of phishing attacks, smishing and fishing, google deceptive site ahead\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Phishing Attacks in 2024\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/phishing-attacks-in-2024\" />",
+            "<meta property=\"og:description\" content=\"Over the years phishing attacks have become more sophisticated than ever. In this blog we break down how phishing attacks have evolved and how you can safeguard against them\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/phishing-attacks-in-2024.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Phishing Attacks in 2024\" />",
+            "<meta name=\"twitter:description\" content=\"Over the years phishing attacks have become more sophisticated than ever. In this blog we break down how phishing attacks have evolved and how you can safeguard against them\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/phishing-attacks-in-2024\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/phishing-attacks-in-2024.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Phishing Attacks in 2024",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/phishing-attacks-in-2024\"},\"headline\":\"Phishing Attacks in 2024\",\"image\":\"https://supertokens.com/blog-meta-images/phishing-attacks-in-2024.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
