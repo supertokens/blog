@@ -112,5 +112,8 @@
     },
     {
         "location": "https://supertokens.com/blog/otp-vs-totp-vs-hotp"
+    },
+    {
+        "location": "https://supertokens.com/blog/phishing-attacks-in-2024"
     }
 ]

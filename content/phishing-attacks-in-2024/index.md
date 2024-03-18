@@ -1,10 +1,10 @@
 ---
 title: "Phishing Attacks in 2024"
-description: ""
+description: "Over the years phishing attacks have become more sophisticated than ever. In this blog we break down how phishing attacks have evolved and how you can safeguard against them"
 date: "2024-03-013"
-cover: "TODO.png"
+cover: "phishing-attacks-in-2024.png"
 category: "programming"
-author: "Sarah"
+author: "Sarah Sanders"
 ---
 
 
