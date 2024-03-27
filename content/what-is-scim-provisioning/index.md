@@ -7,6 +7,14 @@ category: "programming"
 author: "Sara Mashfej"
 ---
 
+## Table of Contents
+- [Introduction](#introduction)
+- [What is SCIM Provisioning](#what-is-scim-provisioning)
+- [Why is SCIM Provisioning important](#why-is-scim-provisioning-important)
+- [SCIM vs SAML](#scim-vs-saml)
+- [SCIM vs SSO](#scim-vs-sso)
+- [Conclusion](#conclusion)
+
 ## Introduction
 
 In 2024, a staggering 94% of enterprises use cloud applications. The key to improving employee productivity and job performance lies in making the communication between these tools as seamless as possible while providing the necessary security. Administrators play a pivotal role in guaranteeing quick access to essential resources while also maintaining the efficiency of promptly revoking access when it is no longer required.
@@ -22,7 +30,7 @@ SCIM works by exchanging user identity attributes like a user’s profile, their
 
 ![scim provisioning flow](./scim-provisioning-flow.png)
 
-## Why is SCIM provisioning important
+## Why is SCIM Provisioning important
 
 Many organizations choose to adopt SCIM today for different reasons, here are some common advantages to SCIM:
 

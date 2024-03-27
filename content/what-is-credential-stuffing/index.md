@@ -7,6 +7,13 @@ category: "programming"
 author: "Joel Coutinho"
 ---
 
+## Table of Content
+
+- [Introduction](#introduction)
+- [How does Credential Stuffing work?](#how-does-credential-stuffing-work)
+- [How to protect against Credential Stuffing?](#how-to-protect-against-credential-stuffing)
+- [Conclusion](#conclusion)
+
 ## Introduction
 
 The early 2000's saw a large number of brute force attacks. Attackers would employ bots to generate passwords and try to gain access to user accounts. They would also employ a dictionary of commonly used passwords to supplement the attack.  Back then, users would employ simple passwords, that were easy to guess. Over the years websites began to institute password policies, forcing users to generate unique passwords between 8-12 characters, with numerals and special characters. This drastically lowered the success rate of brute force attacks. The problem that remains is that most users tend to reuse passwords across accounts. This makes users susceptible to an attack known as Credential Stuffing.

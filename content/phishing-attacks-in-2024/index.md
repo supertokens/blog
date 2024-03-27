@@ -7,6 +7,12 @@ category: "programming"
 author: "Sarah Sanders"
 ---
 
+## Table of Content
+- [Introduction](#introduction)
+- [Phishing in a New Era](#phishing-in-a-new-era)
+- [Detecting a phish](#detecting-a-phish)
+- [Conclusion](#conclusion)
+
 
 ## Introduction
 
