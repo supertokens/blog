@@ -7,6 +7,16 @@ category: "programming"
 author: "Joel Coutinho"
 ---
 
+## Table of Content
+- [Introduction](#introduction)
+- [What are the security concerns with OAuth](#what-are-the-security-concerns-with-oauth)
+- [How does PKCE solve this issue](#how-does-pkce-solve-this-issue)
+- [How does PKCE work](#how-does-pkce-work)
+- [What are the problems that PKCE solves](#what-are-the-problems-pkce-solves)
+- [Conclusion](#conclusion)
+
+## Introduction
+
 In the authentication space, password based authentication is considered to be the least secure. Most users tend to reuse passwords and not use password managers. This is why [federated identity](https://en.wikipedia.org/wiki/Federated_identity) has gain an increase in popularity in the last decade. OAuth is a a protocol that enables identity federation allowing applications and is key enabling the social login flows we interact with on a daily basis. Although it is very popular, there are a few critical concerns around OAuth and OAuth with Authorization Code flow. This is where Authorization Code flow with Proof Key for Code Exchange comes in.
 
 
