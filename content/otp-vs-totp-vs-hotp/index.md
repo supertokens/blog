@@ -7,6 +7,15 @@ category: "programming"
 author: "Sara Mashfej"
 ---
 
+## Table of Content
+- [Introduction](#introduction)
+- [Understanding Multi-factor authentication and OTP](#understanding-multi-factor-authentication-and-otp)
+- [One Time Passwords (OTP)](#one-time-passwords-otp)
+- [Time based One Time Password (TOTP)](#totp)
+- [HMAC-based One-time Password (HOTP)](#hotp)
+- [TOTP vs HOTP](#totp-vs-hotp)
+- [Conclusion](#conclusion)
+
 ## Introduction
 
 Traditional username and password authentication methods have historically served as the default choice for ensuring secure access. However, [nearly half (49%) of incidents](https://www.verizon.com/business/en-gb/resources/reports/dbir/) cited in Verizon's 2023 Data Breach Investigations Report involved compromised passwords.
