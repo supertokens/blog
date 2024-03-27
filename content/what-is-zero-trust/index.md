@@ -7,6 +7,17 @@ category: "programming"
 author: "Mostafa Ibrahim"
 ---
 
+## Table of Content
+- [Introduction](#introduction)
+- [The Main Concept Behind Zero Trust](#the-main-concept-behind-zero-trust)
+- [Key Principles of Zero Trust](#key-principles-of-zero-trust)
+- [Benefits of Zero Trust](#benefits-of-zero-trust)
+- [How to implement Zero Trust into your application](#how-to-implement-zero-trust-into-your-application)
+- [BeyondCorp: Googles implementation of Zero Trust](#beyondcorp-googles-implementation-of-zero-trust)
+- [Zero Trust in Action](#zero-trust-in-action)
+- [Conclusion](#zero-trust-in-action)
+
+
 ## Introduction
 
 
@@ -53,25 +64,25 @@ Here are five key components or steps that companies must implement to successfu
 
 ![Implement zero trust in your application](./implement-zero-trust.png)
 
-## 1. Identifying and Securing the Attack Surface
+### 1. Identifying and Securing the Attack Surface
 - **Initial Assessment**: Identify potential vulnerabilities in the network and web platforms.
 - **Infrastructure Segmentation**: Implement VLANs and network firewalls for segregation and control of network traffic.
 
-## 2. Data Protection and Encryption
+### 2. Data Protection and Encryption
 - **Data Classification**: Prioritize safeguarding sensitive data across the network and within applications.
 - **Encryption Implementation**: Classify and categorize data to apply appropriate encryption and access measures, using [TLS 1.3](https://www.cloudflare.com/learning/ssl/why-use-tls-1.3/) and [AES encryption](https://www.simplilearn.com/tutorials/cryptography-tutorial/aes-encryption) standards.
 - **Data Leakage Prevention**: Implement [Data Leakage Prevention](https://www.microsoft.com/en-us/security/business/security-101/what-is-data-loss-prevention-dlp) tools for monitoring data transfer and preventing leaks.
 
-## 3. Comprehensive Application/API Security
+### 3. Comprehensive Application/API Security
 - **Application Layer Security**: Secure critical applications with Web Application Firewalls (WAFs) and Runtime Application Self-Protection (RASP).
 - **API Management**: Apply OAuth 2.0 and OpenID Connect for secure and delegated authorization.
 - **API Gateway Protection**: Protect API gateways using OAuth 2.0 scopes, JSON Web Tokens (JWT) for secure data transmission between services, and mutual TLS (mTLS) for service-to-service authentication.
 
-## 4. Robust Identity and Access Management
+### 4. Robust Identity and Access Management
 - **IAM Framework Implementation**: Use a [secure identity and access management](https://supertokens.com/) solution for managing access to services and web applications.
 - **MFA Integration**: Implement Multi-factor Authentication (MFA) at both the network and application levels.
 
-## 5. Protecting Physical and Digital Assets
+### 5. Protecting Physical and Digital Assets
 - **Physical Security Extension**: Extend Zero Trust principles to physical devices and endpoints with [Endpoint Detection and Response (EDR)](https://www.trellix.com/security-awareness/endpoint/what-is-endpoint-detection-and-response/) that is installed on endpoint devices such as laptops, desktops, and servers  Moreover, utilization of hardware security modules (HSMs).
 - **Verification and Authorization**: Ensure strict verification and authorization for physical and digital access, enhancing security for both corporate resources and application services.
 
@@ -102,7 +113,7 @@ The primary objective in this research paper, is to enhance security in accessin
 - **Gateways**: Include SSH servers, Web proxies, or 802.1x-enabled networks that control access to resources.
 - **Resources**: All applications, services, and infrastructure subject to access control, each associated with a minimum trust tier.
 
-## [BeyondCorp and the long tail of Zero Trust](https://www.usenix.org/publications/loginonline/beyondcorp-and-long-tail-zero-trust)
+### [BeyondCorp and the long tail of Zero Trust](https://www.usenix.org/publications/loginonline/beyondcorp-and-long-tail-zero-trust)
 The main focus of this paper is addressing the latter stages of Google's BeyondCorp migration, focusing on specific or challenging situations that required innovative solutions beyond their core HTTPS-based workflow.
 
 Initially, Google transitioned from a privileged, legacy network to a more secure MNP(Managed Non-Privileged) network. This involved reconfiguring workflows to function within the Zero Trust framework, particularly those relying solely on HTTPS traffic.
