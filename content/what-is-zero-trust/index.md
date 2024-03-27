@@ -17,7 +17,6 @@ author: "Mostafa Ibrahim"
 - [Zero Trust in Action](#zero-trust-in-action)
 - [Conclusion](#zero-trust-in-action)
 
-
 ## Introduction
 
 
