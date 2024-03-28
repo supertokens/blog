@@ -167,6 +167,7 @@ Using the [navigator.credentials.get()](https://developer.mozilla.org/en-US/docs
 
 Example:
 
+```
 async function signIn() {
   const identityCredential = await navigator.credentials.get({
     identity: {
@@ -182,7 +183,7 @@ async function signIn() {
     },
   });
 }
-
+```
 
 
 If the user identity is successfully validated by the Identity Provider, an `IdentityCredential` object is returned. This object contains a token that includes user identity information that has been signed with the Identity Provider’s digital certificate.
