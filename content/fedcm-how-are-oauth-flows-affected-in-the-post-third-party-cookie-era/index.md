@@ -2,7 +2,7 @@
 title: "FedCM and how OAuth Flows are affected in the Post-Third-Party Cookie Era"
 date: "2024-03-20"
 description: "Third Party Cookies have been synonymous with user tracking and privacy issues. In 2021 Google put forth a plan to retire third party cookies from chromium based browsers and put for the FedCM APIs. In this blog we will be discussing this change and what it means for traditional OAuth flows."
-cover: "todo.png"
+cover: "fedcm.png"
 category: "programming"
 author: "Joel Coutinho"
 ---
