@@ -1031,5 +1031,28 @@
         ],
         "title": "Phishing Attacks in 2024",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/phishing-attacks-in-2024\"},\"headline\":\"Phishing Attacks in 2024\",\"image\":\"https://supertokens.com/blog-meta-images/phishing-attacks-in-2024.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/fedcm-how-are-oauth-flows-affected-in-the-post-third-party-cookie-era",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
+            "<meta name=\"description\" content=\"Third Party Cookies have been synonymous with user tracking and privacy issues. In 2021 Google put forth a plan to retire third party cookies from chromium based browsers and put for the FedCM APIs. In this blog we will be discussing this change and what it means for traditional OAuth flows.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"fedcm, oauth, fedcm and OAuth, What is FedCM, third party cookies\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"FedCM and how OAuth Flows are affected in the Post-Third-Party Cookie Era\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/fedcm-how-are-oauth-flows-affected-in-the-post-third-party-cookie-era\" />",
+            "<meta property=\"og:description\" content=\"Third Party Cookies have been synonymous with user tracking and privacy issues. In 2021 Google put forth a plan to retire third party cookies from chromium based browsers and put for the FedCM APIs. In this blog we will be discussing this change and what it means for traditional OAuth flows.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/fedcm.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"FedCM and how OAuth Flows are affected in the Post-Third-Party Cookie Era\" />",
+            "<meta name=\"twitter:description\" content=\"Third Party Cookies have been synonymous with user tracking and privacy issues. In 2021 Google put forth a plan to retire third party cookies from chromium based browsers and put for the FedCM APIs. In this blog we will be discussing this change and what it means for traditional OAuth flows.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/phishing-attacks-in-2024\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/fedcm.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "FedCM and how OAuth Flows are affected in the Post-Third-Party Cookie Era",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/phishing-attacks-in-2024\"},\"headline\":\"FedCM and how OAuth Flows are affected in the Post-Third-Party Cookie Era\",\"image\":\"https://supertokens.com/blog-meta-images/fedcm.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
