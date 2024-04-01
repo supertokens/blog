@@ -7,17 +7,25 @@ category: "programming"
 author: "Joel Coutinho"
 ---
 
-### Introduction
+## Table of Content
+- [Introduction](#introduction)
+- [What are third-party cookies](#what-are-third-party-cookies)
+- [The Impact on the OAuth Protocol](#the-impact-on-the-oauth-protocol)
+- [Introducing FedCM](#introducing-fedcm)
+- [Supporting FedCM: How Identity Providers Can Adapt](#supporting-fedcm-how-identity-providers-can-adapt)
+- [Conclusion](#conclusion)
+
+## Introduction
 
 Federated identity has been a game changer in the authentication space. With increased security, smoother onboarding, and greater conversions it has been the most popular auth choice for applications. Although there are several methods to enable federated identity, the OAuth protocol has risen to be the most popular. In 2022, the Privacy Sandbox Team, created by Google to protect people's privacy online, issued an [announcement](https://blog.google/products/chrome/update-testing-privacy-sandbox-web/) stating the release and testing of new privacy-focused APIs with the eventual goal of retiring third-party cookies from Chrome by 2024. Why did they do this? How will cookies be accessed for different domains? How does this affect OAuth? In this blog, we explore these questions and more.
 
 
-### What are third-party cookies?
+## What are third-party cookies?
 
 A cookie is some information that a website can store on a user's computer. Websites use cookies for session management and personalization. Third-party cookies though are set by domains other than the domain the user is currently on. For example, when you are browsing a website and interacting with an embedded video or an advertisement the external domain will set some third-party cookies. The issue that arises is that services use third-party cookies to track user activity across websites to serve targeted ads based on their browsing and search history. This raises several privacy concerns and is the main impetus behind Google’s decision to retire third-party cookies.
 
 
-### The Impact on the OAuth Protocol
+## The Impact on the OAuth Protocol
 
 OAuth traditionally performs a full page redirect to the Identity Provider’s domain and accesses session cookies if they exist or allow the user to sign in. This flow is unaffected by the third-party cookie change. Some applications like google one-tap, however, want to achieve a more organic flow and allow the users to sign in without being redirected. They achieve this using an iframe and access third-party cookies to check if the user has a valid session.
 
