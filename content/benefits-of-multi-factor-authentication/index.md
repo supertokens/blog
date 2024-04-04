@@ -107,13 +107,27 @@ One downside of MFA is the friction it can add to the authentication experience.
 In short, the future of MFA is expected to be more integrated with a strong focus on context and biometrics.
 
 ## Getting Started with MFA in 2023
-[SuperTokens MFA](https://supertokens.com/docs/mfa/introduction) offering allows you to add email/SMS-based OTP or magic link as a second factor with TOTP support.
+[SuperTokens MFA](https://supertokens.com/docs/mfa/introduction) offering supports a number of auth factors like email/sms based OTP or TOTP as an auth factor.
 
-You can try out our [demo](https://supertokens.com/docs/mfa/introduction) that uses social login/email password as the first factor, and SMS OTP as the second factor. Here’s how:
+It also supports the following features:
 
-1. Clone the [GitHub demo](https://github.com/supertokens/supertokens-auth-react/tree/master/examples/with-thirdpartyemailpassword-2fa-passwordless) repository
-2. Install its dependencies
-3. Run the application using `npm run start`
+- Allow access to APIs only if multi factor auth has been completed.
+- Allow access to frontend routes only if multi factor auth has been completed.
+- Use pre-built UI or your own custom UI for the second auth factor.
+- Allow individual users to choose if they want to enable multi factor auth or not.
+- Step up authentication
+- Separate MFA config per tenant
+- SuperTokens MFA can also be customized to add the following features:
+  - Account recovery using backup codes
+  - Skipping MFA for trusted devices for a period of time.
+
+You can test out how SuperTokens MFA works with our demo application. Get started by running the following command:
+
+```
+npx create-supertokens-app@latest --recipe=multifactorauth
+```
+
+You can find the complete documentation for [SuperTokens MFA here](https://supertokens.com/docs/mfa/introduction).
 
 ## Conclusion
 Traditional authentication methods have become susceptible to cyber attacks. MFA acts as a roadblock, making it exponentially harder for an attacker to compromise an account. For this reason, many companies have made MFA a requirement. 
