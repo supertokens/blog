@@ -88,5 +88,23 @@ module.exports = [{
   ],
   bio:
     "San Francisco-based technical writer dedicated to empowering developers with quality documentation, educational resources, and innovative learning tools.",
+}, {
+  name: "Darko Bozhinovski",
+  jobTitle: "Dev Rel and Technical Writer",
+  image: "darko.png",
+  socials: [
+    {
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/darkobozhinovski/",
+    }, {
+      name: "twitter",
+      url: "https://twitter.com/d_bozhinovski",
+    }, {
+      name: "github",
+      url: "https://github.com/DBozhinovski"
+    }
+  ],
+  bio:
+    " Developer, writer, speaker, and Linux nerd. Have over 15 years of experience working in the industry",
 }
 ]

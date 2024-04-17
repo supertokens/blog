@@ -115,5 +115,8 @@
     },
     {
         "location": "https://supertokens.com/blog/phishing-attacks-in-2024"
+    },
+    {
+        "location": "https://supertokens.com/blog/openid-connect-vs-oauth2"
     }
 ]
