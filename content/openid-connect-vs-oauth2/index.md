@@ -1,6 +1,6 @@
 ---
 title: "OpenID Connect vs OAuth2: The Differences and How to Choose"
-date: "2024-04-3"
+date: "2024-04-03"
 description: "Authentication and Authorization are the cornerstone of most modern software, but, these concepts are often misunderstood. In this blog we  try to demystify those concepts and the accepted standards embodying them, that is OpenID Connect and OAuth 2"
 cover: "openid-connect-vs-oauth2.png"
 category: "programming"
