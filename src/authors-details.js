@@ -90,7 +90,7 @@ module.exports = [{
     "San Francisco-based technical writer dedicated to empowering developers with quality documentation, educational resources, and innovative learning tools.",
 }, {
   name: "Darko Bozhinovski",
-  jobTitle: "Dev Rel and Technical Writer",
+  jobTitle: " DevRel at SuperTokens",
   image: "darko.png",
   socials: [
     {
@@ -105,6 +105,6 @@ module.exports = [{
     }
   ],
   bio:
-    " Developer, writer, speaker, and Linux nerd. Have over 15 years of experience working in the industry",
+    "Developer, writer, speaker, and Linux nerd. Remembers IE6.",
 }
 ]
