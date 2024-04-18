@@ -1048,11 +1048,34 @@
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
             "<meta name=\"twitter:title\" content=\"FedCM and how OAuth Flows are affected in the Post-Third-Party Cookie Era\" />",
             "<meta name=\"twitter:description\" content=\"Third Party Cookies have been synonymous with user tracking and privacy issues. In 2021 Google put forth a plan to retire third party cookies from chromium based browsers and put for the FedCM APIs. In this blog we will be discussing this change and what it means for traditional OAuth flows.\" />",
-            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/phishing-attacks-in-2024\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/fedcm\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/fedcm.png\" /> ",
             "<!--OG Tags-->"
         ],
         "title": "FedCM and how OAuth Flows are affected in the Post-Third-Party Cookie Era",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/phishing-attacks-in-2024\"},\"headline\":\"FedCM and how OAuth Flows are affected in the Post-Third-Party Cookie Era\",\"image\":\"https://supertokens.com/blog-meta-images/fedcm.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/openid-connect-vs-oauth2",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Darko Bozhinovski\" /> ",
+            "<meta name=\"description\" content=\"Authentication and Authorization are the cornerstone of most modern software, but, these concepts are often misunderstood. In this blog we  try to demystify those concepts and the accepted standards embodying them, that is OpenID Connect and OAuth 2\" />",
+            "",
+            "<meta name=\"keywords\" content=\"openid connect vs oauth2, openid connect, oauth 2.0, json web token, user credentials\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"OpenID vs OAuth: Understanding API Security Protocols\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/openid-connect-vs-oauth2\" />",
+            "<meta property=\"og:description\" content=\"Authentication and Authorization are the cornerstone of most modern software, but, these concepts are often misunderstood. In this blog we  try to demystify those concepts and the accepted standards embodying them, that is OpenID Connect and OAuth 2\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/openid-connect-vs-oauth2.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"OpenID vs OAuth: Understanding API Security Protocols\" />",
+            "<meta name=\"twitter:description\" content=\"Authentication and Authorization are the cornerstone of most modern software, but, these concepts are often misunderstood. In this blog we  try to demystify those concepts and the accepted standards embodying them, that is OpenID Connect and OAuth 2\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/openid-connect-vs-oauth2\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/openid-connect-vs-oauth2.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "OpenID vs OAuth: Understanding API Security Protocols",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/openid-connect-vs-oauth2\"},\"headline\":\"OpenID vs OAuth: Understanding API Security Protocols\",\"image\":\"https://supertokens.com/blog-meta-images/openid-connect-vs-oauth2.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
