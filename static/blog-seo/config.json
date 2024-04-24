@@ -1077,5 +1077,27 @@
         ],
         "title": "OpenID vs OAuth: Understanding API Security Protocols",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/openid-connect-vs-oauth2\"},\"headline\":\"OpenID vs OAuth: Understanding API Security Protocols\",\"image\":\"https://supertokens.com/blog-meta-images/openid-connect-vs-oauth2.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/what-is-502-bad-gateway-error",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
+            "<meta name=\"description\" content=\"Discover the ins and outs of 502 Bad Gateway Errors. From understanding the causes to troubleshooting steps and preventive measures, navigate through server communication breakdowns seamlessly\" />",
+            "",
+            "<meta name=\"keywords\" content=\"502 error, bad gateway error, troubleshooting, preventing 502 errors\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Everything You Need to Know About 502 Bad Gateway Errors\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/what-is-502-bad-gateway-error\" />",
+            "<meta property=\"og:description\" content=\"Discover the ins and outs of 502 Bad Gateway Errors. From understanding the causes to troubleshooting steps and preventive measures, navigate through server communication breakdowns seamlessly\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-502-bad-gateway-error.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Discover the ins and outs of 502 Bad Gateway Errors. From understanding the causes to troubleshooting steps and preventive measures, navigate through server communication breakdowns seamlessly\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-is-502-bad-gateway-error\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-502-bad-gateway-error.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Everything You Need to Know About 502 Bad Gateway Errors",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-502-bad-gateway-error\"},\"headline\":\"Everything You Need to Know About 502 Bad Gateway Errors\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-502-bad-gateway-error.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
