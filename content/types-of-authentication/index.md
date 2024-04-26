@@ -1,6 +1,6 @@
 ---
 title: "Types Of Authentication: Your Network Security Options"
-description: "Although Password-based authentication is one of the mosts common authentication methods, they are the most at risk at being compromised during cyber attacks. In this blog we break down the types of authentication and how to choose the right type of authentication"
+description: "Although Password-based authentication is one of the most common authentication methods, they are the most at risk of being compromised during cyber attacks. In this blog we break down the types of authentication and how to choose the right type of authentication"
 date: "2024-04-12"
 cover: "types-of-authentication.png"
 category: "programming"
