@@ -124,5 +124,8 @@
     },
     {
         "location": "https://supertokens.com/blog/types-of-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/mfa-best-practices"
     }
 ]
