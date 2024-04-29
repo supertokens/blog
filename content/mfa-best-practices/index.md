@@ -1,7 +1,7 @@
 ---
 title: "2FA & MFA: Enhancing Security Without Compromising User Experience"
 description: "Traditional authentication methods like email-password auth are the most at risk of being compromised during cyber attacks. However, overly complex authentication methods can frustrate users and hinder product adoption. In this blog we breakdown the pros and cons of adopting 2fa and mfa auth strategies"
-date: "2024-04-12"
+date: "2024-04-18"
 cover: "mfa-best-practices.png"
 category: "programming"
 author: "Sarah Sanders"
