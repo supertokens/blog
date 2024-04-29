@@ -121,5 +121,8 @@
     },
     {
         "location": "https://supertokens.com/blog/openid-connect-vs-oauth2"
+    },
+    {
+        "location": "https://supertokens.com/blog/types-of-authentication"
     }
 ]
