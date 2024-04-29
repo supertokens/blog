@@ -1121,5 +1121,27 @@
         ],
         "title": "Types Of Authentication: Your Network Security Options",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/types-of-authentication\"},\"headline\":\"Types Of Authentication: Your Network Security Options\",\"image\":\"https://supertokens.com/blog-meta-images/types-of-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/mfa-best-practices",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Sarah Sanders\" /> ",
+            "<meta name=\"description\" content=\"Traditional authentication methods like email-password auth are the most at risk of being compromised during cyber attacks. However, overly complex authentication methods can frustrate users and hinder product adoption. In this blog we breakdown the pros and cons of adopting 2fa and mfa auth strategies\" />",
+            "",
+            "<meta name=\"keywords\" content=\"mfa best practices, multi factor authentication, hardware tokens, adaptive mfa\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"2FA & MFA: Enhancing Security Without Compromising User Experience\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/mfa-best-practices\" />",
+            "<meta property=\"og:description\" content=\"Traditional authentication methods like email-password auth are the most at risk of being compromised during cyber attacks. However, overly complex authentication methods can frustrate users and hinder product adoption. In this blog we breakdown the pros and cons of adopting 2fa and mfa auth strategies\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/mfa-best-practices.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Traditional authentication methods like email-password auth are the most at risk of being compromised during cyber attacks. However, overly complex authentication methods can frustrate users and hinder product adoption. In this blog we breakdown the pros and cons of adopting 2fa and mfa auth strategies\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/mfa-best-practices\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/mfa-best-practices.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "2FA & MFA: Enhancing Security Without Compromising User Experience",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/mfa-best-practices\"},\"headline\":\"2FA & MFA: Enhancing Security Without Compromising User Experience\",\"image\":\"https://supertokens.com/blog-meta-images/mfa-best-practices.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
