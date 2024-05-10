@@ -968,7 +968,7 @@
             "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
             "<meta name=\"description\" content=\"Federated identity with OAuth is one of the most popular methods of implementing authentication. It lowers sign-up friction and is more secure than other auth methods like email-password based authentication.\" />",
             "",
-            "<meta name=\"keywords\" content=\"what is zero trust, zero trust, zero trust architecture, zero trust security\" />",
+            "<meta name=\"keywords\" content=\"pkce, okce flow, oauth pkce flow, proof key for code exchange\" />",
             "<!--OG Tags-->",
             "<meta property=\"og:title\" content=\"Understanding Authorization code flow with PKCE\" />",
             "<meta property=\"og:type\" content=\"article\" />",
