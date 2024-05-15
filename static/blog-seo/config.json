@@ -1143,5 +1143,27 @@
         ],
         "title": "2FA & MFA: Enhancing Security Without Compromising User Experience",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/mfa-best-practices\"},\"headline\":\"2FA & MFA: Enhancing Security Without Compromising User Experience\",\"image\":\"https://supertokens.com/blog-meta-images/mfa-best-practices.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/what-is-cross-site-request-forgery",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Mostafa Ibrahim\" /> ",
+            "<meta name=\"description\" content=\"In this article we deep dive into the world of CSRF attacks, what they are and how to protect your application against them\" />",
+            "",
+            "<meta name=\"keywords\" content=\"what is csrf, cross site request forgery, csrf issues, csrf prevention\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What is CSRF (Cross Site Request Forgery)\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/what-is-cross-site-request-forgery\" />",
+            "<meta property=\"og:description\" content=\"In this article we deep dive into the world of CSRF attacks, what they are and how to protect your application against them\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-cross-site-request-forgery.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"In this article we deep dive into the world of CSRF attacks, what they are and how to protect your application against them\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-is-cross-site-request-forgery\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-cross-site-request-forgery.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "What is CSRF (Cross Site Request Forgery)",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-cross-site-request-forgery\"},\"headline\":\"What is CSRF (Cross Site Request Forgery)\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-cross-site-request-forgery.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]

@@ -127,5 +127,8 @@
     },
     {
         "location": "https://supertokens.com/blog/mfa-best-practices"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-cross-site-request-forgery"
     }
 ]
