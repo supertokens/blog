@@ -1165,5 +1165,27 @@
         ],
         "title": "What is CSRF (Cross Site Request Forgery)",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-cross-site-request-forgery\"},\"headline\":\"What is CSRF (Cross Site Request Forgery)\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-cross-site-request-forgery.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/what-is-tls",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Mostafa Ibrahim\" /> ",
+            "<meta name=\"description\" content=\"In this article we explore TLS, it's vulnerabilities, and how to secure web communications against cyber threats\" />",
+            "",
+            "<meta name=\"keywords\" content=\"what is tls, tls handshake failed, tls vs ssl, tls handshake failed\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Understanding Transport layer Security\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/what-is-tls\" />",
+            "<meta property=\"og:description\" content=\"In this article we explore TLS, it's vulnerabilities, and how to secure web communications against cyber threats\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-tls.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"IIn this article we explore TLS, it's vulnerabilities, and how to secure web communications against cyber threats\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-is-tls\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-tls.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Understanding Transport layer Security",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-tls\"},\"headline\":\"Understanding Transport layer Security\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-tls.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]

@@ -130,5 +130,8 @@
     },
     {
         "location": "https://supertokens.com/blog/what-is-cross-site-request-forgery"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-tls"
     }
 ]
