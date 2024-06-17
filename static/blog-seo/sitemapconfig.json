@@ -133,5 +133,8 @@
     },
     {
         "location": "https://supertokens.com/blog/what-is-tls"
+    },
+    {
+        "location": "https://supertokens.com/blog/token-based-authentication"
     }
 ]
