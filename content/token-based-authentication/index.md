@@ -13,7 +13,7 @@ author: "Darko Bozhinovski"
 - [How do Tokens work?](#how-do-tokens-work)
 - [Token-Based Authentication & UX](#token-based-authentication--ux)
 - [Is Token-Based Authentication Secure](#is-token-based-authentication-secure)
-- [How to implement Token-Based Authentication]
+- [How to implement Token-Based Authentication](#how-to-implement-token-based-authentication)
 - [Conclusion](#conclusion-embracing-an-easier-more-secure-authentication-method)
 
 ## Introduction
