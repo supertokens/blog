@@ -1,7 +1,7 @@
 ---
 title: "Balance Security & UX With Token Based Authentication"
 date: "2024-05-06"
-description: "By minimizing the risk of credential theft, token based authentication grants users access to resources without the need to re-authenticate."
+description: "By minimizing the risk of credential theft, token based authentication grants users access to resources without the need to re-authenticate. In this blog we explore the balance between security and UX with Token Based Authentication"
 cover: "token-based-authentication.png"
 category: "programming"
 author: "Darko Bozhinovski"

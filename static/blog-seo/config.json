@@ -1187,5 +1187,27 @@
         ],
         "title": "Understanding Transport layer Security",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-tls\"},\"headline\":\"Understanding Transport layer Security\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-tls.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/token-based-authentication",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Darko Bozhinovski\" /> ",
+            "<meta name=\"description\" content=\"By minimizing the risk of credential theft, token based authentication grants users access to resources without the need to re-authenticate. In this blog we explore the balance between security and UX with Token Based Authentication\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Understanding Token Based Authenticaion, JWT, access tokens, refresh tokens, JWE\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Balance Security & UX With Token Based Authentication\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/token-based-authentication\" />",
+            "<meta property=\"og:description\" content=\"By minimizing the risk of credential theft, token based authentication grants users access to resources without the need to re-authenticate. In this blog we explore the balance between security and UX with Token Based Authentication\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/token-based-authentication.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"By minimizing the risk of credential theft, token based authentication grants users access to resources without the need to re-authenticate. In this blog we explore the balance between security and UX with Token Based Authentication\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/token-based-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/token-based-authentication.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Balance Security & UX With Token Based Authentication",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/token-based-authentication\"},\"headline\":\"Balance Security & UX With Token Based Authentication\",\"image\":\"https://supertokens.com/blog-meta-images/token-based-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
