@@ -136,5 +136,8 @@
     },
     {
         "location": "https://supertokens.com/blog/token-based-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/two-factor-authentication-providers"
     }
 ]
