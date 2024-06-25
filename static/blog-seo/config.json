@@ -1231,5 +1231,27 @@
         ],
         "title": "Simplify User Access & Lift Conversions With Social Login",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/social-login\"},\"headline\":\"Simplify User Access & Lift Conversions With Social Login\",\"image\":\"https://supertokens.com/blog-meta-images/social-login.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/oauth",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
+            "<meta name=\"description\" content=\"Through this blog we hope to show you what OAuth is, explain how it works, and give you a sense of how OAuth can help your application\" />",
+            "",
+            "<meta name=\"keywords\" content=\"OAuth 2.0, OAuth, How OAuth works, OAuth 2.1\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What is OAuth and It's Importance in a Secure Web\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/oauth\" />",
+            "<meta property=\"og:description\" content=\"Through this blog we hope to show you what OAuth is, explain how it works, and give you a sense of how OAuth can help your application\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/oauthn.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Through this blog we hope to show you what OAuth is, explain how it works, and give you a sense of how OAuth can help your application\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/oauth\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/oauth.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "What is OAuth and It's Importance in a Secure Web",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/oauth\"},\"headline\":\"What is OAuth and It's Importance in a Secure Web\",\"image\":\"https://supertokens.com/blog-meta-images/oauth.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]

@@ -142,5 +142,8 @@
     },
     {
         "location": "https://supertokens.com/blog/social-login"
+    },
+    {
+        "location": "https://supertokens.com/blog/oauth"
     }
 ]
