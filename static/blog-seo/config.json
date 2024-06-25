@@ -1210,26 +1210,26 @@
         "title": "Balance Security & UX With Token Based Authentication",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/token-based-authentication\"},\"headline\":\"Balance Security & UX With Token Based Authentication\",\"image\":\"https://supertokens.com/blog-meta-images/token-based-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     },{
-        "path": "/blog/two-factor-authentication-providers",
+        "path": "/blog/social-login",
         "metaTags": [
             "<meta name=\"author\" content=\"Mostafa Ibrahim\" /> ",
-            "<meta name=\"description\" content=\"Passwords are not enough. Modern methods of attack have made passwords vulnerable to be stolen, this is where methods of enhancing security like 2FA and MFA come in\" />",
+            "<meta name=\"description\" content=\"Social login is an authentication method that allows users to log in using their existing login information from social network providers saving the user the effort of creating a new account for the app or website and remembering an extra password.\" />",
             "",
-            "<meta name=\"keywords\" content=\"2 factor authentication, multi-factor authentication, 2FA, MFA, Biometric\" />",
+            "<meta name=\"keywords\" content=\"Social login, OAuth, OIDC, User Authentication flow\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"2FA Authentication Providers\" />",
+            "<meta property=\"og:title\" content=\"Simplify User Access & Lift Conversions With Social Login\" />",
             "<meta property=\"og:type\" content=\"article\" />",
-            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/two-factor-authentication-providers\" />",
-            "<meta property=\"og:description\" content=\"Passwords are not enough. Modern methods of attack have made passwords vulnerable to be stolen, this is where methods of enhancing security like 2FA and MFA come in\" /\"/>",
-            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/two-factor-authentication-providers.png\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/social-login\" />",
+            "<meta property=\"og:description\" content=\"Social login is an authentication method that allows users to log in using their existing login information from social network providers saving the user the effort of creating a new account for the app or website and remembering an extra password.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/social-login.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Passwords are not enough. Modern methods of attack have made passwords vulnerable to be stolen, this is where methods of enhancing security like 2FA and MFA come in\" />",
-            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/two-factor-authentication-providers\" />",
-            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/two-factor-authentication-providers.png\" /> ",
+            "<meta name=\"twitter:title\" content=\"Social login is an authentication method that allows users to log in using their existing login information from social network providers saving the user the effort of creating a new account for the app or website and remembering an extra password.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/social-login\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/social-login.png\" /> ",
             "<!--OG Tags-->"
         ],
-        "title": "2FA Authentication Providers",
-        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/two-factor-authentication-providers\"},\"headline\":\"2FA Authentication Providers\",\"image\":\"https://supertokens.com/blog-meta-images/two-factor-authentication-providers.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+        "title": "Simplify User Access & Lift Conversions With Social Login",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/social-login\"},\"headline\":\"Simplify User Access & Lift Conversions With Social Login\",\"image\":\"https://supertokens.com/blog-meta-images/social-login.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
