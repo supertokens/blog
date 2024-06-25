@@ -1243,7 +1243,7 @@
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/oauth\" />",
             "<meta property=\"og:description\" content=\"Through this blog we hope to show you what OAuth is, explain how it works, and give you a sense of how OAuth can help your application\" /\"/>",
-            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/oauthn.png\" />",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/oauth.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
             "<meta name=\"twitter:title\" content=\"Through this blog we hope to show you what OAuth is, explain how it works, and give you a sense of how OAuth can help your application\" />",
