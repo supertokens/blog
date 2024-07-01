@@ -1,6 +1,6 @@
 ---
-title: "Passwordless for Product Managers"
-description: "A quick overview of different types of passwordless authentication methods to improve user retention"
+title: "How To Streamline Access With Passwordless Authentication"
+description: "A quick overview on how passwordless authentication can help streamline the login experience and increase user conversions"
 date: "2024-05-07"
 cover: "password_less_blog.png"
 category: "featured"
