@@ -1,78 +1,116 @@
 ---
 title: "Passwordless for Product Managers"
 description: "A quick overview of different types of passwordless authentication methods to improve user retention"
-date: "2022-07-26"
+date: "2024-05-07"
 cover: "password_less_blog.png"
 category: "featured"
-author: "Advait Ruia"
+author: "Nemi Shah"
 ---
-Passwordless Authentication is an authentication method that allows a user to log in to an app without using a password.
 
-## Disadvantages of Using Passwords
-- **Passwords can be stolen:** Shoulder surfing is the most common way to steal someone’s password. An example of that is looking over someone’s shoulder when they’re entering their password.  
-- **Passwords can be guessed:** While passwords are at a risk from brute force attacks and social engineering, simply guessing can work too — no wonder “123456” was the [most popular password of 2020!](https://nordpass.com/most-common-passwords-list/) 🤯
-- **Passwords are hard to remember:** Ideally, you should have different and unique passwords for each account. But this quickly becomes a problem when you have multiple accounts and too many combinations to remember. 
-- **Passwords are re-used:** A lot of people end up using the same passwords across various apps and website. So if one password is exposed, it’ll be fairly easy for a hacker to access multiple accounts of the user.
+## Introduction
 
-![Go Passwordless](./Go_Passwordless.gif)
+Passwordless authentication works the way it sounds; it lets users log into your app/website without having to configure and remember a password. Typically this involves a One Time Password (OTP) or a Magic Link being sent to the user which they can use to log in, the code/link can be sent to the user’s email or phone.
 
-## Different Types of Passwordless Authentication Methods
-### 1. Magic links
-When using passwordless authentication via magic links, the user is prompted to enter their email address to which an email will be sent instantly. This email contains a link they can click on to be instantly logged in to the system. Unlike passwords, the magic link is different for every time the user wants to login. 
+Traditional login methods involve using an email/username and a password, while this system works it results in poor user experience because user’s need to remember different passwords or end up using the same passwords everywhere which is a security risk. Because Passwordless login does not require the user to generate or remember passwords, your system is generally more secure because you are not exposed to common attacks such as passwords being leaked or data breaches resulting in passwords being stolen. Also building your system becomes easier and involves less steps because you can skip flows such as the forgot password flow or the reset password flow.
 
-One of the downsides to using magic links for authentication is that the email may land up in the user’s spam folder. Also, this feature requires that the user has access to their email. But what happens if the user cannot access their email for some reason? This problem can be solved with the next method that we are going to discuss.
+## Methods of Passwordless Authentication
 
-![Magic link authentication](./Magic_link.gif)
+### Magic Links
 
-### 2. One-time passwords / codes (OTP / OTC)
-In this method, the user  receives a password / code via email or SMS that they can use to log in to the website or mobile application. Unlike magic links, an OTP is easier to view on one device and type on the other device quickly. It solves the problem magic links have where the user needs to login to the email ID on the device where they want to authenticate. Which is why it is highly recommended to use OTP alongwith magic links. It improves the user experience and allows you to create a more secure system.
-> **Note:** The longer (in character length) the OTP, the higher the security of the system. Similarly, it is advisable to use diverse characters in the OTP (e.g. alphanumerics versus just numerics - X4A3Xi98B) to increase system security.
+Magic links are unique URLs sent to the user that expire after some time. Typically magic links are sent to the user’s email. The user can simply click on the link to log into your app. 
+This is a great way to authenticate your users, sending URLs over email is typically a very cheap option and users do not need to enter any code typically associated with OTP based logins.
 
-![Login with SMS / OTP](./OTP_SMS_login.gif)
+### One Time Passwords (OTP)
 
-### 3. Biometrics
-Instead of a password, biometric authentication uses unique physical traits to verify a user’s identity (like retina scanning). Biometric authentication is more secure than a password because no two people have the exact same fingerprints (even if you are an identical twin) or the exact faces (the chances of two faces being similar enough to bypass facial recognition is [extremely unlikely](https://www.sciencedirect.com/science/article/abs/pii/S0379073815003758), even in the case of identical twins).
+This involves sending a code, typically numbers, to the user’s email or phone number. This method is even more convenient for users on modern smartphones that allow autocompletion of OTPs without the user having to switch between apps.
 
-One of the downsides of using biometric authentication is that the user requires specialised hardware to be able to scan their face / fingerprint. If you are building a consumer facing app or website, you can’t expect all of your potential users to be able to use this login method.
+### Biometric Authentication
 
-### 4. Social login
-Using this method, users can choose to sign up or sign in via their social media accounts. It’s quick, super easy and is heavily used by developers — especially when building the MVP or version 1 of their mobile / web app.
+Biometric authentication usually involves a physical trait of the user which is used to identify them. Common examples of this are fingerprints, facial recognition, voice recognition etc. Biometric authentication can be a great way to ensure high security in your apps because they are hard to duplicate or steal.
 
-One of the downsides to using social login is that social media companies (like Facebook, Instagram) can track users across sites that they login to, and therefore some users may not prefer this method.
-> **Note:** Social login is mostly referred to as third-party login although it is a form of passwordless login. Most users today stay logged in to their social media accounts and therefore they hardly ever need to enter a password when using this type of login method.
+Typical passwordless mechanisms such as OTP or magic links come with a degree of unreliability. Emails can bounce or end up being flagged as spam, SMS based OTPs may get delayed or not get delivered at all and are subject to the network conditions of the user etc. Biometric login does not have these problems, and because the user needs to typically be present to authenticate themselves it is very secure.
 
-### 5. Push notifications
-Push Notification Authentication enables user authentication by sending a notification directly to a secure application on the user’s device, alerting them that an authentication attempt is taking place. Users can view authentication details and approve or deny access, typically via a simple press of a button. Like SMS, push notification also shares an OTP with the user and is a more secure authentication method (since attacks like SIM swapping are not possible). It is often deployed as part of a multi-factor authentication (MFA) solution.
+## Passwordless Authentication vs. 2FA & MFA
 
-The downside to using push notifications is that users sometimes opt-out of notifications for various apps and therefore wouldn’t realise that they’ve been sent the code / OTP via a push notification. There is also a high chance that push notifications get hidden or lost within the cluster of notifications received by users.
+When talking about authentication methods it is important to distinguish between Passwordless authentication and Two-Factor/Multi-Factor authentication. Passwordless authentication involves logging the user in without a password and Multi-Factor authentication involves verifying the user with multiple steps of authentication. Passwordless authentication is a very common step in Multi-Factor authentication but is not always involved in the process.
 
-### 6. Physical tokens
-Physical tokens are peripheral devices used to gain access to an electronically restricted device. The token is used in addition to or in place of a password. Examples include a wireless keycard opening a locked door, or in the case of a customer trying to access their bank account online, the use of a bank-provided token (like an encrypted USB) that authenticates the user’s identity. 
+While it is common to have multi-step authentication, passwordless authentication can be a good alternative. For example using SMS based OTPs you can log the user in and still get the security benefits of multiple factors. Passwordless authentication with either email or phone has the built-in implication of the user’s contact information being verified. That being said, multi-factor can be very beneficial because it allows users to have a way to recover their accounts if they lose access to their primary login methods.
 
-The downsides to using physical tokens is that they can be stolen or the user could lose them. Another downside is the additional costs associated with them and the fact that they may require some form of user training.
+## How to implement Passwordless authentication
 
-## Different Ways to Build Passwordless Authentication
-Here’s how you could approach implementing passwordless authentication: 
-1. **Pick your mode:** This is the first step in choosing your preferred authentication factor. You can refer to the list above and choose the type of authentication method that is right for your use case. 
-2. **Number of factors:** It’s recommended to use multiple authentication factors with or without passwordless. Reliance on one single factor, regardless of how safe it may seem, is not recommended.
-3. **Buy required hardware / software:** The user or the organisation may have to buy equipment to implement biometric-based passwordless authentication (like a fingerprint or retina scanner). For other modes, like magic links or mobile OTPs, one may have to use an email / sms sending service such as Twilio or MailChimp.
-4. **Provision users:** Start registering people on your authentication system. E.g., For a fingerprint scanning system, you will need to scan the fingers of all your users / employees.
-> **Note:** Combining Passwordless Authentication with Adaptive (Behavioural) Authentication can bring the optimum balance between user experience vs security. For example, suppose a user logs in to the system, via their laptop, early in the morning, every weekday. Over time, the system learns that this is their typical login behaviour. Then one day, all of a sudden, the user logs in to the system on a Saturday. They used the same laptop to login and it was still early in the morning, and their geographical location was also the same. The system calculates a relatively higher risk score for this behaviour, which warrants the use of a secondary authentication factor, like an SMS OTP.
+Building passwordless authentication involves the following steps:
 
-![Combining Passwordless Authentication with Adaptive (Behavioural) Authentication](./adaptive_auth.png)
+### Deciding what login method to use
 
-## Is the Future Passwordless?
-Even though passwords are far less prevalent than ever before, they are still being used all around the world. However, we at SuperTokens expect passwordless authentication to get more and more popular, especially as a second factor of authentication.
+Depending on your use case you need to choose what method should be used for passwordless login. Typically you need to choose between OTP or magic link based login.
 
-Records already indicate that passwordless authentication helps in solving [CX pain points](https://www.the-future-of-commerce.com/2022/05/10/passwordless-authentication-solve-cx-pain-points-boost-revenue/) and leads to a boost in revenue. Plus, keep in mind that the average person has to keep track of [about 100+ passwords](https://tech.co/password-managers/how-many-passwords-average-person#:~:text=According%20to%20new%20research%20from,has%20100%20passwords%20to%20remember!) and spends almost [12 minutes](https://resources.yubico.com/53ZDUYE6/at/q3tmql-974v8g-73e8p5/YubicoPonemon_2019_State_of_Password_and_Authentication_Security_Behaviors_Report.pdf?format=pdf) every week resetting those passwords.
+OTP login is one of the more common methods used in apps today. One of the main advantages is convenience to the user, however using SMS based OTPs may result in additional costs.
 
-Also, a frictionless UX can be a powerful competitive advantage for businesses at every level. Often, B2C companies are particularly concerned about the negative impact of login friction on conversion / retention rates and revenue. By enabling a frictionless customer experience, investment in passwordless supports **customer retention** and **revenue growth.**
+Magic Links are also a convenient way to implement passwordless login, but the main disadvantage here is that if the user begins the login process on their computer and then consumes the magic link from their phone (via email for example) they would not be logged into their account on the computer and would have to restart the flow again. OTPs on the other hand simply need to be entered on whatever device the user is already using. Similar to SMS based OTPs, using SMS based magic links usually involve additional costs.
 
-Plus, Apple, Google and Microsoft [have already committed](https://www.apple.com/in/newsroom/2022/05/apple-google-and-microsoft-commit-to-expanded-support-for-fido-standard/) to expand support for the FIDO standard to accelerate availability of passwordless sign-ins. This will definitely help boost adoption of passwordless login methods.
+### Building the login flow
 
-But how soon could we see this shift happening? Not very soon. A number of users make use of password managers to manage and store their passwords. There are password managers out there that’ll generate strong 12 letter passwords for the user and automatically fill them on the appropriate websites whenever you visit them. It’s important to recognise here that password managers also provide a great UX.
+#### Sending the user a Link/OTP
 
-So, to conclude, the idea of eliminating our reliance on centrally managed passwords definitely has multiple benefits. However, there is no single passwordless solution that would fit most businesses or use cases. Nevertheless, we’re witnessing an increase in [adoption of passwordless authentication methods](https://www.globenewswire.com/news-release/2022/06/09/2459721/0/en/The-Global-Passwordless-Authentication-Market-size-is-estimated-to-be-USD-12-79-billion-in-2021-and-is-predicted-to-reach-USD-53-64-billion-by-2030-with-a-CAGR-of-16-7-from-2022-20.html) because of the range of business benefits it offers, including an enhanced UX, fewer data breaches, lower support and development costs, and overall better product security.
+Prompt the user to enter their email/phone number. You can also opt in to allowing both email and phone numbers depending on whether you support both methods. Once the user submits their information you need to send them the code/link. For OTP flows you need to prompt the user to enter the information, for Magic Links you can explain to the user that they need to check their email/phone.
+
+Because Email and SMS based messaging is not 100% reliable and delivery may fail you also need to allow the user to be able to re-trigger the email/SMS. When implementing such a flow you should consider adding some minimum time between resend attempts to avoid excessive calls, this is especially useful when using SMS based delivery to avoid high costs.
+
+#### Consuming the Link/Code
+
+For OTP based login the flow is rather simple, you check if the code entered by the user is valid and log them in if it is. For invalid codes you can display some error to the user, you should also consider adding a lifetime for a generated OTP and display an appropriate message if the user tries to use an old OTP. As a security measure you can block login attempts for some duration if the user has entered an incorrect OTP too many times, in this case it is good practice to notify the user by email/SMS about this.
+
+When using Magic Links, the link sent to the user typically contains a unique identifier which can be used to validate if the Magic Link used by the user is valid. Similar to OTPs you should implement a timeout after which the Magic Link should be considered invalid. 
 
 
-[Demo](https://passwordless.demo.supertokens.com/) | [Source Code on GitHub](https://github.com/supertokens/supertokens-core) | Please leave a ⭐️ if you think we deserve it.
+#### Logging users into the application
+
+Once you have verified that the OTP/Link used by the user is valid, you should use your normal session management flow to log the user in.
+![frontend flow](./frontend-flow.png)
+
+### Using Passwordless authentication with SuperTokens
+
+While you can build your own login system with passwordless, it is easier to use a third party solution. For example with SuperTokens your entire process gets simplified to the following steps:
+
+- **Installation**: Install the SuperTokens SDKs on the frontend and backend
+- **Follow the quick setup guide**: The quick setup for Passwordless authentication involves copy pasting some basic code on the frontend and backend to quickly get setup.
+- **Get Started**: That’s it! You can now stop thinking about your login flow and focus on building your app.
+
+To learn more about using Passwordless authentication with SuperTokens refer to the [official documentation](https://supertokens.com/docs/passwordless/introduction).
+
+## Is Passwordless Authentication Secure?
+
+### Benefits of using Passwordless
+- **Improved Security**: Because the code/link is directly sent to the user, risks involved with traditional attacks such as phishing, brute force etc are reduced.
+- **Improved UX**: Users do not need to remember passwords or regularly reset them, and with SMS based OTP the process of logging in becomes much more convenient for users.
+- **Compliance**: Removing the need to manage passwords in a secure way can make meeting requirements for compliance easier.
+- **Email/phone verification**: Because the OTP/Link is sent to the user’s email or phone, when the user signs up you know that their contact information is authentic.
+- **Scalability**: Passwordless solutions are generally easy to scale across an organisation.
+- **Decreased Risk of Credential Reuse**: Passwordless systems prevent the common security issue of credential reuse across multiple platforms, which is a prevalent cause of data breaches.
+
+## Disadvantages of Passwordless authentication
+- **Dependence on the email or phone**: If the user loses access to their phone or email they lose access to the account. Stolen email or phone can also put the user’s information at risk.
+- **Biometric Data Concerns**: Biometric authentication systems raise privacy and security concerns because once biometric data is compromised, it cannot be changed like a password.
+- **Technology and Infrastructure Costs**: Implementing advanced passwordless systems like biometric scanners or sophisticated token-based hardware can involve significant initial costs
+
+Passwordless authentication is a great way to log your users in, and it is more secure than traditional login methods but it is important to remember that no system is ever full proof and adding additional security mechanisms such as MFA is recommended.
+
+## Using a Third Party vs Building it yourself
+
+Building passwordless authentication yourself can be quite a task involving a lot of work and may require hiring multiple developers. We have a full blog dedicated to explaining how you can build Passwordless authentication yourself, you can read it here.
+
+Apart from the work required to building the system you also have to:
+- Maintaining the systems
+- Staying up to date with latest security risks and concerns
+- Adapting to new security threats, updating with latest technologies and practices
+
+All of this can be a significant overhead to your regular development. On the other hand using a third party helps in the following ways:
+- Quick to get setup
+- You can focus on developing flows specific to your app
+- Third party solutions used by multiple companies has been battle tested
+- The responsibility of keeping up to date and responding to new threats is with the third party
+- The third party will have a specialised skill set resulting in better quality of the login system. And because their focus is on the login system, responding to new threats will be faster.
+
+## Conclusion
+
+Passwordless authentication is a great way to log your users into your app/website. It helps keep your system secure while adding to the end user experience.
