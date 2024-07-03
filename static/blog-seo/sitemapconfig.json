@@ -151,5 +151,8 @@
     },
     {
         "location": "https://supertokens.com/blog/oauth-grant-types"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-does-oauth-work"
     }
 ]

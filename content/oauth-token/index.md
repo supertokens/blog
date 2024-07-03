@@ -1,7 +1,7 @@
 ---
 title: "Understanding & Using OAuth Tokens For Easy & Secure Login "
 description: "Explore OAuth tokens in web security, their types, benefits, and best practices. Learn to implement and customize OAuth flows for optimal security and user experience."
-date: "2024-07-16"
+date: "2024-05-16"
 cover: "oauth-token.png"
 category: "featured"
 author: "Joel Coutinho"
