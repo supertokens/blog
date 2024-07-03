@@ -1253,5 +1253,71 @@
         ],
         "title": "What is OAuth and It's Importance in a Secure Web",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/oauth\"},\"headline\":\"What is OAuth and It's Importance in a Secure Web\",\"image\":\"https://supertokens.com/blog-meta-images/oauth.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/oauth-token",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
+            "<meta name=\"description\" content=\"Explore OAuth tokens in web security, their types, benefits, and best practices. Learn to implement and customize OAuth flows for optimal security and user experience.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"OAuth Tokens, OAuth access tokens, OAuth refresh tokens, OAuth flows\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Understanding & Using OAuth Tokens For Easy & Secure Login\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/oauth-token\" />",
+            "<meta property=\"og:description\" content=\"Explore OAuth tokens in web security, their types, benefits, and best practices. Learn to implement and customize OAuth flows for optimal security and user experience.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/oauth-token.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore OAuth tokens in web security, their types, benefits, and best practices. Learn to implement and customize OAuth flows for optimal security and user experience.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/oauth-token\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/oauth-token.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Choosing The Right OAuth Grant Types For Your User",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/oauth-token\"},\"headline\":\"Choosing The Right OAuth Grant Types For Your User\",\"image\":\"https://supertokens.com/blog-meta-images/oauth-token.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/oauth-grant-types",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
+            "<meta name=\"description\" content=\"Discover the ins and outs of OAuth grant types and learn how to implement secure, user-friendly authentication flows. This comprehensive guide covers the different OAuth grant types, their best use cases, and practical tips for customizing your authorization flow.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"OAuth grant types, OAuth code grant, client credential grant, implicit grant\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Choosing The Right OAuth Grant Types For Your User\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/oauth-grant-types\" />",
+            "<meta property=\"og:description\" content=\"Discover the ins and outs of OAuth grant types and learn how to implement secure, user-friendly authentication flows. This comprehensive guide covers the different OAuth grant types, their best use cases, and practical tips for customizing your authorization flow.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/oauth-grant-types.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Discover the ins and outs of OAuth grant types and learn how to implement secure, user-friendly authentication flows. This comprehensive guide covers the different OAuth grant types, their best use cases, and practical tips for customizing your authorization flow.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/oauth-grant-types\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/oauth-grant-types.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Choosing The Right OAuth Grant Types For Your User",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/oauth-grant-types\"},\"headline\":\"Choosing The Right OAuth Grant Types For Your User\",\"image\":\"https://supertokens.com/blog-meta-images/oauth-grant-types.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/how-does-oauth-work",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
+            "<meta name=\"description\" content=\"In this blog we do a detailed technical overview of OAuth, explaining its evolution, various flows, and practical applications. It includes diagrams and real-world examples to enhance understanding.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"OAuth grant types, OAuth code grant, client credential grant, implicit grant\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How the Heck Does OAuth Work?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/how-does-oauth-work\" />",
+            "<meta property=\"og:description\" content=\"In this blog we do a detailed technical overview of OAuth, explaining its evolution, various flows, and practical applications. It includes diagrams and real-world examples to enhance understanding.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/how-does-oauth-work.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"In this blog we do a detailed technical overview of OAuth, explaining its evolution, various flows, and practical applications. It includes diagrams and real-world examples to enhance understanding.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/how-does-oauth-work\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/how-does-oauth-work.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "How the Heck Does OAuth Work?",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/how-does-oauth-work\"},\"headline\":\"How the Heck Does OAuth Work?\",\"image\":\"https://supertokens.com/blog-meta-images/how-does-oauth-work.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
