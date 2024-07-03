@@ -2,7 +2,7 @@
 title: How the Heck Does OAuth Work?
 date: "2024-05-24"
 description: "In this blog we do a detailed technical overview of OAuth, explaining its evolution, various flows, and practical applications. It includes diagrams and real-world examples to enhance understanding."
-cover: "how-to-customise-supertokens-apis.png"
+cover: "how-does-oauth-work.png"
 category: "programming"
 author: "Joel Coutinho"
 ---
