@@ -145,5 +145,11 @@
     },
     {
         "location": "https://supertokens.com/blog/oauth"
+    },
+    {
+        "location": "https://supertokens.com/blog/oauth-token"
+    },
+    {
+        "location": "https://supertokens.com/blog/oauth-grant-types"
     }
 ]

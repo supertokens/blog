@@ -1,6 +1,6 @@
 ---
 title: "Choosing The Right OAuth Grant Types For Your User"
-description: "Explore OAuth tokens in web security, their types, benefits, and best practices. Learn to implement and customize OAuth flows for optimal security and user experience."
+description: "Discover the ins and outs of OAuth grant types and learn how to implement secure, user-friendly authentication flows. This comprehensive guide covers the different OAuth grant types, their best use cases, and practical tips for customizing your authorization flow."
 date: "2024-06-17"
 cover: "oauth-grant-types.png"
 category: "featured"

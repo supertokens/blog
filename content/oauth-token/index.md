@@ -7,8 +7,6 @@ category: "featured"
 author: "Joel Coutinho"
 ---
 
-## Understanding & Using OAuth Tokens For Easy & Secure Login 
-
 OAuth tokens play a crucial role in modern web security, enabling secure and scalable authorization and authentication. When combined with SuperTokens, the synergy can significantly enhance your application's security, scalability, and user experience. This blog will delve into OAuth tokens, comparing OAuth and OAuth 2.0, exploring their benefits and challenges, and providing insights into their best implementation practices.
 
 ### Table of Contents
