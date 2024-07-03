@@ -49,7 +49,7 @@ The Authorization Code Grant is the most common OAuth 2.0 flow. It is used by we
 3. **Access Token Request:** The client requests an access token from the authorization server using the authorization code.
 4. **Access Token Response:** The authorization server responds with an access token.
 
-![Authorization Code Grant Flow](https://supertokens.com/images/oauth-authorization-code-grant.png)
+![Authorization Code Grant Flow](../authorization-code-flow-with-pkce/oauth-authorization-code-flow.png)
 
 ### Implicit Grant
 
