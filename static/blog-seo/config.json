@@ -1363,5 +1363,27 @@
         ],
         "title": "Passkey Authentication: What Is It & How to Implement It",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/passkey-authentication\"},\"headline\":\"Passkey Authentication: What Is It & How to Implement It\",\"image\":\"https://supertokens.com/blog-meta-images/passkey-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/sso-authentication",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Mostafa Ibrahim\" /> ",
+            "<meta name=\"description\" content=\"Learn how Single Sign-On (SSO) authentication simplifies user access to multiple applications with a single login, enhancing both security and user experience. Explore the benefits, protocols, and key differences between SSO and 2FA to optimize your authentication strategy.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"SSO Authentication, Single Sign On, 2FA, MFA\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"When & How To Build SSO Authentication For User Access\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/sso-authentication\" />",
+            "<meta property=\"og:description\" content=\"Learn how Single Sign-On (SSO) authentication simplifies user access to multiple applications with a single login, enhancing both security and user experience. Explore the benefits, protocols, and key differences between SSO and 2FA to optimize your authentication strategy.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/sso-authentication.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"When & How To Build SSO Authentication For User Access/>",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/sso-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/sso-authentication.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "When & How To Build SSO Authentication For User Access",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/sso-authentication\"},\"headline\":\"When & How To Build SSO Authentication For User Access\",\"image\":\"https://supertokens.com/blog-meta-images/sso-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
