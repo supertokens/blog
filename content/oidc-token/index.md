@@ -91,7 +91,7 @@ SuperTokens.init({
 
 ```
 
-This example demonstrates how SuperTokens manages the authentication flow, including OIDC token issuance and management. For more detailed implementation guidance, refer to the SuperTokens documentation.
+SuperTokens automatically handles the issuance and management of OIDC tokens when the SDK is initialized. For more detailed implementation guidance, refer to the [SuperTokens documentation](https://supertokens.com/product).
 
 
 ## Conclusion
