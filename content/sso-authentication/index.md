@@ -2,7 +2,7 @@
 title: "When & How To Build SSO Authentication For User Access"
 description: "Learn how Single Sign-On (SSO) authentication simplifies user access to multiple applications with a single login, enhancing both security and user experience. Explore the benefits, protocols, and key differences between SSO and 2FA to optimize your authentication strategy."
 date: "2024-05-04"
-cover: "todo.png"
+cover: "sso-authentication.png"
 category: "programming"
 author: "Mostafa Ibrahim"
 ---
