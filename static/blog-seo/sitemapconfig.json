@@ -154,5 +154,8 @@
     },
     {
         "location": "https://supertokens.com/blog/how-does-oauth-work"
+    },
+    {
+        "location": "https://supertokens.com/blog/passkey-authentication"
     }
 ]

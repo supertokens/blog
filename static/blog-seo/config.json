@@ -1341,5 +1341,27 @@
         ],
         "title": "Leveraging OIDC Tokens for Enhanced Security and Seamless User Experience",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/oidc-token\"},\"headline\":\"Leveraging OIDC Tokens for Enhanced Security and Seamless User Experience\",\"image\":\"https://supertokens.com/blog-meta-images/oidc-token.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/passkey-authentication",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Sarah Sanders\" /> ",
+            "<meta name=\"description\" content=\"Passkey authentication is a secure, user-friendly alternative to traditional passwords. Learn how passkeys work, their benefits over passwordless methods, and best practices for implementation to enhance your application's security and user experience.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"passkey authentication, FIDO, Webauthn, 2FA, MFA\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Passkey Authentication: What Is It & How to Implement It\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/passkey-authentication\" />",
+            "<meta property=\"og:description\" content=\"Passkey authentication is a secure, user-friendly alternative to traditional passwords. Learn how passkeys work, their benefits over passwordless methods, and best practices for implementation to enhance your application's security and user experience.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/passkey-authentication.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Passkey Authentication: What Is It & How to Implement It/>",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/passkey-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/passkey-authentication.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Passkey Authentication: What Is It & How to Implement It",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/passkey-authentication\"},\"headline\":\"Passkey Authentication: What Is It & How to Implement It\",\"image\":\"https://supertokens.com/blog-meta-images/passkey-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
