@@ -1312,12 +1312,34 @@
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/how-does-oauth-work.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"In this blog we do a detailed technical overview of OAuth, explaining its evolution, various flows, and practical applications. It includes diagrams and real-world examples to enhance understanding.\" />",
+            "<meta name=\"twitter:title\" content=\"How the Heck Does OAuth Work?\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/how-does-oauth-work\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/how-does-oauth-work.png\" /> ",
             "<!--OG Tags-->"
         ],
         "title": "How the Heck Does OAuth Work?",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/how-does-oauth-work\"},\"headline\":\"How the Heck Does OAuth Work?\",\"image\":\"https://supertokens.com/blog-meta-images/how-does-oauth-work.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/oidc-token",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Darko Bozhinovski\" /> ",
+            "<meta name=\"description\" content=\"Discover how to leverage OpenID Connect (OIDC) tokens to enhance your application's security without compromising user experience.Learn how to balance robust security measures with seamless user interactions, and get practical tips for integrating OIDC tokens into your authentication flow.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"OIDC tokens, OIDC token types, OIDC token protocols, best practices\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Leveraging OIDC Tokens for Enhanced Security and Seamless User Experience\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/oidc-token\" />",
+            "<meta property=\"og:description\" content=\"Discover how to leverage OpenID Connect (OIDC) tokens to enhance your application's security without compromising user experience.Learn how to balance robust security measures with seamless user interactions, and get practical tips for integrating OIDC tokens into your authentication flow.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/oidc-token.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Leveraging OIDC Tokens for Enhanced Security and Seamless User Experience/>",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/oidc-token\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/oidc-token.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Leveraging OIDC Tokens for Enhanced Security and Seamless User Experience",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/oidc-token\"},\"headline\":\"Leveraging OIDC Tokens for Enhanced Security and Seamless User Experience\",\"image\":\"https://supertokens.com/blog-meta-images/oidc-token.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
