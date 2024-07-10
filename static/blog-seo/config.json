@@ -1385,5 +1385,27 @@
         ],
         "title": "When & How To Build SSO Authentication For User Access",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/sso-authentication\"},\"headline\":\"When & How To Build SSO Authentication For User Access\",\"image\":\"https://supertokens.com/blog-meta-images/sso-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/sso-provider",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Nemi Shah\" /> ",
+            "<meta name=\"description\" content=\"Discover the benefits and key features of Single Sign-On (SSO). Learn how SSO simplifies user experiences, enhances security, and meets enterprise needs. Explore popular SSO protocols like OAuth, SAML, and OpenID Connect, and compare top SSO providers\" />",
+            "",
+            "<meta name=\"keywords\" content=\"SSO Authentication, Single Sign On, OAuth, OIDC\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Best Single Sign-On Solutions for 2024\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/sso-provider\" />",
+            "<meta property=\"og:description\" content=\"Discover the benefits and key features of Single Sign-On (SSO). Learn how SSO simplifies user experiences, enhances security, and meets enterprise needs. Explore popular SSO protocols like OAuth, SAML, and OpenID Connect, and compare top SSO providers\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/sso-providers.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Best Single Sign-On Solutions for 2024/>",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/sso-provider\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/sso-providers.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Best Single Sign-On Solutions for 2024",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/sso-provider\"},\"headline\":\"Best Single Sign-On Solutions for 2024\",\"image\":\"https://supertokens.com/blog-meta-images/sso-providers.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
