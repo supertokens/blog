@@ -157,5 +157,8 @@
     },
     {
         "location": "https://supertokens.com/blog/sso-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/sso-provider"
     }
 ]
