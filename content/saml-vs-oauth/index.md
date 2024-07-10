@@ -147,7 +147,7 @@ OIDC operates by leveraging OAuth 2.0’s authorization flows and adding an iden
 - **Authentication**: OIDC provides an identity layer on top of OAuth 2.0, enabling user authentication in addition to authorization. OAuth 2.0 alone is primarily for authorization.
 - **User Information**: OIDC allows client applications to retrieve authenticated user information through identity tokens and the userinfo endpoint, which OAuth 2.0 does not provide natively.
 
-Read our blog, OIDC vs OAuth, for a more detailed explanation of the differences between the two protocols.
+Read our blog, [OIDC vs OAuth](https://supertokens.com/blog/oauth-vs-oidc), for a more detailed explanation of the differences between the two protocols.
 
 ### OIDC vs SAML
 
