@@ -24,7 +24,7 @@ Authentication as a Service (AaaS) providers have steadily risen to prominence i
 
 As the adoption of AaaS is becoming mainstream, businesses of all sizes recognize the value of outsourcing their authentication needs to a trusted third party.
 
-In the deep sea of AaaS providers, Amazon Cognito is a well-known and well-trusted identity and access management (CIAM) platform. Cognito provides both authentication and authorization features for web and mobile apps, but it comes with its set of limitations that we will cover in this article.
+In the deep sea of AaaS providers, Amazon Cognito is a well-known and well-trusted identity and access management (CIAM) platform. Cognito provides both [authentication and authorization](https://supertokens.com/blog/authentication-vs-authorization) features for web and mobile apps, but it comes with its set of limitations that we will cover in this article.
 
 ## Cognito Pros & Cons
 
@@ -50,13 +50,13 @@ Coming from a large name like Amazon, it would make sense that Cognito stands ou
 - **Learning Curve:** As with most AWS products, Cognito also has a steep learning curve, with many knobs and gears you’ll have to take some time to adapt to the not-so-common UI.
 - **Security Flaws:** Cognito can be easily misconfigured, which can be closely related to the learning curve and lacking documentation as mentioned above, exposing it to multiple attack vectors.
 
-As some Cognito’s customers point out “[it] feels like strange alien technology and it takes some time to understand why it exists and what needs it serves”.
+As some Cognito’s customers point out “it feels like strange alien technology and it takes some time to understand why it exists and what needs it serves”.
 
 ## Where Does Cognito Work Best? (& Who Should Look For Alternatives)
 
 If you’ve already based your product within the AWS ecosystem, Cognito might be a good choice due to its tight, deep-heart integration in the ecosystem.
 
-Cognito is also dirt cheap for small businesses or projects starting, with a generous tier of free 50k MAU included.
+Cognito is also affordable for small businesses or projects starting, with a generous tier of free 50k MAU included.
 
 ## 5 Cognito Alternatives For More Scalable User Access & Security Protocols
 
@@ -76,11 +76,11 @@ The cloud version includes 5,000 MAU for free and is priced at $0.02 per MAU aft
 
 SuperTokens offers paid add-ons like:
 
-- Multi-factor authentication (MFA)
+- [Multi-factor authentication (MFA)](https://supertokens.com/blog/mfa-best-practices)
 - Account linking
-- Multi-tenancy and such.
+- [Multi-tenancy](https://supertokens.com/blog/multi-tenancy-in-2024) and such.
 
-See detailed SuperTokens pricing.
+See detailed [SuperTokens pricing](https://supertokens.com/pricing).
 
 #### Setup time & Complexity
 
@@ -88,17 +88,17 @@ SuperTokens can be set up in a few minutes, with automatic setup using CLI.
 
 The self-hosted version can be deployed within 10 minutes.
 
-There are plenty of setup guides for different use cases with SuperTokens that you might find useful.
+There are plenty of [setup guides](https://supertokens.com/docs/guides\) for different use cases with SuperTokens that you might find useful.
 
 #### Open-source & Licensing 
 
-As mentioned above, SuperTokens is completely open-source with over 12k stars on GitHub and 25+ contributors at the time of writing.
+As mentioned above, SuperTokens is completely open-source with over 12k stars on [GitHub](https://github.com/supertokens/supertokens-core) and 25+ contributors at the time of writing.
 
 It’s licensed under Apache License 2.0. In short, Apache License 2.0 is a permissive open-source license that allows users to freely use, modify, and distribute software for any purpose, with the requirement that any modifications to the original code are documented. It also includes a patent grant, providing users with assurance against patent claims from contributors to the project.
 
 #### Data Migration Options
 
-SuperTokens supports user data migration, session migration, and MFA migration out of the box. See a detailed overview of SuperTokens migration support.
+SuperTokens supports user data migration, session migration, and MFA migration out of the box. See a [detailed overview](https://supertokens.com/docs/thirdparty/migration/about) of SuperTokens migration support.
 
 #### Hosting Options
 
@@ -106,13 +106,13 @@ Cloud & self-hosted.
 
 #### Size of the Company
 
-In the batch of summer 2020, SuperTokens got funding from Y Combinator and since then has managed to raise over $300M in investments.
+In the batch of summer 2020, SuperTokens got funding from [Y Combinator](https://www.ycombinator.com/companies/supertokens) and since then has managed to raise over $300M in investments.
 
-It is also one of the fastest growing open-source startups as covered by ROSS Annual 2022 Index.
+It is also one of the fastest growing open-source startups as covered by [ROSS Annual 2022 Index](https://runacap.com/ross-index/annual-2022/).
 
 #### Security Features
 
-SuperTokens is AICPA SOC 2 Type-II compliant, with extensive policy controls, with a 99.99% uptime covered by Instatus.
+SuperTokens is AICPA SOC 2 Type-II compliant, with [extensive policy controls](https://security.supertokens.com/), with a [99.99%](https://supertokens.instatus.com/) uptime covered by Instatus.
 
 Overall, SuperTokens pretty much outshines Cognito as being a completely open-source platform, while having enterprise-grade security features & protocols, and also being cheaper, not only on an on-per-MAU basis but also considering development time, it is much easier to integrate than Cognito.
 
