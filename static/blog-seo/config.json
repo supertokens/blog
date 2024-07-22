@@ -1429,5 +1429,27 @@
         ],
         "title": "Clerk Vs Supertokens: Custom Vs Ready-To-Use Access Protocol",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/supertokens-vs-clerk\"},\"headline\":\"Clerk Vs Supertokens: Custom Vs Ready-To-Use Access Protocol\",\"image\":\"https://supertokens.com/blog-meta-images/supertokens-vs-clerk.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/cognito-alternatives",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Dejan Lukic\" /> ",
+            "<meta name=\"description\" content=\"In this blog, we evaluate Amazon Cognito and compare it with five leading alternatives: SuperTokens, Clerk, Auth0, Stytch, and Frontegg. We'll cover pricing, setup complexity, data migration, and security features. Additionally, we discuss the benefits of open-source authentication and the choice between customized and out-of-the-box solutions. This guide helps you find the best user management solution for your needs.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Amazon Cognito alternatives, Cognito vs SuperTokens, Clerk vs Cognito, B2B authentication platforms\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Cognito Alternatives: Access Services That Pair With Any Set-Up\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/cognito-alternatives\" />",
+            "<meta property=\"og:description\" content=\"In this blog, we evaluate Amazon Cognito and compare it with five leading alternatives: SuperTokens, Clerk, Auth0, Stytch, and Frontegg. We'll cover pricing, setup complexity, data migration, and security features. Additionally, we discuss the benefits of open-source authentication and the choice between customized and out-of-the-box solutions. This guide helps you find the best user management solution for your needs.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/cognito-alternatives.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Cognito Alternatives: Access Services That Pair With Any Set-Up/>",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/cognito-alternatives\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/cognito-alternatives.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Cognito Alternatives: Access Services That Pair With Any Set-Up",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/cognito-alternatives\"},\"headline\":\"Cognito Alternatives: Access Services That Pair With Any Set-Up\",\"image\":\"https://supertokens.com/blog-meta-images/cognito-alternatives.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
