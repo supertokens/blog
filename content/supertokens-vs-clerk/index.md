@@ -1,5 +1,5 @@
 ---
-title: "Clerk Vs Supertokens: Custom Vs Ready-To-Use Access Protocol"
+title: "Clerk Vs SuperTokens: Custom Vs Ready-To-Use Access Protocol"
 date: "2024-06-01"
 description: "Explore the differences between SuperTokens and Clerk to determine the best user access management solution for your project. Understand their core functionalities, key differences, and pricing to make an informed decision."
 cover: "supertokens-vs-clerk.png"
@@ -10,9 +10,9 @@ author: "Darko Bozhinovski"
 
 ## Introduction
 
-Developers often face a dilemma regarding user access management: Should they invest time and resources in building a custom solution or opt for a ready-to-use tool? This decision impacts both the user experience and the development workflow (and, by extension, the developer experience).
+Developers are often faced with the age old dilemma of "build vs buy" and this is also true for user authentication and management: Should they invest time and resources in building and maintaining custom auth solutions or opt to use ready-to-use tools? This decision impacts both the user experience and the development workflow (and, by extension, the developer experience).
 
-This article will explore SuperTokens and Clerk. By studying their core functionalities, key differences, and pricing structures, we aim to help you make an informed decision that aligns with your project's unique needs.
+SuperTokens and Clerk are two popular authentication solutions. In this article we will look at core functionalities, key differences, and pricing structures and aim to help you make informed decisions that align with your project's unique needs.
 
 ## Clerk vs. SuperTokens: Two Different Paths To User Access Management
 
@@ -33,6 +33,8 @@ SuperTokens is an open-source authentication solution that prides itself on flex
 - User Management Dashboard: SuperTokens includes a user management dashboard, making it easier to manage users and their sessions.
 
 - Social Login Integration: Supports multiple social login providers out of the box.
+
+- MFA: Supports multiple factors like SMS, email and authenticator apps.
 
 - Open Source: All SDKs and the core service are open source, encouraging transparency and community contributions.
 
@@ -89,8 +91,6 @@ The choice between Clerk and SuperTokens often depends on your project's specifi
     - You prefer a managed service with minimal maintenance.
 
     - Your project benefits from integrated user management and pre-built UI components.
-
-    - You require built-in MFA and social login without extensive configuration.
 
 2. Choose SuperTokens If:
 
