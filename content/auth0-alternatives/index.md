@@ -104,8 +104,11 @@ Many alternatives, like Keycloak and FusionAuth, offer open-source versions with
 Okta offers diverse plans for both the Workforce Identity Cloud and the Customer Identity Cloud. Their pricing is flexible, catering to various organizational needs.
 
 | Okta Plans  | Essential | Professional |
+|-----------|----------|-----------|------------|
 | B2C |$35/mo      | $240/mo   |
+|-----------|----------|-----------|------------|
 | B2B | $150/mo      | $800/mo |
+|-----------|----------|-----------|------------|
 | Enterprise | Contact      | Contact |
 
 
@@ -137,30 +140,36 @@ However, it's important to note that open-source solutions also come with their 
 - **Lack of dedicated support:** While community support can be valuable, you may not have access to dedicated support resources like those offered by commercial vendors.
 
 ## Custom vs. Out-Of-The-Box Auth Providers
+ 
 Another important consideration is whether to go with a custom authentication solution or an out-of-the-box provider. Both approaches have their advantages and disadvantages:
 
 ### Custom solutions:
 
 **Pros:** Tailored to specific needs, full control over features.
+ 
 - Custom solutions can be tailored to meet your organization's exact requirements, ensuring a perfect fit for your specific use cases and workflows.
 - You have complete control over the features, security measures, and customization options, allowing for maximum flexibility.
 
 **Cons:** Higher development time, maintenance, and cost.
+
 - Building a custom authentication solution from scratch can be a time-consuming and resource-intensive process, requiring a dedicated development team and ongoing maintenance efforts.
 - The costs associated with development, testing, and maintenance can be significantly higher compared to out-of-the-box solutions, especially for small to medium-sized organizations.
 
-### Out-of-the-box providers:
+### Out-of-the-box providers
 
 **Pros:** Quick implementation, lower initial cost, regular updates.
+
 - Out-of-the-box authentication providers offer a faster and more straightforward implementation process, allowing you to quickly integrate authentication capabilities into your application.
 - The initial costs are typically lower compared to building a custom solution, making them more accessible for organizations with limited resources.
 - Most providers offer regular updates and security patches, ensuring that your authentication system remains up-to-date and secure.
 
 **Cons:** Less flexibility, potential for vendor lock-in.
+
 - While many out-of-the-box providers offer customization options, they may not always meet your specific requirements or integrate seamlessly with your existing systems.
 - There is a risk of vendor lock-in, where switching to a different authentication provider in the future can be a complex and costly process.
 
 ## Conclusion
+
 Choosing the right authentication solution is crucial for the security and success of your application. While Auth0 is a popular option, exploring alternatives that better align with your specific needs and priorities can be beneficial.
 
 In this article, we've covered a range of Auth0 alternatives, including SuperTokens, Okta, Firebase Authentication, AWS Cognito, FusionAuth, and Keycloak, each with its unique strengths and capabilities.
