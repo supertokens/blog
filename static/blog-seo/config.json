@@ -1473,5 +1473,27 @@
         ],
         "title": "Stytch Alternatives For More Flexible User Access",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/stytch-alternatives\"},\"headline\":\"Cognito Alternatives: Access Services That Pair With Any Set-Up\",\"image\":\"https://supertokens.com/blog-meta-images/stytch-alternatives.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/auth0-alternatives",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Mostafa Ibrahim\" /> ",
+            "<meta name=\"description\" content=\"This blog explores alternatives to Auth0, a leading IAM platform, highlighting options like SuperTokens, Okta, Firebase Authentication, AWS Cognito, FusionAuth, and Keycloak. It discusses key considerations such as pricing, customization, scalability, and integration, helping you choose the best authentication solution for your needs.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Auth0 alternatives, SuperTokens vs Auth0, Auth0 vs Okta, user access management\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Features, Pricing, & Flexibility: Comparing AuthO Alternatives\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/auth0-alternatives\" />",
+            "<meta property=\"og:description\" content=\"This blog explores alternatives to Auth0, a leading IAM platform, highlighting options like SuperTokens, Okta, Firebase Authentication, AWS Cognito, FusionAuth, and Keycloak. It discusses key considerations such as pricing, customization, scalability, and integration, helping you choose the best authentication solution for your needs.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/auth0-alternatives.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Features, Pricing, & Flexibility: Comparing AuthO Alternatives/>",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/auth0-alternatives\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/auth0-alternatives.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Features, Pricing, & Flexibility: Comparing AuthO Alternatives",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/auth0-alternatives\"},\"headline\":\"Cognito Alternatives: Access Services That Pair With Any Set-Up\",\"image\":\"https://supertokens.com/blog-meta-images/auth0-alternatives.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
