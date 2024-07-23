@@ -104,11 +104,9 @@ Many alternatives, like Keycloak and FusionAuth, offer open-source versions with
 Okta offers diverse plans for both the Workforce Identity Cloud and the Customer Identity Cloud. Their pricing is flexible, catering to various organizational needs.
 
 | Okta Plans  | Essential | Professional |
-|-----------|----------|-----------|------------|
+|-----------|----------|-----------|
 | B2C |$35/mo      | $240/mo   |
-|-----------|----------|-----------|------------|
 | B2B | $150/mo      | $800/mo |
-|-----------|----------|-----------|------------|
 | Enterprise | Contact      | Contact |
 
 
