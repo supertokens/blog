@@ -1451,5 +1451,27 @@
         ],
         "title": "Cognito Alternatives: Access Services That Pair With Any Set-Up",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/cognito-alternatives\"},\"headline\":\"Cognito Alternatives: Access Services That Pair With Any Set-Up\",\"image\":\"https://supertokens.com/blog-meta-images/cognito-alternatives.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/stytch-alternatives",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Mostafa Ibrahim\" /> ",
+            "<meta name=\"description\" content=\"This blog explores top Stytch alternatives for user access management, including SuperTokens, Auth0, and Firebase Authentication. We compare their features, flexibility, and pricing to help you choose the right solution. We also discuss open-source vs. proprietary systems and the benefits of building a custom security flow vs. using ready-made software.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Stytch alternatives, SuperTokens vs Stytch, Auth0 vs Stytch, user access management\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Stytch Alternatives For More Flexible User Access\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/stytch-alternatives\" />",
+            "<meta property=\"og:description\" content=\"This blog explores top Stytch alternatives for user access management, including SuperTokens, Auth0, and Firebase Authentication. We compare their features, flexibility, and pricing to help you choose the right solution. We also discuss open-source vs. proprietary systems and the benefits of building a custom security flow vs. using ready-made software.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/stytch-alternatives.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Stytch Alternatives For More Flexible User Access/>",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/stytch-alternatives\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/stytch-alternatives.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Stytch Alternatives For More Flexible User Access",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/stytch-alternatives\"},\"headline\":\"Cognito Alternatives: Access Services That Pair With Any Set-Up\",\"image\":\"https://supertokens.com/blog-meta-images/stytch-alternatives.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
