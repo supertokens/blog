@@ -169,5 +169,8 @@
     },
     {
         "location": "https://supertokens.com/blog/auth0-alternatives"
+    },
+    {
+        "location": "https://supertokens.com/blog/supertokens-vs-auth0"
     }
 ]
