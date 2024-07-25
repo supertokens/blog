@@ -1495,5 +1495,27 @@
         ],
         "title": "Features, Pricing, & Flexibility: Comparing AuthO Alternatives",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/auth0-alternatives\"},\"headline\":\"Cognito Alternatives: Access Services That Pair With Any Set-Up\",\"image\":\"https://supertokens.com/blog-meta-images/auth0-alternatives.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/supertokens-vs-keycloak",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Nemi Shah\" /> ",
+            "<meta name=\"description\" content=\"Explore a high level comparison between two popular open-source authentication solutions, SuperTokens and Keycloak. This blog covers their key differences in architecture, configuration, UI, customizability, enterprise readiness, and more. Learn the advantages and disadvantages of each to determine which solution best fits your application's needs.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"SuperTokens vs Keycloak, Open source authentication solutions, Authentication and authorization, Open source identity management\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Supertokens Vs Keycloak: Going Custom Vs. Off-The-Shelf\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/supertokens-vs-keycloak\" />",
+            "<meta property=\"og:description\" content=\"Explore a high level comparison between two popular open-source authentication solutions, SuperTokens and Keycloak. This blog covers their key differences in architecture, configuration, UI, customizability, enterprise readiness, and more. Learn the advantages and disadvantages of each to determine which solution best fits your application's needs.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/supertokens-vs-keycloak.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Supertokens Vs Keycloak: Going Custom Vs. Off-The-Shelf/>",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/supertokens-vs-keycloak\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/supertokens-vs-keycloak.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Supertokens Vs Keycloak: Going Custom Vs. Off-The-Shelf",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/supertokens-vs-keycloak\"},\"headline\":\"Supertokens Vs Keycloak: Going Custom Vs. Off-The-Shelf\",\"image\":\"https://supertokens.com/blog-meta-images/supertokens-vs-keycloak.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
