@@ -1,305 +1,231 @@
 ---
 title: "What is Password Hashing and why is it important"
-date: "2022-03-02"
+date: "2024-06-25"
 description: "A guide on password hashing and salting in different languages and why it's important to do so"
 cover: "password_hashing_and_salting.png"
 category: "programming"
 author: "Rishabh Poddar"
 ---
 
-Storing passwords can be a nuance due to the liability of them being compromised. To make matters worse, users tend to reuse passwords across services which makes storing them securely even more important.
+## Table of Contents
 
-The aim behind storing passwords securely is that even if the database containing them is compromised, the attacker can’t decipher any user’s actual password. This rules out storing passwords in [plain text](https://en.wikipedia.org/wiki/Plaintext). 
-
-Using encryption may seem to be a good choice since the attacker would not know the actual passwords (because they are encrypted). However, if the database is compromised, then the encryption keys would probably[^1] be compromised as well. Using these keys, the attacker would be able to decrypt the encrypted passwords - making this method of storage weak.
-
-This is where password hashing comes into play:
+- [What is Password Hashing?](#what-is-password-hashing)
+- [5 Reasons to Use Password Hashing](#5-reasons-to-use-password-hashing)
+- [Password Hashing vs. Encryption: What's the Difference?](#password-hashing-vs-encryption-whats-the-difference)
+- [How Does Password Hashing Work?](#how-does-password-hashing-work)
+- [Which Hash Function to Choose?](#which-hash-function-to-choose)
+- [Choosing the Right Hash Function](#choosing-the-right-hash-function)
+- [Footnotes](#footnotes)
 
 ## What is Password Hashing?
-Password hashing involves taking the plaintext password and passing it through a hashing function. Hashing is a one way function which generates a bit string of a fixed size. This is unlike encryption in which given the output and the encryption key, you can know the input. Lets take a look at hash functions in more detail
 
-## What are hash functions?
-They are functions that have these properties:
+Password hashing is a crucial aspect of password management in the digital world, particularly for developers managing user authentication systems. It involves transforming a plaintext password into a fixed-length string of characters using a hashing algorithm. This one-way function ensures that even if someone gains unauthorized access to the hashed password, they cannot easily revert it to the original password.
 
-1) **Preimage resistance**: Given the output of a hash function `Out`, it should be hard to find any input `In`, which when hashed, results in the same output (`hash(In) = Out`). For example, if I take a random SHA256 hash output (`string` data type) like `"401357cf18542b4117ca59800657b64cce2a36d8ad4c56b6102a1e0b03049e97"`, it should be very hard to know what the input to the hash function was that resulted in this output. Try googling your way into finding it!
+Common algorithms used for password hashing include the [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) algorithm, [Argon2](https://en.wikipedia.org/wiki/Argon2), and the [Secure Hash Algorithm 2 (SHA-2)](https://en.wikipedia.org/wiki/SHA-2) family, which includes SHA-256. These algorithms are designed to handle inputs of any length and produce a consistent hash. They are built to resist attacks by being computationally intensive, requiring significant computation time and resources to break.
 
-2) **Second preimage resistance**: If an input to a hash function is known, it should be hard to find another input that has the same hashed output.
+When a user creates an account and sets a password, the system applies a hashing algorithm to convert the plaintext password into a hash. This hash is stored in the database, not the plaintext password. When the user attempts to log in, the system hashes the entered password and compares it with the stored hash. If they match, the user is authenticated.
 
-3) **Collision resistance**: This says that it is hard to find any two inputs such that their hashed output is the same. This is slightly different from (2) since in (2), you are given one input, and in this case, you can cook up any input.
+A key characteristic of password hashing is that the same input will always produce the same output. This is vital for comparison purposes, ensuring that the correct password is matched every time. However, this also means that two identical passwords will produce the same hash, which could be exploited if not mitigated by techniques like salting passwords.
 
-4) **Predictability**: The hash function should always return the same output given the same input.
+### 5 Reasons to Use Password Hashing
 
-5) **Fixed Length Output**: The output of the hash function always has the same length (number of chars), regardless of the input’s length.
+- 1. **Enhanced Security**: Password hashing significantly enhances the security of stored passwords. Even if an attacker gains access to the hashed passwords, it is extremely difficult to reverse-engineer the original passwords, especially if strong, modern hashing algorithms like the bcrypt algorithm or Argon2 are used. Using a salted hash adds an additional layer of security, making it even harder for hackers to crack the passwords.
+- 2. **Regulatory Compliance**: Many industries have stringent data protection regulations that mandate the secure storage of user passwords. Password hashing helps organizations comply with these regulations, such as GDPR, HIPAA, and PCI DSS, by ensuring that user passwords are not stored in plaintext.
+- 3. **Protection Against Plaintext Storage**: Storing passwords in plaintext is a major security risk. If a database is compromised, hackers can immediately access all user passwords. Hashing ensures that passwords are stored in a secure, non-human-readable format, reducing the risk of data breaches.
+- 4. **Resistance to Brute Force and Rainbow Table Attacks**: Hashing algorithms are designed to be computationally intensive, making it difficult for hackers to use brute force methods to guess passwords. Additionally, hashing combined with salting protects against rainbow table attacks, where precomputed tables of hash values are used to crack passwords.
+- 5. **Building User Trust**: Implementing robust security measures like password hashing, is a crucial demonstrator of commitment to protecting user data. This builds trust with users, who are more likely to use services that prioritize their security and privacy.
 
-6) **Input sensitivity**: A small change in the input (even just one character), should have a large change in the output string. For example, the SHA256 hash of `"hello"` is `"2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"`. But the hash of `"hella"` is `"70de66401b1399d79b843521ee726dcec1e9a8cb5708ec1520f1f3bb4b1dd984"`. As you can see, the outputs are verify different.
+## Password Hashing vs. Encryption: What's the Difference?
+
+Understanding the difference between password hashing and encryption is essential for developers working on secure authentication systems. While both techniques are used to protect data, they serve different purposes and function in distinct ways.
+
+### Hashing
+
+- One-way Function: Password hashing is a one-way process, meaning once data is hashed, it cannot be reverted to its original form.
+- Fixed Output Length: Regardless of the input size, a hashing algorithm produces a fixed-length string. For instance, SHA-256 always generates a 256-bit message digest, ensuring uniformity in storage and comparison.
+- Primary Use Case: Hashing is primarily used for verifying data integrity and securely storing sensitive information like passwords. When a password is hashed and stored, subsequent password attempts are hashed and compared against the stored hash for verification.
+
+### Encryption
+
+- **Two-way Function**: Encryption involves converting plaintext data into ciphertext using an encryption key. The original data can be recovered by decrypting the ciphertext with the appropriate decryption key. This two-way functionality is crucial for protecting data that needs to be accessed and read later.
+- **Variable Output Length**: The length of the encrypted data (ciphertext) can vary based on the encryption algorithm and the length of the input data. This means encrypted data may not have a consistent size.
+- **Primary Use Case**: Encryption is used for protecting data in transit and at rest, ensuring that only authorized parties with the correct key can access the original information. Common use cases include secure communication channels (like HTTPS) and encrypted file storage.
+
+In summary, password hashing is used for secure, irreversible storage of data like passwords, while encryption is used for reversible protection of data that needs to be read or accessed later.
+
+## How Does Password Hashing Work?
+
+Password hashing is a multi-step process designed to transform plaintext passwords into secure, fixed-length hashes that are difficult to reverse-engineer. Here’s a detailed look at how this process works:
+
+1. **User Creates a Password**: When a user registers or updates their password, they provide a plaintext password. This password is the initial input for the hashing process.
+2. **Generating a Salt**: To enhance security, a unique salt (a random string of characters) is generated for each password. This random salt ensures that even identical passwords result in different hashes, preventing hackers from using precomputed tables (rainbow tables) to crack hashes.
+3. **Hashing the Password**: The plaintext password, combined with the salt, is passed through a hashing algorithm such as the bcrypt algorithm, Argon2, or SHA-256. These algorithms perform complex mathematical operations on the input data to produce a fixed-length hash. The computational intensity of these algorithms makes it challenging for hackers to use brute force methods to guess passwords.
+4. **Storing the Hash**: The resulting hash, along with the salt, is stored in the database. The salt is typically stored alongside the hash, as it is needed for password verification.
+5. **User Login and Password Verification**: When a user attempts to log in, they provide their plaintext password. The system retrieves the stored salt associated with the user’s hash and combines it with the entered password. This combination is then hashed using the same algorithm. If the resulting hash matches the stored hash, the user is authenticated. This process ensures that the correct password can be verified without ever needing to store or transmit it in plaintext.
+
+### Example
+
+![Password Hashing Procedure](./hashing-flow.png)
+
+Consider a user with the password "password123":
+1. A salt, say "s@1tValue!", is generated.
+2. The password "password123" is combined with the salt to form "password123s@1tValue!".
+3. This combined string is hashed using a secure algorithm, producing a hash like "5d41402abc4b2a76b9719d911017c592".
+4. Both the salt and the hash are stored in the database.
+5. During login, the system combines the entered password with the stored salt and hashes it. If the result matches the stored hash, the login is successful.
+
+By following these steps, developers can ensure that user passwords are stored securely and remain protected even if the database is compromised.
+
+#### What is Salting and Why Hashing Alone is Not Good Enough - Problems with Humans
+
+**Salting**: Salting is a technique used to enhance the security of password hashing. It involves adding a unique, random string of characters (salt) to each password before hashing it. This ensures that even identical passwords result in different hashes, preventing hackers from using precomputed tables (rainbow tables) to crack hashes.
+
+**Problems with Humans**: Humans are prone to using common passwords that are easily guessable. Without salting, identical passwords would produce identical hashes, making it easier for hackers to crack them using precomputed tables known as rainbow tables. Salting mitigates this risk by making each hash unique, even for identical passwords.
+
+#### Example
+
+Without salt:
+- Password: "12345"
+- Hash: "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5"
+With salt:
+- Password: "12345"
+- Salt: "ab$45"
+- Hash: "2bb12bb768eb669f0e4b9df29e22a00467eb513c275ccfff1013288facac7889.ab$45"
+
+## Which Hash Function to Choose?
+
+Choosing the right hash function is crucial for ensuring the security and performance of your application. Different hash functions offer varying levels of security, speed, and resistance to attacks. Here’s a detailed look at some popular hash functions and considerations for selecting the best one for your needs:
+
+### SHA-256
+
+- **Overview**: SHA-256 is part of the SHA-2 family of cryptographic hash functions, designed by the United States’ National Security Agency (NSA). It generates a 256-bit message digest and is widely used across many applications, including SSL/TLS certificates, digital signatures, and blockchain.
+- **Pros**:
+  - Security: SHA-256 is currently considered secure and has not been compromised.
+  - Performance: It is relatively fast, making it suitable for applications where speed is a priority.
+- **Cons**:
+  - Speed: Its speed can be a disadvantage for password hashing because faster hashes are easier to brute-force.
+  - Lack of Built-in Salt: SHA-256 does not include a built-in mechanism for salting, requiring developers to implement this separately.
+- **Use Cases**:
+  - Verifying data integrity
+  - SSL/TLS certificates
+  - Blockchain applications
+
+### bcrypt
+
+- Overview: bcrypt is a password hashing function designed specifically for securing passwords. It incorporates a salt to protect against rainbow table attacks and is intentionally slow to make brute-force attacks more difficult.
+- Pros:
+  - Security: bcrypt includes a salt and is designed to be computationally intensive.
+  - Adjustable Work Factor: The work factor (or cost factor) can be increased over time to maintain security as hardware improves.
+- Cons:
+  - Performance: While its slowness enhances security, it can be a drawback for systems requiring high-speed password verification, though in a modern stack this shouldn’t be an issue at all (~100ms for a hash verification could be slow for let’s say a close-to-real-time API).
+- Use Cases:
+  - Password hashing
+  - User authentication systems
+
+### PBKDF2
+- **Overview**: PBKDF2 (Password-Based Key Derivation Function 2) is a key derivation function that applies a pseudorandom function (e.g., HMAC) to the input password along with a salt value and repeats the process many times.
+- **Pros**:
+  - **Security**: PBKDF2 is well-established and widely used.
+  - **Configurability**: The iteration count can be increased to improve security.
+- **Cons**:
+  - **Performance**: Higher iteration counts can significantly impact performance.
+  - **Complexity**: Properly configuring PBKDF2 for optimal security and performance can be challenging.
+- **Use Cases**:
+  - Password hashing
+  - Key derivation for cryptographic keys
+
+## Choosing the Right Hash Function
+
+**Security Considerations**
+
+- **Algorithm Strength**: Choose an algorithm with no known vulnerabilities. bcrypt and Argon2 are specifically designed for password hashing and offer strong security features.
+- **Resistance to Attacks**: Ensure the hash function is resistant to known attacks, including brute-force, rainbow table, and side-channel attacks.
+
+P**erformance Considerations**
+- Computational Cost: The hash function should be computationally expensive to thwart brute-force attacks but not so slow that it impacts user experience.
+- Scalability: Consider the impact on system performance, especially if your application needs to handle a large number of authentication requests.
+
+**Future-Proofing**
+
+- **Adjustable Parameters**: Opt for algorithms like bcrypt and Argon2, which allow you to adjust parameters (such as the work factor or memory usage) to maintain security as hardware capabilities improve.
+- **Community and Industry Adoption**: Use widely adopted algorithms with strong community support and regular updates. Argon2, as the latest and most secure, is highly recommended for new applications.
 
 
-Due to this one-way property, storing a hashed value of a password is a good idea since if their hash is compromised (via a database leak), the attacker would not know the original password (which is the input to the hash function). In fact, the only “entity” which would know the input to the hash function would be the end user who generated the password in the first place. This is exactly what we want from a security point of view.
+**Recommended Configurations**
+- **Argon2id**
+  - **Memory**: At least 15 MiB
+  - **Time**: An iteration count of 2
+  - **Parallelism**: 1 degree of parallelism
+- **bcrypt**
+  - **Cost Factor**: At least 12 (can be adjusted based on system performance and security requirements)
+- **PBKDF2**
+  - **Iterations**: At least 100,000 (can be increased for higher security)
 
-> Due to property number (5), there are an infinite number of inputs that can yield the same hash output. But it’s also very difficult to find any one of those infinite numbers of inputs given a specific output! 
+Example Codes
 
-## What is salting and why hashing alone is not good enough - Problems with humans
-Many people tend to use [common passwords](https://nordpass.com/most-common-passwords-list/) like "password", "12345" etc. Since the hash of the same input never changes (see property (4) above), we can precompute the hash of common passwords and then check the leaked database data against those precomputed hashes. 
+**Node.js**
 
-For example, the SHA256 hash of `"12345"` is `"5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5"`. If this hash is seen in a database, we know that the user’s password is `"12345"`[^2]. In fact, there is an entire database of precomputed hashes which can be checked against. These are called [rainbow tables](https://www.geeksforgeeks.org/understanding-rainbow-table-attack/).
-
-The way to solve this problem is to add some random string, known as “salt”, to a password before hashing it (during the sign up process), and then we append that random string to the computed hash before storing it in the database. Let’s take an example:
-
-- Alice’s password: `"12345"`
-- Bob’s password: `"12345"`
-- Alice’s random string (salt): `"ab$45"`
-- Bob’s random string (salt): `"ih&g3"`
-- Alice’s modified password: `"12345ab$45"`
-- Bob’s modified password: `"12345ih&g3"`
-- Alice’s SHA256 hash: `"2bb12bb768eb669f0e4b9df29e22a00467eb513c275ccfff1013288facac7889"`
-- Bob’s SHA256 hash: `"b63400702c6f012aeaa57b5dc7eefaaaf3207cc6b68917911c410015ac0659b2"`
-
-As you can see, their computed hashes are completely different, even though their passwords are the same. Most importantly, **these hashes won’t be in any rainbow table** since they are generated from fairly random strings (`"12345ab$45"` and `"12345ih&g3"`).
-
-Before we store these hashes in the database, we must append the salt to them:
-- Alice’s hash + salt: `"2bb12bb768eb669f0e4b9df29e22a00467eb513c275ccfff1013288facac7889.ab$45"`
-- Bob’s hash + salt: `"b63400702c6f012aeaa57b5dc7eefaaaf3207cc6b68917911c410015ac0659b2.ih&g3"`
-
-The reason we append the salt to the hash is so that during the verification process, we have to use the same salt as we did originally. So we must store this somewhere. Even if the salt is compromised, it’s not a security issue since the attacker would still need to know / guess the user’s password to be able to generate the same hash.
-
-Let’s have a look at how the verification process happens:
-
-- Alice’s password: `"abcdef"` (Incorrect password)
-- Alice’s salt: `"ab$45"` (fetched from the db)
-- Alice’s modified password: `"abcdefab$45"`
-- Alice’s SHA256 hash: `"c5110931a3ae4762c1c0334d8eeba8c9c555962cf7d2750fdd732936319a058c"`
-- Alice’s hash + salt: `"c5110931a3ae4762c1c0334d8eeba8c9c555962cf7d2750fdd732936319a058c.ab$45"`
-
-Since the computed hash + salt doesn’t match the one in the database, we reject this password. If Alice was to enter her correct password (`"12345"`), it would indeed generate the same hash + salt as the one in the database, verifying her identity.
-
-
-## Which hash function to choose?
-Even after salting, the issue of brute force attacks still remain. An attacker could repeatedly guess different passwords (very quickly) to see which one matches the leaked hash. There are two dimensions that determine how quickly an attacker can find a match:
-1) The randomness and length of the user’s password.
-2) The time it takes for the hash function to compute the hash
-
-If a user uses a random and long enough password, the chances of the attacker guessing that exact string reduces. This means they have to crunch through more guesses which will take more time. [Here is a really cool tool](https://www.passwordmonster.com/) which estimates how much time it would take to guess a given password.
-
-The slower and more computationally expensive the hashing function, the more time it would take to validate each guess. As of this writing (2nd March, 2022), the recommended hashing technique is to use [Argon2id](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#argon2id) with a minimum configuration of 15 MiB of memory, an iteration count of 2, and 1 degree of parallelism[^3]. 
-
-As computational power increases, recommended hashing techniques change as well. Even if the algorithm remains the same, the recommended number of “rounds”  / amount of “work” that should be done per password hash may increase.
-
-## Example code
-
-### NodeJS
-```js
-import * as argon2 from "argon2";
-import * as crypto from "crypto";
- 
-const hashingConfig = { // based on OWASP cheat sheet recommendations (as of March, 2022)
+```typescript
+const hashingConfig = {
     parallelism: 1,
-    memoryCost: 64000, // 64 mb
-    timeCost: 3 // number of itetations
+    memoryCost: 64000, // 64 MB
+    timeCost: 3 // number of iterations
 }
- 
-async function hashPassword(password: string) {
+
+async function hashPassword(password) {
     let salt = crypto.randomBytes(16);
     return await argon2.hash(password, {
         ...hashingConfig,
         salt,
-    })
+    });
 }
- 
-async function verifyPasswordWithHash(password: string, hash: string) {
-    return await argon2.verify(hash, password, hashingConfig);
+
+async function verifyPassword(password, hash) {
+    return await argon2.verify(hash, password);
 }
- 
-hashPassword("somePassword").then(async (hash) => {
-    console.log("Hash + salt of the password:", hash)
-    console.log("Password verification success:", await verifyPasswordWithHash("somePassword", hash));
+
+hashPassword("examplePassword").then(async (hash) => {
+    console.log("Hash + salt of the password:", hash);
+    console.log("Password verification success:", await verifyPassword("examplePassword", hash));
 });
 ```
 
-The above produces the following output:
-```bash
-Hash + salt of the password: $argon2i$v=19$m=15000,t=3,p=1$tgSmiYOCjQ0im5U6NXEvPg$xKC4V31JqIK2XO91fnMCfevATq1rVDjIRX0cf/dnbKY
- 
-Password verification success: true
-```
-
-> If you run the above program, it will produce a different hash each time since the salt is regenerated each time.
-
-### GoLang
-```go
-package main
- 
-import (
-    "crypto/rand"
-    "crypto/subtle"
-    "encoding/base64"
-    "errors"
-    "fmt"
-    "log"
-    "strings"
-
-    "golang.org/x/crypto/argon2"
-)
- 
-type params struct {
-    memory      uint32
-    iterations  uint32
-    parallelism uint8
-    saltLength  uint32
-    keyLength   uint32
-}
- 
-func main() {
-    p := &params{
-        memory:      64 * 1024, // 64 MB
-        iterations:  3,
-        parallelism: 1,
-        saltLength:  16,
-        keyLength:   32,
-    }
-
-    encodedHash, err := generateHashFromPassword("somePassword", p)
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    fmt.Println("Hash + salt of the password:")
-    fmt.Println(encodedHash)
-
-    match, err := verifyPassword("somePassword", encodedHash)
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    fmt.Printf("\nPassword verification success: %v\n", match)
-}
- 
-func generateHashFromPassword(password string, p *params) (encodedHash string, err error) {
-    salt, err := generateRandomBytes(p.saltLength)
-    if err != nil {
-        return "", err
-    }
-
-    hash := argon2.IDKey([]byte(password), salt, p.iterations, p.memory, p.parallelism, p.keyLength)
-
-    // Base64 encode the salt and hashed password.
-    b64Salt := base64.RawStdEncoding.EncodeToString(salt)
-    b64Hash := base64.RawStdEncoding.EncodeToString(hash)
-
-    // Return a string using the standard encoded hash representation.
-    encodedHash = fmt.Sprintf("$argon2id$v=%d$m=%d,t=%d,p=%d$%s$%s", argon2.Version, p.memory, p.iterations, p.parallelism, b64Salt, b64Hash)
-
-    return encodedHash, nil
-}
- 
-func generateRandomBytes(n uint32) ([]byte, error) {
-    b := make([]byte, n)
-    _, err := rand.Read(b)
-    if err != nil {
-        return nil, err
-    }
-
-    return b, nil
-}
- 
-func verifyPassword(password, encodedHash string) (match bool, err error) {
-    // Extract the parameters, salt and derived key from the encoded password
-    // hash.
-    p, salt, hash, err := decodeHash(encodedHash)
-    if err != nil {
-        return false, err
-    }
-
-    // Derive the key from the other password using the same parameters.
-    otherHash := argon2.IDKey([]byte(password), salt, p.iterations, p.memory, p.parallelism, p.keyLength)
-
-    // Check that the contents of the hashed passwords are identical. Note
-    // that we are using the subtle.ConstantTimeCompare() function for this
-    // to help prevent timing attacks.
-    if subtle.ConstantTimeCompare(hash, otherHash) == 1 {
-        return true, nil
-    }
-    return false, nil
-}
- 
-func decodeHash(encodedHash string) (p *params, salt, hash []byte, err error) {
-    vals := strings.Split(encodedHash, "$")
-    if len(vals) != 6 {
-        return nil, nil, nil, errors.New("the encoded hash is not in the correct format")
-    }
-
-    var version int
-    _, err = fmt.Sscanf(vals[2], "v=%d", &version)
-    if err != nil {
-        return nil, nil, nil, err
-    }
-    if version != argon2.Version {
-        return nil, nil, nil, errors.New("incompatible version of argon2")
-    }
-
-    p = &params{}
-    _, err = fmt.Sscanf(vals[3], "m=%d,t=%d,p=%d", &p.memory, &p.iterations, &p.parallelism)
-    if err != nil {
-        return nil, nil, nil, err
-    }
-
-    salt, err = base64.RawStdEncoding.Strict().DecodeString(vals[4])
-    if err != nil {
-        return nil, nil, nil, err
-    }
-    p.saltLength = uint32(len(salt))
-
-    hash, err = base64.RawStdEncoding.Strict().DecodeString(vals[5])
-    if err != nil {
-        return nil, nil, nil, err
-    }
-    p.keyLength = uint32(len(hash))
-
-    return p, salt, hash, nil
-}
-```
-
-### Python
 ```python
 import argon2
 
 argon2Hasher = argon2.PasswordHasher(
-    time_cost=3, # number of iterations
-    memory_cost=64 * 1024, # 64mb
-    parallelism=1, # how many parallel threads to use
-    hash_len=32, # the size of the derived key
-    salt_len=16 # the size of the random generated salt in bytes
+    time_cost=3, 
+    memory_cost=64 * 1024, 
+    parallelism=1, 
+    hash_len=32, 
+    salt_len=16 
 )
 
-
-password = "somePassword"
- 
+password = "examplePassword"
 hash = argon2Hasher.hash(password)
- 
+
 print("Hash + salt of password", hash)
- 
-verifyValid = argon2Hasher.verify(hash, password)
-print("Password verification success:", verifyValid)
+
+verify_valid = argon2Hasher.verify(hash, password)
+print("Password verification success:", verify_valid)
 ```
 
 
-### Java
 ```java
 import de.mkammerer.argon2.Argon2;
 import de.mkammerer.argon2.Argon2Factory;
- 
+
 public class PasswordHashing {
     public static void main(String[] args) {
-        // salt 32 bytes
-        // Hash length 64 bytes
         Argon2 argon2 = Argon2Factory.create(
                 Argon2Factory.Argon2Types.ARGON2id,
                 16,
                 32);
 
-        char[] password = "somePassword".toCharArray();
-        String hash = argon2.hash(3, // Number of iterations
-                64 * 1024, // 64mb
-                1, // how many parallel threads to use
+        char[] password = "examplePassword".toCharArray();
+        String hash = argon2.hash(3, 
+                64 * 1024, 
+                1, 
                 password);
         System.out.println("Hash + salt of the password: "+hash);
         System.out.println("Password verification success: "+ argon2.verify(hash, password));
@@ -307,9 +233,9 @@ public class PasswordHashing {
 }
 ```
 
+## Footnotes
 
-[^1]: Unless they are stored in a "secure vault" like this one. But then too, it’s still possible that they get leaked.
-
-[^2]: Technically, the users password could be anything that, when hashed, results in `"5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5"`. But if we try and login with the password as `"12345"`, it would work since the algorithm is just matching the computed hash against the one in the database.
-
-[^3]: https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
+- Secure vaults can help protect encryption keys, but there is always a risk of compromise.
+- The same password can produce the same hash, making it vulnerable to attacks without proper salting.
+- Hashing, salting, and usually anything related to complex cryptography isn’t something you should make yourself. To ensure maximum security, please use battle-tested, and scientifically proven methods, like algorithms mentioned above.
+- Refer to the OWASP Password Storage Cheat Sheet for the latest recommendations.
