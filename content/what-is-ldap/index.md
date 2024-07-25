@@ -78,13 +78,28 @@ Single Sign on is an authentication method where a user signs in at one location
 
 You can Implement LDAP by using it as an Identity Provider to a platform like Supertokens. [Supertokens is an authentication and authorization platform](https://supertokens.com/product) that you can use to manage logins in your application. We’ll walk through an example of setting up Microsoft Entra ID as an Identity Provider.
 
-### Create a Tenant in Microsoft Entra ID
+#### Create a Tenant in Microsoft Entra ID
 
 In order to set up Oauth in Microsoft Entra ID, you first have to make a tenant in your Microsoft Entra account. Head to the [overview page of your Microsoft Entra account](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/TenantOverview.ReactView) and click “Manage tenants” at the top. Add a new tenant and save the <TENANT_ID>, we’ll need it later to make our Oauth calls.
 
 ![microsoft tennats](./microsoft-tennat.png)
 
+Create an app in Microsoft Entra
+
+Head to the Microsoft Entra homepage. On the left sidebar, click Applications -> App Registration -> Create a New Registration. When it asks for a Redirect URI, use `web` for the platform and the following for your URI:
+
+`http://localhost:3001/auth/callback/entra`
+
+It will redirect you to a new page containing your Client ID (also referred to as an Application ID). If you aren’t redirected to this page, then you can click security -> permissions -> app registration -> overview in the new left hand tab.
+
+![tennat setup 2](./tennant-setup-2.png)
+
+Save your Client ID and click “Certificates and Secrets” on the left side of the screen. Create a new Client Secret. Copy the Client Secret Value - and not the Client Secret ID - for use later in the application.
+
+![tennant setup 3](./tennant-setup-3.png)
+
 ### Generate a Supertokens Project
+
 
 Run `npx create-supertokens-app@latest --recipe=thirdparty` to make a new Supertokens project.
 
