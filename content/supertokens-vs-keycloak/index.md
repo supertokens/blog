@@ -23,7 +23,7 @@ For an in-depth comparison, refer to the [SuperTokens vs Keycloak guide](https:/
 
 ## Introduction
 
-Most, if not all, web applications require users to log in one way or another. Authentication and authorization have become basic requirements rather than features. It is very important to choose the right authentication solution and provider when building your application. To understand what authentication and authorization are and how they are different, [read this article](#).
+Most, if not all, web applications require users to log in one way or another. Authentication and authorization have become basic requirements rather than features. It is very important to choose the right authentication solution and provider when building your application. To understand what authentication and authorization are and how they are different, [read this article](https://supertokens.com/blog/authentication-vs-authorization).
 
 When building your application, you want the solution to be flexible and reliable while avoiding vendor lock-in. Many solutions are available, but a lot of developers prefer choosing an open-source solution because of the transparency it brings and because it can be easily replaced with a custom-built solution if that becomes a requirement in the future.
 
