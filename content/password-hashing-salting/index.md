@@ -4,7 +4,7 @@ date: "2024-06-25"
 description: "A guide on password hashing and salting in different languages and why it's important to do so"
 cover: "password_hashing_and_salting.png"
 category: "programming"
-author: "Rishabh Poddar"
+author: "Dejan Lukic"
 ---
 
 ## Table of Contents
