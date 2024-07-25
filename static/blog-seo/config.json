@@ -1539,5 +1539,27 @@
         ],
         "title": "Supertokens Vs AuthO: Self-Hosted Vs. Managed Solutions",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/supertokens-vs-auth0\"},\"headline\":\"Supertokens Vs AuthO: Self-Hosted Vs. Managed Solutions\",\"image\":\"https://supertokens.com/blog-meta-images/supertokens-vs-auth0.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/keycloak-alternatives",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Darko Bozhinovski\" /> ",
+            "<meta name=\"description\" content=\"We explore the differences between SuperTokens and Auth0 including their key features, pros and cons, and practical workflows. Whether you need full control with SuperTokens' self-hosted, open-source approach or the convenience of Auth0's managed service, this guide will help you choose the right authentication solution for your project.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"SuperTokens vs Keycloak, Open source authentication solutions, Authentication and authorization, Open source identity management\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Comparing Keycloak Alternatives For Simpler User Authentication\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/keycloak-alternatives\" />",
+            "<meta property=\"og:description\" content=\"We explore the differences between SuperTokens and Auth0 including their key features, pros and cons, and practical workflows. Whether you need full control with SuperTokens' self-hosted, open-source approach or the convenience of Auth0's managed service, this guide will help you choose the right authentication solution for your project.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/keycloak-alternatives.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Comparing Keycloak Alternatives For Simpler User Authentication/>",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/keycloak-alternatives\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/keycloak-alternatives.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Comparing Keycloak Alternatives For Simpler User Authentication",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/keycloak-alternatives\"},\"headline\":\"Comparing Keycloak Alternatives For Simpler User Authentication\",\"image\":\"https://supertokens.com/blog-meta-images/keycloak-alternatives.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
