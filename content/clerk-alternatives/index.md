@@ -48,7 +48,7 @@ SuperTokens differs from the vast majority of authentication providers by being 
 
 - SuperTokens can be set up in a few minutes, with automatic setup using CLI.
 - The self-hosted version can be deployed within 10 minutes.
-- There are plenty of [setup guides](https://supertokens.com/docs/guides\) for different use cases with SuperTokens that you might find useful.
+- There are plenty of [setup guides](https://supertokens.com/docs/guides) for different use cases with SuperTokens that you might find useful.
 
 **Open-source & Licensing**
 
