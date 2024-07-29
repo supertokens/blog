@@ -1,10 +1,10 @@
 ---
 title: What is Roles-Based Access Control (RBAC)?
-date: "2022-10-20"
+date: "2024-07-07"
 description: "Learn about RBAC and advantages + disadvantages compared to ABAC."
 cover: "what-is-rbac-cover.png"
 category: "featured"
-author: "Rishabh Poddar, CTO"
+author: "Nemi Shah"
 ---
 
 
