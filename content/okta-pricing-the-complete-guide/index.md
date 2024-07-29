@@ -1,10 +1,10 @@
 ---
-title: "Okta Pricing: The Complete Guide [2022]"
+title: "Okta Pricing: The Complete Guide [2024]"
 description: "An in depth guide covering Okta's pricing model"
-date: "2022-11-15"
+date: "2024-07-02"
 cover: "okta-pricing-the-complete-guide.png"
 category: "featured"
-author: "Joel Coutinho"
+author: "Nemi Shah"
 ---
 
 ## Table of Contents
