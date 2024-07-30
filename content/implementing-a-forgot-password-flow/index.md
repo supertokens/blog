@@ -14,12 +14,7 @@ author: "Joel Coutinho"
 3. [3 Common Issues in Implementing Forgot Password Flow](#3-common-issues-in-implementing-forgot-password-flow)
 4. [Conclusion](#conclusion)
 
-
-
-
-# Implementing a Secure Forgot Password Flow
-
-## Steps of Implementing a Forgot Password Flow
+## Implementing a Secure Forgot Password Flow
 
 ### Step 1: User Enters Their Email
 
