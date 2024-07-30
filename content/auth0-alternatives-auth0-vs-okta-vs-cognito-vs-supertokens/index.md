@@ -20,9 +20,12 @@ When it comes to choosing an authentication provider, businesses have several op
 
 ## SuperTokens
 
+![SuperTokens Logo](./supertokens_logo.png)
+
 SuperTokens is an open-source authentication solution designed for developers who want flexibility and control over their authentication flow.
 
 ### Key Features
+
 - Open-source and self-hosted
 - Easy integration with frontend and backend frameworks
 - Support for various authentication methods including email/password, social login, and passwordless
@@ -30,20 +33,24 @@ SuperTokens is an open-source authentication solution designed for developers wh
 - Advanced security features like anti-CSRF and token theft detection
 
 ### Pricing
+
 SuperTokens offers a free open-source version. For managed services, pricing starts at $25 per month for the Pro plan, which includes features like managed hosting, priority support, and custom domain support. Enterprise pricing is available on request and includes additional features such as SLA, dedicated support, and custom SLAs.
 
 ### Limitations
-- Requires self-hosting and management for the open-source version
+
+- Support for a limited number of backend languages and frameworks.
 - Limited integrations compared to some commercial solutions
 
 ### When to Use It
 Use SuperTokens if you need a flexible, open-source solution with strong session management and advanced security features, and are comfortable managing your own infrastructure.
 
 ## Okta
+![Okta logo](./okta_logo.png)
 
 Okta is a comprehensive identity management solution designed for large enterprises needing advanced features and integrations.
 
 ### Key Features
+
 - Robust single sign-on (SSO) capabilities
 - Multi-factor authentication (MFA)
 - Lifecycle management for users
@@ -63,6 +70,8 @@ Okta's pricing is tiered:
 Use Okta if you are a large enterprise requiring extensive integrations, robust security features, and comprehensive identity management.
 
 ## Keycloak
+
+![Keycloak](./keycloak-logo.png)
 
 Keycloak is an open-source identity and access management solution aimed at developers who need customizability and control.
 
@@ -85,6 +94,8 @@ Use Keycloak if you need a customizable, open-source solution with comprehensive
 
 ## Cognito
 
+![Cognito](./cognito_image.png)
+
 Amazon Cognito is a cloud-based authentication service designed to integrate seamlessly with AWS services.
 
 ### Key Features
@@ -105,6 +116,39 @@ Cognito offers a free tier with limited usage:
 
 ### When to Use It
 Use Cognito if you are heavily invested in the AWS ecosystem and need a scalable authentication solution with strong integration with AWS services.
+
+
+### Overall comparison of authentication providers
+
+| Feature                                             | SuperTokens   | Auth0         | AWS Cognito | Keycloak      | Firebase      |
+|-----------------------------------------------------|---------------|---------------|-------------|---------------|---------------|
+| Pricing                                             | $$ / Free     | $$$$$$        | Free        | $$            | $$            |
+| User Satisfaction                                   | High          | Medium        | Low         | Low           | High          |
+| Ease of UI and backend customizability              | Easy          | Medium        | High        | High          | High          |
+| Size of the company offering services               | Startup       | Enterprise    | Enterprise  | Enterprise    | Enterprise    |
+| Company provided support for free tiers             | High          | Low           | Low         | None          | Medium        |
+| Self hostable                                       | Yes           | Yes           | No          | Yes           | No            |
+| Open Source                                         | Yes           | No            | No          | Yes           | No            |
+| Managed Service                                     | Yes           | Yes           | Yes         | No            | Yes           |
+| Supported Cloud Providers                           | All           | All           | AWS         | All           | GCP           |
+| Compliance (SOC2, GDPR)                             | Yes           | Yes           | Yes         | Self hosted   | Yes           |
+| User management dashboard                           | Yes           | Yes           | Yes         | Yes           | Yes           |
+| Passwordless login (email + phone no)               | Yes           | Yes           | Partial     | Yes           | Yes           |
+| Social and Email Password login                     | Yes           | Yes           | Yes         | Yes           | Yes           |
+| Custom Open ID connector                            | Yes           | Yes           | Yes         | Yes           | Yes           |
+| SAML Login                                          | Yes           | Yes           | Yes         | Yes           | Yes           |
+| Unified login                                       | Partial       | Yes           | Yes         | Yes           | Yes           |
+| External Database                                   | Yes           | Yes           | No          | Yes           | Yes           |
+| SLA guarantees                                      | Yes           | Yes           | Yes         | No            | Not Known     |
+| 2FA / MFA                                           | Yes           | Yes           | Yes         | Yes           | Partial       |
+| Roles and permissions                               | Yes           | Yes           | Yes         | Yes           | Yes           |
+| Web3 login                                          | No            | Yes           | No          | No            | No            |
+| Machine to machine                                  | Partial       | Yes           | Yes         | Yes           | Partial       |
+| Multi tenancy                                       | Yes           | Yes           | Limit to 4  | Yes           | Yes           |
+| Cookie based session management (Out of the box)    | Yes           | No            | No          | No            | No            |
+| Customize Emails and SMS                            | Yes           | Yes           | Partial     | Partial       | Partial       |
+
+For more details, you can visit the [SuperTokens Pricing page](https://supertokens.com/pricing#comparison-chart).
 
 ## What to Look for in an Auth0 Alternative?
 
