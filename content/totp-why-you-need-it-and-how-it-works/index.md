@@ -49,7 +49,7 @@ TOTP, however, generates codes offline, making it both secure and convenient. Yo
 - **Mechanism**: Counter increments after each use.
 - **Use Cases**: Ideal for hardware tokens where clocks are not synchronized.
 
-![HOTP password](./hotp-flow.png)
+![HOTP password](./hotp.png)
 
 ### TOTP (Time-Based One-Time Password)
 
