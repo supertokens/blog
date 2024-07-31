@@ -178,7 +178,7 @@ A practical example might look like this:
 
 To learn more about advanced token usage, including JWKs (JSON Web Key Sets), check out this guide on [Understanding JWKS](https://supertokens.com/blog/understanding-jwks).
 
-# Experience Seamless Authentication with OAuth and JWT Integration!
+## Experience Seamless Authentication with OAuth and JWT Integration!
 Ready to implement robust authentication in your application? Look no further than SuperTokens! Our solution leverages the power of both OAuth and JWT to provide secure, flexible, and user-friendly authentication.
 
 With SuperTokens, you get:
