@@ -1583,5 +1583,27 @@
         ],
         "title": "Clerk Alternatives: Ceding vs. Owning UAM Control",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/keycloak-alternatives\"},\"headline\":\"Comparing Keycloak Alternatives For Simpler User Authentication\",\"image\":\"https://supertokens.com/blog-meta-images/keycloak-alternatives.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/frontegg-alternatives",
+        "metaTags": [
+            "<meta name=\"author\" content=\"Dejan Lukic\" /> ",
+            "<meta name=\"description\" content=\"This blog explores alternatives to Frontegg. It discusses key considerations such as pricing, customization, scalability, and integration, helping you choose the best authentication solution for your needs.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Frontegg, Open source authentication solutions, Authentication and authorization, UAM\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Frontegg Alternatives For Greater UAM Flexibility & Control\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/frontegg-alternatives\" />",
+            "<meta property=\"og:description\" content=\"This blog explores alternatives to Frontegg. It discusses key considerations such as pricing, customization, scalability, and integration, helping you choose the best authentication solution for your needs.\" /\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/frontegg-alternatives.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Frontegg Alternatives For Greater UAM Flexibility & Control/>",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/frontegg-alternatives\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/frontegg-alternatives.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Frontegg Alternatives For Greater UAM Flexibility & Control",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/keycloak-alternatives\"},\"headline\":\"Frontegg Alternatives For Greater UAM Flexibility & Control\",\"image\":\"https://supertokens.com/blog-meta-images/frontegg-alternatives.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
