@@ -9,8 +9,6 @@ author: "Connor Peshek"
 
 ## Table of Contents
 
-## Table of Contents
-
 - [Introduction](#introduction)
 - [How does React’s Virtual DOM work?](#how-does-reacts-virtual-dom-work)
 - [React Performance Optimization Techniques](#11-react-performance-optimization-techniques)
