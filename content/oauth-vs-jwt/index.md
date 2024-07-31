@@ -9,8 +9,6 @@ author: "Mostafa Ibrahim"
 
 ## Table of Contents
 
-# Table of Contents
-
 - [Introduction](#introduction)
 - [OAuth vs JWT: Comparison Overview](#oauth-vs-jwt-comparison-overview)
 - [What is OAuth?](#what-is-oauth)
