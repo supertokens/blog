@@ -9,17 +9,16 @@ author: "Mostafa Ibrahim"
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Prerequisites](#prerequisites)
-3. [Step 1: Setting Up the Project](#step-1-setting-up-the-project)
-4. [Step 2: Creating the Login Component](#step-2-creating-the-login-component)
-5. [Step 3: Styling the Login Page](#step-3-styling-the-login-page)
-6. [Step 4: Handling User Input](#step-4-handling-user-input)
-7. [Step 5: Adding Form Validation](#step-5-adding-form-validation)
-8. [Step 6: Connecting to a Backend](#step-6-connecting-to-a-backend)
-9. [Step 7: Implementing Authentication](#step-7-implementing-authentication)
-10. [Step 8: Adding Navigation](#step-8-adding-navigation)
-11. [Conclusion](#conclusion)
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Step 1: Setting Up the Project](#step-1-setting-up-the-project)
+- [Step 2: Creating the Login Component](#step-2-creating-the-login-component)
+- [Step 3: Styling the Login Page](#step-3-styling-the-login-page)
+- [Step 4: Handling User Input](#step-4-handling-user-input)
+- [Step 5: Adding Form Validation](#step-5-adding-form-validation)
+- [Step 6: Connecting to a Backend](#step-6-connecting-to-a-backend)
+- [Step 7: Implementing Authentication](#step-7-implementing-authentication)
+- [Conclusion](#conclusion)
 
 ## Introduction
 
