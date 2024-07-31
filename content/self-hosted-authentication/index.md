@@ -1,234 +1,297 @@
 ---
 title: Self-hosted Authentication
-date: "2023-02-03"
+date: "2024-07-17"
 description: "By self-hosting auth users gain finer control over their data.To shed some light on the matter, let’s compare several authentication providers which offer self-hosting functionality"
 cover: "self_hosted_auth.png"
 category: "programming"
-author: "Advait Ruia"
+author: "Dejan Lukic"
 ---
 
-## Table of content
+## Table of Contents
 
-- [Introduction](#introduction)
-- [Keycloak](#keycloak)
-- [Ory](#ory)
-- [FusionAuth](#fusionauth)
-- [SuperTokens](#supertokens)
-- [Conclusion](#conclusion) 
+1. [Introduction](#introduction)
+2. [Criteria for Choosing Open-Source Authentication Solutions](#criteria-for-choosing-open-source-authentication-solutions)
+   - [Security](#security)
+   - [Customizability](#customizability)
+   - [Community and Support](#community-and-support)
+   - [Scalability](#scalability)
+   - [Compatibility](#compatibility)
+   - [Ease of Use](#ease-of-use)
+   - [Permissions and RBAC](#permissions-and-rbac)
+3. [Top Open Source Authentication Tools](#top-open-source-authentication-tools)
+   - [Solution #1: Keycloak](#solution-1-keycloak)
+   - [Solution #2: FusionAuth](#solution-2-fusionauth)
+   - [Solution #3: Hanko.io](#solution-3-hankoio)
+   - [Solution #4: Gluu](#solution-4-gluu)
+   - [Solution #5: Authelia](#solution-5-authelia)
+   - [Solution #6: SuperTokens](#solution-6-supertokens)
+   - [Solution #7: Casbin](#solution-7-casbin)
+   - [Solution #8: Ory Kratos](#solution-8-ory-kratos)
+   - [Solution #9: Authentik](#solution-9-authentik)
+4. [Best Practices to Implement an Open Source Authentication Tool](#best-practices-to-implement-an-open-source-authentication-tool)
+   - [Understand Your Requirements](#understand-your-requirements)
+   - [Choose the Right Tool](#choose-the-right-tool)
+   - [Prioritize Security](#prioritize-security)
+   - [Plan for Scalability](#plan-for-scalability)
+   - [Test Thoroughly](#test-thoroughly)
+   - [Monitor and Maintain](#monitor-and-maintain)
+   - [Leverage Community and Support](#leverage-community-and-support)
+5. [Secure Your Projects with SuperTokens](#secure-your-projects-with-supertokens)
 
-## Introduction
 
-Most companies view authentication simply as a checkbox - as long as users can log in and use the product with no security breaches - they call it good enough. Understandably, they’d rather work on their core product.
+In the dynamic landscape of software development, securing user authentication is paramount. Open-source authentication solutions provide a compelling mix of flexibility, transparency, and cost efficiency. These solutions empower developers to customize and adapt authentication processes to their specific needs, fostering innovation and enhancing security. As software ecosystems grow more complex, the demand for robust authentication mechanisms increases. Tools like Auth0 have revolutionized how developers approach authentication, offering streamlined and scalable solutions. This article explores the criteria for choosing the best open-source authentication tools, reviews top solutions, and outlines best practices for implementation.
 
-And it’s for this exact reason that many companies outsource authentication to a dedicated auth service like Auth0, one of the largest providers today.
+## Criteria for Choosing Open-Source Authentication Solutions
 
-On the surface, it makes sense. Outsourcing authentication saves engineering time and keeps things secure with a trusted third party that has all the time and focus in the world to get it right.
+Selecting the right authentication tool for your project involves several considerations. Here are key criteria to guide your decision:
 
-But this can become problematic when things go wrong.
+### Security
 
-Auth0 suffered two large outages in [November 2018](https://cdn.auth0.com/blog/20181128-Incident-RCA.pdf) and [March 2021](https://cdn.auth0.com/blog/20210323-2-Incident-RCA.pdf). Both of these outages left companies unable to support authentication functionality like user logins.
+Security is the foremost criterion. Look for tools that offer robust encryption, regular security updates, and compliance with industry standards like OAuth 2.0, OpenID Connect (OIDC), and SAML 2. Additionally, ensure the tool provides features such as end-to-end encryption for data in transit and at rest, to protect against interception and unauthorized access. Multi-factor authentication (MFA) support is crucial for adding an extra layer of security beyond passwords. It's also important to check for features like role-based access control (RBAC) and audit logging, which allow for detailed tracking of access and activity within the system. Evaluate whether the tool has undergone third-party security assessments or certifications, as these can provide an additional level of assurance regarding its security posture.
 
-Plus, costs can balloon with hosted services as number of active users increases. [Auth0’s pricing](https://supertokens.com/blog/auth0-pricing-the-complete-guide) can get quite steep for a small startup, especially if they’re still pre-revenue.
+### Customizability
 
-The option of building authentication from scratch is still on the table, but it can still be incredibly expensive up-front and the risk of baking in a security bug can be catastrophic.
+Open-source solutions should provide extensive customization options. Ensure the tool can be tailored to your specific authentication flows and integrated with your existing infrastructure, whether you're using AWS, Microsoft Azure, or another cloud service.
 
-In recent years, self-hosting has grown in popularity. By transporting authentication logic from an auth provider to internal servers, companies gain finer control over their data without implementing auth from scratch.
+### Community and Support
 
-To shed some light on the matter, let’s compare several authentication providers which offer self-hosting functionality:
+A vibrant community and active support channels are invaluable when choosing an open-source authentication tool. A strong community ensures the tool is well-maintained and help is available when needed. This community ecosystem often includes developers who contribute to the tool’s ongoing development and share best practices. Look for solutions with comprehensive documentation, active forums, or chat groups, such as those on GitHub.
 
-- Keycloak
-- Ory
-- FusionAuth
-- SuperTokens
+### Scalability
 
-![Self-hosted authentication tables](./self_hosted_auth_comparison_table.png)
+Your chosen solution should handle growth seamlessly. Consider tools that support high concurrency and can scale horizontally across distributed environments like Kubernetes clusters. Additionally, assess the tool's ability to manage increased authentication requests during peak times without compromising performance or security. Ensure it offers load balancing and redundancy features to maintain high availability and resilience.
 
-Also be sure to check out [our piece on auth UI comparison](https://supertokens.com/blog/what-do-pre-built-authentication-ui-tools-look-like) and our [auth provider deep-dive](https://supertokens.com/blog/auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens).
+### Compatibility
 
-## Keycloak
+Ensure the tool supports a wide range of languages, frameworks, and platforms. Compatibility with your tech stack, including Java, Python, Linux, and Windows, will smooth the integration process.
 
-![Keycloak logo](./keycloak_logo.png)
+### Ease of Use
 
-Keycloak was first released in 2014. Its primary developer is WildFly, a division of Red Hat.
+An intuitive setup and configuration process can save significant time and effort for developers. Look for solutions with clear, comprehensive documentation that guides you through each step of the process. Straightforward installation procedures and pre-built integrations are essential for getting started quickly. Additionally, tools that offer user-friendly interfaces for managing endpoints and configurations can significantly enhance the ease of use, making the overall experience smoother and more efficient.
 
-### **Open Source**
+### Permissions and RBAC
 
-Keycloak was designed as an open-source solution for identity and access management, and was intended to provide a simpler and more effective alternative to existing solutions on the market.
+Effective management of permissions and role-based access control (RBAC) is crucial. Ensure the solution provides fine-grained control over user permissions and roles.
 
-Today, Red Hat’s Single Sign-On (SSO) product is based on the Keycloak project. 
+## Top Open Source Authentication Tools
 
-### **Functionality**
+### Solution #1: Keycloak
 
-Keycloak supports various authentication mechanisms such as OpenID Connect, OAuth 2.0, and SAML, and can be easily integrated with other systems and protocols. Keycloak also includes features for managing users, roles, and permissions, as well as for implementing multi-factor authentication and social login.
+Keycloak is a powerful open-source identity and access management solution for modern applications and services. It provides enterprise-level security features without the complexity of traditional IAM systems. With its support for various authentication methods and fine-grained permissions management, Keycloak is a versatile solution that fits a wide range of use cases.
 
-While Keycloak has broad functionality, it’s not always sufficient for larger enterprise needs. For example, the Keycloak functions do not satisfy the requirements of data protection in accordance with the European General Data Protection Regulation (EU-GDPR).
+#### Key Features
+- Single Sign-On (SSO)
+- LDAP and Active Directory integration
+- Social login support
+- Fine-grained authorization services
+- Multi-factor authentication (MFA)
 
-As a result, many customers often need to extend the functionality of Keycloak with support from Red Hat or third-party Keycloak experts. 
+#### Pros and Cons
+- **Pros**: Comprehensive feature set, strong community support, easy to extend and customize.
+- **Cons**: Can be resource-intensive, and requires significant setup and maintenance.
 
-### **Pricing**
+#### Ideal Use Case Scenarios
+- Large enterprises needing a robust IAM solution.
+- Applications requiring integration with existing LDAP/Active Directory.
 
-Keycloak is free for all users. 
+[Explore more about Keycloak](https://www.keycloak.org/).
 
-For larger enterprise users, Red Hat offers the Red Hat SSO product. 
+### Solution #2: FusionAuth
 
-Monthly pricing for Red Hat SSO runs from $138/month to $3,600/month depending on server capabilities.
+FusionAuth provides a flexible and developer-friendly authentication platform that can be hosted anywhere. It's designed to be easily integrated with any application, offering extensive API support and a wide range of customization options. FusionAuth is suitable for both small projects and large-scale enterprise applications, ensuring secure and efficient authentication workflows.
 
-### **Support**
+#### Key Features
+- OAuth 2.0, OpenID Connect (OIDC), and SAML 2 support
+- Multi-tenant capabilities
+- Advanced user management and segmentation
+- Extensive APIs for customization
 
-Because Keycloak is an open-source project, it doesn’t provide any company-based support. Instead, it relies on a large community of Github contributors to help [debug and answer user questions](https://github.com/keycloak/keycloak/issues).  
+#### Pros and Cons
+- **Pros**: Highly customizable, extensive API support, strong focus on developer experience.
+- **Cons**: Documentation can be overwhelming, some advanced features require a paid license.
 
-Red Hat SSO offers 24/7 support on paid plans. 
+#### Ideal Use Case Scenarios
+- Applications with diverse user bases and complex authentication needs.
+- Projects needing a flexible and developer-centric auth solution.
 
-### **Target Customer**
+[Learn more about FusionAuth](https://fusionauth.io/).
 
-Keycloak is aimed at smaller projects looking to set up low-cost authentication. When it was first released, Keycloak quickly gained traction as an open-source alternative to costly authentication providers. Today, most of Keycloak’s functionality has been replicated by competitors. 
+### Solution #3: Hanko.io
 
-Red Hat SSO primarily targets larger enterprise-based clients. 
+Hanko.io offers a modern approach to authentication with support for passkeys and WebAuthn. It focuses on delivering a passwordless authentication experience, enhancing security and user convenience. Hanko.io is perfect for projects that prioritize cutting-edge security measures and seek to reduce the reliance on traditional passwords.
 
-## Ory
+#### Key Features
+- Passkeys and WebAuthn support
+- Passwordless authentication
+- Developer-friendly APIs and SDKs
+- Self-hosted and cloud options
 
-![Ory logo](./ory_logo.png)
+#### Pros and Cons
+- **Pros**: Cutting-edge security features, simple to integrate, strong emphasis on user experience.
+- **Cons**: Relatively new, community support still growing.
 
-Founded in 2016, Ory is the largest open-source community in the world for cloud software application security. 
+#### Ideal Use Case Scenarios
+- Applications prioritizing user-friendly and secure login experiences.
+- Projects looking to implement passwordless authentication.
 
-### **Open Source**
+[Discover Hanko.io](https://www.hanko.io/).
 
-Ory has a family of product - all of which are open source. Its user authentication product, Kratos, was released in 2018. 
+### Solution #4: Gluu
 
-Ory’s other products include: 
+Gluu provides an enterprise-grade identity and access management solution that can be self-hosted. It supports a wide range of protocols and integrations, making it suitable for complex and large-scale deployments. Gluu's advanced clustering and high availability features ensure it can handle demanding environments and provide uninterrupted service.
 
-- Hydra - OAuth 2.0 and OpenID Connect provider
-- Oathkeeper - access control for API endpoints
-- Keto - authorization, define advanced permission rules ("Access Control Policies")
+#### Key Features
+- SSO, OAuth 2.0, OpenID Connect (OIDC), and SAML 2 support
+- Multi-factor authentication (MFA)
+- LDAP and Active Directory integration
+- Advanced clustering for high-availability
 
-### **Functionality**
+#### Pros and Cons
+- **Pros**: Highly scalable, strong security features, extensive protocol support.
+- **Cons**: Complex setup, requires considerable resources to maintain.
 
-Ory Kratos provides features such as: 
+#### Ideal Use Case Scenarios
+- Enterprises needing a scalable and secure IAM solution.
+- Organizations with stringent security and compliance requirements.
 
-- Self Service Login and Registration
-- Multifactor Authentication
-- User Management
-- Social Logins
-- Account Verification and Recovery
+[Find out more about Gluu](https://gluu.org/).
 
-A potential downside to Kratos is the authentication UI. While Kratos handles all of the backend functionality, users still need to build the authentication screens (login, signup, forgot password) from scratch. 
+### Solution #5: Authelia
 
-This can be either a negative due to the extra engineering time, or a positive for teams looking for 100% control over their user experience.
+Authelia is an open-source authentication and authorization server protecting your applications with single sign-on. Designed for simplicity and ease of deployment, Authelia integrates well with Docker and provides fine-grained access control features. It is an excellent choice for smaller projects that require reliable SSO and two-factor authentication.
 
-### **Pricing**
+#### Key Features
+- 2FA support
+- LDAP and Active Directory integration
+- Docker-ready for easy deployment
+- Fine-grained access control
 
-Kratos is free for self-hosting with all functionality intact.
+#### Pros and Cons
+- **Pros**: Lightweight, easy to deploy, strong community support.
+- **Cons**: Limited to SSO and 2FA, may lack some enterprise features.
 
-Launched in November 2022, the Ory Network is a managed solution hosted by Ory themselves. Pricing ranges from $18/month to $240/month. 
+#### Ideal Use Case Scenarios
+- Small to medium-sized applications needing straightforward SSO and 2FA.
+- Projects looking for a lightweight and easily deployable auth solution.
 
-### **Support**
+[Get started with Authelia](https://www.authelia.com/).
 
-As an open-source company, Ory only has community-based support for self-hosted users. 
+### Solution #6: SuperTokens
 
-For dedicated support, users need to be on the Ory Network’s Business plan which runs $240/month. 
+SuperTokens provides an open-source authentication solution focused on simplicity and extensibility. Its design aims to simplify the authentication process while offering flexibility to developers. SuperTokens includes features like session management and social login, making it a strong choice for modern web applications.
 
-### **Target Customer**
-
-With a low price point and open-source strategy, Ory’s target customers are lean startups. Although implementing Ory requires a bit of elbow grease, the end product is a highly secure authentication flow.
-
-
-> You can learn more about how [Ory and Keycloak stack up against SuperTokens in our guide](./ory-vs-keycloak-vs-supertokens). 
-
-## FusionAuth
-![FusionAuth logo](./fusion_auth.png)
-
-Founded in 2016, FusionAuth’s tagline is:  “Auth. Built for Devs, by Devs.” 
-
-### **Open Source**
-
-Unlike other companies on this list, FusionAuth is not open source. Based on a previous Q&A thread, FusionAuth’s services will continue to function for an undisclosed amount of time even after the company shuts down. Further, Enterprise clients can request a source code release clause in the event FusionAuth goes out of business.
-
-### **Functionality**
-
-Self-hosting with FusionAuth’s core authentication features is free. Users have access to email+password, third-party/social, and even passwordless authentication methods. 
-
-These features are sufficient for hobby-level projects, but not for startup/enterprise use cases.
-
-Important features like [Advanced Multi-Factor Authentication,](https://fusionauth.io/docs/v1/tech/guides/multi-factor-authentication) [Application Specific Themes](https://fusionauth.io/docs/v1/tech/themes/application-specific-themes), and [User Self Service and Account Management](https://fusionauth.io/docs/v1/tech/account-management/) are part of the paid plans. 
-
-In addition, certain third-party integrations such as sign in with Nintendo, Playstation, Epic Games, Steam, Twitch, and Xbox require an Essentials or Enterprise plan.
-
-Certain security features such as advanced security are also locked behind the Essentials or Enterprise plans. 
-
-### **Pricing**
-
-Pricing for self-hosting FusionAuth is on the higher end compared to other authentication providers.
-
-Community plan (free) is free for unlimited users.
-
-The remaining plans tiers are effective for the first 10k users, with Starter plan at $125/month, Essentials at $850/month, and Enterprise at $3,300/month.
-
-### **Support**
-
-FusionAuth gates support to three tiers. 
-
-Users on the free Community plan and Starter plan ($125/month) have community forum support (forums, Slack, Github). 
-
-Essentials users ($850/month) are guaranteed a 24-48 hour response time via email. 
-
-Enterprise users ($3,300/month) have both 24/7 email and phone support and a dedicated Slack channel with FusionAuth engineers. 
-
-### **Target Customer**
-
-FusionAuth is geared towards larger enterprise customers similar to Auth0. However, FusionAuth’s key differentiators are its self-hosting options and advanced security features like biometric authentication.
-
-## SuperTokens
-
-![SuperTokens Logo](./supertokens_logo.png)
-
-SuperTokens was founded in February 2019 with the tagline: “Build fast. Maintain control. Reasonably priced.”
-
-### **Open Source**
-
-SuperTokens is an open-source company and one of the [fastest growing OSS startups in Q1 2022](https://runacap.com/ross-index/q1-2022/).  
-
-### **Functionality**
-
-SuperTokens offers a variety of functions such as:
-
-- Email+password login
-- Passwordless (OTP or Magic link based)
-- Social / OAuth 2.0
-- Access control
+#### Key Features
 - Session management
-- User management
-- Self hosted / managed cloud
+- Social and email/password login
+- JWT-based authentication
+- Customizable UI components
 
-Our core focus is ensuring high security with a premium user authentication experience.
+#### Pros and Cons
+- **Pros**: Simple to set up, highly customizable, active community support.
+- **Cons**: Limited feature set compared to more comprehensive solutions.
 
-The SuperTokens SDK is split into frontend, backend, and the SuperTokens Core. Everything you need for authentication is available as a simple function call, so there’s full control over how you implement auth - whether it’s for an API for a customer-facing app.
+#### Ideal Use Case Scenarios
+- Startups and small projects needing a quick and flexible auth solution.
+- Applications requiring easy integration with modern frontend frameworks.
 
-We provide step-by-step guides for [a variety of authentication recipes](https://supertokens.com/docs/guides), whether you choose to host SuperTokens as a Docker instance or as a binary service.
+[Learn more about SuperTokens](https://supertokens.com/).
 
-![SuperTokens Guides Page](./supertokens_user_guides.png)
+### Solution #7: Casbin
 
-![SuperTokens Architecture Page](./supertokens_architecture_page.png)
+Casbin is a powerful and efficient open-source access control framework. It supports various access control models and is highly customizable, making it suitable for projects that require detailed permission management. Casbin integrates with multiple languages and storage backends, providing flexibility for different use cases.
 
-### **Pricing**
+#### Key Features
+- Supports various access control models
+- Flexible and extensible architecture
+- Rich middleware for various languages, including Java and Python
+- Integrated with numerous storage backends
 
-A self-hosted SuperTokens implementation is 100% free for unlimited users.
+#### Pros and Cons
+- **Pros**: Highly customizable, lightweight, and supports multiple languages.
+- **Cons**: Primarily an access control framework, not a full IAM solution.
 
-![SuperTokens Pricing Page](./supertokens_pricing_page.png)
+#### Ideal Use Case Scenarios
+- Applications needing fine-grained access control.
+- Projects looking for a lightweight, language-agnostic auth framework.
 
-### **Support**
+[Discover Casbin on GitHub](https://casbin.org/).
 
-We love talking with our users. In fact, we have an incredibly active Discord community where we usually respond to questions within 15 minutes, 18 hours/day.
+### Solution #8: Ory Kratos
 
-For our larger enterprise customers, we also offer dedicated Slack channels and additional support.
+Ory Kratos is a full-featured user identity and authentication system. It offers self-service registration and login, passwordless authentication, and multi-factor authentication (MFA). Its API-first architecture makes it an ideal choice for developers building modern, scalable web applications.
 
-### **Target Customer**
+#### Key Features
+- Self-service registration and login
+- Passwordless login options
+- Multi-factor authentication (MFA)
+- API-first architecture
 
-Our best customers are startups. Our enterprise feature set is still being developed, and we’ve recently been certified for both SOC 2 and GDPR.
+#### Pros and Cons
+- **Pros**: Feature-rich, flexible, modern architecture.
+- **Cons**: Can be complex to set up, still evolving.
 
-## Conclusion
+#### Ideal Use Case Scenarios
+- Modern applications needing a comprehensive and flexible auth solution.
+- Projects aiming for API-first development.
 
-While you can tell we’re a little biased ;) - we hope you found this breakdown useful.
+[Explore Ory Kratos](https://www.ory.sh/kratos/).
 
-Please reach out to us for any questions you have around auth, whether you choose to go with SuperTokens or not!
+### Solution #9: Authentik
 
-Otherwise if you’d like to get started, [here](https://supertokens.com/docs/guides) is best place to start. Happy authenticating!
+Authentik is an open-source identity provider focused on flexibility and ease of use. It supports multiple authentication protocols and integrates seamlessly with various directories. Authentik's customizable user interfaces and multi-factor authentication (MFA) make it a user-friendly option for diverse authentication needs.
+
+#### Key Features
+- SSO, OAuth 2.0, OpenID Connect (OIDC), and SAML 2 support
+- LDAP and AD integration
+- Customizable user interfaces
+- Multi-factor authentication (MFA)
+
+#### Pros and Cons
+- **Pros**: User-friendly, flexible, strong protocol support.
+- **Cons**: Still maturing, community support growing.
+
+#### Ideal Use Case Scenarios
+- Projects needing a flexible and easy-to-use IAM solution.
+- Applications with diverse authentication requirements.
+
+[Learn about Authentik](https://goauthentik.io/).
+
+## Best Practices to Implement an Open Source Authentication Tool
+
+Implementing an open-source authentication solution requires careful planning and execution. Here are some best practices:
+
+### Understand Your Requirements
+
+Before selecting a tool, thoroughly understand your project’s requirements. Consider the number of users, authentication methods, integration needs, and compliance requirements.
+
+### Choose the Right Tool
+
+Based on your requirements, choose a tool that best fits your needs. Use the criteria outlined earlier to make an informed decision.
+
+### Prioritize Security
+
+Ensure your chosen solution adheres to the latest security standards. Regularly update the software to patch vulnerabilities and follow best practices for securing authentication flows.
+
+### Plan for Scalability
+
+Select a tool that can grow with your application. Implement horizontal scaling and ensure your infrastructure can handle the increased load, particularly in cloud-native environments.
+
+### Test Thoroughly
+
+Before deploying, thoroughly test the authentication system in a staging environment. Validate all use cases, including edge cases, to ensure a smooth user experience.
+
+### Monitor and Maintain
+
+Regularly monitor the authentication system for performance and security issues. Keep the software updated and be proactive in addressing potential threats.
+
+### Leverage Community and Support
+
+Engage with the community and utilize available support channels. Active participation can help you stay updated with best practices and emerging trends. Check out resources on GitHub for community-driven insights.
+
+## Secure Your Projects with SuperTokens
+
+SuperTokens offers a robust and flexible authentication solution that simplifies the implementation process. Whether you’re a startup or an enterprise, SuperTokens provides the tools you need to secure your applications effectively. By carefully selecting and implementing the right open-source authentication solution, you can enhance the security and user experience of your applications, all while benefiting from the flexibility and cost-efficiency of open-source software.
+
+Implementing these best practices will ensure a robust and secure authentication system, enhancing the overall security and functionality of your open-source project.
+
+Secure your projects with SuperTokens and enjoy a seamless, secure, and scalable authentication experience!
