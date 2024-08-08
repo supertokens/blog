@@ -1,123 +1,204 @@
 ---
 title: "OAuth vs JWT (JSON Web Tokens): An In-Depth Comparison"
-date: "2022-03-23"
-description: "Learn about the difference between JWT Token and OAuth"
+date: "2024-07-20"
+description: "Explore the key differences between OAuth and JWT in this comprehensive guide. Learn when to use each, their pros and cons, and how they can work together for robust authentication."
 cover: "oauth_vs_jwt.png"
 category: "sessions"
-author: "Advait Ruia"
-discord_button_id: "discord_oauth_vs_jwt"
+author: "Mostafa Ibrahim"
 ---
 
-Authentication is one of the core functions of applications on the internet today, one that many developers are familiar with. Yet, actually implementing authentication correctly requires understanding several standards and protocols.
+## Table of Contents
 
-Two of the most important of these authentication standards are **OAuth** and **JWT (JSON Web Tokens)**. 
+- [Introduction](#introduction)
+- [OAuth vs JWT: Comparison Overview](#oauth-vs-jwt-comparison-overview)
+- [What is OAuth?](#what-is-oauth)
+- [What is JWT?](#what-is-jwt)
+- [Key Differences Between OAuth and JWT](#key-differences-between-oauth-and-jwt)
+- [Advantages and Disadvantages of OAuth](#advantages-and-disadvantages-of-oauth)
+- [Advantages and Disadvantages of JWT](#advantages-and-disadvantages-of-jwt)
+- [When to Use OAuth](#when-to-use-oauth)
+- [When to Use JWT](#when-to-use-jwt)
+- [Can OAuth and JWT be used together?](#can-oauth-and-jwt-be-used-together)
+- [Experience Seamless Authentication with OAuth and JWT Integration!](#experience-seamless-authentication-with-oauth-and-jwt-integration)
+- [Conclusion](#conclusion)
 
-Looking to make sense of OAuth and JWT? You’re in the right place. In this article we will cover:
+## Introduction
 
-- What OAuth is and the Pros and Cons of using it
-- What JWT (JSON Web Tokens) is and the Pros and Cons
-- How to use OAuth and JWT together effectively
+Today, we're diving into the fascinating world of authentication and authorization protocols. We'll explore the differences between OAuth and JWT (JSON Web Tokens), two heavyweight contenders in the world of secure information exchange and user authentication.
 
-Let’s dive in!
+Whether you're building your first app or you're a seasoned pro looking to brush up on your knowledge, this guide will help you understand when and how to use OAuth and JWT. Let's get started!
 
+## OAuth vs JWT: Comparison Overview
+
+Before we dive into the nitty-gritty details, let's take a bird's-eye view of how OAuth and JWT stack up against each other:
+
+| Dimension | OAuth | JWT |
+| --------- | ----- | --- |
+| Primary Use | Authorization and access delegation | Secure information exchange and authentication |
+| Protocol Standards | OAuth 2.0, OpenID Connect | JSON Web Token (RFC 7519) |
+| Workflow | Multi-step process with various flows | Simple encode-sign-verify process |
+| SSO (Single Sign-On) | Supports SSO implementations | Can be used in SSO, but not inherently designed for it |
+| Token Storage | Server-side (usually) | Client-side (usually) |
+| Security Features | Scope-based access, token revocation | Signature verification, payload encryption |
+| Implementation Complexity | More complex, involves multiple components | Simpler, self-contained |
+
+Now that we've got a quick comparison, let's dive deeper into each of these technologies.
 
 ## What is OAuth?
-OAuth (Open Authorization) - often written as the latest version OAuth 2.0 - is a protocol that is used to authenticate a user via an authentication server.
 
-One of the useful things about OAuth is that it enables you to delegate account access in a secure way without sharing credentials. Instead of credentials, OAuth relies on access tokens.
+OAuth, short for "Open Authorization," is an open standard protocol that allows secure authorization in a simple and standardized way for web, mobile, and desktop applications. It's like a valet key for your car – it gives limited access to your resources without handing over the full set of keys.
 
-Using access tokens, a client application can verify the identity of the user that authenticated themselves.
+### How does OAuth Work?
 
-Visually, the process looks like this:
+![OAuth Flow](./flow_oauth_vs_jwt.png)
 
-![OAuth_JWT_Flow](./flow_oauth_vs_jwt.png)
+OAuth works by delegating user authentication to the service that hosts the user account and authorizing third-party applications to access that user account. Here's a simplified flow:
 
-When you implement "Sign in with Google" or "Sign in with Github", you are using the OAuth 2.0 protocol!
+1. The user initiates a request to the application.
+2. The application redirects the user to the OAuth provider.
+3. The user authenticates with the OAuth provider.
+4. The OAuth provider asks the user to authorize the application.
+5. The user grants permission.
+6. The OAuth provider sends an authorization code to the application.
+7. The application exchanges the code for an access token.
+8. The application uses the access token to access protected resources.
 
-### Pros of using OAuth
-Working with OAuth has some great benefits, including:
-- **It’s the accepted industry standard**. This means that most authentication services will understand and use OAuth 2.0.
-- **There’s many plug-and-play OAuth options**. Including services like "Sign in with Google" and "Sign in with Facebook" that are already set up to be consumed within your application.
-- **OAuth has well tested client libraries in almost all languages and web frameworks**. This means that your language of choice can be used with OAuth
-- **It allows for decoupling of code**. Your client application code is not affected by the authentication code.
-- **OAuth is very secure and battle tested**. Due to its widespread nature, you can be rest assured that all security edge cases have been thought about by industry experts.
+OAuth supports several authorization flows, including the Authorization Code Flow, Implicit Flow, and Client Credentials Flow. Each has its use cases, but the Authorization Code Flow is generally recommended for most scenarios due to its security benefits.
 
-### Potential considerations of using OAuth
-While OAuth is a great standard, there’s a handful of things to be mindful of when using it:
-- **OAuth can be complicated to understand if you are unfamiliar**. There are several different OAuth flows and deciding which is right for you can be a challenge. Sometimes, you may even need to use multiple flows.
-- **It has lower end user privacy**. The auth server knows all the sites that the end user has logged in into. For example, when a site uses Sign in with Google, Google would be able to keep track of when that site’s users are signing in or are active.
-- **It’s overkill in certain situations**. If you are building a simple webapp that has one frontend and backend, then you don’t need the OAuth protocol. However, a lot of online tutorials and ready made auth solutions force you to implement this.
-- **No session management solution**. Once the user is authenticated, the auth server simply returns a JWT which can be consumed by your application (as well will see later). However, after that step, the OAuth protocol doesn’t provide any support for specifying how to maintain the authenticated session between your app’s frontend and backend - this is totally up to the developer.
+## What is JWT?
 
-## What is JWT (JSON Web Tokens)?
-A JWT is a token that is generated by the authentication server and contains the end-user’s information (like their userID, email etc.). The information is in JSON format and can be efficiently verified by the client application using cryptography.
+JWT stands for JSON Web Token. It's an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. Think of it as a secure postcard – all the information is right there, but only the intended recipient can verify its authenticity.
 
+### How does JWT Work?
 
-![What_is_JWT](./what-is-jwt.png)
+A JWT consists of three parts: a header, a payload, and a signature. These parts are separated by dots and typically look something like this: `xxxxx.yyyyy.zzzzz`
 
+![jwt structure](./what-is-jwt.png)
 
-### So when exactly is using a JWT appropriate?
-JWT is best used whenever you want to transmit some information to an untrusted client, in such a way that that client can verify the information contained in the payload themselves.
+Here's a breakdown of each part:
+- **Header**: Contains metadata about the token, including the type of token and the hashing algorithm used.
+- **Payload**: Contains claims (statements about the user) and additional data.
+- **Signature**: Ensures that the token hasn't been altered.
 
-From the context of an auth server, an untrusted client is the application that the user is trying to use. From the context of the application’s backend, an untrusted client is the frontend code.
+The process works like this:
+1. The server generates a JWT by encoding the header and payload and signing it with a secret key.
+2. The JWT is sent to the client.
+3. The client sends the JWT back to the server with subsequent requests.
+4. The server verifies the signature and, if valid, processes the request.
 
-### Pros of using JWT
-There’s some good reasons JWT is such a popular standard:
-- **They are self-contained**. The JWT can contain the user’s details. So you don’t need to query a database / auth server for that information on each request.
-- **They offer strong security guarantees**. JWTs are digitally signed which safeguards them from being modified by the client or an attacker.
-- **JWTs are stored only on the client**. You generate JWTs on the server and send them to the client. The client then submits the JWT with every request. This saves database space.
-- **They are efficient and quick to verify**. This is because JWTs don’t require a database lookup.
+For a deep dive into the structure and functionality of JWTs, check out this detailed guide on [What is JWT](https://supertokens.com/blog/what-is-jwt).
 
-### Potential considerations of using JWT
-While JWTs are incredibly useful - it’s helpful to keep the following things in mind:
-- **You can’t revoke them without putting in a lot of extra engineering effort**. This is because there is no db call when verifying them. In order to implement immediate revocation, you would need to [implement JWT blacklisting](https://supertokens.com/blog/revoking-access-with-a-jwt-blacklist) which can be time consuming.
-- **It’s easy to create security bottlenecks while keeping one secret safe**. If the signing key is compromised, the attacker can use that to create their own valid JWTs. This would allow them to spoof the identity of any user an application.
+## Key Differences Between OAuth and JWT
 
-## Better together: How to use OAuth and JWT together
-We’ve learned that OAuth and JWT are powerful standards for building authentication flows in applications. As it turns out - OAuth vs JWT doesn’t have to be either or - they can be used together!
+### Difference 1 - Use Cases and Purpose
 
-When the authentication server successfully verifies a user’s credentials (via OAuth) it also needs to transmit the user details to the client application. In order for the client application to verify the details, JWTs can be used to ensure an efficient process.
+- **OAuth**: Primarily used for authorization and delegating access. It's great when you need to grant third-party applications limited access to user resources without sharing credentials.
+- **JWT**: Used for secure information exchange and authentication. It's perfect for stateless authentication in web applications, especially in microservices architectures.
 
-This works by the OAuth server sending a JWT to the client (after the OAuth flow is complete) containing the end user’s information.
+### Difference 2 - Implementation and Complexity
 
-A typical JSON payload in the JWT sent by the OAuth server looks like the below (example from sign in with Google):
+- **OAuth**: Involves a multi-step process with different roles (client, resource owner, authorization server, resource server). It's more complex but offers more flexibility.
+- **JWT**: Simpler to implement as it's self-contained. The token itself carries all necessary information, making it easier to use in stateless applications.
 
-```json
-{
-    "iss": "https://accounts.google.com",
-    "azp": "1234987819200.apps.googleusercontent.com",
-    "aud": "1234987819200.apps.googleusercontent.com",
-    "sub": "10769150350006150715113082367",
-    "at_hash": "HK6E_P6Dh8Y93mRNtsDB1Q",
-    "email": "jsmith@example.com",
-    "email_verified": "true",
-    "iat": 1353601026,
-    "exp": 1353604926,
-    "nonce": "0394852-3190485-2490358",
-    "hd": "example.com",
-}
-```
+### Difference 3 - Security and Management
 
-What do all these fields mean? Below is a quick summary using this particular example:
-- **iss**: The issuer of the token (in this case Google)
-- **azp** and **aud**: Client IDs issued by Google for your application. This way, Google knows which website is trying to use its sign in service, and the website knows that the JWT was issued specifically for them.
-- **sub**: The end user’s Google user ID
-- **at_hash**: The hash of the access token. The OAuth access token is different from the JWT in the sense that it’s an opaque token. The access token’s purpose is so that the client application can query Google to ask for more information about the signed in user.
-- **email**: The end user’s email ID
-- **email_verified**: Whether or not the user has verified their email.
-- **iat**: The time (in milliseconds since epoch) the JWT was created
-- **exp**: The time (in milliseconds since epoch) the JWT was created
-- **nonce**: Can be used by the client application to prevent replay attacks.
-- **hd**: The hosted G Suite domain of the user
+- **OAuth**: Offers fine-grained access control through scopes. Tokens can be easily revoked, enhancing security.
+- **JWT**: Relies on cryptographic signatures for security. Once issued, JWTs are valid until they expire, which can be a security concern if not managed properly.
 
-As you can see, there is a lot of information transmitted from the OAuth server (Google in this case), to the client application! It’s worth mentioning that some of the fields in the above JSON payload are specific to Google (like hd). Other providers may have similar and have different content.
+## Advantages and Disadvantages of OAuth
 
-Since this is all in a JWT, the client application can verify the contents of this JSON and know that no one has manipulated this content.
+### Advantages of OAuth
 
-## Final thoughts
-Oftentimes we see developers asking whether to use "OAuth or JWT" for their authentication setup. In reality, OAuth and JWT are two different standards, with different uses, which can be used together with great effect. In fact, JWT is often used as part of the OAuth protocol.
+- **Fine-grained access control**: OAuth's scope mechanism allows for precise control over what resources a third-party application can access. This granularity enhances security and user privacy by limiting exposure to only necessary data.
+- **Support for Single Sign-On (SSO)**: OAuth facilitates seamless SSO implementations across multiple applications and domains. Users can authenticate once and access various services without repeatedly entering credentials.
+- **Robust security features**: OAuth includes built-in security measures like token expiration and revocation. This allows for quick mitigation of potential security breaches by invalidating compromised tokens.
+- **Standardized protocol**: As an industry-standard protocol, OAuth ensures interoperability across different platforms and services. This standardization simplifies integration with various third-party services.
 
-At [SuperTokens](https://supertokens.com), we provide an auth solution that mitigates most of the cons of using OAuth and a JWT, including:
-- We encourage the use of OAuth [only when really needed](https://supertokens.com/blog/oauth-2-vs-session-management).
-- We offer a way to [revoke JWTs / access tokens easily](https://supertokens.com/blog/revoking-access-with-a-jwt-blacklist) without reducing the verification efficiency.
-- We offer a [secure session management solution](https://supertokens.com/blog/the-best-way-to-securely-manage-user-sessions) which is the missing piece in the OAuth protocol.
+### Disadvantages of OAuth
+
+- **Complex implementation**: Setting up OAuth can be challenging, especially for smaller projects or teams with limited resources. The multi-step flow and various roles involved require careful planning and implementation.
+- **Overhead from multiple components**: OAuth's architecture involves multiple components (authorization server, resource server, client), which can increase system complexity and potential points of failure.
+- **Performance considerations**: The additional steps in the OAuth flow, such as token validation and exchange, can introduce slight latency in API calls compared to simpler authentication methods.
+
+## Advantages and Disadvantages of JWT
+
+### Advantages of JWT
+
+- **Simplicity and ease of use**: JWTs are self-contained and don't require server-side storage, making them straightforward to implement and use in various scenarios.
+- **Compact and self-contained**: All necessary information is encoded within the token itself, reducing the need for database lookups and improving performance in distributed systems.
+- **Ideal for stateless applications**: JWTs fit perfectly into modern stateless architectures, especially in microservices environments where maintaining session state can be challenging.
+- **Cross-domain / CORS**: Since JWTs are self-contained, they work well across different domains, making them suitable for single-page applications and mobile apps that interact with backend APIs.
+
+### Disadvantages of JWT
+
+- **Stateless nature limitations**: Once issued, JWTs cannot be easily revoked before their expiration time. This can be a security concern if a token is compromised.
+- **Potential security risks**: Improper handling of JWTs can lead to vulnerabilities. Storing sensitive information in the payload (which is base64 encoded, not encrypted) can expose data if the token is intercepted.
+- **Token size**: As all information is contained within the token, JWTs can become quite large, especially with many claims. This can impact performance when tokens are sent with every request.
+- **Lack of fine-grained control**: Unlike OAuth's scope mechanism, standard JWTs don't inherently provide a way to control access at a granular level without custom implementation.
+
+## When to Use OAuth
+
+**OAuth shines in scenarios like::**
+
+- **Third-party application access**: When you want to allow external apps to access user data on their behalf (think "Login with Google" or allowing a third-party app to post on your social media).
+- **Implementing SSO**: For seamless user experience across multiple applications within an organization.
+- **Scenarios requiring fine-grained access control**: When you need to limit what resources a third-party can access and for how long.
+
+## When to Use JWT
+
+JWT is ideal for:
+
+- **Stateless authentication**: Perfect for web and mobile apps where you don't want to store session information server-side.
+- **Secure data transmission**: When you need to send information securely between parties.
+- **Microservices communication**: For authenticating requests between services in a distributed system.
+
+For a more detailed comparison of authentication solutions, including OAuth providers, check out this article on [Auth0 Alternatives](https://supertokens.com/blog/auth0-alternatives).
+
+## Can OAuth and JWT be used together?
+
+Absolutely! In fact, OAuth and JWT often complement each other beautifully. OAuth 2.0 can use JWTs as tokens, combining OAuth's robust authorization framework with JWT's compact, self-contained nature.
+
+Here's how they can work together:
+1. OAuth handles the authorization process and issues access tokens.
+2. These access tokens can be JWTs, containing claims about the user and their permissions.
+3. The resource server can then validate these JWT access tokens without needing to contact the authorization server for every request.
+
+This combination offers several benefits:
+
+- Reduced load on authorization servers
+- Improved performance in distributed systems
+- Enhanced security through JWT's signature verification
+
+A practical example might look like this:
+
+- A user logs in to your application using OAuth (say, "Login with Google").
+- Your authorization server creates a JWT containing user info and permissions.
+- This JWT is used as the access token for subsequent API requests.
+- Your API can verify the JWT's signature and extract user info without additional database lookups.
+
+To learn more about advanced token usage, including JWKs (JSON Web Key Sets), check out this guide on [Understanding JWKS](https://supertokens.com/blog/understanding-jwks).
+
+## Experience Seamless Authentication with OAuth and JWT Integration!
+Ready to implement robust authentication in your application? Look no further than SuperTokens! Our solution leverages the power of both OAuth and JWT to provide secure, flexible, and user-friendly authentication.
+
+With SuperTokens, you get:
+
+- Easy integration of OAuth providers
+- Secure JWT handling
+- Customizable login flows
+- SDKs for popular frameworks
+
+Don't let authentication be a bottleneck in your development process. [Secure Your App with SuperTokens](https://supertokens.com/) today and experience the difference!
+
+## Conclusion
+
+We've covered a lot of ground, haven't we? Let's recap:
+- **OAuth** is great for authorization and delegating access, especially when dealing with third-party applications.
+- **JWT** excels in stateless authentication and secure information exchange, perfect for modern web apps and microservices.
+- Both have their strengths and can even be used together for enhanced security and efficiency.
+
+Remember, there's no one-size-fits-all solution in the world of authentication and authorization. The best choice depends on your specific use case, security requirements, and application architecture.
+
+So, the next time you're building an app and scratching your head over authentication, you'll know whether to reach for OAuth, JWT, or both!
+
+For more insights on authentication protocols, check out our comparison of [SAML vs OAuth](https://supertokens.com/blog/saml-vs-oauth).
