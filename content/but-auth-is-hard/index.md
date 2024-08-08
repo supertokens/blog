@@ -13,6 +13,8 @@ Nowadays, the narrative has changed. "Auth is hard" feels like an ever-present n
 
 So, how hard can auth really be? Let's dig in.
 
+![Pepperidge farm remembers...](/8zmj3k.jpg)
+
 ## In the days of yore...
 
 Picking up where I left the story about PHP and md5, building a login functionality followed a similar set of steps; Get an email and a password, check for the existence of the email in your storage, hash the password together with the salt stored for that email, compare the resulting hash with the one stored in the database, and if it all works out fine, set a cookie via `setcookie` (we're still in PHP land here - not that the overall logic was too different in other ecosystems).
@@ -69,6 +71,8 @@ For an example provider here, I decided to go with GitHub for a simple reason—
 First off, we need one more dependency, `npm i passport-github2`. [passport-github2](https://www.passportjs.org/packages/passport-github2/) is an auth strategy for Passport, allowing us to integrate with GitHub's OAuth2 API.
 
 Some handlers (https://github.com/supertokens/auth-express/blob/master/index.mjs#L122-L133) and configuration (https://github.com/supertokens/auth-express/blob/master/index.mjs#L29-L45) later, well, that's it. Complicated? Probably not. Red-tapey? You bet. Boring? Absolutely. Especially if you get to do it over and over again. It is a solved problem; reinventing wheels is often not the best use of one's time as we've established.
+
+![What's your point?](/tenor-3826355393.gif)
 
 ## The big idea
 
@@ -131,5 +135,7 @@ _Storage + Auth_
 So, even if you're not into using third-party software for Auth, you can just pick an open-source one off the shelf, depending on your needs and preferences and roll with that.
 
 ## The takeaway: auth is the "red tape" of dev
+
+![Staaaaaaaaaaaaaaaaaaaaaaamp](/stamps.gif)
 
 My "big" takeaway is to avoid reinventing wheels, especially if it's a solved problem, as auth is. Get educated about said wheels, experiment with them, build a toy wheel, and understand it. But please, please, don't sell it as this impossibly hard thing to understand and build. Educate, don't gatekeep.
