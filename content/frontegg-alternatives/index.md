@@ -7,7 +7,7 @@ category: "programming"
 author: "Dejan Lukic"
 ---
 
-# Table of Contents
+## Table of Contents
 
 - [Introduction](#introduction)
 - [Where Does Frontegg Work Best?](#where-does-frontegg-work-best)
