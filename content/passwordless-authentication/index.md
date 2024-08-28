@@ -7,6 +7,17 @@ category: "featured"
 author: "Nemi Shah"
 ---
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Methods of Passwordless Authentication](#methods-of-passwordless-authentication)
+- [Passwordless Authentication vs. 2FA & MFA](#passwordless-authentication-vs-2fa--mfa)
+- [How to Implement Passwordless Authentication](#how-to-implement-passwordless-authentication)
+- [Is Passwordless Authentication Secure?](#is-passwordless-authentication-secure)
+- [Disadvantages of Passwordless Authentication](#disadvantages-of-passwordless-authentication)
+- [Using a Third Party vs Building It Yourself](#using-a-third-party-vs-building-it-yourself)
+- [Conclusion](#conclusion)
+
 ## Introduction
 
 Passwordless authentication works the way it sounds; it lets users log into your app/website without having to configure and remember a password. Typically this involves a One Time Password (OTP) or a Magic Link being sent to the user which they can use to log in, the code/link can be sent to the user’s email or phone.
