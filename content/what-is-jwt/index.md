@@ -7,6 +7,20 @@ category: "sessions"
 author: "Mostafa Ibrahim"
 ---
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [What is a JWT?](#what-is-a-jwt)
+- [What are Tokens and Why is it Needed?](#what-are-tokens-and-why-is-it-needed)
+- [Structure of a JWT](#structure-of-a-jwt)
+- [JWT Claim Convention](#jwt-claim-convention)
+- [How do JWTs Work?](#how-do-jwts-work)
+- [Pros and Cons of JWTs](#pros-and-cons-of-jwts)
+- [Common Issues During Development](#common-issues-during-development)
+- [Benefits of Using JWT Tokens](#benefits-of-using-jwt-tokens)
+- [Challenges and Considerations](#challenges-and-considerations)
+- [Further Reading Material](#further-reading-material)
+
 ## Introduction
 
 Authentication and authorization are fundamental aspects of web application security. They ensure that users are who they claim to be and have the right permissions to access specific resources. Traditionally, this was handled through session-based authentication, where user information was stored on the server. However, as applications became more complex and distributed, traditional authentication methods relying on opaque tokens or session-based approaches faced limitations. Validating these tokens often required multiple database lookups and complex server-side logic, leading to performance issues and scalability challenges. The stateful nature of these tokens meant servers had to maintain session information, which could quickly become unwieldy as the number of users and devices grew.
@@ -132,7 +146,7 @@ This contains the information about which signing algorithm is used. Like the pa
     Results in:
     3Thp81rDFrKXr3WrY1MyMnNK8kKoZBX9lg-JwFznR-M
     ```
-    
+
     We base64 encode it only as an industry convention.
 
 ### 5) Creating the JWT
