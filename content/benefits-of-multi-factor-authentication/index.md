@@ -103,7 +103,7 @@ Once a hacker obtains a user’s login credentials, they can access sensitive in
 
 For instance, thousands of high-profile YouTube accounts got hacked in 2019-2020 through session hijacking and using privilege escalation to change account owners. That is why protecting sensitive actions like "changing account ownership" behind secondary factors is important. This common strategy used by many applications can reduce the fallout of a compromised account.
 
-### Traditional security mechanisms, primarily relying on username and password combinations, have several inherent weaknesses:
+Traditional security mechanisms, primarily relying on username and password combinations, have several inherent weaknesses:
 
 - **Single Point of Failure:** If a password is compromised, the entire account becomes vulnerable. MFA mitigates this risk by requiring additional factors, making it much harder for attackers to gain unauthorized access even if they obtain the password.
 - **Password Reuse:** Users often reuse passwords across multiple accounts, amplifying the impact of a single breach. MFA helps contain the damage from password reuse, as the additional factors are typically unique to each service.
