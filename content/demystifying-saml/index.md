@@ -1,6 +1,6 @@
 ---
 title: "Demystifying SAML: A Comprehensive Guide"
-date: "2024-08-16"
+date: "2024-08-20"
 description: "SAML is an authentication standard created to address the growing need of federated identity. In this blog we go over what SAML is and what makes it special."
 cover: "demystifying-saml.png"
 category: "featured"
