@@ -1,6 +1,6 @@
 ---
 title: "Cookies vs. LocalStorage: Storing Session Data and Beyond"
-date: "2020-06-23"
+date: "2024-08-16"
 description: "Learn about the best approach and common misconceptions of storing sessions in cookies or browser storage"
 cover: "cookies-vs-localstorage-for-sessions-everything-you-need-to-know.png"
 category: "sessions"
