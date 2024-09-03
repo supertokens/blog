@@ -10,16 +10,18 @@ author: "Mostafa Ibrahim"
 
 ## Table of Contents
 
-1. [What Is Multi-Factor Authentication (MFA)?](#what-is-multi-factor-authentication-mfa)
-2. [Types of Multi-Factor Authentication](#types-of-multi-factor-authentication)
-3. [10 Benefits of Multi-Factor Authentication](#10-benefits-of-multi-factor-authentication)
-4. [Problems With Traditional Security Mechanisms and How MFA Solves Them](#problems-with-traditional-security-mechanisms-and-how-mfa-solves-them)
-5. [Designing Multi-Factor Authentication Without Sacrificing Good UX](#designing-multi-factor-authentication-without-sacrificing-good-ux)
-6. [Real-world Use Cases of Multi-Factor Authentication](#real-world-use-cases-of-multi-factor-authentication)
-7. [The Future of Secure Access: What to Expect for MFA?](#the-future-of-secure-access-what-to-expect-for-mfa)
-8. [Getting Started with MFA in 2024](#getting-started-with-mfa-in-2024)
-9. [Conclusion](#conclusion)
+- [Introduction](#introduction)
+- [What Is Multi-Factor Authentication (MFA)?](#what-is-multi-factor-authentication-mfa)
+- [Types of Multi-Factor Authentication](#types-of-multi-factor-authentication)
+- [10 Benefits of Multi-Factor Authentication](#10-benefits-of-multi-factor-authentication)
+- [Problems With Traditional Security Mechanisms and How MFA Solves Them](#problems-with-traditional-security-mechanisms-and-how-mfa-solves-them)
+- [Designing Multi-Factor Authentication Without Sacrificing Good UX](#designing-multi-factor-authentication-without-sacrificing-good-ux)
+- [Real-world Use Cases of Multi-Factor Authentication](#real-world-use-cases-of-multi-factor-authentication)
+- [The Future of Secure Access: What to Expect for MFA?](#the-future-of-secure-access-what-to-expect-for-mfa)
+- [Getting Started with MFA in 2024](#getting-started-with-mfa-in-2024)
+- [Conclusion](#conclusion)
 
+## Introduction
 
 In 2022, over [80% of data breaches](https://www.verizon.com/business/en-gb/resources/2022-data-breach-investigations-report-dbir.pdf) were attributed to compromised passwords.
 
@@ -33,7 +35,7 @@ Multi-Factor Authentication is a security mechanism that requires users to provi
 
 ### Types of Multi-Factor authentication
 
-With Multi-factor authentication, the user would have to prove their identity through multiple forms of identification. The basic idea is that adding challenges to the authentication flow exponentially increases the difficulty of the account being compromised. 
+With Multi-factor authentication, the user would have to prove their identity through multiple forms of identification. The basic idea is that adding challenges to the authentication flow exponentially increases the difficulty of the account being compromised.
 
 These additional forms of authentication can be based of the following types:
 
@@ -43,7 +45,7 @@ These additional forms of authentication can be based of the following types:
 
 The implementation of additional factors is a tradeoff between security and user experience. While not always true, higher security leads to a more cumbersome user experience. We’ll evaluate the security and UX tradeoffs associated with different authentication factors
 
-### Common MFA methods include:
+### Common MFA methods include
 
 1. **SMS or email-based one-time passwords (OTP)**: The system sends a unique code via text message or email. While convenient, this method is vulnerable to interception.
 2. **Authenticator apps generating time-based one-time passwords (TOTP)**: These apps generate short-lived codes on the user's device. They're more secure than SMS but require the user to have a compatible device.
@@ -111,14 +113,14 @@ Traditional security mechanisms, primarily relying on username and password comb
 - **Phishing Vulnerability:** Traditional systems are susceptible to phishing attacks that trick users into revealing their credentials. MFA, especially when using hardware keys or biometrics, offers robust protection against phishing. Even if a user falls for a phishing attempt, the attacker won't have the additional factors needed to access the account.
 - **Lack of User Verification:** Password-only systems cannot verify if the person entering the correct credentials is actually the authorized user. MFA addresses this by incorporating factors that are inherently tied to the user, such as biometrics or possession-based factors like a smartphone or hardware key.
 
-### MFA addresses these issues by adding additional layers of security and verification:
+### MFA addresses these issues by adding additional layers of security and verification
 
 - **Biometric Factors:** Fingerprints, facial recognition, or iris scans provide a highly secure and user-friendly authentication method. These are extremely difficult to spoof, especially when combined with other factors.
 - **Hardware Keys:** USB or NFC-based security keys offer a physical factor that must be present for authentication. These are highly resistant to remote attacks and phishing attempts.
 - **Time-based One-Time Passwords (TOTP):** Apps like Google Authenticator generate temporary codes that change every 30 seconds, adding a dynamic layer of security.
 - **Push Notifications:** Services can send authentication requests directly to a user's registered device, allowing for quick and secure approval of login attempts.
 
-### It's important to note that while MFA significantly enhances security, it's not a silver bullet. Good cybersecurity practices remain crucial:
+### It's important to note that while MFA significantly enhances security, it's not a silver bullet. Good cybersecurity practices remain crucial
 
 - Using password managers to generate and store strong, unique passwords for each account.
 - Staying vigilant about clicking links and checking domain names before entering credentials or performing sensitive actions.
@@ -139,12 +141,11 @@ While security is paramount, it's crucial to implement MFA in a way that doesn't
 
 By focusing on these aspects, organizations can implement robust MFA systems that enhance security without frustrating users.
 
-
 ## Real-world Use Cases of Multi-Factor Authentication
 
-A good example of an MFA is corporate data protection. Companies use Security Assertion Markup Language (SAML) for Single Sign-On (SSO) authentication to allow employees to access multiple applications with one set of credentials. 
+A good example of an MFA is corporate data protection. Companies use Security Assertion Markup Language (SAML) for Single Sign-On (SSO) authentication to allow employees to access multiple applications with one set of credentials.
 
-Integrating MFA with SAML adds an extra layer of security. When employees access resources, they not only enter their credentials but also authenticate via a second factor. For example, an SMS or email passcode, or biometric verification. Adding a second factor ensures that only authorized personnel can access sensitive corporate data. 
+Integrating MFA with SAML adds an extra layer of security. When employees access resources, they not only enter their credentials but also authenticate via a second factor. For example, an SMS or email passcode, or biometric verification. Adding a second factor ensures that only authorized personnel can access sensitive corporate data.
 
 The same is true for [Lightweight Directory Access Protocol (LDAP)](https://supertokens.com/blog/what-is-ldap). Many organizations use LDAP to store and manage user access to different systems. Integrating MFA with LDAP means that when users try to access a system, they must provide additional authentication like an SMS or email passcode. Integrating LDAP with MFA is particularly useful in large organizations with complex access control requirements.
 
@@ -159,7 +160,6 @@ While biometric factors are already a part of MFA, they are expensive. However, 
 - **Adaptive and Contextual Authentication**
 
 One downside of MFA is the friction it can add to the authentication experience. Multiple factors increase the likelihood of the user dropping off during the login process. Adaptive and Contextual MFA analyze patterns such as device use, location, and access times to dynamically increase the number of factors a user must go through to authenticate. If the system sees that the user is accessing his account from his personal computer from his usual IP address he may be presented with a single factor during authentication. If the user tries to authenticate from a different device and timezone, then additional factors may be provided to prove the user's identity.
-
 
 In short, the future of MFA is expected to be more integrated with a strong focus on context and biometrics.
 
@@ -188,6 +188,6 @@ npx create-supertokens-app@latest --recipe=multifactorauth
 You can find the complete documentation for [SuperTokens MFA here](https://supertokens.com/docs/mfa/introduction).
 
 ## Conclusion
-Traditional authentication methods have become susceptible to cyber attacks. MFA acts as a roadblock, making it exponentially harder for an attacker to compromise an account. For this reason, many companies have made MFA a requirement. 
-SuperTokens is on a mission to make it easier for developers to add MFA capabilities to their applications. 
 
+Traditional authentication methods have become susceptible to cyber attacks. MFA acts as a roadblock, making it exponentially harder for an attacker to compromise an account. For this reason, many companies have made MFA a requirement.
+SuperTokens is on a mission to make it easier for developers to add MFA capabilities to their applications.
