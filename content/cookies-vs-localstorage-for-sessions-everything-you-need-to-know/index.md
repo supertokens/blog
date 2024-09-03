@@ -1,104 +1,185 @@
 ---
-title: Cookies vs Localstorage for sessions–everything you need to know
+title: "Cookies vs. LocalStorage: Storing Session Data and Beyond"
 date: "2020-06-23"
 description: "Learn about the best approach and common misconceptions of storing sessions in cookies or browser storage"
 cover: "cookies-vs-localstorage-for-sessions-everything-you-need-to-know.png"
 category: "sessions"
-author: "Rishabh Poddar"
+author: "Darko Bozhinovski"
 ---
 
-For logged-in users, session tokens act as a proxy to their identity. These tokens (JWT or non-JWT) are issued by the backend and sent to the frontend where they are stored. If they are misused or stolen, the attacker can gain unauthorized access to the victim’s account. As such, we must make sure to **minimize the risk of all the possible ways a session attack can be carried out.**
 
-One of the session attack vectors is the frontend client – the web browser. The session tokens are stored here for as long as the user is logged in. This means we must be careful about where and how we store them. This is where we start to consider the debate of browser storage (localstorage, sessionstorage etc..) vs cookie storage.
+## Table of Content
 
-Before we get into the pros and cons of the two storage types, let’s examine their properties briefly.
+- [Introduction](#introduction)
+- [Understanding Cookies vs. Local Storage](#understanding-cookies-vs-local-storage)
+- [What are Cookies?](#what-are-cookies)
+- [What is LocalStorage?](#what-is-localstorage)
+- [The Key Differences Between Cookies And Local Storage](#the-key-differences-between-cookies-and-local-storage)
+- [When should you use which?](#when-should-you-use-which)
+- [Cookies vs. LocalStorage For Session Storage](#cookies-vs-localstorage-for-session-storage)
+- [Takeaway](#takeaway)
 
-_A clarification point: Both JWT and non-JWT (opaque) session tokens can be stored in cookie storage or in browser storage. The only difference between the two types is the amount of space they take up, which we will consider in this article. But apart from this difference, when we refer to “session token”, we mean either of the two types._
+## Introdcution
 
-## Storage properties
+On the web platform, we have several ways of storing data. As the title implies, the two most used ones are Cookies and the LocalStorage API. In this article, we'll explore what they are, what they are used (and abused) for, and how we can use them for authentication and session management.
 
-The table below compares the different storage mechanisms across all the various relevant properties. Note that ‘browser storage’ can actually be either local or session storage, IndexedDB or Web SQL.
+## Understanding Cookies vs. Local Storage
 
-![Property Comparision Table](./property-comparision-table.png)
+To properly understand the differences between these two, we need to first examine the history of the web platform, the storage needs that arose with the increasing complexity of the apps we built for it, and the different methods available to store data in our browsers.
 
-Session storage <span style="color:red;font-family:Montserrat,sans-serif" >**X**</span> - Most apps require the user to be logged in even if they open multiple browser tabs or restart the browser and hence we can eliminate this method of storage (don’t be deceived by its name).
+### The many ways to store data in the browser
 
-IndexedDB <span style="color:red;font-family:Montserrat,sans-serif" >**X**</span> – Session tokens are key-value pairs. As such, they do not need complex querying capabilities. Using IndexedDB can technically be an option, however, it would be more complex than using localstorage for the purposes of storing and retrieving session tokens.
+Here's a handy table that goes over (some of) the methods to store data in modern browsers:
 
-Web SQL <span style="color:red;font-family:Montserrat,sans-serif" >**X**</span> - Looking at the table, it is clear that WebSQL was never an option.
+| Storage Method          | Type      | Description                                                                                                                                      | Storage Limit         | Persistence                                              |
+|-------------------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|----------------------------------------------------------|
+| **Cookies**              | Standard  | Small pieces of data stored by the browser are sent back to the server with every HTTP request. Primarily used for session management, authentication, and tracking user behavior. | ~4KB per cookie        | Typically set with an expiration date; can be session-based or persistent. |
+| **Local Storage**        | Standard  | A key-value pair storage in the browser that persists data even after the browser is closed. Ideal for storing small amounts of data that need to persist across sessions.         | ~5-10MB per domain     | Persistent until explicitly deleted.                     |
+| **Session Storage**      | Standard  | Similar to Local Storage, but data is only available for the page session duration. Data is cleared when the page or tab is closed.             | ~5-10MB per domain     | Session-based.                                           |
+| **IndexedDB**            | Standard  | A low-level API for storing large amounts of structured data (including files and blobs). Provides a robust solution with support for transactions, searching, and indexing.     | Dependent on browser implementation; typically several GBs | Persistent until explicitly deleted.                     |
+| **WebSQL**               | Non-Standard (Deprecated) | A database storage mechanism using SQL syntax. It was intended to be a more powerful alternative to Local Storage but was deprecated in favor of IndexedDB.                   | Similar to IndexedDB   | Persistent until explicitly deleted.                     |
+| **File System Access API** | Non-Standard (Emerging Standard) | Allows web applications to read and write to the local file system, providing a powerful way to manage files directly on a user's device.                                           | It depends on user permissions and browser implementation. | Persistent until explicitly deleted by the application or user. |
 
-We are left with choosing between localstorage and Cookie storage.
+While Cookies, Local Storage, Session Storage, and IndexedDB are standards and widely accepted, WebSQL, although still in use in some places, is being phased out. The File System Access API is relatively new, and even though it's considered an emerging standard, we're not sure how well-supported it will be outside of the Chromium family of browsers.
 
-## Cookies vs Localstorage
+As a general rule, if you don't have a really specific case to deal with, use the widely supported standards. That's the only guaranteed path to a good client-side storage UX for all your users, regardless of their browser choice.
 
-We will compare these storage types from a usability and security point of view. For usability, we will consider ease of writing, reading and deleting session tokens, and any limitations placed by each of the storage types for specific use cases.
+## What are Cookies?
 
-From a security point of view, we will consider the different methods that can be used for token misuse or theft for each of the storage types.
+Cookies have been with us for quite a while - initially, they were introduced back in '94 and were widely accepted by '95. On the surface, Cookies are a simple idea - to quote Wikipedia:
 
-## Usability analysis
+> Cookies are small blocks of data created by a web server while a user is browsing a website and placed on the user's computer or another device by the user's web browser.
 
-1. <u>Size constraints</u>: Cookies have a size limitation of 4kb per domain, whereas localstorage size is an order of magnitude larger. For most cases, 4kb is more than enough for storing session tokens, even when using JWTs[_[1]_](/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know#footer-note-1).
+And that idea was pretty good for the early days of the web platform - we got to use a whopping 4096 bytes per cookie! This joke aside, was pretty decent for the early days of the web, but the stuff we built and deployed on the web got increasingly complex. With that complexity, however, we soon realized that we either have to limit ourselves to 4KB of storage, cobble together something that uses multiple cookies (still limited), or call it a day and let the server worry about storage.
 
-   **Cookie: 1; Localstorage: 1**
+One of the answers to that problem became LocalStorage.
 
-2. <u>Automatic management</u>: Cookies are automatically saved, sent and removed by the browser. The frontend developer does not have to worry about implementing this part, nor is there any scope of a mistake from the frontend side. This is not true for localstorage.
+## What is LocalStorage?
 
-   **Cookie: 2; Localstorage: 1**
+LocalStorage (okay, the localStorage part of Web Storage, if we're being pedantic) was introduced as a part of the HTML5 specification to address some of the limitations of Cookies (most obviously, the storage size).
 
-3. <u>Server side rendered apps</u>: When doing browser level navigation (user types in a URL into their browser / opens a link on a new tab), only cookies are sent. This means, for those API calls to the server, they will only get the session tokens if they are using cookies – localstorage will not work.
+Unlike Cookies, which are sent with every HTTP request, LocalStorage allows web applications to store much more data in the browser. The key advantage here is its storage capacity—rather than being limited to a few kilobytes like Cookies, LocalStorage allows for around 5 to 10 megabytes of data per domain, depending on the browser.
 
-   **Cookie 3; Localstorage 1**
+This makes LocalStorage particularly useful for storing persistent data you don’t need to send to the server with every request. Think user preferences, UI state, or any other data that needs to persist between sessions but doesn’t need to be shared with the server.
 
-4. <u>Sharing the same session across subdomains</u>: The objective here is that the user should use the same session when navigating to different subdomains of a site. This can be easily done via cookies by setting the cookie domain as “.yoursite.com”. <br/> This is not easily possible to do via localstorage since the store is not shared across domains / subdomains. One can use iframes to hack around this, however it’s non trivial.
+## The Key Differences Between Cookies And Local Storage
 
-   **Cookie: 4; Localstorage: 1**
+Let's first have a look at how they compare to one another in terms of technical specification:
 
-## Security Analysis
+| Feature                 | Cookies                               | Local Storage                      |
+|-------------------------|---------------------------------------|------------------------------------|
+| **Storage Capacity**    | ~4KB per cookie                       | ~5-10MB per domain                 |
+| **Expiration**          | Can be set with an expiration date; can be session-based or persistent | Persistent until explicitly deleted |
+| **Data Transmission**   | Sent with every HTTP request to the server | Not sent with HTTP requests, client-side only |
+| **Accessibility**       | Accessible from both client and server-side | Accessible only from the client-side |
+| **Security**            | Vulnerable to cross-site scripting (XSS); can be marked as HttpOnly and Secure to reduce risk | Vulnerable to XSS; not suitable for sensitive data |
+| **API**                 | `document.cookie` for manual handling; set/get via HTTP headers | `localStorage.setItem()` and `localStorage.getItem()` methods |
+| **Scope**               | Accessible by all paths of the domain, subdomains, and across protocols (with domain and path attributes) | Scoped to the domain and protocol (origin) |
 
-1. <u>Token misuse via XSS attack</u>: An XSS attack happens when “malicious” JavaScript is injected into a website. Some ways in which this code injection can happen are incorrect input / output validation, a rogue third party script being loaded into the site’s frontend code or social engineering.
+### Setting and getting data with Cookies
 
-   If using localstorage, the malicious JS code can easily read the session tokens and transmit them to the attacker. The attacker would then put these tokens into their browser and have significant, if not complete access to that user’s account.
+Now, I'm not going to beat around the bush - the standard API for Cookies is... mildly put, outdated. And certainly not too user-friendly by today's DX standards.
 
-   Cookies have this special flag called httpOnly. If set, it prevents any JS on the frontend from reading that cookie’s value. This means that the malicious JS code cannot send the access token to the attacker. However, that code can still do malicious API calls while the user is using the site. Depending on the product and the reason for the attack, that may not be enough to fulfill the attacker’s intention.
+Here's an example:
 
-   **Cookie: 5; Localstorage: 1**
+```javascript
+// Setting a cookie
+document.cookie = "username=JohnDoe; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/"; 
 
-2. <u>Token misuse via CSRF attack</u>: This is an attack that forces an end user to execute unwanted actions on a web application in which they’re currently authenticated. This unwanted action is performed when a user visits a third party malicious site. This attack is only possible if using cookies to store access tokens. However, it can also be easily mitigated using anti-csrf tokens or the sameSite flag in cookies. Regardless, when using localstorage, one does not need to think about this attack vector.
+// Getting a cookie
+let allCookies = document.cookie; 
+console.log(allCookies); // Example output: "username=JohnDoe; theme=dark; sessionToken=abc123"
 
-   **Cookie: 5; Localstorage: 2**
+// Example: Parsing a specific cookie value manually
+let cookiesArray = allCookies.split('; ');
+let usernameCookie = cookiesArray.find(cookie => cookie.startsWith('username='));
+let username = usernameCookie ? usernameCookie.split('=')[1] : null;
 
-3. <u>Token theft via a malware</u>: This is a growing concern. In fact, many large Youtube subscribers’ accounts were hijacked because their session tokens were stolen via a malware on their computer. They were infected with this malware due to a social engineering attack. Neither localstorage, nor cookie storage will make a difference to mitigate this attack (hence no points awarded to either). The only measure one can take here is to have [token theft detection](https://datatracker.ietf.org/doc/html/rfc6819#section-5.2.2.3) in place.
+console.log(username); // Outputs: "JohnDoe"
+```
 
-   **Cookie: 5; Localstorage: 2**
+By now it's probably obvious that using the raw API might not be the best experience. Luckily, we have a ton of libraries to help with that - `js-cookie` is my favorite, but NPM offers a lot of choices on the matter.
 
-## Misconceptions
+### Setting and getting data with LocalStorage
 
-1. <u>Cookies can be cleared by the user</u>: This is true, however, the same holds for localstorage as well. When clearing browsing history and cookies, localstorage is also cleared.
+LocalStorage is a lot more modern compared to the Cookies API:
 
-2. <u>No need for cookie consent when using localstorage</u>: A site only needs to ask for cookie consent for cookies that are not “strictly necessary cookies” (learn more about it [here](https://gdpr.eu/cookies/)). Session cookies count as strictly necessary and hence a user cannot deny their usage. That being said, the user still needs to be told about their existence.
+```js
+// Setting an item
+localStorage.setItem("username", "JohnDoe");
 
-3. <u>Mobile apps cannot use cookies</u>: This is simply not true. All mobile development frameworks (iOS, Android, React Native, Flutter, Cordova, etc..) have native support for cookies.
+// Getting an item
+let username = localStorage.getItem("username");
+console.log(username);  // Outputs: JohnDoe
+```
 
-## Conclusion
+No library is necessary (at least for the common use cases). However, there is an important caveat. It's a bit more obvious with cookies - everything is a string. You're always storing and parsing a string. The same applies to LocalStorage too - you can store numbers, booleans, even more complex things like objects and arrays. However, the result of using setItem with those types is probably not what you'd expect:
 
-Based on the final scores (Cookie: 5; Localstorage: 2), it’s quite clear that httpOnly, secure cookies is the right way to go for storing session tokens. This is also a recommendation from the OWASP community[_[2]_](/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know#footer-note-2).
+```js
+// Properly storing and retrieving complex data types
 
-This article is written by the team at [SuperTokens](/blog) – we are building a session management solution that optimizes for security, developer, and end-user experience. If you liked this article, you may also be interested in:
+// Storing an object
+const user = { name: 'John', age: 30 };
+localStorage.setItem('user', JSON.stringify(user));
 
-- [Are you using JWTs for user sessions in the correct way?](/blog/are-you-using-jwts-for-user-sessions-in-the-correct-way)
-- [The best way to securely manage user sessions](/blog/the-best-way-to-securely-manage-user-sessions)
+// Retrieving and parsing the object
+const retrievedUser = JSON.parse(localStorage.getItem('user'));
+console.log(retrievedUser);  // Outputs: { name: "John", age: 30 }
+```
 
-## Footnotes
+### When should you use which?
 
-[1]: A typical JWT contains the following information:
-   - iss (issuer): site name (20 bytes is a good upper limit)
-   - sub (subject): 36 bytes UUID
-   - aud (audience): site name (20 bytes is a good upper limit)
-   - exp (expiry): timestamp: 13 bytes
-   - nbf (not before time): timestamp: 13 bytes
-   - iat (issued at time): timestamp: 13 bytes
-   - custom roles and information: 200 bytes more
+"It depends." That's obvious, but humor aside, the answer to this will always depend on what you're trying to do. As we've seen, both Cookies and LocalStorage have pros and cons.
 
-This is a total of 315 bytes. The JWT header is normally between 36 and 50 bytes and finally the signature is between 43 and 64 bytes. So this gives us a maximum of 429 bytes which would take about 10% of cookie space.
+#### Cookies
 
-[2]: *“Do not store session identifiers in localstorage as the data is always accessible by JavaScript. Cookies can mitigate this risk using the httpOnly flag.”* [Source](https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html)
+**Session Management and Authentication:** Cookies, especially with the HttpOnly and Secure flags, are the best choice for storing session tokens securely. They are automatically sent with every HTTP request, which makes them ideal for server-side authentication and session persistence across browser tabs and page reloads.
+
+**Subdomain and Cross-Domain Session Sharing:** Cookies are also advantageous when sharing session data across subdomains (e.g., `app.yoursite.com` and `admin.yoursite.com`). By setting the Domain attribute to `.yoursite.com`, the same session data can be shared across different subdomains seamlessly.
+
+**Automatic Expiry Management:** For sessions that need to expire after a certain amount of time (e.g., logins expiring after 30 minutes), cookies offer an automatic way to handle this through the `expires` or `max-age` attributes.
+
+#### Local Storage
+
+**Persistent UI and Application State:** Local Storage is well-suited for storing client-side application data that doesn't need to be sent to the server on every request, such as user preferences (e.g., themes, layout configurations) or progress in a multi-step form. It's ideal for keeping this data persistent across page reloads or browser sessions.
+
+**Single-Page Applications (SPAs):** If you're building an SPA where most of the user interaction happens without reloading the page or making server requests, Local Storage is a good option for storing application state or non-sensitive session data.
+
+### Cookies vs. LocalStorage For Session Storage
+
+To narrow things down to the session storage use case, let's see how Cookies compare to LocalStorage:
+
+#### When To Use Cookies To Store Session Data
+
+In most cases, cookies are the recommended choice for session storage, particularly when security is a top priority. This is because cookies can be configured with the HttpOnly and Secure flags, which greatly reduce the attack surface for session token theft.
+
+**Secure Authentication:** If you're managing user authentication, you should use cookies to store session tokens. The HttpOnly flag ensures that JavaScript running on the page cannot access the cookie, reducing the risk of XSS attacks. The Secure flag guarantees the cookie is only sent over HTTPS, preventing exposure on insecure connections.
+
+**Server-Side Sessions:** Since cookies are automatically sent with every request to the server, they are the ideal choice for traditional server-side session management. This makes them particularly useful in web applications where the server is responsible for maintaining session state, such as server-rendered applications or when interacting with APIs that require authentication on every request.
+
+**Subdomain Sharing:** If your application spans multiple subdomains (e.g., `shop.yoursite.com` and `auth.yoursite.com`), cookies allow for sharing session tokens across these subdomains. By setting the domain attribute, you can ensure that a user logged in on one subdomain remains authenticated across the others.
+
+**Cross-Site Scripting Protection:** Cookies are generally more secure for storing session tokens, particularly if you're concerned about XSS attacks. By leveraging the HttpOnly and SameSite flags, you can minimize the attack surface and mitigate both XSS and CSRF attacks.
+
+In a nutshell, anything auth-specific should likely end up in a Cookie.
+
+#### When To Use Local Storage To Store Session Data
+
+Local Storage can be used for session storage in certain scenarios, but this approach is generally less secure. It should be considered only when the risk of XSS is minimal or when the session data is not sensitive.
+
+**Single-Page Applications (SPAs):** If you're building a client-side-only application where session tokens are needed to persist across page reloads but do not need to be sent with every HTTP request, Local Storage might be a more straightforward solution. However, you need to be cautious about XSS risks and ensure your application is properly secured.
+
+**Short-Lived Sessions:** Local Storage can be used for short-lived non-sensitive sessions where tokens are discarded after a single user interaction or within the same session. This is particularly useful when you don't need the tokens to persist across tabs or page reloads.
+
+**Local Caching:** Local Storage is useful for storing non-sensitive data that enhances the user experience, such as session-based UI state or data retrieved from an API that needs to persist across sessions. For example, if you need to store a user's shopping cart across browser sessions, Local Storage can hold this data without repeatedly fetching it from the server.
+
+**Offline Usage:** For offline-first applications where you need to cache session data while the user is disconnected from the internet, Local Storage provides a way to temporarily hold session tokens until the application reconnects to the server. However, caution must be taken to ensure these tokens are cleared or handled securely once the user reconnects.
+
+In a nutshell, anything that's a setting that's important to the client-side can go in LocalStorage. You can store session data in LocalStorage, but in general, it should be avoided if possible.
+
+## Takeaway
+
+In summary:
+
+- Cookies are the go-to choice for secure session management and authentication due to their ability to mitigate XSS and CSRF attacks.
+- Local Storage is best suited for client-side state management and non-sensitive session data in SPAs, but it's generally not recommended for storing authentication tokens due to security risks.
