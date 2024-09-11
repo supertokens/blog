@@ -1,15 +1,73 @@
 ---
-title: Adding login to your Next.js app using the app directory with SuperTokens
-date: "2023-10-23"
-description: "This blog explains how to setup email password and social login with SuperTokens using the app directory in Next.js."
+title: Securing your Next.js with Authentication
+date: "2024-08-19"
+description: "This blog explains how to setup email password and social login with SuperTokens in Next.js."
 cover: "adding-login-to-your-nextjs-app-using-the-app-directory-and-supertokens.png"
 category: "programming"
-author: "Nemi Shah"
+author: "Dejan Lukic"
 ---
 
-Next.js has become a popular framework for building web applications. The framework recently introduced its [`app`](https://nextjs.org/docs/app/building-your-application/routing#the-app-router) directory as a future replacement to the current way of organising the project and creating pages and api routes.
+## Understanding Next.js
 
-This blog will cover how to setup email password and social login authentication with SuperTokens using the app directory in Next.js.
+Next.js, a powerful React framework has rapidly gained popularity due to its versatility and ability to build both static and dynamic web applications. 
+
+Featuring server-side rendering (SSR) and static site generation (SSG) capabilities, Next.js makes creating and deploying websites easy with its tight integration with Vercel.
+
+This article will cover how Next.js handles rendering and authentication, discuss some authentication strategies, and how to implement an authentication solution in Next.js.
+
+## Authentication in Next.js
+
+While the concept of authentication and its strategies are the same for all JavaScript frameworks, including Nextjs, what sets Nextjs and other frameworks like it apart are the patterns available for preventing unauthenticated users from accessing protected routes, commonly referred to as authentication patterns.
+
+To understand what authentication means for Nextjs, you must first understand how Nextjs renders things. 
+
+**With Nextjs, three types of rendering are available: client-side rendering, server-side rendering, and static site generation.**
+
+- CSR: With client side rendering, a minimal HTML file and the bundled JavaScript code are sent to the browser. The JavaScript is then executed in the browser to render the page.
+
+- SSR: With server-side rendering, as the name implies the full HTML for the page content is rendered on the server upon a user’s request and is then sent to the browser.
+
+- SSG: In static site generations the HTML for each page is generated at build time and sent to the browsers at the user’s request.
+
+## Authentication vs. Authorization in Next.js
+
+Authentication and authorization are two crucial concepts in application security, but they serve two distinct purposes:
+
+Authentication: Process that verifies the identity of a user, answering the question “Who are you?”. Authentication typically involves logging in with credentials (like username and password), or through a third-party service (like Google, Facebook, GitHub…). 
+
+Once authenticated, the user is recognized by the app, allowing access to resources tied to their account.
+
+Authorization: Once the user is authenticated, authorization determines what they are allowed to do (comparable to permissions), answering the question “What action can you perform?”. 
+
+Authorization involves checking whether the authenticated user has the necessary permissions to access specific resources or perform certain actions. For example, an authenticated user might be authorized to view their profile, but not authorized to access the admin dashboard.
+
+You can learn more about the differences between the two in our [blog](https://supertokens.com/blog/authentication-vs-authorization).
+
+## Nextjs Authentication Stratergies
+
+There are two common authentication stratergies when preventing unauthenticated users from accessing proctected routes in Nextjs. These included static generation and server-side authentication and server-side authentication. It is important to choose the a stratergy that suits your application and requirements.
+
+
+### Static generation pattern
+
+In Next.js, when a page doesn’t contain blocking functions such as `getStaticProps` and `getInitialProps`, it is automatically prerendered to static HTML. Based on this, for the static generation pattern, when a page is requested, a loading state that has been statically generated is first served, followed by an attempt to fetch a user’s data in the client. 
+
+If successful, the requested page is displayed. Otherwise, the user is redirected to the login page and will see errors explaining why the check failed.
+
+This pattern has the disadvantage of displaying secure content to an unauthenticated user.
+
+### Server-side pattern
+
+In this pattern, when the browser requests a server-side rendered page, a request is sent to the backend API to get a user session. If successful, the server pre-renders the requested page on the server and sends it to the browser; otherwise, the user is redirected to the login page.
+
+Unlike the static generation pattern, with this pattern, there will be no flash of unauthenticated content (FOUC) or a need to use a loading indicator.
+
+One disadvantage is that the rendering will be blocked until the backend API responds. This is because getServerSideProps is blocking until the request resolves. 
+
+
+## Setting up Next.js Authentication with SuperTokens
+
+
 
 ## (Recommended) Use `create-supertokens-app`
 
