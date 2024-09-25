@@ -106,5 +106,23 @@ module.exports = [{
   ],
   bio:
     "Developer, writer, speaker, and Linux nerd. Remembers IE6.",
+}, {
+  name: "Connor Peshek",
+  jobTitle: " DevRel at SuperTokens",
+  image: "connor.jpg",
+  socials: [
+    {
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/connor-peshek/",
+    }, {
+      name: "twitter",
+      url: "https://twitter.com/conzorkingkong",
+    }, {
+      name: "github",
+      url: "https://github.com/conzorkingkong"
+    }
+  ],
+  bio:
+    "Musician, horror movie lover, and total nerd.",
 }
 ]
