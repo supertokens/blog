@@ -4,6 +4,9 @@ We’re glad that you are interested in contributing to SuperTokens 🎉
 We welcome contributions of all kinds (discussions, bug fixes, features, design changes, videos, articles) and from anyone 👩‍💻🤚🏿🤚🏽🤚🏻🤚🏼🤚🏾👨‍💻.
 
 ## Project setup
+
+*This project requires node version `16.4.2`. You can use [nvm](https://github.com/nvm-sh/nvm) to manage multiple versions of node on your machine.*
+
 Clone the project by running the following command
 
 ```sh
