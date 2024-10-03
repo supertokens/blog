@@ -33,6 +33,8 @@ To answer the question, “Anomaly detection” is the process of analyzing data
 
 Let's take a look at some of the features of the toolset
 
+![bruute force attacks](./Brute%20Force%20Attack%20Detection.png)
+
 ### **1. Brute Force Attack Detection**
 
 Brute force attacks involve trying various combinations of usernames and passwords until the correct one is found. One of the oldest existing methods that is still used, traditionally this method is slow but, when scaled to hundreds of thousands of bots each sending thousands of credentials checks, it can lead to compromised accounts.
@@ -40,6 +42,9 @@ Brute force attacks involve trying various combinations of usernames and passwor
 For instance, in 2020, a [brute force attack on the music streaming service Spotify](https://www.bleepingcomputer.com/news/security/over-300k-spotify-accounts-hacked-in-credential-stuffing-attack/) led to the exposure of 300,000 accounts. Without detection mechanisms, attackers could have gained access to many more accounts, potentially compromising personal information like email addresses, payment details, and listening history.
 
 [SuperTokens Brute Force Attack Detection](https://supertokens.com/docs/attackprotectionsuite/introduction#brute-force-attack-detection) feature tracks the number of multiple failed login attempts or password resets in a short period. The system will block further attempts to prevent malicious actors from gaining access to sensitive accounts, particularly when users use weak or common passwords.
+
+
+![Password breach detection](./Password%20Breach%20Detection.png)
 
 ### **2. Password Breach Detection**
 
@@ -49,6 +54,9 @@ In 2019, the ["Collection #1" breach](https://en.wikipedia.org/wiki/Collection_N
 
 [SuperTokens Password Breach Detection ](https://supertokens.com/docs/attackprotectionsuite/introduction#password-breach-detection)cross-references potential user passwords with known leaked password databases. This way SuperTokens can proactively alert users to update compromised passwords, ensuring that they don't remain vulnerable,
 
+
+![impossible travel](./Impossible%20Travel%20Detection.png)
+
 ### **3. Impossible Travel Detection**
 
 When a user logs in from two geographically distant locations within a short period, it's unlikely to be a legitimate action, as physical travel between the two points would be impossible.
@@ -57,29 +65,37 @@ Account takeovers due to impossible travel have affected industries like banking
 
 [SuperTokens Impossible Travel Detection](https://supertokens.com/docs/attackprotectionsuite/introduction#password-breach-detection) helps mitigate this by monitoring login locations and flagging suspicious activity. If the system detects an impossible travel event, it can prompt additional security measures to prevent account takeovers and unauthorized access. 
 
+![bot detection](./Bot%20Detection.png)
+
 ### **4. Bot Detection**
 
 Malicious bots automate harmful activities like credential stuffing (repeated login attempts using stolen passwords), account takeover attempts, or scraping sensitive data from websites.
 
-**Problem Solved**: SuperTokens uses behavioral analysis and advanced algorithms to detect and block bots before they can cause damage, ensuring human users aren’t affected.
+In 2019, the gaming platform Fortnite faced large-scale credential stuffing bot attacks, leading to hundreds of thousands of compromised accounts. Attackers stole in-game purchases and user data. Without bot detection systems in place, the financial and reputational damage from such attacks can be immense.
 
-**Real-world Issue**: In 2019, the gaming platform Fortnite faced large-scale credential stuffing bot attacks, leading to hundreds of thousands of compromised accounts. Attackers stole in-game purchases and user data. Without bot detection systems in place, the financial and reputational damage from such attacks can be immense.
+SuperTokens uses behavioral analysis and advanced algorithms to detect and block bots before they can cause damage, ensuring human users aren’t affected.
+
+![suspicious ip detection](./Suspicious%20IP%20Detection.png)
 
 ### **5. Suspicious IP Detection**
 
 Malicious actors often use tools like VPNs, TOR, or proxy servers to hide their location and identity, bypassing regional restrictions or trying to commit fraud.
 
-**Problem Solved**: By flagging suspicious IPs known for fraudulent activities, SuperTokens helps prevent unauthorized access from high-risk sources, improving security for end-users.
+In 2020, a large-scale attack on financial institutions using compromised VPNs led to fraudulent wire transfers amounting to millions of dollars. The attackers masked their locations and IPs using proxy servers, which went undetected due to weak IP detection mechanisms.
 
-**Real-world Issue**: In 2020, a large-scale attack on financial institutions using compromised VPNs led to fraudulent wire transfers amounting to millions of dollars. The attackers masked their locations and IPs using proxy servers, which went undetected due to weak IP detection mechanisms.
+By flagging suspicious IPs known for fraudulent activities, SuperTokens helps prevent unauthorized access from high-risk sources, improving security for end-users.
+
+![new device detection](./New%20Device%20Detection.png)
 
 ### **6. New Device Detection**
 
 When a user logs in from a new or previously unseen device, it could signal an unauthorized attempt to access the account.
 
-In 2021,[ attackers exploited mobile banking apps](https://www.nerdwallet.com/article/banking/banking-apps-security) by logging into accounts from new devices and using password resets to bypass security, resulting in the theft of funds and personal data. Many of these breaches could have been avoided with stronger device detection.
+In 2021,[attackers exploited mobile banking apps](https://www.nerdwallet.com/article/banking/banking-apps-security) by logging into accounts from new devices and using password resets to bypass security, resulting in the theft of funds and personal data. Many of these breaches could have been avoided with stronger device detection.
 
 [SuperTokens' New Device Detection](https://supertokens.com/docs/attackprotectionsuite/introduction#password-breach-detection) helps prevent such attacks by flagging logins from unfamiliar devices and triggering additional verification steps, such as multi-factor authentication (MFA). This ensures that unauthorized parties cannot easily access user accounts, adding a crucial layer of protection.
+
+![device count tracking](./Device%20Count%20Tracking.png)
 
 ### **7. Device Count Tracking**
 
@@ -88,6 +104,8 @@ Tracking the number of devices linked to a user account can be crucial for ident
 In[ 2020, several e-commerce platforms experienced account takeover attacks](https://www.infosecurity-magazine.com/news/ato-outpace-ransomware-top/) where hackers logged in from multiple new devices, leading to fraudulent purchases and financial losses. These incidents could have been prevented by tracking and flagging suspicious device activity.
 
 [SuperTokens' Device Tracking](https://supertokens.com/docs/attackprotectionsuite/introduction#password-breach-detection) feature monitors the number of devices associated with each account, alerting users or administrators to potential risks. Identifying unusual usage patterns helps prevent unauthorized access and account takeovers.
+
+![requester detection](./Requester%20Detection.png)
 
 ### **8. Requester Detection**
 
