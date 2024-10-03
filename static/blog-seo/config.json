@@ -1628,5 +1628,28 @@
         ],
         "title": "How To Streamline Access With Passwordless Authentication",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/passwordless-authentication\"},\"headline\":\"How To Streamline Access With Passwordless Authentication\",\"description\":\"A quick overview on how passwordless authentication can help streamline the login experience and increase user conversions\",\"image\":\"https://supertokens.com/blog-meta-images/password_less_blog.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/anomaly-detection-with-supertokens",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn about different attack vectors and how to safeguard your web app against them with SuperTokens attack prevention suite\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Security, Anomaly Detection, Bot\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Anomaly Detection with SuperTokens\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/anomaly-detection-with-supertokens\" />",
+            "<meta property=\"og:description\" content=\"Learn about different attack vectors and how to safeguard your web app against them with SuperTokens attack prevention suite\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/anomaly-detection-with-supertokens.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Anomaly Detection with SuperTokens\" />",
+            "<meta name=\"twitter:description\" content=\"Learn about different attack vectors and how to safeguard your web app against them with SuperTokens attack prevention suite\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/anomaly-detection-with-supertokens\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/anomaly-detection-with-supertokens.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Anomaly Detection with SuperTokens",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/passwordless-authentication\"},\"headline\":\"Anomaly Detection with SuperTokens\",\"description\":\"Learn about different attack vectors and how to safeguard your web app against them with SuperTokens attack prevention suite\",\"image\":\"https://supertokens.com/blog-meta-images/anomaly-detection-with-supertokens.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
