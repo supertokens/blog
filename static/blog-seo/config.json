@@ -1651,5 +1651,28 @@
         ],
         "title": "Anomaly Detection with SuperTokens",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/passwordless-authentication\"},\"headline\":\"Anomaly Detection with SuperTokens\",\"description\":\"Learn about different attack vectors and how to safeguard your web app against them with SuperTokens attack prevention suite\",\"image\":\"https://supertokens.com/blog-meta-images/anomaly-detection-with-supertokens.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/hacktoberfest-supertokens",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Celebrate Hacktoberfest with SuperTokens\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Security, Hacktoberfest\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Celebrate Hacktoberfest with SuperTokens\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/hacktoberfest-supertokens\" />",
+            "<meta property=\"og:description\" content=\"Learn about different attack vectors and how to safeguard your web app against them with SuperTokens attack prevention suite\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/hacktoberfest-supertokens.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Celebrate Hacktoberfest with SuperTokens\" />",
+            "<meta name=\"twitter:description\" content=\"Learn about different attack vectors and how to safeguard your web app against them with SuperTokens attack prevention suite\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/hacktoberfest-supertokens\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/hacktoberfest-supertokens.png\" /> ",
+            "<!--OG Tags-->"
+        ],
+        "title": "Celebrate Hacktoberfest with SuperTokens",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/hacktoberfest-supertokens\"},\"headline\":\"Celebrate Hacktoberfest with SuperTokens\",\"description\":\"Learn about different attack vectors and how to safeguard your web app against them with SuperTokens attack prevention suite\",\"image\":\"https://supertokens.com/blog-meta-images/anomaly-detection-with-supertokens.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]

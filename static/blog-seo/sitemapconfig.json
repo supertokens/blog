@@ -181,5 +181,8 @@
     },
     {
         "location": "https://supertokens.com/blog/anomaly-detection-with-supertokens"
+    },
+    {
+        "location": "https://supertokens.com/blog/hacktoberfest-supertokens"
     }
 ]
