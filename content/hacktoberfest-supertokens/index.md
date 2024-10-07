@@ -1,5 +1,5 @@
 ---
-title: Anomaly Detection with SuperTokens
+title: Hacktoberfest at SuperTokens
 date: "2024-10-07"
 description: "Celebrate Hacktoberfest with SuperTokens"
 cover: "hacktoberfest-supertokens.png"
@@ -30,7 +30,7 @@ The number one contribution type we're looking for is new scaffolds using our pr
 
 1. Carefully read through the [contribution guide](https://github.com/supertokens/create-supertokens-app/blob/master/CONTRIBUTING.md).
 2. Check whether we support your chosen [backend](https://github.com/supertokens/create-supertokens-app/tree/master/boilerplate/backend), [frontend](https://github.com/supertokens/create-supertokens-app/tree/master/boilerplate/frontend) or [fullstack](https://github.com/supertokens/create-supertokens-app/tree/master/boilerplate/fullstack).
-3. (Optional) Also check whether someone else is already trying to cover what you'd like to contribute with. These things are always easier in a team 😉
+3. Before getting started, create a GitHub issue with the name and details of your scaffold submission. You can connect and collaborate if a similar contribution issue has been opened. These things are always easier in a team. 😉
 4. Make sure to follow the Hacktoberfest [guidelines](https://hacktoberfest.com/participation/#contributors)
 5. Stuck? Got questions? Hit us up on [discord](https://supertokens.com/discord)! Make sure to use the dedicated #hacktoberfest-2024 channel for this purpose.
 
