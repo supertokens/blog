@@ -1,7 +1,7 @@
 ---
-title: Anomaly Detection with SuperTokens
+title: Hacktoberfest with SuperTokens
 date: "2024-10-07"
-description: "Celebrate Hacktoberfest with SuperTokens"
+description: "Celebrate Hacktoberfest with SuperTokens, learn how you can contribute to open source auth and get some goodies too!"
 cover: "hacktoberfest-supertokens.png"
 category: "programming"
 author: "Darko Bozhinovski"
