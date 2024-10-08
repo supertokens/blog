@@ -124,5 +124,23 @@ module.exports = [{
   ],
   bio:
     "Musician, horror movie lover, and total nerd.",
+}, {
+  name: "Joshua Omobola",
+  jobTitle: "DevRel at SuperTokens",
+  image: "joshua.png",
+  socials: [
+    {
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/kohasummons/",
+    }, {
+      name: "twitter",
+      url: "https://twitter.com/kohawithstuff",
+    }, {
+      name: "github",
+      url: "https://github.com/kohasummons"
+    }
+  ],
+  bio:
+    "Developer Advocate. Digital Designer. IndieHacker",
 }
 ]
