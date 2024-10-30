@@ -1,11 +1,26 @@
 ---
-title: Django Bootstrap Login Template (How-To)
-date: "2023-03-06"
+title: Setting up an authentication form with bootstrap in a Django application
+date: "2024-07-10"
 description: "This tutorial wil guide you on how you can setup a bootstrap login template in Django"
 cover: "django_bootstrap_banner.png"
 category: "programming"
 author: "Nemi Shah"
 ---
+
+
+## Table of Contents
+
+1. [High Level Refresher](#high-level-refresher)
+2. [Prerequisites](#prerequisites)
+3. [Setting up a Django Application](#setting-up-a-django-application)
+4. [Editing Project Configs](#editing-project-configs)
+    - [django_login/settings.py](#djangologinsettingspy)
+    - [django_login/urls.py](#djangologinurlspy)
+5. [Building the Login Screen with Bootstrap](#building-the-login-screen-with-bootstrap)
+    - [login/templates/registration/login.html](#logintemplatesregistrationloginhtml)
+6. [Running the Application](#running-the-application)
+7. [Conclusion](#conclusion)
+
 
 ## High Level Refresher
 

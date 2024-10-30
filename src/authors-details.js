@@ -106,5 +106,41 @@ module.exports = [{
   ],
   bio:
     "Developer, writer, speaker, and Linux nerd. Remembers IE6.",
+}, {
+  name: "Connor Peshek",
+  jobTitle: " DevRel at SuperTokens",
+  image: "connor.jpg",
+  socials: [
+    {
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/connor-peshek/",
+    }, {
+      name: "twitter",
+      url: "https://twitter.com/conzorkingkong",
+    }, {
+      name: "github",
+      url: "https://github.com/conzorkingkong"
+    }
+  ],
+  bio:
+    "Musician, horror movie lover, and total nerd.",
+}, {
+  name: "Joshua Omobola",
+  jobTitle: "DevRel at SuperTokens",
+  image: "joshua.png",
+  socials: [
+    {
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/kohasummons/",
+    }, {
+      name: "twitter",
+      url: "https://twitter.com/kohawithstuff",
+    }, {
+      name: "github",
+      url: "https://github.com/kohasummons"
+    }
+  ],
+  bio:
+    "Developer Advocate. Digital Designer. IndieHacker",
 }
 ]

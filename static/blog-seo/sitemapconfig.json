@@ -178,5 +178,11 @@
     },
     {
         "location": "https://supertokens.com/blog/clerk-alternatives"
+    },
+    {
+        "location": "https://supertokens.com/blog/anomaly-detection-with-supertokens"
+    },
+    {
+        "location": "https://supertokens.com/blog/hacktoberfest-supertokens"
     }
 ]

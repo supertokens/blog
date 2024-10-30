@@ -68,40 +68,49 @@ Active Directory is now mainly used for on-prem networks. There is a cloud-based
 
 ### LDAP vs Kerberos
 
-Kerberos is a network authentication protocol made by MIT in 1988. It’s known for being used inside of Microsoft Active Directory as an authentication layer. A user reaches out to a Key Distribution Center (which in Active Directory’s case, is also the Domain Controller/Directory Service) and authenticates themselves. They are then given a Ticket-Granting-Ticket (TGT) to access other services (like file systems inside of Active Directory) inside the network. The TGT is encrypted and the service has a key to decrypt the ticket and authenticate the user. You can think of it like this. The LDAP database contains all the authorizations the user has, and Kerberos can use this information to make secure authentication tickets for the user to be used by the service. In this way, Kerberos can be used to implement Single Sign On inside of Active Directory.
+Kerberos is a network authentication protocol made by MIT in 1988. It’s known for being used inside of Microsoft Active Directory as an authentication layer. A user reaches out to a Key Distribution Center (which in Active Directory’s case, is also the Domain Controller/Directory Service) and authenticates themselves. They are then given a Ticket-Granting-Ticket (TGT) to access other services (like file systems inside of Active Directory) inside the network. The TGT is encrypted and the service has a key to decrypt the ticket and authenticate the user. You can think of it like this. The LDAP database contains all the authorizations the user has, and Kerberos can use this information to make secure authentication tickets for the user to be used by the service. In this way, Kerberos can be used to implement Single sign-on inside of Active Directory.
 
-### LDAP vs Single Sign on (SSO)
+### LDAP vs Single Sign-on (SSO)
 
-Single Sign on is an authentication method where a user signs in at one location and can be authenticated in multiple places. [It’s one of many authentication methods available today](https://supertokens.com/blog/types-of-authentication). LDAP servers are often used to integrate with Single Sign On systems due to its existing information on users and permissions. It’s very easy to configure Active Directory - or Entra ID - as a Service Provider for an Oauth application.
+Single sign-on is an authentication method where a user signs in at one location and can be authenticated in multiple places. [It’s one of many authentication methods available today](https://supertokens.com/blog/types-of-authentication). LDAP servers are often used to integrate with Single sign-on systems due to its existing information on users and permissions. It’s very easy to configure Active Directory - or Entra ID - as a Service Provider for an OpenID Connect application.
 
 ### How to Implement LDAP
 
-You can Implement LDAP by using it as an Identity Provider to a platform like Supertokens. [Supertokens is an authentication and authorization platform](https://supertokens.com/product) that you can use to manage logins in your application. We’ll walk through an example of setting up Microsoft Entra ID as an Identity Provider.
+You can Implement LDAP by using it as an Identity Provider for a platform like SuperTokens. [SuperTokens is an authentication and authorization platform](https://supertokens.com/product) that you can use to manage logins in your application. We’ll walk through an example of setting up Microsoft Entra ID as an Identity Provider.
 
-#### Create a Tenant in Microsoft Entra ID
+#### Create an app in Microsoft Entra
 
-In order to set up Oauth in Microsoft Entra ID, you first have to make a tenant in your Microsoft Entra account. Head to the [overview page of your Microsoft Entra account](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/TenantOverview.ReactView) and click “Manage tenants” at the top. Add a new tenant and save the <TENANT_ID>, we’ll need it later to make our Oauth calls.
+Head to the [Microsoft Entra homepage](https://entra.microsoft.com/#home). On the left sidebar, click Applications -> App Registration -> Create a New Registration. When it asks for a Redirect URI, use `web` for the platform and the following for your URI:
 
-![microsoft tennats](./microsoft-tennat.png)
+`http://localhost:3000/auth/callback/entra`
 
-Create an app in Microsoft Entra
+Under supported account types, you'll be asked if you want to handle single tenant, multi-tenant, or personal accounts. This will depend on your use case:
 
-Head to the Microsoft Entra homepage. On the left sidebar, click Applications -> App Registration -> Create a New Registration. When it asks for a Redirect URI, use `web` for the platform and the following for your URI:
+Single tenant - making an internal tool and only want people in your organisation to be able to use this application.
+Multi-tenant - making a tool for corporate users that allows others to login with their Entra ID account.
+Common - allows anyone with any microsoft account to log in (xbox, skype, etc)
 
-`http://localhost:3001/auth/callback/entra`
+Select whichever use case is right for you.
 
 It will redirect you to a new page containing your Client ID (also referred to as an Application ID). If you aren’t redirected to this page, then you can click security -> permissions -> app registration -> overview in the new left hand tab.
 
 ![tennat setup 2](./tennant-setup-2.png)
 
+Click on Authentication on the left hand side. Under the section "Implicit grant and hybrid flows", select the option:
+
+`ID tokens (used for implicit and hybrid flows)`
+
+And then save at the bottom.
+
 Save your Client ID and click “Certificates and Secrets” on the left side of the screen. Create a new Client Secret. Copy the Client Secret Value - and not the Client Secret ID - for use later in the application.
 
 ![tennant setup 3](./tennant-setup-3.png)
 
-### Generate a Supertokens Project
+Finally, click Overview -> endpoints at the top of the page. Copy the `OpenID Connect metadata document` url for later.
 
+### Generate a SuperTokens Project
 
-Run `npx create-supertokens-app@latest --recipe=thirdparty` to make a new Supertokens project.
+Run `npx create-supertokens-app@latest --recipe=thirdparty` to make a new SuperTokens project.
 
 We need to configure the front-end to generate a “Login with Entra” button, so add the following to your front-end `config.tsx`.
 
@@ -109,14 +118,12 @@ We need to configure the front-end to generate a “Login with Entra” button, 
 ThirdParty.init({
     signInAndUpFeature: {
         providers: [
-            Github.init(),
             Google.init(),
-            Apple.init(),
-            Twitter.init(),
             {
-      // The front-end and back-end config need the same ID to connect with each other
+                // The ID sets your callback url
+                // ie http://localhost:3000/auth/callback/entra
                 id: "entra",
-                name: "Entra", // Will display "Continue with X
+                name: "Entra", // Will display "Login with Entra"
                 // optional
                 // you do not need to add a click handler to this as
                 // we add it for you automatically.
@@ -132,10 +139,9 @@ ThirdParty.init({
         ],
     },
 }),
-
 ```
 
-Now we need to configure the back-end to handle the Oauth calls. Microsoft uses different scopes than what is standard for Oauth, and also uses Microsoft Graph for getting User details, so we need to set our scope to `User.Read`, our `userInfoEndpoint` to "[https://graph.microsoft.com/v1.0/me](https://graph.microsoft.com/v1.0/me)", and set the value that we get the email from to `mail`.
+Now we need to configure the back-end to handle the OIDC calls. We'll set our scopes to `["openid", "email", "profile"]` and our `oidcDiscoveryEndpoint` to the OpenID Connect metadata document we got in our application overview.
 
 Add the following to your `config.ts`
 
@@ -145,32 +151,18 @@ ThirdParty.init({
         providers: [
             {
                 config: {
-                    // The thirdPartyId connects to the front-end id
-                    // and sets your callback url
-                    // ie http://localhost:3001/auth/callback/<thirdPartyId>
                     thirdPartyId: "entra",
                     name: "Entra",
                     clients: [{
                         clientId: "<CLIENT_ID>",
                         clientSecret: "<CLIENT_SECRET_VALUE>",
-                        scope: ["User.Read"]
+                        scope: ["openid", "email", "profile"]
                     }],
-                    authorizationEndpoint: "https://login.microsoft.com/<TENANT_ID>/oauth2/v2.0/authorize",
-                    authorizationEndpointQueryParams: {
-                        "someKey1": "value1",
-                        "someKey2": null
-                    },
-                    tokenEndpoint: "https://login.microsoft.com/<TENANT_ID>/oauth2/v2.0/token",
-                    tokenEndpointBodyParams: {
-                        "someKey1": "value1",
-                    },
-                    userInfoEndpoint: "https://graph.microsoft.com/v1.0/me",
+                    oidcDiscoveryEndpoint: "https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration",
                     userInfoMap: {
                         fromUserInfoAPI: {
-                            userId: "id",
-                            // Microsoft graph uses `mail` for the email
-                            // instead of the standard `email` used by other oauth providers
-                            email: "mail",
+                            userId: "sub",
+                            email: "email",
                         }
                     }
                 }
@@ -178,10 +170,11 @@ ThirdParty.init({
         ],
     },
 })
+
 ```
 
-Run `npm run start` and head to `localhost:3000` in the browser. You’ll see the option `Sign in with Entra`. Click it and you’ll get a token back with your `userId` and `email`. How easy was that?
+Run `npm run start` and head to `localhost:3000` in the browser. You’ll see the option `Login with Entra`. Click it and you’ll get a session signed in from Entra ID. How easy was that?
 
 ## Conclusion
 
-LDAP is a time tested, fast, and convenient way to store users and permissions.. Its ability to integrate as an Identity Provider makes it valuable, especially to large organizations that have lots of users and permissions to manage. If you want to look into integrating LDAP Oauth into your application, why not [Enhance your Authentication with Supertokens](https://supertokens.com/product).
+LDAP is a time tested, fast, and convenient way to store users and permissions. Its ability to integrate as an Identity Provider makes it valuable, especially to large organizations that have lots of users and permissions to manage. If you want to look into integrating LDAP as an SSO provider into your application, why not [Enhance your Authentication with SuperTokens](https://supertokens.com/product).
