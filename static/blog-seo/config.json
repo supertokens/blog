@@ -1674,5 +1674,29 @@
         ],
         "title": "Celebrate Hacktoberfest with SuperTokens",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/hacktoberfest-supertokens\"},\"headline\":\"Celebrate Hacktoberfest with SuperTokens\",\"description\":\"Learn about different attack vectors and how to safeguard your web app against them with SuperTokens attack prevention suite\",\"image\":\"https://supertokens.com/blog-meta-images/anomaly-detection-with-supertokens.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/keycloak-vs-okta",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Choosing the right IAM solution is crucial for security and efficiency. This blog provides a clear comparison between Keycloak and Okta, examining features, customization, pricing, and developer experience. Learn which platform best suits your organization’s needs.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Security, Keycloak, Okta\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Keycloak Vs. Okta: Features, Pricing, And Developer Experience\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/keycloak-vs-okta\" />",
+            "<meta property=\"og:description\" content=\"Choosing the right IAM solution is crucial for security and efficiency. This blog provides a clear comparison between Keycloak and Okta, examining features, customization, pricing, and developer experience. Learn which platform best suits your organization’s needs.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/keycloak-vs-okta.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Keycloak Vs. Okta: Features, Pricing, And Developer Experience\" />",
+            "<meta name=\"twitter:description\" content=\"Choosing the right IAM solution is crucial for security and efficiency. This blog provides a clear comparison between Keycloak and Okta, examining features, customization, pricing, and developer experience. Learn which platform best suits your organization’s needs.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/keycloak-vs-okta\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/keycloak-vs-okta.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/keycloak-vs-okta\">"
+        ],
+        "title": "Celebrate Hacktoberfest with SuperTokens",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/keycloak-vs-okta\"},\"headline\":\"Keycloak Vs. Okta: Features, Pricing, And Developer Experience\",\"description\":\"Choosing the right IAM solution is crucial for security and efficiency. This blog provides a clear comparison between Keycloak and Okta, examining features, customization, pricing, and developer experience. Learn which platform best suits your organization’s needs.\",\"image\":\"https://supertokens.com/blog-meta-images/keycloak-vs-okta.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
