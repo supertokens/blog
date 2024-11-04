@@ -151,6 +151,26 @@ Meta tags for blog images are picked up from `/static/blog-seo/config.json`, for
 
 Then after the blog is published these meta tags will be used (on both the test and production site)
 
+### Adding cannonical tags
+
+By default the canonical tag is set to the URL of the blog. If you need to set a custom path you will need to set the `hasCustomCanonicalURL` field to the blog SEO config:
+
+```json
+{
+   "path": "/blog/<SLUG>",
+   "metaTags": [
+       "...",
+       "<!--OG Tags-->",
+      "..."
+       "<!--OG Tags-->",
+       "<link rel=\"canonical\" href=\"<ORIGINAL_DOMAIN>\">"
+   ],
+   "title": "...",
+   "schema": "...",
+  "hasCustomCanonicalURL": true
+}
+```
+
 ### Updating the sitemap
 
 Modify the `/static/blog-seo/sitemapconfig.json` file and add the URL of the blog you are adding to the website. This will ensure that the URL is present in the sitemap.xml file when Google bots request it

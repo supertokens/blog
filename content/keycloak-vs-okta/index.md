@@ -1,11 +1,21 @@
 ---
 title:  "Keycloak Vs. Okta: Features, Pricing, And Developer Experience"
 date: "2024-10-10"
-description: "Choosing the right Identity and Access Management (IAM) solution is crucial for maintaining security, efficiency, and user satisfaction. This blog provides an in-depth comparison of Keycloak, an open-source IAM tool, and Okta, a proprietary cloud-based solution. It covers key features, customization options, integration capabilities, security measures, pricing, and developer experience. By understanding the strengths and trade-offs of each, you'll be better equipped to select the IAM platform that best meets your organization’s needs."
-cover: "keywork-vs-okta.png"
+description: "Choosing the right IAM solution is crucial for security and efficiency. This blog provides a clear comparison between Keycloak and Okta, examining features, customization, pricing, and developer experience. Learn which platform best suits your organization’s needs."
+cover: "keycloak-vs-okta.png"
 category: "programming"
 author: "Joel Coutinho"
 ---
+
+## Table of Content
+
+- [Introduction](#introduction)
+- [Overview: Keycloak vs. Okta](#overview-keycloak-vs-okta)
+- [Detailed Feature Comparison: Keycloak vs. Okta](#detailed-feature-comparison-keycloak-vs-okta)
+- [Deciding Factors: When to Choose Keycloak or Okta](#deciding-factors-when-to-choose-keycloak-or-okta)
+- [Open-Source vs. Proprietary IAM: Key Considerations](#open-source-vs-proprietary-iam-key-considerations)
+- [Developer-Friendly Alternatives to Keycloak and Okta](#developer-friendly-alternatives-to-keycloak-and-okta)
+- [Conclusion](#conclusion)
 
 ## Introduction
 
