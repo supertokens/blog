@@ -100,34 +100,34 @@ Because we’re using the built-in `LoginView` of Django, we must provide the HT
 Inside `login.html`, we’ll add the following Bootstrap code (delivered via CDN for convenience, though there are [other Bootstrap installation methods](https://getbootstrap.com/docs/5.3/getting-started/download/)):
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Signin</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Signin&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"&gt;    
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"&gt;&lt;/script&gt;
     
-  </head>
-  <body class="text-center">
-    <form class="form-signin">
-      <h1 class="h3 mb-3 font-weight-normal">Django Login Demo</h1>
+  &lt;/head&gt;
+  &lt;body class="text-center"&gt;
+    &lt;form class="form-signin"&gt;
+      &lt;h1 class="h3 mb-3 font-weight-normal"&gt;Django Login Demo&lt;/h1&gt;
       {% csrf_token %}
-      <input id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" type="email">
-      <input id="inputPassword" class="form-control" placeholder="Password" required="" type="password">
-      <div class="checkbox mb-3">
-        <label>
-          <input value="remember-me" type="checkbox"> Remember me
-        </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-    </form>
-  </body>
-</html>
+      &lt;input id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" type="email"&gt;
+      &lt;input id="inputPassword" class="form-control" placeholder="Password" required="" type="password"&gt;
+      &lt;div class="checkbox mb-3"&gt;
+        &lt;label&gt;
+          &lt;input value="remember-me" type="checkbox"&gt; Remember me
+        &lt;/label&gt;
+      &lt;/div&gt;
+      &lt;button class="btn btn-lg btn-primary btn-block" type="submit"&gt;Sign in&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
 
-<style>
+&lt;style&gt;
 html,
 body {
   height: 100%;
@@ -182,7 +182,7 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-</style>
+&lt;/style&gt;
 ```
 
 **login/views.py**
