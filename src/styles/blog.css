@@ -3,12 +3,12 @@
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   padding: 0px 10px;
 }
 
 .blog-header__title {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 50px;
   color: #333;
   margin-top: 100px;
@@ -31,7 +31,7 @@
   color: #ff8000;
   margin: 0px 10px 20px;
   cursor: pointer;
-  transition: background-color .15s, color .15s;
+  transition: background-color 0.15s, color 0.15s;
 }
 
 .blog-categories__category.selected {
@@ -40,7 +40,7 @@
 }
 
 .blog-categories__category:not(.selected):hover {
-  background-color: rgba(255, 153, 51, .1);
+  background-color: rgba(255, 153, 51, 0.1);
 }
 
 /* home page blog card styles */
@@ -51,7 +51,7 @@
   max-width: 1140px;
   margin: 32px auto;
   opacity: 1;
-  transition: opacity .15s;
+  transition: opacity 0.15s;
 }
 
 .blog-post-list.hidden {
@@ -63,7 +63,8 @@
   text-decoration: none;
 }
 
-.blog-card:hover, .blog-card:focus {
+.blog-card:hover,
+.blog-card:focus {
   text-decoration: none;
 }
 
@@ -74,7 +75,9 @@
 .blog-card__image-container {
   overflow: hidden;
   width: 360px;
-  height: calc(360px / 1.9); /* calculate the width using the aspect ratio 1.9 */
+  height: calc(
+    360px / 1.9
+  ); /* calculate the width using the aspect ratio 1.9 */
   border-radius: 4px;
 }
 
@@ -88,7 +91,7 @@
   margin: 24px 0px 0px;
   font-weight: 500;
   color: #808080;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   text-transform: uppercase;
   font-size: 14px;
 }
@@ -96,7 +99,7 @@
 .blog-card__title {
   color: #222;
   font-size: 21px;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: bold;
   line-height: 28px;
   margin: 8px 0px 16px;
@@ -109,7 +112,7 @@
   color: #222;
   font-size: 14px;
   line-height: 21px;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   margin: 0px;
 }
 
@@ -127,10 +130,12 @@
   .blog-card {
     margin: 15px auto;
   }
-  
+
   .blog-card__image-container {
     width: 300px;
-    height: calc(300px / 1.9); /* calculate the width using the aspect ratio 1.9 */
+    height: calc(
+      300px / 1.9
+    ); /* calculate the width using the aspect ratio 1.9 */
   }
 }
 
@@ -145,13 +150,13 @@
   padding: 2px;
   width: 680px;
   border-radius: 15px;
-  background: linear-gradient(90deg, #FF9933 0%, #CF4B00 100%);
+  background: linear-gradient(90deg, #ff9933 0%, #cf4b00 100%);
   margin: 32px auto;
 }
 
 .blog-post-sign-up-banner {
   width: 100%;
-  background: linear-gradient(180deg, #363636 0%, #1A1A1A 51.36%, #171717 100%);
+  background: linear-gradient(180deg, #363636 0%, #1a1a1a 51.36%, #171717 100%);
   padding-left: 127px;
   padding-right: 127px;
   padding-top: 32px;
@@ -163,15 +168,20 @@
 
 .sign-up-banner-backdrop {
   position: absolute;
+  top: 0;
   right: 0;
-  top: 50%;
-  width: 98px;
-  height: 179px;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
   z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   pointer-events: none;
+}
+
+.sign-up-banner-backdrop img {
+  height: 178.9px;
+  width: auto;
 }
 
 .sign-up-banner-content {
@@ -185,7 +195,7 @@
 
 .sign-up-banner-content-title {
   color: #ffffff;
-  font-family: 'Inter';
+  font-family: "Inter";
   text-decoration: none;
   border-bottom: none;
   padding: 0px;
@@ -197,12 +207,12 @@
 }
 
 .sign-up-banner-content-title-highlight {
-  color: #FF9933;
+  color: #ff9933;
   white-space: nowrap;
 }
 
 .sign-up-banner-content-paragraph {
-  font-family: 'Inter';
+  font-family: "Inter";
   text-align: center;
   font-size: 16px;
   line-height: 24px;
@@ -228,7 +238,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Inter';
+  font-family: "Inter";
 }
 
 .sign-up-banner-content-cta {
@@ -237,17 +247,17 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
   font-size: 16px;
   border-radius: 6px;
   font-weight: 500;
-  transition: background-color .15s;
+  transition: background-color 0.15s;
 }
 
 .sign-up-banner-content-cta:hover {
   text-decoration: none;
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 .sign-up-banner-top-icon-container {
@@ -257,12 +267,12 @@
 }
 
 .sign-up-banner-top-icon {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
+  width: 35px !important;
+  border-radius: unset !important;
+  height: auto;
 }
 
-.author-card-top-container{
+.author-card-top-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -272,11 +282,10 @@
   margin: 32px 0px 16px;
 }
 
-.author-card-top-container img{
+.author-card-top-container img {
   height: 48px;
   width: 48px;
   border-radius: 8px;
-
 }
 
 .author-card-top-container .author-info {
@@ -285,7 +294,7 @@
   gap: 2px;
 }
 
-.author-card-top-container .author-info .author-name{
+.author-card-top-container .author-info .author-name {
   color: #222;
 
   font-size: 16px;
@@ -294,7 +303,7 @@
   line-height: normal;
 }
 
-.author-card-top-container .author-info .author-title{
+.author-card-top-container .author-info .author-title {
   color: rgb(34 34 34 / 68%);
 
   font-size: 14px;
@@ -303,7 +312,7 @@
   line-height: normal;
 }
 
-.author-card-footer-container{
+.author-card-footer-container {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -314,13 +323,13 @@
   width: 100%;
 }
 
-.author-card-footer-container img{
+.author-card-footer-container img {
   height: 211px;
   width: 211px;
   border-radius: 16px;
 }
 
-.author-card-footer-container .author-info{
+.author-card-footer-container .author-info {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -329,7 +338,7 @@
   gap: 8px;
 }
 
-.author-card-footer-container .author-info .author-name{
+.author-card-footer-container .author-info .author-name {
   color: #222;
 
   font-size: 32px;
@@ -338,20 +347,22 @@
   line-height: normal;
 }
 
-.author-card-footer-container .author-info .author-title-socials-container{
+.author-card-footer-container .author-info .author-title-socials-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-
-.author-card-footer-container .author-info .author-socials{
+.author-card-footer-container .author-info .author-socials {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.author-card-footer-container .author-info .author-title-socials-container .author-title{
+.author-card-footer-container
+  .author-info
+  .author-title-socials-container
+  .author-title {
   color: rgb(34 34 34 / 68%);
 
   font-size: 14px;
@@ -360,7 +371,7 @@
   line-height: normal;
 }
 
-.author-card-footer-container .author-info .author-description{
+.author-card-footer-container .author-info .author-description {
   color: #333;
 
   font-size: 16px;
@@ -370,7 +381,7 @@
   margin: 0;
 }
 
-.hidden-md{
+.hidden-md {
   display: none;
 }
 
@@ -396,43 +407,40 @@
     margin-right: 16px;
     margin-left: 16px;
   }
-  
-  .sign-up-banner-backdrop {
-    -webkit-transform: translateY(-20%);
-    -moz-transform: translateY(-20%);
-    transform: translateY(-20%);
-  }
-  .author-card-footer-container img{
+
+  .author-card-footer-container img {
     height: 107px;
     width: 107px;
   }
 
-  .author-card-footer-container .author-info .author-description{
+  .author-card-footer-container .author-info .author-description {
     display: none;
   }
 
-  .author-card-footer-container .author-info .author-title-socials-container{
+  .author-card-footer-container .author-info .author-title-socials-container {
     flex-direction: column;
     align-items: start;
     gap: 14px;
   }
 
-  .hidden-md{
+  .hidden-md {
     display: block;
   }
 
-  .author-card-footer-container{
+  .author-card-footer-container {
     margin-bottom: 24px;
   }
-
 }
 
 @media screen and (max-width: 425px) {
-  .author-card-footer-container .author-info .author-name{
+  .author-card-footer-container .author-info .author-name {
     font-size: 22px;
   }
 
-  .author-card-footer-container .author-info .author-title-socials-container .author-title{
+  .author-card-footer-container
+    .author-info
+    .author-title-socials-container
+    .author-title {
     font-size: 12px;
   }
 }
