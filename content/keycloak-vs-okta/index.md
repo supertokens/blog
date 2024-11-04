@@ -55,7 +55,7 @@ Okta is a proprietary, cloud-based IAM platform that has established itself as a
 ### Security Features Breakdown
 
 #### Authentication Methods
-Keycloak offers various authentication options, such as usernames and passwords, one-time passwords, Kerberos, X.509 client certificates, and social logins. Okta also provides multiple login options, including MFA, adaptive MFA, social login, and biometric authentication through mobile devices.
+Keycloak offers various authentication options, such as usernames and passwords, one-time passwords, Kerberos, X.509 client certificates, and social logins. Okta also provides multiple login options, including MFA, adaptive MFA, social login, and biometric authentication through mobile devices. Keycloak's open source nature allows a level of flexibility that is not possible with
 
 #### User Roles and Permissions
 Keycloak features a flexible role-based access control (RBAC) system, allowing administrators to define roles with fine-grained access controls. Okta uses a group-based access management system, facilitating user groups with application-specific permissions.
