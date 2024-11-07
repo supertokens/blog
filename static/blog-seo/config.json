@@ -1746,5 +1746,29 @@
         ],
         "title": "SuperTokens Customer Retrospective",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/customer-retrospective\"},\"headline\":\"SuperTokens Customer Retrospective\",\"description\":\"A look back at how SuperTokens empowered clients across industries with flexible, secure authentication solutions. Explore key case studies and insights that shaped a year of innovation and success.\",\"image\":\"https://supertokens.com/blog-meta-images/customer-retrospective.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/authentik-vs-keycloak",
+        "metaTags": [
+            "<meta name=\"description\" content=\"This blog compares Authentik and Keycloak, two popular open-source IAM solutions, highlighting their features, security, customization, and scalability. We break down which tool is best suited for different business sizes and needs, including an alternative, SuperTokens, for teams seeking a middle ground.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Security, User Management, Access Control, Authentik, Keycloak\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Authentik Vs. Keycloak: Features and Experience Comparison\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/authentik-vs-keycloak\" />",
+            "<meta property=\"og:description\" content=\"This blog compares Authentik and Keycloak, two popular open-source IAM solutions, highlighting their features, security, customization, and scalability. We break down which tool is best suited for different business sizes and needs, including an alternative, SuperTokens, for teams seeking a middle ground.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/authentik-vs-keycloak.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Authentik Vs. Keycloak: Features and Experience Comparison\" />",
+            "<meta name=\"twitter:description\" content=\"This blog compares Authentik and Keycloak, two popular open-source IAM solutions, highlighting their features, security, customization, and scalability. We break down which tool is best suited for different business sizes and needs, including an alternative, SuperTokens, for teams seeking a middle ground.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/authentik-vs-keycloak\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/authentik-vs-keycloak.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/authentik-vs-keycloak\">"
+        ],
+        "title": "Authentik Vs. Keycloak: Features and Experience Comparison",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/authentik-vs-keycloak\"},\"headline\":\"Authentik Vs. Keycloak: Features and Experience Comparison\",\"description\":\"This blog compares Authentik and Keycloak, two popular open-source IAM solutions, highlighting their features, security, customization, and scalability. We break down which tool is best suited for different business sizes and needs, including an alternative, SuperTokens, for teams seeking a middle ground.\",\"image\":\"https://supertokens.com/blog-meta-images/authentik-vs-keycloak.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
