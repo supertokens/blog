@@ -1704,7 +1704,7 @@
         "metaTags": [
             "<meta name=\"description\" content=\"Explore a comprehensive comparison of Auth0 and Clerk, two leading authentication providers. Discover their unique features, pricing, and best use cases to help you choose the right tool for your project\" />",
             "",
-            "<meta name=\"keywords\" content=\"Authentication, Open Source, Security, Keycloak, Okta\" />",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Security, Auth0, Clerk\" />",
             "<!--OG Tags-->",
             "<meta property=\"og:title\" content=\"AuthO Vs. Clerk: Features, Pricing, And Pros & Cons\" />",
             "<meta property=\"og:type\" content=\"article\" />",
@@ -1722,5 +1722,29 @@
         ],
         "title": "AuthO Vs. Clerk: Features, Pricing, And Pros & Cons",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/auth0-vs-clerk\"},\"headline\":\"AuthO Vs. Clerk: Features, Pricing, And Pros & Cons\",\"description\":\"Explore a comprehensive comparison of Auth0 and Clerk, two leading authentication providers. Discover their unique features, pricing, and best use cases to help you choose the right tool for your project\",\"image\":\"https://supertokens.com/blog-meta-images/auth0-vs-clerk.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/customer-retrospective",
+        "metaTags": [
+            "<meta name=\"description\" content=\"A look back at how SuperTokens empowered clients across industries with flexible, secure authentication solutions. Explore key case studies and insights that shaped a year of innovation and success.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Security, User Management, Access Control\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"SuperTokens Customer Retrospective\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/customer-retrospective\" />",
+            "<meta property=\"og:description\" content=\"A look back at how SuperTokens empowered clients across industries with flexible, secure authentication solutions. Explore key case studies and insights that shaped a year of innovation and success.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/customer-retrospective.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"SuperTokens Customer Retrospective\" />",
+            "<meta name=\"twitter:description\" content=\"A look back at how SuperTokens empowered clients across industries with flexible, secure authentication solutions. Explore key case studies and insights that shaped a year of innovation and success.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/customer-retrospective\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/customer-retrospective.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/customer-retrospective\">"
+        ],
+        "title": "SuperTokens Customer Retrospective",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/customer-retrospective\"},\"headline\":\"SuperTokens Customer Retrospective\",\"description\":\"A look back at how SuperTokens empowered clients across industries with flexible, secure authentication solutions. Explore key case studies and insights that shaped a year of innovation and success.\",\"image\":\"https://supertokens.com/blog-meta-images/customer-retrospective.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
