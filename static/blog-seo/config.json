@@ -1696,7 +1696,31 @@
             "<!--OG Tags-->",
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/keycloak-vs-okta\">"
         ],
-        "title": "Celebrate Hacktoberfest with SuperTokens",
+        "title": "Keycloak Vs. Okta: Features, Pricing, And Developer Experience",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/keycloak-vs-okta\"},\"headline\":\"Keycloak Vs. Okta: Features, Pricing, And Developer Experience\",\"description\":\"Choosing the right IAM solution is crucial for security and efficiency. This blog provides a clear comparison between Keycloak and Okta, examining features, customization, pricing, and developer experience. Learn which platform best suits your organization’s needs.\",\"image\":\"https://supertokens.com/blog-meta-images/keycloak-vs-okta.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/auth0-vs-clerk",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore a comprehensive comparison of Auth0 and Clerk, two leading authentication providers. Discover their unique features, pricing, and best use cases to help you choose the right tool for your project\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Security, Keycloak, Okta\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"AuthO Vs. Clerk: Features, Pricing, And Pros & Cons\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/auth0-vs-clerk\" />",
+            "<meta property=\"og:description\" content=\"Explore a comprehensive comparison of Auth0 and Clerk, two leading authentication providers. Discover their unique features, pricing, and best use cases to help you choose the right tool for your project\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/auth0-vs-clerk.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"AuthO Vs. Clerk: Features, Pricing, And Pros & Cons\" />",
+            "<meta name=\"twitter:description\" content=\"Explore a comprehensive comparison of Auth0 and Clerk, two leading authentication providers. Discover their unique features, pricing, and best use cases to help you choose the right tool for your project\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/auth0-vs-clerk\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/auth0-vs-clerk.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/auth0-vs-clerk\">"
+        ],
+        "title": "AuthO Vs. Clerk: Features, Pricing, And Pros & Cons",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/auth0-vs-clerk\"},\"headline\":\"AuthO Vs. Clerk: Features, Pricing, And Pros & Cons\",\"description\":\"Explore a comprehensive comparison of Auth0 and Clerk, two leading authentication providers. Discover their unique features, pricing, and best use cases to help you choose the right tool for your project\",\"image\":\"https://supertokens.com/blog-meta-images/auth0-vs-clerk.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
