@@ -184,5 +184,11 @@
     },
     {
         "location": "https://supertokens.com/blog/hacktoberfest-supertokens"
+    },
+    {
+        "location": "https://supertokens.com/blog/keycloak-vs-okta"
+    },
+    {
+        "location": "https://supertokens.com/blog/auth0-vs-clerk"
     }
 ]
