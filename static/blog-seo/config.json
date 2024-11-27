@@ -1770,5 +1770,29 @@
         ],
         "title": "Authentik Vs. Keycloak: Features and Experience Comparison",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/authentik-vs-keycloak\"},\"headline\":\"Authentik Vs. Keycloak: Features and Experience Comparison\",\"description\":\"This blog compares Authentik and Keycloak, two popular open-source IAM solutions, highlighting their features, security, customization, and scalability. We break down which tool is best suited for different business sizes and needs, including an alternative, SuperTokens, for teams seeking a middle ground.\",\"image\":\"https://supertokens.com/blog-meta-images/authentik-vs-keycloak.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/what-is-fido",
+        "metaTags": [
+            "<meta name=\"description\" content=\"In this post, we’ll take you on a journey through the world of passkeys, breaking down their technical foundations and exploring how they work. We'll also look at the role of the FIDO2 and WebAuthn standards in shaping a future where passwords are no longer needed.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Security, User Management, Access Control, FIDO, WebAuthn\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What is FIDO\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/what-is-fido\" />",
+            "<meta property=\"og:description\" content=\"In this post, we’ll take you on a journey through the world of passkeys, breaking down their technical foundations and exploring how they work. We'll also look at the role of the FIDO2 and WebAuthn standards in shaping a future where passwords are no longer needed.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-fido.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"What is FIDO\" />",
+            "<meta name=\"twitter:description\" content=\"In this post, we’ll take you on a journey through the world of passkeys, breaking down their technical foundations and exploring how they work. We'll also look at the role of the FIDO2 and WebAuthn standards in shaping a future where passwords are no longer needed.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-is-fido\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-fido.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/what-is-fido\">"
+        ],
+        "title": "What is FIDO",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-fido\"},\"headline\":\"What is FIDO\",\"description\":\"In this post, we’ll take you on a journey through the world of passkeys, breaking down their technical foundations and exploring how they work. We'll also look at the role of the FIDO2 and WebAuthn standards in shaping a future where passwords are no longer needed.\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-fido.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]

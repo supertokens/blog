@@ -1,11 +1,14 @@
 ---
 title: What is FIDO
 date: "2024-09-20"
-description: "In this post, we’ll take you on a journey through the world of passkeys, breaking down their technical foundations and exploring how they work. We'll also look at the role of the FIDO2 and WebAuthn standards in shaping a future where passwords are no longer needed. "
+description: "In this post, we’ll take you on a journey through the world of passkeys, breaking down their technical foundations and exploring how they work. We'll also look at the role of the FIDO2 and WebAuthn standards in shaping a future where passwords are no longer needed."
 cover: "what-is-fido.png"
 category: "programming"
 author: "Dejan Lukic"
 ---
+
+
+## Table of Contents
 
 - [Introduction](#introduction)
 - [The End of the Password Era: Why Password-Based Authentication is Obsolete](#the-end-of-the-password-era-why-password-based-authentication-is-obsolete)
@@ -14,6 +17,7 @@ author: "Dejan Lukic"
 - [How FIDO2 Works: A Technical Breakdown with Examples](#how-fido2-works-a-technical-breakdown-with-examples)
 - [The FIDO2 Workflow: Registration and Authentication](#the-fido2-workflow-registration-and-authentication)
 - [Conclusion](#conclusion)
+
 ## Introduction
 
 The era of relying solely on passwords for online authentication is rapidly fading, and for good reason. What was once a trusted security measure has become a significant weak point in today’s already too complex digital world. With cyberattacks evolving in sophistication and scale, the vulnerabilities of password-based systems are clearer than ever. 
