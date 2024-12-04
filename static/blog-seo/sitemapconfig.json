@@ -196,5 +196,11 @@
     },
     {
         "location": "https://supertokens.com/blog/authentik-vs-keycloak"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-to-secure-a-nestjs-app"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-fido"
     }
 ]
