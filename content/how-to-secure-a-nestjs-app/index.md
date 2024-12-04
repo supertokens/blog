@@ -1239,8 +1239,6 @@ The guard's constructor accepts an optional **VerifySessionOptions** argument, w
 
 In the **canActivate method**, the HTTP request (**req**) and response (**resp**) are extracted from the **ExecutionContext**. The key logic lies in the call to **getSession(req, resp, this.getSessionOptions)** — this method checks for an active session on the request.
 
-
-
 * If a session exists, it’s attached to **req.session**, making session details accessible in the request.
 * If no session exists and **{sessionRequired: true}** is passed (the default behavior), **getSession** will throw an error, which triggers the exception filter to return a 401 Unauthorized response.
 * If **{sessionRequired: false}** is passed, the request will proceed even without a session, but **req.session** will be **undefined**.
@@ -1251,14 +1249,13 @@ Now, when you run your application and try to access any protected route, nothin
 
 In NestJS, guards are flexible and can be applied at different levels:
 
-
-
 * **Global level**: Protects every route in the app.
 * **Controller level**: Protects all routes within a specific controller.
 * **Route level**: Protects individual routes.
 
 Let’s attach our newly created guard at the controller level. You likely have an **AppController** already generated when you scaffolded the project. Here’s how to apply the guard:
 
+```ts
 import { Controller, Get, UseGuards } from '@nestjs/common';
 
 import { AuthGuard } from './auth/auth.guard';
@@ -1276,9 +1273,11 @@ export class AppController {
   getProtectedRouteInfo() {...}
 
 }
+```
 
 Alternatively, in some examples, you might see the guard applied like this:
 
+```ts
 import { Controller, Get, UseGuards } from '@nestjs/common';
 
 import { AuthGuard } from './auth/auth.guard';
@@ -1296,11 +1295,13 @@ export class AppController {
   getProtectedRouteInfo() {...}
 
 }
+```
 
 In the first example, we pass the **AuthGuard** class itself, allowing NestJS to manage its instantiation, which also enables dependency injection. In the second example, we manually instantiate the guard, which can be useful in certain scenarios.
 
 The guard now protects the entire controller, but if we wanted to protect only a specific route, we could do it like this:
 
+```ts
 import { Controller, Get, UseGuards } from '@nestjs/common';
 
 import { AuthGuard } from './auth/auth.guard';
@@ -1318,6 +1319,7 @@ export class AppController {
   getProtectedRouteInfo() {...}
 
 }
+```
 
 This approach allows you to selectively protect routes without applying the guard globally across the entire controller.
 
@@ -1334,13 +1336,15 @@ To create a custom decorator for session data:
 
 1. Run the following command from the root of the project:
 
-    $ nest g decorator session auth
+```bash
+$ nest g decorator session auth
+```
 
-
-    This command will generate a `session.decorator.ts` file inside the `auth/session` folder.
+This command will generate a `session.decorator.ts` file inside the `auth/session` folder.
 
 2. Now, add the following code to the session.decorator.ts file:
 
+```ts
     import { createParamDecorator, ExecutionContext } from '@nestjs/common';
 
 
@@ -1360,13 +1364,11 @@ To create a custom decorator for session data:
 
 
     );
-
+```
 
 The Session decorator uses the createParamDecorator function to extract the session data from the request. By tapping into the ExecutionContext, it switches to the HTTP layer, retrieves the request object, and returns the session attached to it. This session contains essential information such as the user ID, session handle, and access token payload.
 
 Use Cases for Session Decorators
-
-
 
 1. **User Identification**: You might want to retrieve the authenticated user’s ID for various actions such as updating profiles, managing orders, or handling permissions.
 
@@ -1380,6 +1382,7 @@ Use Cases for Session Decorators
 
 To utilize the custom Session decorator in a protected controller, we inject it as a parameter:
 
+```ts
 import { Controller, Get, UseGuards } from '@nestjs/common';
 
 import { SessionContainer } from 'supertokens-node/recipe/session';
@@ -1415,10 +1418,9 @@ export class AppController {
   }
 
 }
+```
 
-Why Use Decorators for Session Data?
-
-
+### Why Use Decorators for Session Data?
 
 * **Consistency**: Decorators standardize how session information is accessed across the application, ensuring consistent session handling.
 * **Code Reusability**: Once the decorator is implemented, it can be reused across multiple controllers without repeating session extraction logic.
