@@ -1794,5 +1794,29 @@
         ],
         "title": "What is FIDO",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-fido\"},\"headline\":\"What is FIDO\",\"description\":\"In this post, we’ll take you on a journey through the world of passkeys, breaking down their technical foundations and exploring how they work. We'll also look at the role of the FIDO2 and WebAuthn standards in shaping a future where passwords are no longer needed.\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-fido.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/how-to-secure-a-nestjs-app",
+        "metaTags": [
+            "<meta name=\"description\" content=\"In this post, we will be using NestJS, a Node.js framework that excels at making backend development efficient and scalable. Inspired by mature frameworks like Spring and ASP.NET, NestJS brings the best practices from these proven systems into the JavaScript/TypeScript world.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Security, User Management, Access Control, NestJS, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How to secure a NestJs Application\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/how-to-secure-a-nestjs-app\" />",
+            "<meta property=\"og:description\" content=\"In this post, we will be using NestJS, a Node.js framework that excels at making backend development efficient and scalable. Inspired by mature frameworks like Spring and ASP.NET, NestJS brings the best practices from these proven systems into the JavaScript/TypeScript world.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/how-to-secure-a-nestjs-app.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"How to secure a NestJs Application\" />",
+            "<meta name=\"twitter:description\" content=\"In this post, we will be using NestJS, a Node.js framework that excels at making backend development efficient and scalable. Inspired by mature frameworks like Spring and ASP.NET, NestJS brings the best practices from these proven systems into the JavaScript/TypeScript world.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/how-to-secure-a-nestjs-app\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/how-to-secure-a-nestjs-app.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/how-to-secure-a-nestjs-app\">"
+        ],
+        "title": "How to secure a NestJs Application",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/how-to-secure-a-nestjs-app\"},\"headline\":\"How to secure a NestJs Application\",\"description\":\"In this post, we will be using NestJS, a Node.js framework that excels at making backend development efficient and scalable. Inspired by mature frameworks like Spring and ASP.NET, NestJS brings the best practices from these proven systems into the JavaScript/TypeScript world.\",\"image\":\"https://supertokens.com/blog-meta-images/how-to-secure-a-nestjs-app.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
