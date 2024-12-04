@@ -182,7 +182,9 @@ Depending on the state of your current project—whether you already have everyt
 
 Which path you take depends on your knowledge of NestJS and SuperTokens. If you just want to quickly get started, run the following command:
 
+```bash
 $ npx create-supertokens-app@latest
+```
 
 By running this command, you will be prompted to select your frontend and backend frameworks, as well as the authentication methods you want to support. The setup process is intuitive, and once completed, you’ll have two generated projects.
 
