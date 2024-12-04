@@ -2,7 +2,7 @@
 title: How to secure a NestJs Application
 date: "2024-09-25"
 description: "In this post, we will be using NestJS, a Node.js framework that excels at making backend development efficient and scalable. Inspired by mature frameworks like Spring and ASP.NET, NestJS brings the best practices from these proven systems into the JavaScript/TypeScript world."
-cover: "how-to-secure-a-nestjs-application.png"
+cover: "how-to-secure-a-nestjs-app.png"
 category: "programming"
 author: "Dejan Lukic"
 ---
