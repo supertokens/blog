@@ -47,21 +47,21 @@ Enterprise SSO does more than streamline access---it also reduces security risks
 
 To understand SSO's mechanics, let's break down its two main components: the Identity Provider (IdP) and the Service Provider (SP).
 
-1. User Authentication
+- **User Authentication**
 
-2. Users log into the IdP, which verifies their identity using credentials stored in a central directory like Active Directory or LDAP. Often, this login includes multifactor authentication (MFA) for added security.
+  - Users log into the IdP, which verifies their identity using credentials stored in a central directory like Active Directory or LDAP. Often, this login includes multifactor authentication (MFA) for added security.
 
-3. Token Generation and Validation
+- **Token Generation and Validation**
 
-4. Once authenticated, the IdP issues a token that confirms the user's identity and permissions. This token is securely passed to other applications and validated by the SPs.
+  - nce authenticated, the IdP issues a token that confirms the user's identity and permissions. This token is securely passed to other applications and validated by the SPs.
 
-5. Session Management
+- **Session Management**
 
-6. SSO systems control session lengths and enforce timeouts. This means end users aren't prompted to log in repeatedly, and administrators maintain control over session activity.
+  - SSO systems control session lengths and enforce timeouts. This means end users aren't prompted to log in repeatedly, and administrators maintain control over session activity.
 
-7. Trust Relationships
+- **Trust Relationships**
 
-8. SSO relies on a trust-based connection between the IdP and SPs, established through protocols like SAML, OAuth, or OpenID Connect. The IdP's tokens verify user identities with SPs without transferring sensitive credentials multiple times.
+  - SSO relies on a trust-based connection between the IdP and SPs, established through protocols like SAML, OAuth, or OpenID Connect. The IdP's tokens verify user identities with SPs without transferring sensitive credentials multiple times.
 
 ## Key Features of Enterprise SSO
 
