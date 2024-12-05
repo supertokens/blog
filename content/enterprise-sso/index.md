@@ -67,41 +67,41 @@ To understand SSO's mechanics, let's break down its two main components: the Ide
 
 Enterprise SSO is more than just convenient; it can reshape how organizations operate:
 
-- Enhanced Security
+- **Enhanced Security**
 
-- Centralizing authentication reduces password-related vulnerabilities, shrinking the attack surface and making it easier to enforce security protocols. SuperTokens enhances security further by offering built-in support for MFA, protecting against unauthorized access.
+  - Centralizing authentication reduces password-related vulnerabilities, shrinking the attack surface and making it easier to enforce security protocols. SuperTokens enhances security further by offering built-in support for MFA, protecting against unauthorized access.
 
-- Improved User Experience
+- **Improved User Experience**
 
-- With enterprise SSO, users can seamlessly move across applications without needing to re-authenticate every time. This reduces login friction, enabling employees to focus on core tasks without the hassle of remembering passwords.
+  - With enterprise SSO, users can seamlessly move across applications without needing to re-authenticate every time. This reduces login friction, enabling employees to focus on core tasks without the hassle of remembering passwords.
 
-- Cost Efficiency for IT
+- **Cost Efficiency for IT**
 
-- Password resets are one of the top reasons for IT calls. SSO slashes these requests, freeing up IT teams to focus on strategic tasks. Centralized access management also allows better software license control, reducing costs by efficiently managing user accounts.
+  - Password resets are one of the top reasons for IT calls. SSO slashes these requests, freeing up IT teams to focus on strategic tasks. Centralized access management also allows better software license control, reducing costs by efficiently managing user accounts.
 
-- Enhanced Compliance and Audit Capabilities
+- **Enhanced Compliance and Audit Capabilities**
 
-- Enterprise SSO solutions often include logging and monitoring features to track user activity, making meeting compliance standards like GDPR, HIPAA, and SOC2 easier.
+  - Enterprise SSO solutions often include logging and monitoring features to track user activity, making meeting compliance standards like GDPR, HIPAA, and SOC2 easier.
 
 ## Common Challenges in Implementing Enterprise SSO (and How to Overcome Them)
 
 Implementing SSO in an enterprise environment has its complexities, but they're manageable. Here's how to tackle them:
 
-- Integration Complexity
+- **Integration Complexity**
 
-- Enterprises use diverse applications, which can complicate SSO integration. SuperTokens helps here by supporting multiple protocols, including SAML and OpenID Connect, ensuring compatibility with various systems.
+  - Enterprises use diverse applications, which can complicate SSO integration. SuperTokens helps here by supporting multiple protocols, including SAML and OpenID Connect, ensuring compatibility with various systems.
 
-- Single Point of Failure Risks
+- **Single Point of Failure Risks**
 
-- If the IdP is compromised, it can affect all connected systems. To counter this, enterprises can implement MFA and strong security policies. SuperTokens, for instance, include built-in MFA to reduce unauthorized access risks significantly.
+  - If the IdP is compromised, it can affect all connected systems. To counter this, enterprises can implement MFA and strong security policies. SuperTokens, for instance, include built-in MFA to reduce unauthorized access risks significantly.
 
-- Balancing Security with Ease of Use
+- **Balancing Security with Ease of Use**
 
-- Striking a balance between security and usability is critical. Adaptable session settings and MFA allow organizations to deliver a smooth user experience without sacrificing security. SuperTokens supports customizable session management and MFA options, offering a tailored solution.
+  - Striking a balance between security and usability is critical. Adaptable session settings and MFA allow organizations to deliver a smooth user experience without sacrificing security. SuperTokens supports customizable session management and MFA options, offering a tailored solution.
 
-- Ensuring Compliance
+- **Ensuring Compliance**
 
-- Organizations need SSO that meets data protection standards and supports audit logging. SuperTokens provides session tracking and detailed logs, making complying with standards like GDPR, SOC2, and HIPAA easier.
+  - Organizations need SSO that meets data protection standards and supports audit logging. SuperTokens provides session tracking and detailed logs, making complying with standards like GDPR, SOC2, and HIPAA easier.
 
 ## Implementing Enterprise SSO with SuperTokens
 
