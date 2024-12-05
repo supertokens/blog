@@ -1842,5 +1842,28 @@
         ],
         "title": "7 Top Authelia Alternatives for Enhanced Authentication in 2025",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/authelia-alternatives\"},\"headline\":\"7 Top Authelia Alternatives for Enhanced Authentication in 2025\",\"description\":\"In this blog, we're going to look at the top 7 alternatives to Authelia. We’ll go over the main features, pricing, pros and cons of each option to help you decide what’s best for your authentication strategy.\",\"image\":\"https://supertokens.com/blog-meta-images/authelia-alternatives.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
+        "path": "/blog/enterprise-sso",
+        "metaTags": [
+            "<meta name=\"description\" content=\"This guide will dive into what enterprise SSO is and why it’s necessary for modern organizations. It will also provide actionable tips for implementing it effectively\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Best Practices for Enterprise SSO\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/enterprise-sso\" />",
+            "<meta property=\"og:description\" content=\"This guide will dive into what enterprise SSO is and why it’s necessary for modern organizations. It will also provide actionable tips for implementing it effectively\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/enterprise-sso.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Best Practices for Enterprise SSO\" />",
+            "<meta name=\"twitter:description\" content=\"This guide will dive into what enterprise SSO is and why it’s necessary for modern organizations. It will also provide actionable tips for implementing it effectively\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/enterprise-sso\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/enterprise-sso.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/enterprise-sso\">"
+        ],
+        "title": "Best Practices for Enterprise SSO",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/enterprise-sso\"},\"headline\":\"Best Practices for Enterprise SSO\",\"description\":\"This guide will dive into what enterprise SSO is and why it’s necessary for modern organizations. It will also provide actionable tips for implementing it effectively\",\"image\":\"https://supertokens.com/blog-meta-images/enterprise-sso.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
