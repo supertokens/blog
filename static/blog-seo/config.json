@@ -1820,6 +1820,29 @@
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/how-to-secure-a-nestjs-app\"},\"headline\":\"How to secure a NestJs Application\",\"description\":\"In this post, we will be using NestJS, a Node.js framework that excels at making backend development efficient and scalable. Inspired by mature frameworks like Spring and ASP.NET, NestJS brings the best practices from these proven systems into the JavaScript/TypeScript world.\",\"image\":\"https://supertokens.com/blog-meta-images/how-to-secure-a-nestjs-app.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     },
     {
+        "path": "/blog/authelia-alternatives",
+        "metaTags": [
+            "<meta name=\"description\" content=\"In this blog, we're going to look at the top 7 alternatives to Authelia. We’ll go over the main features, pricing, pros and cons of each option to help you decide what’s best for your authentication strategy.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Security, User Management, Access Control, Authelia, SuperTokens, Auth0\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"7 Top Authelia Alternatives for Enhanced Authentication in 2025\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/authelia-alternatives\" />",
+            "<meta property=\"og:description\" content=\"In this blog, we're going to look at the top 7 alternatives to Authelia. We’ll go over the main features, pricing, pros and cons of each option to help you decide what’s best for your authentication strategy.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/authelia-alternatives.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"7 Top Authelia Alternatives for Enhanced Authentication in 2025\" />",
+            "<meta name=\"twitter:description\" content=\"In this blog, we're going to look at the top 7 alternatives to Authelia. We’ll go over the main features, pricing, pros and cons of each option to help you decide what’s best for your authentication strategy.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/authelia-alternatives\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/authelia-alternatives.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/authelia-alternatives\">"
+        ],
+        "title": "7 Top Authelia Alternatives for Enhanced Authentication in 2025",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/authelia-alternatives\"},\"headline\":\"7 Top Authelia Alternatives for Enhanced Authentication in 2025\",\"description\":\"In this blog, we're going to look at the top 7 alternatives to Authelia. We’ll go over the main features, pricing, pros and cons of each option to help you decide what’s best for your authentication strategy.\",\"image\":\"https://supertokens.com/blog-meta-images/authelia-alternatives.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
         "path": "/blog/enterprise-sso",
         "metaTags": [
             "<meta name=\"description\" content=\"This guide will dive into what enterprise SSO is and why it’s necessary for modern organizations. It will also provide actionable tips for implementing it effectively\" />",
