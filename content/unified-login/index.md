@@ -45,36 +45,19 @@ Great question! I'm glad you asked. Here are a few scenarios where Unified Login
 
 
 
-1. You've got multiple frontend clients connecting to different backends \
- \
+1. You've got multiple frontend clients connecting to different backends 
 
+![example flow](./example-flow.png)
 
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+2. You're juggling multiple frontend clients that all connect to the same backend 
+ 
+![example flow 2](./example-flow-2.png)
 
+(Hint: Gloogle, our demo below, uses this one) 
 
-![alt_text](images/image1.png "image_tooltip")
- \
-
-2. You're juggling multiple frontend clients that all connect to the same backend \
- \
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
- \
-(Hint: Gloogle, our demo below, uses this one) \
-
-3. You want to use your website login for desktop and mobile apps too \
- \
-
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
- \
+3. You want to use your website login for desktop and mobile apps too 
+ 
+ ![example flow 3](./example-flow-3.png)
 
 
 Basically, if you're building the next Google (or Gloogle), Unified Login is your jam. Or, if you've already grown to the size where you need a single source of truth for all your authentication and authorization needs.
@@ -139,15 +122,7 @@ For a server that does all of the auth heavy lifting, it comes at a whopping 120
 
 Now, in OAuth2 land, servers also need to show a login screen somehow. There are two schools of thought with this one - some like co-locating their auth UI with the server, others like to keep the front-end part of the auth story separate. Team Gloogle, being cutting edge went for the second approach and went for a full fledged React app for the Auth screen:
 
- \
-
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
- \
-
+![login with google](./login-with-google.png)
 
 Happily enough, SuperTokens' unified login comes with support for that scenario too. In fact, as long as you make the backend aware of the frontend via the [website config option](https://github.com/supertokens/Gloogle/blob/master/backend/src/app.js#L77-L78)(and [vice-versa](https://github.com/supertokens/Gloogle/blob/master/gloogle-auth/src/auth.ts#L10-L11)), it all just works.
 
@@ -158,10 +133,7 @@ Here's how that looks like: [Gloogle Auth](https://github.com/supertokens/Gloogl
 
 GloogleDocs is our straightforward document editing application. We went for vanillaJS when we first decided to build it - it was a different time. But, that doesn't have to stop us from being able to put our app under a single auth roof:
 
- \
-// Gloogle Docs video here \
- \
-
+<video src="./glg_docs.mp4" width="960" height="480" controls></video>
 
 And here's the source for a peek under the hood: [GloogleDocs repository](https://github.com/supertokens/Gloogle/tree/main/GloogleDocs).
 
@@ -170,7 +142,7 @@ And here's the source for a peek under the hood: [GloogleDocs repository](https:
 
 Of course, no self-respecting tech empire is complete without an email app. We built this one using React - and, as luck would have it, it was fairly easy to pull off putting this one under a unified login roof (in fact, easier than Gloogle Docs). Here's Gloogle Mail in action:
 
-// Gloogle mail video here \
+![google mail](./glg_mail.mp4)
  
 
 [GloogleMail repository](https://github.com/supertokens/Gloogle/tree/main/GloogleMail) for the source and more details.
@@ -180,7 +152,7 @@ Of course, no self-respecting tech empire is complete without an email app. We b
 
 As the tech landscape evolved, so did Gloogle's tech choices. One of our newer addition is Gloogle Calendar - A SolidJS app, for that added `Signals` goodness. But, regardless of whether we're dealing with a modern, established or kinda outdated stack - SuperTokens's unified login just works. Here's Gloogle Calendar in action:
 
-// Gloogle calendar video here \
+![google calendar](./glg_cal.mp4)
 
 
 [GloogleCalendar repository](https://github.com/supertokens/Gloogle/tree/main/GloogleCalendar) to see how it all works.
