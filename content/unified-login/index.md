@@ -142,7 +142,7 @@ And here's the source for a peek under the hood: [GloogleDocs repository](https:
 
 Of course, no self-respecting tech empire is complete without an email app. We built this one using React - and, as luck would have it, it was fairly easy to pull off putting this one under a unified login roof (in fact, easier than Gloogle Docs). Here's Gloogle Mail in action:
 
-![google mail](./glg_mail.mp4)
+<video src="./glg_mail.mp4" width="960" height="480" controls></video>
  
 
 [GloogleMail repository](https://github.com/supertokens/Gloogle/tree/main/GloogleMail) for the source and more details.
@@ -152,7 +152,7 @@ Of course, no self-respecting tech empire is complete without an email app. We b
 
 As the tech landscape evolved, so did Gloogle's tech choices. One of our newer addition is Gloogle Calendar - A SolidJS app, for that added `Signals` goodness. But, regardless of whether we're dealing with a modern, established or kinda outdated stack - SuperTokens's unified login just works. Here's Gloogle Calendar in action:
 
-![google calendar](./glg_cal.mp4)
+<video src="./glg_cal.mp4" width="960" height="480" controls></video>
 
 
 [GloogleCalendar repository](https://github.com/supertokens/Gloogle/tree/main/GloogleCalendar) to see how it all works.
@@ -161,10 +161,7 @@ As the tech landscape evolved, so did Gloogle's tech choices. One of our newer a
 ### **Putting it all together**
 
 While you can clone the repo and run the Gloogle empire locally, here’s a video to see it in action:
-
-// Gloogle video here
-
-
+<video src="./gloogle_full.mp4" width="960" height="480" controls></video>
 
 Highlights:
 
