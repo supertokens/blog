@@ -1911,5 +1911,28 @@
         ],
         "title": "How to Authenticate and Authorize Users in a Node.js Express App",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/user-authentication-in-node\"},\"headline\":\"How to Authenticate and Authorize Users in a Node.js Express App\",\"description\":\"A step by step guide on how to Authenticate and Authorize Users in a Node.js Express App\",\"image\":\"https://supertokens.com/blog-meta-images/user-authentication-in-node.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
+        "path": "/blog/7-common-iam-risks-and-how-to-avoid-theme",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Reveal the 7 critical IAM risks that pose a threat to your business. Discover actionable advice to reduce these risks and strengthen your security measures.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"7 Common IAM Risks and How to Avoid Them\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/7-common-iam-risks-and-how-to-avoid-theme\" />",
+            "<meta property=\"og:description\" content=\"Reveal the 7 critical IAM risks that pose a threat to your business. Discover actionable advice to reduce these risks and strengthen your security measures.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/7-common-iam-risks-and-how-to-avoid-theme.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"7 Common IAM Risks and How to Avoid Them\" />",
+            "<meta name=\"twitter:description\" content=\"Reveal the 7 critical IAM risks that pose a threat to your business. Discover actionable advice to reduce these risks and strengthen your security measures.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/7-common-iam-risks-and-how-to-avoid-theme\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/7-common-iam-risks-and-how-to-avoid-theme.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/7-common-iam-risks-and-how-to-avoid-theme\">"
+        ],
+        "title": "7 Common IAM Risks and How to Avoid Them",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/7-common-iam-risks-and-how-to-avoid-theme\"},\"headline\":\"7 Common IAM Risks and How to Avoid Them\",\"description\":\"Reveal the 7 critical IAM risks that pose a threat to your business. Discover actionable advice to reduce these risks and strengthen your security measures.\",\"image\":\"https://supertokens.com/blog-meta-images/7-common-iam-risks-and-how-to-avoid-theme.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]

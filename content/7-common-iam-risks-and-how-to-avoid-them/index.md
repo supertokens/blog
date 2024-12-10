@@ -1,6 +1,6 @@
 ---
 title: 7 Common IAM Risks and How to Avoid Them
-date: "2024-12-08"
+date: "2024-11-04"
 description: " Reveal the 7 critical IAM risks that pose a threat to your business. Discover actionable advice to reduce these risks and strengthen your security measures."
 cover: "7-common-iam-risks-and-how-to-avoid-them.png"
 category: "programming"
