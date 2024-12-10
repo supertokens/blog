@@ -1865,5 +1865,28 @@
         ],
         "title": "Best Practices for Enterprise SSO",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/enterprise-sso\"},\"headline\":\"Best Practices for Enterprise SSO\",\"description\":\"This guide will dive into what enterprise SSO is and why it’s necessary for modern organizations. It will also provide actionable tips for implementing it effectively\",\"image\":\"https://supertokens.com/blog-meta-images/enterprise-sso.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
+        "path": "/blog/unified-login",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Ah, authentication. The bane of every developer's existence. Or is it? 🤔 Today, we're diving into the wonderful world of a new feature called Unified Login. Buckle up, folks—it's gonna be a wild ride!\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Unified Login: Because Who Doesn't Love a Good OAuth2 Adventure?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/unified-login\" />",
+            "<meta property=\"og:description\" content=\"Ah, authentication. The bane of every developer's existence. Or is it? 🤔 Today, we're diving into the wonderful world of a new feature called Unified Login. Buckle up, folks—it's gonna be a wild ride!\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/unified-login.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Unified Login: Because Who Doesn't Love a Good OAuth2 Adventure?\" />",
+            "<meta name=\"twitter:description\" content=\"Ah, authentication. The bane of every developer's existence. Or is it? 🤔 Today, we're diving into the wonderful world of a new feature called Unified Login. Buckle up, folks—it's gonna be a wild ride!\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/unified-login\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/unified-login.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/unified-login\">"
+        ],
+        "title": "Unified Login: Because Who Doesn't Love a Good OAuth2 Adventure?",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/unified-login\"},\"headline\":\"Unified Login: Because Who Doesn't Love a Good OAuth2 Adventure?\",\"description\":\"Ah, authentication. The bane of every developer's existence. Or is it? 🤔 Today, we're diving into the wonderful world of a new feature called Unified Login. Buckle up, folks—it's gonna be a wild ride!\",\"image\":\"https://supertokens.com/blog-meta-images/unified-login.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
