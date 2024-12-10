@@ -1,6 +1,6 @@
 ﻿---
 title: How to Authenticate and Authorize Users in a Node.js Express App
-date: "2024-12-06"
+date: "2024-11-02"
 description: "A step by step guide on how to Authenticate and Authorize Users in a Node.js Express App"
 cover: "user-authentication-in-node.png"
 category: "programming"
