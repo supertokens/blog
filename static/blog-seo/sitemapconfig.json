@@ -211,5 +211,8 @@
     },
     {
         "location": "https://supertokens.com/blog/unified-login"
+    },
+    {
+        "location": "https://supertokens.com/blog/user-authentication-in-node"
     }
 ]
