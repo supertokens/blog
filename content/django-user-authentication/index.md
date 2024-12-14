@@ -7,6 +7,11 @@ category: "programming, featured"
 author: "Nemi Shah"
 ---
 
+```toc
+tight: true
+toHeading: 3
+```
+
 Authentication has become a common concept in almost every application today, with most web applications requiring users to log in to gain access to features and personalisation. Ensuring that user data is protected and stored securely has become even more important to make sure nobody can gain unauthorised access to your application. All of this makes it crucial to user or build a reliable user authentication system that ensures data security while providing you with the flexibility to build your application your way.
 
 Django provides a built-in solution for user auth which provides features such as user accounts, permissions and cookie-based session management out of the box while still allowing you to extend and customise them to suit your needs. In this article we will visit how you can use Django's built-in auth mechanisms and compare it with a possible alternative.
