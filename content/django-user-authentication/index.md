@@ -1,7 +1,7 @@
 ---
 title: "A comprehensive guide to Django's user authentication system"
 description: "Learn how to implement user registration, login/logout, permissions etc using Django's built-in user authentication system."
-date: "2024-11-29"
+date: "2024-12-14"
 cover: "cover-image-for-my-blog-post.png"
 category: "programming, featured"
 author: "Nemi Shah"
