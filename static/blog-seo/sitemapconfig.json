@@ -196,5 +196,29 @@
     },
     {
         "location": "https://supertokens.com/blog/authentik-vs-keycloak"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-to-secure-a-nestjs-app"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-fido"
+    },
+    {
+        "location": "https://supertokens.com/blog/authelia-alternatives"
+    },
+    {
+        "location": "https://supertokens.com/blog/enterprise-sso"
+    },
+    {
+        "location": "https://supertokens.com/blog/unified-login"
+    },
+    {
+        "location": "https://supertokens.com/blog/user-authentication-in-node"
+    },
+    {
+        "location": "https://supertokens.com/blog/7-common-iam-risks-and-how-to-avoid-them"
+    },
+    {
+        "location": "https://supertokens.com/blog/flask-user-auth"
     }
 ]

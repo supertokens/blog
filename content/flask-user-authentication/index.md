@@ -1,8 +1,8 @@
 ---
 title: "Adding Authentication to Your Flask Backend with SuperTokens"
 description: "Learn how to seamlessly add authentication to your Flask backend using SuperTokens. This guide covers setting up authentication with the SuperTokens CLI or manual configuration, enabling you to focus on building application logic instead of authentication infrastructure."
-date: "2024-11-29"
-cover: "cover-image-for-my-blog-post.png"
+date: "2024-11-04"
+cover: "flask-user-authentication.png"
 category: "programming, featured"
 author: "Nemi Shah"
 ---
