@@ -1890,3 +1890,339 @@
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-jwt\"},\"headline\":\"What is JWT? Understand JSON Web Tokens | SuperTokens\",\"description\":\"Discover the fundamentals of JWTs, their structure, use cases, and potential security risks. Learn how to manage tokens securely with SuperTokens.\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-jwt.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
+{
+    "path": "/blog/the-best-way-to-securely-manage-user-sessions",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Learn secure strategies to handle user sessions, mitigate vulnerabilities, and protect against XSS attacks with advanced session management techniques.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"How to Manage User Sessions Securely | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/the-best-way-to-securely-manage-user-sessions\" />",
+        "<meta property=\"og:description\" content=\"Learn secure strategies to handle user sessions, mitigate vulnerabilities, and protect against XSS attacks with advanced session management techniques.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/the-best-way-to-securely-manage-user-sessions.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"How to Manage User Sessions Securely | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Learn secure strategies to handle user sessions, mitigate vulnerabilities, and protect against XSS attacks with advanced session management techniques.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/the-best-way-to-securely-manage-user-sessions\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/the-best-way-to-securely-manage-user-sessions.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/the-best-way-to-securely-manage-user-sessions\">"
+    ],
+    "title": "How to Manage User Sessions Securely | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/the-best-way-to-securely-manage-user-sessions\"},\"headline\":\"How to Manage User Sessions Securely | SuperTokens\",\"description\":\"Learn secure strategies to handle user sessions, mitigate vulnerabilities, and protect against XSS attacks with advanced session management techniques.\",\"image\":\"https://supertokens.com/blog-meta-images/the-best-way-to-securely-manage-user-sessions.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/introducing-user-roles-authorization-with-supertokens",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Implement user roles effortlessly with SuperTokens. Control access and define permissions through flexible, scalable role-based access control (RBAC).\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"User Roles and Authorization Explained | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/introducing-user-roles-authorization-with-supertokens\" />",
+        "<meta property=\"og:description\" content=\"Implement user roles effortlessly with SuperTokens. Control access and define permissions through flexible, scalable role-based access control (RBAC).\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/introducing-user-roles-authorization-with-supertokens.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"User Roles and Authorization Explained | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Implement user roles effortlessly with SuperTokens. Control access and define permissions through flexible, scalable role-based access control (RBAC).\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/introducing-user-roles-authorization-with-supertokens\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/introducing-user-roles-authorization-with-supertokens.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/introducing-user-roles-authorization-with-supertokens\">"
+    ],
+    "title": "User Roles and Authorization Explained | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/introducing-user-roles-authorization-with-supertokens\"},\"headline\":\"User Roles and Authorization Explained | SuperTokens\",\"description\":\"Implement user roles effortlessly with SuperTokens. Control access and define permissions through flexible, scalable role-based access control (RBAC).\",\"image\":\"https://supertokens.com/blog-meta-images/introducing-user-roles-authorization-with-supertokens.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/are-you-using-jwts-for-user-sessions-in-the-correct-way",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Ensure your JWT implementation follows best practices. Avoid common mistakes when managing user sessions and strengthen security with SuperTokens.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Using JWTs for Sessions? Avoid These Mistakes | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/are-you-using-jwts-for-user-sessions-in-the-correct-way\" />",
+        "<meta property=\"og:description\" content=\"Ensure your JWT implementation follows best practices. Avoid common mistakes when managing user sessions and strengthen security with SuperTokens.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/are-you-using-jwts-for-user-sessions-in-the-correct-way.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Using JWTs for Sessions? Avoid These Mistakes | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Ensure your JWT implementation follows best practices. Avoid common mistakes when managing user sessions and strengthen security with SuperTokens.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/are-you-using-jwts-for-user-sessions-in-the-correct-way\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/are-you-using-jwts-for-user-sessions-in-the-correct-way.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/are-you-using-jwts-for-user-sessions-in-the-correct-way\">"
+    ],
+    "title": "Using JWTs for Sessions? Avoid These Mistakes | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/are-you-using-jwts-for-user-sessions-in-the-correct-way\"},\"headline\":\"Using JWTs for Sessions? Avoid These Mistakes | SuperTokens\",\"description\":\"Ensure your JWT implementation follows best practices. Avoid common mistakes when managing user sessions and strengthen security with SuperTokens.\",\"image\":\"https://supertokens.com/blog-meta-images/are-you-using-jwts-for-user-sessions-in-the-correct-way.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/the-real-reason-okta-spent-on-auth0",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Explore the business drivers behind Okta's acquisition of Auth0, including market positioning, strategic goals, and the future of authentication providers.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Why Okta Acquired Auth0: The Real Reason | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/the-real-reason-okta-spent-on-auth0\" />",
+        "<meta property=\"og:description\" content=\"Explore the business drivers behind Okta's acquisition of Auth0, including market positioning, strategic goals, and the future of authentication providers.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/the-real-reason-okta-spent-on-auth0.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Why Okta Acquired Auth0: The Real Reason | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Explore the business drivers behind Okta's acquisition of Auth0, including market positioning, strategic goals, and the future of authentication providers.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/the-real-reason-okta-spent-on-auth0\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/the-real-reason-okta-spent-on-auth0.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/the-real-reason-okta-spent-on-auth0\">"
+    ],
+    "title": "Why Okta Acquired Auth0: The Real Reason | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/the-real-reason-okta-spent-on-auth0\"},\"headline\":\"Why Okta Acquired Auth0: The Real Reason | SuperTokens\",\"description\":\"Explore the business drivers behind Okta's acquisition of Auth0, including market positioning, strategic goals, and the future of authentication providers.\",\"image\":\"https://supertokens.com/blog-meta-images/the-real-reason-okta-spent-on-auth0.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/how-to-set-up-social-and-email-password-login-with-reactjs",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Learn how to integrate social login and email-password authentication in your ReactJS app. Follow this guide for a seamless SuperTokens setup.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Set Up Social and Email Password Login in ReactJS | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/how-to-set-up-social-and-email-password-login-with-reactjs\" />",
+        "<meta property=\"og:description\" content=\"Learn how to integrate social login and email-password authentication in your ReactJS app. Follow this guide for a seamless SuperTokens setup.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/how-to-set-up-social-and-email-password-login-with-reactjs.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Set Up Social and Email Password Login in ReactJS | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Learn how to integrate social login and email-password authentication in your ReactJS app. Follow this guide for a seamless SuperTokens setup.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/how-to-set-up-social-and-email-password-login-with-reactjs\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/how-to-set-up-social-and-email-password-login-with-reactjs.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/how-to-set-up-social-and-email-password-login-with-reactjs\">"
+    ],
+    "title": "Set Up Social and Email Password Login in ReactJS | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/how-to-set-up-social-and-email-password-login-with-reactjs\"},\"headline\":\"Set Up Social and Email Password Login in ReactJS | SuperTokens\",\"description\":\"Learn how to integrate social login and email-password authentication in your ReactJS app. Follow this guide for a seamless SuperTokens setup.\",\"image\":\"https://supertokens.com/blog-meta-images/how-to-set-up-social-and-email-password-login-with-reactjs.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/oauth-vs-jwt",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Understand the differences between OAuth and JWT. Find out when to use each and how SuperTokens helps implement secure session management.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"OAuth vs JWT: Key Differences Explained | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/oauth-vs-jwt\" />",
+        "<meta property=\"og:description\" content=\"Understand the differences between OAuth and JWT. Find out when to use each and how SuperTokens helps implement secure session management.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/oauth-vs-jwt.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"OAuth vs JWT: Key Differences Explained | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Understand the differences between OAuth and JWT. Find out when to use each and how SuperTokens helps implement secure session management.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/oauth-vs-jwt\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/oauth-vs-jwt.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/oauth-vs-jwt\">"
+    ],
+    "title": "OAuth vs JWT: Key Differences Explained | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/oauth-vs-jwt\"},\"headline\":\"OAuth vs JWT: Key Differences Explained | SuperTokens\",\"description\":\"Understand the differences between OAuth and JWT. Find out when to use each and how SuperTokens helps implement secure session management.\",\"image\":\"https://supertokens.com/blog-meta-images/oauth-vs-jwt.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/all-you-need-to-know-about-user-session-security",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Secure your user sessions with the right strategies. Learn the risks of session hijacking and how SuperTokens protects against them.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"User Session Security: Best Practices | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/all-you-need-to-know-about-user-session-security\" />",
+        "<meta property=\"og:description\" content=\"Secure your user sessions with the right strategies. Learn the risks of session hijacking and how SuperTokens protects against them.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/all-you-need-to-know-about-user-session-security.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"User Session Security: Best Practices | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Secure your user sessions with the right strategies. Learn the risks of session hijacking and how SuperTokens protects against them.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/all-you-need-to-know-about-user-session-security\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/all-you-need-to-know-about-user-session-security.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/all-you-need-to-know-about-user-session-security\">"
+    ],
+    "title": "User Session Security: Best Practices | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/all-you-need-to-know-about-user-session-security\"},\"headline\":\"User Session Security: Best Practices | SuperTokens\",\"description\":\"Secure your user sessions with the right strategies. Learn the risks of session hijacking and how SuperTokens protects against them.\",\"image\":\"https://supertokens.com/blog-meta-images/all-you-need-to-know-about-user-session-security.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Discover the pros and cons of using cookies vs LocalStorage for session management. Learn which approach is more secure and recommended.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Cookies vs LocalStorage: Session Management | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know\" />",
+        "<meta property=\"og:description\" content=\"Discover the pros and cons of using cookies vs LocalStorage for session management. Learn which approach is more secure and recommended.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/cookies-vs-localstorage-for-sessions-everything-you-need-to-know.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Cookies vs LocalStorage: Session Management | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Discover the pros and cons of using cookies vs LocalStorage for session management. Learn which approach is more secure and recommended.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/cookies-vs-localstorage-for-sessions-everything-you-need-to-know.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know\">"
+    ],
+    "title": "Cookies vs LocalStorage: Session Management | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know\"},\"headline\":\"Cookies vs LocalStorage: Session Management | SuperTokens\",\"description\":\"Discover the pros and cons of using cookies vs LocalStorage for session management. Learn which approach is more secure and recommended.\",\"image\":\"https://supertokens.com/blog-meta-images/cookies-vs-localstorage-for-sessions-everything-you-need-to-know.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/what-is-cross-origin-resource-sharing",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Learn about Cross-Origin Resource Sharing (CORS), why it matters, and how to configure it securely for your authentication flows.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Understanding Cross-Origin Resource Sharing (CORS) | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/what-is-cross-origin-resource-sharing\" />",
+        "<meta property=\"og:description\" content=\"Learn about Cross-Origin Resource Sharing (CORS), why it matters, and how to configure it securely for your authentication flows.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-cross-origin-resource-sharing.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Understanding Cross-Origin Resource Sharing (CORS) | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Learn about Cross-Origin Resource Sharing (CORS), why it matters, and how to configure it securely for your authentication flows.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-is-cross-origin-resource-sharing\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-cross-origin-resource-sharing.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/what-is-cross-origin-resource-sharing\">"
+    ],
+    "title": "Understanding Cross-Origin Resource Sharing (CORS) | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-cross-origin-resource-sharing\"},\"headline\":\"Understanding Cross-Origin Resource Sharing (CORS) | SuperTokens\",\"description\":\"Learn about Cross-Origin Resource Sharing (CORS), why it matters, and how to configure it securely for your authentication flows.\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-cross-origin-resource-sharing.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/implementing-a-forgot-password-flow",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Implement a secure and user-friendly forgot password flow using SuperTokens. Learn the steps to enhance the recovery process with minimal friction.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Forgot Password Flow: Implementation Guide | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/implementing-a-forgot-password-flow\" />",
+        "<meta property=\"og:description\" content=\"Implement a secure and user-friendly forgot password flow using SuperTokens. Learn the steps to enhance the recovery process with minimal friction.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/implementing-a-forgot-password-flow.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Forgot Password Flow: Implementation Guide | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Implement a secure and user-friendly forgot password flow using SuperTokens. Learn the steps to enhance the recovery process with minimal friction.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/implementing-a-forgot-password-flow\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/implementing-a-forgot-password-flow.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/implementing-a-forgot-password-flow\">"
+    ],
+    "title": "Forgot Password Flow: Implementation Guide | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/implementing-a-forgot-password-flow\"},\"headline\":\"Forgot Password Flow: Implementation Guide | SuperTokens\",\"description\":\"Implement a secure and user-friendly forgot password flow using SuperTokens. Learn the steps to enhance the recovery process with minimal friction.\",\"image\":\"https://supertokens.com/blog-meta-images/implementing-a-forgot-password-flow.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/how-to-deploy-supertokens-with-react-nodejs-express-on-vercel",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Follow this guide to deploy SuperTokens with React, NodeJS, and Express on Vercel. Get your authentication system running efficiently on the cloud.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Deploy SuperTokens with React and NodeJS on Vercel | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/how-to-deploy-supertokens-with-react-nodejs-express-on-vercel\" />",
+        "<meta property=\"og:description\" content=\"Follow this guide to deploy SuperTokens with React, NodeJS, and Express on Vercel. Get your authentication system running efficiently on the cloud.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/how-to-deploy-supertokens-with-react-nodejs-express-on-vercel.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Deploy SuperTokens with React and NodeJS on Vercel | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Follow this guide to deploy SuperTokens with React, NodeJS, and Express on Vercel. Get your authentication system running efficiently on the cloud.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/how-to-deploy-supertokens-with-react-nodejs-express-on-vercel\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/how-to-deploy-supertokens-with-react-nodejs-express-on-vercel.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/how-to-deploy-supertokens-with-react-nodejs-express-on-vercel\">"
+    ],
+    "title": "Deploy SuperTokens with React and NodeJS on Vercel | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/how-to-deploy-supertokens-with-react-nodejs-express-on-vercel\"},\"headline\":\"Deploy SuperTokens with React and NodeJS on Vercel | SuperTokens\",\"description\":\"Follow this guide to deploy SuperTokens with React, NodeJS, and Express on Vercel. Get your authentication system running efficiently on the cloud.\",\"image\":\"https://supertokens.com/blog-meta-images/how-to-deploy-supertokens-with-react-nodejs-express-on-vercel.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/revoking-access-with-a-jwt-blacklist",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Learn how to implement JWT blacklists for enhanced security. Discover strategies to manage token revocation and mitigate unauthorized access.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Revoke Access Using a JWT Blacklist | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/revoking-access-with-a-jwt-blacklist\" />",
+        "<meta property=\"og:description\" content=\"Learn how to implement JWT blacklists for enhanced security. Discover strategies to manage token revocation and mitigate unauthorized access.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/revoking-access-with-a-jwt-blacklist.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Revoke Access Using a JWT Blacklist | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Learn how to implement JWT blacklists for enhanced security. Discover strategies to manage token revocation and mitigate unauthorized access.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/revoking-access-with-a-jwt-blacklist\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/revoking-access-with-a-jwt-blacklist.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/revoking-access-with-a-jwt-blacklist\">"
+    ],
+    "title": "Revoke Access Using a JWT Blacklist | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/revoking-access-with-a-jwt-blacklist\"},\"headline\":\"Revoke Access Using a JWT Blacklist | SuperTokens\",\"description\":\"Learn how to implement JWT blacklists for enhanced security. Discover strategies to manage token revocation and mitigate unauthorized access.\",\"image\":\"https://supertokens.com/blog-meta-images/revoking-access-with-a-jwt-blacklist.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Compare leading authentication platforms like Auth0, Okta, Cognito, and SuperTokens. Identify the best solution for your authentication needs.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Top 3 Auth0 alternatives: Auth0 vs Okta vs Cognito vs SuperTokens [2025]\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens\" />",
+        "<meta property=\"og:description\" content=\"Compare leading authentication platforms like Auth0, Okta, Cognito, and SuperTokens. Identify the best solution for your authentication needs.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Top 3 Auth0 alternatives: Auth0 vs Okta vs Cognito vs SuperTokens [2025]\" />",
+        "<meta name=\"twitter:description\" content=\"Compare leading authentication platforms like Auth0, Okta, Cognito, and SuperTokens. Identify the best solution for your authentication needs.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens\">"
+    ],
+    "title": "Top 3 Auth0 alternatives: Auth0 vs Okta vs Cognito vs SuperTokens [2025]",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens\"},\"headline\":\"Top 3 Auth0 alternatives: Auth0 vs Okta vs Cognito vs SuperTokens [2025]\",\"description\":\"Compare leading authentication platforms like Auth0, Okta, Cognito, and SuperTokens. Identify the best solution for your authentication needs.\",\"image\":\"https://supertokens.com/blog-meta-images/auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/connect-supertokens-to-database",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Integrate SuperTokens with your database effortlessly. Learn the steps to manage authentication and data securely using the right connection.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"How to Connect SuperTokens to Your Database | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/connect-supertokens-to-database\" />",
+        "<meta property=\"og:description\" content=\"Integrate SuperTokens with your database effortlessly. Learn the steps to manage authentication and data securely using the right connection.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/connect-supertokens-to-database.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"How to Connect SuperTokens to Your Database | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Integrate SuperTokens with your database effortlessly. Learn the steps to manage authentication and data securely using the right connection.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/connect-supertokens-to-database\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/connect-supertokens-to-database.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/connect-supertokens-to-database\">"
+    ],
+    "title": "How to Connect SuperTokens to Your Database | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/connect-supertokens-to-database\"},\"headline\":\"How to Connect SuperTokens to Your Database | SuperTokens\",\"description\":\"Integrate SuperTokens with your database effortlessly. Learn the steps to manage authentication and data securely using the right connection.\",\"image\":\"https://supertokens.com/blog-meta-images/connect-supertokens-to-database.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
