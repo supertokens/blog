@@ -2003,5 +2003,28 @@
         ],
         "title": "9 SSO Best Practices to Strengthen Security in 2024",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/9-sso-best-practices-to-strengthen-security-in-2024\"},\"headline\":\"9 SSO Best Practices to Strengthen Security in 2024\",\"description\":\"Discover the top 9 SSO best practices for 2024 to enhance your security. Learn how to protect your data and streamline user access effectively.\",\"image\":\"https://supertokens.com/blog-meta-images/9-sso-best-practices-to-strengthen-security-in-2024.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
+        "path": "/blog/django-user-authentication",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how to implement user registration, login/logout, permissions etc using Django's built-in user authentication system.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"A comprehensive guide to Django's user authentication system\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/django-user-authentication\" />",
+            "<meta property=\"og:description\" content=\"Learn how to implement user registration, login/logout, permissions etc using Django's built-in user authentication system.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/django-user-authentication.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"A comprehensive guide to Django's user authentication system\" />",
+            "<meta name=\"twitter:description\" content=\"Learn how to implement user registration, login/logout, permissions etc using Django's built-in user authentication system.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/django-user-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/django-user-authentication.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/django-user-authentication\">"
+        ],
+        "title": "A comprehensive guide to Django's user authentication system",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/django-user-authentication\"},\"headline\":\"A comprehensive guide to Django's user authentication system\",\"description\":\"Learn how to implement user registration, login/logout, permissions etc using Django's built-in user authentication system.\",\"image\":\"https://supertokens.com/blog-meta-images/django-user-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]

@@ -226,5 +226,8 @@
     },
     {
         "location": "https://supertokens.com/blog/9-sso-best-practices-to-strengthen-security-in-2024"
+    },
+    {
+        "location": "https://supertokens.com/blog/django-user-authentication"
     }
 ]
