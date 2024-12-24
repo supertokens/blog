@@ -1,6 +1,6 @@
 ---
 title: 9 SSO Best Practices to Strengthen Security in 2024
-date: "2024-12-09"
+date: "2024-11-15"
 description: "Discover the top 9 SSO best practices for 2024 to enhance your security. Learn how to protect your data and streamline user access effectively."
 cover: "9-sso-best-practices-to-strengthen-security-in-2024.png"
 category: "programming"

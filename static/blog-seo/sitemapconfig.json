@@ -220,5 +220,8 @@
     },
     {
         "location": "https://supertokens.com/blog/flask-user-auth"
+    },
+    {
+        "location": "https://supertokens.com/blog/9-sso-best-practices-to-strengthen-security-in-2024"
     }
 ]
