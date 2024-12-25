@@ -2026,5 +2026,28 @@
         ],
         "title": "A comprehensive guide to Django's user authentication system",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/django-user-authentication\"},\"headline\":\"A comprehensive guide to Django's user authentication system\",\"description\":\"Learn how to implement user registration, login/logout, permissions etc using Django's built-in user authentication system.\",\"image\":\"https://supertokens.com/blog-meta-images/django-user-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
+        "path": "/blog/but-auth-is-hard",
+        "metaTags": [
+            "<meta name=\"description\" content=\"No, it's not. It's boring, red-tapey, a solved problem... but don't call it hard as a blanket statement.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"BuT, aUtH iS HaRd\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/but-auth-is-hard\" />",
+            "<meta property=\"og:description\" content=\"No, it's not. It's boring, red-tapey, a solved problem... but don't call it hard as a blanket statement.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/but-auth-is-hard.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"BuT, aUtH iS HaRd\" />",
+            "<meta name=\"twitter:description\" content=\"No, it's not. It's boring, red-tapey, a solved problem... but don't call it hard as a blanket statement.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/but-auth-is-hard\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/but-auth-is-hard.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://darko.io/posts/but-auth-is-hard/\">"
+        ],
+        "title": "BuT, aUtH iS HaRd",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/but-auth-is-hard\"},\"headline\":\"BuT, aUtH iS HaRd\",\"description\":\"No, it's not. It's boring, red-tapey, a solved problem... but don't call it hard as a blanket statement.\",\"image\":\"https://supertokens.com/blog-meta-images/but-auth-is-hard.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]

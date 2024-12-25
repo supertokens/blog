@@ -1,8 +1,8 @@
 ---
 title: '"BuT, aUtH iS HaRd"'
 description: "No, it's not. It's boring, red-tapey, a solved problem... but don't call it hard as a blanket statement."
-date: "2024-08-07"
-cover: ""
+date: "2024-10-16"
+cover: "but-auth-is-hard.png"
 category: "featured"
 author: "Darko Bozhinovski"
 ---
