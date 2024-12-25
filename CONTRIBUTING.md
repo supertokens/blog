@@ -111,6 +111,12 @@ module.exports = [
 
 Finally add a image of the author into `/static/author_images` folder and make sure that the author metatag is added to `/static/blog-seo/config.json` as show in the below [metatags](#meta-tags) example.
 
+## Adding Table of Content
+
+```toc
+tight: true
+toHeading: 3
+```
 
 #### SEO for blogs
 
@@ -150,6 +156,26 @@ Meta tags for blog images are picked up from `/static/blog-seo/config.json`, for
 ```
 
 Then after the blog is published these meta tags will be used (on both the test and production site)
+
+### Adding cannonical tags
+
+By default the canonical tag is set to the URL of the blog. If you need to set a custom path you will need to set the `hasCustomCanonicalURL` field to the blog SEO config:
+
+```json
+{
+   "path": "/blog/<SLUG>",
+   "metaTags": [
+       "...",
+       "<!--OG Tags-->",
+      "..."
+       "<!--OG Tags-->",
+       "<link rel=\"canonical\" href=\"<ORIGINAL_DOMAIN>\">"
+   ],
+   "title": "...",
+   "schema": "...",
+  "hasCustomCanonicalURL": true
+}
+```
 
 ### Updating the sitemap
 
