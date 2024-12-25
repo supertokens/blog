@@ -2,7 +2,7 @@
 title: "Token Based Authentication vs Session Based Authentication"
 date: "2024-12-12"
 description: "Sessions vs. Tokens: Understanding the Differences in Authentication"
-cover: ""
+cover: "token-based-authentication-vs-session-based-authentication.png"
 category: "programming"
 author: "Darko Bozhinovski"
 ---
@@ -31,30 +31,7 @@ Here's how it actually works under the hood:
 5. The server verifies the token's signature and lets you in 
    
    
-```
-+------------------+                 +---------------------+
-|   User (Client)  |                 |   Server (Backend)  |
-+------------------+                 +---------------------+
-           |                                 |
-           | 1. Sends login credentials      |
-           +-------------------------------->|
-           |                                 |
-           | 2. Server generates signed token|
-           |<--------------------------------+
-           |                                 |
-           | 3. Stores token locally         |
-           |     (localStorage/cookies)      |
-           +---------------------------------+
-           |                                 |
-           | 4. Sends requests with token    |
-           +-------------------------------->|
-           |                                 |
-           | 5. Verifies token signature     |
-           |  If valid, grants access        |
-           |<--------------------------------+
-           |                                 |
-
-```
+![token based authentication](./token-based-auth.png)
 
 ### Advantages: Security, scalability, and statelessness.
 
@@ -94,32 +71,7 @@ The workflow looks like this:
 4. Every request includes this session ID 
 5. Server looks up your session and knows who you are It's more like having a tab at your local bar - they know you, and everything about your visit is stored on their end. 
 
-```
-+------------------+                 +---------------------+
-|   User (Client)  |                 |   Server (Backend)  |
-+------------------+                 +---------------------+
-           |                                 |
-           | 1. Sends login credentials      |
-           +-------------------------------->|
-           |                                 |
-           | 2. Server creates a session     |
-           |    and stores user info         |
-           |<--------------------------------+
-           |                                 |
-           | 3. Receives session ID          |
-           |    (usually in a cookie)        |
-           +---------------------------------+
-           |                                 |
-           | 4. Sends requests with session  |
-           |    ID                           |
-           +-------------------------------->|
-           |                                 |
-           | 5. Server looks up session info |
-           |    and authenticates user       |
-           |<--------------------------------+
-           |                                 |
-
-```
+![session based auth](./session-based-auth.png)
 
 
 ### Advantages: Simplicity, state management.

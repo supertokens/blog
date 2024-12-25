@@ -2049,5 +2049,28 @@
         ],
         "title": "BuT, aUtH iS HaRd",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/but-auth-is-hard\"},\"headline\":\"BuT, aUtH iS HaRd\",\"description\":\"No, it's not. It's boring, red-tapey, a solved problem... but don't call it hard as a blanket statement.\",\"image\":\"https://supertokens.com/blog-meta-images/but-auth-is-hard.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
+        "path": "/blog/token-based-authentication-vs-session-based-authentication",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Sessions vs. Tokens: Understanding the Differences in Authentication\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Token Based Authentication vs Session Based Authentication\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/token-based-authentication-vs-session-based-authentication\" />",
+            "<meta property=\"og:description\" content=\"Sessions vs. Tokens: Understanding the Differences in Authentication\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/token-based-authentication-vs-session-based-authentication.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Token Based Authentication vs Session Based Authentication\" />",
+            "<meta name=\"twitter:description\" content=\"Sessions vs. Tokens: Understanding the Differences in Authentication\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/token-based-authentication-vs-session-based-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/token-based-authentication-vs-session-based-authentication.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/token-based-authentication-vs-session-based-authentication/\">"
+        ],
+        "title": "Token Based Authentication vs Session Based Authentication",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/token-based-authentication-vs-session-based-authentication\"},\"headline\":\"Token Based Authentication vs Session Based Authentication\",\"description\":\"Sessions vs. Tokens: Understanding the Differences in Authentication\",\"image\":\"https://supertokens.com/blog-meta-images/token-based-authentication-vs-session-based-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
