@@ -232,5 +232,8 @@
     },
     {
         "location": "https://supertokens.com/blog/but-auth-is-hard"
+    },
+    {
+        "location": "https://supertokens.com/blog/token-based-authentication-vs-session-based-authentication"
     }
 ]
