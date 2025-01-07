@@ -2026,5 +2026,28 @@
         ],
         "title": "A comprehensive guide to Django's user authentication system",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/django-user-authentication\"},\"headline\":\"A comprehensive guide to Django's user authentication system\",\"description\":\"Learn how to implement user registration, login/logout, permissions etc using Django's built-in user authentication system.\",\"image\":\"https://supertokens.com/blog-meta-images/django-user-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
+        "path": "/blog/keycloak-pricing",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover Keycloak, a robust open-source IAM solution for enterprise-grade authentication needs like SSO, 2FA, and fine-grained access control. Compare it with SuperTokens, a lightweight, developer-friendly alternative for modern authentication requirements.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Keycloak Guide 2024: Pricing, Features, & Limitations 🔐\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/keycloak-pricing\" />",
+            "<meta property=\"og:description\" content=\"Discover Keycloak, a robust open-source IAM solution for enterprise-grade authentication needs like SSO, 2FA, and fine-grained access control. Compare it with SuperTokens, a lightweight, developer-friendly alternative for modern authentication requirements.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/keycloak-pricing.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Keycloak Guide 2024: Pricing, Features, & Limitations 🔐\" />",
+            "<meta name=\"twitter:description\" content=\"Discover Keycloak, a robust open-source IAM solution for enterprise-grade authentication needs like SSO, 2FA, and fine-grained access control. Compare it with SuperTokens, a lightweight, developer-friendly alternative for modern authentication requirements.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/keycloak-pricing\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/keycloak-pricing.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/keycloak-pricing\">"
+        ],
+        "title": "Keycloak Guide 2024: Pricing, Features, & Limitations 🔐",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/keycloak-pricing\"},\"headline\":\"Keycloak Guide 2024: Pricing, Features, & Limitations 🔐\",\"description\":\"Discover Keycloak, a robust open-source IAM solution for enterprise-grade authentication needs like SSO, 2FA, and fine-grained access control. Compare it with SuperTokens, a lightweight, developer-friendly alternative for modern authentication requirements.\",\"image\":\"https://supertokens.com/blog-meta-images/keycloak-pricing.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
