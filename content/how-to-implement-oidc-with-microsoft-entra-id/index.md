@@ -16,7 +16,7 @@ toHeading: 3
 
 ## How to implement OIDC with Microsoft Entra ID
 
-Microsoft Entra ID - previously known as Azure AD - is a popular cloud-based version of Active Directory. Many companies love using Active Directory to organise their company and manage user permissions and roles. This makes Active Directory a great candidate for being an Identity Provider for applications that support SSO.
+Microsoft Entra ID - previously known as Azure AD - is a popular cloud-based version of [Active Directory](https://supertokens.com/blog/what-is-ldap). Many companies love using Active Directory to organise their company and manage user permissions and roles. This makes Active Directory a great candidate for being an Identity Provider for applications that support SSO.
 
 This guide will both show you how to make your own Oauth/OIDC implementation in express as well as how to integrate Entra ID SSO with SuperTokens. [SuperTokens is our authentication platform](https://supertokens.com/) that you can integrate in your web applications to handle user sessions.
 
@@ -311,7 +311,7 @@ Run `npm run start` and head to `localhost:3000` in the browser. You’ll see th
 
 ## Conclusion
 
-Active Directory is a time tested way to store users and permissions. Its ability to integrate as an Identity Provider makes it valuable, especially to large organisations that have lots of users and permissions to manage. If you found the usual way of integrating Entra ID to be cumbersome, then try [simplifying SSO with SuperTokens](https://supertokens.com/).
+Active Directory is a time tested way to store users and permissions. Its ability to integrate as an Identity Provider makes it valuable, especially to large organisations that have lots of users and permissions to manage. If you found the usual way of integrating Entra ID to be cumbersome, then try [simplifying your SSO logins with SuperTokens](https://supertokens.com/features/social-login).
 
 [Github repo for express instance](https://github.com/ConzorKingKong/entra-id-oidc-express)
 
