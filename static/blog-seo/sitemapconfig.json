@@ -231,13 +231,12 @@
         "location": "https://supertokens.com/blog/django-user-authentication"
     },
     {
-<<<<<<< HEAD
         "location": "https://supertokens.com/blog/keycloak-pricing"
-=======
+    },
+    {
         "location": "https://supertokens.com/blog/but-auth-is-hard"
     },
     {
         "location": "https://supertokens.com/blog/token-based-authentication-vs-session-based-authentication"
->>>>>>> master
     }
 ]
