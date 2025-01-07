@@ -235,5 +235,8 @@
     },
     {
         "location": "https://supertokens.com/blog/token-based-authentication-vs-session-based-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-to-implement-oidc-with-microsoft-entra-id"
     }
 ]

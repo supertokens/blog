@@ -2072,5 +2072,28 @@
         ],
         "title": "Token Based Authentication vs Session Based Authentication",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/token-based-authentication-vs-session-based-authentication\"},\"headline\":\"Token Based Authentication vs Session Based Authentication\",\"description\":\"Sessions vs. Tokens: Understanding the Differences in Authentication\",\"image\":\"https://supertokens.com/blog-meta-images/token-based-authentication-vs-session-based-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
+        "path": "/blog/how-to-implement-oidc-with-microsoft-entra-id",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Implementing OIDC with Microsoft Entra ID can be confusing. We're gonna help you implement it two different ways — in your own ExpressJS server or in SuperTokens.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How to implement OIDC with Microsoft Entra ID\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/how-to-implement-oidc-with-microsoft-entra-id\" />",
+            "<meta property=\"og:description\" content=\"Implementing OIDC with Microsoft Entra ID can be confusing. We're gonna help you implement it two different ways — in your own ExpressJS server or in SuperTokens.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/xxx.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"How to implement OIDC with Microsoft Entra ID\" />",
+            "<meta name=\"twitter:description\" content=\"Implementing OIDC with Microsoft Entra ID can be confusing. We're gonna help you implement it two different ways — in your own ExpressJS server or in SuperTokens.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/how-to-implement-oidc-with-microsoft-entra-id\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/xxx.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/how-to-implement-oidc-with-microsoft-entra-id/\">"
+        ],
+        "title": "Token Based Authentication vs Session Based Authentication",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/how-to-implement-oidc-with-microsoft-entra-id\"},\"headline\":\"How to implement OIDC with Microsoft Entra ID\",\"description\":\"Implementing OIDC with Microsoft Entra ID can be confusing. We're gonna help you implement it two different ways — in your own ExpressJS server or in SuperTokens.\",\"image\":\"https://supertokens.com/blog-meta-images/token-based-authentication-vs-session-based-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
