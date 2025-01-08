@@ -2118,5 +2118,28 @@
         ],
         "title": "Token Based Authentication vs Session Based Authentication",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/top-7-sso-benefits-for-enhanced-security-2024\"},\"headline\":\"Token Based Authentication vs Session Based Authentication\",\"description\":\"Discover the top 7 SSO benefits for 2024 to enhance your security. Learn how to protect your data and streamline user access effectively.\",\"image\":\"https://supertokens.com/blog-meta-images/top-7-sso-benefits-for-enhanced-security-2024.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
+        "path": "/blog/token-based-authentication-in-api",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover how token-based authentication secures APIs with this simple guide. Understand its process, benefits, drawbacks and more.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Token-Based Authentication for APIs: What It Is and How It Works\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/token-based-authentication-in-api\" />",
+            "<meta property=\"og:description\" content=\"Discover how token-based authentication secures APIs with this simple guide. Understand its process, benefits, drawbacks and more.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/token-based-authentication-in-api.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Token-Based Authentication for APIs: What It Is and How It Works\" />",
+            "<meta name=\"twitter:description\" content=\"Discover how token-based authentication secures APIs with this simple guide. Understand its process, benefits, drawbacks and more.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/token-based-authentication-in-api\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/token-based-authentication-in-api.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/token-based-authentication-in-api/\">"
+        ],
+        "title": "Token-Based Authentication for APIs: What It Is and How It Works",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/token-based-authentication-in-api\"},\"headline\":\"Token-Based Authentication for APIs: What It Is and How It Works\",\"description\":\"Discover how token-based authentication secures APIs with this simple guide. Understand its process, benefits, drawbacks and more.\",\"image\":\"https://supertokens.com/blog-meta-images/token-based-authentication-in-api.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
