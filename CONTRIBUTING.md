@@ -111,6 +111,12 @@ module.exports = [
 
 Finally add a image of the author into `/static/author_images` folder and make sure that the author metatag is added to `/static/blog-seo/config.json` as show in the below [metatags](#meta-tags) example.
 
+## Adding Table of Content
+
+```toc
+tight: true
+toHeading: 3
+```
 
 #### SEO for blogs
 
