@@ -2,7 +2,7 @@
 title: "10 Best Practices for Effective Identity and Access Management"
 description: "Learn the top 10 Identity and Access Management (IAM) best practices to safeguard your organization from credential-based attacks. Explore common pitfalls like siloed systems, privilege creep, and manual provisioning, and discover how modern IAM solutions like SuperTokens help streamline security, ensure compliance, and boost productivity. Stay ahead with effective IAM strategies and protect sensitive data from evolving cyber threats."
 date: "2024-12-17"
-image: "identity-and-access-management-best-practices.png"
+cover: "identity-and-access-management-best-practices.png"
 category: "programming"
 author: "Dejan Lukic"
 ---
