@@ -247,5 +247,8 @@
     },
     {
         "location": "https://supertokens.com/blog/token-based-authentication-in-api"
+    },
+    {
+        "location": "https://supertokens.com/blog/indentity-and-access-management-best-practices"
     }
 ]
