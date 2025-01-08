@@ -231,9 +231,18 @@
         "location": "https://supertokens.com/blog/django-user-authentication"
     },
     {
+        "location": "https://supertokens.com/blog/keycloak-pricing"
+    },
+    {
         "location": "https://supertokens.com/blog/but-auth-is-hard"
     },
     {
         "location": "https://supertokens.com/blog/token-based-authentication-vs-session-based-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/top-7-sso-benefits-for-enhanced-security-2024"
+    },
+    {
+        "location": "https://supertokens.com/blog/token-based-authentication-in-api"
     }
 ]

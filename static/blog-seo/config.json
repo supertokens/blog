@@ -2027,6 +2027,29 @@
         "title": "A comprehensive guide to Django's user authentication system",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/django-user-authentication\"},\"headline\":\"A comprehensive guide to Django's user authentication system\",\"description\":\"Learn how to implement user registration, login/logout, permissions etc using Django's built-in user authentication system.\",\"image\":\"https://supertokens.com/blog-meta-images/django-user-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }, {
+        "path": "/blog/keycloak-pricing",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover Keycloak, a robust open-source IAM solution for enterprise-grade authentication needs like SSO, 2FA, and fine-grained access control. Compare it with SuperTokens, a lightweight, developer-friendly alternative for modern authentication requirements.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Keycloak Guide 2024: Pricing, Features, & Limitations 🔐\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/keycloak-pricing\" />",
+            "<meta property=\"og:description\" content=\"Discover Keycloak, a robust open-source IAM solution for enterprise-grade authentication needs like SSO, 2FA, and fine-grained access control. Compare it with SuperTokens, a lightweight, developer-friendly alternative for modern authentication requirements.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/keycloak-pricing.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Keycloak Guide 2024: Pricing, Features, & Limitations 🔐\" />",
+            "<meta name=\"twitter:description\" content=\"Discover Keycloak, a robust open-source IAM solution for enterprise-grade authentication needs like SSO, 2FA, and fine-grained access control. Compare it with SuperTokens, a lightweight, developer-friendly alternative for modern authentication requirements.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/keycloak-pricing\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/keycloak-pricing.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/keycloak-pricing\">"
+        ],
+        "title": "Keycloak Guide 2024: Pricing, Features, & Limitations 🔐",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/keycloak-pricing\"},\"headline\":\"Keycloak Guide 2024: Pricing, Features, & Limitations 🔐\",\"description\":\"Discover Keycloak, a robust open-source IAM solution for enterprise-grade authentication needs like SSO, 2FA, and fine-grained access control. Compare it with SuperTokens, a lightweight, developer-friendly alternative for modern authentication requirements.\",\"image\":\"https://supertokens.com/blog-meta-images/keycloak-pricing.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
         "path": "/blog/but-auth-is-hard",
         "metaTags": [
             "<meta name=\"description\" content=\"No, it's not. It's boring, red-tapey, a solved problem... but don't call it hard as a blanket statement.\" />",
@@ -2072,5 +2095,51 @@
         ],
         "title": "Token Based Authentication vs Session Based Authentication",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/token-based-authentication-vs-session-based-authentication\"},\"headline\":\"Token Based Authentication vs Session Based Authentication\",\"description\":\"Sessions vs. Tokens: Understanding the Differences in Authentication\",\"image\":\"https://supertokens.com/blog-meta-images/token-based-authentication-vs-session-based-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
+        "path": "/blog/top-7-sso-benefits-for-enhanced-security-2024",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover the top 7 SSO benefits for 2024 to enhance your security. Learn how to protect your data and streamline user access effectively.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Token Based Authentication vs Session Based Authentication\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/top-7-sso-benefits-for-enhanced-security-2024\" />",
+            "<meta property=\"og:description\" content=\"Discover the top 7 SSO benefits for 2024 to enhance your security. Learn how to protect your data and streamline user access effectively.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/top-7-sso-benefits-for-enhanced-security-2024.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Token Based Authentication vs Session Based Authentication\" />",
+            "<meta name=\"twitter:description\" content=\"Discover the top 7 SSO benefits for 2024 to enhance your security. Learn how to protect your data and streamline user access effectively.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/top-7-sso-benefits-for-enhanced-security-2024\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/top-7-sso-benefits-for-enhanced-security-2024.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/top-7-sso-benefits-for-enhanced-security-2024/\">"
+        ],
+        "title": "Token Based Authentication vs Session Based Authentication",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/top-7-sso-benefits-for-enhanced-security-2024\"},\"headline\":\"Token Based Authentication vs Session Based Authentication\",\"description\":\"Discover the top 7 SSO benefits for 2024 to enhance your security. Learn how to protect your data and streamline user access effectively.\",\"image\":\"https://supertokens.com/blog-meta-images/top-7-sso-benefits-for-enhanced-security-2024.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
+        "path": "/blog/token-based-authentication-in-api",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover how token-based authentication secures APIs with this simple guide. Understand its process, benefits, drawbacks and more.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Token-Based Authentication for APIs: What It Is and How It Works\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/token-based-authentication-in-api\" />",
+            "<meta property=\"og:description\" content=\"Discover how token-based authentication secures APIs with this simple guide. Understand its process, benefits, drawbacks and more.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/token-based-authentication-in-api.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Token-Based Authentication for APIs: What It Is and How It Works\" />",
+            "<meta name=\"twitter:description\" content=\"Discover how token-based authentication secures APIs with this simple guide. Understand its process, benefits, drawbacks and more.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/token-based-authentication-in-api\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/token-based-authentication-in-api.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/token-based-authentication-in-api/\">"
+        ],
+        "title": "Token-Based Authentication for APIs: What It Is and How It Works",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/token-based-authentication-in-api\"},\"headline\":\"Token-Based Authentication for APIs: What It Is and How It Works\",\"description\":\"Discover how token-based authentication secures APIs with this simple guide. Understand its process, benefits, drawbacks and more.\",\"image\":\"https://supertokens.com/blog-meta-images/token-based-authentication-in-api.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
