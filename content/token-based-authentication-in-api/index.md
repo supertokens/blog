@@ -1,7 +1,7 @@
 ---
 title: "Token-Based Authentication for APIs: What It Is and How It Works"
 description: "Discover how token-based authentication secures APIs with this simple guide. Understand its process, benefits, drawbacks and more."
-date: "2024-12-25"
+date: "2024-12-20"
 cover: "token-based-authentication-in-api.png"
 category: "programming, featured"
 author: "Nemi Shah"
