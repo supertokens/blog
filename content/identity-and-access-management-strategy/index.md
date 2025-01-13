@@ -1,3 +1,12 @@
+---
+title: "How to Build Effective Identity & Access Management Strategy"
+date: "2025-01-13"
+description: "Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences."
+cover: "iam-strategy.png"
+category: "iam, strategy"
+author: "Dejan Lukic"
+---
+
 ## Introduction
 
 In today’s fast-moving digital world, sensitive data is the lifeblood of organizations—so protecting it has never been more critical. Identity and Access Management (IAM) stands guard, ensuring that only the right individuals can access the right resources at the right time.
