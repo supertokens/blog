@@ -2209,5 +2209,27 @@
         ],
         "title": "How Identity and Access Management Works: Detailed Guide",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/identity-and-access-management\"},\"headline\":\"Discover the fundamentals, benefits, and best practices of Identity and Access Management (IAM) and how SuperTokens simplifies secure authentication and session management.\",\"image\":\"https://supertokens.com/blog-meta-images/identity-and-access-management.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
+        "path": "/blog/identity-and-access-management-frameworks",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn everything about Identity and Access Management (IAM) frameworks in this comprehensive guide.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Introduction to IAM Frameworks: Simplifying Access Management for Developers\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/identity-and-access-management-frameworks\" />",
+            "<meta property=\"og:description\" content=\"Learn everything about Identity and Access Management (IAM) frameworks in this comprehensive guide.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/identity-and-access-management-frameworks.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn everything about Identity and Access Management (IAM) frameworks in this comprehensive guide.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/identity-and-access-management-frameworks\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/identity-and-access-management-frameworks.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/identity-and-access-management-frameworks\">"
+        ],
+        "title": "Introduction to IAM Frameworks: Simplifying Access Management for Developers",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/identity-and-access-management-frameworks\"},\"headline\":\"Learn everything about Identity and Access Management (IAM) frameworks in this comprehensive guide.\",\"image\":\"https://supertokens.com/blog-meta-images/identity-and-access-management-frameworks.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
