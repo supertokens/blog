@@ -1,7 +1,7 @@
 ---
 title: "Introduction to IAM Frameworks: Simplifying Access Management for Developers"
 description: "Learn everything about Identity and Access Management (IAM) frameworks in this comprehensive guide."
-date: "2024-12-26"
+date: "2024-11-26"
 cover: "identity-and-access-management-frameworks.png"
 category: "programming, featured"
 author: "Nemi Shah"
