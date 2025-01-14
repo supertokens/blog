@@ -2,7 +2,7 @@
 title: "How to implement OIDC with Microsoft Entra ID"
 date: "2025-01-07"
 description: "Implementing OIDC with Microsoft Entra ID can be confusing. We're gonna help you implement it two different ways — in your own ExpressJS server or in SuperTokens."
-cover: ""
+cover: "entra-id.png"
 category: "programming"
 author: "Connor Peshek"
 ---
