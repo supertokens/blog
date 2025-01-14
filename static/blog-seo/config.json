@@ -2141,5 +2141,73 @@
         ],
         "title": "Token-Based Authentication for APIs: What It Is and How It Works",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/token-based-authentication-in-api\"},\"headline\":\"Token-Based Authentication for APIs: What It Is and How It Works\",\"description\":\"Discover how token-based authentication secures APIs with this simple guide. Understand its process, benefits, drawbacks and more.\",\"image\":\"https://supertokens.com/blog-meta-images/token-based-authentication-in-api.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
+        "path": "/blog/iam-challenges",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how to seamlessly add authentication to your Flask backend using SuperTokens. This guide covers setting up authentication with the SuperTokens CLI or manual configuration, enabling you to focus on building application logic instead of authentication infrastructure.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Top Identity and Access Management Challenges\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/iam-challenges\" />",
+            "<meta property=\"og:description\" content=\"Learn how to seamlessly add authentication to your Flask backend using SuperTokens. This guide covers setting up authentication with the SuperTokens CLI or manual configuration, enabling you to focus on building application logic instead of authentication infrastructure.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/iam-challenges.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Top Identity and Access Management Challenges\" />",
+            "<meta name=\"twitter:description\" content=\"Learn how to seamlessly add authentication to your Flask backend using SuperTokens. This guide covers setting up authentication with the SuperTokens CLI or manual configuration, enabling you to focus on building application logic instead of authentication infrastructure.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/iam-challenges\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/iam-challenges.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/iam-challenges\">"
+        ],
+        "title": "Discover how to tackle modern IAM challenges, from integration complexities to compliance, with actionable solutions and emerging trends like zero-trust and passwordless authentication. Learn how open-source tools like SuperTokens can future-proof your system in 2024.",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/iam-challenges\"},\"headline\":\"Top Identity and Access Management Challenges\",\"description\":\"Learn how to seamlessly add authentication to your Flask backend using SuperTokens. This guide covers setting up authentication with the SuperTokens CLI or manual configuration, enabling you to focus on building application logic instead of authentication infrastructure.\",\"image\":\"https://supertokens.com/blog-meta-images/iam-challenges.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
+        "path": "/blog/identity-and-access-management-best-practices",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn the top 10 Identity and Access Management (IAM) best practices to safeguard your organization from credential-based attacks. Explore common pitfalls like siloed systems, privilege creep, and manual provisioning, and discover how modern IAM solutions like SuperTokens help streamline security, ensure compliance, and boost productivity. Stay ahead with effective IAM strategies and protect sensitive data from evolving cyber threats.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"10 Best Practices for Effective Identity and Access Management\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/identity-and-access-management-best-practices\" />",
+            "<meta property=\"og:description\" content=\"Learn the top 10 Identity and Access Management (IAM) best practices to safeguard your organization from credential-based attacks. Explore common pitfalls like siloed systems, privilege creep, and manual provisioning, and discover how modern IAM solutions like SuperTokens help streamline security, ensure compliance, and boost productivity. Stay ahead with effective IAM strategies and protect sensitive data from evolving cyber threats.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/identity-and-access-management-best-practices.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"10 Best Practices for Effective Identity and Access Management\" />",
+            "<meta name=\"twitter:description\" content=\"Learn the top 10 Identity and Access Management (IAM) best practices to safeguard your organization from credential-based attacks. Explore common pitfalls like siloed systems, privilege creep, and manual provisioning, and discover how modern IAM solutions like SuperTokens help streamline security, ensure compliance, and boost productivity. Stay ahead with effective IAM strategies and protect sensitive data from evolving cyber threats.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/identity-and-access-management-best-practices\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/identity-and-access-management-best-practices.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/identity-and-access-management-best-practices\">"
+        ],
+        "title": "10 Best Practices for Effective Identity and Access Management",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/identity-and-access-management-best-practices\"},\"headline\":\"10 Best Practices for Effective Identity and Access Managements\",\"description\":\"Learn the top 10 Identity and Access Management (IAM) best practices to safeguard your organization from credential-based attacks. Explore common pitfalls like siloed systems, privilege creep, and manual provisioning, and discover how modern IAM solutions like SuperTokens help streamline security, ensure compliance, and boost productivity. Stay ahead with effective IAM strategies and protect sensitive data from evolving cyber threats.\",\"image\":\"https://supertokens.com/blog-meta-images/identity-and-access-management-best-practices.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    }, {
+        "path": "/blog/identity-and-access-management",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover the fundamentals, benefits, and best practices of Identity and Access Management (IAM) and how SuperTokens simplifies secure authentication and session management.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How Identity and Access Management Works: Detailed Guide\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/identity-and-access-management\" />",
+            "<meta property=\"og:description\" content=\"Discover the fundamentals, benefits, and best practices of Identity and Access Management (IAM) and how SuperTokens simplifies secure authentication and session management.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/identity-and-access-management.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Discover the fundamentals, benefits, and best practices of Identity and Access Management (IAM) and how SuperTokens simplifies secure authentication and session management.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/identity-and-access-management\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/identity-and-access-management.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/identity-and-access-management\">"
+        ],
+        "title": "How Identity and Access Management Works: Detailed Guide",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/identity-and-access-management\"},\"headline\":\"Discover the fundamentals, benefits, and best practices of Identity and Access Management (IAM) and how SuperTokens simplifies secure authentication and session management.\",\"image\":\"https://supertokens.com/blog-meta-images/identity-and-access-management.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]

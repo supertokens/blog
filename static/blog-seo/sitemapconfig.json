@@ -222,6 +222,9 @@
         "location": "https://supertokens.com/blog/flask-user-auth"
     },
     {
+        "location": "https://supertokens.com/blog/iam-challenges"
+    },
+    {
         "location": "https://supertokens.com/blog/sso-implementation"
     },
     {
@@ -244,5 +247,11 @@
     },
     {
         "location": "https://supertokens.com/blog/token-based-authentication-in-api"
+    },
+    {
+        "location": "https://supertokens.com/blog/identity-and-access-management-best-practices"
+    },
+    {
+        "location": "https://supertokens.com/blog/indentity-and-access-management"
     }
 ]
