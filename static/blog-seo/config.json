@@ -1890,7 +1890,7 @@
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-jwt\"},\"headline\":\"What is JWT? Understand JSON Web Tokens | SuperTokens\",\"description\":\"Discover the fundamentals of JWTs, their structure, use cases, and potential security risks. Learn how to manage tokens securely with SuperTokens.\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-jwt.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     }
 ]
-{
+, {
     "path": "/blog/the-best-way-to-securely-manage-user-sessions",
     "metaTags": [
         "<meta name=\"description\" content=\"Learn secure strategies to handle user sessions, mitigate vulnerabilities, and protect against XSS attacks with advanced session management techniques.\" />",
@@ -2225,4 +2225,292 @@
     ],
     "title": "How to Connect SuperTokens to Your Database | SuperTokens",
     "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/connect-supertokens-to-database\"},\"headline\":\"How to Connect SuperTokens to Your Database | SuperTokens\",\"description\":\"Integrate SuperTokens with your database effortlessly. Learn the steps to manage authentication and data securely using the right connection.\",\"image\":\"https://supertokens.com/blog-meta-images/connect-supertokens-to-database.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/solve-the-problem-of-vendor-lock-in",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Avoid vendor lock-in with SuperTokens' open-source solution. Gain full control over your authentication infrastructure with scalable options.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Solve Vendor Lock-In with Open-Source Authentication | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/solve-the-problem-of-vendor-lock-in\" />",
+        "<meta property=\"og:description\" content=\"Avoid vendor lock-in with SuperTokens' open-source solution. Gain full control over your authentication infrastructure with scalable options.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/solve-the-problem-of-vendor-lock-in.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Solve Vendor Lock-In with Open-Source Authentication | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Avoid vendor lock-in with SuperTokens' open-source solution. Gain full control over your authentication infrastructure with scalable options.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/solve-the-problem-of-vendor-lock-in\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/solve-the-problem-of-vendor-lock-in.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/solve-the-problem-of-vendor-lock-in\">"
+    ],
+    "title": "Solve Vendor Lock-In with Open-Source Authentication | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/solve-the-problem-of-vendor-lock-in\"},\"headline\":\"Solve Vendor Lock-In with Open-Source Authentication | SuperTokens\",\"description\":\"Avoid vendor lock-in with SuperTokens' open-source solution. Gain full control over your authentication infrastructure with scalable options.\",\"image\":\"https://supertokens.com/blog-meta-images/solve-the-problem-of-vendor-lock-in.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/building-a-login-screen-with-react-and-bootstrap",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Learn to create a responsive login screen using React and Bootstrap. Follow this step-by-step guide to enhance your authentication UX.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Build a Login Screen with React and Bootstrap | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/building-a-login-screen-with-react-and-bootstrap\" />",
+        "<meta property=\"og:description\" content=\"Learn to create a responsive login screen using React and Bootstrap. Follow this step-by-step guide to enhance your authentication UX.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/building-a-login-screen-with-react-and-bootstrap.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Build a Login Screen with React and Bootstrap | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Learn to create a responsive login screen using React and Bootstrap. Follow this step-by-step guide to enhance your authentication UX.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/building-a-login-screen-with-react-and-bootstrap\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/building-a-login-screen-with-react-and-bootstrap.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/building-a-login-screen-with-react-and-bootstrap\">"
+    ],
+    "title": "Build a Login Screen with React and Bootstrap | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/building-a-login-screen-with-react-and-bootstrap\"},\"headline\":\"Build a Login Screen with React and Bootstrap | SuperTokens\",\"description\":\"Learn to create a responsive login screen using React and Bootstrap. Follow this step-by-step guide to enhance your authentication UX.\",\"image\":\"https://supertokens.com/blog-meta-images/building-a-login-screen-with-react-and-bootstrap.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/adding-social-login-to-your-website-with-supertokens",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Easily integrate social login options into your website using SuperTokens. Enhance user convenience with Facebook, Google, and more.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Add Social Login to Your Site with SuperTokens | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/adding-social-login-to-your-website-with-supertokens\" />",
+        "<meta property=\"og:description\" content=\"Easily integrate social login options into your website using SuperTokens. Enhance user convenience with Facebook, Google, and more.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/adding-social-login-to-your-website-with-supertokens.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Add Social Login to Your Site with SuperTokens | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Easily integrate social login options into your website using SuperTokens. Enhance user convenience with Facebook, Google, and more.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/adding-social-login-to-your-website-with-supertokens\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/adding-social-login-to-your-website-with-supertokens.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/adding-social-login-to-your-website-with-supertokens\">"
+    ],
+    "title": "Add Social Login to Your Site with SuperTokens | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/adding-social-login-to-your-website-with-supertokens\"},\"headline\":\"Add Social Login to Your Site with SuperTokens | SuperTokens\",\"description\":\"Easily integrate social login options into your website using SuperTokens. Enhance user convenience with Facebook, Google, and more.\",\"image\":\"https://supertokens.com/blog-meta-images/adding-social-login-to-your-website-with-supertokens.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/how-to-use-supertokens-pre-built-ui-with-vuejs",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Implement SuperTokens’ pre-built UI in your VueJS project. Simplify authentication flows and enhance user experience effortlessly.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"SuperTokens Pre-Built UI with VueJS: How to Use | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/how-to-use-supertokens-pre-built-ui-with-vuejs\" />",
+        "<meta property=\"og:description\" content=\"Implement SuperTokens’ pre-built UI in your VueJS project. Simplify authentication flows and enhance user experience effortlessly.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/how-to-use-supertokens-pre-built-ui-with-vuejs.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"SuperTokens Pre-Built UI with VueJS: How to Use | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Implement SuperTokens’ pre-built UI in your VueJS project. Simplify authentication flows and enhance user experience effortlessly.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/how-to-use-supertokens-pre-built-ui-with-vuejs\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/how-to-use-supertokens-pre-built-ui-with-vuejs.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/how-to-use-supertokens-pre-built-ui-with-vuejs\">"
+    ],
+    "title": "SuperTokens Pre-Built UI with VueJS: How to Use | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/how-to-use-supertokens-pre-built-ui-with-vuejs\"},\"headline\":\"SuperTokens Pre-Built UI with VueJS: How to Use | SuperTokens\",\"description\":\"Implement SuperTokens’ pre-built UI in your VueJS project. Simplify authentication flows and enhance user experience effortlessly.\",\"image\":\"https://supertokens.com/blog-meta-images/how-to-use-supertokens-pre-built-ui-with-vuejs.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/why-is-redux-state-immutable",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Understand the importance of immutability in Redux state management. Learn how it ensures predictable, error-free application behavior.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Why Redux State is Immutable: Explained | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/why-is-redux-state-immutable\" />",
+        "<meta property=\"og:description\" content=\"Understand the importance of immutability in Redux state management. Learn how it ensures predictable, error-free application behavior.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/why-is-redux-state-immutable.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Why Redux State is Immutable: Explained | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Understand the importance of immutability in Redux state management. Learn how it ensures predictable, error-free application behavior.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/why-is-redux-state-immutable\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/why-is-redux-state-immutable.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/why-is-redux-state-immutable\">"
+    ],
+    "title": "Why Redux State is Immutable: Explained | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/why-is-redux-state-immutable\"},\"headline\":\"Why Redux State is Immutable: Explained | SuperTokens\",\"description\":\"Understand the importance of immutability in Redux state management. Learn how it ensures predictable, error-free application behavior.\",\"image\":\"https://supertokens.com/blog-meta-images/why-is-redux-state-immutable.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/two-factor-authentication-providers",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Explore leading two-factor authentication providers. Learn how 2FA enhances security and which providers integrate easily with SuperTokens.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Top Two-Factor Authentication Providers | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/two-factor-authentication-providers\" />",
+        "<meta property=\"og:description\" content=\"Explore leading two-factor authentication providers. Learn how 2FA enhances security and which providers integrate easily with SuperTokens.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/two-factor-authentication-providers.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Top Two-Factor Authentication Providers | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Explore leading two-factor authentication providers. Learn how 2FA enhances security and which providers integrate easily with SuperTokens.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/two-factor-authentication-providers\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/two-factor-authentication-providers.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/two-factor-authentication-providers\">"
+    ],
+    "title": "Top Two-Factor Authentication Providers | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/two-factor-authentication-providers\"},\"headline\":\"Top Two-Factor Authentication Providers | SuperTokens\",\"description\":\"Explore leading two-factor authentication providers. Learn how 2FA enhances security and which providers integrate easily with SuperTokens.\",\"image\":\"https://supertokens.com/blog-meta-images/two-factor-authentication-providers.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/stych-alternatives",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Compare Stych alternatives and find the best solution for your authentication needs. Discover how SuperTokens offers flexibility and control.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Best Stych Alternatives for Authentication | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/stych-alternatives\" />",
+        "<meta property=\"og:description\" content=\"Compare Stych alternatives and find the best solution for your authentication needs. Discover how SuperTokens offers flexibility and control.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/stych-alternatives.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Best Stych Alternatives for Authentication | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Compare Stych alternatives and find the best solution for your authentication needs. Discover how SuperTokens offers flexibility and control.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/stych-alternatives\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/stych-alternatives.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/stych-alternatives\">"
+    ],
+    "title": "Best Stych Alternatives for Authentication | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/stych-alternatives\"},\"headline\":\"Best Stych Alternatives for Authentication | SuperTokens\",\"description\":\"Compare Stych alternatives and find the best solution for your authentication needs. Discover how SuperTokens offers flexibility and control.\",\"image\":\"https://supertokens.com/blog-meta-images/stych-alternatives.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/supabase-auth-comparison-with-supertokens-integration",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Compare Supabase Auth with SuperTokens and learn how to integrate them effectively. Enhance your project’s authentication with ease.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Supabase Auth vs SuperTokens: Integration Guide | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/supabase-auth-comparison-with-supertokens-integration\" />",
+        "<meta property=\"og:description\" content=\"Compare Supabase Auth with SuperTokens and learn how to integrate them effectively. Enhance your project’s authentication with ease.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/supabase-auth-comparison-with-supertokens-integration.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Supabase Auth vs SuperTokens: Integration Guide | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Compare Supabase Auth with SuperTokens and learn how to integrate them effectively. Enhance your project’s authentication with ease.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/supabase-auth-comparison-with-supertokens-integration\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/supabase-auth-comparison-with-supertokens-integration.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/supabase-auth-comparison-with-supertokens-integration\">"
+    ],
+    "title": "Supabase Auth vs SuperTokens: Integration Guide | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/supabase-auth-comparison-with-supertokens-integration\"},\"headline\":\"Supabase Auth vs SuperTokens: Integration Guide | SuperTokens\",\"description\":\"Compare Supabase Auth with SuperTokens and learn how to integrate them effectively. Enhance your project’s authentication with ease.\",\"image\":\"https://supertokens.com/blog-meta-images/supabase-auth-comparison-with-supertokens-integration.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/express-session-vs-supertokens-for-handling-user-sessions",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Learn the pros and cons of using Express Session vs SuperTokens. Find out which solution offers better session management for your project.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Express Session vs SuperTokens: Which One to Use? | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/express-session-vs-supertokens-for-handling-user-sessions\" />",
+        "<meta property=\"og:description\" content=\"Learn the pros and cons of using Express Session vs SuperTokens. Find out which solution offers better session management for your project.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/express-session-vs-supertokens-for-handling-user-sessions.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Express Session vs SuperTokens: Which One to Use? | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Learn the pros and cons of using Express Session vs SuperTokens. Find out which solution offers better session management for your project.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/express-session-vs-supertokens-for-handling-user-sessions\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/express-session-vs-supertokens-for-handling-user-sessions.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/express-session-vs-supertokens-for-handling-user-sessions\">"
+    ],
+    "title": "Express Session vs SuperTokens: Which One to Use? | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/express-session-vs-supertokens-for-handling-user-sessions\"},\"headline\":\"Express Session vs SuperTokens: Which One to Use? | SuperTokens\",\"description\":\"Learn the pros and cons of using Express Session vs SuperTokens. Find out which solution offers better session management for your project.\",\"image\":\"https://supertokens.com/blog-meta-images/express-session-vs-supertokens-for-handling-user-sessions.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/should-you-use-express-session-for-your-production-ap",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Explore the challenges of using Express Session in production apps. Learn when to switch to more scalable solutions like SuperTokens.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Express Session in Production: Is It Right for You? | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/should-you-use-express-session-for-your-production-ap\" />",
+        "<meta property=\"og:description\" content=\"Explore the challenges of using Express Session in production apps. Learn when to switch to more scalable solutions like SuperTokens.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/should-you-use-express-session-for-your-production-ap.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Express Session in Production: Is It Right for You? | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Explore the challenges of using Express Session in production apps. Learn when to switch to more scalable solutions like SuperTokens.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/should-you-use-express-session-for-your-production-ap\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/should-you-use-express-session-for-your-production-ap.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/should-you-use-express-session-for-your-production-ap\">"
+    ],
+    "title": "Express Session in Production: Is It Right for You? | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/should-you-use-express-session-for-your-production-ap\"},\"headline\":\"Express Session in Production: Is It Right for You? | SuperTokens\",\"description\":\"Explore the challenges of using Express Session in production apps. Learn when to switch to more scalable solutions like SuperTokens.\",\"image\":\"https://supertokens.com/blog-meta-images/should-you-use-express-session-for-your-production-ap.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/speed-up-your-web-development-time-by-integrating-webflow-into-a-react-application",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Streamline your development workflow by combining Webflow with React. Learn how this integration speeds up design and deployment.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Integrate Webflow with React to Save Time | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/speed-up-your-web-development-time-by-integrating-webflow-into-a-react-application\" />",
+        "<meta property=\"og:description\" content=\"Streamline your development workflow by combining Webflow with React. Learn how this integration speeds up design and deployment.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/speed-up-your-web-development-time-by-integrating-webflow-into-a-react-application.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Integrate Webflow with React to Save Time | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Streamline your development workflow by combining Webflow with React. Learn how this integration speeds up design and deployment.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/speed-up-your-web-development-time-by-integrating-webflow-into-a-react-application\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/speed-up-your-web-development-time-by-integrating-webflow-into-a-react-application.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/speed-up-your-web-development-time-by-integrating-webflow-into-a-react-application\">"
+    ],
+    "title": "Integrate Webflow with React to Save Time | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/speed-up-your-web-development-time-by-integrating-webflow-into-a-react-application\"},\"headline\":\"Integrate Webflow with React to Save Time | SuperTokens\",\"description\":\"Streamline your development workflow by combining Webflow with React. Learn how this integration speeds up design and deployment.\",\"image\":\"https://supertokens.com/blog-meta-images/speed-up-your-web-development-time-by-integrating-webflow-into-a-react-application.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+}
+, {
+    "path": "/blog/how-to-use-supertokens-custom-ui-with-vuejs",
+    "metaTags": [
+        "<meta name=\"description\" content=\"Customize your authentication UI with SuperTokens in VueJS. Follow this guide to build personalized login experiences with ease.\" />",
+        "",
+        "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+        "<!--OG Tags-->",
+        "<meta property=\"og:title\" content=\"Use SuperTokens Custom UI in VueJS | SuperTokens\" />",
+        "<meta property=\"og:type\" content=\"article\" />",
+        "<meta property=\"og:url\" content=\"https://supertokens.com/blog/how-to-use-supertokens-custom-ui-with-vuejs\" />",
+        "<meta property=\"og:description\" content=\"Customize your authentication UI with SuperTokens in VueJS. Follow this guide to build personalized login experiences with ease.\"/>",
+        "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/how-to-use-supertokens-custom-ui-with-vuejs.png\" />",
+        "",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+        "<meta name=\"twitter:title\" content=\"Use SuperTokens Custom UI in VueJS | SuperTokens\" />",
+        "<meta name=\"twitter:description\" content=\"Customize your authentication UI with SuperTokens in VueJS. Follow this guide to build personalized login experiences with ease.\" />",
+        "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/how-to-use-supertokens-custom-ui-with-vuejs\" />",
+        "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/how-to-use-supertokens-custom-ui-with-vuejs.png\" /> ",
+        "<!--OG Tags-->",
+        "<link rel=\"canonical\" href=\"https://supertokens.com/blog/how-to-use-supertokens-custom-ui-with-vuejs\">"
+    ],
+    "title": "Use SuperTokens Custom UI in VueJS | SuperTokens",
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/how-to-use-supertokens-custom-ui-with-vuejs\"},\"headline\":\"Use SuperTokens Custom UI in VueJS | SuperTokens\",\"description\":\"Customize your authentication UI with SuperTokens in VueJS. Follow this guide to build personalized login experiences with ease.\",\"image\":\"https://supertokens.com/blog-meta-images/how-to-use-supertokens-custom-ui-with-vuejs.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
 }
