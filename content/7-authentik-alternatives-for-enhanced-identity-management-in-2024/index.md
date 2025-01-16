@@ -1,6 +1,6 @@
 ---
 title: 7 Authentik Alternatives for Enhanced Identity Management in 2024
-date: "2024-12-28"
+date: "2024-11-28"
 description: "Explore 7 effective Authentik alternatives for improved identity
 management in 2024. Elevate your security measures and optimize user
 experience today."
@@ -9,7 +9,7 @@ category: "programming"
 author: "Mostafa Ibrahim"
 ---
 
-# Table of Contents
+## Table of Contents
 
 - [1. Supertokens](#1-supertokens)
 - [2. Keycloak](#2-keycloak)
@@ -35,11 +35,11 @@ In this comprehensive guide, we will explore seven robust Authentik
 alternatives, focusing on their key features, pricing structures,
 limitations, and how they address the pain points expressed by users.
 
-# **1. Supertokens**
+## **1. Supertokens**
 
 ![Supertokens homepage](./Supertokens-homepage.png)
 
-## **Key Features:**
+### **Key Features:**
 
 -   **Social Login Support:** Supertokens allows users to authenticate using popular social media accounts like Google and Facebook,simplifying the login process.
 
@@ -49,7 +49,7 @@ limitations, and how they address the pain points expressed by users.
 
 -   **Managed and Self-hosted Options:** Supertokens offers both [self-hosted](https://supertokens.com/blog/self-hosted-authentication) and managed hosting solutions, allowing organizations to choose the deployment method that best suits their needs.
 
-# **Pricing:**
+### **Pricing:**
 
 -   Free for self-hosted deployments.
 
@@ -57,7 +57,7 @@ limitations, and how they address the pain points expressed by users.
 
 -   Additional advanced features, including MFA and multitenancy, are available as paid add-ons.
 
-## **Limitations:**
+### **Limitations:**
 
 -   While SuperTokens offers essential IAM features, it may lack some advanced capabilities found in larger competitors like Okta, which provides extensive pre-built integrations and adaptive authentication, and Keycloak, which excels in flexibility and customization for complex environments.
 
@@ -74,11 +74,11 @@ Additionally, Supertokens offers passwordless authentication through
 This method enhances security while improving user conversion rates by
 eliminating the need for passwords.
 
-# **2. Keycloak**
+## **2. Keycloak**
 
 ![Keycloak homepage](./Keycloak-homepage.png)
 
-## **Key Features:**
+### **Key Features:**
 
 -   **Single Sign-On (SSO):** Keycloak provides SSO functionality that allows users to log in once and gain access to multiple applications without repeated authentication.
 
