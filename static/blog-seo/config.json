@@ -2254,5 +2254,28 @@
         ],
         "title": "Introduction to IAM Frameworks: Simplifying Access Management for Developers",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/identity-and-access-management-frameworks\"},\"headline\":\"Learn everything about Identity and Access Management (IAM) frameworks in this comprehensive guide.\",\"image\":\"https://supertokens.com/blog-meta-images/identity-and-access-management-frameworks.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },{
+        "path": "/blog/7-authentik-alternatives-for-enhanced-identity-management-in-2024",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore 7 effective Authentik alternatives for improved identity management in 2024. Elevate your security measures and optimize user experience today.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"7 Authentik Alternatives for Enhanced Identity Management in 2024\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/7-authentik-alternatives-for-enhanced-identity-management-in-2024\" />",
+            "<meta property=\"og:description\" content=\"Explore 7 effective Authentik alternatives for improved identity management in 2024. Elevate your security measures and optimize user experience today.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/7-Authentik-Alternatives-for-Enhanced-Identity-Management-in-2024.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore 7 effective Authentik alternatives for improved identity management in 2024. Elevate your security measures and optimize user experience today.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/7-authentik-alternatives-for-enhanced-identity-management-in-2024\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/7-Authentik-Alternatives-for-Enhanced-Identity-Management-in-2024.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/7-authentik-alternatives-for-enhanced-identity-management-in-2024\">"
+        ],
+        "title": "7 Authentik Alternatives for Enhanced Identity Management in 2024",
+        "schema": "<script type=\"application/ld+json\">\n        {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/7-authentik-alternatives-for-enhanced-identity-management-in-2024\"\n            },\n            \"headline\": \"Explore 7 effective Authentik alternatives for improved identity management in 2024. Elevate your security measures and optimize user experience today.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/7-Authentik-Alternatives-for-Enhanced-Identity-Management-in-2024.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }\n        </script>"
     }
+    
 ]
