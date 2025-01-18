@@ -9,7 +9,7 @@ category: "programming"
 author: "Mostafa Ibrahim"
 ---
 
-# **Introduction**
+## **Introduction**
 
 As digital transformation accelerates, organizations increasingly
 recognize the need for [passwordless authentication solutions](https://supertokens.com/blog/passwordless-authentication)
@@ -37,11 +37,11 @@ unauthorized access while streamlining the login process.
 By the end of this guide, you will be well-equipped to make an informed
 decision about which solution best fits your organization's needs.
 
-# **1.** **SuperTokens**
+## **1.** **SuperTokens**
 
 ![SuperTokens homepage](./SuperTokens-homepage.png)
 
-## **Features**
+### **Features**
 
 SuperTokens is an open-source solution that offers a customizable
 approach to passwordless authentication. Key features include:
@@ -60,7 +60,7 @@ approach to passwordless authentication. Key features include:
 -   **Open-Source Flexibility:** Developers can modify and extend
     functionality as needed.
 
-**Use Cases**
+### **Use Cases**
 
 SuperTokens is ideal for:
 
@@ -73,12 +73,12 @@ SuperTokens is ideal for:
 -   **Educational Institutions:** Simplifies login processes for
     students and staff while maintaining high-security standards.
 
-## **Customer Rating**
+### **Customer Rating**
 
 SuperTokens boasts a customer rating of 4.7/5, reflecting its
 effectiveness and user satisfaction.
 
-**Pricing**
+### **Pricing**
 
 -   **Free for Self-hosted:** Organizations can self-host SuperTokens at
     no cost.
@@ -92,11 +92,11 @@ effectiveness and user satisfaction.
 
 For more information on SuperTokens, visit their [passwordless login features](https://supertokens.com/features/passwordless-login).
 
-# **2.** **Okta**
+## **2.** **Okta**
 
 ![Okta homepage](./Okta-homepage.png)
 
-## **Features**
+### **Features**
 
 Okta is a leading identity management platform that provides adaptive
 multi-factor authentication (MFA), biometric login support, extensive
@@ -112,7 +112,7 @@ include:
 -   **Integration Capabilities:** Offers prebuilt integrations with
     thousands of applications.
 
-## **Use Cases**
+### **Use Cases**
 
 Okta is particularly suited for:
 
@@ -125,21 +125,21 @@ Okta is particularly suited for:
 -   **Healthcare Providers:** Complies with regulations such as HIPAA
     while securing patient information.
 
-## **Customer Rating**
+### **Customer Rating**
 
 Okta has received a customer rating of 4.8/5, indicating strong
 performance and reliability.
 
-## **Pricing**
+### **Pricing**
 
 Pricing is premium and tailored to enterprise needs, typically requiring
 consultation for specific quotes.
 
-# **3. Auth0**
+## **3. Auth0**
 
 ![Auth0 homepage](./Auth0-homepage.png)
 
-## **Features**
+### **Features**
 
 Auth0 is a flexible identity management platform that provides
 easy-to-integrate SDKs and APIs, extensive app integrations, and
@@ -154,7 +154,7 @@ include:
 -   **Passwordless Options:** Offers multiple passwordless
     authentication methods like magic links sent via email or SMS.
 
-## **Use Cases**
+### **Use Cases**
 
 Auth0 is best suited for:
 
@@ -164,22 +164,22 @@ Auth0 is best suited for:
 -   **Apps with Global Audiences:** Supporting multiple languages and
     regional compliance requirements.
 
-## **Customer Rating**
+### **Customer Rating**
 
 Auth0 holds a customer rating of 4.7/5, showcasing its popularity among
 users.
 
-## **Pricing**
+### **Pricing**
 
 -   **Free Tier:** Available with limits on active users.
 
 -   **Paid Plans:** Offer additional features based on usage.
 
-# **4. Microsoft Entra ID**
+## **4. Microsoft Entra ID**
 
 ![Microsoft Entra ID homepage](./Microsoft-Entra-ID-homepage.png)
 
-## **Features**
+### **Features**
 
 Microsoft Entra ID (formerly Azure Active Directory) offers biometric
 authentication, single sign-on (SSO), and seamless integration with
@@ -194,7 +194,7 @@ Microsoft 365 and Azure services. Key features include:
 -   **Integration with Microsoft Ecosystem:** Works seamlessly with
     other Microsoft products.
 
-## **Use Cases**
+### **Use Cases**
 
 Microsoft Entra ID is ideal for:
 
@@ -205,21 +205,21 @@ Microsoft Entra ID is ideal for:
 -   **Government Institutions:** Meeting compliance requirements while
     ensuring secure access.
 
-## **Customer Rating**
+### **Customer Rating**
 
 Microsoft Entra ID has a customer rating of 4.5/5, indicating room for
 improvement in user satisfaction.
 
-## **Pricing**
+### **Pricing**
 
 Pricing starts at \$6/month per user, with a free tier available for
 basic features.
 
-# **5. Ping Identity**
+## **5. Ping Identity**
 
 ![Ping Identity homepage](./Ping-Identity-homepage.png)
 
-## **Features**
+### **Features**
 
 Ping Identity provides passwordless authentication, secure identity
 federation, and risk-based access controls. Key features include:
@@ -233,29 +233,29 @@ federation, and risk-based access controls. Key features include:
 -   **Risk-Based** **Access Control:** Adjusts security measures based
     on real-time risk assessments.
 
-## **Use Cases**
+### **Use Cases**
 
 Ping Identity is well-suited for:
 
 -   **Large Organizations with Hybrid IT Environments:** Managing
     complex identity needs across various systems.
 
-## **Customer Rating**
+### **Customer Rating**
 
 Ping Identity enjoys a customer rating of 4.7/5, reflecting its
 effectiveness in enterprise environments.
 
-## **Pricing**
+### **Pricing**
 
 Paid plans start at \$3/user/month.
 
-# **6. HYPR**
+## **6. HYPR**
 
 ![HYPR homepage](./HYPR-homepage.png)
 
 
 
-## **Features**
+### **Features**
 
 HYPR offers a true passwordless experience through FIDO-certified
 architecture, biometric authentication, and decentralized authentication
@@ -267,27 +267,27 @@ methods. Key features include:
 -   **Decentralized Authentication:** Reduces reliance on centralized
     servers, minimizing risks associated with data breaches.
 
-## **Use Cases**
+### **Use Cases**
 
 HYPR is particularly effective in:
 
 -   **Banking and Fintech Sectors:** These are where stringent security
     measures are paramount.
 
-## **Customer Rating**
+### **Customer Rating**
 
 HYPR boasts a customer rating of 4.8/5, highlighting its strong
 reputation among users.
 
-## **Pricing**
+### **Pricing**
 
 Paid plans start at \$3/user/month.
 
-# **7. ForgeRock**
+## **7. ForgeRock**
 
 ![ForgeRock login page](./ForgeRock-login-page.png)
 
-## **Features**
+### **Features**
 
 ForgeRock provides AI-driven access control solutions along with
 passwordless and device-based authentication capabilities. Key features
@@ -300,30 +300,30 @@ include:
     architectures that require continuous verification of users and
     devices.
 
-## **Use Cases**
+### **Use Cases**
 
 ForgeRock is best suited for:
 
 -   **Large Organizations in Retail and Telecommunications Sectors:**
     Where complex identity requirements exist.
 
-## **Customer Rating**
+### **Customer Rating**
 
 ForgeRock has a customer rating of 4.7/5, indicating high levels of user
 satisfaction.
 
-## **Pricing**
+### **Pricing**
 
 Custom pricing based on deployment size and specific feature
 requirements.
 
-# **8. OneLogin**
+## **8. OneLogin**
 
 ![OneLogin homepage](./OneLogin-homepage.png)
 
 
 
-## **Features**
+### **Features**
 
 OneLogin offers biometric authentication, robust integrations, and
 strong policy management tools. Key features include:
@@ -340,7 +340,7 @@ strong policy management tools. Key features include:
     directory services like Active Directory, allowing for streamlined
     user management and authentication across platforms.
 
-## **Use Cases**
+### **Use Cases**
 
 OneLogin serves well in:
 
@@ -348,23 +348,23 @@ OneLogin serves well in:
     Providing an easy-to-use interface that simplifies identity
     management.
 
-## **Customer Rating**
+### **Customer Rating**
 
 OneLogin enjoys a customer rating of 4.7/5, reflecting its reliability
 in the market.
 
-## **Pricing**
+### **Pricing**
 
 Paid plans start at \$4/user/month with additional features available at
 varying prices.
 
-# **9. LastPass**
+## **9. LastPass**
 
 ![LastPass homepage](./LastPass-homepage.png)
 
 
 
-## **Features**
+### **Features**
 
 LastPass provides passwordless login options for end-users along with
 centralized administration capabilities. Key features include:
@@ -382,7 +382,7 @@ centralized administration capabilities. Key features include:
     multiple methods, such as a one-time passcode or biometric
     verification, ensuring that only authorized users gain access.
 
-## **Use Cases**
+### **Use Cases**
 
 LastPass is suitable for:
 
@@ -391,20 +391,20 @@ LastPass is suitable for:
 
 -   Enterprises Seeking Robust Security Solutions.
 
-## **Customer Rating**
+### **Customer Rating**
 
 LastPass holds a customer rating of 4.7/5, indicating strong user
 approval.
 
-## **Pricing**
+### **Pricing**
 
 Pricing starts at \$7/user/month for businesses.
 
-# **10. Trusona**
+## **10. Trusona**
 
 ![Trusona homepage](./Trusona-homepage.png)
 
-## **Features**
+### **Features**
 
 Trusona focuses on frictionless passwordless login experiences through
 QR code authentication and device binding techniques. Key features
@@ -422,7 +422,7 @@ include:
     unique and cannot be duplicated, significantly enhancing security
     against credential theft.
 
-## **Use Cases**
+### **Use Cases**
 
 Trusona is ideal for:
 
@@ -430,16 +430,16 @@ Trusona is ideal for:
     These include retail apps or online services where speed is
     crucial.
 
-## **Customer Rating**
+### **Customer Rating**
 
 Trusona boasts a customer rating of 4.8/5, underscoring its
 effectiveness in delivering secure access quickly.
 
-## **Pricing**
+### **Pricing**
 
 Paid plans start at \$4/user/month.
 
-# **Key Features to Look For in Passwordless Authentication Solutions**
+## **Key Features to Look For in Passwordless Authentication Solutions**
 
 ![Key Features](./Key-Features.png)
 
@@ -491,7 +491,7 @@ consider these features:
     gateways, and enterprise applications ensure a cohesive user
     experience while improving operational efficiency.
 
-# **Implement Passwordless Authentication with SuperTokens**
+## **Implement Passwordless Authentication with SuperTokens**
 
 SuperTokens simplifies the implementation of passwordless authentication
 by providing an open-source framework that offers flexibility while
