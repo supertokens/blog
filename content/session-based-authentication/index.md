@@ -1,13 +1,18 @@
 ---
 title: "Session-Based Authentication: A Detailed Guide [2024]"
-date: "2024-12-24"
-description: ""
-cover: ""
+date: "2024-11-18"
+description: "Session-based authentication is a cornerstone of web security, providing a simple and controlled method to manage user sessions. This guide delves into its workings, advantages, and implementation, while addressing challenges like security vulnerabilities and scalability concerns."
+cover: "session-based-authentication.png"
 category: "programming"
 author: "Darko Bozhinovski"
 ---
 
-# Session-Based Authentication: A Detailed Guide [2024]
+## Table of Contents
+
+```toc
+tight: true
+toHeading: 3
+```
 
 The moment you open your browser, you're likely to already have at least a few open. Sessions - one of the most fundamental building blocks of auth, is considered simple, yet that's only surface level. Today, we're taking that complexity apart, with the goal of understanding what makes it tick better.
 
@@ -31,47 +36,7 @@ But, we need to go deeper.
 
 The process involves the following steps:
 
-
-```
-+--------------------+          +------------------------+
-|    User (Client)   |          |       Server           |
-+--------------------+          +------------------------+
-          |                               |
-          | 1. Login Request (credentials)|  
-          +------------------------------>|
-          |                               |
-          |    Validate Credentials       |
-          |                               |
-          |<------------------------------+
-          |                               |
-          | 2. Create Session             |
-          |   - Store Session ID          |
-          |   - Send Session Cookie       |
-          +------------------------------>|
-          |                               |
-+--------------------+          +------------------------+
-|  Stores Session ID |          | Keeps Session Info     |
-| in HTTP-Only Cookie|          | in Server Memory       |
-+--------------------+          +------------------------+
-          |                               |
-          | 3. Subsequent Requests        |
-          |   - Include Session Cookie    |
-          +------------------------------>|
-          |                               |
-          | 4. Session Validation         |
-          |   - Retrieve Session Info     |
-          |<------------------------------+
-          |                               |
-          | 5. Access Protected Route     |
-          +------------------------------>|
-          |                               |
-+--------------------+          +------------------------+
-|   User Accesses    |          | Authenticates User and |
-| Protected Content  |          | Provides Access        |
-+--------------------+          +------------------------+
-
-```
-
+![auth flow](./auth-flow.png)
 
 1. **User logs-in**: The user sends their credentials (e.g., username and password) via a login request.
 2. **Server creates a session**: The server validates the credentials. If valid, a session is initiated and associated with a unique session ID. That session is remembered by the server and stored in the client for reference inside a cookie (an HTTP-only cookie).
@@ -94,7 +59,7 @@ Additionally, the method you use to store the session data is largely up to you,
 
 We have plenty of choice when it comes to integrating a session mechanism in our apps - frameworks and libraries, such as `express-session` for Node.js, for one. Just searching for [session]() on NPM, yields 1000+ packages:
 
-![NPM session packagese search](./npm.png)
+![npm package](./npm.png)
 
 Statistically speaking, there's a high change that there's one for your specific stack that's ready to be used out of the box. Or, you know, check out [supertokens](https://supertokens.com) 😉
 

@@ -2276,6 +2276,27 @@
         ],
         "title": "7 Authentik Alternatives for Enhanced Identity Management in 2024",
         "schema": "<script type=\"application/ld+json\">\n        {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/7-authentik-alternatives-for-enhanced-identity-management-in-2024\"\n            },\n            \"headline\": \"Explore 7 effective Authentik alternatives for improved identity management in 2024. Elevate your security measures and optimize user experience today.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/7-Authentik-Alternatives-for-Enhanced-Identity-Management-in-2024.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }\n        </script>"
+    }, {
+        "path": "/blog/session-based-authentication",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Session-based authentication is a cornerstone of web security, providing a simple and controlled method to manage user sessions. This guide delves into its workings, advantages, and implementation, while addressing challenges like security vulnerabilities and scalability concerns.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Session-Based Authentication: A Detailed Guide [2024]\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/session-based-authentication\" />",
+            "<meta property=\"og:description\" content=\"Session-based authentication is a cornerstone of web security, providing a simple and controlled method to manage user sessions. This guide delves into its workings, advantages, and implementation, while addressing challenges like security vulnerabilities and scalability concerns.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/session-based-authentication.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Session-based authentication is a cornerstone of web security, providing a simple and controlled method to manage user sessions. This guide delves into its workings, advantages, and implementation, while addressing challenges like security vulnerabilities and scalability concerns.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/session-based-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/session-based-authentication.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/session-based-authentication\">"
+        ],
+        "title": "Session-Based Authentication: A Detailed Guide [2024]",
+        "schema": "<script type=\"application/ld+json\">\n        {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/session-based-authentication\"\n            },\n            \"headline\": \"Session-based authentication is a cornerstone of web security, providing a simple and controlled method to manage user sessions. This guide delves into its workings, advantages, and implementation, while addressing challenges like security vulnerabilities and scalability concerns.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/session-based-authentication.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }\n        </script>"
     }
-    
 ]
