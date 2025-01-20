@@ -259,7 +259,11 @@
     },
     {
         "location": "https://supertokens.com/blog/identity-and-access-management-frameworks"
-    },{
+    },
+    {
         "location": "https://supertokens.com/blog/7-authentik-alternatives-for-enhanced-identity-management-in-2024"
+    },
+    {
+        "location": "https://supertokens.com/blog/session-based-authentication"
     }
 ]
