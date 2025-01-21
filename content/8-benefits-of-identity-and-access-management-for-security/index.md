@@ -1,6 +1,6 @@
 ---
 title: 8 Benefits of Identity and Access Management (IAM) for Security
-date: "2025-01-23"
+date: "2025-01-02"
 description: "Discover the 8 key benefits of Identity and Access Management (IAM) for enhancing security. Learn how IAM can protect your organization effectively."
 cover: "8-benefits-of-identity-and-access-management-for-security.png"
 category: "programming"
