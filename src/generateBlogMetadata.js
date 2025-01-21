@@ -66,10 +66,10 @@ function generateBlogMetadata(frontmatter) {
 
 // Example usage
 const frontmatter = {
-    title: "Session-Based Authentication: A Detailed Guide [2024]",
-    description: "Session-based authentication is a cornerstone of web security, providing a simple and controlled method to manage user sessions. This guide delves into its workings, advantages, and implementation, while addressing challenges like security vulnerabilities and scalability concerns.",
-    cover: "session-based-authentication.png",
-    url: "session-based-authentication"
+    title: "8 Benefits of Identity and Access Management (IAM) for Security",
+    description: "Discover the 8 key benefits of Identity and Access Management (IAM) for enhancing security. Learn how IAM can protect your organization effectively.",
+    cover: "8-benefits-of-identity-and-access-management-for-security.png",
+    url: "8-benefits-of-identity-and-access-management-for-security"
 };
 
 console.log(generateBlogMetadata(frontmatter));

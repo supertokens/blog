@@ -2298,5 +2298,27 @@
         ],
         "title": "Session-Based Authentication: A Detailed Guide [2024]",
         "schema": "<script type=\"application/ld+json\">\n        {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/session-based-authentication\"\n            },\n            \"headline\": \"Session-based authentication is a cornerstone of web security, providing a simple and controlled method to manage user sessions. This guide delves into its workings, advantages, and implementation, while addressing challenges like security vulnerabilities and scalability concerns.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/session-based-authentication.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }\n        </script>"
-    }
+    },{
+        "path": "/blog/8-benefits-of-identity-and-access-management-for-security",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover the 8 key benefits of Identity and Access Management (IAM) for enhancing security. Learn how IAM can protect your organization effectively.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"8 Benefits of Identity and Access Management (IAM) for Security\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/8-benefits-of-identity-and-access-management-for-security\" />",
+            "<meta property=\"og:description\" content=\"Discover the 8 key benefits of Identity and Access Management (IAM) for enhancing security. Learn how IAM can protect your organization effectively.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/8-benefits-of-identity-and-access-management-for-security.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Discover the 8 key benefits of Identity and Access Management (IAM) for enhancing security. Learn how IAM can protect your organization effectively.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/8-benefits-of-identity-and-access-management-for-security\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/8-benefits-of-identity-and-access-management-for-security.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/8-benefits-of-identity-and-access-management-for-security\">"
+        ],
+        "title": "8 Benefits of Identity and Access Management (IAM) for Security",
+        "schema": "<script type=\"application/ld+json\">\n        {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/8-benefits-of-identity-and-access-management-for-security\"\n            },\n            \"headline\": \"Discover the 8 key benefits of Identity and Access Management (IAM) for enhancing security. Learn how IAM can protect your organization effectively.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/8-benefits-of-identity-and-access-management-for-security.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }\n        </script>"
+    }    
 ]

@@ -265,5 +265,8 @@
     },
     {
         "location": "https://supertokens.com/blog/session-based-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/8-benefits-of-identity-and-access-management-for-security"
     }
 ]
