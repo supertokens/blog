@@ -222,6 +222,9 @@
         "location": "https://supertokens.com/blog/flask-user-auth"
     },
     {
+        "location": "https://supertokens.com/blog/iam-challenges"
+    },
+    {
         "location": "https://supertokens.com/blog/sso-implementation"
     },
     {
@@ -231,6 +234,9 @@
         "location": "https://supertokens.com/blog/django-user-authentication"
     },
     {
+        "location": "https://supertokens.com/blog/keycloak-pricing"
+    },
+    {
         "location": "https://supertokens.com/blog/but-auth-is-hard"
     },
     {
@@ -238,5 +244,29 @@
     },
     {
         "location": "https://supertokens.com/blog/how-to-implement-oidc-with-microsoft-entra-id"
+    },
+    {
+        "location": "https://supertokens.com/blog/top-7-sso-benefits-for-enhanced-security-2024"
+    },
+    {
+        "location": "https://supertokens.com/blog/token-based-authentication-in-api"
+    },
+    {
+        "location": "https://supertokens.com/blog/identity-and-access-management-best-practices"
+    },
+    {
+        "location": "https://supertokens.com/blog/indentity-and-access-management"
+    },
+    {
+        "location": "https://supertokens.com/blog/identity-and-access-management-frameworks"
+    },
+    {
+        "location": "https://supertokens.com/blog/identity-and-access-management-frameworks"
+    },
+    {
+        "location": "https://supertokens.com/blog/7-authentik-alternatives-for-enhanced-identity-management-in-2024"
+    },
+    {
+        "location": "https://supertokens.com/blog/session-based-authentication"
     }
 ]
