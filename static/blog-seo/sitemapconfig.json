@@ -80,7 +80,7 @@
     {
         "location": "https://supertokens.com/blog/access-control-for-modern-web-applications"
     },
-    {  
+    {
         "location": "https://supertokens.com/blog/totp-why-you-need-it-and-how-it-works"
     },
     {
@@ -271,5 +271,8 @@
     },
     {
         "location": "https://supertokens.com/blog/8-benefits-of-identity-and-access-management-for-security"
+    },
+    {
+        "location": "https://supertokens.com/blog/top-10-passwordless-authentication-solutions-in-2024"
     }
 ]
