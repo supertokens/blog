@@ -45,6 +45,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "generate-metadata": "node src/generateBlogMetadata.js",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
