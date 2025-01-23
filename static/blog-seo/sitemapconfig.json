@@ -274,5 +274,8 @@
     },
     {
         "location": "https://supertokens.com/blog/top-10-passwordless-authentication-solutions-in-2024"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-to-implement-identity-and-access-management"
     }
 ]
