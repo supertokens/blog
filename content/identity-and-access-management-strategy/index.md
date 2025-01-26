@@ -2,7 +2,7 @@
 title: "How to Build Effective Identity & Access Management Strategy"
 date: "2025-01-13"
 description: "Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences."
-cover: "iam-strategy.png"
+cover: "iam_strategy.png"
 category: "iam, strategy"
 author: "Dejan Lukic"
 ---
@@ -26,67 +26,67 @@ A strong access management strategy is more than a security measure—it’s a c
 ### Governance and Policy Framework
 A well-defined governance and policy framework acts as the rulebook for how identities are created, managed, and monitored. It ensures consistent, compliant processes by setting clear responsibilities, ownership, and guidelines.
 
-- **Why It Matters & Real-World Application**  
-  - Establishes unified standards for data security and compliance (GDPR, SOC 2, etc.).  
-  - Prevents unauthorized access through well-defined permissions and access policies.  
+- **Why It Matters & Real-World Application**
+  - Establishes unified standards for data security and compliance (GDPR, SOC 2, etc.).
+  - Prevents unauthorized access through well-defined permissions and access policies.
   - Guides decision-making for ongoing IAM improvements and audits.
 
-- **Mistakes to Avoid**  
-  - Overcomplicating IAM policies and failing to keep them up to date.  
-  - Assigning unclear ownership or responsibilities, leading to policy gaps.  
+- **Mistakes to Avoid**
+  - Overcomplicating IAM policies and failing to keep them up to date.
+  - Assigning unclear ownership or responsibilities, leading to policy gaps.
   - Neglecting regular audits, which can let outdated rules linger.
 
 ### Robust Authentication & Authorization Mechanisms
 Authentication confirms user identity, while authorization grants suitable access. Working together, they form the bedrock of secure interactions, ensuring that only the right people obtain the right privileges at the right time.
 
-- **Why It Matters & Real-World Application**  
-  - Multi-factor authentication (MFA) and single sign-on (SSO) reduces the risk of stolen or weak credentials.  
-  - Fine-grained access controls, like role-based access control (RBAC), minimize privilege escalation attacks.  
+- **Why It Matters & Real-World Application**
+  - Multi-factor authentication (MFA) and single sign-on (SSO) reduces the risk of stolen or weak credentials.
+  - Fine-grained access controls, like role-based access control (RBAC), minimize privilege escalation attacks.
   - Adopting a service like SuperTokens streamlines secure sign-in workflows.
 
-- **Mistakes to Avoid**  
-  - Relying solely on passwords without multifactor authentication or advanced security measures.  
-  - Hardcoding tokens or credentials within application code.  
+- **Mistakes to Avoid**
+  - Relying solely on passwords without multifactor authentication or advanced security measures.
+  - Hardcoding tokens or credentials within application code.
   - Setting overly broad permissions that grant excessive privileges.
 
 ### Identity Lifecycle Management
 
 Identity lifecycle management covers user onboarding, role changes, and offboarding (or deprovisioning). Properly maintaining user identities at each stage reduces the chance of lingering or “orphaned” user accounts that could lead to potential breaches.
 
-- **Why It Matters & Real-World Application**  
-  - Automate provisioning and deprovisioning improves efficiency and security.  
-  - Centralized identity governance reduce duplications and inconsistencies.  
+- **Why It Matters & Real-World Application**
+  - Automate provisioning and deprovisioning improves efficiency and security.
+  - Centralized identity governance reduce duplications and inconsistencies.
   - Role-based access control facilitates clean, frictionless onboarding and offboarding.
 
-- **Mistakes to Avoid**  
-  - Relying on manual processes prone to human error and delays.  
-  - Failing to promptly remove or adjust access for departing or changing users.  
+- **Mistakes to Avoid**
+  - Relying on manual processes prone to human error and delays.
+  - Failing to promptly remove or adjust access for departing or changing users.
   - Overlooking user role changes, allowing unauthorized escalation of privileges.
 
 ### Continuous Monitoring & Analytics
 Continuous monitoring involves collecting and analyzing access logs, user behaviors, and anomalies in real time. This proactive approach helps identify threats early and informs strategic updates to your IAM setup.
 
-- **Why It Matters & Real-World Application**  
-  - Real-time alerts enable quick action before incidents escalate.  
-  - Comprehensive logs assist in meeting regulatory compliance and internal audits.  
+- **Why It Matters & Real-World Application**
+  - Real-time alerts enable quick action before incidents escalate.
+  - Comprehensive logs assist in meeting regulatory compliance and internal audits.
   - Data-driven metrics guide improvements to policies and processes.
 
-- **Mistakes to Avoid**  
-  - Ignoring abnormal login patterns or usage spikes.  
-  - Failing to regularly review monitoring tools for outdated or incorrect configurations.  
+- **Mistakes to Avoid**
+  - Ignoring abnormal login patterns or usage spikes.
+  - Failing to regularly review monitoring tools for outdated or incorrect configurations.
   - Overlooking a centralized logging strategy, leading to blind spots and vulnerabilities.
 
 ### Incident Response & Recovery Plans
 Even the most robust IAM strategy can face breaches. Having a clear incident response and recovery roadmap ensures quick containment, minimal disruption, and a faster return to normal operations.
 
-- **Why It Matters & Real-World Application**  
-  - Defined escalation paths reduce confusion and speed up resolutions.  
-  - Regular backups of critical IAM data enable rapid restoration.  
+- **Why It Matters & Real-World Application**
+  - Defined escalation paths reduce confusion and speed up resolutions.
+  - Regular backups of critical IAM data enable rapid restoration.
   - Post-incident reviews help refine policies to prevent repeat scenarios.
 
-- **Mistakes to Avoid**  
-  - Leaving incident response plans untested or outdated.  
-  - Failing to designate clear roles and responsibilities for crisis management.  
+- **Mistakes to Avoid**
+  - Leaving incident response plans untested or outdated.
+  - Failing to designate clear roles and responsibilities for crisis management.
   - Not documenting lessons learned to strengthen future preparedness.
 
 ## Expanding on the Foundations of IAM
@@ -122,7 +122,7 @@ Conduct regular reviews to update IAM policies, patch vulnerabilities, and refin
 
 ## Identity Fabrics: A Holistic Apporach to IAM
 
-An Identity Fabric is an overarching blueprint that unifies every facet of identity and access management—from authentication and access control to user provisioning and lifecycle management—into one cohesive ecosystem. It bridges the gap between on-premises and cloud-based infrastructures, making it particularly relevant for organizations juggling multiple IAM solutions. 
+An Identity Fabric is an overarching blueprint that unifies every facet of identity and access management—from authentication and access control to user provisioning and lifecycle management—into one cohesive ecosystem. It bridges the gap between on-premises and cloud-based infrastructures, making it particularly relevant for organizations juggling multiple IAM solutions.
 
 This approach matters because it simplifies auditing and regulatory compliance while strengthening your security posture. It’s applicable wherever you need to manage user access at scale—be it distributed workforces, hybrid or multi-cloud deployments, or complex partner ecosystems. When effectively implemented, an Identity Fabric can adapt alongside evolving business goals, helping you incorporate new tools, apps, and cybersecurity safeguards with minimal friction.
 
