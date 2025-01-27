@@ -280,5 +280,8 @@
     },
     {
         "location": "https://supertokens.com/blog/okta-alternatives"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-passwordless-authentication"
     }
 ]
