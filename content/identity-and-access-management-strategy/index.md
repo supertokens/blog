@@ -2,10 +2,17 @@
 title: "How to Build Effective Identity & Access Management Strategy"
 date: "2025-01-13"
 description: "Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences."
-cover: "iam_strategy.png"
+cover: "iam-strategy.png"
 category: "iam, strategy"
 author: "Dejan Lukic"
 ---
+
+## Table of Content
+
+```toc
+tight: true
+toHeading: 3
+```
 
 ## Introduction
 
