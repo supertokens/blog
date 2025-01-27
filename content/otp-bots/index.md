@@ -15,6 +15,11 @@ Not to worry because we don’t give up at challenges. Let’s unravel what thos
 
 If you want to skip right to your desired section, or just look at what we will cover, here is our nifty table of contents. 📜
 
+```toc
+tight: true
+toHeading: 3
+```
+
 ## What are OTPs (One-Time Passwords) 📲
 
 A **One-Time Password (OTP)** is a key part of 2FA (Two-Factor Authentication), adding a second layer of security to traditional password-based logins. 🔑
