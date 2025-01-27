@@ -6,3 +6,78 @@ date: "2025-01-27"
 # category: "featured"
 author: "Maria Shimkovska"
 ---
+
+In this article you will learn how authentication providers and APIs can secure your organization or application. 🛡️
+
+If you are new to authentication providers and APIs, don’t worry. We will go over a few concepts before you can make the best choice for your organization. 
+
+If you want to skip right to the section on choosing an authentication provider, we have this nifty table of contents for you. 📜
+
+```toc
+tight: true
+toHeading: 3
+```
+## Understanding Authentication Providers and their APIs: Why They Matter
+First let’s go over a couple of definitions: 
+
+1. **Authentication Provider** are services that manage authentication for your organization, handling all the complex and boring details so you can focus on your product or services, the things you like. 🧑‍💻 
+
+Long story short, we handle all the login details so you don’t have to worry about it. 
+
+2. **Authentication APIs** are endpoints that enable developers to integrate authentication functionality into their applications.
+
+The benefits of using authentication providers: 
+* Frees up your development time so you can focus on cooler stuff. 🦄
+* You get to store less user information. 🎉
+* You don’t need to become a security expert to keep your app and users safe. 🔐
+
+By using reliable authentication providers and APIs, you can build seamless and safe user experiences that users trust. This not only enhances their satisfaction but also benefits your business, as users place a high value on security and are more likely to engage with platforms they feel protect their data.
+
+## Key Features of Authentication Providers
+Let’s move on to some key features of Authentication Providers, to give you an idea of what they can do for you. 
+
+### 🪄Magic Links
+**Magic links** replace traditional username/password authentication by sending an email, containing a one-time use URL link,  to the user for authentication. Once the link is clicked, an access token is sent to the application to authenticate the user. 
+
+### 🚫 Passwordless Authentication 
+[**Passwordless**](https://supertokens.com/blog/what-is-passwordless-authentication) authentication verifies users without the need for traditional passwords. It streamlines the authentication experience and increases security. This could be through sending a one-time password (OTP) or a magic link through an email or phone number. 
+
+### 🔐 Single Sign-On (SSO) 
+**Single Sign-On (SSO)** allows users to access multiple related apps with one set of credentials, like using a Gmail login to access Google Drive and Calendar. It reduces password fatigue and is commonly used in enterprises, simplifying credential management for employees who need access to many apps.
+
+### 🔒 Multi-Factor Authentication (MFA)
+**Multi-Factor Authentication (MFA)** combines two or more authentication types:
+* **Knowledge**: Something the user knows (e.g., password).
+* **Possession**: Something the user has (e.g., phone).
+* **Inherence**: Something the user is (e.g., biometrics).
+
+For example, a user enters a password, then verifies with an SMS code or facial recognition. This extra layer boosts security against hackers.
+
+### 🌐 Social Logins (OAuth, OpenID Connect)
+**Social logins** let users sign in using trusted accounts (e.g., Google, Facebook, GitHub). This reduces signup friction for users and simplifies authentication for developers, as sensitive passwords are handled by trusted providers. Protocols like **OAuth 2.0** and **OpenID Connect** secure the communication between apps. 
+
+### 👤 User Role and Permission Management
+**User roles** define what tasks a group of users can perform, helping organizations manage access and responsibilities. ⏰ Common examples:
+* 👑 Admin: Full control, can add users, modify settings, and edit all content.
+* 🙋‍♂️ User: Limited access, can create or edit their own content but not others’.
+
+**Permissions** specify what users are allowed to do within the app, often tied to their role. Examples:
+* 📝 **Create**: Add new posts, events, or videos.
+* 👀 **Read**: View content without editing (e.g., Netflix shows).
+* ✏️ **Update**: Edit bios or descriptions (e.g., Instagram or GitHub).
+* 🗑️ **Delete**: Remove items like comments or playlists.
+
+Clear roles and permissions enhance security, meet compliance needs, and provide a tailored user experience. What’s not to like? 😎
+
+## How Authentication APIs Works
+**Authentication APIs** in authentication providers work by handling the process of verifying user identities. They: 
+* Grant secure access to applications. 🔑
+* Simplify auth implementation for developers while adhering to the best security practices. 💪
+* Offer endpoints so your users can log in, sign up, log out, access APIs, and more. 💻
+
+### API-Driven Authentication Flow
+The general flow of an API driven authentication is as follows: when a user logs in, the application sends their credentials to the authentication API. If the credentials are verified, the API then generates tokens (like access and refresh tokens) that the application uses to authenticate subsequent requests. 
+
+<img src="./api-driven-auth-flow.png" alt="API-Driven Authentication Flow chart" width="800"/>
+
+
