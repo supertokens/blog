@@ -286,5 +286,8 @@
     },
     {
         "location": "https://supertokens.com/blog/multi-tenant-architecture"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-passwordless-authentication"
     }
 ]
