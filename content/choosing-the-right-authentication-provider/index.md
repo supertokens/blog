@@ -114,6 +114,27 @@ Here is an overview of SuperTokens’ authentication recipes:
 
 > **Note**: You can use them out of the box, with our pre-built UI, or even implement your own interface. How cool! 💻
 
+### Email and Password
 
+The [**email/password**](https://supertokens.com/docs/authentication/email-password/introduction) recipe provides a way to authenticate with the basic credentials we all know. 
 
+You can also use a username with an optional email field for this recipe. ⭐
+
+You can adjust the functionality of the recipe to fit your exact use case: 
+* Add custom logic after login/sign up
+* Adapt the look/feel of your forms
+* Change the behavior of the functions that are used by the SDKs
+* Get control over how the frontend SDKs communicate with the backend
+
+### Passwordless
+
+The [**passwordless**](https://supertokens.com/docs/authentication/passwordless/introduction) recipe provides a way to authenticate users through generated credentials like magic links or one-time passwords (OTPs). 📲
+
+You can adjust the functionality of the passwordless recipe to fit your exact use case: 
+* Add custom logic after login/sign up
+* Change how magic links are constructed 
+* Change the format of the generated OTPs
+* Customize how emails/SMS messages are sent to your users
+* Change the behavior of the functions that are used by the SDKs
+* Get control over how the frontend SDKs communicates with the backend
 
