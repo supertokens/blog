@@ -80,4 +80,18 @@ The general flow of an API driven authentication is as follows: when a user logs
 
 <img src="./api-driven-auth-flow.png" alt="API-Driven Authentication Flow chart" width="800"/>
 
+### Secure Session Management 
 
+**Session management** secures user identities and data while enabling seamless navigation across a web app. 
+
+When a user makes an initial request, the server generates a token (a random string identifying the user) which is then destroyed when the session ends.
+
+Tokens include **short-lived access tokens** for resource access and **long-lived refresh tokens** for obtaining new access tokens without re-authentication.
+
+### What is the Role of OAuth 2.0 in API Authentication?
+
+**OAuth 2.0** is a protocol that allows third party apps to act on behalf of a user (like making an account and logging in), without giving that application access to the user’s actual credentials. Keep those credentials close to your heart!
+
+You may have seen OAuth 2.0 in action when an application prompts you to log in using your Google or GitHub account. This method doesn’t expose your password or username, which maintains security while giving you access to a new application.
+
+If you want to dive deeper into OAuth 2.0, including how it differs from OAuth, we have a couple resources for you. 
