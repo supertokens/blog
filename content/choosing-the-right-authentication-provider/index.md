@@ -138,3 +138,26 @@ You can adjust the functionality of the passwordless recipe to fit your exact us
 * Change the behavior of the functions that are used by the SDKs
 * Get control over how the frontend SDKs communicates with the backend
 
+### Social Logins
+
+The third-party recipe (for social logins) provides a way to authenticate users through a third party provider like Google, Github, or Apple. 
+
+Our list of built-in providers:
+* Google (Including Google Workspaces)
+* Apple
+* Discord
+* Facebook
+* Github
+* Gitlab
+* Twitter
+* LinkedIn
+* Okta
+* SAML
+
+> Note: If SuperTokens doesn’t support a provider out of the box, you can add your own [**custom provider**](https://supertokens.com/docs/authentication/social/custom-providers). ⚙️
+
+In addition to authentication recipes **SuperTokens** also provides: 
+
+* Support for multi-tenancy and dynamic tenant creation.
+* Robust attack protection and bot detection mechanism in our [**Attack Protection Suite**](https://supertokens.com/docs/additional-verification/attack-protection-suite/introduction).
+
