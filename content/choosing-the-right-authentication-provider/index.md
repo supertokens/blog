@@ -99,3 +99,13 @@ If you want to dive deeper into OAuth 2.0, including how it differs from OAuth, 
 
 * [What is OAuth and It's Importance in a Secure Web](https://supertokens.com/blog/oauth)
 
+## Benefits of Using Authentication Providers
+
+### Endpoints to make integration fast and easy
+URLs on the authentication provider's server that your application can interact with to initiate the user login process, verify credentials, and receive authentication tokens. They essentially act as the gateway to authenticate users against the provider's system. 
+
+
+
+
+
+
