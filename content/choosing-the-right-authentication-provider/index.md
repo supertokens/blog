@@ -94,4 +94,8 @@ Tokens include **short-lived access tokens** for resource access and **long-live
 
 You may have seen OAuth 2.0 in action when an application prompts you to log in using your Google or GitHub account. This method doesn’t expose your password or username, which maintains security while giving you access to a new application.
 
-If you want to dive deeper into OAuth 2.0, including how it differs from OAuth, we have a couple resources for you. 
+If you want to dive deeper into OAuth 2.0, including how it differs from OAuth, we have a couple resources for you: 
+* [How The Heck Does OAuth Work?](https://supertokens.com/blog/how-does-oauth-work)
+
+* [What is OAuth and It's Importance in a Secure Web](https://supertokens.com/blog/oauth)
+
