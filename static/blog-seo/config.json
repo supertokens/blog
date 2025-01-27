@@ -3069,5 +3069,28 @@
         ],
         "title": "How to Implement Identity and Access Management? [6 Steps]",
         "schema": "{\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/how-to-implement-identity-and-access-management\"\n            },\n            \"headline\": \"Learn how to implement Identity and Access Management in just 6 steps. Enhance security and manage user access efficiently with our expert guide!\",\n            \"image\": \"https://supertokens.com/blog-meta-images/how-to-implement-identity-and-access-management.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }"
+    },
+    {
+        "path": "/blog/okta-alternatives",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover the top 7 Okta alternatives for identity and access management (IAM), including SuperTokens, Auth0, Ping Identity, and more. Compare features, pricing, scalability, and customization to find the best solution for your business needs.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Best 7 Okta Alternatives for Identity Management\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/okta-alternatives\" />",
+            "<meta property=\"og:description\" content=\"Discover the top 7 Okta alternatives for identity and access management (IAM), including SuperTokens, Auth0, Ping Identity, and more. Compare features, pricing, scalability, and customization to find the best solution for your business needs.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/okta-alternatives.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Discover the top 7 Okta alternatives for identity and access management (IAM), including SuperTokens, Auth0, Ping Identity, and more. Compare features, pricing, scalability, and customization to find the best solution for your business needs.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/okta-alternatives\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/okta-alternatives.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/okta-alternatives\">"
+        ],
+        "title": "Best 7 Okta Alternatives for Identity Management",
+        "schema": "{\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/okta-alternatives\"\n            },\n            \"headline\": \"Discover the top 7 Okta alternatives for identity and access management (IAM), including SuperTokens, Auth0, Ping Identity, and more. Compare features, pricing, scalability, and customization to find the best solution for your business needs.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/okta-alternatives.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }"
     }
 ]
