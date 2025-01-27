@@ -1,9 +1,9 @@
 ---
 title: "What is Passwordless Authentication: The Cool Kid on The Block? 🔒🚫"
-# date: "2024-07-07"
-description: "Learn about RBAC and advantages + disadvantages compared to ABAC."
-# cover: "what-is-rbac-cover.png"
-# category: "featured"
+date: "2025-01-27"
+description: "What is passwordless authentication? Solve login challenges, explore methods, benefits, and tools for secure implementations."
+cover: "what-is-passwordless-auth.png"
+category: "featured"
 author: "Maria Shimkovska"
 ---
 
