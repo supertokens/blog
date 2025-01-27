@@ -80,7 +80,7 @@
     {
         "location": "https://supertokens.com/blog/access-control-for-modern-web-applications"
     },
-    {  
+    {
         "location": "https://supertokens.com/blog/totp-why-you-need-it-and-how-it-works"
     },
     {
@@ -243,6 +243,9 @@
         "location": "https://supertokens.com/blog/token-based-authentication-vs-session-based-authentication"
     },
     {
+        "location": "https://supertokens.com/blog/how-to-implement-oidc-with-microsoft-entra-id"
+    },
+    {
         "location": "https://supertokens.com/blog/top-7-sso-benefits-for-enhanced-security-2024"
     },
     {
@@ -256,5 +259,20 @@
     },
     {
         "location": "https://supertokens.com/blog/identity-and-access-management-frameworks"
+    },
+    {
+        "location": "https://supertokens.com/blog/identity-and-access-management-frameworks"
+    },
+    {
+        "location": "https://supertokens.com/blog/7-authentik-alternatives-for-enhanced-identity-management-in-2024"
+    },
+    {
+        "location": "https://supertokens.com/blog/session-based-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/8-benefits-of-identity-and-access-management-for-security"
+    },
+    {
+        "location": "https://supertokens.com/blog/top-10-passwordless-authentication-solutions-in-2024"
     }
 ]
