@@ -1,8 +1,16 @@
+---
+title: Real World Examples of Multi-Factor Authentication
+date: "2025-01-28"
+description: "Security has always been crucial, especially in today’s digital landscape, where so much is at stake if security practices are weak or missing. The challenge with security is that the solutions and best practices are often logical and even obvious—yet, for various reasons, we sometimes choose to ignore them.."
+cover: "real-world-auth.png"
+category: "authentication, examples, comparison"
+author: "Dejan Lukic"
+---
 ## Introduction
 
 Security has always been crucial, especially in today’s digital landscape, where so much is at stake if security practices are weak or missing. The challenge with security is that the solutions and best practices are often logical and even obvious—yet, for various reasons, we sometimes choose to ignore them.
 
-Historically, efforts to protect data have evolved significantly. For instance, the ancient Caesar cipher was an early attempt at encryption. Over time, especially during pivotal moments like World War II, security became a strategic focus, with the Allies striving to crack Axis encrypted messages. This culminated in Alan Turing’s breakthrough with the Enigma machine, which was a major leap forward in cryptography. 
+Historically, efforts to protect data have evolved significantly. For instance, the ancient Caesar cipher was an early attempt at encryption. Over time, especially during pivotal moments like World War II, security became a strategic focus, with the Allies striving to crack Axis encrypted messages. This culminated in Alan Turing’s breakthrough with the Enigma machine, which was a major leap forward in cryptography.
 
 In the modern era, security practices have continued to evolve rapidly. The fascinating part is that security has two sides: the development of practices and tools to safeguard information, and the relentless advancement of methods to breach these defenses. This push and pull is what drives the continuous evolution of technology. Just consider how modern encryption methods compare to those of the WWII era—remarkably advanced in less than a century.
 
@@ -22,8 +30,8 @@ Multi-Factor Authentication (MFA) is a security process that requires users to p
 
 MFA generally falls into three categories:
 
-1. **Something you know** (Passwords, PINs)  
-2. **Something you have** (Security Tokens, Mobile Devices)  
+1. **Something you know** (Passwords, PINs)
+2. **Something you have** (Security Tokens, Mobile Devices)
 3. **Something you are** (Biometrics)
 
 Let's dive into each type.
@@ -42,9 +50,9 @@ Whether you choose the most secure option, like biometrics, or the more accessib
 
 When adding MFA to your application, it’s essential to choose methods that align best with your app’s goals and user needs, rather than just opting for the "strongest" or "most secure" option. Different MFA methods offer unique benefits:
 
-* **Time-Based One-Time Passwords (TOTPs)**: This approach uses apps like Google Authenticator or Authy to generate time-sensitive codes;  
-* **SMS-based Verification**: A more traditional option that adds accessibility by sending codes via SMS, making it easy for users who might not have an authenticator app;  
-* **Push Notifications**: Allows for a seamless experience by prompting users directly in an app to approve actions;  
+* **Time-Based One-Time Passwords (TOTPs)**: This approach uses apps like Google Authenticator or Authy to generate time-sensitive codes;
+* **SMS-based Verification**: A more traditional option that adds accessibility by sending codes via SMS, making it easy for users who might not have an authenticator app;
+* **Push Notifications**: Allows for a seamless experience by prompting users directly in an app to approve actions;
 * **Biometric Authentication**: Provides a high level of security and a quick user experience by leveraging device-based biometrics like fingerprint or facial recognition;
 
 #### Integrating MFA into Your Authentication Flows
@@ -83,7 +91,7 @@ Healthcare facilities often use biometric methods, such as fingerprint scanners 
 
 MFA in healthcare doesn’t always need to be automated, though. In the country I live in, each citizen has a unique health card with a specific ID number. To access my own portal-based health records, I need to enter this unique number. Similarly, when visiting a doctor, I have to provide this ID number to give the doctor or any authorized staff member access to my health records.
 
-One [case study](https://www.hipaajournal.com/hc3-provides-guidance-on-multifactor-authentication-and-highlights-smishing-risks/) describes how a major hospital chain implemented a combined approach of biometrics and mobile OTPs for off-site access to EHRs. This strategy helped them meet regulatory standards and protect against data breaches, showcasing the effectiveness of MFA in healthcare.  
+One [case study](https://www.hipaajournal.com/hc3-provides-guidance-on-multifactor-authentication-and-highlights-smishing-risks/) describes how a major hospital chain implemented a combined approach of biometrics and mobile OTPs for off-site access to EHRs. This strategy helped them meet regulatory standards and protect against data breaches, showcasing the effectiveness of MFA in healthcare.
 Another example of a good [read](https://tilsecurity.com/multi-factor-authentication-for-healthcare/).
 
 ### Education Sector
