@@ -104,7 +104,15 @@ If you want to dive deeper into OAuth 2.0, including how it differs from OAuth, 
 ### Endpoints to make integration fast and easy
 URLs on the authentication provider's server that your application can interact with to initiate the user login process, verify credentials, and receive authentication tokens. They essentially act as the gateway to authenticate users against the provider's system. 
 
+## How SuperTokens Simplifies Authentication Integration
 
+Learn how SuperTokens simplifies authentication integration and gives you exactly what you want!
+
+The functionalities that SuperTokens provides are bundled up together and called Recipes. 🍝
+
+Here is an overview of SuperTokens’ authentication recipes: 
+
+> **Note**: You can use them out of the box, with our pre-built UI, or even implement your own interface. How cool! 💻
 
 
 
