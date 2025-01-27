@@ -3094,6 +3094,29 @@
         "schema": "{\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/okta-alternatives\"\n            },\n            \"headline\": \"Discover the top 7 Okta alternatives for identity and access management (IAM), including SuperTokens, Auth0, Ping Identity, and more. Compare features, pricing, scalability, and customization to find the best solution for your business needs.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/okta-alternatives.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }"
     },
     {
+        "path": "/blog/what-is-passwordless-authentication",
+        "metaTags": [
+            "<meta name=\"description\" content=\"What is passwordless authentication? Solve login challenges, explore methods, benefits, and tools for secure implementations.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"passwordless authentication \" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What Is Passwordless Authentication? | SuperTokens\" />",
+            "<meta property=\"og:type\" content=\"blogpost\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/what-is-passwordless-authentication\" />",
+            "<meta property=\"og:description\" content=\"What is passwordless authentication? Solve login challenges, explore methods, benefits, and tools for secure implementations.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-passwordless-auth.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"What is passwordless authentication? Solve login challenges, explore methods, benefits, and tools for secure implementations.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-is-passwordless-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-passwordless-auth.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/what-is-passwordless-authentication\">"
+        ],
+        "title": "What Is Passwordless Authentication? | SuperTokens",
+        "schema": "{\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/what-is-passwordless-authentication\"\n            },\n            \"headline\": \"What is passwordless authentication? Solve login challenges, explore methods, benefits, and tools for secure implementations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/what-is-passwordless-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }"
+    },
+    {
         "path": "/blog/identity-and-access-management-strategy",
         "metaTags": [
             "<meta name=\"description\" content=\"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\" />",
@@ -3115,5 +3138,6 @@
         ],
         "title": "How to Build Effective Identity & Access Management Strategy",
         "schema": "{\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-strategy\"\n            },\n            \"headline\": \"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-strategy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }"
+
     }
 ]
