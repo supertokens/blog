@@ -12,6 +12,10 @@ author: "Maria Shimkovska"
 
 ## What is OAuth and What Does It Do For You
 
+Let's explore what OAuth is because there is quite a bit of confusion online about it. 
+
+![alt text](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2txeGxuaG0yZ2d6N2wweDVmMTU1dzVpbWdsNjk4bGM1azBoZHBsOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/1g2JFWDn7SvSPnQsjN/giphy.gif)
+
 **OAuth (Open Authentication)** is an **open standard**, particularly an *authorization framework*,  that allows users to grant third-party apps access to their data without the users sharing their passwords. 
 
 OAuth uses **access tokens** to prove a user’s identity and allow the application to interact with another service on their behalf. For example, OAuth is used when a web app requests access to a device’s camera or microphone. This is verified through a trusted authentication provider the user has already logged into.
@@ -28,3 +32,5 @@ OAuth uses **access tokens** to prove a user’s identity and allow the applicat
 An early OAuth implementer compares its workflow to a car's valet key. A valet key is given limited access. It lets someone drive the car but restricts access to the glove compartment or the trunk of the car. Similarly, OAuth lets users share account access with third-party apps without giving away full control. 
 
 For example, when a user logs into Facebook, the user clicks the Facebook login button. Facebook then authenticates the user, and the app gains access with Facebook’s permission. That’s an overview of how OAuth works.
+
+
