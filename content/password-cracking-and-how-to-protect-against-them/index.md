@@ -9,11 +9,6 @@ author: "Maria Shimkovska"
 
 Learn the most common password cracking techniques used by hackers and practical strategies to secure your accounts from such threats.
 
-```toc
-tight: true
-toHeading: 3
-```
-
 ## Understanding Password Cracking 🧑‍💻
 
 **Password cracking** is the process of using tools, techniques, or software to try and uncover a password. It usually involves guessing or testing possible passwords, often by decrypting or exploiting weak password hashes. While password cracking can be used for legitimate purposes, like helping users recover lost passwords, it’s often used by malicious hackers that want to steal your password and gain unauthorized access to accounts. 
