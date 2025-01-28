@@ -101,5 +101,90 @@ Popular additional verifications are:
 * Biometric verification
 * Push notifications
 
+> MFA can often be confused with 2FA (Two-Factor Authentication), because they are similar. 2FA can be considered a type of MFA, requiring just two verification methods instead of one. If you want to read more about the differences between them we have an [article](https://supertokens.com/blog/mfa-best-practices) covering that. 
+
+### Password Managers 🗝️
+
+Remembering strong passwords is not possible. Especially since you need a different one for every account you have. 🤯  
+
+That’s why you can use a **password manager**, like 1Password or LastPass, to store them. A password manager is an app on your phone or computer that stores your passwords for you in an encrypted vault.
+
+Another benefit that password managers provide is that they can generate random passwords for you so you won’t even need to come up with them yourself. 👏
+
+> **Bonus:** They will even let you know if you have reused a password or if your password is weak. How nice!
+
+### Rate-Limiting and Lockout Mechanisms 🛑
+**Rate-limiting** is a technique that controls the number of requests that can be made to a network. It’s used to protect systems against malicious attacks like Denial-of-Service, and from overloading a system.
+
+**Lockout mechanism**  is a security feature that locks a user’s account after a certain number of incorrect password attempts. Accounts are usually locked after 3 to 5 unsuccessful attempts to login. It’s used to prevent brute force and automated attacks.
+
+### Monitoring Accounts and Alerting Users 🚨
+**Monitoring** users accounts for suspicious activity and alerting them when something seems wrong is another important measure to keep your systems secure. To do so you can: 
+* Keep track of how many failed logins accounts have, which can indicate that someone is trying to gain unauthorized access. 
+* Monitor if someone is logging in from a new location, which can indicate that someone who is not the user has logged in. 
+* Monitor if someone is logging in from a new device, which can indicate that (once again) someone is trying to gain unauthorized access. 
+
+In all of these cases you need to inform the user, whether or not the accounts have actually been hacked. If the user is in a new location and they are logging in for the first time, the alert may be triggered and you may inform them. They can simply ignore the alert if they are the right person. 
+
+### Monitoring Your GitHub For Leaked Passwords 🥸
+
+Ok, so people make mistakes and sometimes accidents happen. It’s not unheard of for developers to sometimes push sensitive information to GitHub and not notice. Monitoring your repositories for sensitive information will help mitigate that by changing the passwords before they get hacked. 
+
+### Pen Testing 🖋️💻
+**Penetration testing (pen testing)** is a security practice where ethical hackers (cybersecurity experts) attempt to hack into a system (with permission!!!) to assess its security and check where it might be vulnerable, before hackers find the vulnerabilities first. 
+
+Pen testers are hired to check for password vulnerabilities where the testers will employ the same tactics hackers would. They would then report to the company and provide them with a detailed report of their findings. 
+
+### Consistent Training 👩‍🏫
+
+Even with all the tools and techniques we explored, at the end of the day the weakest link is people. **Training** employees and users on the importance of password hygiene is vital to prevent password cracking. Something as simple as leaving your laptop unattended can be a security risk. Which is why some companies require users to log out of their computers before leaving their desks.
+
+## How SuperTokens Protects Against Password Cracking
+
+Phew! That was a lot. Let’s take a closer look at the tools and features SuperTokens provides to enhance account security: 
+
+### Brute Force Attack Detection
+Tracks repeated actions like login attempts or password resets. If too many attempts happen in a short time, it blocks them to protect accounts from attackers.
+
+### Password Breach Detection
+Checks passwords against a database of leaked passwords to see if they've been leaked before. This helps keep accounts safe by avoiding weak passwords.
+
+### New Device Detection
+Recognizes when a user logs in from a new and previously unseen device. This helps find possible unauthorized logins.
+
+### Device Count Tracking
+Monitors the number of unique devices associated with a user account. This helps spot unusual account use. 
+
+### Requester Detection
+Identifies and remembers devices and requester details, even if they try to hide. This helps track the same device across multiple login attempts for better security.
+
+### Multi-Factor Authentication (MFA)
+SuperTokens integrates with MFA to provide an additional layer of security. By requiring multiple forms of verification, such as email or SMS-based one-time passwords (OTPs), MFA ensures that even if a password is compromised, unauthorized access is still prevented. This approach strengthens account protection and makes it significantly harder for attackers to breach accounts. 💪
+
+### Session Management
+SuperTokens securely manages session tokens to protect against threats like session hijacking and fixation. By implementing measures such as access token blacklisting, anti-csrf (cross-site request forgery), token rotation, and cookie consent, it ensures that user sessions remain secure. This prevents attackers from stealing or reusing tokens to gain unauthorized access. 🔒
+
+## Best Practices for Password Security
+* **Avoid reusing passwords** across multiple platforms. Always use a unique password for each account.
+* **Change passwords** regularly. Regularly updating passwords reduces the chances of unauthorized access if a password has been compromised without a user’s knowledge. 
+* **Educate employees** about phishing and social engineering tactics. Password security is only as strong as how people use it. Train employees to recognize phishing emails, fake login pages, and other social engineering tactics designed to steal passwords. A well-informed team can act as the first line of defence against cyberattacks. 🛡️
+* **Use a password manager**. Password managers can get some getting used to but they are great tools for generating, storing, and managing strong and unique passwords for each account. 
+
+## Common Misconceptions About Password Security
+Here are some myths about password security:
+* **"Long passwords are always secure"** – It’s a common misconception that long passwords are safe. It’s important to note that passwords need to be randomized and include a combination of characters, numbers, and special characters in order to be more secure.
+* **“Password strength is not important if I reset them often”** - When people reset their passwords, they tend to use a variation of their old ones. This still leaves you vulnerable to password cracking. Changing passwords often will only protect accounts if the new ones are strong and unique. 
+* **“I don’t need MFA if my password is strong”** - While much harder to do, strong passwords can still be compromised. It’s important to implement MFA when possible. 
+* **"Biometrics replace passwords"** –Passwords are still essential. People don’t always trust providing their biometrics like facial recognition or fingerprints. Also, not all devices support biometric authentication, for example logging to your social media account from your web browser on your computer.
+
+## Tools to Strengthen Password Security
+To strengthen password security, one of the most effective tools to use is a password manager. They generate and store strong and unique passwords for each account, making managing them seamless. Popular choices of password managers are 1Password, Bitwarden, Keeper, Dashlane, and Nordpass. You can read more about each in [CNET’s “Best Password Manager 2025”](https://www.cnet.com/tech/services-and-software/best-password-manager/) review. 
+
+Additionally there are tools to check if your information has been leaked, like Have I Been Pwned and Google’s Password Checkup. Password managers also have integrated tools that check and inform you if your passwords have been compromised.
+
+## Conclusion
+Password security is one of the most critical aspects of safeguarding personal information and organizational data. Understanding how passwords can be cracked (hacked) and the techniques used by attackers is the first step in building a robust defense. 
+
+By adopting best practices like using strong and unique passwords, enabling MFA, and leveraging tools like password managers, you can significantly reduce your exposure to password-related attacks. Ultimately, staying informed and proactive is key to ensuring the safety of your systems. 
 
 
