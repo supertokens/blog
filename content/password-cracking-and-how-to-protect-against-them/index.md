@@ -17,6 +17,8 @@ Password cracking can be done manually by guessing and typing passwords or autom
 
 Let’s explore some common techniques these supervillains use to crack your passwords. 🦹
 
+![alt text](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDRiN2NhdTlmbjZmb3E1MDVwaWFzY2ZvaDEyeDIza2ozaTkwdGVvbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/w6TZfG2ab2w7hP241a/giphy.gif)
+
 ## Common Password Cracking Techniques 🔍
 
 ### Guessing 🤔
