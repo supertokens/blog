@@ -73,4 +73,33 @@ Types of phishing attacks:
 
 ## Modern Security Measures to Prevent Password Cracking 🛡️
 
+### Strong Password Policies 🔑
+Almost all of the password cracking techniques covered can be prevented by a strong password. What is a strong password then? 
+
+According to [America’s Cyber Defense Agency](https://www.cisa.gov/secure-our-world/use-strong-passwords), a strong password is long, random, and unique with a password manager.
+
+> Avoid simple passwords like pet names and birthdays. Usually easy to remember passwords tend to be weak. Weak passwords are very easy to crack.
+
+You can strengthen your passwords using these steps: 
+1. **Make them long**
+* At least 16 characters, but longer passwords are more secure.
+2. **Make them random**
+* Use a random string of lowercase and uppercase letters, numbers, and symbols.
+* You can create a memorable  phrase of 4-7 unrelated words called “passphrase”. Passphrases are often used in physical cryptowallets (example: **Caterpillar Orange Socks Running Ocean Beard Coffeemug**). You can use spaces to strengthen the passphrase, as shown in the example.  
+3. **Make them unique**
+* Use a different password for every account. 
+* Don't reuse your password, please. 🙏
+
+> You can test the strength of your password using tools like [**PasswordMonster**](https://www.passwordmonster.com/), to see how long a password may take to crack. As a precaution, don’t actually put your real password in. Your password is just for you, and you should never blindly trust websites. 
+
+### Multi-Factor Authentication (MFA) 💳
+**Multi-Factor Authentication (MFA)** is an authentication method that requires more than two forms of identity verification before allowing a user access to an account or network.
+
+Popular additional verifications are: 
+* One-time passcodes (OTPs)
+* Time-based one-time passcodes (TOTP)
+* Biometric verification
+* Push notifications
+
+
 
