@@ -20,21 +20,21 @@ toHeading: 3
 ## Understanding Authentication Providers and their APIs: Why They Matter
 First let’s go over a couple of definitions: 
 
-1. **Authentication Provider** are services that manage authentication for your organization, handling all the complex and boring details so you can focus on your product or services, the things you like. 🧑‍💻 
+1. **Authentication Provider** are services that manage authentication for your organization, handling all the complex and boring details so you can focus on your product or services, the things you like. 🧑‍💻 **Long story short, we handle all the login and security details so you don’t have to worry about it.** 
 
-Long story short, we handle all the login details so you don’t have to worry about it. 
-
-2. **Authentication APIs** are endpoints that enable developers to integrate authentication functionality into their applications.
+2. **Authentication APIs** are endpoints that enable developers to integrate authentication functionality into their applications without headaches. 
 
 The benefits of using authentication providers: 
-* Frees up your development time so you can focus on cooler stuff. 🦄
+* Frees up your development time so you can focus on cooler stuff, like your app. 🦄
 * You get to store less user information. 🎉
 * You don’t need to become a security expert to keep your app and users safe. 🔐
 
-By using reliable authentication providers and APIs, you can build seamless and safe user experiences that users trust. This not only enhances their satisfaction but also benefits your business, as users place a high value on security and are more likely to engage with platforms they feel protect their data.
+By using reliable authentication providers and APIs, you can build seamless and safe user experiences that users will trust. This not only enhances their experience with using your app, but also benefits your business, as users place a high value on security and are more likely to engage with platforms they feel protect their data. Security is only going to grow in importance, and apps that prioritize it will reap the rewards. 
+
+![alt text](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDJsZWpxeDJ0YnJwM29mdmZrN3pmcjljMHg1aWc3MHV6aWpsc2h1cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/SLPNUlr8LB3xYncMlY/giphy.gif)
 
 ## Key Features of Authentication Providers
-Let’s move on to some key features of Authentication Providers, to give you an idea of what they can do for you. 
+Let’s move on to some key features of Authentication Providers, to give you an idea of what they can do for you. Below we will explore the different ways Authentication Providers allow you to authenticate your users, so you can choose which one works best for you. 
 
 ### 🪄Magic Links
 **Magic links** replace traditional username/password authentication by sending an email, containing a one-time use URL link,  to the user for authentication. Once the link is clicked, an access token is sent to the application to authenticate the user. 
