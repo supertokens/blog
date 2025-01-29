@@ -107,19 +107,19 @@ If you want to dive deeper into OAuth 2.0, including how it differs from OAuth, 
 URLs on the authentication provider's server that your application can interact with to initiate the user login process, verify credentials, and receive authentication tokens. They essentially act as the gateway to authenticate users against the provider's system. 
 
 ### Improved Security
-Authentication providers make it their mission to provide safety for users. They keep up with security compliance, constantly build new safety features, and overall make it their goal to build a secure login process. 
+Authentication providers make it their mission to provide safety for users. They keep up with security compliance, constantly build new safety features, and overall make it their goal to build a secure login process. They provide built in protections against common cyber attacks, like brute force attacks or credential stuffing.
 
 ### Powerful Authentication Features 
-You have the choice between different authentication methods like Multi-Factor Authentication (including 2FA), Passwordless Authentication, Social Logins, and much  more including the ability to support multi-tenancy. You don't have to do it all yourself. 
+You have the choice between different authentication methods like multi-factor authentication (including 2FA), passwordless authentication, social logins like logging in with Google or GitHub, and much  more including the ability to support multi-tenancy. You don't have to do it all yourself. 
 
 ### Fraud and Identity Theft Prevention 
-Authentication providers, like SuperTokens, have robust features that prevent fraud and identity theft prevention, so you don't have to stress about it. 
+Authentication providers, like SuperTokens, have robust features that prevent fraud and identity theft prevention, so you don't have to stress about it.
 
 ## How SuperTokens Simplifies Authentication Integration
 
 Learn how SuperTokens simplifies authentication integration and gives you exactly what you want!
 
-The functionalities that SuperTokens provides are bundled up together and called Recipes. 🍝
+The functionalities that SuperTokens provides are bundled up together and called **Recipes**. 🍝
 
 Here is an overview of SuperTokens’ authentication recipes: 
 
