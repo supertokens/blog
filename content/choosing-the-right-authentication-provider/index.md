@@ -40,7 +40,7 @@ Let’s move on to some key features of Authentication Providers, to give you an
 **Magic links** replace traditional username/password authentication by sending an email, containing a one-time use URL link,  to the user for authentication. Once the link is clicked, an access token is sent to the application to authenticate the user. 
 
 ### 🚫 Passwordless Authentication 
-[**Passwordless**](https://supertokens.com/blog/what-is-passwordless-authentication) authentication verifies users without the need for traditional passwords. It streamlines the authentication experience and increases security. This could be through sending a one-time password (OTP) or a magic link through an email or phone number. 
+[**Passwordless**](https://supertokens.com/blog/what-is-passwordless-authentication) authentication verifies users without the need for traditional passwords. It streamlines the authentication experience and increases security. This could be through sending a one-time password (OTP) or a magic link through an email or phone number. No passwords = no passwords to steal! 😎
 
 ### 🔐 Single Sign-On (SSO) 
 **Single Sign-On (SSO)** allows users to access multiple related apps with one set of credentials, like using a Gmail login to access Google Drive and Calendar. It reduces password fatigue and is commonly used in enterprises, simplifying credential management for employees who need access to many apps.
@@ -80,13 +80,15 @@ The general flow of an API driven authentication is as follows: when a user logs
 
 <img src="./api-driven-auth-flow.png" alt="API-Driven Authentication Flow chart" width="800"/>
 
+Authentication providers focus on security, which includes providing you and your users with secure session management. 
+
 ### Secure Session Management 
 
 **Session management** secures user identities and data while enabling seamless navigation across a web app. 
 
-When a user makes an initial request, the server generates a token (a random string identifying the user) which is then destroyed when the session ends.
+When a user makes an initial request, the server generates a token (a random string identifying the user) which is then destroyed when the session ends. 
 
-Tokens include **short-lived access tokens** for resource access and **long-lived refresh tokens** for obtaining new access tokens without re-authentication.
+> Tokens include **short-lived access tokens** for resource access and **long-lived refresh tokens** for obtaining new access tokens without re-authentication.
 
 ### What is the Role of OAuth 2.0 in API Authentication?
 
@@ -103,6 +105,15 @@ If you want to dive deeper into OAuth 2.0, including how it differs from OAuth, 
 
 ### Endpoints to make integration fast and easy
 URLs on the authentication provider's server that your application can interact with to initiate the user login process, verify credentials, and receive authentication tokens. They essentially act as the gateway to authenticate users against the provider's system. 
+
+### Improved Security
+Authentication providers make it their mission to provide safety for users. They keep up with security compliance, constantly build new safety features, and overall make it their goal to build a secure login process. 
+
+### Powerful Authentication Features 
+You have the choice between different authentication methods like Multi-Factor Authentication (including 2FA), Passwordless Authentication, Social Logins, and much  more including the ability to support multi-tenancy. You don't have to do it all yourself. 
+
+### Fraud and Identity Theft Prevention 
+Authentication providers, like SuperTokens, have robust features that prevent fraud and identity theft prevention, so you don't have to stress about it. 
 
 ## How SuperTokens Simplifies Authentication Integration
 
