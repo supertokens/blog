@@ -20,9 +20,9 @@ toHeading: 3
 ## Understanding Authentication Providers and their APIs: Why They Matter
 First let’s go over a couple of definitions: 
 
-1. **Authentication Provider** are services that manage authentication for your organization, handling all the complex and boring details so you can focus on your product or services, the things you like. 🧑‍💻 **Long story short, we handle all the login and security details so you don’t have to worry about it.** 
+1. **Authentication Providers** are services that manage authentication for your organization, handling all the complex and boring details so you can focus on your product or services, the things you like. 🧑‍💻 **Long story short, we handle all the login and security details so you don’t have to worry about it.** Some examples are Okta, AWS Cognito, Keycloak, and of course, SuperTokens. 
 
-2. **Authentication APIs** are endpoints that enable developers to integrate authentication functionality into their applications without headaches. 
+2. **Authentication APIs** are endpoints that enable developers to integrate authentication functionality into their applications without headaches. They manage all aspects of user identity. 
 
 The benefits of using authentication providers: 
 * Frees up your development time so you can focus on cooler stuff, like your app. 🦄
@@ -76,13 +76,17 @@ Clear roles and permissions enhance security, meet compliance needs, and provide
 * Grant secure access to applications. 🔑
 * Simplify auth implementation for developers while adhering to the best security practices. 💪
 * Provide endpoints for user authentication actions like login, signup, logout, and API access. 💻
+* Provide helpful error codes when something goes wrong so you can identify the problem more efficiently. 
+* Provide rate limiting so your APIs are not overused, or raise flags if they are used beyond the normal rate which can help detect unusual login behavior. 
 
 Let's look at how APIs fit into an Authentication Provider's ecosystem.
 
 ### API-Driven Authentication Flow
 When a user logs in, the application sends their credentials to the authentication API. If the credentials are valid, the API generates tokens (such as access and refresh tokens) that the application uses to authenticate future requests.
 
-<img src="./api-driven-auth-flow.png" alt="API-Driven Authentication Flow chart" width="800"/>
+<!-- <img src="./api-driven-auth-flow.png" alt="API-Driven Authentication Flow chart" width="800"/> -->
+
+<img src="./api-auth-flow.svg"/> 
 
 ### Secure Session Management 
 
@@ -102,6 +106,9 @@ For a deeper dive into OAuth 2.0 and how it differs from traditional authenticat
 * [How The Heck Does OAuth Work?](https://supertokens.com/blog/how-does-oauth-work)
 
 * [What is OAuth and It's Importance in a Secure Web](https://supertokens.com/blog/oauth)
+
+## Security in Authentication APIs
+
 
 ## Benefits of Using Authentication Providers
 
@@ -176,7 +183,7 @@ In addition to authentication recipes **SuperTokens** also provides:
 
 ## Conclusion
 
-By leveraging a powerful authentication provider, you can enhance security, improve user trust, and reduce the complexity of managing authentication yourself. Prioritizing security now will set your application up for long-term success! 🚀
+By leveraging a powerful authentication provider, you can enhance security, improve user trust, and reduce the complexity of managing authentication yourself. Prioritizing security now will set your application up for long-term success! Leave security and login to authentication providers so you can focus on building the next great thing! 🚀
 
 
 
