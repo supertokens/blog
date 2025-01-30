@@ -18,18 +18,27 @@ tight: true
 toHeading: 3
 ```
 ## Understanding Authentication Providers and their APIs: Why They Matter
-First let’s go over a couple of definitions: 
+Let's define core concepts: 
 
-1. **Authentication Providers** are services that manage authentication for your organization, handling all the complex and boring details so you can focus on your product or services, the things you like. 🧑‍💻 **Long story short, we handle all the login and security details so you don’t have to worry about it.** Some examples are Okta, AWS Cognito, Keycloak, and of course, SuperTokens. 
+### What is an Authentication Provider?
+An **authentication provider** is a service that manages user authentication, handling all the complex security details so you can focus on building your product. 🧑‍💻 Instead of implementing authentication from scratch, you can use a provider to manage login, identity verification, and security.
 
-2. **Authentication APIs** are endpoints that enable developers to integrate authentication functionality into their applications without headaches. They manage all aspects of user identity. 
+Popular authentication providers include:
+* Okta
+* AWS Cognito
+* Keycloak
+* SuperTokens
 
-The benefits of using authentication providers: 
-* Frees up your development time so you can focus on cooler stuff, like your app. 🦄
-* You get to store less user information. 🎉
-* You don’t need to become a security expert to keep your app and users safe. 🔐
+### What is an Authentication API?
+An **authentication API** provides endpoints that developers can use to integrate authentication into their applications. These APIs handle user authentication and identity management without requiring developers to build everything from scratch.
 
-By using reliable authentication providers and APIs, you can build seamless and safe user experiences that users will trust. This not only enhances their experience with using your app, but also benefits your business, as users place a high value on security and are more likely to engage with platforms they feel protect their data. Security is only going to grow in importance, and apps that prioritize it will reap the rewards. 
+### Why Use An Authentication Provider? 
+* **Frees up your development time** so you can focus on cooler stuff, like your app. 🦄
+* **Reduces the amount of stored user data**, lowering security risks. 🎉
+* **Provides built-in security** without requiring you to be a security expert. 🔐
+* Improves user experience with seamless logins and integrations. 🧑‍💻
+
+By using a reliable authentication provider, you enhance security while simplifying authentication for both users and developers.
 
 ![alt text](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDJsZWpxeDJ0YnJwM29mdmZrN3pmcjljMHg1aWc3MHV6aWpsc2h1cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/SLPNUlr8LB3xYncMlY/giphy.gif)
 
@@ -46,12 +55,12 @@ Let’s move on to some key features of Authentication Providers, to give you an
 **Single Sign-On (SSO)** allows users to access multiple related apps with one set of credentials, like using a Gmail login to access Google Drive and Calendar. It reduces password fatigue and is commonly used in enterprises, simplifying credential management for employees who need access to many apps.
 
 ### 🔒 Multi-Factor Authentication (MFA)
-**Multi-Factor Authentication (MFA)** combines two or more authentication types:
-* **Knowledge**: Something the user knows (e.g., password).
-* **Possession**: Something the user has (e.g., phone).
-* **Inherence**: Something the user is (e.g., biometrics).
+MFA requires **two or more factors** to verify identity:
 
-For example, a user enters a password, then verifies with an SMS code or facial recognition. This extra layer boosts security against hackers.
+* **Something you know** (password)
+* **Something you have** (phone)
+* **Something you are** (biometrics)
+
 
 ### 🌐 Social Logins (OAuth, OpenID Connect)
 **Social logins** let users sign in using trusted accounts (e.g., Google, Facebook, GitHub). This reduces signup friction for users and simplifies authentication for developers, as sensitive passwords are handled by trusted providers. Protocols like **OAuth 2.0** and **OpenID Connect** secure the communication between apps. 
@@ -84,31 +93,59 @@ Let's look at how APIs fit into an Authentication Provider's ecosystem.
 ### API-Driven Authentication Flow
 When a user logs in, the application sends their credentials to the authentication API. If the credentials are valid, the API generates tokens (such as access and refresh tokens) that the application uses to authenticate future requests.
 
-<!-- <img src="./api-driven-auth-flow.png" alt="API-Driven Authentication Flow chart" width="800"/> -->
-
+</br>
 <img src="./api-auth-flow.svg"/> 
 
 ### Secure Session Management 
 
-**Session management** safeguards user identities and data while enabling seamless navigation across a web application. It ensures that authenticated users remain recognized throughout their session while protecting against unauthorized access.
+Session management ensures authenticated users remain recognized while protecting against unauthorized access. Tokens include:
 
-When a user makes an initial request, the server generates a token (a random string identifying the user) which is then destroyed when the session ends. 
-
-> Tokens include **short-lived access tokens** for resource access and **long-lived refresh tokens** for obtaining new access tokens without re-authentication.
+* **Access tokens** (short-lived, used for API requests)
+* **Refresh tokens** (longer-lived, used to generate new access tokens)
 
 ### What is the Role of OAuth 2.0 in API Authentication?
 
-**OAuth 2.0** is a protocol that enables third-party applications to act on a user's behalf, such as logging in or accessing data, without exposing the user’s actual credentials. Keeping credentials private is crucial for security!
+**OAuth 2.0** allows third-party apps to act on a user’s behalf without exposing credentials. You've likely encountered OAuth when logging in with Google or GitHub.
 
-You've likely encountered OAuth 2.0 when an application prompts you to log in using your Google or GitHub account. This method enhances security by preventing applications from directly accessing your password while still granting necessary permissions.
-
-For a deeper dive into OAuth 2.0 and how it differs from traditional authentication methods, check out these resources:
+For more details:
 * [How The Heck Does OAuth Work?](https://supertokens.com/blog/how-does-oauth-work)
 
 * [What is OAuth and It's Importance in a Secure Web](https://supertokens.com/blog/oauth)
 
-## Security in Authentication APIs
+## Common API Authentication Methods
 
+### HTTP Authentication 
+* The most basic API authentication method.
+* Sends credentials like username/password pairs in an `Authorization` header to the API server. 
+* Credentials are encoded using Base64. 
+* Only secure when used with **HTTPS**.
+
+> `Authorization` header: Used to provide authentication information, like a username/password or a token.
+
+</br>
+<img src="./http-api-auth.svg"/> 
+
+
+### API Key Authentication 
+* A unique **API key** grants access to services.
+* Keys can have different permission levels (e.g., read-only, full access).
+
+</br>
+<img src="./api-key-auth.svg"/>
+
+### JWT-Based Authentication
+* JWT (JSON Web Token) is a compact and stateless mechanism for API Authentication
+* Users authenticate once and send their JWT with each request.
+
+ </br>
+<img src="./jwt-authentication.svg"/>
+
+### OAuth 2.0
+* Grants third-party access **without sharing user credentials**.
+* Users approve access via an authorized server.
+
+</br>
+<img src="./oauth-auth.svg"/>
 
 ## Benefits of Using Authentication Providers
 
@@ -183,7 +220,16 @@ In addition to authentication recipes **SuperTokens** also provides:
 
 ## Conclusion
 
-By leveraging a powerful authentication provider, you can enhance security, improve user trust, and reduce the complexity of managing authentication yourself. Prioritizing security now will set your application up for long-term success! Leave security and login to authentication providers so you can focus on building the next great thing! 🚀
+By leveraging an authentication provider, you:
+* Enhance security 🔐
+* Improve user experience 🚀
+* Reduce development complexity 💡
+
+Prioritizing security now will set your application up for long-term success! Let authentication providers handle login security so you can focus on building something amazing. 🚀
+
+
+
+
 
 
 
