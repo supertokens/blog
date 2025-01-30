@@ -26,15 +26,22 @@ toHeading: 3
 
 ## Common Problems With Password Based Authentication 🤔
 Here are the most common password based authentication problems: 
-1. **Human error** – People choose weak passwords and weak passwords are easy to hack, compromising an app’s security. People choose weak passwords because they are easy to come up with and remember. When choosing a new password people have one goal in mind, getting access to the app they are signing up for. 
 
-2. **Password reuse** – People tend to reuse the same passwords for other apps they sign up for. Using the same password on multiple platforms significantly increases the chance of attack if one site is compromised. 
+### Human error
+People choose weak passwords and weak passwords are easy to hack, compromising an app’s security. People choose weak passwords because they are easy to come up with and remember. When choosing a new password people have one goal in mind, getting access to the app they are signing up for. 
 
-3. **Phishing attacks** – Phishing attacks happen when users are tricked into revealing their passwords through deceptive emails or websites. 
+### Password Reuse
 
-4. **Credential stuffing** – Credential stuffing happens when attackers use leaked passwords from other data breaches to attempt logins on various apps, knowing that people reuse passwords. 
+People tend to reuse the same passwords for other apps they sign up for. Using the same password on multiple platforms significantly increases the chance of attack if one site is compromised. 
 
-5. **Brute-force attacks** – Brute-force attacks happen when attackers try numerous password combinations until they find the correct one. Think trying to figure out your crush's password hoping it's your name. 🤭
+### Phishing attacks
+Phishing attacks happen when users are tricked into revealing their passwords through deceptive emails or websites. 
+
+### Credential stuffing
+Credential stuffing happens when attackers use leaked passwords from other data breaches to attempt logins on various apps, knowing that people reuse passwords. 
+
+### Brute-force attacks
+Brute-force attacks happen when attackers try numerous password combinations until they find the correct one. Think trying to figure out your crush's password hoping it's your name. 🤭
 
 To make password based authentication stronger, users are encouraged to use password managers and long passwords with a combination of letters, numbers, and symbols (aka gibberish).
 
