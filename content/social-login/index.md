@@ -1,7 +1,7 @@
 ---
 title: "Simplify User Experience With Social Login"
 date: "2025-01-16"
-description: "Social login has become a popular choice for modern apps looking to streamline the user authentication process. In this blog, we’ll explore what social login is, how it works, its benefits and the challenges of implementing it"
+description: "Social login has become a popular choice for modern apps looking to streamline the user authentication process. In this blog, we'll explore what social login is, how it works, its benefits and the challenges of implementing it"
 cover: "social-login.png"
 category: "programming"
 author: "Nemi Shah"
@@ -14,7 +14,7 @@ toHeading: 3
 
 Social login has become a popular choice for modern apps looking to streamline the user authentication process. It allows users to log into applications using their existing accounts from platforms like Google, Facebook, or Apple, eliminating the need to create yet another username and password. This method not only simplifies login for users but also boosts engagement and reduces friction during onboarding.
 
-In this blog, we’ll explore what social login is, how it works, its benefits and drawbacks, and the challenges of implementing it. We’ll also discuss how tools like SuperTokens can help simplify the process, making it easier for product owners and startup founders to enhance their app’s user experience.
+In this blog, we'll explore what social login is, how it works, its benefits and drawbacks, and the challenges of implementing it. We'll also discuss how tools like SuperTokens can help simplify the process, making it easier for product owners and startup founders to enhance their app's user experience.
 
 ## What is Social Login?
 
@@ -56,37 +56,37 @@ The [official Oauth documentation](https://oauth.net/2/) covers a much more in d
 
 ### Google
 
-Google’s social login is widely used because of its extensive reach and robust security features. It supports OAuth 2.0 and OpenID Connect, making it a reliable option for authentication.
+Google's social login is widely used because of its extensive reach and robust security features. It supports OAuth 2.0 and OpenID Connect, making it a reliable option for authentication.
 
 Refer to their [official documentation](https://developers.google.com/identity/sign-in/web/sign-in) to learn more.
 
 ### Facebook
 
-Facebook’s login service provides access to a broad user base and allows apps to gather additional data like user interests and social connections (with user permission).
+Facebook's login service provides access to a broad user base and allows apps to gather additional data like user interests and social connections (with user permission).
 
 Refer to their [official documentation](https://developers.facebook.com/docs/facebook-login/) to learn more.
 
 ### Apple
 
-Apple’s “Sign in with Apple” is focused on privacy and security. It gives users the option to hide their email addresses and creates unique, app-specific IDs.
+Apple's “Sign in with Apple” is focused on privacy and security. It gives users the option to hide their email addresses and creates unique, app-specific IDs.
 
 Refer to their [official documentation](https://developer.apple.com/sign-in-with-apple/get-started/) to learn more.
 
-### Twitter
+### X (Formerly Twitter)
 
-Twitter’s social login is useful for apps targeting an audience that frequently engages with Twitter. It enables authentication along with access to basic profile information.
+X's social login is useful for apps targeting an audience that frequently engages with X. It enables authentication along with access to basic profile information.
 
 Refer to their [official documenation](https://docs.x.com/resources/fundamentals/authentication/guides/log-in-with-x) to learn more.
 
 ### LinkedIn
 
-LinkedIn’s social login is ideal for professional or job-related apps, as it allows access to a user’s professional profile data.
+LinkedIn's social login is ideal for professional or job-related apps, as it allows access to a user's professional profile data.
 
 Refer to their [official documentation](https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/sign-in-with-linkedin) to learn more.
 
 ## Benefits of Using Social Login
 
-- **Convenience**: Users don’t need to remember another set of credentials. They can log in with one click.
+- **Convenience**: Users don't need to remember another set of credentials. They can log in with one click.
 - **Faster Onboarding**: Eliminates the need for lengthy registration forms.
 - **Improved Security**: Reduces the risk of weak passwords and reusing credentials across multiple apps.
 - **Higher Conversion Rates**: Simplified login processes increase the likelihood of users completing onboarding.
@@ -108,7 +108,7 @@ Building social login from scratch involves several steps and nuances:
 
 ## How SuperTokens Simplifies Social Login
 
-SuperTokens offers a comprehensive solution to the complexities of implementing social login. Here’s how it helps:
+SuperTokens offers a comprehensive solution to the complexities of implementing social login. Here's how it helps:
 
 - Pre-Built UI: Ready-to-use components for adding social login options in your app. These include components that handle redirecting to and from social providers, token exchange, verifying emails etc
 - Simplified Integration: SuperTokens provides ready to use APIs to allow building social login with custom UI quickly and easily.
