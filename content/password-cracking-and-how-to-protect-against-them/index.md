@@ -28,7 +28,7 @@ Password cracking can be done manually by guessing and typing passwords or autom
 
 Let’s explore some common techniques these supervillains use to crack your passwords. 🦹
 
-![alt text](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDRiN2NhdTlmbjZmb3E1MDVwaWFzY2ZvaDEyeDIza2ozaTkwdGVvbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/w6TZfG2ab2w7hP241a/giphy.gif)
+![A cartoon penguin wearing sunglasses, typing intensely on a keyboard like a hacker, with a dramatic vibe](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDRiN2NhdTlmbjZmb3E1MDVwaWFzY2ZvaDEyeDIza2ozaTkwdGVvbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/w6TZfG2ab2w7hP241a/giphy.gif)
 
 ## Common Password Cracking Techniques 🔍
 
@@ -55,7 +55,7 @@ A **rainbow attack** is when an attacker uses a precomputed table of hashes to c
 
 They are faster than brute force attacks because they require less computational power than brute force attacks. 
 
-> Note: It’s called a rainbow table because it contains the entire spectrum of possibilities. It ends up looking like a rainbow. 
+> **Note:** It’s called a rainbow table because it contains the entire spectrum of possibilities. It ends up looking like a rainbow. 
 
 ### Phishing Attacks 🎣 
 A phishing attack is when an attacker uses social engineering (deception to appear like a legitimate source) via email to aim the victims to divulge their passwords (or other sensitive information).
