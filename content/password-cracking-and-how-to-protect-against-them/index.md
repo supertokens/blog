@@ -39,6 +39,14 @@ A **brute force attack** is when an attacker tries every possible combination of
 
 While brute force attacks test all possibilities, guessing is a simpler but sometimes very effective approach because people are not great at choosing secure passwords (although that is improving so take that cybervillains!)
 
+### Brute Force Attack Example 🔓
+A hacker may want to break into an online banking account. They will use an automated tool that tries every possible combination of characters (e.g., `aa`, `ab`, `ac` ... or `123456`, `123457`, and so on). If your password is weak, like `password123`, the tool can crack it within seconds. 
+
+### Guessing Attack Example 🤔
+A hacker may target your social media account. They may know you love your dog, Max, and that he was born in 2017. So they will try passwords like `Max2017`, `ilovemax`, `Max17!`. 
+
+
+
 ### Dictionary Attacks 📚
 A **dictionary attack** is when an attacker uses a list of words to try and guess a password. They are a type of brute-force attack, which is when an attacker tries every possible password until they find the correct one. 
 
