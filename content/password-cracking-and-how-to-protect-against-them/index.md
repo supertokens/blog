@@ -15,7 +15,7 @@ From brute force attacks to phishing scams and malware, these cybervillains have
 
 Let's dive into the world of password cracking! 🕵️‍♂️💻
 
-```
+```toc
 tight: true
 toHeading: 3
 ```
