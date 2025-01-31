@@ -22,28 +22,29 @@ toHeading: 3
 
 ## Understanding Password Cracking 🧑‍💻
 
-**Password cracking** is the process of using tools, techniques, or software to try and uncover a password. It usually involves guessing or testing possible passwords, often by decrypting or exploiting weak password hashes. While password cracking can be used for legitimate purposes, like helping users recover lost passwords, it’s often used by malicious hackers that want to steal your password and gain unauthorized access to accounts. 
+**Password cracking** is the process of using tools, techniques, or software to try and uncover a password. 
 
-Password cracking can be done manually by guessing and typing passwords or automatically using software that runs algorithms to figure out the password.
+It usually involves guessing or testing possible passwords, often by decrypting or exploiting weak password hashes. While password cracking can be used for legitimate purposes, like helping users recover lost passwords, it’s often used by malicious hackers that want to steal your password and gain unauthorized access to accounts. 
 
-Let’s explore some common techniques these supervillains use to crack your passwords. 🦹
+Password cracking can be done manually by guessing and typing random passwords or automatically using software that runs algorithms to figure out the password by trying out many possible combinations.
+
+Let’s explore some common techniques these cybervillains use to crack your passwords so we know how to get ahead of them. 🦹
 
 ![A cartoon penguin wearing sunglasses, typing intensely on a keyboard like a hacker, with a dramatic vibe](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDRiN2NhdTlmbjZmb3E1MDVwaWFzY2ZvaDEyeDIza2ozaTkwdGVvbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/w6TZfG2ab2w7hP241a/giphy.gif)
 
 ## Common Password Cracking Techniques 🔍
 
-### Guessing 🤔
-An attacker may try to **guess** a password to gain access to a system. It’s probably the simplest way (granted can be difficult but not impossible) to figure out a password. This usually works better if a password is something personal like a loved one’s name or birthday. 
+### Brute Force & Guessing Attacks 💥
+A **brute force attack** is when an attacker tries every possible combination of character to guess a password. In contrast, guessing relies on manually attempting likely passwords, often personal information like pet names or birthdays. 
+
+While brute force attacks test all possibilities, guessing is a simpler but sometimes very effective approach because people are not great at choosing secure passwords (although that is improving so take that cybervillains!)
 
 ### Dictionary Attacks 📚
 A **dictionary attack** is when an attacker uses a list of words to try and guess a password. They are a type of brute-force attack, which is when an attacker tries every possible password until they find the correct one. 
 
-Dictionary attacks exploit people’s tendency to use and reuse simple and predictable passwords. 
+Dictionary attacks exploit people’s tendency to use and reuse simple and predictable passwords.  
 
-### Brute Force Attacks 💥
-A **brute force attack** is when an attacker tries every possible combination of character to guess a password. 
-
-> **Note:** The difference between dictionary and brute force attacks is that dictionary attacks use a list of words to guess a password, while brute force attacks use a combination of characters. 
+> **Note:** The difference between dictionary and brute force attacks is that dictionary attacks use a list of words to guess a password, while brute force attacks use a combination of characters.
 
 ### Hybrid Attacks 📚+💥
 A **hybrid attack** is when an attacker uses a combination (hybrid) of dictionary attacks and brute-force attacks to cover even more ground to guess a password. 
