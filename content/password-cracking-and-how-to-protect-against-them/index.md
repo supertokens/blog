@@ -7,7 +7,18 @@ category: "featured"
 author: "Maria Shimkovska"
 ---
 
-Learn the most common password cracking techniques used by hackers and practical strategies to secure your accounts from such threats.
+You'd think your password is safe, right? After all, you added a capital letter, a number, an even an exclamation point at the end. So what could possibly go wrong? 
+
+Well, quite a lot. Hackers aren't just guessing birthdays and pet names anymore. They have entire toolkits dedicated to cracking passwords faster than you could say "forgot my password". You'd think they have something better to do, but here we are. 
+
+From brute force attacks to phishing scams and malware, these cybervillains have some pretty clever and sometimes very simple (but effective) ways to break into accounts. 
+
+Let's dive into the world of password cracking! 🕵️‍♂️💻
+
+```
+tight: true
+toHeading: 3
+```
 
 ## Understanding Password Cracking 🧑‍💻
 
