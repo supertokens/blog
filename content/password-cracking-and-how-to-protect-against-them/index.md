@@ -43,7 +43,7 @@ While brute force attacks test all possibilities, guessing is a simpler but some
 A hacker may want to break into an online banking account. They will use an automated tool that tries every possible combination of characters (e.g., `aa`, `ab`, `ac` ... or `123456`, `123457`, and so on). If your password is weak, like `password123`, the tool can crack it within seconds. 
 
 #### Guessing Attack Example 🤔
-A hacker may target your social media account. They may know you love your dog, Max, and that he was born in 2017. So they will try passwords like `Max2017`, `ilovemax`, `Max17!`. 
+A hacker may target your social media account. They may know you love your dog, Sherlock Bones, and that he was born in 2017. So they will try passwords like `SherlockBones2017`, `ilovesherlockbones`, `SherlockBone17!`. 
 
 #### Infamous Examples of Real World Brute Force Attacks
 * In 2014 Apple upped its iCloud security because of what is believed to have been a [brute force attack](https://www.tripwire.com/state-of-security/password-brute-force-attacks-threaten-millions-of-app-users) on its users, specifically celebrity accounts. 
