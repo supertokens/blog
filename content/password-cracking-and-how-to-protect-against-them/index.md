@@ -35,7 +35,7 @@ Let’s explore some common techniques these cybervillains use to crack your pas
 ## Common Password Cracking Techniques 🔍
 
 ### Brute Force & Guessing Attacks 💥
-A **brute force attack** is when an attacker tries every possible combination of character to guess a password. In contrast, guessing relies on manually attempting likely passwords, often personal information like pet names or birthdays. 
+A **brute force attack** is when an attacker tries every possible combination of character to guess a password. In contrast, **guessing** relies on manually attempting likely passwords, often personal information like pet names or birthdays. 
 
 While brute force attacks test all possibilities, guessing is a simpler but sometimes very effective approach because people are not great at choosing secure passwords (although that is improving so take that cybervillains!)
 
@@ -44,6 +44,17 @@ A hacker may want to break into an online banking account. They will use an auto
 
 #### Guessing Attack Example 🤔
 A hacker may target your social media account. They may know you love your dog, Max, and that he was born in 2017. So they will try passwords like `Max2017`, `ilovemax`, `Max17!`. 
+
+#### Infamous Examples of Real World Brute Force Attacks
+* In 2014 Apple upped its iCloud security because of what is believed to have been a [brute force attack](https://www.tripwire.com/state-of-security/password-brute-force-attacks-threaten-millions-of-app-users) on its users, specifically celebrity accounts. 
+* In 2021, T-Mobile discovered a [massive data breach](https://www.atg.wa.gov/news/news-releases/ag-ferguson-files-lawsuit-against-t-mobile-massive-data-breach) on their accounts, impacting more than 79 million consumers, because of weak passwords protecting accounts that held important user data. 
+
+
+#### Protecting Against Brute-Force & Guessing Attacks 
+✅ Use long and complex passwords with a mix of letters, numbers, and symbols. </br>
+✅ Enable 2-Factor Authentication (2FA)</br>
+✅ Avoid using personal information for your passwords.</br>
+✅ Use a password manager to generate and store strong passwords.</br>
 
 ### Dictionary Attacks 📚
 A **dictionary attack** is when an attacker uses a list of words to try and guess a password. They are a type of brute-force attack, which is when an attacker tries every possible password until they find the correct one. 
