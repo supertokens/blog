@@ -64,7 +64,7 @@ Dictionary attacks exploit people’s tendency to use and reuse simple and predi
 A hacker may want to break into a social media account. They will have a list of words to try, and then try a combination of those words. Unlike a brute force attack where the attacker will try every character combination like `password123`, `password124`, `password125`, in a dictionary attack they may try something like `mypassword`, `password`, `mybestpassword`, or `mysupersecretpassword`. They may also try to substitute some letters with alternative numbers like using `3` for `e` or using `@` for `a`. 
 
 #### Infamous Examples of Real World Dictionary Attacks 
-* 
+* In 2013 Adobe suffered a massive data breach that indicated it may have been a dictionary attack. Around 153 million user records were stolen, making it one of the biggest data breaches involving a software company. 
 
 #### Protecting Against Dictionary Attacks
 ✅ Use randomly generated passwords with a mix of letters, numbers, and symbols.</br>
