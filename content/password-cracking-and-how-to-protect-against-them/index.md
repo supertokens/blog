@@ -43,12 +43,11 @@ While brute force attacks test all possibilities, guessing is a simpler but some
 A hacker may want to break into an online banking account. They will use an automated tool that tries every possible combination of characters (e.g., `aa`, `ab`, `ac` ... or `123456`, `123457`, and so on). If your password is weak, like `password123`, the tool can crack it within seconds. 
 
 #### Guessing Attack Example 🤔
-A hacker may target your social media account. They may know you love your dog, Sherlock Bones, and that he was born in 2017. So they will try passwords like `SherlockBones2017`, `ilovesherlockbones`, `SherlockBone17!`. 
+A hacker may target your social media account. They may know you love your dog, Sherlock Bones, and that he was born in 2017. So they will try passwords like `SherlockBones2017`, `ilovesherlockbones`, `SherlockBones17!`. 
 
 #### Infamous Examples of Real World Brute Force Attacks
 * In 2014 Apple upped its iCloud security because of what is believed to have been a [brute force attack](https://www.tripwire.com/state-of-security/password-brute-force-attacks-threaten-millions-of-app-users) on its users, specifically celebrity accounts. 
 * In 2021, T-Mobile discovered a [massive data breach](https://www.atg.wa.gov/news/news-releases/ag-ferguson-files-lawsuit-against-t-mobile-massive-data-breach) on their accounts, impacting more than 79 million consumers, because of weak passwords protecting accounts that held important user data. 
-
 
 #### Protecting Against Brute-Force & Guessing Attacks 
 ✅ Use long and complex passwords with a mix of letters, numbers, and symbols. </br>
@@ -59,7 +58,17 @@ A hacker may target your social media account. They may know you love your dog, 
 ### Dictionary Attacks 📚
 A **dictionary attack** is when an attacker uses a list of words to try and guess a password. They are a type of brute-force attack, which is when an attacker tries every possible password until they find the correct one. 
 
-Dictionary attacks exploit people’s tendency to use and reuse simple and predictable passwords.  
+Dictionary attacks exploit people’s tendency to use and reuse simple and predictable passwords. A lot of dictionary attack word lists also include leaked passwords that people have used (and probably still do).
+
+#### Dictionary Attack Example 
+A hacker may want to break into a social media account. They will have a list of words to try, and then try a combination of those words. Unlike a brute force attack where the attacker will try every character combination like `password123`, `password124`, `password125`, in a dictionary attack they may try something like `mypassword`, `password`, `mybestpassword`, or `mysupersecretpassword`. They may also try to substitute some letters with alternative numbers like using `3` for `e` or using `@` for `a`. 
+
+#### Infamous Examples of Real World Dictionary Attacks 
+* 
+
+#### Protecting Against Dictionary Attacks
+✅ Use randomly generated passwords with a mix of letters, numbers, and symbols.</br>
+✅ Enable 2-Factor Authentication </br>
 
 > **Note:** The difference between dictionary and brute force attacks is that dictionary attacks use a list of words to guess a password, while brute force attacks use a combination of characters.
 
@@ -189,12 +198,6 @@ SuperTokens integrates with MFA to provide an additional layer of security. By r
 
 ### Session Management
 SuperTokens securely manages session tokens to protect against threats like session hijacking and fixation. By implementing measures such as access token blacklisting, anti-csrf (cross-site request forgery), token rotation, and cookie consent, it ensures that user sessions remain secure. This prevents attackers from stealing or reusing tokens to gain unauthorized access. 🔒
-
-## Best Practices for Password Security
-* **Avoid reusing passwords** across multiple platforms. Always use a unique password for each account.
-* **Change passwords** regularly. Regularly updating passwords reduces the chances of unauthorized access if a password has been compromised without a user’s knowledge. 
-* **Educate employees** about phishing and social engineering tactics. Password security is only as strong as how people use it. Train employees to recognize phishing emails, fake login pages, and other social engineering tactics designed to steal passwords. A well-informed team can act as the first line of defence against cyberattacks. 🛡️
-* **Use a password manager**. Password managers can get some getting used to but they are great tools for generating, storing, and managing strong and unique passwords for each account. 
 
 ## Common Misconceptions About Password Security
 Here are some myths about password security:
