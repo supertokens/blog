@@ -143,14 +143,16 @@ Credential stuffing attacks are particularly dangerous because of the volume of 
 ✅ Embrace 2-Factor Authentication.</br>
 
 ### Shoulder Surfing and Visual Hacking 👀
-**Shoulder surfing (visual hacking)** is a type of social engineering tactic an attacker uses where they literally look over someone’s shoulder to steal their personal information, like their passwords. It’s why grocery store workers tend to look away when you’re entering your credit card pin when you pay. It’s important to pay attention to your surroundings when entering your password and you’re in a public space.
+**Shoulder surfing (visual hacking)** is a type of social engineering tactic an attacker uses where they literally look over someone’s shoulder to steal their personal information, like their passwords. It’s why grocery store workers tend to look away when you’re entering your credit card pin when you pay. While it may sound like something out of a cartoon, shoulder surfing can also be done from a longer distance using binoculars. 
 
 #### Infamous Examples of Real World Shoulder Surfing Attacks 
-* 
+* In 2018, a [Los Angeles man got convicted](https://www.justice.gov/usao-cdca/pr/la-man-convicted-atm-shoulder-surfing-allowed-him-withdraw-cash-after-bank-customers) of 3 counts of aggravated identity theft for using stolen PINs to make fraudulent ATM withdrawals from elderly Bank of America customers. The man used a **"shoulder surfing"** technique, secretly watching victims enter their PINs and then withdrawing cash when they left without ending their sessions. 
 
 #### Protecting Against Shoulder Surfing Attacks
-✅ </br>
-✅ </br>
+✅ Pay attention to your surroundings when you enter sensitive information like passwords.</br>
+✅ Make sure you have stars(*****) enabled when entering a password and you are in a public place. </br>
+✅ Don't talk about confidential information on the phone in public spaces. </br>
+✅ Lock your devices when you leave them. </br>
 
 ## Modern Security Measures to Prevent Password Cracking 🛡️
 Don't lose hope. While cybervillains are clever and sneaky, so are we. They can attack and we can protect. Here are some ways you can stay several steps ahead of any cyber criminal out there. 
