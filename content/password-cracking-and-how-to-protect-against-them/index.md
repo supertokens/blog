@@ -132,12 +132,15 @@ Credential stuffing attacks are particularly dangerous because of the volume of 
 **Screen scraping** is a type of malware which takes screenshots of an infected computer, enabling attackers to gain unauthorized access without using password cracking tools.  
 
 #### Infamous Examples of Real World Malware Attacks 
-* 
+* Researchers at [HYAS Labs created BlackMamba](https://www.darkreading.com/endpoint-security/ai-blackmamba-keylogging-edr-security), a smart proof-of-concept malware that changes its code each time it runs, making it invisible to most security systems. It works like a keylogger, stealing sensitive information. Once the data is stolen, attackers can use common and trusted collaboration apps like Microsoft Teams to send the stolen information. While not an incident yet, it shows how AI can have the ability to create pretty scary malware. 
+* In 2024, hackers from ShinyHunters [stole data from over 500 million](https://www.keepersecurity.com/blog/2024/08/09/the-most-recent-malware-attacks-on-companies-in-2024/) Ticketmaster customers, including emails, phone numbers, and credit card details. They demanded a $500,000 ransom instead of selling the data. Ticketmaster’s parent company, Live Nation, investigated the breach, alerted affected users, and offered a free 12-month identity monitoring service.
 
 #### Protecting Against Malware Attacks
 ✅ Keep notice if your browser is more sluggish than normal. A sluggish browser could be a sign of malware. Another signs to keep looking for are if your cursor is disappearing, if there is lag in mouse movement, or delayed keystrokes between typing.</br>
 ✅ Make sure you have a good antivirus program.</br>
+✅ Be wary of opening unexpected attachments.</br>
 ✅ Malware can be installed via your hardware too so make sure your computers are in a safe space. Don't leave them unattended in public.</br>
+✅ Embrace 2-Factor Authentication.</br>
 
 ### Shoulder Surfing and Visual Hacking 👀
 **Shoulder surfing (visual hacking)** is a type of social engineering tactic an attacker uses where they literally look over someone’s shoulder to steal their personal information, like their passwords. It’s why grocery store workers tend to look away when you’re entering your credit card pin when you pay. It’s important to pay attention to your surroundings when entering your password and you’re in a public space.
