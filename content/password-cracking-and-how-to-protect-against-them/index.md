@@ -86,7 +86,7 @@ A **rainbow attack** is a type of cyber attack where our cybervillains compare t
 > **Note:** It’s called a rainbow table because it contains the entire spectrum of possibilities. It ends up looking like a rainbow. 
 
 #### Infamous Examples of Real World Rainbow Attacks 
-* In 2012, hackers infiltrated LinkedIn and stole over 110 million hashed passwords. The main reason why the breach was considered unsafe for users despite the passwords being hashed was because the encryptions was weak. 
+* In 2012, hackers infiltrated LinkedIn and stole over 110 million hashed passwords. The main reason why the breach was considered unsafe for users despite the passwords being hashed was because the encryptions were weak. 
 
 #### Protecting Against Rainbow Table Attacks
 ✅ In addition to hashing passwords, make sure they are salted as well. A salt is a random string of data added before the hashing process which results in different hashes even if the passwords are the same in plaintext. </br>
@@ -111,7 +111,18 @@ Types of phishing attacks:
 ✅ Don't share your passwords with people. They are yours to keep. It's between you and your password manager. </br>
 
 ### Credential Stuffing 🛠
-**Credential stuffing** is when an attacker uses a list of leaked passwords (typically from data breaches) to try and gain access to other apps. They rely on the knowledge that users reuse their passwords, so they may have used those passwords on other apps. Sadly, they’re right. We do reuse our passwords. 
+**Credential stuffing** is when an attacker uses a list of leaked passwords (typically from data breaches) to try and gain access to other apps the users may be signed up for. Attackers rely on the knowledge that users reuse their passwords, so they may have used those passwords on other apps. Sadly, they’re right. We do reuse our passwords.
+
+Credential stuffing attacks are particularly dangerous because of the volume of data breaches. 
+
+#### Infamous Examples of Real World Credential Stuffing Attacks 
+* In late 2016, hackers accessed Uber's private GitHub repository using compromised employee credentials and found AWS keys that allowed them to steal data from millions of users and drivers. 
+
+#### Protecting Against Credential Stuffing Attacks
+✅ Don't reuse passwords. Use unique passwords for each account. </br>
+✅ Enable 2-factor Authentication. </br>
+✅ Enforce password changes. </br>
+
 
 ### Malware (Keylogging, Screen Scraping) ⌨️ 🖥️
 **Malware** is just any computer program that is built for unethical purposes, like keylogging or screen scraping.
@@ -120,10 +131,25 @@ Types of phishing attacks:
 
 **Screen scraping** is a type of malware which takes screenshots of an infected computer, enabling attackers to gain unauthorized access without using password cracking tools.  
 
+#### Infamous Examples of Real World Malware Attacks 
+* 
+
+#### Protecting Against Malware Attacks
+✅ </br>
+✅ </br>
+
 ### Shoulder Surfing and Visual Hacking 👀
 **Shoulder surfing (visual hacking)** is a type of social engineering tactic an attacker uses where they literally look over someone’s shoulder to steal their personal information, like their passwords. It’s why grocery store workers tend to look away when you’re entering your credit card pin when you pay. It’s important to pay attention to your surroundings when entering your password and you’re in a public space.
 
+#### Infamous Examples of Real World Shoulder Surfing Attacks 
+* 
+
+#### Protecting Against Shoulder Surfing Attacks
+✅ </br>
+✅ </br>
+
 ## Modern Security Measures to Prevent Password Cracking 🛡️
+Don't lose hope. While cybervillains are clever and sneaky, so are we. They can attack and we can protect. Here are some ways you can stay several steps ahead of any cyber criminal out there. 
 
 ### Strong Password Policies 🔑
 Almost all of the password cracking techniques covered can be prevented by a strong password. What is a strong password then? 
