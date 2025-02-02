@@ -54,7 +54,8 @@ In this scenario, stealing your password is all it takes for an attacker to acce
 
 **With 2FA (OTP Layer):**
 
-Attacker → Your Password → **Your OTP** → Your Account 💻
+</br>
+<img src="./otp_layer.svg"/>
 
 Adding OTPs creates an extra layer of security. But as defenses improve, hackers evolve, creating tools like OTP bots to bypass these safeguards.
 
