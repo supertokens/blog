@@ -188,7 +188,6 @@ Popular additional verifications are:
 > MFA can often be confused with 2FA (Two-Factor Authentication), because they are similar. 2FA can be considered a type of MFA, requiring just two verification methods instead of one. If you want to read more about the differences between them we have an [article](https://supertokens.com/blog/mfa-best-practices) covering that. 
 
 ### Password Managers 🗝️
-
 Remembering strong passwords is not possible. Especially since you need a different one for every account you have. 🤯  
 
 That’s why you can use a **password manager**, like 1Password or LastPass, to store them. A password manager is an app on your phone or computer that stores your passwords for you in an encrypted vault.
@@ -211,7 +210,6 @@ Another benefit that password managers provide is that they can generate random 
 In all of these cases you need to inform the user, whether or not the accounts have actually been hacked. If the user is in a new location and they are logging in for the first time, the alert may be triggered and you may inform them. They can simply ignore the alert if they are the right person. 
 
 ### Monitoring Your GitHub For Leaked Passwords 🥸
-
 Ok, so people make mistakes and sometimes accidents happen. It’s not unheard of for developers to sometimes push sensitive information to GitHub and not notice. Monitoring your repositories for sensitive information will help mitigate that by changing the passwords before they get hacked. 
 
 ### Pen Testing 🖋️💻
@@ -220,11 +218,9 @@ Ok, so people make mistakes and sometimes accidents happen. It’s not unheard o
 Pen testers are hired to check for password vulnerabilities where the testers will employ the same tactics hackers would. They would then report to the company and provide them with a detailed report of their findings. 
 
 ### Consistent Training 👩‍🏫
-
 Even with all the tools and techniques we explored, at the end of the day the weakest link is people. **Training** employees and users on the importance of password hygiene is vital to prevent password cracking. Something as simple as leaving your laptop unattended can be a security risk. Which is why some companies require users to log out of their computers before leaving their desks.
 
 ## How SuperTokens Protects Against Password Cracking
-
 Phew! That was a lot. Let’s take a closer look at the tools and features SuperTokens provides to enhance account security: 
 
 ### Brute Force Attack Detection
@@ -243,10 +239,10 @@ Monitors the number of unique devices associated with a user account. This helps
 Identifies and remembers devices and requester details, even if they try to hide. This helps track the same device across multiple login attempts for better security.
 
 ### Multi-Factor Authentication (MFA)
-SuperTokens integrates with MFA to provide an additional layer of security. By requiring multiple forms of verification, such as email or SMS-based one-time passwords (OTPs), MFA ensures that even if a password is compromised, unauthorized access is still prevented. This approach strengthens account protection and makes it significantly harder for attackers to breach accounts. 💪
+**SuperTokens** integrates with MFA to provide an additional layer of security. By requiring multiple forms of verification, such as email or SMS-based one-time passwords (OTPs), MFA ensures that even if a password is compromised, unauthorized access is still prevented. This approach strengthens account protection and makes it significantly harder for attackers to breach accounts. 💪
 
 ### Session Management
-SuperTokens securely manages session tokens to protect against threats like session hijacking and fixation. By implementing measures such as access token blacklisting, anti-csrf (cross-site request forgery), token rotation, and cookie consent, it ensures that user sessions remain secure. This prevents attackers from stealing or reusing tokens to gain unauthorized access. 🔒
+**SuperTokens** securely manages session tokens to protect against threats like session hijacking and fixation. By implementing measures such as access token blacklisting, anti-csrf (cross-site request forgery), token rotation, and cookie consent, it ensures that user sessions remain secure. This prevents attackers from stealing or reusing tokens to gain unauthorized access. 🔒
 
 ## Common Misconceptions About Password Security
 Here are some myths about password security:
