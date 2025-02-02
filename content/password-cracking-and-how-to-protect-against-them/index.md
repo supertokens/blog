@@ -35,9 +35,9 @@ Let’s explore some common techniques these cybervillains use to crack your pas
 ## Common Password Cracking Techniques 🔍
 
 ### Brute Force & Guessing Attacks 💥
-> A **brute force attack** is when an attacker tries every possible combination of character to guess a password. In contrast, **guessing** relies on manually attempting likely passwords, often personal information like pet names or birthdays. 
-> 
-> While brute force attacks test all possibilities, guessing is a simpler but sometimes very effective approach because people are not great at choosing secure passwords (although that is improving so take that cybervillains!)
+A **brute force attack** is when an attacker tries every possible combination of character to guess a password. In contrast, **guessing** relies on manually attempting likely passwords, often personal information like pet names or birthdays. 
+
+While brute force attacks test all possibilities, guessing is a simpler but sometimes very effective approach because people are not great at choosing secure passwords (although that is improving so take that cybervillains!)
 
 #### Brute Force Attack Example 🔓
 A hacker may want to break into an online banking account. They will use an automated tool that tries every possible combination of characters (e.g., `aa`, `ab`, `ac` ... or `123456`, `123457`, and so on). If your password is weak, like `password123`, the tool can crack it within seconds.
@@ -56,9 +56,9 @@ A hacker may target your social media account. They may know you love your dog, 
 ✅ Use a password manager to generate and store strong passwords.</br>
 
 ### Dictionary Attacks 📚
-> A **dictionary attack** is when an attacker uses a list of words to try and guess a password. They are a type of brute-force attack, which is when an attacker tries every possible password until they find the correct one. 
-> 
-> Dictionary attacks exploit people’s tendency to use and reuse simple and predictable passwords. A lot of dictionary attack word lists also include leaked passwords that people have used (and probably still do).
+A **dictionary attack** is when an attacker uses a list of words to try and guess a password. They are a type of brute-force attack, which is when an attacker tries every possible password until they find the correct one. 
+
+Dictionary attacks exploit people’s tendency to use and reuse simple and predictable passwords. A lot of dictionary attack word lists also include leaked passwords that people have used (and probably still do).
 
 #### Dictionary Attack Example 
 A hacker may want to break into a social media account. They will have a list of words to try, and then try a combination of those words. Unlike a brute force attack where the attacker will try every character combination like `password123`, `password124`, `password125`, in a dictionary attack they may try something like `mypassword`, `password`, `mybestpassword`, or `mysupersecretpassword`. They may also try to substitute some letters with alternative numbers like using `3` for `e` or using `@` for `a`. 
@@ -70,17 +70,19 @@ A hacker may want to break into a social media account. They will have a list of
 ✅ Use randomly generated passwords with a mix of letters, numbers, and symbols.</br>
 ✅ Enable 2-Factor Authentication </br>
 
+> **Note:** The difference between dictionary and brute force attacks is that dictionary attacks use a list of words to guess a password, while brute force attacks use a combination of characters.
+
 ### Hybrid Attacks 📚+💥
-> A **hybrid attack** is when an attacker uses a combination (hybrid) of dictionary attacks and brute-force attacks to cover even more ground to guess a password. 
-> 
-> This is typically an effective attack because users often choose a predictable password, like a common word, and add some character or numbers to the end. 
+A **hybrid attack** is when an attacker uses a combination (hybrid) of dictionary attacks and brute-force attacks to cover even more ground to guess a password. 
+
+This is typically an effective attack because users often choose a predictable password, like a common word, and add some character or numbers to the end. 
 
 #### Protecting Against Hybrid Attacks
 ✅ Use randomly generated and long passwords with a combination of letters, numbers, and symbols. </br>
 
 ### Rainbow Table Attacks 🌈
-> A **rainbow attack** is a type of cyber attack where our cybervillains compare the hashes they stole to precomputed hashes they have from a table. This lets them reconstruct the original password and find out what it is in plaintext. The plaintext password is then used to gain unauthorized access to an account. They are faster than brute force attacks because they require less computational power than brute force attacks. 
-> 
+A **rainbow attack** is a type of cyber attack where our cybervillains compare the hashes they stole to precomputed hashes they have from a table. This lets them reconstruct the original password and find out what it is in plaintext. The plaintext password is then used to gain unauthorized access to an account. They are faster than brute force attacks because they require less computational power than brute force attacks. 
+
 > **Note:** It’s called a rainbow table because it contains the entire spectrum of possibilities. It ends up looking like a rainbow. 
 
 #### Infamous Examples of Real World Rainbow Attacks 
@@ -92,7 +94,7 @@ A hacker may want to break into a social media account. They will have a list of
 ✅ Change your passwords somewhat regularly (you can decide what regular is to you, but make sure you change them up). </br>
 
 ### Phishing Attacks 🎣 
-> A **phishing attack** is when an attacker uses social engineering (deception to appear like a legitimate source) via email to aim the victims to divulge their passwords (or other sensitive information).
+A **phishing attack** is when an attacker uses social engineering (deception to appear like a legitimate source) via email to aim the victims to divulge their passwords (or other sensitive information).
 
 Types of phishing attacks: 
 * **Spear phishing:** Attackers use personalized information about the victims to trick them. 
@@ -109,9 +111,9 @@ Types of phishing attacks:
 ✅ Don't share your passwords with people. They are yours to keep. It's between you and your password manager. </br>
 
 ### Credential Stuffing 🛠
-> **Credential stuffing** is when an attacker uses a list of leaked passwords (typically from data breaches) to try and gain access to other apps the users may be signed up for. Attackers rely on the knowledge that users reuse their passwords, so they may have used those passwords on other apps. Sadly, they’re right. We do reuse our passwords.
-> 
-> Credential stuffing attacks are particularly dangerous because of the volume of data breaches. 
+**Credential stuffing** is when an attacker uses a list of leaked passwords (typically from data breaches) to try and gain access to other apps the users may be signed up for. Attackers rely on the knowledge that users reuse their passwords, so they may have used those passwords on other apps. Sadly, they’re right. We do reuse our passwords.
+
+Credential stuffing attacks are particularly dangerous because of the volume of data breaches. 
 
 #### Infamous Examples of Real World Credential Stuffing Attacks 
 * In late 2016, hackers accessed Uber's private GitHub repository using compromised employee credentials and found AWS keys that allowed them to steal data from millions of users and drivers. 
@@ -123,7 +125,7 @@ Types of phishing attacks:
 
 
 ### Malware (Keylogging, Screen Scraping) ⌨️ 🖥️
-> **Malware** is just any computer program that is built for unethical purposes, like keylogging or screen scraping.
+**Malware** is just any computer program that is built for unethical purposes, like keylogging or screen scraping.
 
 **Keylogging** is a type of surveillance malware an attacker uses that records your keystrokes without your knowledge. The information is then sent to the attacker who can use it to gain access to your accounts and sensitive information like your passwords or credit card numbers. 
 
@@ -141,7 +143,7 @@ Types of phishing attacks:
 ✅ Embrace 2-Factor Authentication.</br>
 
 ### Shoulder Surfing and Visual Hacking 👀
-> **Shoulder surfing (visual hacking)** is a type of social engineering tactic an attacker uses where they literally look over someone’s shoulder to steal their personal information, like their passwords. It’s why grocery store workers tend to look away when you’re entering your credit card pin when you pay. While it may sound like something out of a cartoon, shoulder surfing can also be done from a longer distance using binoculars. 
+**Shoulder surfing (visual hacking)** is a type of social engineering tactic an attacker uses where they literally look over someone’s shoulder to steal their personal information, like their passwords. It’s why grocery store workers tend to look away when you’re entering your credit card pin when you pay. While it may sound like something out of a cartoon, shoulder surfing can also be done from a longer distance using binoculars. 
 
 #### Infamous Examples of Real World Shoulder Surfing Attacks 
 * In 2018, a [Los Angeles man got convicted](https://www.justice.gov/usao-cdca/pr/la-man-convicted-atm-shoulder-surfing-allowed-him-withdraw-cash-after-bank-customers) of 3 counts of aggravated identity theft for using stolen PINs to make fraudulent ATM withdrawals from elderly Bank of America customers. The man used a **"shoulder surfing"** technique, secretly watching victims enter their PINs and then withdrawing cash when they left without ending their sessions. 
