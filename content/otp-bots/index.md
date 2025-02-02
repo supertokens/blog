@@ -7,9 +7,17 @@ category: "featured"
 author: "Maria Shimkovska"
 ---
 
-Explore how OTP bots bypass two-factor authentication (2FA), their growing threats, and strategies to protect your application using tools like SuperTokens. 🦸 
+You finally switched to **Two-Factor Authentication (2FA)**, feeling secure and ahead of the game. But just as we start winning, cybercriminals move the goalpost and introduce **OTP bots**, automated scams designed to bypass 2FA and steal access to user accounts.
 
-So you finally did it! You switched to a Multi-Factor Authentication and you feel secure and on top of the world. But apparently we can’t have nice things for too long because here we are, in a world of OTP bots, leveraging our advanced technology to rudely gain unauthorized access to your users’ accounts. 
+Now imagine this. You’re chilling on the couch, scrolling through your phone, when you get a text from your bank.
+
+*"We've detected suspicious activity on your account. Reply with the OTP we just sent to secure your account."*
+
+Panicked at the thought of someone draining your account, you check your phone and, sure enough, there's an OTP message from your bank. Wanting to act fast and keep your account secure, you send the code to your bank, completely unaware that you've just handed over the keys to your account.
+
+This is how OTP bots operate—automated scams designed to trick you into surrendering your one-time passwords in real time. These attacks are becoming increasingly sophisticated, and they don’t just target individuals; businesses, employees, and even executives have fallen victim.
+
+So, how do these bots work, and more importantly, how can you stop them? Let’s break it down. 🚨
 
 Not to worry because we don’t give up at challenges. Let’s unravel what those bots are and how to fight them. 🥊
 
@@ -38,9 +46,8 @@ Sadly we cant have nice things for long because here we are, discussing OTP bots
 
 Their rise coincides with the growing use of Two-Factor Authentication (2FA). To understand the risk, here’s a simple before-and-after comparison:
 
-**Without 2FA:**
-
-Attacker → **Your Password** → Your Account 💻
+</br>
+<img src="./otp_bot.svg"/> 
 
 In this scenario, stealing your password is all it takes for an attacker to access your account.
 
