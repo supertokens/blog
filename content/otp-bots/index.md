@@ -46,8 +46,9 @@ Sadly we cant have nice things for long because here we are, discussing OTP bots
 
 Their rise coincides with the growing use of Two-Factor Authentication (2FA). To understand the risk, here’s a simple before-and-after comparison:
 
+**Without 2FA:**
 </br>
-<img src="./otp_bot.svg"/> 
+<img src="./otp_bot.svg"/>
 
 In this scenario, stealing your password is all it takes for an attacker to access your account.
 
