@@ -127,7 +127,7 @@ Credential stuffing attacks are particularly dangerous because of the volume of 
 ### Malware (Keylogging, Screen Scraping) ⌨️ 🖥️
 **Malware** is just any computer program that is built for unethical purposes, like keylogging or screen scraping.
 
-**Keylogging** is a type of malware an attacker uses that records your keystrokes without your knowledge. The information is then sent to the attacker who can use it to gain access to your accounts and sensitive information like your passwords or credit card numbers. 
+**Keylogging** is a type of surveillance malware an attacker uses that records your keystrokes without your knowledge. The information is then sent to the attacker who can use it to gain access to your accounts and sensitive information like your passwords or credit card numbers. 
 
 **Screen scraping** is a type of malware which takes screenshots of an infected computer, enabling attackers to gain unauthorized access without using password cracking tools.  
 
@@ -135,8 +135,9 @@ Credential stuffing attacks are particularly dangerous because of the volume of 
 * 
 
 #### Protecting Against Malware Attacks
-✅ </br>
-✅ </br>
+✅ Keep notice if your browser is more sluggish than normal. A sluggish browser could be a sign of malware. Another signs to keep looking for are if your cursor is disappearing, if there is lag in mouse movement, or delayed keystrokes between typing.</br>
+✅ Make sure you have a good antivirus program.</br>
+✅ Malware can be installed via your hardware too so make sure your computers are in a safe space. Don't leave them unattended in public.</br>
 
 ### Shoulder Surfing and Visual Hacking 👀
 **Shoulder surfing (visual hacking)** is a type of social engineering tactic an attacker uses where they literally look over someone’s shoulder to steal their personal information, like their passwords. It’s why grocery store workers tend to look away when you’re entering your credit card pin when you pay. It’s important to pay attention to your surroundings when entering your password and you’re in a public space.
