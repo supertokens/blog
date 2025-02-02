@@ -40,10 +40,10 @@ A **brute force attack** is when an attacker tries every possible combination of
 While brute force attacks test all possibilities, guessing is a simpler but sometimes very effective approach because people are not great at choosing secure passwords (although that is improving so take that cybervillains!)
 
 #### Brute Force Attack Example 🔓
-A hacker may want to break into an online banking account. They will use an automated tool that tries every possible combination of characters (e.g., `aa`, `ab`, `ac` ... or `123456`, `123457`, and so on). If your password is weak, like `password123`, the tool can crack it within seconds. 
+A hacker may want to break into an online banking account. They will use an automated tool that tries every possible combination of characters (e.g., `aa`, `ab`, `ac` ... or `123456`, `123457`, and so on). If your password is weak, like `password123`, the tool can crack it within seconds.
 
 #### Guessing Attack Example 🤔
-A hacker may target your social media account. They may know you love your dog, Sherlock Bones, and that he was born in 2017. So they will try passwords like `SherlockBones2017`, `ilovesherlockbones`, `SherlockBones17!`. 
+A hacker may target your social media account. They may know you love your dog, Sherlock Bones, and that he was born in 2017. So they will try passwords like `SherlockBones2017`, `ilovesherlockbones`, `SherlockBones17!`.
 
 #### Infamous Examples of Real World Brute Force Attacks
 * In 2014 Apple upped its iCloud security because of what is believed to have been a [brute force attack](https://www.tripwire.com/state-of-security/password-brute-force-attacks-threaten-millions-of-app-users) on its users, specifically celebrity accounts. 
@@ -77,12 +77,19 @@ A **hybrid attack** is when an attacker uses a combination (hybrid) of dictionar
 
 This is typically an effective attack because users often choose a predictable password, like a common word, and add some character or numbers to the end. 
 
-### Rainbow Table Attacks 🌈
-A **rainbow attack** is when an attacker uses a precomputed table of hashes to crack passwords. They use the table to match a password’s hash to a precomputed hash in the table, allowing them to recover the original password. 
+#### Protecting Against Hybrid Attacks
+✅ Use randomly generated and long passwords with a combination of letters, numbers, and symbols. </br>
 
-They are faster than brute force attacks because they require less computational power than brute force attacks. 
+### Rainbow Table Attacks 🌈
+A **rainbow attack** is a type of cyber attack where our cybervillains compare the hashes they stole to precomputed hashes they have from a table. This lets them reconstruct the original password and find out what it is in plaintext. The plaintext password is then used to gain unauthorized access to an account. They are faster than brute force attacks because they require less computational power than brute force attacks. 
 
 > **Note:** It’s called a rainbow table because it contains the entire spectrum of possibilities. It ends up looking like a rainbow. 
+
+#### Infamous Examples of Real World Dictionary Attacks 
+* In 2012, hackers infiltrated LinkedIn and stole over 110 million hashed passwords. The main reason why the breach was considered unsafe for users despite the passwords being hashed was because the encryptions was weak. 
+
+#### Protecting Against Rainbow Table Attacks
+✅ In addition to hashing passwords, make sure they are salted as well. A salt is a random string of data added before the hashing process which results in different hashes even if the passwords are the same in plaintext. </br>
 
 ### Phishing Attacks 🎣 
 A phishing attack is when an attacker uses social engineering (deception to appear like a legitimate source) via email to aim the victims to divulge their passwords (or other sensitive information).
