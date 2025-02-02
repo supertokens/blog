@@ -85,11 +85,13 @@ A **rainbow attack** is a type of cyber attack where our cybervillains compare t
 
 > **Note:** It’s called a rainbow table because it contains the entire spectrum of possibilities. It ends up looking like a rainbow. 
 
-#### Infamous Examples of Real World Dictionary Attacks 
+#### Infamous Examples of Real World Rainbow Attacks 
 * In 2012, hackers infiltrated LinkedIn and stole over 110 million hashed passwords. The main reason why the breach was considered unsafe for users despite the passwords being hashed was because the encryptions was weak. 
 
 #### Protecting Against Rainbow Table Attacks
 ✅ In addition to hashing passwords, make sure they are salted as well. A salt is a random string of data added before the hashing process which results in different hashes even if the passwords are the same in plaintext. </br>
+✅ Enforce strong passwords.</br>
+✅ Change your passwords somewhat regularly (you can decide what regular is to you, but make sure you change them up). </br>
 
 ### Phishing Attacks 🎣 
 A phishing attack is when an attacker uses social engineering (deception to appear like a legitimate source) via email to aim the victims to divulge their passwords (or other sensitive information).
@@ -99,6 +101,14 @@ Types of phishing attacks:
 * **Whaling:** A type of spear phishing targeting high level executives. 
 * **Smishing:** Phishing attacks carried via text messages. 
 * **Vishing:** Phishing attacks carried via phone calls. 
+
+#### Infamous Examples of Real World Phishing Attacks 
+* Between 2013 and 2015 Google and Facebook had pretty nasty attacks that cost them about $100 million. The attackers pretended to be someone else, a supplier they trusted, and requested invoices that were then paid by both companies. 
+* In 2020, there was a smishing campaign which used the United States Post office as a front for the cyberattack. The attackers send text messages to people telling them to click on a link with important information about upcoming deliveries. As a result, the link was actually used to steal their Google credentials. **This attack is still widely used today.**
+
+#### Protecting Against Phishing Attacks
+✅ Educate users about phishing emails. </br>
+✅ Don't share your passwords with people. They are yours to keep. It's between you and your password manager. </br>
 
 ### Credential Stuffing 🛠
 **Credential stuffing** is when an attacker uses a list of leaked passwords (typically from data breaches) to try and gain access to other apps. They rely on the knowledge that users reuse their passwords, so they may have used those passwords on other apps. Sadly, they’re right. We do reuse our passwords. 
