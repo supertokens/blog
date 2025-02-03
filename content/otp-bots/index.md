@@ -77,17 +77,18 @@ Industries like banking, e-commerce, and SaaS platforms are frequent targets for
 
 OTP bots use a combination of automation and social engineering tactics to wreak havoc upon your systems. 
 
-Here is a diagram of how an OTP bot attack generally works: 
+### A Diagram of How An OTP Bot Attack Generally Works 
 
 </br>
 <img src="./otp_bot_flow.svg"/>
+</br>
 
-1. Bot makes a robocall to the victim, tricking them into providing their OTP
-2. OTP is sent back to the bot user
-3. Attacker then commits ATO (Account Take Over)
+### Steps to an OTP Bot Attack 
 
-
-
+1. The attacker (already equipped with the stolen password) gives the password to the bot. 
+2. The bot calls the victim (posing as a legitimate company like a bank) and scares the victim into providing an OTP. 
+3. Victim, thinking that their bank is calling them, provides the OTP to the bot.
+4. The bot distracts the victim while the attacker access the victim's account and steals money.
 
 Here are some common tactics OTP bots are built to use: 
 
