@@ -28,6 +28,21 @@ tight: true
 toHeading: 3
 ```
 
+## Understanding Two-Factor Authentication 🔐
+
+A **Two-Factor Authentication (2FA)** is a second layer of authentication, very commonly a **One-Time Password (OTP)**. 
+
+**Without 2FA:**
+</br>
+<img src="./otp_bot.svg"/>
+
+In this scenario, stealing your password is all it takes for an attacker to access your account.
+
+**With 2FA (OTP Layer):**
+
+</br>
+<img src="./otp_layer.svg"/>
+
 ## What are OTPs (One-Time Passwords) 📲
 
 A **One-Time Password (OTP)** is a key part of 2FA (Two-Factor Authentication), adding a second layer of security to traditional password-based logins. 🔑
@@ -39,18 +54,6 @@ This ensures that even if your password is stolen, your account remains secure w
 For the longest time we have heard that this is the way to keep our passwords secure. More and more apps now are encouraging users to add a second layer of security to their accounts. It’s not unreasonable to get a false sense of security after installing this second layer of security. 
 
 Sadly we cant have nice things for long because here we are, discussing OTP bots. 
-
-## Understanding Two-Factor Authentication 🔐
-**Without 2FA:**
-</br>
-<img src="./otp_bot.svg"/>
-
-In this scenario, stealing your password is all it takes for an attacker to access your account.
-
-**With 2FA (OTP Layer):**
-
-</br>
-<img src="./otp_layer.svg"/>
 
 ## What Are OTP Bots? 🤖
 
