@@ -9,7 +9,7 @@ author: "Maria Shimkovska"
 
 You finally switched to **Two-Factor Authentication (2FA)**, feeling secure and ahead of the game. But just as we start winning, cybercriminals move the goalpost by introducing **OTP bots**.
 
-**OTP (One-Time Password) bots** are automated scams designed to bypass 2FA and steal access to user accounts.
+**OTP (One-Time Password) bots are automated malicious software** designed to bypass 2FA and steal access to user accounts.
 
 Imagine you're buying a special edition book online when you receive a text from your bank. *"We've detected suspicious activity. Reply with the **OTP** we just sent to secure your account."* 
 
@@ -149,6 +149,9 @@ OTP bots pose immense risk to businesses and users, so both need to act urgently
 ### Reputation Damage
 
 ### Security breaches
+
+## Mitigating OTP Bot Risks with SuperTokens
+
 
 
 
