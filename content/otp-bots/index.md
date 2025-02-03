@@ -40,12 +40,7 @@ For the longest time we have heard that this is the way to keep our passwords se
 
 Sadly we cant have nice things for long because here we are, discussing OTP bots. 
 
-## What Are OTP Bots? 🤖
-
-**OTP bots** are advanced programs designed to intercept and steal One-Time Passwords (OTPs), allowing attackers to gain unauthorized access to protected accounts. These bots cause significant harm to both individuals and businesses.
-
-Their rise coincides with the growing use of Two-Factor Authentication (2FA). To understand the risk, here’s a simple before-and-after comparison:
-
+## Understanding Two-Factor Authentication 🔐
 **Without 2FA:**
 </br>
 <img src="./otp_bot.svg"/>
@@ -56,6 +51,12 @@ In this scenario, stealing your password is all it takes for an attacker to acce
 
 </br>
 <img src="./otp_layer.svg"/>
+
+## What Are OTP Bots? 🤖
+
+**OTP bots** are advanced programs designed to intercept and steal One-Time Passwords (OTPs), allowing attackers to gain unauthorized access to protected accounts. These bots cause significant harm to both individuals and businesses.
+
+Their rise coincides with the growing use of Two-Factor Authentication (2FA).
 
 Adding OTPs creates an extra layer of security. But as defenses improve, hackers evolve, creating tools like OTP bots to bypass these safeguards.
 
