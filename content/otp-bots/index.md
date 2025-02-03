@@ -30,7 +30,15 @@ toHeading: 3
 
 ## Understanding Two-Factor Authentication 🔐
 
-A **Two-Factor Authentication (2FA)** is a second layer of authentication, very commonly a **One-Time Password (OTP)**. 
+A **Two-Factor Authentication (2FA)** is a second layer of authentication for added security, very commonly a **One-Time Password (OTP)**. 
+
+A 2FA second layer is usually a different kind of authentication. The three authentication methods are:
+* Something you know (your password)
+* Something you have (your phone)
+* Something you are (your fingerprint or face)
+
+Your primary authentication method is the something you know (your password).
+The second authentication method can either be something you have (your phone) or something you are (your fingerprint).
 
 **Without 2FA:**
 </br>
@@ -42,6 +50,8 @@ In this scenario, stealing your password is all it takes for an attacker to acce
 
 </br>
 <img src="./otp_layer.svg"/>
+
+In this scenario, having the second layer of authentication (the OTP) **prevents** a hacker from accessing your account even if they have your password.
 
 ## What are OTPs (One-Time Passwords) 📲
 
