@@ -85,23 +85,24 @@ OTP bots use a combination of automation and social engineering tactics to wreak
 
 ### Steps to an OTP Bot Attack 
 
-1. The attacker (already equipped with the stolen password) gives the password to the bot. 
-2. The bot calls the victim (posing as a legitimate company like a bank) and scares the victim into providing an OTP. 
-3. Victim, thinking that their bank is calling them, provides the OTP to the bot.
-4. The bot distracts the victim while the attacker access the victim's account and steals money.
+1. **Attacker Initiates the Attack** – Armed with a stolen password (from phishing, data breaches, or credential stuffing), the attacker hands it over to an OTP bot.
+2. **Bot Impersonates a Trusted Entity** – The bot calls or texts the victim, pretending to be a legitimate company (like a bank or service provider) and warns them about a suspicious transaction.
+3. **Victim Falls for the Trap** – Believing the message is real, the victim provides the OTP they just received, thinking they're securing their account.
+4. **Bot Completes the Attack** – While keeping the victim engaged, the bot forwards the OTP to the attacker, who swiftly logs in and gains unauthorized access, often stealing money or sensitive information in seconds.
 
-Here are some common tactics OTP bots are built to use: 
+### Common Tactics Used by OTP Bots 
+Understanding these tactics is key to defending against them. Let’s break down how you can stay protected. 🔐 
 
-### 1. Exploiting Human Vulnerabilities 🧠
+#### 🧠 Exploiting Human Vulnerabilities
 The biggest weakness OTP bots exploit is human error. Using social engineering, attackers trick users into willingly sharing their OTPs. Since people are used to entering or sharing codes, they’re less likely to question a request, especially if the attacker convincingly impersonates a trusted source, like a bank or SaaS platform. 
 
-### 2. Real-Time OTP Interception 📲
+#### 📲 Real-Time OTP Interception
 Attackers can intercept OTPs in real-time using techniques like phishing or malware. Once they capture your password, they immediately prompt for an OTP, ensuring they can log in before the code expires. A big reason why real-time OTP interception is possible is because of vulnerabilities in the SS7 (Common Channel Signaling System No. 7) protocol, which powers most of our network communication worldwide.
 
-### 3. Automated Call Bots 🤖
+#### 🤖 Automated Call Bots
 Sophisticated bots make automated phone calls, posing as legitimate organizations, and manipulate victims into providing OTPs. The urgency and professionalism of these calls often catch users off guard. The nature of automated calls also makes them insanely scalable, allowing more attacks to be done in a short period of time. 
 
-### 4. Credential Stuffing with OTP Prompts 🔑
+#### 🔑 Credential Stuffing with OTP Prompts
 Attackers use stolen credentials from data breaches and attempt to log in on multiple sites. If 2FA is enabled, they trigger OTP prompts and use bots or social engineering to collect the codes, completing the login process. 
 
 ## Types of OTP Bots
