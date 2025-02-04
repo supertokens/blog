@@ -73,6 +73,8 @@ Adding OTPs creates an extra layer of security. But as defenses improve, hackers
 
 > It’s important to note that falling for social engineering doesn’t mean you’re careless. Attackers are aware of growing security awareness and craft their tools to exploit even cautious users.
 
+SMSRanger is one of the most popular OTP bots currently in operation. It began during the pandemic when most people were working from home. The attacker can select a package to purchase and make the payment to the company providing the bot. It's as simple as that. 
+
 ## How Do OTP Bots Work? 🔍
 
 OTP bots use a combination of automation and social engineering tactics to wreak havoc upon your systems. 
@@ -82,6 +84,10 @@ OTP bots use a combination of automation and social engineering tactics to wreak
 </br>
 <img src="./otp_bot_flow.svg"/>
 </br>
+
+In the above diagram, the attacker does the account takeover (ATO), but some OTP bot services offer to do that as well. 
+
+The script an OTP bot uses can be completely customizable, from the language used to the music they play when you are on hold. 
 
 ### Steps to an OTP Bot Attack 
 
@@ -137,15 +143,30 @@ As OTPs become a key security feature in 2FA and passwordless login systems, the
  So this combination of widespread OTP usage and easy access to hacking tools makes OTP bots a serious threat to users and the businesses their accounts are on. 
 
 ## Security Risks Posed by OTP Bots
-OTP bots pose immense risk to businesses and users, so both need to act urgently in protecting their data and information. Some security risks of OTP bots are: 
+OTP bots pose immense risk to businesses and users, so both need to act urgently in protecting their data and information.
 
-### Account Takeover 
+According to a Proofpoint report, attackers launch over 100,000 phone-based attacks daily. The growing use of OTP bots and challenges in detecting real-time attacks make mitigation efforts increasingly difficult.
 
-### Financial Losses
+### 🛡️ Bypassing Two-Factor Authentication (2FA)
+OTP bots exploit vulnerabilities in 2FA systems, making it easier for attackers to gain unauthorized access to accounts even with an added security layer.
 
-### Reputation Damage
+### 💳 Account Takeover 
+Attackers use OTP bots to take control of user accounts, leading to identity theft, financial fraud, or misuse of sensitive information.
 
-### Security Breaches
+###  💸 Financial Losses
+OTP bots are often used to drain bank accounts, make unauthorized purchases, or transfer funds fraudulently.
+
+### 🏢 Reputation Damage
+Businesses targeted by OTP bot attacks risk losing customer trust, resulting in reputational harm and potential loss of business.
+
+### 🔓 Security Breaches
+With access to accounts, attackers can extract personal or business information, leading to further breaches or data leaks. These bots can automate and execute attacks at scale, compromising multiple accounts in a short amount of time.
+
+### 💼 Increased Costs for Businesses
+Organizations face higher expenses for recovery, fraud prevention, and implementing advanced security measures post-attack.
+
+### 🔐 Undermining Confidence in Security Systems
+Frequent successful attacks may discourage users from relying on 2FA systems, undermining overall trust in digital security.
 
 ## Mitigating OTP Bot Risks with SuperTokens
 
