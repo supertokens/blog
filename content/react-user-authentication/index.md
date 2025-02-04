@@ -1,7 +1,7 @@
 ---
 title: How to Set Up React User Authentication
 date: "2025-01-28"
-description: "User authentication forms the backbone of security in modern web applications, especially within the **React** ecosystem. Ensuring that only authenticated users can access specific parts of your application is crucial for safeguarding data integrity and access control."
+description: "User authentication forms the backbone of security in modern web applications, especially within the React ecosystem. Ensuring that only authenticated users can access specific parts of your application is crucial for safeguarding data integrity and access control."
 cover: "react-setup.png"
 category: "authentication, examples, react, sdk"
 author: "Dejan Lukic"
@@ -36,7 +36,7 @@ React applications need to interact with a **backend API** to handle user authen
 
 There are generally two paths you can take when implementing authentication in your ReactJS app:
 
-1. **Pre-built Authentication Services**: Leveraging platforms like **Auth0**, **Firebase**, or **SuperTokens** can significantly reduce development time. These services provide comprehensive solutions for handling user sessions, login flows, and user profile management. For instance:
+1. **Pre-built Authentication Services**: Leveraging platforms like **Auth0**, **Firebase**, or **SuperTokens** can significantly reduce development time, while allowing you to focus more on the core business logic. These services provide comprehensive solutions for handling user sessions, login flows, and user profile management. For instance:
    * **Auth0** offers an easy-to-implement, scalable solution for user authentication, making it ideal for applications that need social logins and advanced features.
    * **Firebase** simplifies authentication with email/password, phone, and social media providers, making it a great choice for projects already using other Firebase services.
    * **SuperTokens** is perfect if you want the flexibility of self-hosting your authentication system, or using the cloud option, while still using pre-built solutions for login, session management, and secure token handling.
@@ -57,17 +57,11 @@ For a deeper dive into integrating authentication in React applications, you can
 1. **Create a New React App Using Create React App**
    To build a secure user login, start by setting up a new React application. Using Create React App, you can quickly initialize the project:
 
-| bashnpx create-react-app my-auth-app cd my-auth-app npm install npm start |
-| :---- |
+```bash
+npx create-react-app my-auth-app cd my-auth-app npm install npm start
+```
 
-This command creates the basic app structure where you’ll integrate authentication with Auth0, JWTs, and Express. By setting up on `localhost:3000`, you can easily test authentication routes and calls to a backend running locally.
-
-2. **Structure of the Application**
-   Organize your application with specific folders for each functional area:
-   * **components**: For React components like login forms and profile views.
-   * **contexts**: For managing the authentication context.
-   * **api**: For API integrations with AWS or backend services.
-   * **utils**: For utility functions. With this structure in place, you’re ready to handle imports and route paths effectively.
+This command creates the basic app structure, installs dependencies where you’ll integrate authentication with Auth0 and starts the app.
 
 ### **Choosing an Authentication Method**
 
@@ -84,19 +78,22 @@ This command creates the basic app structure where you’ll integrate authentica
 1. **List of npm Packages Needed**
    For this tutorial, install the following packages:
 
-| bashnpm install axios react-router-dom auth0-js jsonwebtoken |
-| :---- |
+```bash
+npm install axios react-router-dom auth0-js jsonwebtoken
+```
 
    * **axios**: To handle async API calls to Express or AWS.
    * **react-router-dom**: For managing route paths with `BrowserRouter`.
    * **auth0-js**: To integrate Auth0 with React.
    * **jsonwebtoken**: To work with JWTs in your app.
-2. **Installing Packages**
+
+1. **Installing Packages**
    These dependencies are essential for authentication management. You’ll use `axios` for async requests, and `react-router-dom` for protecting route paths.
 
 ### **Creating Context for Authentication**
 
 1. **Setting Up React Context**
+   Create `contexts` folder in `src`.
    In `src/contexts`, create a context file, `AuthContext.js`, to manage user login state. Define constants for storing tokens and managing authentication status across the app.
 2. **Creating a Context Provider**
    Create a context provider to wrap around `App.js`, giving access to authentication state throughout the application. Use `import React` to set up your provider component.
@@ -104,10 +101,40 @@ This command creates the basic app structure where you’ll integrate authentica
 ### **Implementing Login and Signup Components**
 
 1. **Building Login and Signup Forms**
-   In `components/LoginForm.js` and `components/SignupForm.js`, create forms with constants to handle user input. Add async functions to handle form submission and call APIs.
+   Create `components` folder in `src`.
+   In `components/LoginForm.jsx` and `components/SignupForm.jsx`, create forms with constants to handle user input. Add async functions to handle form submission and call APIs.
+   ```jsx
+   // exmaple code
+   import React, { useState } from 'react';
 
-| javascriptimport React, { useState } from 'react'; const LoginForm \= () \=\> { const \[email, setEmail\] \= useState(''); const \[password, setPassword\] \= useState(''); const handleSubmit \= async (e) \=\> { e.preventDefault(); // Call API for user login }; return ( \<form onSubmit={handleSubmit}\> \<input type\="email" value={email} onChange={(e) \=\> setEmail(e.target.value)} /\> \<input type\="password" value={password} onChange={(e) \=\> setPassword(e.target.value)} /\> \<button type\="submit"\>Login\</button\> \</form\> ); }; |
-| :---- |
+   const LoginForm = () => {
+      const [email, setEmail] = useState('');
+      const [password, setPassword] = useState('');
+
+      const handleSubmit = async (e) => {
+         e.preventDefault();
+         // Call API for user login
+      };
+
+      return (
+         <form onSubmit={handleSubmit}>
+            <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            />
+            <button type="submit">Login</button>
+         </form>
+      );
+   };
+
+   export default LoginForm;
+   ```
 
 2. **Handling Form Submission and Validation**
    Handle form validation before submitting. Using async functions ensures API calls wait for a response before updating the user login state.
@@ -117,9 +144,17 @@ This command creates the basic app structure where you’ll integrate authentica
 1. **Making API Calls**
    Use `axios` for async calls to your backend, which could be an Express app hosted on AWS or `localhost`. Configure your backend to validate login credentials.
 
-| javascriptimport axios from 'axios'; const loginUser \= async (email, password) \=\> { const response \= await axios.post('http://localhost:5000/api/login', { email, password }); return response.data; }; |
-| :---- |
+   ```javascript
+   import axios from 'axios';
 
+   const loginUser = async (email, password) => {
+   const response = await axios.post('http://localhost:5000/api/login', {
+      email,
+      password,
+   });
+   return response.data;
+   };
+   ```
 2. **Handling Responses**
    Use constants to store tokens on successful login and manage authentication state with a context or Redux.
 
@@ -135,8 +170,22 @@ This command creates the basic app structure where you’ll integrate authentica
 1. **Using** `react-router` **to Create Private Routes**
    Set up route paths with `BrowserRouter` and create protected routes using constants for easier management.
 
-| javascriptimport { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'; const PrivateRoute \= ({ component: Component, ...rest }) \=\> ( \<Route {...rest} render={(props) \=\> isAuthenticated ? \<Component {...props} /\> : \<Redirect to="/login" /\> } /\> ); |
-| :---- |
+   ```javascript
+   import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+
+   const PrivateRoute = ({ component: Component, ...rest }) => (
+   <Route
+      {...rest}
+      render={(props) =>
+         isAuthenticated ? (
+         <Component {...props} />
+         ) : (
+         <Redirect to="/login" />
+         )
+      }
+   />
+   );
+   ```
 
 2. **Redirecting Users Based on Authentication Status**
    Redirect unauthenticated users to the login page, ensuring only authenticated users access sensitive routes.
@@ -145,9 +194,12 @@ This command creates the basic app structure where you’ll integrate authentica
 
 1. **Clearing Tokens and Updating State**
    Add a logout button that clears tokens and resets authentication state in the context.
-
-| javascriptconst handleLogout \= () \=\> { localStorage.removeItem('token'); setIsAuthenticated(false); }; |
-| :---- |
+   ```javascript
+   const handleLogout = () => {
+   localStorage.removeItem('token');
+   setIsAuthenticated(false);
+   };
+   ```
 
 2. **Redirecting Users After Logout**
    Redirect to the homepage or login page after logout to keep a clean user experience.
@@ -170,13 +222,23 @@ When building secure React applications, having a straightforward, robust authen
 2. **Step-by-Step Guide to Setting Up SuperTokens in a React App**
    To get started, check out this comprehensive [tutorial on building a login screen with React and Bootstrap](https://supertokens.com/blog/building-a-login-screen-with-react-and-bootstrap). Begin by installing the SuperTokens SDK for seamless integration:
 
-| bashnpm install supertokens-auth-react supertokens-node |
-| :---- |
+   ```bash
+   npm install supertokens-auth-react supertokens-node
+   ```
 
 Next, configure SuperTokens in your app’s main file, such as `App.js`. This setup ensures SuperTokens handles authentication details, including secure session management, which is particularly useful for [setting up social and email-password logins in ReactJS](https://supertokens.com/blog/how-to-set-up-social-and-email-password-login-with-reactjs).
 
-| javascriptimport { init } from 'supertokens-auth-react'; const appInfo \= { appName: "MyApp", apiDomain: "http://localhost:5000", websiteDomain: "http://localhost:3000", }; init({ appInfo }); |
-| :---- |
+```javascript
+import { init } from 'supertokens-auth-react';
+
+const appInfo = {
+  appName: "MyApp",
+  apiDomain: "http://localhost:5000",
+  websiteDomain: "http://localhost:3000",
+};
+
+init({ appInfo });
+```
 
 Here, `appName` helps identify your app, while `apiDomain` and `websiteDomain` specify your backend and frontend URLs, respectively. This initial setup is all you need to get started with SuperTokens for user management and session security.
 
@@ -185,8 +247,47 @@ Here, `appName` helps identify your app, while `apiDomain` and `websiteDomain` s
 1. **Creating User Accounts and Handling Sign-In**
    SuperTokens makes it easy to implement user registration and login within your React app. By adding a simple login component, you can authenticate users securely with minimal code:
 
-| javascriptimport { signIn } from 'supertokens-auth-react'; import React, { useState } from 'react'; const LoginForm \= () \=\> { const \[email, setEmail\] \= useState(''); const \[password, setPassword\] \= useState(''); const handleLogin \= async () \=\> { const response \= await signIn({ email, password }); if (response.status \=== "OK") { console.log("Login successful"); } else { console.log("Login failed"); } }; return ( \<form onSubmit={(e) \=\> { e.preventDefault(); handleLogin(); }}\> \<input type="email" value={email} onChange={(e) \=\> setEmail(e.target.value)} placeholder="Email" /\> \<input type="password" value={password} onChange={(e) \=\> setPassword(e.target.value)} placeholder="Password" /\> \<button type="submit"\>Login\</button\> \</form\> ); }; |
-| :---- |
+   ```javascript
+   import { signIn } from 'supertokens-auth-react';
+   import React, { useState } from 'react';
+
+   const LoginForm = () => {
+   const [email, setEmail] = useState('');
+   const [password, setPassword] = useState('');
+
+   const handleLogin = async () => {
+      const response = await signIn({ email, password });
+      if (response.status === "OK") {
+         console.log("Login successful");
+      } else {
+         console.log("Login failed");
+      }
+   };
+
+   return (
+      <form
+         onSubmit={(e) => {
+         e.preventDefault();
+         handleLogin();
+         }}
+      >
+         <input
+         type="email"
+         value={email}
+         onChange={(e) => setEmail(e.target.value)}
+         placeholder="Email"
+         />
+         <input
+         type="password"
+         value={password}
+         onChange={(e) => setPassword(e.target.value)}
+         placeholder="Password"
+         />
+         <button type="submit">Login</button>
+      </form>
+   );
+   };
+   ```
 
 This form captures user credentials and calls SuperTokens' `signIn` function to handle authentication. Successful logins are recorded in SuperTokens’ session management, providing a secure user experience.
 
