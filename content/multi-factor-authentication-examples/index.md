@@ -69,7 +69,7 @@ Creating MFA from scratch can be time-consuming and complex. Thankfully, many so
 
 [**SuperTokens**](https://supertokens.com/product) is an excellent choice—not just for MFA but for the entire authentication layer. SuperTokens is an open-source, developer-friendly authentication platform designed to simplify the setup of secure, scalable user authentication. It offers a plug-and-play approach for typical authentication flows like sign-up, sign-in, passwordless login, social logins, session management, and MFA. Plus, it’s customizable to suit advanced use cases.
 
-Using SuperTokens, you can add MFA to your app quickly—often in just a few steps with their CLI and pre-built “recipes.” Here’s a look at some of the options SuperTokens offers for MFA, which streamline implementation and allow you to focus on building your app’s core features.
+Using SuperTokens, you can add MFA to your app quickly—often in just a few steps with their CLI and pre-built “recipes.” Here’s a look at some of the options [SuperTokens offers for MFA](https://supertokens.com/docs/additional-verification/mfa/introduction), which streamline implementation and allow you to focus on building your app’s core features.
 
 ![SuperTokens' MFA options](mfa-options.png)
 
