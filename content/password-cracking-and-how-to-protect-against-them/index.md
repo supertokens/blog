@@ -201,7 +201,7 @@ Another benefit that password managers provide is that they can generate random 
 
 **Lockout mechanism**  is a security feature that locks a user’s account after a certain number of incorrect password attempts. Accounts are usually locked after 3 to 5 unsuccessful attempts to login. It’s used to prevent brute force and automated attacks.
 
-### Session Management
+### Session Management 🔒 
 **Session hijacking** is a major security risk where attackers take over user sessions by stealing or guessing session tokens, bypassing even multi-factor authentication (MFA). This gives them access to accounts, leading to data theft, financial loss, and damage to reputation.
 
 **Good session management** can help prevent this. Using encrypted session tokens, setting shorter session times, and ensuring secure login methods are effective ways for organizations to reduce risks and protect against such attacks.
