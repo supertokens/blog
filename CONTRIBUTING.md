@@ -48,7 +48,7 @@ author: "John Doe"
 - **title:** Title of the blog post.
 - **description:** Description of the post that will be visible on the blog's card.
 - **date:** Date on which the post was created. It is a string of the format `YYYY-MM-DD`.
-- **Cover**
+- **cover**
   - Two cover images are required for each post:
     1. **High-resolution image:**
        - Used inside the blog post.
