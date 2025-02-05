@@ -3138,5 +3138,28 @@
         ],
         "title": "What is Passwordless Authentication: The Cool Kid on The Block? 🔒🚫",
         "schema": "<script type=\"application/ld+json\">\n {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/what-is-passwordless-authentication\"\n            },\n            \"headline\": \"What is passwordless authentication? Solve login challenges, explore methods, benefits, and tools for secure implementations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/what-is-passwordless-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        } </script>"
+    },
+    {
+        "path": "/blog/choosing-the-right-authentication-provider",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how authentication providers and APIs secure modern applications. Explore features and integration tips to enhance user authentication and data protection.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Choosing the Right Authentication Provider and API for Secure Applications\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/choosing-the-right-authentication-provider\" />",
+            "<meta property=\"og:description\" content=\"Learn how authentication providers and APIs secure modern applications. Explore features and integration tips to enhance user authentication and data protection.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/right-auth-provider-and-API.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how authentication providers and APIs secure modern applications. Explore features and integration tips to enhance user authentication and data protection.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/choosing-the-right-authentication-provider\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/right-auth-provider-and-API.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/choosing-the-right-authentication-provider\">"
+        ],
+        "title": "Choosing the Right Authentication Provider and API for Secure Applications",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/choosing-the-right-authentication-provider\"\n            },\n            \"headline\": \"Learn how authentication providers and APIs secure modern applications. Explore features and integration tips to enhance user authentication and data protection.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/right-auth-provider-and-API.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
