@@ -145,7 +145,7 @@ As OTPs become a key security feature in 2FA and passwordless login systems, the
 ## Security Risks Posed by OTP Bots
 OTP bots pose immense risk to businesses and users, so both need to act urgently in protecting their data and information.
 
-According to a Proofpoint report, attackers launch over 100,000 phone-based attacks daily. The growing use of OTP bots and challenges in detecting real-time attacks make mitigation efforts increasingly difficult.
+According to a [Proofpoint report](https://www.certitudesecurity.com/wp-content/uploads/2022/06/The-Human-Factor-2022_Certitude-Security.pdf), attackers launch over 100,000 phone-based attacks daily. The growing use of OTP bots and challenges in detecting real-time attacks make mitigation efforts increasingly difficult.
 
 ### 🛡️ Bypassing Two-Factor Authentication (2FA)
 OTP bots exploit vulnerabilities in 2FA systems, making it easier for attackers to gain unauthorized access to accounts even with an added security layer.
@@ -170,8 +170,21 @@ Frequent successful attacks may discourage users from relying on 2FA systems, un
 
 ## Mitigating OTP Bot Risks with SuperTokens
 
-### TOTP
+### Password Breach Detection 
+The first step in an otp bot attack is the hacker having the user's credentials, like a password. Preventing password leaks stops the attacks before they even have a chance to begin.
+
+### Bot Detection 
 
 
+### Suspicious IP Detection 
+
+### 
+
+### Limit OTP validity 
+
+### TOTP Authentication and How It Works
+**TOTP (Time-Based One-Time Passwords)** is a two-factor authentication method designed for high-security scenarios, particularly for sensitive use cases like financial transactions in fintech or cryptocurrency platforms, or accessing company HR or payroll systems. It requires users to prove possession of their device by generating a unique code that changes every 30, 60, or 90 seconds. 
+
+The process is simple: after entering their credentials, the user provides this additional code to gain access. Unlike SMS or email-based 2FA, TOTP is considered more secure because it reduces the risk of interception or tampering, making it an ideal choice for protecting highly attractive targets from attackers.
 
 
