@@ -289,5 +289,8 @@
     },
     {
         "location": "https://supertokens.com/blog/choosing-the-right-authentication-provider"
+    },
+    {
+        "location": "https://supertokens.com/blog/password-cracking-and-how-to-protect-against-them"
     }
 ]

@@ -3161,5 +3161,28 @@
         ],
         "title": "Choosing the Right Authentication Provider and API for Secure Applications",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/choosing-the-right-authentication-provider\"\n            },\n            \"headline\": \"Learn how authentication providers and APIs secure modern applications. Explore features and integration tips to enhance user authentication and data protection.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/right-auth-provider-and-API.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/password-cracking-and-how-to-protect-against-them",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn the most common password cracking techniques used by hackers and practical strategies to secure your accounts from such threats.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Top Password Cracking Techniques and How to Protect Against Them 🔐\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/password-cracking-and-how-to-protect-against-them\" />",
+            "<meta property=\"og:description\" content=\"Learn the most common password cracking techniques used by hackers and practical strategies to secure your accounts from such threats.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/password-cracking.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn the most common password cracking techniques used by hackers and practical strategies to secure your accounts from such threats.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/password-cracking-and-how-to-protect-against-them\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/password-cracking.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/password-cracking-and-how-to-protect-against-them\">"
+        ],
+        "title": "Top Password Cracking Techniques and How to Protect Against Them 🔐",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/password-cracking-and-how-to-protect-against-them\"\n            },\n            \"headline\": \"Learn the most common password cracking techniques used by hackers and practical strategies to secure your accounts from such threats.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/password-cracking.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
