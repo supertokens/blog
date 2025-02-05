@@ -179,7 +179,17 @@ By default the canonical tag is set to the URL of the blog. If you need to set a
 
 ### Updating the sitemap
 
-Modify the `/static/blog-seo/sitemapconfig.json` file and add the URL of the blog you are adding to the website. This will ensure that the URL is present in the sitemap.xml file when Google bots request it
+Modify the `/static/blog-seo/sitemapconfig.json` file and add the URL of the blog you are adding to the website. This will ensure that the URL is present in the sitemap.xml file when Google bots request it.
+
+> **NOTE**: Instead of manually updating the `sitemap.json` and `config.json` files with the metadata, you can run the `generate-metadata` script by running: 
+```bash
+npm run generate-metadata <inset-file-path>
+```
+for example 
+
+```bash
+npm run generate-metadata /home/joelcoutinho/supertokens/blog/content/choosing-the-right-authentication-provider
+```
 
 ## Viewing the blogs
 You can view the blog landing page by visiting `http://localhost:8000/blog`. All the posts placed inside the `content` directory are visible here, as well as all the posts details that are added in the `src/blog-details.js`'s `webflowBlogList` array.
