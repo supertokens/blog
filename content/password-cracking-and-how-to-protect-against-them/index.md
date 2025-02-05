@@ -247,7 +247,7 @@ Identifies and remembers devices and requester details, even if they try to hide
 **SuperTokens** integrates with MFA to provide an additional layer of security. By requiring multiple forms of verification, such as email or SMS-based one-time passwords (OTPs), MFA ensures that even if a password is compromised, unauthorized access is still prevented. This approach strengthens account protection and makes it significantly harder for attackers to breach accounts. 💪
 
 ### Session Management
-**SuperTokens** securely manages session tokens to protect against threats like session hijacking and fixation. By implementing measures such as access token blacklisting, anti-csrf (cross-site request forgery), token rotation, and cookie consent, it ensures that user sessions remain secure. This prevents attackers from stealing or reusing tokens to gain unauthorized access. 🔒
+**SuperTokens** securely manages session tokens to **protect against threats like session hijacking and fixation**. By implementing measures such as access token blacklisting, anti-csrf (cross-site request forgery), token rotation, and cookie consent, it ensures that user sessions remain secure. This prevents attackers from stealing or reusing tokens to gain unauthorized access. 🔒
 
 ## Common Misconceptions About Password Security
 Here are some myths about password security:
