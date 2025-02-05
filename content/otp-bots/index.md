@@ -171,19 +171,19 @@ Frequent successful attacks may discourage users from relying on 2FA systems, un
 ## Mitigating OTP Bot Risks with SuperTokens
 
 ### Password Breach Detection 
-The first step in an otp bot attack is the hacker having the user's credentials, like a password. Preventing password leaks stops the attacks before they even have a chance to begin. Password breach detections checks passwords against a database of leaked passwords to see if they've been leaked before. This helps keep accounts safe by avoiding weak passwords.
+The first step in an OTP bot attack is the hacker having the user's credentials, like a password. Preventing password leaks stops the attacks before they even have a chance to begin. **Password breach detections** checks passwords against a database of leaked passwords to see if they've been leaked before. This helps keep accounts safe by avoiding weak passwords.
 
-Password breach detection prevents OTP bot attacks at the source by ensuring users do not use previously leaked passwords, cutting off the attack before credentials are compromised.
+Password breach detection **prevents OTP bot attacks at the source** by ensuring users do not use previously leaked passwords, cutting off the attack before credentials are compromised.
 
 ### Bot Detection 
-Bot detection identifies and prevents automated scripts or bots from performing malicious activities such as credential stuffing, account takeover attempts, or scraping sensitive data. It uses advanced algorithms to analyze user behavior, request patterns, and other indicators to distinguish between human users and automated bots.
+**Bot detection** identifies and prevents automated scripts or bots from performing malicious activities such as credential stuffing, account takeover attempts, or scraping sensitive data. It uses advanced algorithms to analyze user behavior, request patterns, and other indicators to distinguish between human users and automated bots.
 
-By identifying and blocking automated scripts, bot detection stops OTP bots from initiating login attempts or exploiting vulnerabilities.
+By identifying and blocking automated scripts, bot detection **stops OTP bots from initiating login attempts or exploiting vulnerabilities**.
 
 ### Suspicious IP Detection 
-Suspicious IP detection finds suspicious IP addresses that are known for malicious activities. This includes detecting the use of VPNs, TOR, proxy servers, or other network configurations that may be used to hide the user's true location or identity.
+**Suspicious IP detection** finds suspicious IP addresses that are known for malicious activities. This includes detecting the use of VPNs, TOR, proxy servers, or other network configurations that may be used to hide the user's true location or identity.
 
-Suspicious IP detection prevents OTP bots by flagging and blocking requests from high-risk IP addresses often associated with malicious activities.
+Suspicious IP detection **prevents OTP bots by flagging and blocking requests from high-risk IP addresses** often associated with malicious activities.
 
 ### TOTP Authentication
 **TOTP (Time-Based One-Time Passwords)** is a two-factor authentication method designed for high-security scenarios, particularly for sensitive use cases like financial transactions in fintech or cryptocurrency platforms, or accessing company HR or payroll systems. **It requires users to prove possession of their device by generating a unique code that changes every 30, 60, or 90 seconds.** 
