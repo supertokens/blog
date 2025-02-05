@@ -126,7 +126,20 @@ Images that are meant to be used as the source for `og:image`, `twitter:image` e
 
 ##### Meta Tags
 
-Meta tags for blog images are picked up from `/static/blog-seo/config.json`, for each blog you add an item to the array following the format
+Meta tags for blog images are picked up from `/static/blog-seo/config.json`, for each blog you add an item to the array following the format.
+
+Run the following command to automatically generate the metadata and sitemap info:
+
+> Note: You can get the file path by right-clicking on your blog folder in the content directory and selecting the "Copy Path" option
+
+```bash
+npm run generate-metadata /<path-to-supertokens-blog>/blog/content/<SLUG>
+```
+
+To check if the script has added the changes please check that the following files have been updated with you blog metadata and sitemap respectively.
+
+- `blog/static/blog-seo/config.json`
+- `blog/static/blog-seo/sitemapconfig.json`
 
 ```json
 {
