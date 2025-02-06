@@ -157,5 +157,23 @@ module.exports = [{
   ],
   bio:
     "Technical Writer. Huge Reader. I love startups and open source.",
+}, {  
+  name: "Nemi Shah",
+  jobTitle: "Senior iOS Engineer at Deltatre",
+  image: "nemi.jpg",
+  socials: [
+    {
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/nemi-shah/",
+    }, {
+      name: "twitter",
+      url: "https://x.com/NemiShah3",
+    }, {
+      name: "github",
+      url: "https://github.com/nkshah2"
+    }
+  ],
+  bio:
+    "Mobile engineer, Indie software dev, Gaming enthusiast, and a tea lover.",
 }
 ]
