@@ -142,5 +142,20 @@ module.exports = [{
   ],
   bio:
     "Developer Advocate. Digital Designer. IndieHacker",
+}, {
+  name: "Maria Shimkovska",
+  jobTitle: "Technical Writer",
+  image: "maria.jpg",
+  socials: [
+    {
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/maria-shimkovska/",
+    }, {
+      name: "github",
+      url: "https://github.com/meems1996"
+    }
+  ],
+  bio:
+    "Technical Writer. Huge Reader. I love startups and open source.",
 }
 ]
