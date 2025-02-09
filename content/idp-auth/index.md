@@ -7,17 +7,25 @@ category: "idp, authentication, security"
 author: "Dejan Lukic"
 ---
 
-In the ever-evolving digital landscape, securing access to applications is no longer optional. Identity Provider (IDP) authentication stands at the forefront of modern access management, ensuring users can log in safely and efficiently. This article explores how IDP authentication works, its benefits, and how tools like SuperTokens make integration less of a headahce.
+Picture a master key that effortlessly unlocks every secure door in your digital world. That’s the essence of Identity Provider (IDP) authentication—a centralized system that verifies your identity once and grants you seamless access across multiple applications. Instead of juggling a different set of credentials for every service, an IDP becomes your trusted digital gatekeeper, ensuring streamlined logins and robust protection against cyber threats.
+
+In this article, we’ll break down the mechanics of IDP authentication, spotlight its transformative benefits, and explore how cutting-edge tools like SuperTokens are simplifying the integration process. Whether you’re a developer aiming for efficiency or a security professional focused on safeguarding access, join us as we unlock the future of secure digital identity management.
 
 ## What Is IDP Authentication?
 
 Identity Provider (IDP) authentication is a process where an external service, called an IDP, verifies the identity of users and grants them access to applications. By acting as a trusted intermediary, IDPs handle authentication securely, allowing applications to offload the complexity of managing user credentials. In simple terms, the IDP ensures that the person trying to log in is who they claim to be.
 
-IDPs play a crucial role in modern access management by streamlining the authentication process across multiple applications. Instead of users maintaining separate credentials for every app they access, an IDP centralizes identity verification, saving time and enhancing security. Popular examples of IDPs include Google, which powers logins for countless websites through Google accounts, [Okta](https://www.okta.com/), a favorite among enterprises for managing employee access, and [SuperTokens](https://supertokens.com), which offers flexible and developer-friendly solutions for integrating IDP authentication..
+IDPs play a crucial role in modern access management by streamlining the authentication process across multiple applications. Instead of users maintaining separate credentials for every app they access, an IDP centralizes identity verification, saving time and enhancing security. Popular examples of IDPs include Google, which powers logins for countless websites through Google accounts, [Okta](https://www.okta.com/), a favorite among enterprises for managing employee access, and [SuperTokens](https://supertokens.com), which offers flexible and developer-friendly solutions for integrating IDP authentication.
+
+**Consider this scenario**: Imagine you're attending a sprawling music festival with several stages and activities spread across a large area. Instead of showing your ticket at every single event or stage, you’re given a festival wristband at the main entrance. This wristband has been pre-verified and serves as your all-access pass, allowing you to move freely between different stages and activities without needing to prove your identity repeatedly. In this analogy, the wristband is like the IDP—it confirms your identity once and then lets you enjoy the entire festival (or access multiple applications) seamlessly and securely.
+
+This streamlined approach not only simplifies the login process but also enhances overall security by centralizing identity verification in a trusted service.
 
 ## How IDP Authentication Works
 
 IDP authentication operates through a sequence of steps designed to securely validate user identity and grant access to resources. Here’s a breakdown of how the process typically works, coupled with real-world examples to illustrate its application:
+
+![A diagram on how IDP auhtentication works](how_idp_works.png)
 
 1. **User Initiates Login**: When a user attempts to log in to an application, they are redirected to the IDP’s login page. For instance, when accessing a third-party app like Slack using Google SSO, the user is seamlessly redirected to Google’s login portal to authenticate.
 2. **Credential Validation**: The IDP validates the credentials entered by the user. This step can include verifying passwords, biometrics (like fingerprints or facial recognition), or multi-factor authentication (MFA) codes. For example, a financial app may require both a password and a one-time code sent via SMS for additional security.
@@ -27,10 +35,9 @@ IDP authentication operates through a sequence of steps designed to securely val
 ### Common Protocols for IDP Authentication
 Several protocols underpin this process, ensuring compatibility and security between IDPs and applications:
 
-- **SAML (Security Assertion Markup Language)**:
-[SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) is widely used in enterprise environments to facilitate single sign-on (SSO). A classic example is employees accessing corporate tools like Salesforce or Workday through their company’s identity portal.
+- **[SAML (Security Assertion Markup Language)](https://supertokens.com/docs/authentication/enterprise/saml/what-is-saml)**: is widely used in enterprise environments to facilitate single sign-on (SSO). A classic example is employees accessing corporate tools like Salesforce or Workday through their company’s identity portal.
 
-- **OAuth 2.0 and OpenID Connect**
+- **[OAuth 2.0 and OpenID Connect](https://supertokens.com/blog/oauth)**
 These protocols are favored for their flexibility and scalability, especially in consumer-facing applications. For example, Spotify uses OAuth 2.0 to let users log in with their Google or Facebook accounts without exposing their passwords to Spotify.
 
 ## Benefits of IDP Authentication
@@ -147,16 +154,114 @@ By combining flexibility, scalability, and security, SuperTokens offers a develo
 
 ## How to Implement IDP Authentication
 
-<!-- need approval -->
+In this section, we will quickly, and trust me when I say quickly, make a simple app with [SuperTokens CLI](https://supertokens.com/docs/platform-configuration/supertokens-core/cli/overview)-a command line interface for scafolding applicaitons with authenication by SuperTokens, plus you get a fully functioning web application using the frontend you like.
+
+> This is a partial from a SuperTokens tutorial [Adding Authentication to Your Flask Backend with SuperTokens](https://supertokens.com/blog/flask-user-authentication).
+
+### Initialize the CLI
+
+To get started open your terminal and run the following command:
+```bash
+npx create-supertokens-app@latest
+```
+You will be presented with the following options:
+![CLI options](cli-sample.png)
+
+- **App name**: This is used as the folder name when generating the project.
+- **Frontend Framework**: Choose a framework you intend to use for your project. Some of the options include React, Next etc
+- **Backend Framework**: In this case we will select Python which allows us to present Flask when prompted.
+- **Authentication Type**: This lets you choose what authentication mechanism to use in your system. This option tells the CLI what ‘recipes’ and APIs need to be added, you can change or modify this later in code. In this example we will use email password, visit the documentation to see the full list of mechanisms and learn how they work.
+
+### Understanding the generated project
+
+Once the CLI completes you can open the project in the IDE of your choice, for the sake of this example we will cover just the backend side of things.
+
+![Backend folder structure](structure.png)
+
+The generated structure is fairly straightforward, if you need to set up a specific folder structure for your architecture it is better to do so now to avoid having to change imports later. Code snippets in this article will assume you have not changed the structure.
+
+### Configuring SuperTokens
+
+The `config.py` file is where you configure SuperTokens.
+
+```py
+supertokens_config = SupertokensConfig(
+    connection_uri="https://try.supertokens.com")
+```
+
+The `connection_uri` property tells the SDK where the SuperTokens core is hosted, this can be a self hosted core or using the managed service SuperTokens provides. In this example we are using a demo core, this should be replaced with your own connection URI because the demo core is not suitable for production.
+
+```py
+app_info = InputAppInfo(
+    app_name="Supertokens",
+    api_domain="http://localhost:3001",
+    website_domain="http://localhost:3000",
+)
+```
+
+The `api_domain` should be the domain where your API layer will be hosted (or localhost during testing), this is used for session management. Similarly the website_domain should be where your frontend will be hosted, if you are not building a frontend right now you can leave this as is or use a dummy domain.
+
+```py
+recipe_list = [
+    session.init(),
+    emailpassword.init(),
+    dashboard.init(),
+]
+```
+The `recipe_list` tells the SuperTokens SDK what features and Authentication mechanisms you want to enable. In this example we are enabling session management which is the central feature for all authentication mechanisms and email password. We are also enabling the dashboard recipe, read the [documentation](https://supertokens.com/docs/emailpassword/pre-built-ui/setup/user-management-dashboard/users-listing-and-details) to understand what this is and how you can use it.
+
+### Initialising SuperTokens
+
+Inside the `app.py` file you will see the following code (For the sake of this article we are only covering important snippets of the full file):
+
+```py
+from supertokens_python import (
+    get_all_cors_headers,
+    init,
+)
+from flask_cors import CORS
+
+from supertokens_python.framework.flask import Middleware
+import config
+
+init(
+    supertokens_config=config.supertokens_config,
+    app_info=config.app_info,
+    framework=config.framework,
+    recipe_list=config.recipe_list,
+)
+
+app = Flask(__name__)
+Middleware(app)
+CORS(
+    app=app,
+    supports_credentials=True,
+    origins="http://localhost:3000",
+    allow_headers=["Content-Type"] + get_all_cors_headers(),
+)
+```
+
+The `init` function is what you use to initialize the SuperTokens SDK, here you provide the configuration options defined in the `config.py` file.
+
+SuperTokens provides its own APIs and logic for handling authentication, the `Middleware` adds this to your system. This means that you do not need to implement your own APIs for handling authentication.
+
+We also use the `get_all_cors_headers` function provided by SuperTokens to add all the relevant CORS headers to the `CORS` middleware. Notice that the origin must match the `website_domain` set in the `config.py` file. To learn more about CORS read this [article](https://supertokens.com/blog/what-is-cross-origin-resource-sharing).
+
+### Run the project
+
+You can run the project by running the following command:
+```bash
+cd supertokens-flask-sample
+npm run start
+```
+And that’s it, the project is set up and you can start building your actual project logic instead of spending time trying to build authentication from scratch. Here are some quick links for you:
+
+- The [official documentation](https://supertokens.com/docs/guides) for a list of all features and authentication mechanisms
+- Once you are ready to deploy your project be sure to use your own core by following the [documentation](https://supertokens.com/docs/emailpassword/pre-built-ui/setup/core/saas-setup)
+- The generated project adds some custom APIs for demonstration purposes, refer to [this page](https://supertokens.com/docs/emailpassword/pre-built-ui/securing-routes) to learn how to protect your APIs
 
 
 ## Best Practices for IDP Authentication
-
-### Use Secure Connections (HTTPS) for All Authentication Flows
-Ensuring that all communication between the client, IDP, and service provider occurs over HTTPS is critical for protecting sensitive data.
-
-- **Preventing Data Interception**: HTTPS encrypts data in transit, safeguarding credentials, tokens, and user information from potential interception by attackers.
-- **Compliance with Standards**: Many compliance frameworks, such as GDPR and HIPAA, mandate secure communication protocols like HTTPS for protecting user data.
 
 ### Regularly Rotate Keys and Secrets for IDP Configurations
 Access keys, secrets, and certificates used in IDP configurations should be rotated periodically to minimize the risk of unauthorized access.
