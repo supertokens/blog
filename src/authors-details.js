@@ -158,6 +158,21 @@ module.exports = [{
   bio:
     "Technical Writer. Huge Reader. I love startups and open source.",
 }, {  
+  name: "Dejan Lukić",
+  jobTitle: "Full-stack developer, tehcnical writer & entrepreneur",
+  image: "dejan.png",
+  socials: [
+    {
+      name: "website",
+      url: "https://lukicdejan.com/blog",
+    }, {
+      name: "github",
+      url: "https://github.com/lukiccd"
+    }
+  ],
+  bio:
+    "Experienced full-stack developer, technical writer, and electronics enthusiast turned generalist.",
+}, {
   name: "Nemi Shah",
   jobTitle: "Senior iOS Engineer at Deltatre",
   image: "nemi.jpg",
