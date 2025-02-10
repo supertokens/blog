@@ -111,6 +111,12 @@ module.exports = [
 
 Finally add a image of the author into `/static/author_images` folder and make sure that the author metatag is added to `/static/blog-seo/config.json` as show in the below [metatags](#meta-tags) example.
 
+## Adding Table of Content
+
+```toc
+tight: true
+toHeading: 3
+```
 
 #### SEO for blogs
 
@@ -120,7 +126,22 @@ Images that are meant to be used as the source for `og:image`, `twitter:image` e
 
 ##### Meta Tags
 
-Meta tags for blog images are picked up from `/static/blog-seo/config.json`, for each blog you add an item to the array following the format
+Meta tags for blog images are picked up from `/static/blog-seo/config.json`, for each blog.
+
+Run the following command to automatically generate the metadata and sitemap info:
+
+> Note: You can get the file path by right-clicking on your blog folder in the content directory and selecting the "Copy Path" option
+
+```bash
+npm run generate-metadata /<path-to-supertokens-blog>/blog/content/<SLUG>
+```
+
+Check that the following files have been updated with you blog metadata and sitemap respectively.
+
+- `blog/static/blog-seo/config.json`
+- `blog/static/blog-seo/sitemapconfig.json`
+
+The metadata should be added in the following format:
 
 ```json
 {
@@ -149,7 +170,7 @@ Meta tags for blog images are picked up from `/static/blog-seo/config.json`, for
 }
 ```
 
-Then after the blog is published these meta tags will be used (on both the test and production site)
+After publishing these meta tags will be used (on both the test and production site)
 
 ### Adding cannonical tags
 
