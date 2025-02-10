@@ -282,9 +282,6 @@
         "location": "https://supertokens.com/blog/okta-alternatives"
     },
     {
-        "location": "https://supertokens.com/blog/identity-and-access-management-strategy"
-    },
-    {
         "location": "https://supertokens.com/blog/what-is-passwordless-authentication"
     },
     {
@@ -292,5 +289,8 @@
     },
     {
         "location": "https://supertokens.com/blog/password-cracking-and-how-to-protect-against-them"
+    },
+    {
+        "location": "https://supertokens.com/blog/identity-and-access-management-strategy"
     }
 ]
