@@ -39,18 +39,17 @@ Your password is the first layer of security (**something you know**), but 2FA s
 🔴 **Without 2FA**: A hacker only needs to steal your password to access your account.</br>
 🟢 **With 2FA (OTP Layer)**: Even if your password is compromised, an attacker still needs the second authentication factor, making unauthorized access much harder.
 
-**Without 2FA:**
 </br>
-<img src="./otp_bot.svg"/>
+<img src="./without-2FA.png"/>
+</br>
+</br>
 
-In this scenario, stealing your password is all it takes for an attacker to access your account.
-
-**With 2FA (OTP Layer):**
+Without 2FA, stealing your password is all it takes for an attacker to access your account.
 
 </br>
-<img src="./otp_layer.svg"/>
+<img src="./with-2FA.png"/>
 
-In this scenario, having the second layer of authentication (the OTP) **prevents** a hacker from accessing your account even if they have your password.
+With 2FA, having the second layer of authentication (the OTP) **prevents** a hacker from accessing your account even if they have your password.
 
 ### What Are OTPs? 
 A **One-Time Password (OTP)** is a temporary and time-sensitive code sent to you via an app, SMS, or email to verify a login attempt. Even if a hacker steals your password, they still need this unique code, which adds a crucial extra layer of security to your account. 
@@ -82,7 +81,7 @@ OTP bots use a combination of automation and social engineering tactics to wreak
 ### A Diagram of How An OTP Bot Attack Generally Works 
 
 </br>
-<img src="./otp_bot_flow.svg"/>
+<img src="./otp-bot-flow.png"/>
 </br>
 
 In the above diagram, the attacker does the account takeover (ATO), but some OTP bot services offer to do that as well. 
