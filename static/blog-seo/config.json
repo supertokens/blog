@@ -3094,29 +3094,6 @@
         "schema": "<script type=\"application/ld+json\">\n {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/okta-alternatives\"\n            },\n            \"headline\": \"Discover the top 7 Okta alternatives for identity and access management (IAM), including SuperTokens, Auth0, Ping Identity, and more. Compare features, pricing, scalability, and customization to find the best solution for your business needs.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/okta-alternatives.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        } </script>"
     },
     {
-        "path": "/blog/identity-and-access-management-strategy",
-        "metaTags": [
-            "<meta name=\"description\" content=\"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\" />",
-            "",
-            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
-            "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"How to Build Effective Identity & Access Management Strategy\" />",
-            "<meta property=\"og:type\" content=\"article\" />",
-            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/identity-and-access-management-strategy\" />",
-            "<meta property=\"og:description\" content=\"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\"/>",
-            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/iam-strategy.png\" />",
-            "",
-            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\" />",
-            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/identity-and-access-management-strategy\" />",
-            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/iam-strategy.png\" /> ",
-            "<!--OG Tags-->",
-            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/identity-and-access-management-strategy\">"
-        ],
-        "title": "How to Build Effective Identity & Access Management Strategy",
-        "schema": "<script type=\"application/ld+json\">\n {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-strategy\"\n            },\n            \"headline\": \"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-strategy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        } <script>"
-    },
-    {
         "path": "/blog/what-is-passwordless-authentication",
         "metaTags": [
             "<meta name=\"description\" content=\"What is passwordless authentication? Solve login challenges, explore methods, benefits, and tools for secure implementations.\" />",
@@ -3138,5 +3115,75 @@
         ],
         "title": "What is Passwordless Authentication: The Cool Kid on The Block? 🔒🚫",
         "schema": "<script type=\"application/ld+json\">\n {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/what-is-passwordless-authentication\"\n            },\n            \"headline\": \"What is passwordless authentication? Solve login challenges, explore methods, benefits, and tools for secure implementations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/what-is-passwordless-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        } </script>"
+    },
+    {
+        "path": "/blog/choosing-the-right-authentication-provider",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how authentication providers and APIs secure modern applications. Explore features and integration tips to enhance user authentication and data protection.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Choosing the Right Authentication Provider and API for Secure Applications\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/choosing-the-right-authentication-provider\" />",
+            "<meta property=\"og:description\" content=\"Learn how authentication providers and APIs secure modern applications. Explore features and integration tips to enhance user authentication and data protection.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/right-auth-provider-and-API.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how authentication providers and APIs secure modern applications. Explore features and integration tips to enhance user authentication and data protection.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/choosing-the-right-authentication-provider\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/right-auth-provider-and-API.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/choosing-the-right-authentication-provider\">"
+        ],
+        "title": "Choosing the Right Authentication Provider and API for Secure Applications",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/choosing-the-right-authentication-provider\"\n            },\n            \"headline\": \"Learn how authentication providers and APIs secure modern applications. Explore features and integration tips to enhance user authentication and data protection.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/right-auth-provider-and-API.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+
+        "path": "/blog/password-cracking-and-how-to-protect-against-them",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn the most common password cracking techniques used by hackers and practical strategies to secure your accounts from such threats.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Top Password Cracking Techniques and How to Protect Against Them 🔐\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/password-cracking-and-how-to-protect-against-them\" />",
+            "<meta property=\"og:description\" content=\"Learn the most common password cracking techniques used by hackers and practical strategies to secure your accounts from such threats.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/password-cracking.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn the most common password cracking techniques used by hackers and practical strategies to secure your accounts from such threats.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/password-cracking-and-how-to-protect-against-them\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/password-cracking.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/password-cracking-and-how-to-protect-against-them\">"
+        ],
+        "title": "Top Password Cracking Techniques and How to Protect Against Them 🔐",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/password-cracking-and-how-to-protect-against-them\"\n            },\n            \"headline\": \"Learn the most common password cracking techniques used by hackers and practical strategies to secure your accounts from such threats.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/password-cracking.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/identity-and-access-management-strategy",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How to Build Effective Identity & Access Management Strategy\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/identity-and-access-management-strategy\" />",
+            "<meta property=\"og:description\" content=\"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/iam-strategy.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/identity-and-access-management-strategy\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/iam-strategy.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/identity-and-access-management-strategy\">"
+        ],
+        "title": "How to Build Effective Identity & Access Management Strategy",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-strategy\"\n            },\n            \"headline\": \"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-strategy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
