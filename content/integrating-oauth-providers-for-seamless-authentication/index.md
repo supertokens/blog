@@ -50,7 +50,7 @@ access through tokens that represent their permissions.
 OAuth 2.0 is the current standard for authorization, distinguishing
 between authorization and authentication.
 
-![Authentication vs Authorization](./Authentication-vs-Authorization.png)
+![Authentication vs Authorization](./authentication-vs-authorization.png)
 
 ### **Authorization**
 
@@ -257,7 +257,7 @@ SuperTokens.init({
 
 ## **SuperTokens Features That Enhance OAuth Integration**
 
-![Supertokens Features](./Supertokens-Features.png)
+![Supertokens Features](./supertokens-features.png)
 
 SuperTokens offers several features that significantly improve the
 integration of OAuth providers:
@@ -341,7 +341,7 @@ adhere to best practices to mitigate risks:
 
 ## **Advanced Capabilities with SuperTokens**
 
-![Advanced capabilities with SuperTokens](./Advanced-capabilities-with-Supertokens.png)
+![Advanced capabilities with SuperTokens](./advanced-capabilities-with-supertokens.png)
 
 SuperTokens also offers advanced capabilities that enhance security and
 functionality:
