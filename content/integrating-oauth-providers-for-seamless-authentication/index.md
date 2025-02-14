@@ -210,25 +210,26 @@ const SuperTokens = require("supertokens-node");
 const ThirdParty = require("supertokens-node/recipe/thirdparty");
 
 SuperTokens.init({
-    appInfo: {
-        appName: "My App",
-        apiDomain: "http://localhost:3000",
-        websiteDomain: "http://localhost:3000"
-    },
-
-    supertokens: { connectionURI: "http://localhost:3567" },
-    recipeList: [
-        ThirdParty.init({
-            signInAndUpFeature: {
-                providers: [
-                    ThirdParty.Google({
-                        clientId: "GOOGLE_CLIENT_ID", 
-                        clientSecret: "GOOGLE_CLIENT_SECRET" 
-                    })
-                ]
-            }
-        })
-    ]
+  appInfo: {
+    appName: "My App",
+    apiDomain: "http://localhost:3000",
+    websiteDomain: "http://localhost:3000"
+  },
+  supertokens: {
+    connectionURI: "http://localhost:3567"
+  },
+  recipeList: [
+    ThirdParty.init({
+      signInAndUpFeature: {
+        providers: [
+          ThirdParty.Google({
+            clientId: "GOOGLE_CLIENT_ID", 
+            clientSecret: "GOOGLE_CLIENT_SECRET" 
+          })
+        ]
+      }
+    })
+  ]
 });
 ```
 
@@ -236,22 +237,21 @@ SuperTokens.init({
 
 ``` javascript
 import SuperTokens from "supertokens-auth-react";
-import ThirdParty, { Google } from "supertokens-auth-react/recipe/thirdparty";
+import ThirdParty, {Google} from "supertokens-auth-react/recipe/thirdparty";
 
 SuperTokens.init({
-    appInfo: {
-        appName: "My App",
-        apiDomain: "http://localhost:3000",
-        websiteDomain: "http://localhost:3000"
-    },
-
-    recipeList: [
-        ThirdParty.init({
-            signInAndUpFeature: {
-                providers: [Google.init()]
-            }
-        })
-    ]
+  appInfo: {
+    appName: "My App",
+    apiDomain: "http://localhost:3000",
+    websiteDomain: "http://localhost:3000"
+  },
+  recipeList: [
+    ThirdParty.init({
+      signInAndUpFeature: {
+        providers: [Google.init()]
+      }
+    })
+  ]
 });
 ```
 
