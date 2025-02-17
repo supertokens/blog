@@ -56,7 +56,7 @@ function appendBlogMetadataToFile(frontmatter, urlSlug, outputFilePath) {
             `<link rel=\"canonical\" href=\"https://supertokens.com/blog/${urlSlug}\">`
         ],
         title: title,
-        schema: `{
+        schema: `<script type="application/ld+json"> {
             "@context": "https://schema.org",
             "@type": "Article",
             "mainEntityOfPage": {
@@ -78,7 +78,7 @@ function appendBlogMetadataToFile(frontmatter, urlSlug, outputFilePath) {
                     "url": "https://supertokens.com/static/assets/dark-home/logo.png"
                 }
             }
-        }`
+        }</script>`
     };
 
     // Read the existing JSON file or create a new array if the file doesn't exist
