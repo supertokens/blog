@@ -3140,6 +3140,7 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/choosing-the-right-authentication-provider\"\n            },\n            \"headline\": \"Learn how authentication providers and APIs secure modern applications. Explore features and integration tips to enhance user authentication and data protection.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/right-auth-provider-and-API.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+
         "path": "/blog/password-cracking-and-how-to-protect-against-them",
         "metaTags": [
             "<meta name=\"description\" content=\"Learn the most common password cracking techniques used by hackers and practical strategies to secure your accounts from such threats.\" />",
@@ -3184,28 +3185,5 @@
         ],
         "title": "How to Build Effective Identity & Access Management Strategy",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-strategy\"\n            },\n            \"headline\": \"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-strategy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
-    },
-    {
-        "path": "/blog/integrating-oauth-providers-for-seamless-authentication",
-        "metaTags": [
-            "<meta name=\"description\" content=\"Discover how to integrate OAuth providers for seamless authentication.\" />",
-            "",
-            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
-            "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"Integrating OAuth Providers for Seamless Authentication\" />",
-            "<meta property=\"og:type\" content=\"article\" />",
-            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/integrating-oauth-providers-for-seamless-authentication\" />",
-            "<meta property=\"og:description\" content=\"Discover how to integrate OAuth providers for seamless authentication.\"/>",
-            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/integrating-oauth-providers-for-seamless-authentication.png\" />",
-            "",
-            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Discover how to integrate OAuth providers for seamless authentication.\" />",
-            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/integrating-oauth-providers-for-seamless-authentication\" />",
-            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/integrating-oauth-providers-for-seamless-authentication.png\" /> ",
-            "<!--OG Tags-->",
-            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/integrating-oauth-providers-for-seamless-authentication\">"
-        ],
-        "title": "Integrating OAuth Providers for Seamless Authentication",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/integrating-oauth-providers-for-seamless-authentication\"\n            },\n            \"headline\": \"Discover how to integrate OAuth providers for seamless authentication.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/integrating-oauth-providers-for-seamless-authentication.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
