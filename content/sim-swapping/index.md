@@ -43,7 +43,15 @@ Wireless providers are working hard to prevent this type of attack, but there ar
 2. Scammers impersonate the victim and convince the mobile carrier to move the victim's phone number to a new SIM card. 
 3. Scammers can now access the victim's phone's data and change passwords 
 
+## Implement These Best Practices to Block SIM Swap Attacks 
+Immediate Steps for Business: 
+1. Ditch SMS 2FA as the default authentication method. .
+2. Enforce strong MFA (TOTP, WebAuthn) across high-risk actions. 
+3. Monitor and auto-flag unusual login behaviors. 
+4. Use secure session management tools like SuperTokens. 
+5. Educate users on social engineering risks. 
 
+## Final Thoughts: Secure Your Authentication System Before It’s Too Late
+Businesses can no longer rely on SMS-based authentication to protect user accounts. SWIM swapping is an industry-wide problem, but SuperTokens provides the authentication tools to stop account takeover before they happen. 
 
-
-
+Next step is to migrate your authentication system to a modern and secure CIAM solution that keeps customer accounts safe at scale. 
