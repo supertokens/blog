@@ -292,5 +292,8 @@
     },
     {
         "location": "https://supertokens.com/blog/identity-and-access-management-strategy"
+    },
+    {
+        "location": "https://supertokens.com/blog/integrating-oauth-providers-for-seamless-authentication"
     }
 ]
