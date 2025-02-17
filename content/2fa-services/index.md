@@ -25,7 +25,7 @@ Why it might work for you:
 - No charges for dev licenses - which is an article unto itself considering the offering out there, and best left for another time.
 - Easily integrates with a plethora of backend and frontend frameworks out there.
 
-More importantly to 2FA, SuperTokens comes with OTP via SMS and email. The best part? You won’t need a PhD in cryptography to implement it. Plus, the pricing won’t make your CFO faint - it's $0.01 / MAU  for the managed version (with a minimum charge of $100).
+[More importantly to 2FA, SuperTokens comes with OTP via SMS and email](https://supertokens.com/docs/additional-verification/mfa/introduction). The best part? You won’t need a PhD in cryptography to implement it. Plus, the [pricing won’t make your CFO faint](https://supertokens.com/pricing) - it's $0.01 / MAU  for the managed version (with a minimum charge of $100).
 
 ## 2. Duo Security
 
@@ -36,21 +36,21 @@ Why it might work for you:
 - Clean, modern UI.
 - Strong focus on large organizations with an enteprise-grade 2FA.
 - Push notifications, SMS, and biometric verification
-- Free tier (up to 10 users); Pricing starts at $3 per user per month on the Essentials plan.
+- Free tier (up to 10 users); [Pricing starts at $3 per user per month](https://duo.com/editions-and-pricing) on the Essentials plan.
 
-While it makes a lot of sense to use Duo for enterprise-grade 2FA, it might be a bit too much for smaller organizations. 
+While it makes a lot of sense to use Duo for enterprise-grade 2FA, it might be a bit too much for smaller organizations. The complexity isn't just in the price tag - you're also looking at implementation overhead assuming you have a dedicated security team, enterprise features that you might not need (e.g. device health checks) and integration complexity that might be overkill for simpler auth flows.
 
 ## 3. Okta Adaptive MFA
 
 Continuing with the enterprise theme, Okta Adaptive MFA is a great choice for organizations that need to support a wide range of devices and users. It is a bit on the pricier side (6$ per user per month), but if the feature set it offers is what you need, it's a solid option.
 
-Note: Okta comes with a regular MFA offering, too, priced at $3 per user per month.
+> Note: Okta comes with a regular MFA offering, too, priced at $3 per user per month.
 
 Why it might work for you:
 
-- Phishing-resistant by design (WebAuthn, Smart Cards, FastPass)
-- Context-aware authentication that actually works
-- Proactive threat detection via ThreatInsight
+- Phishing-resistant by design (WebAuthn, [Smart Cards](https://help.okta.com/en-us/content/topics/security/idp-smart-card-workflow.htm), [FastPass](https://www.okta.com/products/fastpass/))
+- [Context-aware authentication](https://www.okta.com/identity-101/context-based-authentication/) that actually works
+- Proactive threat detection via [ThreatInsight](https://help.okta.com/en-us/content/topics/security/threat-insight/ti-index.htm)
 - Device security checks
 
 While investing in your security is a worthwhile endeavor, there may be cheaper options out there (that work just as well).
