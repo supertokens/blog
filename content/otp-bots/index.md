@@ -1,7 +1,7 @@
 ---
 title: "One-Time Password (OTP) Bots: How They Work and How to Defend Against Them"
 description: "Explore how OTP bots bypass two-factor authentication (2FA), their growing threats, and strategies to protect your application using tools like SuperTokens."
-date: "2025-02-27"
+date: "2025-02-17"
 cover: "otp-bots.png"
 category: "featured"
 author: "Maria Shimkovska"
