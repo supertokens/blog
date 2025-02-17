@@ -3140,6 +3140,7 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/choosing-the-right-authentication-provider\"\n            },\n            \"headline\": \"Learn how authentication providers and APIs secure modern applications. Explore features and integration tips to enhance user authentication and data protection.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/right-auth-provider-and-API.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+
         "path": "/blog/password-cracking-and-how-to-protect-against-them",
         "metaTags": [
             "<meta name=\"description\" content=\"Learn the most common password cracking techniques used by hackers and practical strategies to secure your accounts from such threats.\" />",
