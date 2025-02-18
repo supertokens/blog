@@ -37,6 +37,46 @@ A **webhook** is like a notification system between two apps. When something hap
 
 For example, imagine you’re using a payment app. When a customer makes a payment, the app can automatically send a webhook to your server with details about the payment, like the amount and the customer’s name. Your server doesn’t have to keep asking the payment app for updates—it just gets notified when something important happens.
 
+### How Webhooks Generally Work
+Creating a webhook involves setting up a system where one application automatically sends data to another when a specific event happens. Here is a simple step-by-step overview:
+
+#### Choose the Event to Trigger the Webhook
+- Decide what event should trigger the webhook.
+- Example: A new user signs up, a payment is made, or an issue is created in a project management tool like GitHub. 
+
+#### Set Up the Webhook Endpoint (Receiver)
+- Create a URL (an API endpoint) in the destination system to receive the webhook request.  
+- This is usually a REST API that listens for incoming data. 
+- Example: A server with a route like `https://yourapp.com/webhook`.
+
+#### Configure the Webhook in the Source System 
+- In the source system (where the event happens), configure the webhook by providing: 
+    - The destination URL (your webhook endpoint).
+    - The type of event it should listen for. 
+    - Authentication details if needed. 
+
+#### Send Data When the Event Occurs
+- When the event happens, the source systems sends an HTTP request (usually a `POST` request) to the destination URL with relevant data in JSON format.
+- Example payload: 
+```json
+{
+    "event": "user_signed_up",
+    "user": {
+        "id": 123,
+        "name": "John Snow",
+        "email": "johnsnow@winteriscoming.com"
+    }
+}
+```
+
+#### Process the Webhook in the Destination System
+- The destination system receives the webhook request. 
+- It validates the request, extracts the data, and processes it (e.g., storing it in a database or triggering another action).
+- It usually sends back a `200 OK` response to confirm it received the webhook.
+
+#### Handles Errors and Retries 
+- If the webhook fails (the destination server is down), the source system may retry sending the request after some time. 
+
 ## Key Differences Between APIs and Webhooks
 
 ## How SuperTokens Enhances API and Webhook Security 
