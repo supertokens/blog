@@ -25,7 +25,54 @@ APIs are a two way communication. They can handle large volumes of data, more in
 
 They are like a layer of software between the app and a web server. Someone uses the app that will request data from the server, like loading a set of images. That triggers the API, and it handles communication as needed for whatever you are doing. 
 
-They can support more advanced security protocols. They have a higher capability of security. It doesn't mean that all APIs are more secure, or that webhooks are not secure. 
+APIs can support more advanced security protocols. They have a higher capability of security. It doesn't mean that all APIs are more secure, or that webhooks are not secure. 
+
+- An **API** lets clients request data whenever they need it (unlike webhooks, which push data automatically).
+- **Common uses**: Fetching data, submitting forms, processing payments, etc.
+- **Best practices**: Use authentication, rate limiting, and error handling.
+
+### How APIs Generally Work
+An **API** allows one system to request data or perform actions in another system. Unlike webhooks, APIs require the client to make a request to get a response. Here’s how you set one up:
+
+#### Define What Your API Will Do 
+Decide what functionality your API should provide. This includes:
+
+- What data it will send or receive (e.g., user info, orders, messages).
+- What actions it will allow (e.g., creating, updating, deleting records).
+- **Example**: A User API that allows clients to get user details and create new users.
+
+#### Set Up a Server to Handle API Requests
+- Create a server that listens to API requests. This server will process requests and return responses. 
+
+```javascript
+const express = require('express');
+const app = express();
+
+app.use(express.json()); 
+
+const users = [{ id: 1, name: 'John Doe', email: 'john@example.com' }];
+
+// GET endpoint to retrieve users
+app.get('/users', (req, res) => {
+    res.json(users);
+});
+
+// POST endpoint to create a new user
+app.post('/users', (req, res) => {
+    const newUser = { id: users.length + 1, ...req.body };
+    users.push(newUser);
+    res.status(201).json(newUser);
+});
+
+// Start the server
+app.listen(3000, () => console.log('API running on port 3000'));
+```
+
+#### Call the API (Client Side)
+A client (another system, app, or frontend) makes requests to the API using HTTP methods like `GET`, `POST`, `PUT`, or `DELETE`.
+
+#### Handle Authentication
+To secure your API, you can require authentication (e.g., API keys, JWT tokens).
 
 ## What Is A Webhook? 📩
 
