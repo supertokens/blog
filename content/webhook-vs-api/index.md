@@ -38,3 +38,9 @@ A **webhook** is like a notification system between two apps. When something hap
 For example, imagine you’re using a payment app. When a customer makes a payment, the app can automatically send a webhook to your server with details about the payment, like the amount and the customer’s name. Your server doesn’t have to keep asking the payment app for updates—it just gets notified when something important happens.
 
 ## Key Differences Between APIs and Webhooks
+
+## How SuperTokens Enhances API and Webhook Security 
+
+- **Session Management**: SuperTokens provides robust session management solutions that ensure secure API interactions.
+- **Token Theft Detection**: With features like rotating refresh tokens and automatic token revocation, SuperTokens helps detect and prevent unauthorized access.
+- **Ease of Integration**: SuperTokens offers straightforward integration processes, making it easier for developers to implement secure authentication in their applications.
