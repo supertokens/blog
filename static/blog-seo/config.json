@@ -3207,5 +3207,28 @@
         ],
         "title": "One-Time Password (OTP) Bots: How They Work and How to Defend Against Them",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/otp-bots\"\n            },\n            \"headline\": \"Explore how OTP bots bypass two-factor authentication (2FA), their growing threats, and strategies to protect your application using tools like SuperTokens.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/otp-bots.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+      },
+      {
+        "path": "/blog/integrating-oauth-providers-for-seamless-authentication",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover how to integrate OAuth providers for seamless authentication.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Integrating OAuth Providers for Seamless Authentication\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/integrating-oauth-providers-for-seamless-authentication\" />",
+            "<meta property=\"og:description\" content=\"Discover how to integrate OAuth providers for seamless authentication.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/integrating-oauth-providers-for-seamless-authentication.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Discover how to integrate OAuth providers for seamless authentication.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/integrating-oauth-providers-for-seamless-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/integrating-oauth-providers-for-seamless-authentication.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/integrating-oauth-providers-for-seamless-authentication\">"
+        ],
+        "title": "Integrating OAuth Providers for Seamless Authentication",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/integrating-oauth-providers-for-seamless-authentication\"\n            },\n            \"headline\": \"Discover how to integrate OAuth providers for seamless authentication.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/integrating-oauth-providers-for-seamless-authentication.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]

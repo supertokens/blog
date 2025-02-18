@@ -295,5 +295,8 @@
     },
     {
         "location": "https://supertokens.com/blog/otp-bots"
+    },
+    {
+        "location": "https://supertokens.com/blog/integrating-oauth-providers-for-seamless-authentication"
     }
 ]
