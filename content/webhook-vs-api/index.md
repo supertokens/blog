@@ -74,6 +74,15 @@ A client (another system, app, or frontend) makes requests to the API using HTTP
 #### Handle Authentication
 To secure your API, you can require authentication (e.g., API keys, JWT tokens).
 
+```pgsql 
+    Client                      Server
+      |                            |
+      | 1. Request data  --------->|
+      |                            |
+      |<--------- 2. Response data |
+      |                            |
+```
+
 ## What Is A Webhook? 📩
 
 When I was seven years old, I had the annoying habit of asking my dad "Are we there yet? Are we there yet?" on drives. All the time. He kept responding with "No,we're not." After a few minutes, which to me must have felt like hours, I would once again ask, "Are we there yet?" 🚗 After a while he would respond with "I will tell you when we get there."
@@ -123,6 +132,16 @@ Creating a webhook involves setting up a system where one application automatica
 
 #### Handles Errors and Retries 
 - If the webhook fails (the destination server is down), the source system may retry sending the request after some time. 
+
+```pgsql 
+   Event Source                   Destination Server
+      |                                 |
+      | 1. Event occurs (e.g., new user signup)
+      |                                 |
+      | 2. Webhook automatically ------>|
+      |    sends data                   |
+      |                                 |
+```
 
 ## Key Differences Between APIs and Webhooks
 ### Request Initiation: 
