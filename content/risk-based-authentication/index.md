@@ -27,6 +27,8 @@ Have you noticed that sometimes when you travel to a foreign country and try to 
 
 RBA operates by collecting and analyzing data to assess the risk level of each authentication attempt. The process can be broken down into 3 high level steps:
 
+![rba](./rba.png)
+
 ### Data Collection
 
 RBA systems gather information from multiple sources, including:
@@ -48,7 +50,6 @@ Based on the assessed risk level, the system enforces appropriate authentication
 - **Medium Risk:** Additional verification, such as answering security questions or receiving a one-time passcode.
 - **High Risk:** Strict measures like multi-factor authentication (MFA) or blocking the attempt until further verification.
 
----
 
 ## Benefits of Risk-Based Authentication
 
@@ -56,15 +57,15 @@ Implementing RBA offers several advantages:
 
 ### Enhanced Security
 
-By continuously monitoring and assessing risks, RBA provides a robust defense against unauthorized access and potential breaches.
+By continuously monitoring and assessing risks, RBA provides a robust defense against unauthorized access and potential breaches. Prevention is always easier than repairing the damage done by data breaches/unauthorized access.
 
 ### Improved User Experience
 
-Legitimate users enjoy seamless access without unnecessary hurdles, as additional verification steps are only introduced when suspicious activity is detected.
+By contextually augmenting the authentication flow with additional challenges, legitimate users enjoy a seamless authentication experience without unnecessary hurdles. 
 
 ### Fraud Prevention
 
-RBA effectively reduces the likelihood of fraudulent activities by identifying and mitigating high-risk authentication attempts.
+RBA effectively reduces the likelihood of fraudulent activities by identifying and mitigating high-risk authentication attempts. It can also detect if accounts have been compromised and issue session termination to ensure all account access is terminated until manually reinstated.
 
 ### Regulatory Compliance
 
