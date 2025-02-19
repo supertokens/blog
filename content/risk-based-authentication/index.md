@@ -17,15 +17,15 @@ toHeading: 3
 
 ## What is Risk-Based Authentication?
 
-Risk-Based Authentication (RBA) is an adaptive security measure that evaluates the risk associated with each login attempt in real-time. By analyzing various contextual factors, RBA determines the appropriate level of authentication required, ensuring that higher-risk attempts undergo stricter verification while legitimate users experience minimal friction.
+Risk-Based Authentication (RBA) is an adaptive security measure that evaluates the risk associated with each login attempt in real-time. By analyzing various contextual factors, RBA determines the appropriate level of authentication required, ensuring that higher-risk attempts to undergo stricter verification while legitimate users experience minimal friction.
 
-Have you noticed that sometimes when you travel to a forign country and try to log into your email account, your email provider may suddenly supplement the authentication flow with an additional identity check? This is Risk-Based Authentication kicking in.
+Have you noticed that sometimes when you travel to a foreign country and try to log into your email account, your email provider may suddenly supplement the authentication flow with an additional identity check? Or if you try to log into your account with multiple devices in a short amount of time, you may get additional security checks. This is Risk-Based Authentication kicking in.
 
 ---
 
 ## How Does Risk-Based Authentication Work?
 
-RBA operates by collecting and analyzing data to assess the risk level of each authentication attempt. The process involves:
+RBA operates by collecting and analyzing data to assess the risk level of each authentication attempt. The process can be broken down into 3 high level steps:
 
 ### Data Collection
 
