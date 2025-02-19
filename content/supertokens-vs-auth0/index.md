@@ -12,355 +12,187 @@ author: "Mostafa Ibrahim"
 3. [SuperTokens vs. Auth0 Key Feature Differences](#supertokens-vs-auth0-key-feature-differences)
 4. [SuperTokens vs. Auth0 Pros & Cons](#supertokens-vs-auth0-pros--cons)
 5. [Summary Table](#summary-table)
-6. [Workflow Differences: Using Each Tool to Design a User Access Flow](#workflow-differences-using-each-tool-to-design-a-user-access-flow)
-7. [Understanding Self-Hosted vs. Managed User Management](#understanding-self-hosted-vs-managed-user-management)
-8. [Who Should Use SuperTokens vs. Auth0](#who-should-use-supertokens-vs-auth0)
-9. [SuperTokens vs. Auth0: Pricing Comparison](#supertokens-vs-auth0-pricing-comparison)
-10. [Conclusion](#conclusion)
+6. [Who Should Use SuperTokens vs. Auth0](#who-should-use-supertokens-vs-auth0)
+7. [SuperTokens vs. Auth0: Pricing Comparison](#supertokens-vs-auth0-pricing-comparison)
+8. [Conclusion](#conclusion)
 
 ## Introduction
 
-Hey there, fellow developers! Are you scratching your head trying to choose between SuperTokens and Auth0 for your authentication needs? Well, you're in the right place! In this deep dive, we'll compare these two popular authentication solutions, exploring their features, setup processes, and use cases. By the end, you'll have a clearer picture of which option might be the best fit for your project. So, let's jump right in!
+Choosing the right authentication provider can be challenging. With options ranging from self-hosted to managed services, and factors like account linking, MFA, and compliance certifications (SOC 2, GDPR), evaluating them can feel overwhelming. In this Auth0 vs. SuperTokens comparison, we aim to help you make an informed decision by analyzing key features, pricing, and the ideal use case for each solution.
 
 ## Do SuperTokens and Auth0 Work Differently?
 
-At their core, SuperTokens and Auth0 share the same goal: to provide secure authentication and authorization for web applications. However, they differ in their approach and underlying architecture.
+SuperTokens is an open-source authentication solution that can be self-hosted or used with their managed cloud service. Unlike traditional self-hosted systems, SuperTokens follows a modular architecture with a lightweight core that runs as a separate service, allowing you to maintain control over your authentication infrastructure while offloading complexity. This design enables you to customize authentication flows, choose only the components you need, and even swap out databases or extend functionality as required.
 
-SuperTokens is an open-source, self-hosted solution that gives you full control over your authentication infrastructure. It's designed with a modular architecture, allowing you to pick and choose the components you need. This flexibility is great if you have specific requirements or want to customize your auth flow.
-
-On the other hand, Auth0 is a cloud-based, managed service that handles authentication and authorization for you. It offers a comprehensive suite of features out of the box, making it easier to get started quickly without worrying about the nitty-gritty details of implementation.
+In contrast, Auth0 is a fully managed, cloud-based authentication and authorization service. It provides a feature-rich, all-in-one solution that abstracts away infrastructure management, making it easier to implement authentication quickly. However, this comes with less flexibility and control over data storage, customization, and pricing compared to a modular, self-hosted alternative like SuperTokens.
 
 ## SuperTokens vs. Auth0 Key Feature Differences
 
-Both SuperTokens and Auth0 offer a wide range of features to streamline authentication and authorization processes. Here's a high-level comparison of some key features:
 
-- **Authentication Methods:** Both SuperTokens and Auth0 support a variety of authentication methods, including passwordless, social login, and multi-factor authentication (MFA).
-  - **Social Login:** Auth0 provides an easy way to add popular social providers through their dashboard. They also allow you to add custom OAuth providers by entering the necessary details. SuperTokens supports any OAuth 2.0 provider, offering a simple callback function in your backend SDK to integrate custom providers.
-  - **Passwordless:** Both solutions offer passwordless authentication options, such as magic links or one-time passwords (OTP).
-  - **Multi-Factor Authentication (MFA):** Auth0 has built-in support for an extensive number of MFA methods, while SuperTokens allows you to setup MFA with email/sms based OTP and TOTP. SuperTokens does provide extensibility, allowing you to build your own custom MFA flows, though that requires additional effort
-- **Customization and Flexibility:** SuperTokens shines in terms of customization, allowing you to tailor almost every aspect of the authentication process. You can easily override backend APIs, customize UI components, and implement custom logic at various stages of the auth flow.
+Both SuperTokens and Auth0 offer a robust set of features to simplify authentication and authorization. Below is a high-level comparison of their key differences:
 
-  Auth0, while less flexible, offers a range of customization options through its dashboard. You can modify email templates, add custom fields to sign-up forms, and use Auth0 Rules, Hooks, or Actions to add custom logic to the authentication process.
-- **Open-Source vs. Managed Service:** SuperTokens is an open-source solution that you host and manage yourself, while Auth0 is a managed service. This fundamental difference impacts many aspects of how you'll work with each solution, but we'll delve deeper into this in a later section.
-- **Scalability and Performance:** Both solutions are designed to handle high loads, but their approaches differ:
-  - **SuperTokens:** Being self-hosted, you have control over the infrastructure, allowing you to optimize performance based on your specific needs. You can scale horizontally by adding more instances of the SuperTokens core.
-  - **Auth0:** As a managed service, Auth0 handles scalability for you. They use a globally distributed infrastructure to ensure low latency and high availability. However, you have less control over performance optimizations.
+### **Authentication Methods**
 
-In terms of ease of use, Auth0 generally offers a quicker setup process with its managed service approach. SuperTokens requires more initial configuration but provides greater flexibility for developers who want or need more control over their authentication infrastructure.
+Both SuperTokens and Auth0 support multiple authentication methods, including passwordless authentication, social login, and multi-factor authentication (MFA).
+
+-   **Social Login:**
+
+    -   Auth0 provides an easy way to integrate popular social providers via its dashboard. It also allows custom OAuth provider integration by manually configuring the necessary details.
+    -   SuperTokens supports any OAuth 2.0 provider and simplifies custom provider integration through a backend callback function in its SDK.
+-   **Passwordless Authentication:**
+
+    -   Both solutions support passwordless authentication via magic links or one-time passwords (OTP).
+-   **Multi-Factor Authentication (MFA):**
+
+    -   Auth0 has built-in support for a wide range of MFA methods, including SMS, TOTP, push notifications, and security keys.
+    -   SuperTokens natively supports OTP-based MFA via email, SMS, or TOTP. While it doesn't offer built-in support for all MFA methods, it provides extensibility, allowing developers to implement custom MFA flows if needed.
+
+### **Customization and Flexibility**
+
+-   **SuperTokens** stands out for its deep customization capabilities. Developers can:
+
+    -   Override backend APIs to modify authentication logic.
+    -   Customize UI components to match brand requirements.
+    -   Implement custom logic at various stages of the authentication flow.
+-   **Auth0** offers customization primarily through its dashboard. Users can:
+
+    -   Modify email templates and signup fields.
+    -   Use Auth0 Rules, Hooks, and Actions to extend authentication logic.
+    -   However, deeper customizations may be limited compared to SuperTokens' modular approach.
+
+### **Open-Source vs. Managed Service**
+
+-   **SuperTokens** is open-source and can be self-hosted or used via its managed cloud service. Self-hosting gives you full control over your authentication infrastructure, including data storage and scaling.
+-   **Auth0** is a fully managed service, meaning it abstracts infrastructure management but limits control over data residency and backend logic.
+
+### **Scalability and Performance**
+
+Both solutions are built to handle high traffic, but their scaling approaches differ:
+
+-   **SuperTokens** (Self-Hosted or Managed Cloud):
+
+    -   If self-hosted, you have full control over infrastructure and can optimize performance based on your needs.
+    -   SuperTokens supports horizontal scaling by adding more instances of its authentication core.
+-   **Auth0** (Fully Managed Service):
+
+    -   Auth0 automatically scales with a globally distributed infrastructure to ensure low latency and high availability.
+    -   However, users have limited control over performance optimizations or infrastructure configurations.
+
+### **Ease of Use**
+
+-   **Auth0** provides a quicker setup experience, thanks to its managed service approach and pre-built integrations.
+-   **SuperTokens** requires more initial configuration, especially if self-hosted, but offers greater flexibility for developers who need deeper customization and control over their authentication stack.
+
+By understanding these key differences, you can choose the solution that best aligns with your requirements---whether you prioritize ease of use with a managed service (Auth0) or control and flexibility with an open-source solution (SuperTokens).
 
 ## SuperTokens vs. Auth0 Pros & Cons
 
-To help you weigh the options, let's explore the key pros and cons of each solution:
-
-### SuperTokens Pros:
-- Open-source and self-hosted, giving you full control and customization
-- Modular design allows you to pick and choose the components you need
-- Highly scalable and performant, with the ability to optimize based on your requirements
-- No vendor lock-in or recurring costs (beyond hosting and maintenance)
-
-### SuperTokens Cons:
-- Requires more technical expertise and resources for setup, deployment, and maintenance
-- Potentially higher upfront costs for infrastructure and staffing
-- Ongoing responsibility for security updates and patches
-
-### Auth0 Pros:
-- Managed service, simplifying setup and maintenance
-- Comprehensive feature set out of the box, with support for various authentication methods
-- Seamless integration with popular identity providers and third-party services
-- Automatic updates and security patches
-
-### Auth0 Cons:
-
-- Pricing can be extremely expensive
-- Limited customization options compared to self-hosted solutions
-- Vendor lock-in and recurring costs based on usage
-- Potential performance and latency issues depending on your application's location
-
-### Summary Table:
-
-| Aspect                          | SuperTokens        | Auth0                |
-|---------------------------------|--------------------|----------------------|
-| Hosting Model                   | Self-hosted ✅      | Managed service ✅    |
-| Customization                   | High flexibility ✅ | Limited options ❌    |
-| Setup Complexity                | More complex ❌     | Simpler ✅            |
-| Technical Expertise Required    | Higher ❌           | Lower ✅              |
-| Control over Infrastructure     | Full control ✅     | Limited control ❌    |
-| Scalability                     | Highly scalable ✅  | Scalable, but less control ⚠️ |
-| Performance Optimization        | Customizable ✅     | Limited options ❌    |
-| Feature Set                     | Modular, pick what you need ✅ | Comprehensive out-of-the-box ✅ |
-| Integration with Third-party Services | Requires custom implementation ⚠️ | Seamless integration ✅ |
-| Ongoing Maintenance             | Self-managed ❌     | Handled by Auth0 ✅   |
-| Security Updates                | Self-managed ❌     | Automatic ✅          |
-| Vendor Lock-in                  | No lock-in ✅       | Potential lock-in ❌  |
-| Pricing Model                   | Infrastructure costs only ✅ | Usage-based recurring costs ❌ |
-| Learning Curve                  | Steeper ❌          | Gentler ✅            |
-
-## Workflow Differences: Using Each Tool to Design a User Access Flow
-
-To better understand the practical differences between SuperTokens and Auth0, let's walk through the process of designing a user access flow with each solution.
-
-### Designing a User Access Flow with SuperTokens
-
-![SuperTokens design flow](./st-flow.png)
-
-#### 1. Set up the SuperTokens core and select the required modules
-
-- Choose between self-hosting or using SuperTokens' managed service.
-- If self-hosting, download and run the SuperTokens core:
-
-```bash
-docker run -p 3567:3567 -d registry.supertokens.io/supertokens/supertokens-mysql
-```
-
-#### 2. Install and configure frontend and backend SDKs:
-
-- **Backend (Node.js/Express example)**
-
- ```javascript
- import supertokens from "supertokens-node";
- import Session from "supertokens-node/recipe/session";
- import EmailPassword from "supertokens-node/recipe/emailpassword";
- supertokens.init({
-     framework: "express",
-     supertokens: {
-         connectionURI: "http://localhost:3567",
-     },
-     appInfo: {
-         appName: "MyApp",
-         apiDomain: "http://localhost:3000",
-         websiteDomain: "http://localhost:3000"
-     },
-     recipeList: [
-         EmailPassword.init(),
-         Session.init()
-     ]
- });
- ```
-
-- **Frontend (js example)**
-
-```javascript
-import SuperTokens from "supertokens-auth-react";
-import Session from "supertokens-auth-react/recipe/session";
-import EmailPassword from "supertokens-auth-react/recipe/emailpassword"
-SuperTokens.init({
-    appInfo: {
-        appName: "MyApp",
-        apiDomain: "http://localhost:3000",
-        websiteDomain: "http://localhost:3000"
-    },
-    recipeList: [
-        EmailPassword.init(),
-        Session.init()
-    ]
-});
-```
-
-#### 4. Implement custom UI components or use pre-built ones
-
-- Use SuperTokens' pre-built UI:
-
-```javascript
-import { getSuperTokensRoutesForReactRouterDom } from "supertokens-auth-react/ui";
-<Routes>
-    {getSuperTokensRoutesForReactRouterDom(require("react-router-dom"))}
-    <Route path="/" element={<Home />} />
-</Routes>
-```
-
-- Or create custom components using SuperTokens' hooks.
-
-#### 5. **Add session verification middleware to protected routes:**
-
-```javascript
-import { verifySession } from "supertokens-node/recipe/session/framework/express";
-app.get("/api/user", verifySession(), async (req, res) => {
-    let userId = req.session.getUserId();
-    // Handle user data
-});
-```
-
-#### 6. Handle authentication events and user data management
-
-- Use SuperTokens' APIs to manage users, sessions, and authentication events.
-
-### Designing a User Access Flow with Auth0
-
-![Auth0 flow](./st-auth0-flow.png)
-
-#### 1. Create an application in the Auth0 dashboard
-
-- Log in to Auth0, go to "Applications" > "Create Application"
-- Choose your application type (e.g., Single Page Application)
-
-#### 2. Configure authentication providers and settings
-
-- In the Auth0 dashboard, set up social connections, database connections, etc.
-- Configure settings like callback URLs and allowed origins.
-
-#### 3. Install and configure the Auth0 SDK
-
-- Install the Auth0 SDK
-
-```typescript
-npm install @auth0/auth0-react
-```
-
-- Set up the Auth0Provider in your React app:
-
-
-```typescript
-import { Auth0Provider } from "@auth0/auth0-react";
-
-
-ReactDOM.render(
-    <Auth0Provider
-        domain="YOUR_AUTH0_DOMAIN"
-        clientId="YOUR_CLIENT_ID"
-        redirectUri={window.location.origin}
-    >
-        <App />
-    </Auth0Provider>,
-    document.getElementById("root")
-);
-
-```
-
-####  4. Set up API routes and add Auth0 middleware for protection:
-
-- Install necessary packages
-
-```typescript
-npm install express-jwt jwks-rsa
-```
-
-- Setup middlware
-
-```typescript
-const jwt = require('express-jwt');
-const jwksRsa = require('jwks-rsa');
-
-
-const checkJwt = jwt({
-    secret: jwksRsa.expressJwtSecret({
-        cache: true,
-        rateLimit: true,
-        jwksRequestsPerMinute: 5,
-        jwksUri: `https://YOUR_DOMAIN/.well-known/jwks.json`
-    }),
-    audience: 'YOUR_API_IDENTIFIER',
-    issuer: `https://YOUR_DOMAIN/`,
-    algorithms: ['RS256']
-});
-
-
-app.get('/api/private', checkJwt, function(req, res) {
-    res.json({message: 'This is a private endpoint!'});
-});
-```
-
-#### 5. Use Auth0 hooks or rules for custom logic during the authentication flow:
-
-- In the Auth0 dashboard, go to "Actions" > "Flows"
-- Choose a flow (e.g., Login) and add custom actions
-- Example action to add user roles:
-
-```typescript
-exports.onExecutePostLogin = async (event, api) => {
-    const namespace = 'https://myapp.com';
-    if (event.authorization) {
-        api.idToken.setCustomClaim(`${namespace}/roles`, event.authorization.roles);
-        api.accessToken.setCustomClaim(`${namespace}/roles`, event.authorization.roles);
-    }
-};
-```
-
-Both SuperTokens and Auth0 offer flexible ways to implement user authentication, but they differ in their approach. SuperTokens gives you more control over the entire process, allowing for deep customization at every step. Auth0, on the other hand, abstracts away much of the complexity, offering a more streamlined setup process with powerful customization options through its dashboard and extensibility points.
-
-> Disclaimer: The following examples are simplified illustrations of implementation for SuperTokens and Auth0. They are intended to provide a general idea of the setup process and may require modifications based on:
-
-1. The specific versions of SDKs and libraries you're using
-2. Your chosen programming language and framework
-3. Your project's unique requirements and configuration
-
-Always refer to the official, up-to-date documentation for SuperTokens and Auth0 for the most accurate and complete implementation guidelines. The code snippets below may not be production-ready and should be adapted to your specific use case with proper error handling and security considerations.
-
-
-## Understanding Self-Hosted vs. Managed User Management
-
-One of the fundamental differences between SuperTokens and Auth0 is the self-hosted vs. managed service approach.
-
-### Self-Hosted Solutions (SuperTokens):
-
-Self-hosted solutions, like SuperTokens, require you to set up and manage the authentication infrastructure within your own environment. This means you have full control over the codebase, deployment, and customization options. However, it also comes with the responsibility of maintaining and securing the system, as well as handling any updates or patches.
-
-### Managed Solutions (Auth0):
-
-Managed solutions, such as Auth0, abstract away the complexities of hosting and maintaining the authentication infrastructure. The vendor handles the setup, updates, and security patches, allowing you to focus on your application's core functionality. However, this convenience comes with a trade-off in terms of customization options and potential vendor lock-in.
-
-Pros and Cons of Self-Hosted vs. Managed Solutions:
-
-| Comparison | Pros                                            | Cons                                           |
-|------------|-------------------------------------------------|------------------------------------------------|
-| Self-Hosted (SuperTokens) | Full control, customization, no vendor lock-in | Higher upfront costs, maintenance responsibilities |
-| Managed (Auth0)           | Simplified setup and maintenance, automatic updates | Limited customization, vendor lock-in, recurring costs |
+To help you compare the two solutions, here's a breakdown of their key advantages and drawbacks:
+
+### **SuperTokens Pros**
+
+-   **Open-source and flexible** -- Can be self-hosted or used as a managed service, giving you control over data, infrastructure, and authentication logic.
+-   **Modular architecture** -- Allows you to enable only the authentication features you need, reducing unnecessary complexity.
+-   **Customizable** -- Provides deep customization options, including overriding backend APIs and modifying frontend UI components.
+-   **Scalable and performant** -- When self-hosted, you can optimize for your infrastructure and traffic needs. The managed cloud option also scales efficiently.
+-   **No vendor lock-in** -- Since it's open-source, you have full ownership and can switch providers without being tied to a proprietary system.
+-   **Lower recurring costs** -- The self-hosted version has no per-user pricing, making it cost-effective for high-traffic applications.
+
+### **SuperTokens Cons**
+
+-   **Requires technical expertise** -- Setup, deployment, and maintenance need developer involvement, especially for the self-hosted option.
+-   **Infrastructure management** -- If self-hosted, you are responsible for hosting, scaling, and applying security updates.
+-   **Feature set not as extensive as Auth0** -- Some advanced enterprise features, such as built-in adaptive MFA or enterprise SSO connectors, may require additional setup or third-party integrations.
+
+### **Auth0 Pros**
+
+-   **Fully managed service** -- Handles hosting, scaling, security, and updates, reducing operational burden.
+-   **Feature-rich** -- Offers a wide range of authentication and authorization features out of the box, including social login, passwordless authentication, and adaptive MFA.
+-   **Seamless integrations** -- Easily connects with various third-party services and identity providers.
+-   **Quick setup** -- A user-friendly dashboard and pre-built SDKs make it easy to implement authentication with minimal effort.
+
+### **Auth0 Cons**
+
+-   **Expensive pricing** -- Costs scale with user volume, which can become prohibitively high for large applications.
+-   **Limited customization** -- While it offers some flexibility via Rules, Hooks, and Actions, deep modifications to authentication flows are restricted compared to open-source alternatives.
+-   **Vendor lock-in** -- Migration can be complex due to proprietary configurations and dependencies.
+-   **Rate limits and API restrictions** -- Certain features are limited or gated behind higher-tier pricing plans, affecting scalability for growing applications.
+
+### What do users have to say about both products?
+
+| **Aspect**                      | **SuperTokens**                              | **Auth0**                                  |
+|---------------------------------|---------------------------------|--------------------------------|
+| **Hosting Model**               | Self-hosted or managed cloud. Users appreciate the flexibility of choosing between self-hosting for full control or opting for a managed service. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Fully managed service. Users find it convenient but note potential challenges with customization. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
+| **Customization**               | Highly customizable. Developers value the ability to tailor authentication flows to specific needs. ([dev.to](https://dev.to/christopherkapic/my-thoughts-on-supertokens-2omm?utm_source=chatgpt.com)) | Limited deep customization. While offering a range of features, some users find customization options restrictive. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
+| **Setup Complexity**            | Requires configuration. Some users find the setup straightforward, especially with good documentation, while others note a learning curve. ([dev.to](https://dev.to/christopherkapic/my-thoughts-on-supertokens-2omm?utm_source=chatgpt.com)) | Quick setup with dashboard. Users appreciate the ease of initial setup but mention complexities in advanced configurations. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
+| **Technical Expertise Required** | Requires developer involvement. Users highlight the need for technical knowledge, particularly for self-hosting. ([dev.to](https://dev.to/christopherkapic/my-thoughts-on-supertokens-2omm?utm_source=chatgpt.com)) | Minimal technical effort. Praised for its user-friendly interface, though some advanced features may require more expertise. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
+| **Control over Infrastructure**  | Full control (if self-hosted). Users value the autonomy and data ownership that self-hosting provides. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Limited control. Some users express concerns over dependency and lack of infrastructure control. ([redditmedia.com](https://www.redditmedia.com/r/SaaS/comments/1eom8lc/moved_from_auth0_to_a_selfhosted_auth_solution/?utm_source=chatgpt.com)) |
+| **Scalability**                 | Scales with your infrastructure. Users appreciate the ability to scale based on their specific requirements. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Auto-scales but has rate limits. While convenient, some users find scaling costs can become prohibitive. ([redditmedia.com](https://www.redditmedia.com/r/SaaS/comments/1eom8lc/moved_from_auth0_to_a_selfhosted_auth_solution/?utm_source=chatgpt.com)) |
+| **Performance Optimization**    | Full control over performance tuning. Users can optimize based on their infrastructure and needs. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Managed, limited customization. Performance is handled by Auth0, but deep optimizations are restricted. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
+| **Feature Set**                 | Modular—pick and choose features. Users like the flexibility to implement only what's necessary. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Comprehensive out-of-the-box. Offers a wide range of features, though some users find them more than needed. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
+| **Integration with Third-party Services** | Requires backend configuration. Users note the need for manual setup for integrations. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Seamless, pre-built integrations. Appreciated for ease of connecting with other services. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
+| **Ongoing Maintenance**         | Self-managed (if self-hosted). Users acknowledge the responsibility of updates and security patches. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Fully handled by Auth0. Users value the reduced operational burden. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
+| **Security Updates**            | Self-managed (if self-hosted). Ensuring timely updates is the user's responsibility. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Automatic updates. Users appreciate the hands-off approach to security maintenance. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
+| **Vendor Lock-in**              | No vendor lock-in. Users value the freedom to migrate without significant hurdles. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Potential lock-in. Some users express concerns about dependency on the platform. ([redditmedia.com](https://www.redditmedia.com/r/SaaS/comments/1eom8lc/moved_from_auth0_to_a_selfhosted_auth_solution/?utm_source=chatgpt.com)) |
+| **Pricing Model**               | Lower cost (self-hosted) / Managed cloud pricing available. Users find self-hosting cost-effective, though managed services incur additional fees. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Usage-based, can be expensive. Users note that costs can escalate with user growth. ([redditmedia.com](https://www.redditmedia.com/r/SaaS/comments/1eom8lc/moved_from_auth0_to_a_selfhosted_auth_solution/?utm_source=chatgpt.com)) |
+| **Learning Curve**              | Requires setup and customization. Some users find the learning curve steep but manageable with good support. ([dev.to](https://dev.to/christopherkapic/my-thoughts-on-supertokens-2omm?utm_source=chatgpt.com)) | Easier onboarding. Users appreciate the intuitive setup process. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
 
 
 ## Who Should Use SuperTokens vs. Auth0
 
-Based on the analysis so far, here are some scenarios where SuperTokens or Auth0 might be the preferred choice:
-
 ### Use SuperTokens if
 
-- You require a high degree of customization and control over the authentication flow
-- You have the technical expertise and resources to manage a self-hosted solution
-- You want to avoid vendor lock-in and recurring costs (beyond hosting and maintenance)
-- Your project has specific compliance or regulatory requirements
+- You need a highly customizable authentication flow, with the ability to modify backend APIs and UI components 
+- You want to avoid vendor lock-in and maintain control over your authentication infrastructure 
+- Your project has specific compliance or regulatory needs that require self-hosting, such as GDPR or HIPAA 
+- You are cost-sensitive and want a predictable pricing model, with no per-user charges
 
 ### Use Auth0 if
 
-- You prioritize ease of setup and maintenance over customization
-- You have limited technical resources or prefer to offload infrastructure management
-- You're looking for a comprehensive, out-of-the-box authentication solution
-- Your project has straightforward authentication requirements
+- You prioritize ease of setup and a fully managed authentication solution 
+- You have limited technical resources and prefer a plug-and-play solution with a low learning curve
+- You need a comprehensive, enterprise-ready authentication platform with pre-built integrations for third-party services
+- Your project has standard authentication needs and doesn’t require deep customization 
+
 
 ## SuperTokens vs. Auth0: Pricing Comparison
 
-When evaluating authentication solutions, it's essential to consider the associated costs and pricing models.
+Ultimately, pricing tends to be the biggest consideration when picking an authentication provider.
 
 ### SuperTokens Pricing:
 
-SuperTokens is an open-source solution, which means there are no direct licensing or subscription costs. However, you'll need to account for the infrastructure costs of hosting and managing the solution, as well as potential staffing costs for setup, maintenance, and customization.
+SuperTokens is an open source solution, so you can self-host the service and use the core feature set for free for an unlimited number of users. 
+Additionally, Supertokens also provides a number of paid add-on features.
 
-The infrastructure costs can vary depending on your specific requirements, such as the number of users, traffic volume, and desired performance levels. 
+Alternatively users can opt to use the managed service where usage is free till the first 5000 MAUs post which the user is billed $0.02 per MAU.
 
-| SuperTokens Plans | Cloud (we host)                                              | Self-Hosted (you host)                       |
-|-------------------|--------------------------------------------------------------|----------------------------------------------|
-| Pricing           | $0.02 per MAU (free under 5K monthly active users)           | Free and Open Source (No free MAUs Count limit) |
-
-
-[Paid features / Add-on (Pay additionally as per feature use)](https://supertokens.com/pricing)
+The cost of running SuperTokens depends on factors such as the number of users and the number of paid on-features enabled. You can find the full breakdown on [SuperTokens pricing page](https://supertokens.com/pricing).
 
 ### Auth0 Pricing:
 
-Auth0 follows a usage-based pricing model, with different tiers based on the number of monthly active users (MAUs) and additional features required. Auth0 offers a free tier for up to 7,500 active users, followed by various paid tiers based on the number of active users and additional features required. The pricing can become quite expensive for larger organizations or projects with a high number of users.
+Auth0 follows a tiered, usage-based pricing model. It offers a free tier for up to 7,500 monthly active users (MAUs), after which pricing scales with additional features and higher usage.
 
-| Auth0 Plans    | Pricing       |
-|----------------|---------------|
-| Free           | $0            |
-| Essentials     | $35/month     |
-| Professional   | $240/month    |
-| Enterprise     | Contact       |
+A high level breakdown of the pricing shows that Auth0 has 4 tiers
 
-It's important to note that [Auth0's pricing](https://auth0.com/pricing) may also include additional costs for features like social login providers, custom domains, and compliance certifications.
 
-When comparing the costs of SuperTokens and Auth0, it's essential to consider your specific requirements and projected usage. While SuperTokens may have lower ongoing costs, the upfront investment in infrastructure and resources can be higher, especially for smaller projects or teams with limited technical expertise.
+| Auth0 Plans    | Pricing & Features                                    |
+|---------------|------------------------------------------------------|
+| Free          | $0, includes up to 7,500 MAUs                        |
+| Essentials    | $35/month, includes up to 1,000 MAUs                 |
+| Professional  | Starts at $240/month, scales based on MAU count      |
+| Enterprise    | Custom pricing, tailored features and support        |
 
-On the other hand, Auth0's managed service approach can be more cost-effective for organizations with straightforward authentication needs and limited resources for infrastructure management. However, the recurring costs based on usage and additional features can quickly add up, making it more expensive for larger-scale projects or those with complex authentication requirements.
+There are 3 main issues associated with Auth0s pricing:
+
+- **High Costs at scale**: While Auth0 is suitable for small projects or startups, costs can escalate rapidly as the user base grows. This pricing model may be challenging for small to medium-sized businesses.
+- **Opaque Pricing Beyond Free Tier**: Many users express frustration with the lack of transparent pricing for higher tiers, making it difficult to anticipate costs as their needs expand.
+- **Feature Limitations in Lower Tiers**: Certain advanced features, such as social connections and custom domains, are unavailable in the free tier, necessitating upgrades for full functionality
+
+Ultimately while Auth0 offers a robust authentication solution with strong developer support, potential users should carefully assess how its pricing structure aligns with their growth projections and feature requirements
+
+You can find the full breakdown on [Auth0s pricing page](https://auth0.com/pricing).
+
 
 ## Conclusion
 
-Choosing between SuperTokens and Auth0 ultimately depends on your project's specific needs, priorities, and resources. If you value customization, control, and avoiding vendor lock-in, SuperTokens may be the better choice. However, if you prioritize ease of setup, maintenance, and a comprehensive out-of-the-box solution, Auth0 could be a more suitable option.
-
-Before making a decision, we recommend evaluating your project requirements, technical expertise, and budget carefully. Both SuperTokens and Auth0 offer robust authentication solutions, but the best fit will depend on your unique circumstances.
-
+Choosing between SuperTokens and Auth0 depends on your project's unique requirements, priorities, and resources. If you need full customization, control, and freedom from vendor lock-in, SuperTokens is a strong choice. However, if you prefer a feature-rich, managed solution and can accommodate Auth0’s pricing as your user base grows, it may be a viable option
