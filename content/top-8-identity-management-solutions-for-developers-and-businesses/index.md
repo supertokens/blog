@@ -99,6 +99,12 @@ developer-friendly experience while ensuring robust security features.
 -   **Multi-Tenancy:** Ideal for SaaS applications that require
     tenant-specific configurations.
 
+-   **Extensibility:** Provides customizable authentication flows and integrations,
+    allowing developers to tailor solutions to their needs.
+
+-   **Flexibility:** Supports self-hosting and cloud deployment options, enabling seamless
+    adaptation to different architectures.
+
 ### **Why It Stands Out**
 
 **Transparent Pricing:** SuperTokens provides free development licenses,
