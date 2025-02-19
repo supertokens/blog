@@ -4,11 +4,11 @@ date: "2024-06-16"
 description: "Explore the core differences between SuperTokens and Auth0 including their key features, pros and cons, and practical workflows. Whether you need full control with SuperTokens' self-hosted, open-source approach or the convenience of Auth0's managed service, this guide will help you choose the right authentication solution for your project."
 cover: "supertokens-vs-auth0.png"
 category: "programming"
-author: "Mostafa Ibrahim"
+author: "Joel Coutinho"
 ---
 
 1. [Introduction](#introduction)
-2. [Do SuperTokens and Auth0 Work Differently?](#do-supertokens-and-auth0-work-differently)
+2. [How are SuperTokens and Auth0 Different?](#how-are-supertokens-and-auth0-different)
 3. [SuperTokens vs. Auth0 Key Feature Differences](#supertokens-vs-auth0-key-feature-differences)
 4. [SuperTokens vs. Auth0 Pros & Cons](#supertokens-vs-auth0-pros--cons)
 5. [Summary Table](#summary-table)
@@ -20,7 +20,7 @@ author: "Mostafa Ibrahim"
 
 Choosing the right authentication provider can be challenging. With options ranging from self-hosted to managed services, and factors like account linking, MFA, and compliance certifications (SOC 2, GDPR), evaluating them can feel overwhelming. In this Auth0 vs. SuperTokens comparison, we aim to help you make an informed decision by analyzing key features, pricing, and the ideal use case for each solution.
 
-## Do SuperTokens and Auth0 Work Differently?
+## How are SuperTokens and Auth0 Different?
 
 SuperTokens is an open-source authentication solution that can be self-hosted or used with their managed cloud service. Unlike traditional self-hosted systems, SuperTokens follows a modular architecture with a lightweight core that runs as a separate service, allowing you to maintain control over your authentication infrastructure while offloading complexity. This design enables you to customize authentication flows, choose only the components you need, and even swap out databases or extend functionality as required.
 
@@ -131,8 +131,8 @@ To help you compare the two solutions, here's a breakdown of their key advantage
 | **Performance Optimization**    | Full control over performance tuning. Users can optimize based on their infrastructure and needs. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Managed, limited customization. Performance is handled by Auth0, but deep optimizations are restricted. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
 | **Feature Set**                 | Modular—pick and choose features. Users like the flexibility to implement only what's necessary. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Comprehensive out-of-the-box. Offers a wide range of features, though some users find them more than needed. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
 | **Integration with Third-party Services** | Requires backend configuration. Users note the need for manual setup for integrations. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Seamless, pre-built integrations. Appreciated for ease of connecting with other services. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
-| **Ongoing Maintenance**         | Self-managed (if self-hosted). Users acknowledge the responsibility of updates and security patches. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Fully handled by Auth0. Users value the reduced operational burden. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
-| **Security Updates**            | Self-managed (if self-hosted). Ensuring timely updates is the user's responsibility. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Automatic updates. Users appreciate the hands-off approach to security maintenance. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
+| **Ongoing Maintenance**         | Self-managed (if self-hosted). Users acknowledge the responsibility of updates and security patches. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)). The Managed service is handled by the SuperTokens team. Users can expect seamless updates and security patches | Fully handled by Auth0. Users value the reduced operational burden. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
+| **Security Updates**            | Self-managed (if self-hosted). Ensuring timely updates is the user's responsibility. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)). Managed Service is automatically updated | Automatic updates. Users appreciate the hands-off approach to security maintenance. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
 | **Vendor Lock-in**              | No vendor lock-in. Users value the freedom to migrate without significant hurdles. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Potential lock-in. Some users express concerns about dependency on the platform. ([redditmedia.com](https://www.redditmedia.com/r/SaaS/comments/1eom8lc/moved_from_auth0_to_a_selfhosted_auth_solution/?utm_source=chatgpt.com)) |
 | **Pricing Model**               | Lower cost (self-hosted) / Managed cloud pricing available. Users find self-hosting cost-effective, though managed services incur additional fees. ([libhunt.com](https://www.libhunt.com/r/supertokens-core?utm_source=chatgpt.com)) | Usage-based, can be expensive. Users note that costs can escalate with user growth. ([redditmedia.com](https://www.redditmedia.com/r/SaaS/comments/1eom8lc/moved_from_auth0_to_a_selfhosted_auth_solution/?utm_source=chatgpt.com)) |
 | **Learning Curve**              | Requires setup and customization. Some users find the learning curve steep but manageable with good support. ([dev.to](https://dev.to/christopherkapic/my-thoughts-on-supertokens-2omm?utm_source=chatgpt.com)) | Easier onboarding. Users appreciate the intuitive setup process. ([pcmag.com](https://www.pcmag.com/reviews/auth0?utm_source=chatgpt.com)) |
