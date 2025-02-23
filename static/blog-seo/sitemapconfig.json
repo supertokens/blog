@@ -80,7 +80,7 @@
     {
         "location": "https://supertokens.com/blog/access-control-for-modern-web-applications"
     },
-    {  
+    {
         "location": "https://supertokens.com/blog/totp-why-you-need-it-and-how-it-works"
     },
     {
@@ -220,5 +220,8 @@
     },
     {
         "location": "https://supertokens.com/blog/flask-user-auth"
+    },
+    {
+        "location": "https://supertokens.com/blog/react-user-authentication"
     }
 ]
