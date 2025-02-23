@@ -2,7 +2,7 @@
 title: Real World Examples of Multi-Factor Authentication
 date: "2025-01-28"
 description: "Security has always been crucial, especially in today’s digital landscape, where so much is at stake if security practices are weak or missing. The challenge with security is that the solutions and best practices are often logical and even obvious—yet, for various reasons, we sometimes choose to ignore them.."
-cover: "real-world-auth.png"
+cover: "mfa-examples.png"
 category: "authentication, examples, comparison"
 author: "Dejan Lukic"
 ---
