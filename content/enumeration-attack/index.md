@@ -55,29 +55,48 @@ Even a simple message like "This username does not exist" can be dangerous, as a
 
 By carefully crafting error messages, developers can improve security while still providing useful feedback.
 
-### How To Shut It Down 
-To minimize security risks, follow these best practices:
+### How To Shut It Down  🚫🔒
 
-✅ **Hide development errors in production.** Check your framework’s configuration to ensure that users don’t see detailed error logs.
+🛑 **No peeking at dev errors.** Make sure production settings don’t expose technical details.
 
-✅ **Limit the information shown in error messages.** Keep them vague enough to avoid exposing sensitive details.
+🤐 **Keep error messages vague.** The less info you give, the harder it is to exploit.
 
-✅ **Implement proper error handling.** Prevent backend errors from leaking system details.
+🚧 **Handle errors carefully.** Don’t let backend slip-ups reveal system secrets like database credentials or API keys.
 
-✅ **Set login attempt limits.** Add timeouts or account lockouts after multiple failed attempts—this is especially effective against automated attacks.
+⏳ **Slow down login attempts.** Add timeouts or lockouts after too many failures—bots hate waiting.
 
-✅ **Monitor failed logins.** Sudden spikes in failed attempts could indicate a brute-force or enumeration attack.
+👀 **Watch for weird login spikes.** If someone’s hammering your login form, they’re probably up to no good.
 
 By following these steps, you can keep error messages useful for users while preventing hackers from exploiting them.
 
 ## Manipulating Password Reset Forms 🔑
 
-### How Hackers Do It
-- They enter random emails into password reset forms. 
-- If the system responds with "A reset link has been sent," the hackers know the email is valid. 
+Password reset forms are a common target for attackers looking to gain unauthorized access to accounts. If not properly secured, they can be exploited to gather information or launch automated attacks. 
 
-### How To Shut It Down
-- Use a neutral response. Something like "If this email is registered, you will receive a reset link" is much more secure than "A reset link has been sent." 
+A common mistake is revealing whether an email or username exists in the system. This allows attackers to compile a list of valid accounts, making brute-force or phishing attacks easier. 
+
+🚫 **Don’t**: "A reset link has been sent to your email if it exists in our system."
+🔴 **Why it’s bad**: This confirms whether an email is registered, which hackers can use to build a list of valid accounts
+
+✅ **Do**: "If this account exists, a reset link has been sent."
+🟢 **Why it’s better**: This response provides no indication of whether the email is valid, making it harder for attackers to enumerate accounts.
+
+Another risk is allowing unlimited password reset attempts. Attackers can repeatedly trigger reset requests, flooding a user’s inbox or even intercepting links if additional security is lacking.
+
+### How to Shut It Down 🚫🔒
+Want to keep hackers out? Here’s how to make sure your password reset form isn’t an open invitation:
+
+🔥 **Don’t spill the beans.** Keep reset messages vague. No need to confirm whether an email exists.
+
+⏳ **Slow them down.** Limit reset attempts and add CAPTCHAs if someone gets too click-happy.
+
+🔗 **Make reset links a ticking time bomb.** Reset links that expire quickly keep attackers from sneaking in later.
+
+🔑 **Double-check who’s asking.** Add extra verification, like multi-factor authentication (MFA), before letting someone reset a password.
+
+📊 **Keep an eye on things.** If you see a flood of reset requests, you might have an attack in progress—shut it down fast.
+
+Lock it up tight, and only the right people get back in. 🚀
 
 
 ## How SuperTokens Stops Enumeration Attacks and Protects Your Users 
