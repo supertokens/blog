@@ -9,14 +9,26 @@ author: "Mostafa Ibrahim"
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [When To Search Outside Of Auth0 For Access Management](#when-to-search-outside-of-auth0-for-access-management)
-3. [Understanding Your Priorities: What To Look For In Auth Services](#understanding-your-priorities-what-to-look-for-in-auth-services)
-4. [Top Auth0 Alternatives For Secure Authentication & Authorization](#top-auth0-alternatives-for-secure-authentication--authorization)
-5. [Comparing Features & Pricing: Auth0 vs. Alternatives](#comparing-features--pricing-auth0-vs-alternatives)
-6. [Is Open Source Important?](#is-open-source-important)
-7. [Custom vs. Out-Of-The-Box Auth Providers](#custom-vs-out-of-the-box-auth-providers)
-8. [Conclusion](#conclusion)
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [When To Search Outside Of Auth0 For Access Management](#when-to-search-outside-of-auth0-for-access-management)
+- [Understanding Your Priorities: What To Look For In Auth Services](#understanding-your-priorities-what-to-look-for-in-auth-services)
+  - [Key considerations and features](#key-considerations-and-features)
+- [Top Auth0 Alternatives For Secure Authentication \& Authorization](#top-auth0-alternatives-for-secure-authentication--authorization)
+- [Comparing Features \& Pricing: Auth0 vs. Alternatives](#comparing-features--pricing-auth0-vs-alternatives)
+  - [Auth0 Pricing](#auth0-pricing)
+  - [FusionAuth pricing](#fusionauth-pricing)
+    - [Cloud Hosting](#cloud-hosting)
+    - [Self Hosted](#self-hosted)
+  - [Okta pricing](#okta-pricing)
+  - [Cognito pricing](#cognito-pricing)
+- [Is Open Source Important?](#is-open-source-important)
+  - [Benefits of open-source authentication solutions:](#benefits-of-open-source-authentication-solutions)
+  - [Challenges of open-source authentication solutions:](#challenges-of-open-source-authentication-solutions)
+- [Custom vs. Out-Of-The-Box Auth Providers](#custom-vs-out-of-the-box-auth-providers)
+  - [Custom solutions:](#custom-solutions)
+  - [Out-of-the-box providers](#out-of-the-box-providers)
+- [Conclusion](#conclusion)
 
 
 ## Introduction
@@ -138,13 +150,13 @@ However, it's important to note that open-source solutions also come with their 
 - **Lack of dedicated support:** While community support can be valuable, you may not have access to dedicated support resources like those offered by commercial vendors.
 
 ## Custom vs. Out-Of-The-Box Auth Providers
- 
+
 Another important consideration is whether to go with a custom authentication solution or an out-of-the-box provider. Both approaches have their advantages and disadvantages:
 
 ### Custom solutions:
 
 **Pros:** Tailored to specific needs, full control over features.
- 
+
 - Custom solutions can be tailored to meet your organization's exact requirements, ensuring a perfect fit for your specific use cases and workflows.
 - You have complete control over the features, security measures, and customization options, allowing for maximum flexibility.
 
