@@ -15,7 +15,7 @@ For authentication purposes an enumeration attack happens when a hacker tries di
 
 **Why "help" instead of just "bypass"?**
 
-**That's because these attacks focus on gathering information.** Even discovering a valid username (and not the password as well) is a success, as it can lead to other attacks that break through your authentication, like [password cracking](https://supertokens.com/blog/password-cracking-and-how-to-protect-against-them). 
+**That's because these attacks focus on gathering information.** Even just discovering a valid username (and not the password to go with it) is a success, as it can lead to other attacks that break through your authentication, like [password cracking](https://supertokens.com/blog/password-cracking-and-how-to-protect-against-them). 
 
 If you don't have the right defense mechanisms in place, enumeration attacks will find an exploit and take over your users' accounts. But fear not! This guide will reveal seven cheat codes hackers use to exploit enumeration vulnerabilities and, more importantly, how you can counter them. 
 
@@ -23,7 +23,7 @@ If you don't have the right defense mechanisms in place, enumeration attacks wil
 
 When a hacker navigates to your login screen they will enter an arbitrary username and password combination. After that they will typically get one of three outcomes: 
 1. **They will get a message that the username does not exist.** (Let's them know the user doesn't exist and they can stop wasting their time and try a different one)
-2. **They will get a message saying the password is incorrect.** (Let's them know the password is incorrect the username is!)
+2. **They will get a message saying the password is incorrect.** (Let's them know the password is incorrect but the username is!)
 3. **They will successfully log in.** (Well, that's self explanatory 😂)
 
 Common enumeration attacks that are covered in the article are: 
@@ -37,30 +37,38 @@ Common enumeration attacks that are covered in the article are:
 
 ## Exploiting Login Error Messages 🚨
 
-When an app encounters an error it often generates an error message to provide feedback to users or developers.
+When an app encounters an error, it typically generates a message to inform users or developers about what went wrong. 
 
-Often we hear that descriptive error messages are super important for debugging, to know what went wrong. Or to users to give them information about what went wrong. But when done wrong it can be exploited by hackers to find information they can exploit to get into a system and steal sensitive data.
+Descriptive error messages are crucial for debugging and user feedback. However, poorly designed messages can be exploited by hackers to gather information that helps them break into a system and steal sensitive data. 
 
-But it's important to craft those messages in a way that does not reveal any personal information like database connection strings, usernames/emails, passwords, or session tokens. Even suggesting whether a username or a password is correct can be a hint that can be exploited. 
+To prevent this, error messages should never expose personal details like database connection strings, usernames, emails, passwords, or session tokens. Even revealing whether a username or password is correct (or incorrect) can provide attackers with valuable clues. 
 
-**Don't: Password is incorrect.**
-Why it's bad: This message suggests that the password is incorrect, but it can also mean that the username is correct, so now hackers can add this username to a list of correct usernames and try different passwords to hack into this account. 
+🚫 **Don't**: "Password is incorrect." <br>
+🔴 **Why it’s bad**: This confirms the username exists, allowing hackers to compile a list of valid usernames and try different passwords.
 
-**Do: Password or username is incorrect.**
-Why it's better: This doesn't suggest if the username/email or password is correct. So the hacker doesn't have any additional information about the user. 
+✅ **Do**: "Username or password is incorrect."<br>
+🟢 **Why it’s better**: This prevents attackers from knowing which part is wrong, reducing the risk of targeted guessing.
 
-Sometimes the errors can expose what the backend runs on, what version of a specific software it uses which can itself have vulnerabilities that can be exploited. 
+Additionally, error messages should avoid exposing backend technologies or software versions, as outdated or vulnerable components can become attack vectors.
 
-Even something like `This username does not exist` can give a hint about which usernames do exist because hackers may continue trying until they find usernames that do exist. 
+Even a simple message like "This username does not exist" can be dangerous, as attackers can repeatedly test different usernames to discover valid ones. These attacks are often automated, making them even more effective.
 
-These attacks are also often automated so they don't even have to be there manually typing out different usernames. 
+By carefully crafting error messages, developers can improve security while still providing useful feedback.
 
 ### How To Shut It Down 
-- Ensure that the production applications are not revealing developmental errors. Typically, these settings are in the configuration file of whatever framework you use. 
-- Avoid displaying detailed error messages to users or developers. 
-- Implement proper error-handling mechanisms that do not reveal sensitive information. 
-- Implement Timeouts after certain number of wrong login attempts. This works especially great for automated hacking like scripts. 
-- Monitor failed login attempts. Unusual spikes could indicate an enumeration attack. 
+To minimize security risks, follow these best practices:
+
+✅ **Hide development errors in production.** Check your framework’s configuration to ensure that users don’t see detailed error logs.
+
+✅ **Limit the information shown in error messages.** Keep them vague enough to avoid exposing sensitive details.
+
+✅ **Implement proper error handling.** Prevent backend errors from leaking system details.
+
+✅ **Set login attempt limits.** Add timeouts or account lockouts after multiple failed attempts—this is especially effective against automated attacks.
+
+✅ **Monitor failed logins.** Sudden spikes in failed attempts could indicate a brute-force or enumeration attack.
+
+By following these steps, you can keep error messages useful for users while preventing hackers from exploiting them.
 
 ## Manipulating Password Reset Forms 🔑
 
