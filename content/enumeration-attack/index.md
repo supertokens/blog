@@ -35,7 +35,7 @@ There are plenty of opportunities for hackers to try and exploit an authenticati
 6. Abusing Forgot Username Features 🤔
 7. Using Social Engineering and Data Leaks 💀
 
-## Exploiting Login Error Messages 🚨
+## 1. Exploiting Login Error Messages 🚨
 
 When an app encounters an error, it typically generates a message to inform users or developers about what went wrong. 
 
@@ -67,7 +67,7 @@ Even a simple message like **"This username does not exist"** can be dangerous, 
 
 By following these steps, you can keep error messages useful for users while preventing hackers from exploiting them.
 
-## Manipulating Password Reset Forms 🔑
+## 2. Manipulating Password Reset Forms 🔑
 
 Password reset forms are a common target for attackers looking to gain unauthorized access to accounts. If not properly secured, they can be exploited to gather information or launch automated attacks. 
 
@@ -96,7 +96,7 @@ Want to keep hackers out? Here’s how to make sure your password reset form isn
 
 Lock it up tight, and only the right people get back in. 🚀
 
-## Abusing Registration Forms 👤
+## 3. Abusing Registration Forms 👤
 
 Registration forms may seem harmless, but they are also susceptible to exploiting. They can be a goldmine for attackers. 
 
