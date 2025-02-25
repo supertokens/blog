@@ -191,6 +191,28 @@ This is because systems validate usernames first, then check passwords. If the u
 
 🔍 **Monitor unusual login patterns.** If you see a high number of failed requests with nearly identical timing differences, it could indicate a timing attack.
 
+## 6. Abusing Forgot Username Features 🤔
+The "Forgot Username" feature may appear harmless, but this is exactly what hackers may want you to continue believing. 
+
+If your systems confirms whether an email is registered, hackers can exploit it to gather information before going into further attacks like phishing attacks or credential stuffing attacks. 
+
+When apps allow users to request a username reminder by entering their email, the app responds differently based on whether the email is registered or not. Hackers can use this to confirm which accounts exist. 
+
+If the account exists, your users are likely to get a response like "Your username has been sent" or if it doesn't you are likely to receive "No account found"
+
+🚫 **Don’t**: Return different responses for valid vs. invalid emails. <br>
+🔴 Why it’s bad: This allows attackers to confirm whether an email is registered, making enumeration attacks easy.
+
+✅ **Do**: Return a generic response like “If this email is registered, your username will be sent.”<br>
+🟢 **Why it’s better**: Attackers won’t know whether the email is valid.
+
+## How To Shut It Down 🔒
+🛑 **Use the same response for all requests.** Always return a neutral message to prevent enumeration.
+
+📩 **Add a secondary verification.** Instead of immediately showing the username, send a confirmation email requiring the user to verify the request.
+
+## 7. Using Social Engineering & Data Leaks 💀
+
 ## How SuperTokens Stops Enumeration Attacks and Protects Your Users 
 SuperTokens is built with security-first authentication, **preventing enumeration vulnerabilities by default**.
 
