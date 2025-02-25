@@ -113,7 +113,7 @@ If your registration form reveals whether a username is taken, hackers can compi
 
 🤖 Use CAPTCHAs. Make bots prove they’re human before registering.
 
-## Scraping API Responses 🛠️
+## 4. Scraping API Responses 🛠️
 Hackers also use APIs to gather information about your users, often without even triggering the traditional security alarm bells like unusual login attempts.
 
 Here is how hackers use APIs to gather information on your users. 
@@ -164,6 +164,32 @@ Hackers can use this data for credential stuffing (testing leaked passwords) or 
 🚧 **Rate-limit API requests**. Block or slow down repeated requests from the same IP.
 
 📊 **Monitor API traffic**. A sudden surge in requests could mean someone might be scraping.
+
+## 5. Timing Attacks: The Millisecond Giveaway ⏳
+Sometimes all it takes is a few milliseconds for hackers to figure out if a username exists. Even if your API doesn't return different error messages, response times from APIs can also provide hints to hackers about which usernames/emails are valid or not. 
+
+The way this works is when attackers submit different usernames to your API, they measure how long each request takes to process. Even a tiny difference in the response time can indicate if an account exists or not. 
+
+```js 
+POST /api/login with a valid username --> responds in 120ms
+
+POST /api/login with a fake username --> responds in 80ms
+```
+
+This is because systems validate usernames first, then check passwords. If the username doesn't exist, the request might get rejected early, leading to a faster response. Hackers can automate thousands of these requests, and analyze response times to extract valid accounts. 
+
+🚫 **Don’t**: Allow response times to vary based on input validity. <br>
+🔴 **Why it’s bad**: Even if your API returns the same error message, timing leaks can still reveal valid accounts.
+
+✅ **Do**: Introduce a consistent delay for all login attempts.<br>
+🟢 **Why it’s better**: This prevents attackers from distinguishing between valid and invalid users.
+
+### How To Shut It Down 🔒
+⏳ **Equalize response times.** Add a small, consistent delay (like 200ms) to every request, regardless of validity.
+
+🚧 **Implement rate limiting.** Block or slow down repeated requests from the same IP to prevent attacks.
+
+🔍 **Monitor unusual login patterns.** If you see a high number of failed requests with nearly identical timing differences, it could indicate a timing attack.
 
 ## How SuperTokens Stops Enumeration Attacks and Protects Your Users 
 SuperTokens is built with security-first authentication, **preventing enumeration vulnerabilities by default**.
