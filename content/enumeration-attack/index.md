@@ -212,6 +212,14 @@ If the account exists, your users are likely to get a response like "Your userna
 📩 **Add a secondary verification.** Instead of immediately showing the username, send a confirmation email requiring the user to verify the request.
 
 ## 7. Using Social Engineering & Data Leaks 💀
+Hackers don't always need to guess credentials if they can trick your users into giving them up.  By combining leaked data with social engineering tactics, hackers can bypass your authentication security. As sophisticated as our technology gets, we as people are still the weakest link in cybersecurity. 
+
+Hackers exploit social engineering and data leaks by combining public data with enumeration. They scour data breach dumps, social media and other public sources to find email and usernames .They they test these against your system using enumeration techniques like login errors, password reset forms and API scraping. 
+
+An example attack could look like this: 
+1. A hacker finds an email (johndoe@example.com) in a leaked database.
+2. The hacker tries logging in using the systems error messages to confirm the account exists. 
+
 
 ## How SuperTokens Stops Enumeration Attacks and Protects Your Users 
 SuperTokens is built with security-first authentication, **preventing enumeration vulnerabilities by default**.
