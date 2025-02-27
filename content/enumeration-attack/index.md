@@ -219,7 +219,32 @@ Hackers exploit social engineering and data leaks by combining public data with 
 An example attack could look like this: 
 1. A hacker finds an email (johndoe@example.com) in a leaked database.
 2. The hacker tries logging in using the systems error messages to confirm the account exists. 
+3. If they are successful, they launch further attacks to get the password, like phishing attacks. 
 
+🚫 **Don’t**: Rely solely on passwords for security. <br>
+🔴 **Why it’s bad**: Even strong passwords can be stolen through phishing.
+
+✅ **Do**: Enforce Multi-Factor Authentication (MFA).<br>
+🟢 **Why it’s better**: Even if an attacker gets a password, they need an extra authentication step to break in.
+
+🚫 **Don’t**: Assume users can recognize phishing attacks on their own.<br>
+🔴 **Why it’s bad**: Many phishing emails look extremely convincing, tricking even tech-savvy users.
+
+✅ **Do**: Educate users on phishing tactics.<br>
+🟢 **Why it’s better**: If users know what to look for, they’re less likely to fall for scams.
+
+🚫 **Don’t**: Ignore unusual login attempts.<br>
+🔴 Why it’s bad: If an attacker logs in from an unfamiliar country or device, that’s a red flag.
+
+✅ **Do**: Monitor login anomalies and trigger alerts for suspicious activity.<br>
+🟢 **Why it’s better**: Catching unauthorized logins early can prevent full account takeovers.
+
+### How to Shut It Down 🔒
+🔐 Use MFA wherever possible. Even if a hacker steals a password, they won’t get past the second factor.
+
+🎓 Educate users about phishing. Run awareness campaigns and train them to recognize fake emails.
+
+🚨 Monitor login anomalies. Alert users and admins about logins from new devices, locations, or sudden spikes in failed attempts.
 
 ## How SuperTokens Stops Enumeration Attacks and Protects Your Users 
 SuperTokens is built with security-first authentication, **preventing enumeration vulnerabilities by default**.
@@ -228,6 +253,3 @@ SuperTokens is built with security-first authentication, **preventing enumeratio
 - **Secure session management**: Prevents token theft and session hijacking.
 - **MFA and passwordless authentication**: Removes reliance on weak passwords.
 - **Rate limiting and bot protection**: Automatically blocks suspicious login attempts.
-
-
-
