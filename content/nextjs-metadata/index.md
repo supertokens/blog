@@ -14,6 +14,19 @@ In **Next.js**, managing metadata efficiently can significantly impact your site
 ## What is Metadata 
 Metadata encompasses information such as page titles, descriptions, keywords, and social media previews. 
 
+### Types of Metadata
+There are various types of metadata. Some common ones, that you will encounter often, are title, description, keywords, open graph, and favicon. 
+
+#### Title Metadata
+
+#### Description Metadata
+
+#### Keyword Metadata
+
+#### Open Graph Metadata
+
+#### Favicon Metadata
+
 ## Why is Metadata Important
 Metadata is vital for search engines to rank your content and enhance SEO. 
 
