@@ -18,14 +18,41 @@ Metadata encompasses information such as page titles, descriptions, keywords, an
 There are various types of metadata. Some common ones, that you will encounter often, are title, description, keywords, open graph, and favicon. 
 
 #### Title Metadata
+The **title metadata** defines the title of a webpage shown on the browser tab and in search engine results. 
+
+```html
+<title>Page Title</title>
+```
 
 #### Description Metadata
+The **description metadata** provides a summary of the webpage content, which is crucial for SEO. The description property corresponds to the meta tag in the head section of the document. 
+
+```html
+<meta name="description" content="A brief description of the page content." />
+```
 
 #### Keyword Metadata
+The **keyword metadata** includes keywords related to the webpage content, aiding in search engine indexing.
+
+```html 
+<meta name="keywords" content="keyword1, keyword2, keyword3" />
+```
 
 #### Open Graph Metadata
+The **open graph metadata** enhances the presentation of web pages on social media platforms by specifying details like title, description, and preview images. 
+
+```html
+<meta property="og:title" content="Title Here" />
+<meta property="og:description" content="Description Here" />
+<meta property="og:image" content="image_url_here" />
+```
 
 #### Favicon Metadata
+The **favicon metadata** links the favicon to the webpage, displayed in the browser's address bar or tab.
+
+```html
+<link rel="icon" href="path/to/favicon.ico" />
+```
 
 ## Why is Metadata Important
 Metadata is vital for search engines to rank your content and enhance SEO. 
@@ -101,6 +128,7 @@ Override or extend metadata in nested layouts or specific pages as needed.
 - **Utilize dynamic metadata when necessary:** For pages with content that changes frequently, implement dynamic metadata to reflect the current state. 
 - **Leverage metadata templates:** Use title templates to maintain consistency across pages. 
 - **Regularly update metadata:** Keep metadata current to reflect any changes in content or branding. 
+- **Properly set Open Graph:** Set Open Graph metadata correctly to improve how your content looks on social media, boosting engagement and clicks.
 
 ## Conclusion 🎯
 Managing metadata in Next.js is important for SEO 📈 and user engagement 👥. By using both static and dynamic metadata, taking advantage of inheritance, and following best practices, you can build apps that are easy to use and rank well on search engines.🔍
