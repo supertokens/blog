@@ -3142,24 +3142,24 @@
     {
         "path": "/blog/multi-tenant-architecture",
         "metaTags": [
-            "<meta name=\"description\" content=\" A comprehensive guide to understanding, implementing, and optimizing multi-tenant architecture in SaaS applications, including benefits, challenges, and best practices.\" />",
+            "<meta name=\"description\" content=\" This blog provides an in-depth exploration of how multi‑tenant SaaS architectures boost scalability, reduce costs, and enhance security through SuperTokens' innovative approach.\" />",
             "",
             "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
             "<!--OG Tags-->",
             "<meta property=\"og:title\" content=\"Multi-Tenant Architecture: Benefits, Practices & Implementation\" />",
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/multi-tenant-architecture\" />",
-            "<meta property=\"og:description\" content=\" A comprehensive guide to understanding, implementing, and optimizing multi-tenant architecture in SaaS applications, including benefits, challenges, and best practices.\"/>",
-            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/risk-based-authentication.png\" />",
+            "<meta property=\"og:description\" content=\" This blog provides an in-depth exploration of how multi‑tenant SaaS architectures boost scalability, reduce costs, and enhance security through SuperTokens' innovative approach.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/multi-tenant-architecture.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\" A comprehensive guide to understanding, implementing, and optimizing multi-tenant architecture in SaaS applications, including benefits, challenges, and best practices.\" />",
+            "<meta name=\"twitter:title\" content=\" This blog provides an in-depth exploration of how multi‑tenant SaaS architectures boost scalability, reduce costs, and enhance security through SuperTokens' innovative approach.\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/multi-tenant-architecture\" />",
-            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/risk-based-authentication.png\" /> ",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/multi-tenant-architecture.png\" /> ",
             "<!--OG Tags-->",
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/multi-tenant-architecture\">"
         ],
         "title": "Multi-Tenant Architecture: Benefits, Practices & Implementation",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/multi-tenant-architecture\"\n            },\n            \"headline\": \" A comprehensive guide to understanding, implementing, and optimizing multi-tenant architecture in SaaS applications, including benefits, challenges, and best practices.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/risk-based-authentication.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/multi-tenant-architecture\"\n            },\n            \"headline\": \" This blog provides an in-depth exploration of how multi‑tenant SaaS architectures boost scalability, reduce costs, and enhance security through SuperTokens' innovative approach.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/multi-tenant-architecture.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
