@@ -7,12 +7,18 @@ category: "programming"
 author: "Maria Shimkovska"
 ---
 
-**Metadata** plays a crucial role in web development, influencing how your application appears in search engine results and social media shares. 
+Imagine you're throwing a party. You want people to show up, have fun, and maybe even tell their friends about it. But if you don’t send out invitations, share the address, or let people know what to expect, your party might end up empty.
 
-In **Next.js**, managing metadata efficiently can significantly impact your site's visibility and user engagement.
+Metadata is like the invitation for your website. It tells search engines and social media platforms what your page is about, helping the right people find it. In Next.js, managing metadata properly can boost your site's SEO, make it more shareable, and improve user engagement.
+
+If you've ever looked at the <head> section in an HTML file, you've probably seen metadata before, think `<meta name="description" content="...">` or `<title>Page Title</title>`. But since it doesn’t visibly affect the page’s design, it’s easy to overlook. 
+
+However, metadata plays a crucial role behind the scenes, influencing how your site appears in search results and social media previews. In this article we are going into how you can make your site’s "invitation" as compelling as possible using Next.js. 
 
 ## What is Metadata 
-Metadata provides additional information about a webpage. It includes information such as page titles, descriptions, keywords, and social media previews.  
+Metadata is additional information that provides insights about your app's data. Think of it as "data about data". It includes information such as page titles, descriptions, keywords, and social media previews.  
+
+Essentially, metadata makes it easier to find, use, and understand your webapp's data.
 
 ## Why is Metadata Important
 Metadata is vital for search engines to rank your content and enhance SEO. 
