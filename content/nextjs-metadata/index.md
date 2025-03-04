@@ -108,14 +108,14 @@ The **favicon metadata** links the favicon to the webpage, displayed in the brow
 ```
 
 ## 🌟 Next.js Metadata for SEO: Best Practices & Implementation
-Next.js has a **Metadata API** that is used to define and manage your app's metadata.
+Next.js has a **Metadata API** that is used to define and manage your app's metadata. It allows you to modify the `<head>` element of a page. 
 
 > **The goal of metadata management** is to make it easy to access an organization's data with the right context, meaning users understand what the data represents, where it comes from, how it is structured, how it connects to other data, and any rules for its use. 
 
 There are two ways to add metadata to your application, **config-based** and **file-based metadata**. Both methods help manage SEO-related information like page titles, descriptions, and open graph tags. 
 
-1. **Config-based Metadata**: Export a static metadata object or a dynamic generateMetadata function in a layout.js or page.js file. 
-2. **File-based Metadata**: Add a static or dynamically generated special files t route segments. 
+1. **Config-based Metadata**: Set up metadata directly in your **layout.js** or **page.js** file using a static object `metadata` or the dynamic function `generateMetadata()`.
+2. **File-based Metadata**: Create special metadata files in your project's folders to define metadata for different pages, either statically or dynamically. 
 
 
 
