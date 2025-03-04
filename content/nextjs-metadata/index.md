@@ -7,30 +7,68 @@ category: "programming"
 author: "Maria Shimkovska"
 ---
 
-Imagine you're throwing a party. You want people to show up, have fun, and maybe even tell their friends about it. But if you don’t send out invitations, share the address, or let people know what to expect, your party might end up empty.
+Imagine walking through the Van Gogh Museum, exploring different rooms that correspond to significant life moments of the illustrious and fascinating Dutch painter. 🎨
 
-Metadata is like the invitation for your website. It tells search engines and social media platforms what your page is about, helping the right people find it. In Next.js, managing metadata properly can boost your site's SEO, make it more shareable, and improve user engagement.
+Each painting is accompanied by a placard that provides crucial details about each of his works (its title, the year it was painted, and a short description). Without these, you will find yourself struggling to understand the artwork’s meaning, historical context, or significance.
 
-If you've ever looked at the <head> section in an HTML file, you've probably seen metadata before, think `<meta name="description" content="...">` or `<title>Page Title</title>`. But since it doesn’t visibly affect the page’s design, it’s easy to overlook. 
+On the web, **metadata** serves a similar purpose. It provides essential information about a webpage (like its title, description, and keywords). Metadata helps search engines and social media platforms "understand" your content and present it to the right audience. 
 
-However, metadata plays a crucial role behind the scenes, influencing how your site appears in search results and social media previews. In this article we are going into how you can make your site’s "invitation" as compelling as possible using Next.js. 
+Just as well-written placards enhance a museum experience, well-structured metadata improves your website's SEO, shareability, and visibility.
 
-## What is Metadata 
-Metadata is additional information that provides insights about your app's data. Think of it as "data about data". It includes information such as page titles, descriptions, keywords, and social media previews.  
+In **Next.js**, managing metadata effectively can make your site more discoverable and engaging. If you've ever seen <meta name="description" content="..."> or <title>Page Title</title> in an HTML file, you’ve encountered metadata. And just like Van Gogh's Starry Night, it might not change how a page **looks**, but it plays a **crucial role behind the scenes**.
 
-Essentially, metadata makes it easier to find, use, and understand your webapp's data.
+In this article, we’ll explore how to craft effective metadata in Next.js and ensure your site's “placards” are as informative and compelling as possible. 🖼️🚀
 
-## Why is Metadata Important
+![Van Gogh's Starry Night GIF](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWdjanBrZTFlNnlkZXRvOXZ0dWxwbmczemg5cWI5dzVpb3IwcDZleCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/g9wbFB61YEh1u/giphy.gif)
+
+```toc
+tight: true
+toHeading: 3
+```
+
+## 👉 Metadata Explained: How It Boosts SEO & Website Visibility
+Metadata is **extra information** that gives valuable insights into your app’s data. You can think of it as **"data about your data"**! 📊🔍
+
+It includes page **titles**, **descriptions**, **keywords**, and **social media previews** 📌✨, all of which help make your web app easier to find, understand, and use.
+
+Here is an example of metadata you may have seen: 
+
+```html
+<head>
+    <!-- Basic Metadata -->
+    <title>The Starry Night by Vincent van Gogh</title> <!-- Sets the page title (shown in browser tab) -->
+    <meta charset="UTF-8"> <!-- Defines character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design -->
+    
+    <!-- SEO Metadata -->
+    <meta name="description" content="Explore 'The Starry Night,' Vincent van Gogh's iconic masterpiece. Learn about its history, meaning, and artistic techniques.">
+    <meta name="keywords" content="Starry Night, Vincent van Gogh, Impressionism, famous paintings, art history">
+    <meta name="author" content="Vincent van Gogh">
+    <meta name="robots" content="index, follow"> <!-- Allows search engines to index the page -->
+
+    <!-- Open Graph (OG) Metadata for Social Media -->
+    <meta property="og:title" content="The Starry Night - Vincent van Gogh">
+    <meta property="og:description" content="Discover the story behind 'The Starry Night,' one of Vincent van Gogh's most famous paintings.">
+    <meta property="og:image" content="https://example.com/starry-night.jpg">
+    <meta property="og:url" content="https://example.com/starry-night">
+    <meta property="og:type" content="article">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="starry-night-favicon.png">
+</head>
+```
+
+### Why is Metadata Important
 Metadata is vital for search engines to rank your content and enhance SEO. 
 
 Proper metadata configuration enhances SEO by:
 
 - **Improving Search Engine Rankings**: Accurate titles and descriptions help search engines understand page content.
-- **Optimizing Social Media Sharing**: Open Graph and Twitter Card metadata ensure rich previews when links are shared.
+- **Optimizing Social Media Sharing**: Open Graph metadata ensures rich previews when links are shared.
 - **Increasing Click-Through Rates**: Compelling metadata can attract users to click on your links in search results.
 
 ### Types of Metadata
-There are various types of metadata. Some common ones, that you will encounter often, are title, description, keywords, open graph, and favicon. 
+There are various types of metadata. Some common ones, that you will encounter often, are **title**, **description**, **keywords**, **open graph**, and **favicon**. 
 
 #### Title Metadata
 The **title metadata** defines the title of a webpage shown on the browser tab and in search engine results. 
@@ -69,7 +107,7 @@ The **favicon metadata** links the favicon to the webpage, displayed in the brow
 <link rel="icon" href="path/to/favicon.ico" />
 ```
 
-## Understanding Metadata in NextJS 
+## 🌟 Next.js Metadata for SEO: Best Practices & Implementation
 Next.js has a **Metadata API** that is used to define and manage your app's metadata.
 
 > **The goal of metadata management** is to make it easy to access an organization's data with the right context, meaning users understand what the data represents, where it comes from, how it is structured, how it connects to other data, and any rules for its use. 
@@ -82,7 +120,7 @@ There are two ways to add metadata to your application, **config-based** and **f
 
 
 Below is a detailed guide on how to utilize both options effectively.
-## Configuring Static Metadata 
+### Configuring Static Metadata 
 Static Metadata is predefined and remains constant across sessions. To implement static metadata in Next.js. 
 
 ```js
@@ -96,7 +134,7 @@ export default function Page() {}
 
 This setup ensures that all pages inheriting from this layout share the same metadata. 
 
-## Configure Dynamic Metadata
+### Configure Dynamic Metadata
 Dynamic metadata adapts based on content or user interaction. 
 You can use `generateMetadata` function to `fetch` metadata that requires dynamic values.
 
@@ -126,17 +164,17 @@ export default function Page({ params, searchParams }) {}
 
 This approach is beneficial for pages where metadata depends on dynamic data, such as product details or user-generated content. 
 
-## Metadata Inheritance and Overriding
+### Metadata Inheritance and Overriding
 **Next.js** allows for hierarchical metadata management.
 This structure promotes consistency while providing flexibility for individual pages to specify unique metadata. 
 
-### Root Layout Metadata
+#### Root Layout Metadata
 Define default metadata in the root layout, which applies globally. 
 
-### Nested layouts and Pages 
+#### Nested layouts and Pages 
 Override or extend metadata in nested layouts or specific pages as needed. 
 
-## Best Practices for Metadata Management 📌
+### Best Practices for Metadata Management 📌
 To maximize the benefits of metadata management in Next.js (and metadata management in general), here are a few best practices to keep in mind: 
 - **Keep metadata concise and relevant:** Ensure titles and descriptions are clear and to the point. 
 - **Utilize dynamic metadata when necessary:** For pages with content that changes frequently, implement dynamic metadata to reflect the current state. 
