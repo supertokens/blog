@@ -2,7 +2,7 @@
 title: "Metadata in Next.js: Enhancing SEO and User Experience"
 date: "2025-02-27"
 description: "Learn how to effectively manage metadata in Next.js to boost SEO and improve user engagement through static and dynamic configurations."
-# cover: ""
+cover: "metadata-in-nextjs.png"
 category: "programming"
 author: "Maria Shimkovska"
 ---
@@ -11,7 +11,7 @@ Imagine walking through the Van Gogh Museum, exploring different rooms that corr
 
 Each painting is accompanied by a placard that provides crucial details about each of his works (its title, the year it was painted, and a short description). Without these, you will find yourself struggling to understand the artwork’s meaning, historical context, or significance.
 
-On the web, **metadata** serves a similar purpose. It provides essential information about a webpage (like its title, description, and keywords). Metadata helps search engines and social media platforms "understand" your content and present it to the right audience. 
+On the web, **metadata** serves a similar purpose. It provides essential information about a webpage (like its title, description, and keywords). **Metadata helps search engines and social media platforms "understand" your content and present it to the right audience.** 
 
 Just as well-written placards enhance a museum experience, well-structured metadata improves your website's SEO, shareability, and visibility.
 
@@ -27,11 +27,11 @@ toHeading: 3
 ```
 
 ## 👉 Metadata Explained: How It Boosts SEO & Website Visibility
-Metadata is **extra information** that gives valuable insights into your app’s data. You can think of it as **"data about your data"**! 📊🔍
+To start, what is metadata? Metadata is **extra information** that gives valuable insights into your app’s data. You can think of it as **"data about your data"**! 📊🔍
 
 It includes page **titles**, **descriptions**, **keywords**, and **social media previews** 📌✨, all of which help make your web app easier to find, understand, and use.
 
-Here is an example of metadata you may have seen: 
+Here is an example of metadata you may have seen in the `<head>` tag of any HTML file: 
 
 ```html
 <head>
@@ -134,7 +134,7 @@ export default function Page() {}
 
 This setup ensures that all pages inheriting from this layout share the same metadata. 
 
-### Configure Dynamic Metadata
+### Configuring Dynamic Metadata
 Dynamic metadata adapts based on content or user interaction. 
 You can use `generateMetadata` function to `fetch` metadata that requires dynamic values.
 
