@@ -125,6 +125,50 @@ Below is a detailed guide on how to utilize both options effectively.
 ### Config-Based Metadata
 Config-based metadata is added in **layout.js** or **page.js** using a static `metadata` object or a dynamic `generateMetadata()` function.
 
+#### Configuring Static Metadata 
+Static Metadata is predefined and remains constant across sessions. To implement static metadata in Next.js. 
+
+```js
+export const metadata = {
+    title: ' ... ', 
+    description: ' ... ',
+}
+
+export default function Page() {}
+```
+
+This setup ensures that all pages inheriting from this layout share the same metadata. 
+
+#### Configuring Dynamic Metadata
+Dynamic metadata adapts based on content or user interaction. 
+You can use `generateMetadata` function to `fetch` metadata that requires dynamic values.
+
+To configure dynamic metadata: 
+
+```js
+export async function generateMetadata({ params, searchParams }, parent) {
+    // read route params
+    const id = (await params).id
+
+    // fetch data
+    const product = await fetch(`https://.../${id}`).then((res) => res.json())
+
+    // optionally access and extend (rather than replace) parent metadata
+    const previousImage = (await parent).openGraph?.images || []
+
+    return {
+        title: product.title,
+        openGraph: {
+            images: ['/some-specific-page-image.jpg', ...previousImages],
+        },
+    }
+}
+
+export default function Page({ params, searchParams }) {}
+```
+
+This approach is beneficial for pages where metadata depends on dynamic data, such as product details or user-generated content. 
+
 ### File-Based Metadata
 File-based metadata is added in **special metadata files** in your project's folders, either statically or dynamically: 
 - favicon.ico, apple-icon.jpg, and icon.jpg
@@ -300,50 +344,6 @@ export default function sitemap() {
 // </urlset>
 ```
 This helps search engines discover and index all your important pages!
-
-### Configuring Static Metadata 
-Static Metadata is predefined and remains constant across sessions. To implement static metadata in Next.js. 
-
-```js
-export const metadata = {
-    title: ' ... ', 
-    description: ' ... ',
-}
-
-export default function Page() {}
-```
-
-This setup ensures that all pages inheriting from this layout share the same metadata. 
-
-### Configuring Dynamic Metadata
-Dynamic metadata adapts based on content or user interaction. 
-You can use `generateMetadata` function to `fetch` metadata that requires dynamic values.
-
-To configure dynamic metadata: 
-
-```js
-export async function generateMetadata({ params, searchParams }, parent) {
-    // read route params
-    const id = (await params).id
-
-    // fetch data
-    const product = await fetch(`https://.../${id}`).then((res) => res.json())
-
-    // optionally access and extend (rather than replace) parent metadata
-    const previousImage = (await parent).openGraph?.images || []
-
-    return {
-        title: product.title,
-        openGraph: {
-            images: ['/some-specific-page-image.jpg', ...previousImages],
-        },
-    }
-}
-
-export default function Page({ params, searchParams }) {}
-```
-
-This approach is beneficial for pages where metadata depends on dynamic data, such as product details or user-generated content. 
 
 ### Metadata Inheritance and Overriding
 **Next.js** allows for hierarchical metadata management.
