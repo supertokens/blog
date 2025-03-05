@@ -1902,7 +1902,6 @@
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/enterprise-sso\"},\"headline\":\"Best Practices for Enterprise SSO\",\"description\":\"This guide will dive into what enterprise SSO is and why it’s necessary for modern organizations. It will also provide actionable tips for implementing it effectively\",\"image\":\"https://supertokens.com/blog-meta-images/enterprise-sso.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     },
     {
-
         "path": "/blog/what-is-jwt",
         "metaTags": [
             "<meta name=\"description\" content=\"Discover the fundamentals of JWTs, their structure, use cases, and potential security risks. Learn how to manage tokens securely with SuperTokens.\" />",
@@ -2021,6 +2020,29 @@
         ],
         "title": "Adding Authentication to Your Flask Backend with SuperTokens",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/flask-user-authentication\"},\"headline\":\"Adding Authentication to Your Flask Backend with SuperTokens\",\"description\":\"Learn how to seamlessly add authentication to your Flask backend using SuperTokens. This guide covers setting up authentication with the SuperTokens CLI or manual configuration, enabling you to focus on building application logic instead of authentication infrastructure.\",\"image\":\"https://supertokens.com/blog-meta-images/flask-user-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/idp-auth",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how IDP authentication works, why it’s critical for secure access management, and how to integrate tools like SuperTokens for seamless implementation.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What is IDP Authentication: How Identity Providers Secure Your Apps\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/idp-auth\" />",
+            "<meta property=\"og:description\" content=\"Learn how IDP authentication works, why it’s critical for secure access management, and how to integrate tools like SuperTokens for seamless implementation.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/idp-auth.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how IDP authentication works, why it’s critical for secure access management, and how to integrate tools like SuperTokens for seamless implementation.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/idp-auth\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/idp-auth.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/idp-auth\">"
+        ],
+        "title": "What is IDP Authentication: How Identity Providers Secure Your Apps",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/idp-auth\"\n            },\n            \"headline\": \"Learn how IDP authentication works, why it’s critical for secure access management, and how to integrate tools like SuperTokens for seamless implementation.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/idp-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
         "path": "/blog/open-source-identity-management",
@@ -3323,5 +3345,6 @@
         ],
         "title": "Top 8 Identity Management Solutions for Developers and Businesses",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/top-8-identity-management-solutions-for-developers-and-businesses\"\n            },\n            \"headline\": \"Discover the top 9 user management software tools for 2024! Streamline\",\n            \"image\": \"https://supertokens.com/blog-meta-images/top-8-identity-management-solutions-for-developers-and-businesses.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+
     }
 ]
