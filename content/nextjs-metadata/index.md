@@ -118,14 +118,54 @@ Next.js has a **Metadata API** that is used to define and manage your app's meta
 
 > 🗂️ **Metadata management** helps users easily access and understand data (what it means, where it comes from, how it's structured, how it connects to other data, and any usage rules).
 
+### 🏗️ Metadata Inheritance and Overriding
+**Next.js** organizes metadata in a hierarchy, ensuring consistency while allowing pages to set their own unique details.
+
+#### 🔗 How Metadata Inheritance Works
+To keep things organized, Next.js allows you to set global metadata for your entire site while letting individual pages override or extend it when needed. This ensures consistency while giving each page the flexibility to have its own unique details. 🚀
+
+##### Global Metadata (Applied to All Pages)
+Set in `layout.js`:
+
+```js
+export const metadata = {
+  title: "My Website",
+  description: "A great website built with Next.js",
+};
+```
+
+##### Page-Specific Metadata (Overrides Global Values)
+Set in `page.js`:
+
+```js
+export const metadata = {
+  title: "About Us - My Website", // Overrides global title
+  description: "Learn more about our team and mission.", // Overrides global description
+};
+```
+
+The output in the `<head>` section for the About page will be: 
+```html
+<title>About Us - My Website</title>
+<meta name="description" content="Learn more about our team and mission.">
+```
+
+Summary: 
+- **Root Layout Metadata:** Define a default structure in the main layout (`layout.js`).
+- **Nested Layouts:** Override or extend metadata for specific sections of the site.
+- **Page Metadata:** Each page can refine or replace metadata as needed.
+
+***
+### Adding Metadata In Your Next.js App
+
 There are two ways to add metadata to your application, **config-based** and **file-based metadata**. <br> Both methods help manage SEO-related information like page titles, descriptions, and open graph tags. 
 
 Below is a detailed guide on how to utilize both options effectively.
 
-### Config-Based Metadata
+#### Config-Based Metadata
 Config-based metadata is added in **layout.js** or **page.js** using a static `metadata` object or a dynamic `generateMetadata()` function.
 
-#### Configuring Static Metadata 
+##### Configuring Static Metadata 
 Static Metadata is predefined and remains constant across sessions. To implement static metadata in Next.js. 
 
 ```js
@@ -139,7 +179,7 @@ export default function Page() {}
 
 This setup ensures that all pages inheriting from this layout share the same metadata. 
 
-#### Configuring Dynamic Metadata
+##### Configuring Dynamic Metadata
 Dynamic metadata adapts based on content or user interaction. 
 You can use `generateMetadata` function to `fetch` metadata that requires dynamic values.
 
@@ -169,14 +209,14 @@ export default function Page({ params, searchParams }) {}
 
 This approach is beneficial for pages where metadata depends on dynamic data, such as product details or user-generated content. 
 
-### File-Based Metadata
+#### File-Based Metadata
 File-based metadata is added in **special metadata files** in your project's folders, either statically or dynamically: 
 - favicon.ico, apple-icon.jpg, and icon.jpg
 - opengraph-image.jpg and twitter-image.jpg
 - robots.txt
 - sitemap.xml 
 
-#### 🖼️ favicon.ico, apple-icon.jpg, and icon.jpg
+##### 🖼️ favicon.ico, apple-icon.jpg, and icon.jpg
 The favicon.ico, apple-icon.jpg, and icon.jpg files are used to provide your website with consistent branding across different platforms and devices.
 
 - **favicon.ico** is the small icon that appears in the browser tab.
@@ -221,7 +261,7 @@ export default MyDocument;
 ```
 These icons help brand your website and ensure that it looks great on all devices and in every browser tab.
 
-#### 📷 opengraph-image.jpg & twitter-image.jpg
+##### 📷 opengraph-image.jpg & twitter-image.jpg
 The opengraph-image.jpg and twitter-image.jpg files are used to set the preview image when your content is shared on social media platforms like Facebook and Twitter. These images provide a visual representation of your page, making it more engaging and clickable.
 
 For Open Graph (OG) and Twitter Cards, you would typically add the following metadata:
@@ -258,7 +298,7 @@ export default function Page() {
 ```
 These images help ensure that when your page is shared on social media, it has a beautiful, relevant preview that attracts attention!
 
-#### 🤖 robots.txt
+##### 🤖 robots.txt
 The robots.txt file tells search engine crawlers which URLs they can access on your site and looks something like this: 
 
 ```text
@@ -290,7 +330,7 @@ export default function robots() {
 // Sitemap: https://acme.com/sitemap.xml
 ```
 
-#### 🗺️ sitemap.xml
+##### 🗺️ sitemap.xml
 The sitemap.xml file provides search engines with a structured map of all the important pages on your site, helping them crawl and index your content more efficiently. It looks something like this:
 
 ```xml
@@ -344,16 +384,6 @@ export default function sitemap() {
 // </urlset>
 ```
 This helps search engines discover and index all your important pages!
-
-### Metadata Inheritance and Overriding
-**Next.js** allows for hierarchical metadata management.
-This structure promotes consistency while providing flexibility for individual pages to specify unique metadata. 
-
-#### Root Layout Metadata
-Define default metadata in the root layout, which applies globally. 
-
-#### Nested layouts and Pages 
-Override or extend metadata in nested layouts or specific pages as needed. 
 
 ### Best Practices for Metadata Management 📌
 To maximize the benefits of metadata management in Next.js (and metadata management in general), here are a few best practices to keep in mind: 
