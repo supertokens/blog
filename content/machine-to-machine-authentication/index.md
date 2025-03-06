@@ -7,11 +7,18 @@ category: "featured"
 author: "Maria Shimkovska"
 ---
 
-When you think about authentication the first thing that comes to mind is most likely a user to machine authentication, like logging into a social media or banking app. 
+**When you think about authentication the first thing that comes to mind is most likely a user to machine authentication, like logging into a social media or banking app.**
 
-But there is another case where machines need to exchange data between each other in what is aptly called machine to machine communication. 
+But there is another case where machines need to exchange data between each other in what is aptly called **machine to machine (M2M) communication**.
 
-Let's enter the world of machines. 
+Let's enter the world of machines. 🤖
+
+![A GIF of robot arms working together](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjR4dXE5Zmg5MDRoazdtNG9hZ2o1d3RleTY4bHRiOXh4dXhjdDJhYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Yn23Blov9gNxmrY74K/giphy.gif)
+
+```toc
+tight: true
+toHeading: 3
+```
 
 ## What is Machine to Machine Communication? 
 The automated exchange of information between devices or machines. 
