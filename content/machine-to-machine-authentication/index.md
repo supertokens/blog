@@ -21,13 +21,16 @@ toHeading: 3
 ```
 
 ## What is Machine to Machine Communication? 
-The automated exchange of information between devices or machines. 
+**The automated exchange of information between devices or machines.**
 
-In modern digital systems, applications and services often need to communicate without direct human involvement. This is what is known as machine-to-machine (M2M) communication, where "machines" can refer to servers, applications, Internet of Things devices, or APIs.
+Applications and services often need to communicate without direct human involvement. This is what is known as **machine-to-machine (M2M) communication**, where "machines" can refer to servers, applications, Internet of Things devices, or APIs.
 
-For example, when a cloud service retrieves data from a database, when an API fetches information from another services, or when two IoT devices synchronize their status. they engage in M2M communication. 
+### Examples of M2M communication: 
+- ☁️ A cloud service retrieving data from a database
+- 🔄 An API fetching information from another service 
+- 📡 Two IoT (Internet of Things) devices synchronizing their status
 
-Unlike human-to-machine communication (like logging into a website with a username and password), M2M communication requires authentication mechanisms that verify the identity of the machine, ensuring secure and trusted exchanges of information.
+Unlike human-to-machine communication *(like logging into a website with a username and password)* where the identity of the human needs to be verified, **M2M communication requires authentication mechanisms that verify the identity of a machine.** 
 
 
 ## What is Machine-to-Machine Authentication?
