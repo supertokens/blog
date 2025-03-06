@@ -142,5 +142,53 @@ module.exports = [{
   ],
   bio:
     "Developer Advocate. Digital Designer. IndieHacker",
+}, {
+  name: "Maria Shimkovska",
+  jobTitle: "Technical Writer",
+  image: "maria.jpg",
+  socials: [
+    {
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/maria-shimkovska/",
+    }, {
+      name: "github",
+      url: "https://github.com/meems1996"
+    }
+  ],
+  bio:
+    "Technical Writer. Huge Reader. I love startups and open source.",
+}, {  
+  name: "Dejan Lukić",
+  jobTitle: "Full-stack developer, tehcnical writer & entrepreneur",
+  image: "dejan.png",
+  socials: [
+    {
+      name: "website",
+      url: "https://lukicdejan.com/blog",
+    }, {
+      name: "github",
+      url: "https://github.com/lukiccd"
+    }
+  ],
+  bio:
+    "Experienced full-stack developer, technical writer, and electronics enthusiast turned generalist.",
+}, {
+  name: "Nemi Shah",
+  jobTitle: "Senior iOS Engineer at Deltatre",
+  image: "nemi.jpg",
+  socials: [
+    {
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/nemi-shah/",
+    }, {
+      name: "twitter",
+      url: "https://x.com/NemiShah3",
+    }, {
+      name: "github",
+      url: "https://github.com/nkshah2"
+    }
+  ],
+  bio:
+    "Mobile engineer, Indie software dev, Gaming enthusiast, and a tea lover.",
 }
 ]
