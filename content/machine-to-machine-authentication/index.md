@@ -21,17 +21,16 @@ toHeading: 3
 ```
 
 ## What is Machine to Machine Communication? 
-**The automated exchange of information between devices or machines.**
+**Simply put, the automated exchange of information between devices or machines.**
 
-Applications and services often need to communicate without direct human involvement. This is what is known as **machine-to-machine (M2M) communication**, where "machines" can refer to servers, applications, Internet of Things devices, or APIs.
+Applications and services often need to communicate **without direct human involvement**. This is what is known as **machine-to-machine (M2M) communication**, where "machines" can refer to servers, applications, Internet of Things devices, or APIs.
 
 ### Examples of M2M communication: 
 - ☁️ A cloud service retrieving data from a database
 - 🔄 An API fetching information from another service 
 - 📡 Two IoT (Internet of Things) devices synchronizing their status
 
-Unlike human-to-machine communication *(like logging into a website with a username and password)* where the identity of the human needs to be verified, **M2M communication requires authentication mechanisms that verify the identity of a machine.** 
-
+Unlike human-to-machine communication (*like logging into a website with a username and password* 💻)  where the identity of the human needs to be verified, **M2M communication requires authentication mechanisms that verify the identity of a machine.** 
 
 ## What is Machine-to-Machine Authentication?
 
@@ -46,6 +45,24 @@ This is super important for automated actions where systems need to authenticate
 It requires robust security to ensure the data integrity and privacy. 
 
 Machine-to-machine authentication is the process that allows one system to verify the identity of another system before sharing data. This can be done using various methods, like API keys, OAuth tokens, mutual TLS (mTLS), or cryptographic certificates. Strong M2M authentication prevents unauthorized access, protects sensitive data, and ensures that only trusted entities can interact within a network. 
+
+| **User Authentication 👤** | **M2M Authentication 🤖** |
+|----------------------------|----------------------------|
+| Requires human interaction (e.g., login form, password) | Fully automated (no human input) |
+| Uses username/password or social logins (OAuth Authorization Code Flow) | Uses **client ID and secret** or service accounts |
+| Access is tied to a user session | Access is tied to a **machine identity** |
+| Example: A user logs into a social media site and gets a session token | Example: A backend service calls an API using a client credentials token |
+
+ 
+### How It D
+
+## M2M authentication vs M2M authorization
+Developers often use M2M authentication and M2M authorization interchangeably. Here is a simple explanation of the differences: 
+- M2M authentication means **verifying the identity** of the machine. 
+- M2M authorization determines **what actions the verified machine is allowed to perform or what data it can access**. 
+
+If you want to read more about the difference between authentication and authorization, you can check out the article, [**Authentication vs Authorization: What's the difference?**](https://supertokens.com/blog/authentication-vs-authorization)
+
 
 ## Deeper Look Into How M2M Authentication Works
 
@@ -75,7 +92,8 @@ In this section we will take a look at common scenarios where M2M authentication
 - Cost Savings 
 - Improved Safety 
 
+## Conclusion 
 
-
+If two backend services **authenticate using tokens without any user involvement, it is M2M authentication**. This enables secure, automated communication between APIs, microservices, cloud workloads, and IoT devices. The key distinction from traditional authentication is that **it relies on machine identities instead of user credentials**.
 
 
