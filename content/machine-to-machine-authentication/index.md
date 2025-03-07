@@ -34,17 +34,17 @@ Unlike human-to-machine communication (*like logging into a website with a usern
 
 ## What is Machine-to-Machine Authentication?
 
-M2M authentication verifies machine identities to enable secure data exchange. 
-M2M uses protocols like OAuth 2.0 for robust security measures. 
-M2M is essential for IoT (Internet of Things) devices and automated business processes.
+Machine-to-Machine Authentication is **the process of verifying the identity of a machine** that is trying to communicate with another machine. This is a broad definition that can be broken down further. You can have M2M communication and therefore authentication both in hardware and software. 
 
-It's the process of verifying digital identities between devices or systems without human intervention. *[this line could come first because it explains what it is quickly. Could add as opposed to what, to give a better example and overview.]*
+An cool example of a hardware machine that other machines need to communicate with and authenticate would be the Mars Rover. 
 
-This is super important for automated actions where systems need to authenticate requests or actions to make sure that the data exchange still remains secure even if the systems is automated. 
+In software we also have a ton of services that constantly communicate with each other and pass on or request data. That data needs to be passed on securely so those machines need to be authenticated to make sure that any sensitive data is not passed to the wrong machine hands. 🦾
 
-It requires robust security to ensure the data integrity and privacy. 
+M2M authentication uses protocols like OAuth 2.0 to make sure that authentication is robust and data remains secure. 
 
-Machine-to-machine authentication is the process that allows one system to verify the identity of another system before sharing data. This can be done using various methods, like API keys, OAuth tokens, mutual TLS (mTLS), or cryptographic certificates. Strong M2M authentication prevents unauthorized access, protects sensitive data, and ensures that only trusted entities can interact within a network. 
+This can be done using various methods, like API keys, OAuth tokens, mutual TLS (mTLS), or cryptographic certificates. 
+
+Strong M2M authentication prevents unauthorized access, protects sensitive data, and ensures that only trusted entities can interact within a network. 
 
 | **User Authentication 👤** | **M2M Authentication 🤖** |
 |----------------------------|----------------------------|
@@ -52,9 +52,6 @@ Machine-to-machine authentication is the process that allows one system to verif
 | Uses username/password or social logins (OAuth Authorization Code Flow) | Uses **client ID and secret** or service accounts |
 | Access is tied to a user session | Access is tied to a **machine identity** |
 | Example: A user logs into a social media site and gets a session token | Example: A backend service calls an API using a client credentials token |
-
- 
-### How It D
 
 ## M2M authentication vs M2M authorization
 Developers often use M2M authentication and M2M authorization interchangeably. Here is a simple explanation of the differences: 
