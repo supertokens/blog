@@ -37,10 +37,11 @@ There are plenty of opportunities for hackers to try and exploit an authenticati
 
 ## 1. Exploiting Login Error Messages 🚨
 
+![shark typing incorrect password gif](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3p0OGZoM3N6Z2p6emZzcWZ2eGt6MG42dW5rNTJkb3pyNHh3NDZtaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UaknrN00ViA8GiqfMV/giphy.gif)
+
 When an app encounters an error, it typically generates a message to inform users or developers about what went wrong. 
 
-Descriptive error messages are crucial for debugging and user feedback. However, poorly designed messages can be exploited by hackers to gather information that helps them break into a system and steal sensitive data. 
-
+Descriptive error messages are crucial for debugging and user feedback. However, **poorly designed messages can be exploited by hackers to gather information that helps them break into a system and steal sensitive data.** 
 To prevent this, error messages should never expose personal details like database connection strings, usernames, emails, passwords, or session tokens. Even revealing whether a username or password is correct (or incorrect) can provide attackers with valuable clues. These attacks are often automated, making them even more effective.
 
 🚫 **Don't**: "Password is incorrect." <br>
@@ -73,7 +74,7 @@ Password reset forms are a common target for attackers looking to gain unauthori
 
 A common mistake is revealing whether an email or username exists in the system. This allows attackers to compile a list of valid accounts, making brute-force or phishing attacks easier. 
 
-🚫 **Don’t**: "A reset link has been sent to your email if it exists in our system." <br>
+🚫 **Don’t**: "A reset link has been sent to your email." <br>
 🔴 **Why it’s bad**: This confirms whether an email is registered, which hackers can use to build a list of valid accounts
 
 ✅ **Do**: "If this account exists, a reset link has been sent."<br>
