@@ -2,7 +2,7 @@
 title: "SIM Swapping Is Hijacking Your User Accounts: How to Shut It Down"
 date: "2025-02-15"
 description: "Learn about SIM swapping scams, their impact on personal security, and effective strategies to safeguard your mobile identity."
-# cover: "what-is-passwordless-auth.png"
+cover: "sim-swapping.png"
 category: "featured"
 author: "Maria Shimkovska"
 ---
