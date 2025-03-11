@@ -120,7 +120,7 @@ Here is how hackers use APIs to gather information on your users.
 ### Status Code Enumeration 
 APIs often return different HTTP status codes depending on whether a request is valid or not. Hackers take advantage of this to systematically check which usernames or emails are valid. 
 
-Example trying to find usernames: [This can be an illustration to break up the article text. Will contact Nevil for it]
+Example trying to find usernames:
 ```js
 GET /api/user?email=johndoe@example.com --> 200 OK (Valid email)
 
@@ -136,7 +136,7 @@ GET /api/user?email=fakeuser@example.com --> 404 Not Found (Invalid email)
 ### Error Message Clues
 Super descriptive error messages can give hackers hints about your authentication's inner workings. Instead of returning generic messages, error messages often try to be helpful (which makes sense and we are often encouraged to provide helpful error messages), but this comes at the expense of giving hackers potential help too by giving specific reasons for a failure. 
 
-Examples of error messages hackers can take advantage of: [This can be an illustration to break up the article text. Will contact Nevil for it]
+Examples of error messages hackers can take advantage of:
 
 ```js
 POST api/login with incorrect username --> Response: "User not found"
