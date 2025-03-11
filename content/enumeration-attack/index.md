@@ -37,7 +37,7 @@ There are plenty of opportunities for hackers to try and exploit an authenticati
 
 ## 1. Exploiting Login Error Messages 🚨
 
-![shark typing incorrect password gif](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3p0OGZoM3N6Z2p6emZzcWZ2eGt6MG42dW5rNTJkb3pyNHh3NDZtaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UaknrN00ViA8GiqfMV/giphy.gif)
+![A GIF of a shark typing incorrect password](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3p0OGZoM3N6Z2p6emZzcWZ2eGt6MG42dW5rNTJkb3pyNHh3NDZtaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UaknrN00ViA8GiqfMV/giphy.gif)
 
 When an app encounters an error, it typically generates a message to inform users or developers about what went wrong. 
 
@@ -70,6 +70,8 @@ By following these steps, you can keep error messages useful for users while pre
 
 ## 2. Manipulating Password Reset Forms 🔑
 
+![A GIF of a cartoon penguin pressing a reset button](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXdwaDlvOHFuODcwN3R0bzk0b2tjcjN3MDBuenF6amx0OWVtbGZvbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gOEpIcmsNf1lDM79LG/giphy.gif)
+
 Password reset forms are a common target for attackers looking to gain unauthorized access to accounts. If not properly secured, they can be exploited to gather information or launch automated attacks. 
 
 A common mistake is revealing whether an email or username exists in the system. This allows attackers to compile a list of valid accounts, making brute-force or phishing attacks easier. 
@@ -99,6 +101,8 @@ Lock it up tight, and only the right people get back in. 🚀
 
 ## 3. Abusing Registration Forms 👤
 
+![A GIF of reCAPTCHA](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWFxamt2c3BscjB1dXdxMXg3b3BuMTg2amNsc2l6OTQ4b2dmM3hqbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/WQqoXMWlmT2RMeXafG/giphy.gif)
+
 Registration forms may seem harmless, but they are also susceptible to exploiting. They can be a goldmine for attackers. 
 
 If your registration form reveals whether a username is taken, hackers can compile a list of valid accounts. 
@@ -115,8 +119,10 @@ If your registration form reveals whether a username is taken, hackers can compi
 🤖 Use CAPTCHAs. Make bots prove they’re human before registering.
 
 ## 4. Scraping API Responses 🛠️
-Hackers also use APIs to gather information about your users, often without even triggering the traditional security alarm bells like unusual login attempts.
 
+![A GIF of 404 error page](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2QyenduOG80Z3Z6NmdnOHJsMmM5b3N2c2d6d2o3OXhyaTNnOGJjYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xTiN0L7EW5trfOvEk0/giphy.gif)
+
+Hackers also use APIs to gather information about your users, often without even triggering the traditional security alarm bells like unusual login attempts.
 Here is how hackers use APIs to gather information on your users. 
 ### Status Code Enumeration 
 APIs often return different HTTP status codes depending on whether a request is valid or not. Hackers take advantage of this to systematically check which usernames or emails are valid. 
@@ -167,6 +173,9 @@ Hackers can use this data for credential stuffing (testing leaked passwords) or 
 📊 **Monitor API traffic**. A sudden surge in requests could mean someone might be scraping.
 
 ## 5. Timing Attacks: The Millisecond Giveaway ⏳
+
+![A GIF of a sand clock](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGMxaTRvZnhydGgwbXI2MDNxNXV0ZGZjbHo1ZXg5ZHQzdThwOWw0dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/e4XaV9IVn8DXp0C6tm/giphy.gif)
+
 Sometimes all it takes is a few milliseconds for hackers to figure out if a username exists. Even if your API doesn't return different error messages, response times from APIs can also provide hints to hackers about which usernames/emails are valid or not. 
 
 The way this works is when attackers submit different usernames to your API, they measure how long each request takes to process. Even a tiny difference in the response time can indicate if an account exists or not. 
@@ -193,6 +202,9 @@ This is because systems validate usernames first, then check passwords. If the u
 🔍 **Monitor unusual login patterns.** If you see a high number of failed requests with nearly identical timing differences, it could indicate a timing attack.
 
 ## 6. Abusing Forgot Username Features 🤔
+
+![A GIF of a seal freaking out for forgetting](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnZicWV3ZjYxMGp6NHRlb2RzM2FsZzZ4cm8ydWt1NW9qYjh0ZGUxMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rS4E6cd0bAt1LUrDRN/giphy.gif)
+
 The "Forgot Username" feature may appear harmless, but this is exactly what hackers may want you to continue believing. 
 
 If your systems confirms whether an email is registered, hackers can exploit it to gather information before going into further attacks like phishing attacks or credential stuffing attacks. 
@@ -213,6 +225,9 @@ If the account exists, your users are likely to get a response like "Your userna
 📩 **Add a secondary verification.** Instead of immediately showing the username, send a confirmation email requiring the user to verify the request.
 
 ## 7. Using Social Engineering & Data Leaks 💀
+
+![A GIF of a drawing of two character with one saying "I'm manipulating you"](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGV3ODl5NTNtZnZ5N3YzZjJnOXZvNHhiaWpmdmQ5MjBsZ3NldXhmeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vC4ONoCZb60ZLMMNBP/giphy.gif)
+
 Hackers don't always need to guess credentials if they can trick your users into giving them up.  By combining leaked data with social engineering tactics, hackers can bypass your authentication security. As sophisticated as our technology gets, we as people are still the weakest link in cybersecurity. 
 
 Hackers exploit social engineering and data leaks by combining public data with enumeration. They scour data breach dumps, social media and other public sources to find email and usernames .They they test these against your system using enumeration techniques like login errors, password reset forms and API scraping. 
