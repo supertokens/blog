@@ -1,6 +1,6 @@
 ---
 title: "7 Sneaky Ways Hackers Exploit Enumeration Attacks—and How to Stop Them"
-date: "2025-02-22"
+date: "2025-03-10"
 description: "Discover the top 7 tactics hackers use in enumeration attacks and learn effective strategies to safeguard your authentication systems."
 cover: "hackers-exploit-numeration-attacks.png"
 category: "featured"
