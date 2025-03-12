@@ -7,17 +7,15 @@ category: "featured"
 author: "Maria Shimkovska"
 ---
 
-Two common ways apps communicate with each other are **APIs** and **webhooks**. 
+**APIs** and **webhooks** are two common ways apps communicate with each other.
 
-Before we dive into what they are and their differences, here is a simple way to think about each: 
+Before we get into what they are, how they differ, and how they're used, here's a simple way to understand them:
 
-1. An **API** is like repeatedly texting your friend to see when they're available for coffee.
+Image you want to grab coffee with your extremely busy friend. 
 
-2. A **webhook** is like your friend texting you when they're free to grab coffee.
+1. An **API** is like repeatedly texting your friend to see when they're available for coffee. 📱
 
-Webhooks are almost always faster than API calls and require less work to set up on your end. 
-
-An API is a full language for an app with functions or calls to add, edit, and retrieve data.
+2. A **webhook** is like your friend texting you when they're free to grab coffee. 👋
 
 ![A cat drinking coffee sticker](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExODRlYjQzeGx0ZHJmYjN2Y3NoeDQ3YWYwcXhrZGVseXYxbG9pYWtnZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/iKYO5ZWiT7wlea7SqK/giphy.gif)
 
