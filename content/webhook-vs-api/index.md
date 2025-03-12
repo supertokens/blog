@@ -118,13 +118,9 @@ An API response usually includes:
 
 ## What Is A Webhook? 📩
 
-When I was seven years old, I had the annoying habit of asking my dad "Are we there yet? Are we there yet?" on drives. All the time. He kept responding with "No,we're not." After a few minutes, which to me must have felt like hours, I would once again ask, "Are we there yet?" 🚗 After a while he would respond with "I will tell you when we get there."
+A **webhook** an event driven communication between apps. When something happens in one app (the source), it automatically sends an HTTP request to another app (the destination) to let it know about the event and share some related data.
 
-[write something that would come here to soft launch us into webhooks]
-
-A **webhook** is like a notification system between two apps. When something happens in one app (the source), it automatically sends an HTTP request to another app (the destination) to let it know about the event and share some related data.
-
-For example, imagine you’re using a payment app. When a customer makes a payment, the app can automatically send a webhook to your server with details about the payment, like the amount and the customer’s name. Your server doesn’t have to keep asking the payment app for updates—it just gets notified when something important happens.
+For example, imagine you’re using a payment app. When a customer makes a payment, the app can automatically send a webhook to your server with details about the payment, like the amount and the customer’s name. Your server doesn’t have to keep asking the payment app for updates. It just gets notified when something important happens.
 
 ### How Webhooks Generally Work
 Creating a webhook involves setting up a system where one application automatically sends data to another when a specific event happens. Here is a simple step-by-step overview:
