@@ -26,69 +26,95 @@ toHeading: 3
 
 ## What Is An API? 🌉
 
-An **API (Application Programming Interface)** is designed to carry out an action. It's like a bridge that lets different systems talk to each other. It defines the rules for how one system can ask another for information or services and explains the kind of responses to expect. This makes it easier for apps, services, or programs to work together.
+**API** stands for **Application Programming Interface**. It is a set of protocols that allow a **connection** between applications, systems, and devices to happen so they can exchange data.  
 
-APIs are a two way communication. They can handle large volumes of data, more intricate communication between devices, and more complicated functions. 
+### Common API Protocols
+Here are a few common API protocols you have likely heard about: 
+#### REST (Representational State Transfer)
+- This is the **most popular** API protocol. 
+- Uses **HTTP methods** like GET, POST, PUT, and DELETE.
+- Follows a **stateless architecture**, meaning each request is independent and carries all the necessary information.
 
-They are like a layer of software between the app and a web server. Someone uses the app that will request data from the server, like loading a set of images. That triggers the API, and it handles communication as needed for whatever you are doing. 
+#### SOAP (Simple Object Access Protocol)
+- A protocol designed for **exchanging structured information**.
+- Uses **XML** for requests and responses.
+- Known for its **strong security features** and reliability in enterprise systems.
 
-APIs can support more advanced security protocols. They have a higher capability of security. It doesn't mean that all APIs are more secure, or that webhooks are not secure. 
+#### GraphQL (Graph query language)
+- Developed by Facebook for **flexible data fetching**.
+- Allows clients to request only the data they need, **reducing over-fetching**.
+- Uses a **single endpoint** for all queries and mutations.
 
-- An **API** lets clients request data whenever they need it (unlike webhooks, which push data automatically).
-- **Common uses**: Fetching data, submitting forms, processing payments, etc.
-- **Best practices**: Use authentication, rate limiting, and error handling.
+#### gRPC (Remote Procedure Call)
+- Developed by Google for **high-performance communication**.
+- Uses HTTP/2 for **faster data transmission**.
+- Ideal for **real-time applications and microservices**.
 
-### How APIs Generally Work
-An **API** allows one system to request data or perform actions in another system. Unlike webhooks, APIs require the client to make a request to get a response. Here’s how you set one up:
+#### WebSocket
+- Allows data to flow back and forth between client and server at the same time.
+- Commonly used for **live updates like chat apps or real-time notifications**.
 
-#### Define What Your API Will Do 
-Decide what functionality your API should provide. This includes:
+| Protocol      | Best For                        | Data Format   | Key Strengths                   |
+|----------------|----------------------------------|-----------------|---------------------------------|
+| **REST**         | Simple data requests              | JSON, XML         | Easy to use and widely supported |
+| **SOAP**         | Secure transactions (e.g., banking) | XML                 | Strong security features           |
+| **GraphQL**      | Precise data fetching              | JSON                 | Flexible data queries               |
+| **gRPC**         | Fast communication in microservices | Protobuf           | Efficient for large-scale apps       |
+| **WebSocket**    | Real-time updates                  | JSON, Binary        | Ideal for live interactions         |
 
-- What data it will send or receive (e.g., user info, orders, messages).
-- What actions it will allow (e.g., creating, updating, deleting records).
-- **Example**: A User API that allows clients to get user details and create new users.
 
-#### Set Up a Server to Handle API Requests
-- Create a server that listens to API requests. This server will process requests and return responses. 
+*** 
+### How Do APIs Work? 
 
-```javascript
-const express = require('express');
-const app = express();
+It's important to note that APIs are a **two way communication**. What this means is that you have two parties, one making a request and another one receiving that request, and subsequently choosing what to do with the request before sending back a response. 
 
-app.use(express.json()); 
+These two parties are the **API client** and the **API server**. 
 
-const users = [{ id: 1, name: 'John Doe', email: 'john@example.com' }];
+#### API Client
+The API client starts the exchange by sending the request to the API server. For example, a user may start a request by entering a search term, like looking up a book title to see more information about it. 
 
-// GET endpoint to retrieve users
-app.get('/users', (req, res) => {
-    res.json(users);
-});
+#### API Server
+The API server is responsible for handling authentication, validating inputs, and getting and manipulating data. 
 
-// POST endpoint to create a new user
-app.post('/users', (req, res) => {
-    const newUser = { id: users.length + 1, ...req.body };
-    users.push(newUser);
-    res.status(201).json(newUser);
-});
+```pgsql
+API Client                API Server
+    |                          |
+    | 1. Send request          |
+    |    (e.g., search term)   |
+    |------------------------->|
+    |                          |
+    |                          | 2. Request is processed 
+    |                          |
+    |                          | 3. Server processes data
+    |<-------------------------|
+    | 4. Response is sent      |
+    |    - Status code         |
+    |       (e.g., 200 OK)     |
+    |    - Headers             |
+    |       (e.g.,Content-Type)|
+    |    - Body                |
+    |       (e.g., data)       |
+    |                          |
 
-// Start the server
-app.listen(3000, () => console.log('API running on port 3000'));
 ```
 
-#### Call the API (Client Side)
-A client (another system, app, or frontend) makes requests to the API using HTTP methods like `GET`, `POST`, `PUT`, or `DELETE`.
+There are two other components at play here, the **API request** and the **API response**. <br> **The API request is the request the API client makes.** <br> **The API response is what the API server sends back.**
 
-#### Handle Authentication
-To secure your API, you can require authentication (e.g., API keys, JWT tokens).
+#### API request 
+An API request usually includes:
 
-```pgsql 
-    Client                      Server
-      |                            |
-      | 1. Request data  --------->|
-      |                            |
-      |<--------- 2. Response data |
-      |                            |
-```
+- **Endpoint**: The URL that targets a specific resource (e.g., /books).
+- **Method**: Defines the action (e.g., GET, POST, PUT, DELETE).
+- **Parameters**: Extra details passed to customize the request (e.g., a "topic" filter).
+- **Headers**: Key-value pairs that provide extra info like content type or authentication.
+- **Body**: Contains data for creating, updating, or deleting a resource (e.g., book content).
+
+#### API response 
+An API response usually includes:
+
+- **Status Code**: A three-digit code that shows the result (e.g., 200 OK, 201 Created, 404 Not Found).
+- **Headers**: Key-value pairs with extra details about the response.
+- **Body**: The actual data or an error message if something went wrong.
 
 ## What Is A Webhook? 📩
 
