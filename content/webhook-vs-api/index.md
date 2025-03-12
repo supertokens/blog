@@ -153,7 +153,7 @@ Creating a webhook involves setting up a system where one application automatica
 ```
 
 ## Key Differences Between APIs and Webhooks
-| Aspect               | API                                          | Webhook                                     |
+| Aspect               | API  🌉                                        | Webhook   📩                                  |
 |----------------------|----------------------------------------------|---------------------------------------------|
 | **Request Initiation** | The client actively requests data from the server. | The server automatically sends data when an event occurs. |
 | **Time**               | The client decides when to make a request (on-demand). | The request happens automatically when triggered by an event. |
