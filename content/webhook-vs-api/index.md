@@ -167,6 +167,6 @@ Creating a webhook involves setting up a system where one application automatica
 
 ## How SuperTokens Enhances API and Webhook Security 
 
-- **Session Management**: SuperTokens provides robust session management solutions that ensure secure API interactions.
-- **Token Theft Detection**: With features like rotating refresh tokens and automatic token revocation, SuperTokens helps detect and prevent unauthorized access.
-- **Ease of Integration**: SuperTokens offers straightforward integration processes, making it easier for developers to implement secure authentication in their applications.
+- 🔒 **Session Management**: SuperTokens makes it easy to manage user sessions securely, ensuring safe communication between your app and its APIs.
+- 🛡️ **Token Theft Detection**: SuperTokens helps prevent unauthorized access with features like rotating refresh tokens and automatic token cancellation.
+- 🚀 **Easy to Use**: SuperTokens is simple to set up, allowing developers to quickly add secure authentication to their apps.
