@@ -153,6 +153,16 @@ Creating a webhook involves setting up a system where one application automatica
 ```
 
 ## Key Differences Between APIs and Webhooks
+| Aspect               | API                                          | Webhook                                     |
+|----------------------|----------------------------------------------|---------------------------------------------|
+| **Request Initiation** | The client actively requests data from the server. | The server automatically sends data when an event occurs. |
+| **Time**               | The client decides when to make a request (on-demand). | The request happens automatically when triggered by an event. |
+| **Communication Model** | Request-response model (the client asks, the server responds). | Event-driven model (the server pushes data to the client). |
+| **Efficiency**         | Can be inefficient if polling frequently to check for updates. | More efficient because updates are sent only when necessary. |
+| **Use Case Examples**  | Fetching user details, submitting a form, processing payments. | Getting notified when a payment is completed, a new user signs up, or a file is uploaded. |
+| **Reliability & Error Handling** | If a request fails, the client can retry instantly. | If the destination server is down, the webhook might be lost unless retries are built in. |
+| **Security**           | Typically secured with API keys, OAuth, or JWT authentication. | Often secured using secret tokens or HMAC signatures to verify authenticity. |
+| **Analogy**            | Repeatedly asking the barista if the coffee is ready, until it is | The barista letting you know when your coffee is actually ready |
 
 
 ## How SuperTokens Enhances API and Webhook Security 
