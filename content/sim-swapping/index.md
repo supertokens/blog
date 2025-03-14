@@ -9,8 +9,6 @@ author: "Maria Shimkovska"
 
 Cybercriminals sure know how to keep themselves busy. One scam they just can't seem to get enough of is **SIM swapping** — a sneaky trick where they hijack your SIM card and take over your phone number. So any calls or texts you receive go to them, not to you. 
 
-According to the Internet Crime Complaint Center - a hub for reporting cyber crimes - 
-
 Understanding how SIM swapping works — and how to prevent it — is essential to keeping your user accounts and personal data safe. 
 
 After all, scammers don’t just hack your phone — they pose as you to fool your mobile provider and gain access to your most important accounts. Incredibly rude if you ask  me. 😑
@@ -25,25 +23,33 @@ toHeading: 3
 ## What Is a SIM Card? 
 A **SIM (Subscriber Identity Module)** is a small card that **connects your phone to your mobile network**. 📶📲
 
-It holds important details such as your phone number, contacts, and other data. This information allows you to make calls, send texts, and use mobile data. 
+It holds important details such as your phone number, contacts, and other data. This information allows you to make calls, send texts, and use mobile data. It's removable and transferable to other phones.
+
+Alternatively, **eSIM cards are embedded Subscriber Identity Modules** -- SIM cards that are built into a user's phone. 🔒📲
 
 **Because the SIM is tied to your account, moving it to another phone will transfer your mobile services to that device.**
 
-In a SIM-swapping attack, cybercriminals exploit this by tricking your carrier into switching your phone number to a SIM they control, giving them access to your accounts and personal data.
+In a SIM-swapping attack, cybercriminals exploit this by tricking your carrier into switching your phone number to a SIM they control, giving them access to your accounts and personal data. 
 
 ## What Is SIM Swapping and Why You Should Care? 
 
 **SIM Swapping** (SIM hijacking or port-out fraud) is a fraud technique where scammers transfer a victim's phone number to a new SIM card under their control. It's a type of account takeover. 
  
-This allows scammers, our cybervillains, to receive communications associated with your phone number, including those that let them to access your social media profiles, banking and other accounts. 
+**This allows scammers -- our cybervillains -- to receive communications associated with your phone number, including those that let them to access your social media profiles, banking and other accounts.**
 
 Cybervillains may target people who have valuable social media or financial accounts. This is how Jack Dorsey, the founder of Twitter, got his account hacked in 2019. 
 
 ## How It Works 
 
-Typically, a SIM attack begins with the attacker gathering personal information about users. This information is used in verifying a person's identity. 
+1. **Typically, a SIM attack begins with the attacker gathering personal information about users.** This information is used in verifying a person's identity and an attacker can use it to impersonate you. They could find details about you from: 
+- your social media accounts
+- private information that has been leaked 
+- any information about you that is freely online
 
-This is why 
+2. **The attacker will then reach out to your phone company pretending to be you.** They can use any information they have on you to answer security questions -- which is why some people also question the safety of personal questions as a security measure. Then they will ask to have your phone number transferred to a SIM card they control. 
+
+3. **After all this, attackers will now have access to your text messages and contacts.** This could also lead to even more attacks because once they have this information, attackers can get even more information on users, including passwords and emails. 
+
 
 ![A chart showing how SIM swapping works generally](sc.png)
 
