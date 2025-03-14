@@ -2022,6 +2022,52 @@
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/flask-user-authentication\"},\"headline\":\"Adding Authentication to Your Flask Backend with SuperTokens\",\"description\":\"Learn how to seamlessly add authentication to your Flask backend using SuperTokens. This guide covers setting up authentication with the SuperTokens CLI or manual configuration, enabling you to focus on building application logic instead of authentication infrastructure.\",\"image\":\"https://supertokens.com/blog-meta-images/flask-user-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     },
     {
+        "path": "/blog/idp-auth",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how IDP authentication works, why it’s critical for secure access management, and how to integrate tools like SuperTokens for seamless implementation.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What is IDP Authentication: How Identity Providers Secure Your Apps\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/idp-auth\" />",
+            "<meta property=\"og:description\" content=\"Learn how IDP authentication works, why it’s critical for secure access management, and how to integrate tools like SuperTokens for seamless implementation.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/idp-auth.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how IDP authentication works, why it’s critical for secure access management, and how to integrate tools like SuperTokens for seamless implementation.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/idp-auth\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/idp-auth.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/idp-auth\">"
+        ],
+        "title": "What is IDP Authentication: How Identity Providers Secure Your Apps",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/idp-auth\"\n            },\n            \"headline\": \"Learn how IDP authentication works, why it’s critical for secure access management, and how to integrate tools like SuperTokens for seamless implementation.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/idp-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/open-source-identity-management",
+        "metaTags": [
+            "<meta name=\"description\" content=\"As cyber threats grow more sophisticated and compliance demands tighten, organizations are rethinking how they secure identities and control access. Traditional IAM solutions can be rigid, expensive, and opaque—leaving businesses locked into costly, one-size-fits-all models. Enter open-source IAM: a powerful, transparent alternative that puts control back in the hands of organizations. Offering unmatched flexibility, scalability, and security, open-source IAM is quietly reshaping the way enterprises safeguard their most valuable asset—identity. But is it the right fit for your business?\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Top Open Source Identity Management Systems\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/open-source-identity-management\" />",
+            "<meta property=\"og:description\" content=\"As cyber threats grow more sophisticated and compliance demands tighten, organizations are rethinking how they secure identities and control access. Traditional IAM solutions can be rigid, expensive, and opaque—leaving businesses locked into costly, one-size-fits-all models. Enter open-source IAM: a powerful, transparent alternative that puts control back in the hands of organizations. Offering unmatched flexibility, scalability, and security, open-source IAM is quietly reshaping the way enterprises safeguard their most valuable asset—identity. But is it the right fit for your business?\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/foss-iam.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"As cyber threats grow more sophisticated and compliance demands tighten, organizations are rethinking how they secure identities and control access. Traditional IAM solutions can be rigid, expensive, and opaque—leaving businesses locked into costly, one-size-fits-all models. Enter open-source IAM: a powerful, transparent alternative that puts control back in the hands of organizations. Offering unmatched flexibility, scalability, and security, open-source IAM is quietly reshaping the way enterprises safeguard their most valuable asset—identity. But is it the right fit for your business?\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/open-source-identity-management\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/foss-iam.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/open-source-identity-management\">"
+        ],
+        "title": "Top Open Source Identity Management Systems",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/open-source-identity-management\"\n            },\n            \"headline\": \"As cyber threats grow more sophisticated and compliance demands tighten, organizations are rethinking how they secure identities and control access. Traditional IAM solutions can be rigid, expensive, and opaque—leaving businesses locked into costly, one-size-fits-all models. Enter open-source IAM: a powerful, transparent alternative that puts control back in the hands of organizations. Offering unmatched flexibility, scalability, and security, open-source IAM is quietly reshaping the way enterprises safeguard their most valuable asset—identity. But is it the right fit for your business?\",\n            \"image\": \"https://supertokens.com/blog-meta-images/foss-iam.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+     },
+     {
         "path": "/blog/sso-implementation",
         "metaTags": [
             "<meta name=\"description\" content=\"This blog explores the benefits and functionalities of Single Sign-On (SSO), highlighting how it simplifies user authentication, enhances security, and integrates with modern identity management systems. It also covers how open standards like OAuth 2.0 and OIDC enable seamless access to applications, including the use of social logins from services like Google, Facebook, and Twitter.\" />",
@@ -3183,7 +3229,30 @@
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/identity-and-access-management-strategy\">"
         ],
         "title": "How to Build Effective Identity & Access Management Strategy",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-strategy\"\n            },\n            \"headline\": \"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-strategy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+        "schema": "{\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-strategy\"\n            },\n            \"headline\": \"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-strategy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }"
+    },
+    {
+        "path": "/blog/risk-based-authentication",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how Risk-Based Authentication enhances security by adapting to user behavior and mitigating threats in real-time.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What is Risk-Based Authentication? A Complete Guide\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/risk-based-authentication\" />",
+            "<meta property=\"og:description\" content=\"Learn how Risk-Based Authentication enhances security by adapting to user behavior and mitigating threats in real-time.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/risk-based-authentication.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how Risk-Based Authentication enhances security by adapting to user behavior and mitigating threats in real-time.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/risk-based-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/risk-based-authentication.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/risk-based-authentication\">"
+        ],
+        "title": "What is Risk-Based Authentication? A Complete Guide",
+        "schema": "{\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/risk-based-authentication\"\n            },\n            \"headline\": \"Learn how Risk-Based Authentication enhances security by adapting to user behavior and mitigating threats in real-time.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/risk-based-authentication.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }"
     },
     {
         "path": "/blog/pillars-of-a-ciam-strategy-secure-scale-and-personalize-customer-access",
@@ -3230,8 +3299,31 @@
         ],
         "title": "One-Time Password (OTP) Bots: How They Work and How to Defend Against Them",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/otp-bots\"\n            },\n            \"headline\": \"Explore how OTP bots bypass two-factor authentication (2FA), their growing threats, and strategies to protect your application using tools like SuperTokens.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/otp-bots.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
-      },
-      {
+    },
+    {
+        "path": "/blog/multi-tenant-architecture",
+        "metaTags": [
+            "<meta name=\"description\" content=\" This blog provides an in-depth exploration of how multi‑tenant SaaS architectures boost scalability, reduce costs, and enhance security through SuperTokens' innovative approach.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Multi-Tenant Architecture: Benefits, Practices & Implementation\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/multi-tenant-architecture\" />",
+            "<meta property=\"og:description\" content=\" This blog provides an in-depth exploration of how multi‑tenant SaaS architectures boost scalability, reduce costs, and enhance security through SuperTokens' innovative approach.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/multi-tenant-architecture.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\" This blog provides an in-depth exploration of how multi‑tenant SaaS architectures boost scalability, reduce costs, and enhance security through SuperTokens' innovative approach.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/multi-tenant-architecture\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/multi-tenant-architecture.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/multi-tenant-architecture\">"
+        ],
+        "title": "Multi-Tenant Architecture: Benefits, Practices & Implementation",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/multi-tenant-architecture\"\n            },\n            \"headline\": \" This blog provides an in-depth exploration of how multi‑tenant SaaS architectures boost scalability, reduce costs, and enhance security through SuperTokens' innovative approach.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/multi-tenant-architecture.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },        
+    {
         "path": "/blog/integrating-oauth-providers-for-seamless-authentication",
         "metaTags": [
             "<meta name=\"description\" content=\"Discover how to integrate OAuth providers for seamless authentication.\" />",
@@ -3276,5 +3368,6 @@
         ],
         "title": "Top 8 Identity Management Solutions for Developers and Businesses",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/top-8-identity-management-solutions-for-developers-and-businesses\"\n            },\n            \"headline\": \"Discover the top 9 user management software tools for 2024! Streamline\",\n            \"image\": \"https://supertokens.com/blog-meta-images/top-8-identity-management-solutions-for-developers-and-businesses.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+
     }
 ]
