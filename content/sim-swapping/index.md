@@ -7,16 +7,31 @@ category: "featured"
 author: "Maria Shimkovska"
 ---
 
-- Introduce the concept of SIM swapping, highlighting its rise as a prevalent form of cybercrime. 
-- Emphasize the importance of understanding and preventing SIM swapping to protect personal information and financial assets. 
+Cybercriminals sure know how to keep themselves busy. One scam they just can't seem to get enough of is **SIM swapping** — a sneaky trick where they hijack your SIM card and take over your phone number. So any calls or texts you receive go to them, not to you. 
 
-Your mobile number may be the key to your most important accounts like your financial accounts. Text messages are are often used by banks, businesses and payment services to verify your identity when you request updates to your account. 
+According to the Internet Crime Complaint Center - a hub for reporting cyber crimes - 
 
-Mobile phone numbers can legally be ported from one provider to another when you switch your mobile phone service, and can also be ported from one mobile phone to another when you switch devices. 
+Understanding how SIM swapping works — and how to prevent it — is essential to keeping your user accounts and personal data safe. 
 
-Scammers have been known to initiate porting requests. If they have enough of someone's personal information, they can attempt to con a victim's mobile phone company into believing the request 
+After all, scammers don’t just hack your phone — they pose as you to fool your mobile provider and gain access to your most important accounts. Incredibly rude if you ask  me. 😑
 
-## What Is SIM Swapping? 
+Time to spot the faker and kick them to the curb.
+
+```toc
+tight: true
+toHeading: 3
+```
+
+## What Is a SIM Card? 
+A **SIM (Subscriber Identity Module)** is a small card that **connects your phone to your mobile network**. 📶📲
+
+It holds important details such as your phone number, contacts, and other data. This information allows you to make calls, send texts, and use mobile data. 
+
+**Because the SIM is tied to your account, moving it to another phone will transfer your mobile services to that device.**
+
+In a SIM-swapping attack, cybercriminals exploit this by tricking your carrier into switching your phone number to a SIM they control, giving them access to your accounts and personal data.
+
+## What Is SIM Swapping and Why You Should Care? 
 
 **SIM Swapping** (SIM hijacking or port-out fraud) is a fraud technique where scammers transfer a victim's phone number to a new SIM card under their control. It's a type of account takeover. 
  
@@ -24,34 +39,40 @@ This allows scammers, our cybervillains, to receive communications associated wi
 
 Cybervillains may target people who have valuable social media or financial accounts. This is how Jack Dorsey, the founder of Twitter, got his account hacked in 2019. 
 
-## How To Protect Yourself 
-
-Wireless providers are working hard to prevent this type of attack, but there are things you can do as well. 
-
-- Establish a PIN on your account 
-    - Don't use a pin that is easily guessed like your social security number or a birthday or a lucky number. 
-- Download your provider's mobile app to stay up to date on security updates and alerts 
-- Leverage tools like multi-factor authentication, but dont use MFA that includes your phone number
-- Minimize the amount of personal information shared online
-- Limit sharing your phone number where it might be widely posted or distributed. 
-- If you notice anything unusual, like not receiving certain calls or texts, let your provider know. 
-- 
-
 ## How It Works 
 
-1. Scammers learn personal information about a victim through data breaches, social media, or phishing scams 
-2. Scammers impersonate the victim and convince the mobile carrier to move the victim's phone number to a new SIM card. 
-3. Scammers can now access the victim's phone's data and change passwords 
+Typically, a SIM attack begins with the attacker gathering personal information about users. This information is used in verifying a person's identity. 
 
-## Implement These Best Practices to Block SIM Swap Attacks 
-Immediate Steps for Business: 
-1. Ditch SMS 2FA as the default authentication method. .
-2. Enforce strong MFA (TOTP, WebAuthn) across high-risk actions. 
-3. Monitor and auto-flag unusual login behaviors. 
-4. Use secure session management tools like SuperTokens. 
-5. Educate users on social engineering risks. 
+This is why 
+
+![A chart showing how SIM swapping works generally](sc.png)
+
+## Are eSIM Cards More Secure Than Physical SIM Cards? 
+
+##  Why SMS 2FA Is No Longer Enough
+
+##  The Right Authentication Strategy: Moving Beyond SMS 2FA
+
+Implement these three pillars to make sure you and your users are safe.
+
+#### Pillar 1 -- Implement Stronger Two-Factor Authentication (2FA) Alternatives
+- **FIDO2/WebAuthn Authentication**: Device-based authentication eliminates reliance on SMS.
+- **TOTP (Time-Based One-Time Passwords) with an Authenticator App**:
+- Apps like **Google Authenticator** and **Authy** remove carrier dependence.
+- Attackers need physical access to the user’s device to generate 2FA codes.
+
+#### Pillar 2 -- Require Multi-Factor Authentication (MFA) for High-Risk Actions
+- Enforce **MFA for sensitive transactions** (password changes, fund transfers, adding new devices).
+- Use **risk-based authentication** to prompt extra verification only when login behavior seems suspicious.
+
+#### Pillar 3 -- Implement Robust Session Management
+- **Limit session lifetimes**: Prevent long-lived sessions from being exploited.
+- **Auto-log out users when a phone number or device change is detected**.
+- **Use SuperTokens to handle secure, scalable session management.**
+
+## How SuperTokens Helps Secure Authentication Against SIM Swaps
 
 ## Final Thoughts: Secure Your Authentication System Before It’s Too Late
-Businesses can no longer rely on SMS-based authentication to protect user accounts. SWIM swapping is an industry-wide problem, but SuperTokens provides the authentication tools to stop account takeover before they happen. 
+Unfortunately, businesses can no longer rely on SMS-based authentication to protect user accounts. SWIM swapping is an industry-wide problem, but SuperTokens provides the authentication tools to stop account takeover before they happen. 
 
-Next step is to migrate your authentication system to a modern and secure CIAM solution that keeps customer accounts safe at scale. 
+Next step is to migrate your authentication system to a modern and secure CIAM solution that keeps customer accounts safe at scale.
