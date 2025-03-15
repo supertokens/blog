@@ -9,33 +9,28 @@ author: "Maria Shimkovska"
 
 If you're aiming to take your app to the moon, 🚀🌕 you need to do some planning on how it will affect your users and bank account. Unlike the limitless stars we see when we look up at the night sky (if you are in a field, away from the busy city lights and when it's not cloudy 👀), our money sadly is not limitless. 
 
+This is a fairly comprehensive guide so feel free to jump around to the parts that help you the most. 
+
 If you're thinking about moving away from Firebase or exploring alternatives because you know it’s not the right fit, this guide can help you choose the best solution to fuel your app’s journey.
 
 ![a penguin on a rocket](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWJoNHZwY283N3NybG80OWczMmlhcW9ncXh5N3Vqc2NjZ3psNWQxYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/POcrqCGlZHeIlt7kef/giphy.gif)
 
 ## Why Consider Firebase Alternatives 
-Overview of Firebase and its role as a BaaS (Backend-as-a-Service).
+### Overview of Firebase and its role as a BaaS (Backend-as-a-Service).
 
-**BaaS** provides pre-built backend infrastructure and services to simplify app development, handling server-side tasks like: 
-- data storage
-- user management
-- APIs
-- server maintenance
-- security
-- database management
-- and more
+**BaaS** provides pre-built backend infrastructure and services to simplify app development -- handling server-side tasks like data storage, user management, APIs, server maintenance, security, database management, and more -- so you can focus on your core product and scalability. 
 
-### Common pain points with Firebase:
+Firebase is one of the giants leading the BaaS front. However people have started considering other options for their applications because of common pain points with Firebase -- especially after it was acquired by Google -- and because other alternatives began emerging -- especially open source options. 
+
+### Common Pain Points with Firebase -- Why Devs Are Leaving
 #### Vendor lock-in – Google Cloud Dependency
-The idea behind **vendor lock-in** (also known as customer lock-in) is to make you **dependent on a product** by making it almost **impossible to switch** to a competitor's product. This can occur due to financial constraints, limited staff, or the need to maintain uninterrupted business operations. 
+**Vendor lock-in is when you are forced to become dependent on a product** by making it almost **impossible to switch** to a competitor's product. This happens due to budget limits, fewer staff, or the need to keep business running smoothly. As a result, you might end up with a costly, outdated, or less effective solution. 🤕
 
-As a result, you may find yourself stuck with an overpriced, outdated, or less effective solution. 🤕
-
-**A major downside of using Firebase is the risk of vendor lock-in**. Building your application on Firebase ties you closely to Google's ecosystem, making it difficult to move your data and code to another platform. If you decide to switch to a different backend service, you may encounter compatibility challenges and a complex migration process.
+**A major downside of using Firebase is the risk of vendor lock-in**. Building your application on Firebase ties you closely to Google's ecosystem, making it difficult to move your data and code to another platform. If you decide to switch to a different backend service, you may encounter compatibility challenges and a complex migration process. This is one of the big reasons developers are leaving Firebase and looking for other options. 
 
 For more insights on resolving vendor lock-in, check out our article: [**Solve The Problem of Vendor Lock-In**](https://supertokens.com/blog/solve-the-problem-of-vendor-lock-in)
 
-Additionally, because Firebase is not open source and is owned by Google, a lot of developers fear that Firebase, [like many other projects](https://killedbygoogle.com/), has the potential to be killed. 💀🪦
+> Additionally, because Firebase is not open source and is owned by Google, a lot of developers fear that Firebase, [like many other projects](https://killedbygoogle.com/), has the potential to be killed. 💀🪦
 
 #### Pricing concerns – Costs Scale Rapidly
 If you like horror stories you can [read up](https://www.reddit.com/r/Firebase/comments/1hpza8q/what_can_cause_firebase_costs_to_skyrocket/) on how people's bills skyrocketed with Firebase in one day over a bug in their code, or sudden growth they were not expecting. While you can contest the bill if you get one, there seems to be a general rule that Firestore will forgive the bill but only once. 
@@ -48,6 +43,8 @@ Another user [shared](https://www.reddit.com/r/Firebase/comments/17mv8r0/firebas
 
 ![reddit thread about firestore](image-1.png)
 
+![A GIF of a someone handing a dollar and the other person taking the whole wallet](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWw2cnZnaGRxOXNkdGZidW5wZGptM2U1aHp0OGRwaWFhdG9reW90aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/b0L0WqA8cUpQ4/giphy.gif)
+
 #### Limited backend flexibility – Harder to Customize.
 
 #### Data ownership & privacy – Potential Compliance Concerns
@@ -57,7 +54,7 @@ Using Firebase means trusting Google to handle your app's data. This can raise c
 
 ## The Best Firebase Alternatives (Compared)
 
-#### Supabase – The Open-Source Firebase Alternative
+### Supabase -- Open Source Option
 
 ![Supabase header](image-5.png)
 
@@ -68,7 +65,7 @@ You can checkout the [Supabase Documentation](https://supabase.com/) to learn mo
 
 *** 
 
-#### Appwrite – The Self-Hosted Backend for Developers
+### Appwrite -- Open Source Option
 
 ![appwrite header](image-2.png)
 
@@ -86,7 +83,7 @@ You can checkout the [Appwrite Documentation](https://appwrite.io/) to learn mor
 
 *** 
 
-#### AWS Amplify – Best for Enterprise-Scale Apps
+### AWS Amplify
 
 ![aws amplify header](image-3.png)
 
@@ -104,7 +101,7 @@ You can checkout the [AWS Amplify Documentation](https://aws.amazon.com/amplify/
 
 *** 
 
-#### Backendless – Low-Code Backend with Real-Time Features
+### Backendless -- No Code Option
 
 ![backendless header](image-4.png)
 
