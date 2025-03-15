@@ -45,6 +45,7 @@ Another user [shared](https://www.reddit.com/r/Firebase/comments/17mv8r0/firebas
 
 ![A GIF of a someone handing a dollar and the other person taking the whole wallet](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWw2cnZnaGRxOXNkdGZidW5wZGptM2U1aHp0OGRwaWFhdG9reW90aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/b0L0WqA8cUpQ4/giphy.gif)
 
+[Firebase has address the surprise bills and written how to avoid them](https://firebase.google.com/docs/projects/billing/avoid-surprise-bills) but a lot of the work still depends on you as the developer -- to set up usage notifications and test your code for bugs that can cause an insane bill. 
 #### Limited backend flexibility – Harder to Customize.
 
 #### Data ownership & privacy – Potential Compliance Concerns
