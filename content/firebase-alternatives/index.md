@@ -74,54 +74,118 @@ By evaluating these factors carefully, you can choose a BaaS platform that suppo
 ## The Best Firebase Alternatives (Compared)
 
 ### Supabase -- Open Source Option
-
 ![Supabase header](image-5.png)
 
-##### Features
+Supabase is an open source alternative to Firebase. Instead of being built around a document based datastore -- like Firestore -- Supabase offers you a relational database management using PostreSQL.
+
+#### ⚖️ How Supabase Stacks Up
+Here’s how it compares based on our key factors:
+
+**Scalability and Performance** <br>
+Offers automatic scaling for growing traffic and data demands.
+
+**Data Flexibility** <br>
+Uses a relational database (PostgreSQL), ideal for structured data and complex queries.
+
+**Authentication and Security** <br>
+Includes built-in auth with social logins; SuperTokens can improve flexibility and security.
+
+**Pricing Transparency**<br>
+Transparent pricing model with usage-based costs; can become expensive at larger scales.
+
+**Open-source vs Managed Solutions** <br>
+Open-source with a managed hosting option for easier maintenance.
 
 You can checkout the [Supabase Documentation](https://supabase.com/) to learn more how to get started.
 *** 
 
 ### Appwrite -- Open Source Option
-
 ![appwrite header](image-2.png)
 
-##### Features
-- **Auth:** Secure login with multi-factor auth
-- **Databases:** Scalable and robust databases
-- **Storage:** Advanced compression and encryption
-- **Functions:** Deploy and scale serverless functions
-- **Messaging:** Set up a full-functioning messaging service
-- **Realtime:** Subscribe and react to any event 
+#### ⚖️ How Appwrite Stacks Up
+Here’s how it compares based on our key factors:
+
+**Scalability and Performance** <br>
+Requires manual scaling setup but offers modular architecture for flexible management
+
+**Data Flexibility** <br>
+Uses a document-based database, better for flexible, dynamic data structures.
+
+**Authentication and Security** <br>
+Provides solid built-in auth features like OAuth and custom email/password login; SuperTokens can enhance this with 2FA, custom logic, and role management.
+
+**Pricing Transparency**<br>
+Open-source and self-hosted, giving full cost control but requiring hosting management.
+
+**Open-source vs Managed Solutions** <br>
+Fully open-source, requiring self-hosting unless using a third-party managed provider.
 
 You can checkout the [Appwrite Documentation](https://appwrite.io/) to learn more how to get started.
 
 *** 
 
 ### AWS Amplify
-
 ![aws amplify header](image-3.png)
 
-Deploy server-side rendered and static frontend apps, develop UI, add features like auth and storage, connect to real-time data sources, and scale to millions of users. No cloud expertise required.
+#### ⚖️ How AWS Amplify Stacks Up
+Here’s how it compares based on our key factors:
 
-##### Features
-- **Auth:** Enable secure authentication flows and control access to data, files, and more.
-- **Data:** Build secure, real-time APIs backed by AWS databases quickly and easily.
-- **Storage:** Store and manage app content and data. 
-- **Functions:** Add functions and configure environment variables.
-- **Extensibility:** Add, extend, and customize any AWS service by simply authoring CDK code. 
-- **Mobile:** Leverage a single backend across web and mobile apps. 
+**Scalability and Performance** <br>
+Designed for enterprise-level scaling with powerful AWS infrastructure; ideal for handling large-scale traffic and complex apps.
+
+**Data Flexibility** <br>
+Provides flexible data models through Amazon DynamoDB (NoSQL) or Amazon RDS (relational), offering extensive flexibility.
+
+**Authentication and Security** <br>
+Comes with Amazon Cognito for authentication, supporting social logins, MFA, and advanced security features; SuperTokens can improve flexibility and customization.
+
+**Pricing Transparency**<br>
+Pay-as-you-go model with potentially high costs as traffic scales; best for apps with predictable usage.
+
+**Open-source vs Managed Solutions** <br>
+Fully managed solution with no self-hosting option; offers deep integration with AWS services.
 
 You can checkout the [AWS Amplify Documentation](https://aws.amazon.com/amplify/) to learn more how to get started.
 
 *** 
 
 ### Backendless -- No Code Option
-
 ![backendless header](image-4.png)
+
+#### ⚖️ How Backendless Stacks Up
+Here’s how it compares based on our key factors:
+
+**Scalability and Performance** <br>
+Provides built-in scaling options, ideal for apps with dynamic workloads. Real-time database capabilities boost performance.
+
+**Data Flexibility** <br>
+Offers both relational and NoSQL database options, giving developers more data model flexibility.
+
+**Authentication and Security** <br>
+Includes a powerful user management system with social logins, password recovery, and role-based permissions; SuperTokens can enhance with more customization.
+
+**Pricing Transparency**<br>
+Offers flexible pricing with both free and paid tiers. Usage-based pricing for scaling ensures you pay for what you use.
+
+**Open-source vs Managed Solutions** <br>
+Closed-source with managed hosting, but also offers self-hosting options for greater control.
 
 You can checkout the [Backendless Documentation](https://backendless.com/) to learn more how to get started.
 
+### Comparison Table
+A quick reference table to help you decide the best platform for your needs.
+
+| Platform    | Best For                  | Open Source | Pricing Transparency | Scalability |
+|--------------|-----------------------------|---------------|------------------------|--------------|
+| **Supabase**     | Relational DBs & SQL     | ✅              | Moderate                   | ✅              |
+| **Appwrite**      | Self-hosted Flexibility      | ✅              | High Control                | Requires setup |
+| **AWS Amplify** | Enterprise Apps              | ❌              | Higher Costs                 | ✅              |
+| **Backendless** | No-Code Development       | ❌              | Flexible                     | ✅              |
+
+- **Supabase** is ideal for developers seeking a relational database with managed scaling.
+- **Appwrite** is a great choice for developers who prefer self-hosting and modular flexibility.
+- **AWS Amplify** is best for teams already using AWS services or those building highly scalable enterprise apps.
+- **Backendless** excels with real-time data support and flexible data models.
 ## How SuperTokens Improves Authentication in Firebase Alternatives 🔒 🚀
 **After selecting the best BaaS for your app, you can enhance its authentication capabilities by integrating SuperTokens into your tech stack.** This approach not only simplifies the process but also gives you greater flexibility and control over your authentication setup.
 
