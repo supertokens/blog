@@ -2,7 +2,7 @@
 title: "SSO Examples: Real-World Use Cases and How to Implement Them"
 date: "2025-02-17"
 description: "Explore real-world Single Sign-On (SSO) examples, use cases, and step-by-step implementation methods. Learn how tools like SuperTokens simplify SSO for developers."
-cover: ""
+cover: "sso_examples.png"
 category: "programming"
 author: "Darko Bozhinovski"
 ---
@@ -51,46 +51,7 @@ Here's how it works under the hood:
 
 Put in a chart, that looks something like this:
 
-```
-+---------------------------+
-| User clicks on SSO button |
-+---------------------------+
-           |
-           v
-+---------------------------------------+
-| Redirected to Identity Provider (IdP)  |
-+---------------------------------------+
-           |
-           v
-+-----------------------------------------+
-| User logs in (if not already logged in)  |
-+-----------------------------------------+
-           |
-           v
-+------------------------+
-| IdP authenticates user |
-+------------------------+
-           |
-           v
-+---------------------------------+
-| IdP issues authentication token  |
-+---------------------------------+
-           |
-           v
-+--------------------------------------------+
-| User is redirected back to the application  |
-+--------------------------------------------+
-           |
-           v
-+-------------------------------------+
-| Application verifies token with IdP  |
-+-------------------------------------+
-           |
-           v
-+--------------------------------------+
-| User gains access to the application |
-+--------------------------------------+
-```
+![SSO flow](./sso-chart-1.png)
 
 There are a few ways this secret handshake can happen:
 
