@@ -12,9 +12,13 @@ author: "Maria Shimkovska"
 It goes without saying that security is a crucial part of your business. When securing your company resources one of the decisions you will need to make is to choose an Identity and Access Management (IAM) solution. Two of the biggest players in this space are Okta and Azure AD -- [**now called Microsoft Entra ID**](https://learn.microsoft.com/en-us/entra/fundamentals/new-name).
 
 ### Why Identity and Access Management (IAM) is Critical for Businesses Today
-IAM makes sure that only the right people, machines, and apps have access to the right resources from your company at the right time. To keep your resources safe, this generally happens in two main steps: 
-1. First, they must prove they are who they claim to be -- **authenticate**
-2. After that they are allowed or denied access depending on who they are -- **authorize**
+IAM makes sure that only the right people, machines, and apps have access to the right resources from your company at the right time. 
+
+Cyberattacks often target compromised user credentials, making IAM a vital layer of protection. With IAM, you can:
+
+- Verify and authenticate users securely.
+- Track and manage user access.
+- Automate user provisioning and de-provisioning to reduce security risks.
 
 If you want to learn more about the benefits of IAM for your business' security, we've written a more in depth article for you on this very topic -- [**8 Benefits of Identity and Access Management (IAM) for Security**](https://supertokens.com/blog/8-benefits-of-identity-and-access-management-for-security).
 
