@@ -9,10 +9,10 @@ author: "Maria Shimkovska"
 
 ## Introduction to Identity and Access Management (IAM)
 
-- **Definition and Importance:** Understanding IAM's role in securing organizational resources and managing user identities.
+**Identity and Access Management (IAM**) is all about making sure the right people have access to the right stuff and that the wrong people don’t. It helps you as a business keep your data, systems, and apps secure by confirming who’s trying to log in and what they’re allowed to do. A good IAM solution not only boosts security but also makes it easier to manage your user accounts, especially as you grow and rely more on cloud services.
 
 ### Market Overview
-Okta and OneLogin are both leading providers in the cloud-based IAM space. 
+**Okta and OneLogin are both leading providers in the cloud-based IAM space.** 
 Both companies were founded in 2009 in San Francisco. At the time of publication, OneLogin reports having over 5500 customers, and Okta more than 19,3000 customers. 
 
 ## Overview of Okta 
@@ -36,20 +36,31 @@ Both companies were founded in 2009 in San Francisco. At the time of publication
 
 ## Feature Comparison: Okta vs OneLogin
 
+Both Okta and OneLogin offer a solid set of features for identity and access management, but there are some differences: 
+- **Okta:** Provides a wide range of features like Single Sign-On (SSO), Multi-Factor Authentication (MFA), Lifecycle Management, and Adaptive Security Policies. However, some advanced features — like Identity Threat Protection — are only available in higher-tier plans.
+- **OneLogin:** Offers similar core features, including SSO, MFA, and Lifecycle Management. One standout feature is **SmartFactor Authentication**, which uses AI to assess risk in real-time and adapt security measures accordingly.
+
+**While both platforms cover the basics well, Okta leans heavily on modular add-ons, while OneLogin provides some advanced features at lower price points.**
+
 ### User Experience
-- **Okta:** Renowned for its intuitive interface and seamless user experience. One thing to note though is that if you are still shopping around it can be difficult to get to know the platform unless you sign up for a free trial (by providing your email) or watch a short webinar about the platform (by providing your email as well). Ideally you should be able to get to know their platform without providing your contact information so that you can make a good decision without having to sign up for updates you may not want. 
-- **OneLogin:** Praised for its user-friendly design and straightforward navigation.
+Both Okta and OneLogin offer intuitive and user-friendly experiences.  
+- **Okta** stands out with its **End-User Dashboard** and **Browser Plugin**, which boost productivity with **customizable layouts**, **enhanced search**, and **onboarding guides**.  
+
+- **OneLogin** shines with its **custom branding** options, seamless **directory integration**, and **mobile SSO** for secure access on the go.  
 
 ### Integration Capabilities
 
 Both Okta and OneLogin provide extensive pre-built integrations. Based on their websites, **Okta provides over 7,000** and **OneLogin provides over 6,000 pre built integrations**. Both provide integrations for all the major technologies your company may use so you wouldn't go wrong with either choice if integration choices are your concern. 
 
 ### Security Measures
-- **Okta:** Employs adaptive security policies and AI-driven risk assessment to enhance protection.
-- **OneLogin:** Utilizes SmartFactor Authentication and role-based access control to ensure secure access.
+**Both Okta and OneLogin offer strong security features, but they take slightly different approaches:**
+
+- **Okta** uses **adaptive security policies** and [**AI-driven risk assessment**](https://help.okta.com/oie/en-us/content/topics/itp/overview.htm) to detect and respond to potential threats in real-time. 
+- **OneLogin** relies on [**SmartFactor Authentication**](https://www.onelogin.com/product/smartfactor-authentication) and **role-based access control** to ensure users only access what they’re supposed to.
+
+Both provide solid protection, but the right choice may depend on your team's specific security needs.
 
 ### Pricing Structure
-
 #### Okta Pricing
 
 ![alt text](image.png)
