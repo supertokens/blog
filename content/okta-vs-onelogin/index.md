@@ -13,7 +13,7 @@ author: "Maria Shimkovska"
 
 ### Market Overview
 Okta and OneLogin are both leading providers in the cloud-based IAM space. 
-Both companies were founded in 2009 in San Francisco. 
+Both companies were founded in 2009 in San Francisco. At the time of publication, OneLogin reports having over 5500 customers, and Okta more than 19,3000 customers. 
 
 ## Overview of Okta 
 - **Company Background:** Introduction to Okta as a cloud-based identity and access management provider.
@@ -37,7 +37,7 @@ Both companies were founded in 2009 in San Francisco.
 ## Feature Comparison: Okta vs OneLogin
 
 ### User Experience
-- **Okta:** Renowned for its intuitive interface and seamless user experience.
+- **Okta:** Renowned for its intuitive interface and seamless user experience. One thing to note though is that if you are still shopping around it can be difficult to get to know the platform unless you sign up for a free trial (by providing your email) or watch a short webinar about the platform (by providing your email as well). Ideally you should be able to get to know their platform without providing your contact information so that you can make a good decision without having to sign up for updates you may not want. 
 - **OneLogin:** Praised for its user-friendly design and straightforward navigation.
 
 ### Integration Capabilities
@@ -49,7 +49,7 @@ Both Okta and OneLogin provide extensive pre-built integrations. Based on their 
 - **OneLogin:** Utilizes SmartFactor Authentication and role-based access control to ensure secure access.
 
 ### Pricing Structure
-- **Okta:** Utilizes a per-user pricing model with modular add-ons, which can become costly as features are added.
+- **Okta:** Utilizes a per-user pricing model with modular add-ons, which can become costly as features are added. Okta Platform -- the IAM solution by Okta -- has 4 pricing structures as of writing of this article. They are Starter, Essentials, Professional, and Enterprise. The cheapest one, Starter, will set you back $6 per user/month and includes Universal Directory, Workflows (only 5 flows), SSO, and MFA. If you want to add Adaptive MFA or even Lifecycle management, access governance or privileged access you will be set back $17 per user per month. Anything after that you need to inquire for pricing, which doesn't bode well for people who want more transparent pricing. Their Identity Threat Protection is only included in the Professional suite package, which you need to call for pricing. This is unfortunate because as cyber threats continue to grow having a feature like session hijacking protection is not a nice to have, but a must have. You must also meet a minimum of $1500 annual contraxt for any of the suites. 
 - **OneLogin:** Offers competitive pricing with comprehensive features included, making it attractive for budget-conscious organizations.
 
 ## Real-World Insights and User Experience 
@@ -61,6 +61,9 @@ Both Okta and OneLogin provide extensive pre-built integrations. Based on their 
     - **User Feedback:** Some users have reported downtime issues in the past, though improvements have been noted with infrastructure upgrades. 
 
 ## How SuperTokens Enhances IAM Solutions 
+
+You could choose a starter, smaller plan with existing IAM providers and use open source alternatives like SuperTokens for their options that would cost you a lot more with either Okta or OneLogin -- especially if you are looking to add more security like bot detection and session hijacking. 
+
 - Introduction to SuperTokens: Presenting SuperTokens as an open source alternative for authentication needs. 
 - Core Features: 
     - Customizable Authentication: Tailored login experience to fit specific organizational requirements. 
