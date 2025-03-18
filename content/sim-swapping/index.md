@@ -39,7 +39,7 @@ Alternatively, **eSIM cards are embedded Subscriber Identity Modules** -- SIM ca
 
 In a SIM-swapping attack, cybercriminals exploit this by tricking your carrier into switching your phone number to a SIM they control, giving them access to your accounts and personal data. 
 
-## What Is SIM Swapping and Why You Should Care? 
+## What Is SIM Swapping and Why Should You Care? 
 
 **SIM Swapping** (SIM hijacking or port-out fraud) is a fraud technique where scammers transfer a victim's phone number to a new SIM card under their control. It's a type of account takeover. 
  
@@ -48,6 +48,8 @@ In a SIM-swapping attack, cybercriminals exploit this by tricking your carrier i
 Cybervillains may target people who have valuable social media or financial accounts. This is how Jack Dorsey, the founder of Twitter, got his account hacked in 2019. 
 
 ## How It Works 
+
+SIM swapping attacks can be summed up in three main steps:
 
 1. **Typically, a SIM attack begins with the attacker gathering personal information about users.** This information is used in verifying a person's identity and an attacker can use it to impersonate you. They could find details about you from: 
 - your social media accounts
@@ -60,7 +62,7 @@ Cybervillains may target people who have valuable social media or financial acco
 
 ![A chart showing how SIM swapping works generally](sc.png)
 
-### Consequences
+### Consequences of SIM Swap Attacks
 If someone takes control of your phone number, they could steal money from your bank account, make unauthorized payments, or apply for loans in your name. They might also access your personal information through email or social media, leading to identity theft or even legal trouble if your identity is misused. By changing passwords, the attacker could lock you out of important accounts, potentially causing permanent data loss. On top of that, they could invade your privacy by reading your messages, listening to voicemails, or impersonating you in calls and texts.
 
 ## 3 Signs That You Are The Victim of a SIM Swap Attack
@@ -85,6 +87,9 @@ With **eSIMs**, there’s no physical card to steal, which adds some security. H
 At the end of the day, neither eSIMs nor physical SIMs are automatically more secure. The key to protecting yourself lies in the security measures you take — like enabling **two-factor authentication**, using **strong passwords**, and being cautious with what information you share.
 
 ## Are SIM Swapping Attacks on the Rise? 
+Yes, experts claim that these attacks are not only on the rise, but are also becoming more sophisticated. Which is not surprising -- especially with the growth of AI. 
+
+[**The Federal Bureau of Investigation issues an announcement**](https://www.ic3.gov/PSA/2022/PSA220208) in 2022 to inform the public and mobile carriers of the rise of these attacks. They said they received 320 complains related to SIM swapping attacks between January 2018 and December 2020 , and that jumper jumped to 1,611 in just 2021 -- although many believe these numbers are underestimated because a lot of identity thefts are not reported. 
 
 ##  Why SMS 2FA Is No Longer Enough
 
@@ -108,6 +113,8 @@ Implement these three pillars to make sure you and your users are safe.
 - **Use SuperTokens to handle secure, scalable session management.**
 
 ## How SuperTokens Helps Secure Authentication Against SIM Swaps
+
+Prevention is the best form of protection against SIM swapping attacks. 
 
 ## Final Thoughts: Secure Your Authentication System Before It’s Too Late
 Unfortunately, businesses can no longer rely on SMS-based authentication to protect user accounts. SWIM swapping is an industry-wide problem, but SuperTokens provides the authentication tools to stop account takeover before they happen. 
