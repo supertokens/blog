@@ -7,11 +7,19 @@ category: "featured"
 author: "Maria Shimkovska"
 ---
 
-Cybercriminals sure know how to keep themselves busy. One scam they just can't seem to get enough of is **SIM swapping** — a sneaky trick where they hijack your SIM card and take over your phone number. So any calls or texts you receive go to them, not to you. 
+Let's play a game. 🎯
 
-Understanding how SIM swapping works — and how to prevent it — is essential to keeping your user accounts and personal data safe. 
+What do Twitter founder Jack Dorsey and actress Chloe Moretz have in common? 
 
-After all, scammers don’t just hack your phone — they pose as you to fool your mobile provider and gain access to your most important accounts. Incredibly rude if you ask  me. 😑
+...
+
+Yep. Both were victims of a cyber attack called a SIM swap attack. 😬
+
+From spamming to phishing scams and identity theft, cybercriminals sure know how to keep themselves busy. But the one scam they just can't seem to get enough of right now is in fact **SIM swapping** — a sneaky trick where they hijack your SIM card and take over your phone number. So any calls or texts you receive go to them, not to you. 
+
+**Understanding how SIM swapping works — and how to prevent it — is essential to keeping your user accounts and personal data safe.**
+
+After all, scammers don’t just hack your phone — they pose as you to fool your mobile provider and gain access to your most important accounts. Incredibly rude if you ask me. 😑
 
 Time to spot the faker and kick them to the curb.
 
@@ -50,10 +58,33 @@ Cybervillains may target people who have valuable social media or financial acco
 
 3. **After all this, attackers will now have access to your text messages and contacts.** This could also lead to even more attacks because once they have this information, attackers can get even more information on users, including passwords and emails. 
 
-
 ![A chart showing how SIM swapping works generally](sc.png)
 
-## Are eSIM Cards More Secure Than Physical SIM Cards? 
+### Consequences
+If someone takes control of your phone number, they could steal money from your bank account, make unauthorized payments, or apply for loans in your name. They might also access your personal information through email or social media, leading to identity theft or even legal trouble if your identity is misused. By changing passwords, the attacker could lock you out of important accounts, potentially causing permanent data loss. On top of that, they could invade your privacy by reading your messages, listening to voicemails, or impersonating you in calls and texts.
+
+## 3 Signs That You Are The Victim of a SIM Swap Attack
+Keeping in mind some of these signs can help you catch a SIM swap attack early so the damage either doesn't happen or at least isn't extensive:
+
+1. **You can't make calls or send texts** -- This can be a sign of a cellular provider outage but it can also be a SIM swap attack in the process. It's always better to check for outages if this happens and then act accordingly.
+
+2. **You're unable to access accounts** -- Attackers most likely know they have limited time to do some damage so they will try to buy more time by changing your accounts' passwords. Changing back your passwords to various accounts will take some time. So this may be a sign that a SIM swap attack has unfortunately happened.
+
+3. **You find unauthorized transactions** -- It can either be a mistake or a SIM swap attack. But either way, it's good to get that taken care of and notify your bank and stop the attack from continuing. 
+
+As you probably noticed all of those signs are just that -- signs. They could be something else, but it's always beneficial for you and your users to keep them in mind so they don't fall victims to SIM swapping. Or if they do, to minimize the damage. 
+ 
+
+## Are eSIM Cards More Secure Than Physical SIM Cards? 🤔
+Many people question whether eSIMs are more secure than physical SIM cards, but it's not a straightforward answer. That being said, eSIMs do offer an advantage in case you lose your phone, as they can be quickly disabled -- [**especially if you are traveling**](https://support.apple.com/en-us/118227#:~:text=eSIM%20is%20more%20secure%20than,models%20at%20the%20same%20time.).
+
+In a **traditional SIM attack**, an attacker would need physical access to your phone to steal your SIM card and insert it into their own device.
+
+With **eSIMs**, there’s no physical card to steal, which adds some security. However, scammers can still perform a **SIM swapping attack** by convincing your mobile carrier to transfer your number to their device — and with the rise of social engineering (especially enhanced by AI), impersonating you has become easier than ever.
+
+At the end of the day, neither eSIMs nor physical SIMs are automatically more secure. The key to protecting yourself lies in the security measures you take — like enabling **two-factor authentication**, using **strong passwords**, and being cautious with what information you share.
+
+## Are SIM Swapping Attacks on the Rise? 
 
 ##  Why SMS 2FA Is No Longer Enough
 
@@ -82,3 +113,5 @@ Implement these three pillars to make sure you and your users are safe.
 Unfortunately, businesses can no longer rely on SMS-based authentication to protect user accounts. SWIM swapping is an industry-wide problem, but SuperTokens provides the authentication tools to stop account takeover before they happen. 
 
 Next step is to migrate your authentication system to a modern and secure CIAM solution that keeps customer accounts safe at scale.
+
+Stay safe!
