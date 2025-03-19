@@ -13,11 +13,11 @@ Before we get into what they are, how they differ, and how they're used, here's 
 
 Image you want to grab coffee with your extremely busy friend. 
 
-1. An **API** is like repeatedly texting your friend to see when they're available for coffee. 📱
+1. An **API** is like repeatedly texting your friend to see when they're available for coffee. They may say they are unavailable but you keep checking just in case. 📱 -- **You initiate the interaction.**
 
-2. A **webhook** is like your friend texting you when they're free to grab coffee. 👋
+2. A **webhook** is like your friend texting you when they're actually free to grab coffee. You don't have to keep checking. They will let you know when they are free. 👋 -- **Your friend decides when to notify you.**
 
-![A cat drinking coffee sticker](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExODRlYjQzeGx0ZHJmYjN2Y3NoeDQ3YWYwcXhrZGVseXYxbG9pYWtnZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/iKYO5ZWiT7wlea7SqK/giphy.gif)
+![A GIF of a cartoon girl texting](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWVyM2g1cGhwa2hxbjNjNHAyaW5idzgya3VuM3Btczk0MG0xZmpodCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2SpOsTrYcfjoPKsU/giphy.gif)
 
 ```toc
 tight: true
@@ -116,9 +116,10 @@ An API response usually includes:
 - **Headers**: Key-value pairs with extra details about the response.
 - **Body**: The actual data or an error message if something went wrong.
 
-## What Is A Webhook? 📩
+## What Is A Webhook: How They Work and How To Set Them Up 📩
 
-A **webhook** an event driven communication between apps. When something happens in one app (the source), it automatically sends an HTTP request to another app (the destination) to let it know about the event and share some related data.
+**A webhook is an event driven communication between apps.** This means that a webhook sends data to another app when something happens, which is programmed to trigger it. 
+This communication happens through HTTP. 
 
 For example, imagine you’re using a payment app. When a customer makes a payment, the app can automatically send a webhook to your server with details about the payment, like the amount and the customer’s name. Your server doesn’t have to keep asking the payment app for updates. It just gets notified when something important happens.
 
@@ -173,6 +174,40 @@ Creating a webhook involves setting up a system where one application automatica
 ```
 
 ## Key Differences Between APIs and Webhooks
+
+An important distinction between **webhooks** and **APIs** is understanding **who initiates the communication** and **how they interact**. Let's break it down.
+
+### APIs
+- An API is a set of rules that allows one app to request data or functionality from another app.
+- The **client** sends a request (example, `GET /data`) to the server, and the server responds with the data. 
+- **The client is in control** -- it decides when to ask for the information.
+
+```pgsql
+GET /user/123 HTTP/1.1
+Host: example.com
+```
+➡️ The client requests data, and the server responds.
+
+### Webhooks
+- A webhook is not something you actively call like an API. It's a mechanism where the server sends data to the client as soon as something happens. 
+- The client provides the server with a URL (endpoint), and the server "calls back" to the URL when the data is ready. 
+- **The server is in control** -- it decides when to send data. 
+
+
+```pgsql
+POST /webhook/order-update HTTP/1.1
+Host: client-app.com
+Content-Type: application/json
+{
+  "order_id": "456",
+  "status": "shipped"
+}
+```
+
+➡️ The server pushes data without the client asking for it.
+
+
+
 | Aspect               | API  🌉                                        | Webhook   📩                                  |
 |----------------------|----------------------------------------------|---------------------------------------------|
 | **Request Initiation** | The client actively requests data from the server. | The server automatically sends data when an event occurs. |
