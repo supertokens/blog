@@ -127,9 +127,7 @@ Not everything is grim though. It's just important to know the dangers of SMS-ba
 3. **Session Hijack Detection:** If a SIM swap occurs, SuperTokens detects mismatched device fingerprints and terminates unauthorized sessions.
 
 ### Seamless Integration for Scalable CIAM Security
-SuperTokens integrates directly into existing authentication flows without disrupting user experience.
-API-first architecture ensures compatibility with OAuth 2.0, OpenID Connect, and enterprise SSO solutions.
-Lower cost than proprietary CIAM solutions while offering full customization.
+SuperTokens integrates seamlessly into existing authentication flows without disrupting the user experience. Its API-first architecture ensures compatibility with OAuth 2.0, OpenID Connect, and enterprise SSO solutions, providing flexibility for various authentication needs. Additionally, SuperTokens offers a lower-cost alternative to proprietary CIAM solutions while allowing full customization.
 
 ## Implement These Best Practices to Block SIM Swap Attacks -- Immediate Steps for Businesses
 1. Ditch SMS 2FA as the default authentication method.
