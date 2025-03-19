@@ -47,8 +47,7 @@ In a SIM-swapping attack, cybercriminals exploit this by tricking your carrier i
 
 Cybervillains may target people who have valuable social media or financial accounts. This is how Jack Dorsey, the founder of Twitter, got his account hacked in 2019. 
 
-## How It Works 
-
+## How SIM Swapping Works
 SIM swapping attacks can be summed up in three main steps:
 
 1. **Typically, a SIM attack begins with the attacker gathering personal information about users.** This information is used in verifying a person's identity and an attacker can use it to impersonate you. They could find details about you from: 
@@ -56,14 +55,14 @@ SIM swapping attacks can be summed up in three main steps:
 - private information that has been leaked 
 - any information about you that is freely online
 
-2. **The attacker will then reach out to your phone company pretending to be you.** They can use any information they have on you to answer security questions -- which is why some people also question the safety of personal questions as a security measure. Then they will ask to have your phone number transferred to a SIM card they control. 
+2. **The attacker will then reach out to your phone company pretending to be you.** They can use any information they have on you to answer security questions -- which is why some people also question the safety of personal questions as a security measure. Then they will ask to have your phone number transferred to a SIM card they control. Once the carrier processes the request, your phone will lose service. 
 
-3. **After all this, attackers will now have access to your text messages and contacts.** This could also lead to even more attacks because once they have this information, attackers can get even more information on users, including passwords and emails. 
+3. **After all this, attackers will now have access to your text messages and contacts.** This could also lead to even more attacks because once they have this information, attackers can get even more information on users, including passwords and emails -- and any **Two-Factor Authentication codes**. 
 
 ![A chart showing how SIM swapping works generally](sc.png)
 
-### Consequences of SIM Swap Attacks
-If someone takes control of your phone number, they could steal money from your bank account, make unauthorized payments, or apply for loans in your name. They might also access your personal information through email or social media, leading to identity theft or even legal trouble if your identity is misused. By changing passwords, the attacker could lock you out of important accounts, potentially causing permanent data loss. On top of that, they could invade your privacy by reading your messages, listening to voicemails, or impersonating you in calls and texts.
+## Consequences of SIM Swap Attacks
+If someone takes control of your phone number, they could **steal money from your bank account**, **make unauthorized payments**, or **apply for loans in your name**. They might also **access your personal information** through email or social media, leading to **identity theft** or even legal trouble if your identity is misused. By changing passwords, the attacker could **lock you out** of important accounts, potentially causing **permanent data loss**. On top of that, they could **invade your privacy by reading your messages**, listening to voicemails, or **impersonating you in calls and texts**.
 
 ## 3 Signs That You Are The Victim of a SIM Swap Attack
 Keeping in mind some of these signs can help you catch a SIM swap attack early so the damage either doesn't happen or at least isn't extensive:
@@ -93,6 +92,13 @@ Yes, experts claim that these attacks are not only on the rise, but are also bec
 
 ##  Why SMS 2FA Is No Longer Enough
 
+SIM swapping essentially renders SMS-based authentication useless. But it goes beyond SIM swapping. SMS-based authentication is only as secure as texts are, and they are pretty vulnerable. 
+
+### The Weaknesses of SMS-Based Authentication
+- **Vulnerable to malware:** [**According to Ashish Malhotra**](https://securityintelligence.com/whats-wrong-with-sms-authentication-two-ibm-experts-weigh-in-on-the-nist-recommendation/) -- an IBM authentication expert -- many phones are susceptible to malware, where users unwittingly download malware that monitors their text messages, including any OTPs (One Time Passwords/Passcodes) which are used in 2FA. 
+- **Standard SMS messages are not encrypted:** This makes your OTPs much easier to intercept and steal. SMS messages rely heavily on the mobile network providers and what security they choose to implement. Users are not often aware of what they should look for in a mobile provider and assume that their messages are safer than they actually are. 
+- **Signaling System 7 (SS7) attacks:** SS7 is a protocol that allows phone networks to exchange information needed for call routing and text messaging. Attackers can exploit vulnerabilities in SS7 to intercept SMS messages, including OTPs. Since this protocol is fundamental to mobile networks worldwide, it's challenging to secure without major infrastructure updates.
+
 ##  The Right Authentication Strategy: Moving Beyond SMS 2FA
 
 Implement these three pillars to make sure you and your users are safe.
@@ -121,4 +127,4 @@ Unfortunately, businesses can no longer rely on SMS-based authentication to prot
 
 Next step is to migrate your authentication system to a modern and secure CIAM solution that keeps customer accounts safe at scale.
 
-Stay safe!
+Stay safe! 
