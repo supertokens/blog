@@ -24,7 +24,7 @@ tight: true
 toHeading: 3
 ```
 
-## What Is An API? 🌉
+## What Is An API: How They Work and How To Set Them Up 🌉
 
 **API** stands for **Application Programming Interface**. It is a set of protocols that allow a **connection** between applications, systems, and devices to happen so they can exchange data.  
 
@@ -64,7 +64,8 @@ Here are a few common API protocols you have likely heard about:
 
 
 *** 
-### How Do APIs Work? 
+
+### How APIs Generally Work
 
 It's important to note that APIs are a **two way communication**. What this means is that you have two parties, one making a request and another one receiving that request, and subsequently choosing what to do with the request before sending back a response. 
 
@@ -115,6 +116,65 @@ An API response usually includes:
 - **Status Code**: A three-digit code that shows the result (e.g., 200 OK, 201 Created, 404 Not Found).
 - **Headers**: Key-value pairs with extra details about the response.
 - **Body**: The actual data or an error message if something went wrong.
+
+*** 
+
+### APIs in the Real World
+
+Let's cement this information by seeing how different apps allow you to use their APIs.
+
+#### 📋 How Trello Uses APIs
+Trello offers an API that allows developers to interact with Trello boards, cards, and lists programmatically.
+- With the Trello API, you can create, update, and delete cards, boards, and lists.
+- Unlike webhooks (which only receive data), APIs let your app both send and request information from Trello.
+- This is useful for automating task creation, syncing data with other tools, or building custom Trello features.
+
+An example of how you can create a new card called **New Feature Request** in a specific list, using the Trello API: 
+
+```javascript 
+fetch("https://api.trello.com/1/cards", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    name: "New Feature Request",
+    desc: "User requested a dark mode feature.",
+    idList: "60d5b2cd8a1234567890abcd",  // The ID of the Trello list where the card should be added
+    key: "YOUR_API_KEY",
+    token: "YOUR_API_TOKEN"
+  })
+});
+```
+
+1. This request tells Trello, "Create a new card called 'New Feature Request' in the specified list."
+2. The Trello API processes the request and adds the card.
+3. The key and token authenticate your request, ensuring only authorized apps can make changes.
+
+#### 🌐 How Slack Uses APIs
+Slack offers a powerful API that developers can use to build custom integrations, automate tasks, and interact with Slack data.
+- With the Slack API, you can send messages, retrieve channel history, manage users, and more.
+- Unlike webhooks (which only receive data), APIs let your app both send and request information from Slack.
+- This is useful for building chatbots, scheduling messages, or fetching data from Slack for reports.
+
+An example of how you can send a new message on Slack using the Slack API instead of going on the app and typing it out in their UI. 
+
+```javascript 
+fetch("https://slack.com/api/chat.postMessage", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer xoxb-1234567890-0987654321-abcdef"
+  },
+  body: JSON.stringify({
+    channel: "#general",
+    text: "Hello, team! 👋",
+    username: "BotBuddy"
+  })
+});
+```
+
+1. This request tells Slack, "Post a message saying 'Hello, team! 👋' in the #general channel."
+2. Slack's API processes the request and posts the message.
+3. The Authorization header includes your Slack token, which authenticates the request.
 
 ## What Is A Webhook: How They Work and How To Set Them Up 📩
 
@@ -173,11 +233,13 @@ Creating a webhook involves setting up a system where one application automatica
       |                                 |
 ```
 
+*** 
+
 ### Webhooks in the Real World
 
 Let's cement this information by seeing how different apps allow you to use webhooks. 
 
-#### How Trello Uses Webhooks 
+#### 📝 How Trello Uses Webhooks 
 [**Trello**](https://developer.atlassian.com/cloud/trello/guides/rest-api/webhooks/) is an app for managing tasks.
 Instead of constantly checking Trello for updates (like new cards, changes to boards, etc.), webhooks let Trello notify your app only when something important happens.
 - Normally, your app would need to repeatedly ask Trello for updates, which wastes time and resources.
@@ -196,7 +258,7 @@ $.post("https://api.trello.com/1/tokens/{APIToken}/webhooks/?key={APIKey}", {
 2. Trello then sends updates to the provided `callbackURL` whenever something changes.
 3. Your webhook endpoint (e.g., `/trelloCallback`) should be set up to handle these incoming updates.
 
-#### How Slack Uses Webhooks 
+#### 💬 How Slack Uses Webhooks 
 [**Slack**](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks) is a popular messaging platform for teams.
 Instead of building a full integration, webhooks let your app send messages to Slack channels directly.
 - Normally, sending messages to Slack would require complex API requests.
@@ -220,7 +282,7 @@ fetch("https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXX
 3. You can customize the message text, username, and even add emojis or attachments.
 
 
-## ✨ Key Differences Between APIs and Webhooks: Summarized✨
+## ✨ Key Differences Between APIs and Webhooks: Summarized ✨
 
 An important distinction between **webhooks** and **APIs** is understanding **who initiates the communication** and **how they interact**. Let's break it down.
 
