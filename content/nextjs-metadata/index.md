@@ -158,7 +158,7 @@ Summary:
 ***
 ### Adding Metadata In Your Next.js App
 
-There are two ways to add metadata to your application, **config-based** and **file-based metadata**. <br> Both methods help manage SEO-related information like page titles, descriptions, and Open Graph tags. 
+There are two ways to add metadata to your app, **config-based** and **file-based metadata**. <br> Both methods help manage SEO-related information like page titles, descriptions, and Open Graph tags. 
 
 Below is a detailed guide on how to utilize both options effectively.
 
