@@ -15,24 +15,24 @@ On the web, **metadata** serves a similar purpose. It provides essential informa
 
 Just as well-written placards enhance a museum experience, well-structured metadata improves your website's SEO, shareability, and visibility.
 
-In **Next.js**, managing metadata effectively can make your site more discoverable and engaging. If you've ever seen <meta name="description" content="..."> or <title>Page Title</title> in an HTML file, you’ve encountered metadata. And just like Van Gogh's Starry Night, it might not change how a page **looks**, but it plays a **crucial role behind the scenes**.
+In **Next.js**, managing metadata effectively can make your site more discoverable and engaging. If you've ever seen <meta name="description" content="..."> or <title>Page Title</title> in an HTML file, you’ve encountered metadata. And just like Van Gogh's The Starry Night, it might not change how a page **looks**, but it plays a **crucial role behind the scenes**.
 
 In this article, we’ll explore how to craft effective metadata in Next.js and ensure your site's “placards” are as informative and compelling as possible. 🖼️🚀
 
-The **first section** goes over a brief introduction to metadata and what it can do for you. <br>
+The **first section** provides a brief introduction to metadata and what it can do for you. <br>
 The **second section** dives into how you can use Next.js for your metadata management. 
 
-![Van Gogh's Starry Night GIF](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWdjanBrZTFlNnlkZXRvOXZ0dWxwbmczemg5cWI5dzVpb3IwcDZleCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/g9wbFB61YEh1u/giphy.gif)
+![Van Gogh's The Starry Night GIF](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWdjanBrZTFlNnlkZXRvOXZ0dWxwbmczemg5cWI5dzVpb3IwcDZleCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/g9wbFB61YEh1u/giphy.gif)
 
 ```toc
 tight: true
 toHeading: 3
 ```
 
-## 👉 Metadata Explained: How It Boosts SEO & Website Visibility
-To start, what is metadata? Metadata is **extra information** that gives valuable insights into your app’s data. It summarizes basic information about your data. You can think of it as **"data about your data"**! 📊🔍
+## 👉 Metadata Explained: How It Boosts SEO and Website Visibility
+Metadata is **extra information** that gives valuable insights into your app’s data. It summarizes basic information about your data. You can think of it as **"data about your data"**! 📊🔍
 
-It includes page **titles**, **descriptions**, **keywords**, and **social media previews** 📌✨, all of which help make your web app easier to find, understand, and use.
+It includes page **titles**, **descriptions**, **keywords**, and **social media previews** 📌✨ &mdash; all of which help make your web app easier to find, understand, and use.
 
 Here is an example of metadata you may have seen in the `<head>` tag of any HTML file: 
 
@@ -45,7 +45,7 @@ Here is an example of metadata you may have seen in the `<head>` tag of any HTML
     
     <!-- SEO Metadata -->
     <meta name="description" content="Explore 'The Starry Night,' Vincent van Gogh's iconic masterpiece. Learn about its history, meaning, and artistic techniques.">
-    <meta name="keywords" content="Starry Night, Vincent van Gogh, Impressionism, famous paintings, art history">
+    <meta name="keywords" content="The Starry Night, Vincent van Gogh, Impressionism, famous paintings, art history">
     <meta name="author" content="Vincent van Gogh">
     <meta name="robots" content="index, follow"> <!-- Allows search engines to index the page -->
 
@@ -61,7 +61,7 @@ Here is an example of metadata you may have seen in the `<head>` tag of any HTML
 </head>
 ```
 
-### Why is Metadata Important
+### Why Metadata is Important
 Metadata is vital for search engines to rank your content and enhance SEO. 
 
 Proper metadata configuration enhances SEO by:
@@ -95,7 +95,7 @@ The **keyword metadata** includes keywords related to the webpage content, aidin
 ```
 
 #### Open Graph Metadata
-The **Open Graph metadata** (part of the [Open Graph protocol](https://ogp.me/)) enhances the presentation of web pages on social media platforms by specifying details like title, description, and preview images. They are used by Facebook, X (formerly Twitter), LinkedIn, Discord, Slack and others. 
+The **Open Graph metadata** (part of the [Open Graph protocol](https://ogp.me/)) enhances the presentation of web pages on social media platforms by specifying details like title, description, and preview images. They are used by Facebook, X (formerly Twitter), LinkedIn, Discord, Slack, and others. 
 
 The **Open Graph protocol** specifies the different types of meta tags that you can use to describe your data. 
 
@@ -113,7 +113,7 @@ The **favicon metadata** links the favicon to the webpage, displayed in the brow
 <link rel="icon" href="path/to/favicon.ico" />
 ```
 
-## 🌟 Next.js Metadata for SEO: Best Practices & Implementation
+## 🌟 Next.js Metadata for SEO: Best Practices and Implementation
 Next.js has a **Metadata API** that is used to define and manage your app's metadata. <br> It allows you to modify the `<head>` element of a page. 
 
 > 🗂️ **Metadata management** helps users easily access and understand data (what it means, where it comes from, how it's structured, how it connects to other data, and any usage rules).
@@ -122,7 +122,7 @@ Next.js has a **Metadata API** that is used to define and manage your app's meta
 **Next.js** organizes metadata in a hierarchy, ensuring consistency while allowing pages to set their own unique details.
 
 #### 🔗 How Metadata Inheritance Works
-To keep things organized, Next.js allows you to set global metadata for your entire site while letting individual pages override or extend it when needed. This ensures consistency while giving each page the flexibility to have its own unique details. 🚀
+To keep things organized, Next.js allows you to set global metadata for your entire site while letting individual pages override or extend it when needed. This ensures consistency, giving each page the flexibility to have its own unique details. 🚀
 
 ##### Global Metadata (Applied to All Pages)
 Set in `layout.js`:
@@ -158,12 +158,12 @@ Summary:
 ***
 ### Adding Metadata In Your Next.js App
 
-There are two ways to add metadata to your application, **config-based** and **file-based metadata**. <br> Both methods help manage SEO-related information like page titles, descriptions, and open graph tags. 
+There are two ways to add metadata to your application, **config-based** and **file-based metadata**. <br> Both methods help manage SEO-related information like page titles, descriptions, and Open Graph tags. 
 
 Below is a detailed guide on how to utilize both options effectively.
 
 #### Config-Based Metadata
-Config-based metadata is added in **layout.js** or **page.js** using a static `metadata` object or a dynamic `generateMetadata()` function.
+Config-based metadata is added in **layout.js** or **page.js** by using a static `metadata` object or a dynamic `generateMetadata()` function.
 
 ##### Configuring Static Metadata 
 Static Metadata is predefined and remains constant across sessions. To implement static metadata in Next.js. 
@@ -181,7 +181,7 @@ This setup ensures that all pages inheriting from this layout share the same met
 
 ##### Configuring Dynamic Metadata
 Dynamic metadata adapts based on content or user interaction. 
-You can use `generateMetadata` function to `fetch` metadata that requires dynamic values.
+You can use the `generateMetadata` function to `fetch` metadata that requires dynamic values.
 
 To configure dynamic metadata: 
 
@@ -226,13 +226,13 @@ The favicon.ico, apple-icon.jpg, and icon.jpg files are used to provide your web
 Here’s how to include them in your Next.js project:
 ```html
 <!-- Favicon for browsers -->
-<link rel="icon" href="https://acme.com/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon">
 
 <!-- Apple icon for iOS devices -->
-<link rel="apple-touch-icon" href="https://acme.com/apple-icon.jpg">
+<link rel="apple-touch-icon" href="https://example.com/apple-icon.jpg">
 
 <!-- General icon for web apps -->
-<link rel="icon" href="https://acme.com/icon.jpg" type="image/jpg">
+<link rel="icon" href="https://example.com/icon.jpg" type="image/jpg">
 ```
 In Next.js, you can define these dynamically in the `_document.js` file:
 
@@ -244,9 +244,9 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="icon" href="https://acme.com/favicon.ico" type="image/x-icon" />
-          <link rel="apple-touch-icon" href="https://acme.com/apple-icon.jpg" />
-          <link rel="icon" href="https://acme.com/icon.jpg" type="image/jpg" />
+          <link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon" />
+          <link rel="apple-touch-icon" href="https://example.com/apple-icon.jpg" />
+          <link rel="icon" href="https://example.com/icon.jpg" type="image/jpg" />
         </Head>
         <body>
           <Main />
@@ -261,25 +261,25 @@ export default MyDocument;
 ```
 These icons help brand your website and ensure that it looks great on all devices and in every browser tab.
 
-##### 📷 opengraph-image.jpg & twitter-image.jpg
-The opengraph-image.jpg and twitter-image.jpg files are used to set the preview image when your content is shared on social media platforms like Facebook and Twitter. These images provide a visual representation of your page, making it more engaging and clickable.
+##### 📷 opengraph-image.jpg and twitter-image.jpg
+The opengraph-image.jpg and twitter-image.jpg files are used to set the preview image when your content is shared on social media platforms like **Facebook** and **X** *(previously Twitter)*. These images provide a visual representation of your page, making it more engaging and clickable.
 
-For Open Graph (OG) and Twitter Cards, you would typically add the following metadata:
+For Open Graph (OG) and X/Twitter Cards, you would typically add the following metadata:
 
 ```html
 <!-- Open Graph Metadata -->
-<meta property="og:image" content="https://acme.com/opengraph-image.jpg">
+<meta property="og:image" content="https://example.com/opengraph-image.jpg">
 
 <!-- Twitter Card Metadata -->
-<meta name="twitter:image" content="https://acme.com/twitter-image.jpg">
+<meta name="twitter:image" content="https://example.com/twitter-image.jpg">
 ```
 
-In Next.js, you can define these dynamically using a function, like this:
+In Next.js, you can define these dynamically using a function:
 
 ```js
 export default function Page() {
-  const ogImage = 'https://acme.com/opengraph-image.jpg';
-  const twitterImage = 'https://acme.com/twitter-image.jpg';
+  const ogImage = 'https://example.com/opengraph-image.jpg';
+  const twitterImage = 'https://example.com/twitter-image.jpg';
 
   return (
     <>
@@ -293,8 +293,8 @@ export default function Page() {
 
 // Output:
 
-// <meta property="og:image" content="https://acme.com/opengraph-image.jpg">
-// <meta name="twitter:image" content="https://acme.com/twitter-image.jpg">
+// <meta property="og:image" content="https://example.com/opengraph-image.jpg">
+// <meta name="twitter:image" content="https://example.com/twitter-image.jpg">
 ```
 These images help ensure that when your page is shared on social media, it has a beautiful, relevant preview that attracts attention!
 
@@ -305,10 +305,10 @@ The robots.txt file tells search engine crawlers which URLs they can access on y
 User-Agent: *
 Allow: /
 Disallow: /private/
-Sitemap: https://acme.com/sitemap.xml
+Sitemap: https://example.com/sitemap.xml
 ```
 
-In Next.js you can either write your file like the above example (static) or generate it (dynamic) in a robots.js/.ts file.
+In Next.js, you can either write your file like the above example (static) or generate it (dynamic) in a robots.js/.ts file.
 
 ```js
 export default function robots() {
@@ -318,7 +318,7 @@ export default function robots() {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://acme.com/sitemap.xml',
+    sitemap: 'https://example.com/sitemap.xml',
   }
 }
 
@@ -327,7 +327,7 @@ export default function robots() {
 // User-Agent: *
 // Allow: /
 // Disallow: /private/
-// Sitemap: https://acme.com/sitemap.xml
+// Sitemap: https://example.com/sitemap.xml
 ```
 
 ##### 🗺️ sitemap.xml
@@ -337,12 +337,12 @@ The sitemap.xml file provides search engines with a structured map of all the im
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://acme.com/</loc>
+    <loc>https://example.com/</loc>
     <lastmod>2025-03-01</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://acme.com/about</loc>
+    <loc>https://example.com/about</loc>
     <lastmod>2025-02-15</lastmod>
     <priority>0.8</priority>
   </url>
@@ -355,12 +355,12 @@ In Next.js, you can create a static sitemap.xml file or generate it dynamically.
 export default function sitemap() {
   return [
     {
-      url: 'https://acme.com/',
+      url: 'https://example.com/',
       lastModified: '2025-03-01',
       priority: 1.0,
     },
     {
-      url: 'https://acme.com/about',
+      url: 'https://example.com/about',
       lastModified: '2025-02-15',
       priority: 0.8,
     },
@@ -372,12 +372,12 @@ export default function sitemap() {
 // <?xml version="1.0" encoding="UTF-8"?>
 // <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 //   <url>
-//     <loc>https://acme.com/</loc>
+//     <loc>https://example.com/</loc>
 //     <lastmod>2025-03-01</lastmod>
 //     <priority>1.0</priority>
 //   </url>
 //   <url>
-//     <loc>https://acme.com/about</loc>
+//     <loc>https://example.com/about</loc>
 //     <lastmod>2025-02-15</lastmod>
 //     <priority>0.8</priority>
 //   </url>
@@ -391,7 +391,7 @@ To maximize the benefits of metadata management in Next.js (and metadata managem
 - **Utilize dynamic metadata when necessary:** For pages with content that changes frequently, implement dynamic metadata to reflect the current state. 
 - **Leverage metadata templates:** Use title templates to maintain consistency across pages. 
 - **Regularly update metadata:** Keep metadata current to reflect any changes in content or branding. 
-- **Properly set Open Graph:** Set Open Graph metadata correctly to improve how your content looks on social media, boosting engagement and clicks.
+- **Properly set Open Graph:** Set Open Graph metadata correctly to improve how your content looks on social media, to boost engagement and clicks.
 
 ## Conclusion 🎯
 Managing metadata in Next.js is important for SEO 📈 and user engagement 👥. By using both static and dynamic metadata, taking advantage of inheritance, and following best practices, you can build apps that are easy to use and rank well on search engines.🔍
