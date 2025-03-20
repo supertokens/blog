@@ -330,4 +330,8 @@ APIs and webhooks are two common ways apps communicate, but they work in distinc
 
 **APIs** are ideal when you need to request data or perform actions on demand. <br> **Webhooks** excel when you want real-time updates without constant requests.
 
-In practice, tools like Trello and Slack offer both. APIs let you create cards or send messages, while webhooks notify you of changes or new events. Choosing the right tool depends on whether you prefer to ask for updates or be notified automatically.
+In practice, tools like Trello and Slack offer both. APIs let you create cards or send messages, while webhooks notify you of changes or new events. Choosing the right tool depends on whether you need to ask for updates or be notified automatically.
+
+👉 Curious to dive deeper into building secure and efficient APIs? Check out these helpful resources:
+1. [**Token-Based Authentication for APIs: What It Is and How It Works**](https://supertokens.com/blog/token-based-authentication-in-api)
+2. [**Choosing the Right Authentication Provider and API for Secure Applications**](https://supertokens.com/blog/choosing-the-right-authentication-provider)
