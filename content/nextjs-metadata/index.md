@@ -166,7 +166,7 @@ Below is a detailed guide on how to utilize both options effectively.
 Config-based metadata is added in **layout.js** or **page.js** by using a static `metadata` object or a dynamic `generateMetadata()` function.
 
 ##### Configuring Static Metadata 
-Static Metadata is predefined and remains constant across sessions. To implement static metadata in Next.js. 
+Static Metadata is predefined and remains constant across sessions. To implement static metadata in Next.js:
 
 ```js
 export const metadata = {
