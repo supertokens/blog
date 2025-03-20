@@ -26,15 +26,22 @@ toHeading: 3
 
 ## Common Problems With Password Based Authentication 🤔
 Here are the most common password based authentication problems: 
-1. **Human error** – People choose weak passwords and weak passwords are easy to hack, compromising an app’s security. People choose weak passwords because they are easy to come up with and remember. When choosing a new password people have one goal in mind, getting access to the app they are signing up for. 
 
-2. **Password reuse** – People tend to reuse the same passwords for other apps they sign up for. Using the same password on multiple platforms significantly increases the chance of attack if one site is compromised. 
+### Human error
+People choose weak passwords and weak passwords are easy to hack, compromising an app’s security. People choose weak passwords because they are easy to come up with and remember. When choosing a new password people have one goal in mind, getting access to the app they are signing up for. 
 
-3. **Phishing attacks** – Phishing attacks happen when users are tricked into revealing their passwords through deceptive emails or websites. 
+### Password Reuse
 
-4. **Credential stuffing** – Credential stuffing happens when attackers use leaked passwords from other data breaches to attempt logins on various apps, knowing that people reuse passwords. 
+People tend to reuse the same passwords for other apps they sign up for. Using the same password on multiple platforms significantly increases the chance of attack if one site is compromised. 
 
-5. **Brute-force attacks** – Brute-force attacks happen when attackers try numerous password combinations until they find the correct one. Think trying to figure out your crush's password hoping it's your name. 🤭
+### Phishing attacks
+Phishing attacks happen when users are tricked into revealing their passwords through deceptive emails or websites. 
+
+### Credential stuffing
+Credential stuffing happens when attackers use leaked passwords from other data breaches to attempt logins on various apps, knowing that people reuse passwords. 
+
+### Brute-force attacks
+Brute-force attacks happen when attackers try numerous password combinations until they find the correct one. Think trying to figure out your crush's password hoping it's your name. 🤭
 
 To make password based authentication stronger, users are encouraged to use password managers and long passwords with a combination of letters, numbers, and symbols (aka gibberish).
 
@@ -54,13 +61,17 @@ It’s worth noting the 3 key factors of authentication in general:
 Passwordless authentication works by verifying a user’s identity through possession or inherence (or both), rather than knowledge. 
 
 Let’s break down the common passwordless auth methods: 
-* **Magic Links**  ✨ – Magic links are URLs with embedded tokens that when clicked allow users to log in without a password. The magic links are typically delivered through a user’s email, but can also be sent through a text message. Magic links verify a user’s identity by using something the user has, like their email address or phone number.  Platforms like Medium and Pinterest use magic links, eliminating the need for passwords. Simply click the link, and you’re in!
+### Magic Links ✨
+Magic links are URLs with embedded tokens that when clicked allow users to log in without a password. The magic links are typically delivered through a user’s email, but can also be sent through a text message. Magic links verify a user’s identity by using something the user has, like their email address or phone number.  Platforms like Medium and Pinterest use magic links, eliminating the need for passwords. Simply click the link, and you’re in!
 
-* **Biometrics** 🐾– As the name suggests, biometric authentication uses a person’s physical traits. Popular biometric authentication methods include fingerprint scanning and facial recognition. Because biometric authentication is based on who a user is, they are much harder to steal than passwords, or other forms of knowledge based authentication. Apps like Apple Pay and Google Pay use facial recognition or fingerprints to authenticate users, allowing secure access without a password. 
+### Biometrics 🐾
+As the name suggests, biometric authentication uses a person’s physical traits. Popular biometric authentication methods include fingerprint scanning and facial recognition. Because biometric authentication is based on who a user is, they are much harder to steal than passwords, or other forms of knowledge based authentication. Apps like Apple Pay and Google Pay use facial recognition or fingerprints to authenticate users, allowing secure access without a password. 
 
-* **One-Time Passcodes** 📱– One-time passcodes are generated numbers or letters sent to a user either through email or text message allowing the user to log in without a password. The user receives the OTP and must then enter the OTP on the client side of the application they are trying to log onto. They are similar to magic links, except instead of a link a user receives a code they must enter to verify their identity.  Services like Amazon send a one time passcode to a user’s email or phone. Entering the code gives them access to the app without a password. 
+### One-Time Passcodes📱
+One-time passcodes are generated numbers or letters sent to a user either through email or text message allowing the user to log in without a password. The user receives the OTP and must then enter the OTP on the client side of the application they are trying to log onto. They are similar to magic links, except instead of a link a user receives a code they must enter to verify their identity.  Services like Amazon send a one time passcode to a user’s email or phone. Entering the code gives them access to the app without a password. 
 
-* **Hardware Tokens** 💳 – Hardware tokens generate a one-time code that’s used to access a system. The token is usually a small device that looks like a credit card or a keychain fob. Hardware tokens are a secure and reliable way to verify a user’s identity. Think of having a hotel card tapping you into a room. 
+### Hardware Tokens 💳
+Hardware tokens generate a one-time code that’s used to access a system. The token is usually a small device that looks like a credit card or a keychain fob. Hardware tokens are a secure and reliable way to verify a user’s identity. Think of having a hotel card tapping you into a room. 
 
 ## 3 Transformative Benefits of Going Passwordless 🚀
 1. **Improved Security** – Passwordless auth is more secure than traditional, password based authentication. It removes the risks that come with passwords, like weak and reused passwords. Passwords are the weakest link in a security chain because they rely on users creating them and the majority of people typically don’t have cybersecurity in mind. So by going passwordless you eliminate the risks of brute-force attacks and credential stuffing. 

@@ -48,7 +48,18 @@ author: "John Doe"
 - **title:** Title of the blog post.
 - **description:** Description of the post that will be visible on the blog's card.
 - **date:** Date on which the post was created. It is a string of the format `YYYY-MM-DD`.
-- **cover:** Name of the cover image files for this post. Two cover image files need to be added, a high resolution image which will be visible inside the blog post and a low resolution (maximum height of `250px`) image which will be shown as the cover image in the blog cards on blog listing page. The high resolution image should be placed inside the `static/covers` directory and the low resolution image should be placed inside the `static/card_covers` directory, both present at the root of the project. Both the images should have the same name and this name should be specified in the frontmatter's `cover` property.
+- **cover**
+  - Two cover images are required for each post:
+    1. **High-resolution image:**
+       - Used inside the blog post.
+       - Place it in the `static/covers` directory (at the root of the project).
+    2. **Low-resolution image:**
+       - Used as the cover image in blog cards on the blog listing page.
+       - Maximum height: `250px`.
+       - Place it in the `static/card_covers` directory (at the root of the project).
+  - Both images:
+    - Must have the same name.
+    - This name should be specified in the frontmatter's `cover` property.
 - **category:** The `category` property should be a string having all the categories for the blog post separated by a comma. For e.g. if we want a post that is visible in the _Featured_ and _Sessions_ tabs, the value would be `featured, sessions`.
 - **author:** Name of the author of this post.
 
@@ -126,7 +137,22 @@ Images that are meant to be used as the source for `og:image`, `twitter:image` e
 
 ##### Meta Tags
 
-Meta tags for blog images are picked up from `/static/blog-seo/config.json`, for each blog you add an item to the array following the format
+Meta tags for blog images are picked up from `/static/blog-seo/config.json`, for each blog.
+
+Run the following command to automatically generate the metadata and sitemap info:
+
+> Note: You can get the file path by right-clicking on your blog folder in the content directory and selecting the "Copy Path" option
+
+```bash
+npm run generate-metadata /<path-to-supertokens-blog>/blog/content/<SLUG>
+```
+
+Check that the following files have been updated with you blog metadata and sitemap respectively.
+
+- `blog/static/blog-seo/config.json`
+- `blog/static/blog-seo/sitemapconfig.json`
+
+The metadata should be added in the following format:
 
 ```json
 {
@@ -155,7 +181,7 @@ Meta tags for blog images are picked up from `/static/blog-seo/config.json`, for
 }
 ```
 
-Then after the blog is published these meta tags will be used (on both the test and production site)
+After publishing these meta tags will be used (on both the test and production site)
 
 ### Adding cannonical tags
 
