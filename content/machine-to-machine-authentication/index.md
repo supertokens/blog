@@ -131,57 +131,168 @@ Before going into the actual instructions, start by imagining a real life exampl
 
 - Calendar Service that exposes these actions: event.view, event.create, event.update, and event.delete
 - A file Service that exposes these actions: file.view, file.create, file.update, and file.delete
-- a Task service that interacts with the calendar service and the file service in the provess of scheudling a taslk. 
+- a Task service that interacts with the calendar service and the file service in the process of scheudling a taslk. 
 
-The goal is to allow trhe task service to perform an authenticatioed action on the calendar service. Proceed to the actual steps. 
+The goal is to allow the task service to perform an authenticated action on the calendar service. Proceed to the actual steps. 
 
-SuperTokens offers machine to machien authentication using the OAUth2 Protocol -- the industry standrard for machine to machine authentication. 
+SuperTokens offers machine to machine authentication using the OAUth2 Protocol -- the industry standard for machine to machine authentication. 
 
 ## Steps to Implementing M2M Authentication with SuperTokens -- Super Simple to Set Up
-1. **Enable the OAuth2 features from the Dashboard** 
-You have to enable the OAuth2 feature in the SuperTokens.com Dashboard. When that is done you will see the OAuth Recipes in your applications. 
 
-2. **Create the OAuth2 Clients**
-For each of your services you will need to create a separate OAuth2 client. You can do that by calling the SuperTokens Core API 
+### 🚀 Step 1: Enable OAuth2 in SuperTokens Dashboard
+- Go to your **SuperTokens.com Dashboard**.
+- Enable the **OAuth2 feature**.
+- This unlocks OAuth recipes for your applications.
 
-### Single vs Multi App Setup
-In SuperTokens, the single app setup and multi app setup refer to different ways of structuring your authentication flow depending on how many applications you're managing.
+### 🔧 Step 2: Create OAuth2 Clients
+- For each service (e.g., Task Service, Calendar Service), create a unique OAuth2 client.
+- Use this code snippet to create a client:
 
-#### Single App Setup
-- Use Case: For projects with one application that needs authentication.
-- Example: A typical web app or mobile app where all users authenticate within the same environment.
+```javascript
+const BASE_URL = '<CORE_API_ENDPOINT>';
+const API_KEY = '<YOUR_API_KEY>';
 
-Endpoint Structure: 
-```ini
-BASE_URL = "<CORE_API_ENDPOINT>"
+fetch(`${BASE_URL}/recipe/oauth/clients`, {
+  method: 'POST',
+  headers: {
+    'api-key': API_KEY,
+    'Content-Type': 'application/json; charset=utf-8',
+  },
+  body: JSON.stringify({
+    clientName: "<YOUR_CLIENT_NAME>",
+    grantTypes: ["client_credentials"],
+    scope: "<custom_scope_1> <custom_scope_2>",
+    audience: ["<AUDIENCE_NAME>"],
+  })
+})
+  .then(response => response.json())
+  .then(json => console.log(json))
+  .catch(err => console.error(err));
 ```
-**No additional app identifier is included in the URL because there's only one app to manage.**
+✅ This registers your service so it can request access tokens later.
 
-#### Multi App Setup 
-- Use Case: For projects with multiple applications that share the same SuperTokens core.
-- Example: A system with a web app, mobile app, and admin portal, all using the same authentication infrastructure but needing separate configurations.
+### 🌍 Step 3: Single App vs Multi App Setup
 
-Endpoint Structure: 
-```ini
-BASE_URL = "<CORE_API_ENDPOINT>/appid-<APP_ID>"
+- **Single App Setup** — For one app with a straightforward setup.
+    - Example URL: `<CORE_API_ENDPOINT>`
+
+- **Multi App Setup** — For multiple apps using the same SuperTokens core.
+    - Example URL: `<CORE_API_ENDPOINT>/appid-<APP_ID>`
+    - *(Useful when apps need different permissions or OAuth clients.)*
+
+### 🔐 Step 4: Set Up the Authorization Service
+Add the OAuth2 recipe to your SuperTokens backend:
+
+
+```javascript
+import supertokens from "supertokens-node";
+import OAuth2Provider from "supertokens-node/recipe/oauth2provider";
+
+supertokens.init({
+    supertokens: {
+        connectionURI: "...",
+        apiKey: "...",
+    },
+    appInfo: {
+        appName: "...",
+        apiDomain: "...",
+        websiteDomain: "...",
+    },
+    recipeList: [
+      OAuth2Provider.init(),
+    ]
+});
 ```
-The `appid-<APP_ID>` segment ensures requests are routed to the correct app configuration within the SuperTokens core.
+✅ This configures your app to issue tokens.
 
-#### Key Difference
-The multi app setup isolates configurations for different apps within the same SuperTokens core instance. This is helpful if:
-- Each app has different OAuth clients, scopes, or permissions.
-- You want to keep user data distinct between applications.
+### 🏷️ Step 5: Generate Access Tokens
 
-The single app setup is simpler but assumes all authentication flows belong to one application context.
+Use this command to request a token:
 
+```ini
+curl -X POST <YOUR_API_DOMAIN>/auth/oauth/token \
+-H "Content-Type: application/json" \
+-d '{
+  "clientId": "<CLIENT_ID>",
+  "clientSecret": "<CLIENT_SECRET>",
+  "grantType": "client_credentials",
+  "scope": ["<RESOURCE_SCOPE>"],
+  "audience": "<AUDIENCE>"
+}'
+```
+Example payload for a Task Service creating an event in a Calendar Service:
 
+```ini
+{
+    "clientId": "<TASK_SERVICE_CLIENT_ID>",
+    "clientSecret": "<TASK_SERVICE_CLIENT_SECRET>",
+    "grantType": "client_credentials",
+    "scope": ["event.create"],
+    "audience": "event"
+}
+```
 
-3. **Set Up Your Authorization Service**
+✅ The response will include an accessToken that’s valid for 60 minutes. Save it for secure requests.
 
-4. **Generate Access Tokens** 
+### ✅ Step 6: Verify an Access Token
+To confirm a token is valid:
+1. Extract the token from the Authorization header.
+2. Verify it with the following Node.js code:
 
-5. **Verify an OAuth2 Access Token**
+```javascript
+import jose from "jose";
 
+const JWKS = jose.createRemoteJWKSet(new URL('<YOUR_API_DOMAIN>/auth/jwt/jwks.json'))
+
+async function validateClientCredentialsToken(jwt) {
+  const requiredScope = "<YOUR_REQUIRED_SCOPE>";
+  const audience = '<AUDIENCE>';
+
+  try {
+    const { payload } = await jose.jwtVerify(jwt, JWKS, {
+      audience,
+      requiredClaims: ['stt', 'scp'],
+    });
+
+    if(payload.stt !== 1) return false; // Ensure it's an OAuth2 token
+    return payload.scp.includes(requiredScope); // Check token permissions
+  } catch (err) {
+    return false;
+  }
+}
+```
+✅ This ensures your tokens are valid before granting access.
+
+### 🔒 Step 7: Combine with Session Verification
+
+To handle both OAuth2 tokens and SuperTokens session tokens, use this combined logic:
+
+```javascript
+import Session from "supertokens-node/recipe/session";
+import express from 'express';
+import jose from "jose";
+
+async function verifySession(req, res, next) {
+    let session = undefined;
+    try {
+        session = await Session.getSession(req, res, { sessionRequired: false });
+    } catch (err) {
+        return next(err);
+    }
+
+    if (session) return next(); // Valid SuperTokens session
+
+    const jwt = req.headers.authorization?.split("Bearer ")[1];
+    if (!jwt) return next(new Error("No JWT found in the request"));
+
+    try {
+        await validateToken(jwt);
+        return next();
+    } catch (err) {
+        return next(err);
+    }
+}
+```
 
 ## Conclusion 
 
