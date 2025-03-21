@@ -139,12 +139,25 @@ SuperTokens offers machine to machine authentication using the OAUth2 Protocol -
 
 ## Steps to Implementing M2M Authentication with SuperTokens -- Super Simple to Set Up
 
+✅ SuperTokens makes OAuth2 setup straightforward with its dashboard and API.
+
+✅ Each service should have its own Client ID and Secret for secure authentication.
+
+✅ Tokens ensure services can only perform authorized tasks.
+
+✅ Token validation helps confirm the authenticity and permissions of each request.
+
 ### 🚀 Step 1: Enable OAuth2 in SuperTokens Dashboard
+
+In the **SuperTokens Dashboard**, you need to enable the **OAuth2 feature**. This feature allows services (like APIs or background jobs) to authenticate securely without user involvement. Once enabled, you'll see OAuth options in your application settings.
+
 - Go to your **SuperTokens.com Dashboard**.
 - Enable the **OAuth2 feature**.
 - This unlocks OAuth recipes for your applications.
 
 ### 🔧 Step 2: Create OAuth2 Clients
+Each service that needs authentication will need its own OAuth2 client. Think of this like giving each service its own ID badge.
+
 - For each service (e.g., Task Service, Calendar Service), create a unique OAuth2 client.
 - Use this code snippet to create a client:
 
@@ -152,38 +165,45 @@ SuperTokens offers machine to machine authentication using the OAUth2 Protocol -
 const BASE_URL = '<CORE_API_ENDPOINT>';
 const API_KEY = '<YOUR_API_KEY>';
 
-fetch(`${BASE_URL}/recipe/oauth/clients`, {
+const url = `${BASE_URL}/recipe/oauth/clients`;
+const options = {
   method: 'POST',
   headers: {
     'api-key': API_KEY,
     'Content-Type': 'application/json; charset=utf-8',
   },
   body: JSON.stringify({
-    clientName: "<YOUR_CLIENT_NAME>",
+    clientName: "TaskService",
     grantTypes: ["client_credentials"],
-    scope: "<custom_scope_1> <custom_scope_2>",
-    audience: ["<AUDIENCE_NAME>"],
+    scope: "event.create",
+    audience: ["event"],
   })
-})
+};
+
+fetch(url, options)
   .then(response => response.json())
   .then(json => console.log(json))
   .catch(err => console.error(err));
 ```
 ✅ This registers your service so it can request access tokens later.
 
-### 🌍 Step 3: Single App vs Multi App Setup
+**Key Details:**
+- `"clientName"` identifies the service (e.g., `TaskService`).
+- `"grantTypes": ["client_credentials"]` specifies that this client will authenticate using M2M.
+- `"scope"` defines the permissions this client will have.
 
-- **Single App Setup** — For one app with a straightforward setup.
-    - Example URL: `<CORE_API_ENDPOINT>`
 
-- **Multi App Setup** — For multiple apps using the same SuperTokens core.
-    - Example URL: `<CORE_API_ENDPOINT>/appid-<APP_ID>`
-    - *(Useful when apps need different permissions or OAuth clients.)*
+### 🏗️ Step 3: Single App vs Multi App Setup
+**Single App Setup:** For one project (e.g., a web app or API) that handles everything.<br>
+**Multi App Setup:** For larger projects where multiple services share one SuperTokens core.
+- **Single App Example URL:** `BASE_URL = "<CORE_API_ENDPOINT>"`
+- **Multi App Example URL:** `BASE_URL = "<CORE_API_ENDPOINT>/appid-task_service"`
+*If you're managing several services, the multi-app setup keeps things organized.*
 
 ### 🔐 Step 4: Set Up the Authorization Service
-Add the OAuth2 recipe to your SuperTokens backend:
+This is where you tell your app how to handle OAuth2 tokens.
 
-
+**Code Example:**
 ```javascript
 import supertokens from "supertokens-node";
 import OAuth2Provider from "supertokens-node/recipe/oauth2provider";
@@ -203,41 +223,46 @@ supertokens.init({
     ]
 });
 ```
-✅ This configures your app to issue tokens.
+This setup tells SuperTokens:
+- Where to find your core server (connectionURI).
+- The app’s name and domains.
+- To include the OAuth2 provider.
 
-### 🏷️ Step 5: Generate Access Tokens
+### 🔄 Step 5: Generate Access Tokens
 
-Use this command to request a token:
+To generate a token, you send a POST request like this:
 
-```ini
-curl -X POST <YOUR_API_DOMAIN>/auth/oauth/token \
--H "Content-Type: application/json" \
--d '{
-  "clientId": "<CLIENT_ID>",
-  "clientSecret": "<CLIENT_SECRET>",
-  "grantType": "client_credentials",
-  "scope": ["<RESOURCE_SCOPE>"],
-  "audience": "<AUDIENCE>"
-}'
+```javascript
+import fetch from "node-fetch";
+
+const response = await fetch("<YOUR_API_DOMAIN>/auth/oauth/token", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    clientId: "<CLIENT_ID>",
+    clientSecret: "<CLIENT_SECRET>",
+    grantType: "client_credentials",
+    scope: ["event.create"],
+    audience: "event"
+  })
+});
+
+const data = await response.json();
+console.log(data.accessToken);
 ```
-Example payload for a Task Service creating an event in a Calendar Service:
+**Response Example:**
 
-```ini
+```json
 {
-    "clientId": "<TASK_SERVICE_CLIENT_ID>",
-    "clientSecret": "<TASK_SERVICE_CLIENT_SECRET>",
-    "grantType": "client_credentials",
-    "scope": ["event.create"],
-    "audience": "event"
+  "accessToken": "<TOKEN_VALUE>",
+  "expiresIn": 3600
 }
 ```
-
-✅ The response will include an accessToken that’s valid for 60 minutes. Save it for secure requests.
+*The token is valid for **60 minutes**. After that, you'll need to request a new one.*
 
 ### ✅ Step 6: Verify an Access Token
 To confirm a token is valid:
-1. Extract the token from the Authorization header.
-2. Verify it with the following Node.js code:
+**Code Example Using `jose`:**
 
 ```javascript
 import jose from "jose";
@@ -245,8 +270,8 @@ import jose from "jose";
 const JWKS = jose.createRemoteJWKSet(new URL('<YOUR_API_DOMAIN>/auth/jwt/jwks.json'))
 
 async function validateClientCredentialsToken(jwt) {
-  const requiredScope = "<YOUR_REQUIRED_SCOPE>";
-  const audience = '<AUDIENCE>';
+  const requiredScope = "event.create";
+  const audience = "event";
 
   try {
     const { payload } = await jose.jwtVerify(jwt, JWKS, {
@@ -254,44 +279,81 @@ async function validateClientCredentialsToken(jwt) {
       requiredClaims: ['stt', 'scp'],
     });
 
-    if(payload.stt !== 1) return false; // Ensure it's an OAuth2 token
-    return payload.scp.includes(requiredScope); // Check token permissions
+    if (payload.stt !== 1) return false;
+    return payload.scp.includes(requiredScope);
   } catch (err) {
     return false;
   }
 }
 ```
-✅ This ensures your tokens are valid before granting access.
+This checks:
 
-### 🔒 Step 7: Combine with Session Verification
+stt (SuperTokens Token Type) — Ensures it's an OAuth2 token.
+scp (Scope) — Confirms the token has the required permission.
 
-To handle both OAuth2 tokens and SuperTokens session tokens, use this combined logic:
+### 🌍 Step 7: Example of Two Services Communicating Using M2M
+Imagine you have two services:
+
+- Task Service — Creates tasks.
+- Calendar Service — Manages events.
+
+**Flow:**
+1. Task Service requests a token from the Authorization Server.
+2. Using that token, Task Service makes a POST request to Calendar Service to create an event.
+
+#### Step 1: Task Service Requests Token
 
 ```javascript
-import Session from "supertokens-node/recipe/session";
-import express from 'express';
-import jose from "jose";
+const tokenResponse = await fetch("<YOUR_API_DOMAIN>/auth/oauth/token", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    clientId: "task_service",
+    clientSecret: "super_secret_value",
+    grantType: "client_credentials",
+    scope: ["event.create"],
+    audience: "event"
+  })
+});
 
-async function verifySession(req, res, next) {
-    let session = undefined;
-    try {
-        session = await Session.getSession(req, res, { sessionRequired: false });
-    } catch (err) {
-        return next(err);
-    }
+const { accessToken } = await tokenResponse.json();
+```
 
-    if (session) return next(); // Valid SuperTokens session
+#### Step 2: Task Service Sends Request to Calendar Service
 
-    const jwt = req.headers.authorization?.split("Bearer ")[1];
-    if (!jwt) return next(new Error("No JWT found in the request"));
+```javascript
+await fetch("https://calendar.example.com/events", {
+  method: "POST",
+  headers: {
+    "Authorization": `Bearer ${accessToken}`,
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    title: "Team Meeting",
+    date: "2025-03-25",
+    location: "Conference Room A"
+  })
+});
+```
 
-    try {
-        await validateToken(jwt);
-        return next();
-    } catch (err) {
-        return next(err);
-    }
-}
+#### Step 3: Calendar Service Verifies the Token
+
+```javascript
+app.post('/events', async (req, res) => {
+  const token = req.headers['authorization']?.split('Bearer ')[1];
+
+  if (!token) return res.status(401).send("Unauthorized");
+
+  try {
+    const valid = await validateClientCredentialsToken(token);
+    if (!valid) return res.status(403).send("Forbidden");
+
+    // Token is valid — proceed with event creation
+    res.status(201).send({ message: "Event created successfully!" });
+  } catch {
+    res.status(403).send("Invalid token");
+  }
+});
 ```
 
 ## Conclusion 
