@@ -367,18 +367,13 @@ The absolute best way to explain something technical is to give a real world exa
 
 In this section we are going over how to build a sample application that includes two separate microservices that communicate with each other and need to authenticate one another before exchanging information. 
 
-**Instructions for Running:**
-1. Install dependencies: npm install express supertokens-node axios
-2. Start SuperTokens core with `npx supertokens start`
-3. Run inventoryApi.js with `node inventoryApi.js`
-4. Run orderApi.js with `node orderApi.js`
-5. Test the flow with: 
-```bash
-curl -X POST http://localhost:3000/process-order
-```
-
 ### Step 1: SuperTokens Setup 
-In file supertokensSetup.js -- Handles SuperTokens configuration.
+In file `supertokensSetup.js` -- **This file initializes SuperTokens to manage authentication.**
+- `supertokens.init()`
+    - `connectionURI`: Points to the SuperTokens core instance (hosted at `https://try.supertokens.com` for this example)
+    - `appInfo`: Defines key details for your app like API and website domains
+    - `recipeList`: Specifies that we're using **Session Management** for token handling. 
+SuperTokens handles the logic for issuing, verifying, and refreshing tokens behind the scenes.
 
 ```javascript
 import supertokens from 'supertokens-node';
@@ -397,7 +392,13 @@ supertokens.init({
 ```
 
 ### Step 2: Inventory Management API 
-in file inventoryApi.js -- The Inventory Management API
+in file `inventoryApi.js` -- **This service exposes the `/check-stock` endpoint.**
+- `inventoryApp.use(middleware())`: Adds SuperTokens' middleware to manage incoming session tokens. [We have an incoming article we can link to here!]
+- `inventoryApp.get('/check-stock')`: This endpoint checks stock for a product.
+    - `Session.verifySession()`: Ensures the request includes a valid M2M token before responding.
+- `inventoryApp.use(errorHandler())`: Handles authentication errors gracefully.
+
+This file ensures only authorized services can query stock data.
 
 ```javascript
 import express from 'express';
@@ -416,9 +417,19 @@ inventoryApp.listen(3001, () => console.log('Inventory API running on port 3001'
 ```
 
 ### Step 3: Order Processing API 
-in file OrderApi.js -— The Order Processing API.
-
+in file `OrderApi.js` -— **This service exposes the `/process-order` endpoint.**
+- `getAuthToken():`
+    - Uses `Session.createNewSessionViaToken()` to generate a session token for the Order API.
+    - The returned token is sent as a **Bearer Token** in requests.
+- `orderApp.post('/process-order')`:
+    - Calls `getAuthToken()` to request an access token.
+    - Uses `axios` to send a **GET** request to `/check-stock` with the token in the `Authorization` header.
+    - If successful, the response confirms the stock check and completes the order.
+- **Error Handling**: Any issues with token creation or the `/check-stock` call are captured and returned as a `500` error.
 ```javascript
+
+This file ensures that the Order Processing API authenticates itself before querying the Inventory Management API.
+
 import express from 'express';
 import axios from 'axios';
 import Session from 'supertokens-node/recipe/session';
@@ -444,10 +455,55 @@ orderApp.use(errorHandler());
 orderApp.listen(3000, () => console.log('Order API running on port 3000'));
 ```
 
+### Step 4: Running the Project
+1. Install Dependencies
+```bash 
+npm install express supertokens-node axios
+```
+2. Start SuperTokens Core
+```bash
+npx supertokens start
+```
+
+3. Start the Inventory Management API
+```bash
+node inventoryApi.js
+```
+
+4. Start the Order Processing API
+
+```bash 
+node orderApi.js
+```
+
+5. Test the Flow
+
+```bash
+curl -X POST http://localhost:3000/process-order
+```
+**How the Authentication Flow Works**
+1. The Order Processing API requests a token from SuperTokens using getAuthToken().
+2. The token is included in the request headers when calling the Inventory Management API.
+3. The Inventory Management API verifies the token using Session.verifySession().
+4. If valid, the inventory data is returned; otherwise, the request is rejected.
 
 ## Conclusion 
 
-If two backend services **authenticate using tokens without any user involvement, it is M2M authentication**. This enables secure, automated communication between APIs, microservices, cloud workloads, and IoT devices. The key distinction from traditional authentication is that **it relies on machine identities instead of user credentials**.
+**Machine-to-machine (M2M) authentication** is a method that enables secure communication between services without human intervention. Unlike traditional user authentication, where a person logs in, M2M authentication relies on tokens or keys that one service presents to another to prove its identity.
+
+This approach is crucial for scenarios like:
+- ✅ Microservices architectures where services need to exchange data securely.
+- ✅ Automated systems such as order processing, data synchronization, or scheduled tasks.
+- ✅ API integrations where external services must connect safely.
+
+By implementing M2M authentication, you ensure that your services can trust one another, reducing the risk of unauthorized access and improving overall system security.
+
+We also walked through **implementing a simple yet effective machine-to-machine (M2M) authentication flow using SuperTokens**. By setting up two services — an Inventory Management API and an Order Processing API — we demonstrated how to:
+- ✅ Initialize SuperTokens for secure session management.
+- ✅ Protect endpoints with Session.verifySession() to ensure only authorized requests are processed.
+- ✅ Generate and use tokens for secure communication between services.
+
+This setup offers a lightweight yet powerful way to handle M2M authentication, ensuring data integrity and security when your services need to talk to each other. Whether you're building microservices, third-party integrations, or internal APIs, this pattern provides a strong foundation to build on.
 
 👉 Curious to dive deeper into building secure and efficient APIs? Check out these helpful resources: [THIS WILL BE REPLACED WITH ANOTHER ARTICLE]
 1. [**Token-Based Authentication for APIs: What It Is and How It Works**](https://supertokens.com/blog/token-based-authentication-in-api)
