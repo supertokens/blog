@@ -100,8 +100,6 @@ M2M authorization plays a critical role in ensuring secure and efficient communi
 
 Incorporating robust M2M authorization practices is key to securing connected devices and ensuring seamless, secure communication in modern technology ecosystems.
 
-
-
 ## Common Use Cases for M2M Authentication 📊
 
 M2M authentication is especially useful in scenarios where secure, automated communication between devices is essential. Here are some common use cases:
@@ -117,15 +115,23 @@ M2M authentication is especially useful in scenarios where secure, automated com
 Implementing M2M authentication in these scenarios helps protect critical systems, prevent unauthorized access, and streamline secure data exchange.
 
 ## How to Secure Your Machine Communication With SuperTokens
-SuperTokens recommends securing your machine to machine communication with OAuth2 specifications. You have to create an OAuth2 Provider and use the OAuth2 CLient Credentials Flow for authorization. 
+SuperTokens recommends securing your machine-to-machine communication with **OAuth2 specifications**. You have to create an **OAuth2 Provider** and use the **OAuth2 Client Credentials Flow** for authorization. 
 
-1. Service A uses credentials to get an OAuth2 Access Token 
+1. **Service A** uses credentials to get an OAuth2 Access Token 
 2. Authorization Service returns the OAuth2 Access Token 
-3. Service A uses the OAuth Access Token to communicate with Service B
-4. Service B validates the OAuth2 Access Token
-5. If the token is valid then Service B returns the requested resource. 
+3. **Service A** uses the OAuth Access Token to communicate with **Service B**
+4. **Service B** validates the OAuth2 Access Token
+5. If the token is valid then **Service B** returns the requested resource. 
 
 ![SuperTokens' Client Credentials Flow Diagram Between Two Services - Service A and Service B](machine-to-machine.png)
+
+1. Service A reaches out to the SuperTokens Backend SDK to get an OAuth Access Token
+2. The SuperTokens Backend SDK responds back to Service A with an OAuth2 Access Token
+
+3. Service A then communicates with Service B using the OAuth Access Token
+4. Service B talks to the SuperTokens Core Service to validate the OAuth Access Token 
+
+5. If the OAuth Access Token is valid, then Service B returns the requested resource. 
 
 Before going into the actual instructions, start by imagining a real life example that you can reference along the way. This makes it easier to understand what is happening. We are going to configure authentication for the following setup. 
 
@@ -355,6 +361,89 @@ app.post('/events', async (req, res) => {
   }
 });
 ```
+
+## 💻 Building a Simple App with SuperTokens That Utilizes M2M Authentication 💻
+The absolute best way to explain something technical is to give a real world example -- especially in code. So here you have it.
+
+In this section we are going over how to build a sample application that includes two separate microservices that communicate with each other and need to authenticate one another before exchanging information. 
+
+**Instructions for Running:**
+1. Install dependencies: npm install express supertokens-node axios
+2. Start SuperTokens core with `npx supertokens start`
+3. Run inventoryApi.js with `node inventoryApi.js`
+4. Run orderApi.js with `node orderApi.js`
+5. Test the flow with: 
+```bash
+curl -X POST http://localhost:3000/process-order
+```
+
+### Step 1: SuperTokens Setup 
+In file supertokensSetup.js -- Handles SuperTokens configuration.
+
+```javascript
+import supertokens from 'supertokens-node';
+import Session from 'supertokens-node/recipe/session';
+
+supertokens.init({
+    framework: 'express',
+    supertokens: { connectionURI: 'https://try.supertokens.com'},
+    appInfo: {
+        appName: 'M2M Example', 
+        apiDomain: 'http://localhost:3000',
+        websiteDomain: 'http://localhost:3000'
+    },
+    recipeList: [Session.init()]
+    });
+```
+
+### Step 2: Inventory Management API 
+in file inventoryApi.js -- The Inventory Management API
+
+```javascript
+import express from 'express';
+import { middleware, errorHandler } from 'supertokens-node/framework/express';
+import Session from 'supertokens-node/recipe/session';
+
+const inventoryApp = express();
+inventoryApp.use(middleware());
+
+inventoryApp.get('/check-stock', Session.verifySession(), (req, res) => {
+    res.json({ item: 'Magic Sword', stock: 12 });
+});
+
+inventoryApp.use(errorHandler());
+inventoryApp.listen(3001, () => console.log('Inventory API running on port 3001'));
+```
+
+### Step 3: Order Processing API 
+in file OrderApi.js -— The Order Processing API.
+
+```javascript
+import express from 'express';
+import axios from 'axios';
+import Session from 'supertokens-node/recipe/session';
+import { middleware, errorHandler } from 'supertokens-node/framework/express';
+
+const orderApp = express();
+orderApp.use(express.json());
+orderApp.use(middleware());
+
+orderApp.post('/process-order', async (req, res) => {
+    try {
+        const token = await Session.createNewSession(req, 'order-api');
+        const response = await axios.get('http://localhost:3001/check-stock', {
+            headers: { Authorization: `Bearer ${token.getAccessToken()}` },
+        });
+        res.json({ message: 'Order processed successfully', stockData: response.data });
+    } catch (error) {
+        res.status(500).json({ error: 'Stock check failed', details: error.message });
+    }
+});
+
+orderApp.use(errorHandler());
+orderApp.listen(3000, () => console.log('Order API running on port 3000'));
+```
+
 
 ## Conclusion 
 
