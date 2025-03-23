@@ -84,6 +84,19 @@ Machine-to-Machine (M2M) authentication is a crucial security process that ensur
 6. **Autonomous Operations** -- M2M authentication enables devices to perform tasks independently, reducing the need for human oversight and improving operational efficiency in automated environments.
 
 
+**More notes on step by step on how M2M works:**
+
+Uses the client credentials grant flow 
+
+1. The **Client** authenticates with the **Authorization Server** using its own credentials (the Client ID and Client Secret).
+2. The **Authorization Server** verifies the credentials 
+3. The **Authorization Server** returns an **OAuth2 Access Token**.
+4. The **Client** uses the **OAuth2 Access Token** to access protected resources. 
+5. The **Resource Server** validates the **OAuth2 Access Token**. 
+6. If the validation is successful, the **Resource Server** returns the requested resource. 
+
+![General Client Credentials Flow chart about how it works with two microservices as examples](client-credentials-flow.png)
+
 ## Why Is Machine-to-Machine Authorization Important? 🛡️
 
 M2M authorization plays a critical role in ensuring secure and efficient communication between devices. Here's why it's important:
@@ -426,10 +439,10 @@ in file `OrderApi.js` -— **This service exposes the `/process-order` endpoint.
     - Uses `axios` to send a **GET** request to `/check-stock` with the token in the `Authorization` header.
     - If successful, the response confirms the stock check and completes the order.
 - **Error Handling**: Any issues with token creation or the `/check-stock` call are captured and returned as a `500` error.
-```javascript
 
 This file ensures that the Order Processing API authenticates itself before querying the Inventory Management API.
 
+```javascript
 import express from 'express';
 import axios from 'axios';
 import Session from 'supertokens-node/recipe/session';
