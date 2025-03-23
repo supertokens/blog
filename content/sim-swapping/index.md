@@ -15,7 +15,7 @@ What do Twitter founder Jack Dorsey and actress Chloe Moretz have in common?
 
 Yep. Both were victims of a cyber attack called a **SIM swapping**. 😬
 
-From spamming to phishing scams and identity theft, cybercriminals sure know how to keep themselves busy. But the one scam they just can't seem to get enough of right now is in fact **SIM swapping** &mdash; a sneaky trick where they hijack your SIM card and take over your phone number. So any calls or texts you receive go to them, not to you. 
+From spamming to phishing scams and identity theft, cybercriminals sure know how to keep themselves busy. But the one scam they just can't seem to get enough of right now is **SIM swapping** &mdash; a sneaky trick where they hijack your SIM card and take over your phone number. So any calls or texts you receive go to them, not to you. 
 
 **Understanding how SIM swapping works &mdash; and how to prevent it &mdash; is essential to keeping your user accounts and personal data safe.**
 
@@ -41,7 +41,7 @@ Alternatively, **eSIMs are embedded Subscriber Identity Modules** &mdash; SIM ca
 
 **SIM Swapping** (also referred to as **SIM hijacking** or **port-out fraud**) is a fraud technique where scammers transfer a victim's phone number to a new SIM card under their control. It's a type of account takeover. 
  
-**This allows scammers &mdash; our cybervillains &mdash; to receive communications associated with your phone number, including those that let them to access your social media profiles, banking and other accounts.**
+**This allows scammers &mdash; our cybervillains &mdash; to receive communications associated with your phone number, including those that let them to access your social media profiles, banking, and other accounts.**
 
 Cybervillains may target people who have valuable social media or financial accounts. This is how Jack Dorsey, the founder of Twitter (now X), [**got his account hacked in 2019**](https://www.nytimes.com/2019/09/05/technology/sim-swap-jack-dorsey-hack.html). 
 
@@ -49,12 +49,12 @@ Cybervillains may target people who have valuable social media or financial acco
 SIM swapping attacks can be summed up in three main steps:
 
 1. **The attacker will gather information about the victim**. This information is then used in verifying a person's identity and an attacker can use it to impersonate the victim. They could find personal details from: 
-- social media accounts
-- data leaks
-- any other place where a victim's data is freely shared
-- they could also try to get information from a victim through phishing and other social engineering tactics
+- Social media accounts
+- Data leaks
+- Anywhere else your and your users data is available (e.g, the dark web, yellow pages, personal websites, blogs)
+- Phishing and other social engineering tactics
 
-2. **The attacker will then reach out to the victim's phone company pretending to be the victim.** They can use any information they gathered to answer security questions &mdash; which is why some people also question the safety of personal questions as a security measure. Then they will ask to have the victim's phone number transferred to a SIM card they control. Once the carrier processes the request, the victim's phone will lose service. 
+2. **The attacker will then reach out to the victim's phone company, pretending to be the victim.** They can use the information they gathered to answer security questions &mdash; and this is why some people also question the safety of personal questions as a security measure. Then, they will ask to have the victim's phone number transferred to a SIM card they control. Once the carrier processes the request, the victim's phone will lose service. 
 
 3. **After all this, the attacker will now have access to the victim's text messages and contacts.** This could also lead to even more attacks because once they have this information, attackers can get even more information on users, including passwords and emails &mdash; and any **Two-Factor Authentication codes**. 
 
@@ -63,14 +63,14 @@ SIM swapping attacks can be summed up in three main steps:
 ## Consequences of SIM Swap Attacks
 If someone takes control of your phone number, they could **steal money from your bank account**, **make unauthorized payments**, or **apply for loans in your name**. They might also **access your personal information** through email or social media, leading to **identity theft** or even legal trouble if your identity is misused. By changing passwords, the attacker could **lock you out** of important accounts, potentially causing **permanent data loss**. On top of that, they could **invade your privacy by reading your messages**, listening to voicemails, or **impersonating you in calls and texts**.
 
-## 3 Signs That You Are The Victim of a SIM Swap Attack
-Keeping in mind some of these signs can help you catch a SIM swap attack early so the damage either doesn't happen or at least isn't extensive:
+## 3 Signs That You Are the Victim of a SIM Swap Attack
+Recognizing the following signs of an attack can help you catch a SIM swap attack early, and help you minimize the damage:
 
-1. **You can't make calls or send texts** &mdash; This can be a sign of a cellular provider outage but it can also be a SIM swap attack in the process. It's always better to check for outages if this happens and then act accordingly.
+1. **You can't make calls or send texts** &mdash; This can be a sign of a cellular provider outage, but it can also mean a SIM swap attack is in progress. It's always better to check for outages if this happens and then act accordingly.
 
 2. **You're unable to access accounts** &mdash; Attackers most likely know they have limited time to do some damage so they will try to buy more time by changing your accounts' passwords. Changing back your passwords to various accounts will take some time. So this may be a sign that a SIM swap attack has unfortunately happened.
 
-3. **You find unauthorized transactions** &mdash; It can either be a mistake or a SIM swap attack. But either way, it's good to get that taken care of and notify your bank and stop the attack from continuing. 
+3. **You find unauthorized transactions** &mdash; It can either be a mistake or a SIM swap attack. But either way, it's good to get that taken care of, and notify your bank and stop the attack from continuing. 
 
 As you probably noticed all of those signs are just that &mdash; signs. They could be something else, but it's always beneficial for you and your users to keep them in mind so they don't fall victims to SIM swapping. Or if they do, to minimize the damage. 
  
@@ -80,9 +80,9 @@ Many people question whether eSIMs are more secure than physical SIM cards, but 
 
 In a **traditional SIM attack**, an attacker would need physical access to your phone to steal your SIM card and insert it into their own device.
 
-With **eSIMs**, there’s no physical card to steal, which adds some security. However, scammers can still perform a **SIM swapping attack** by convincing your mobile carrier to transfer your number to their device &mdash; and with the rise of social engineering *(especially enhanced by AI)*, impersonating people has become easier than ever.
+With **eSIMs**, there’s no physical card to steal. However, scammers can still perform a **SIM swapping attack** by convincing your mobile carrier to transfer your number to their device &mdash; and with the rise of social engineering *(especially enhanced by AI)*, impersonating people has become easier than ever.
 
-At the end of the day, neither eSIMs nor physical SIMs are automatically more secure. The key to protecting yourself and your users lies in the security measures you take &mdash; like enabling **two-factor authentication that do not rely on SMS**, using **strong passwords**, and being cautious with what information is shared online.
+At the end of the day, neither eSIMs nor physical SIMs are automatically more secure. The key to protecting yourself and your users lies in the security measures you take &mdash; like enabling **two-factor authentication that does not rely on SMS**, using **strong passwords**, and being cautious with what information is shared online.
 
 ## Are SIM Swapping Attacks on the Rise? 
 Yes, experts claim that these attacks are not only on the rise, but are also becoming more sophisticated. Which is not surprising &mdash; especially with the growth of AI. 
@@ -94,7 +94,7 @@ Yes, experts claim that these attacks are not only on the rise, but are also bec
 SIM swapping essentially renders SMS-based authentication useless for protecting sensitive data. But it goes beyond SIM swapping. SMS-based authentication is only as secure as our SMS system is, which is pretty vulnerable. 
 
 ### The Weaknesses of SMS-Based Authentication
-- **Vulnerable to malware:** [**According to Ashish Malhotra**](https://securityintelligence.com/whats-wrong-with-sms-authentication-two-ibm-experts-weigh-in-on-the-nist-recommendation/) &mdash; an IBM authentication expert &mdash; many phones are susceptible to malware, where users unwittingly download malware that monitors their text messages, including any OTPs (One Time Passwords/Passcodes) which are used in 2FA. 
+- **Vulnerable to malware:** [**According to Ashish Malhotra**](https://securityintelligence.com/whats-wrong-with-sms-authentication-two-ibm-experts-weigh-in-on-the-nist-recommendation/) &mdash; an IBM authentication expert &mdash; many phones are susceptible to malware, where users unwittingly download malware that monitors their text messages, including any OTPs (One Time Passwords) that are used in 2FA. 
 - **Standard SMS messages are not encrypted:** This makes your OTPs much easier to intercept and steal. SMS messages rely heavily on the mobile network providers and what security they choose to implement. Users are not often aware of what they should look for in a mobile provider and assume that their messages are safer than they actually are. 
 - **Signaling System 7 (SS7) attacks:** SS7 is a protocol that allows phone networks to exchange information needed for call routing and text messaging. Attackers can exploit vulnerabilities in SS7 to intercept SMS messages, including OTPs. Since this protocol is fundamental to mobile networks worldwide, it's challenging to secure without major infrastructure updates.
 
@@ -118,9 +118,9 @@ Implement these three pillars to make sure you and your users are safe.
 - **Use SuperTokens to handle secure, scalable session management.**
 
 ## How SuperTokens Helps Secure Authentication Against SIM Swapping
-Not everything is grim though. It's just important to know the dangers of SMS-based authentication to prevent any major consequences of SIM swapping attacks for you and your users. 
+Not everything is grim. It's important to know the dangers of SMS-based authentication, to minimize major consequences of SIM swapping attacks for you and your users. 
 
-**If you are ready to take action against it and make your business more secure, here is how SuperTokens is ready to help.**
+**If you are ready to take action and make your business more secure, here is how SuperTokens is ready to help.**
 
 ### SuperTokens Secure Authentication Alternatives
 1. **Passwordless Authentication:** Magic links and biometric authentication eliminate SMS-based risks.
@@ -128,7 +128,7 @@ Not everything is grim though. It's just important to know the dangers of SMS-ba
 3. **Session Hijack Detection:** If a SIM swap occurs, SuperTokens detects mismatched device fingerprints and terminates unauthorized sessions.
 
 ### Seamless Integration for Scalable CIAM Security
-SuperTokens integrates seamlessly into existing authentication flows without disrupting the user experience. Its API-first architecture ensures compatibility with OAuth 2.0, OpenID Connect, and enterprise SSO solutions, providing flexibility for various authentication needs. Additionally, SuperTokens offers a lower-cost alternative to proprietary CIAM solutions while allowing full customization.
+SuperTokens integrates seamlessly into existing authentication flows, without disrupting the user experience. Its API-first architecture ensures compatibility with OAuth 2.0, OpenID Connect, and enterprise SSO solutions, providing flexibility for various authentication needs. Additionally, SuperTokens offers a lower-cost alternative to proprietary CIAM solutions while allowing full customization.
 
 ## Implement These Best Practices to Block SIM Swap Attacks
 1. Ditch SMS 2FA as the default authentication method.
