@@ -85,9 +85,13 @@ With **eSIMs**, there’s no physical card to steal. However, scammers can still
 At the end of the day, neither eSIMs nor physical SIMs are automatically more secure. The key to protecting yourself and your users lies in the security measures you take &mdash; like enabling **two-factor authentication that does not rely on SMS**, using **strong passwords**, and being cautious with what information is shared online.
 
 ## Are SIM Swapping Attacks on the Rise? 
-Yes, experts claim that these attacks are not only on the rise, but are also becoming more sophisticated. Which is not surprising &mdash; especially with the growth of AI. 
+Yes, [**experts claim that these attacks are not only on the rise, but are also becoming more sophisticated**](https://www.radware.com/blog/application-protection/the-rise-of-ai-driven-cyber-attacks-implications-for-modern-security/#:~:text=AI%2DDriven%20Social%20Engineering%20Attacks,performing%20actions%20that%20compromise%20security.). Which is not surprising &mdash; especially with advancements in AI. Emerging AI capabilities can significantly enhance social engineering tactics, making SIM swapping attacks more effective and harder to detect. AI tools can:
+- **Generate convincing messages:** Attackers can use AI to craft highly personalized phishing messages, mimicking writing styles or using context-specific language to deceive victims.
+- **Automate reconnaissance:** AI can quickly gather publicly available data (e.g., social media profiles) to build detailed profiles of targets, improving the credibility of fake requests.
+- **Impersonate voices:** AI-powered voice synthesis can convincingly mimic someone’s voice, making fraudulent phone calls more believable during identity verification attempts.
+- **Bypass traditional security checks:** Attackers may use AI to predict or guess security questions based on harvested data.
 
-[**The Federal Bureau of Investigation issued an announcement**](https://www.ic3.gov/PSA/2022/PSA220208) in 2022 to inform the public and mobile carriers of the rise of these attacks. They said that they received 320 complaints related to SIM swapping attacks between January 2018 and December 2020 , and that number jumped to 1,611 in just 2021 &mdash; although many believe these numbers are underestimated because a lot of identity thefts are not reported. 
+[**The Federal Bureau of Investigation issued an announcement**](https://www.ic3.gov/PSA/2022/PSA220208) in 2022 to inform the public and mobile carriers of the rise of these attacks. They said that they received 320 complaints related to SIM swapping attacks between January 2018 and December 2020 , and that number jumped to 1,611 in just 2021 &mdash; although many believe these numbers are underestimated because a lot of SIM swapping attacks are not reported. 
 
 ##  Why SMS 2FA Is No Longer Enough
 
