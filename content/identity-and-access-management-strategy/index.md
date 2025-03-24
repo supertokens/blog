@@ -7,8 +7,6 @@ category: "iam, strategy"
 author: "Dejan Lukic"
 ---
 
-## Table of Content
-
 ```toc
 tight: true
 toHeading: 3
@@ -144,4 +142,3 @@ As you can see, developing an effective Identity & Access Management strategy in
 Now that you understand the core principles of an IAM strategy, consider exploring specialized IAM solutions like SuperTokens to streamline your authentication and authorization processes. By leveraging a dedicated solution, you can reduce complexity and focus on growing your business while ensuring strong data security.
 
 For further reading, explore our documentation or sign up for a free trial to see SuperTokens in action. It’s time to put these best practices into place and build an IAM strategy foundation that keeps your organization safe, agile, and ready for the future-whether you adopt zero trust, privileged access management (PAM), or any other advanced approach.
-.
