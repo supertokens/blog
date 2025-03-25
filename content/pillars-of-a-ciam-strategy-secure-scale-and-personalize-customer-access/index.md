@@ -144,7 +144,7 @@ account.
     with lengthy forms, collect only essential data initially. As
     customers continue to interact with your platform, progressively
     request additional information to enrich their profiles. This not
-    only improves the customer experience but also ensures compliance
+    only improves the customer experience, but also ensures compliance
     with data minimization principles.
 
 #### **Example in Action**
