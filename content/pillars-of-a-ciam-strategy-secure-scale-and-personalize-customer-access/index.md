@@ -114,7 +114,7 @@ customer.
 Managing millions of customer identities in a fast-growing digital
 ecosystem requires both scalability and smart user management
 strategies. Moreover, many businesses today &mdash; such as streaming
-services---need to support shared user accounts (SUAs) while still
+services &mdash; need to support shared user accounts (SUAs), while still
 ensuring security and personalization.
 
 #### **Scalability Challenges**
