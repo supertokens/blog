@@ -345,7 +345,7 @@ framework impacts your bottom line:
 A CIAM strategy built on seamless authentication, robust access
 controls, and comprehensive data protection minimizes the risk of
 account takeover and fraud. This not only saves costs associated with
-data breaches but also protects your brand's reputation.
+data breaches, but also protects your brand's reputation.
 
 ### **Enhanced User Experience and Retention**
 
