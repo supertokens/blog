@@ -156,7 +156,7 @@ profiles under one subscription. This flexibility has enabled Spotify to
 offer a highly personalized experience to millions of users around the
 world.
 
-### **Pillar 3: Robust Access Control & Authorization**
+### **Pillar 3: Robust Access Control and Authorization**
 
 Once a customer is authenticated, the next challenge is to ensure they
 can only access the resources and data they are entitled to. This is
