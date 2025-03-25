@@ -122,7 +122,7 @@ ensuring security and personalization.
 As your customer base grows, the CIAM system must handle increased loads
 without compromising on performance. This means the back-end
 infrastructure should be designed to support rapid growth and high
-concurrency while maintaining low latency.
+concurrency, while maintaining low latency.
 
 #### **Handling SUAs (Shared User Accounts)**
 
