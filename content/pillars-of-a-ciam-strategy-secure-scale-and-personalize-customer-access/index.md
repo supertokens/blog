@@ -172,7 +172,7 @@ right users at the right time.
 
 1.  **Role-Based Access Control (RBAC):** This method assigns
     permissions based on predefined roles. For example, a basic
-    customer may have limited access compared to a premium subscriber.
+    customer may have more limited access than a premium subscriber.
     RBAC simplifies the management of user permissions, particularly
     in large organizations.
 
