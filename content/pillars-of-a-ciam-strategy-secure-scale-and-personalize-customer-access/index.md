@@ -384,7 +384,7 @@ five pillars &mdash; authentication, user management, access control, privacy,
 and unified identity &mdash; businesses can protect data and boost engagement.
 Solutions like SuperTokens further enhance implementation with
 customizable options. Investing in CIAM not only improves security and
-user experience but also provides a competitive advantage as digital
+user experience, but also provides a competitive advantage as digital
 interactions increase, making these pillars vital for fostering trust
 and innovation.
 
