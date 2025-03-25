@@ -98,7 +98,7 @@ safeguard access without slowing down the customer journey.
     such as geolocation, time of access, and user behavior patterns,
     risk-based authentication can dynamically adjust security
     measures. This ensures that legitimate users enjoy a smooth
-    experience while potential threats trigger additional checks.
+    experience, while potential threats trigger additional checks.
 
 #### **Example in Action**
 
