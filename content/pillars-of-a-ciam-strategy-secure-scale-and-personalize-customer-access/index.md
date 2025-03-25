@@ -55,7 +55,7 @@ minimizes login friction, and helps maintain compliance with data
 privacy laws. Companies that invest in CIAM can improve user retention
 and boost conversions by providing a secure and enjoyable digital
 journey. In essence, a strong CIAM strategy is not just a security
-measure---it's a competitive advantage.
+measure &mdash; it's a competitive advantage.
 
 ## **The 5 Pillars of a Winning CIAM Strategy**
 
