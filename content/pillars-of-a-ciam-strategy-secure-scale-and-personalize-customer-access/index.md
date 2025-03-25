@@ -305,7 +305,7 @@ business needs.
     user experience.
 
 -   **Customizable Authentication Flows:** Tailor your sign-up and login
-    processes to align with your brand's look and feel without
+    processes to align with your brand's look and feel, without
     compromising on security.
 
 -   **Scalable Session Management:** Designed to handle millions of
