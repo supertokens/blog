@@ -186,7 +186,7 @@ right users, at the right time.
     for secure authorization, particularly when third-party
     applications require access to customer data. By issuing tokens
     rather than sharing credentials, OAuth 2.0 protects sensitive
-    customer information while enabling seamless integrations.
+    customer information, while enabling seamless integrations.
 
 #### **Example in Action**
 
