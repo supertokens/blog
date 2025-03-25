@@ -364,7 +364,7 @@ interacting with your brand.
 ### **Scalability for Future Growth**
 
 As your business scales, your CIAM solution must adapt. The pillars of
-CIAM---ranging from scalable user management to unified identity across
+CIAM &mdash; ranging from scalable user management to unified identity across
 channels---ensure that your customer access remains smooth and secure,
 even as user numbers soar.
 
