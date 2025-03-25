@@ -195,7 +195,7 @@ third-party applications. This system enables external partners to
 integrate with Stripe's payment infrastructure securely, without
 compromising customer privacy or data security.
 
-### **Pillar 4: Privacy, Compliance & Customer Data Protection**
+### **Pillar 4: Privacy, Compliance, and Customer Data Protection**
 
 With the increasing scrutiny on data privacy and strict regulatory
 requirements, building trust through robust data protection is a must
