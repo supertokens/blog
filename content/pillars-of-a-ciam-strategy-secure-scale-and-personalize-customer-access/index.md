@@ -8,7 +8,7 @@ author: "Mostafa Ibrahim"
 ---
 
 Customer Identity and Access Management (CIAM) isn't just about
-authentication---it's the cornerstone of digital customer experiences,
+authentication &mdash; it's the cornerstone of digital customer experiences,
 security, and compliance. Companies must ensure that customers have
 frictionless, secure, and personalized access to services across
 multiple channels. A well-crafted CIAM strategy reduces login headaches,
