@@ -178,7 +178,7 @@ right users at the right time.
 
 2.  **Attribute-Based Access Control (ABAC):** ABAC takes a more
     granular approach by considering various attributes &mdash; such as user
-    demographics, location, and behavioral patterns---to make
+    demographics, location, and behavioral patterns &mdash; to make
     authorization decisions. This dynamic approach allows for more
     personalized and context-aware access control.
 
