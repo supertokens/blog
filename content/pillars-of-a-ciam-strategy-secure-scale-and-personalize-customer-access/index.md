@@ -253,7 +253,7 @@ personalize interactions.
 
 #### **Single Customer View**
 
-SCV refers to the unification of customer identities across various
+Single customer view (SCV) refers to the unification of customer identities across various
 platforms into one comprehensive profile. By consolidating data from
 multiple sources, businesses can gain a 360-degree view of their
 customers, which is crucial for personalization and effective marketing.
