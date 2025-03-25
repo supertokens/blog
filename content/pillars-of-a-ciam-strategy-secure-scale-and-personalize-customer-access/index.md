@@ -129,7 +129,7 @@ concurrency, while maintaining low latency.
 SUAs, common in platforms like Netflix or
 family-oriented streaming services, add another layer of complexity. The
 CIAM system must differentiate between individual profiles within a
-shared account while maintaining the overall security of the master
+shared account, while maintaining the overall security of the master
 account.
 
 #### **Best Practices for User Identity Storage**
