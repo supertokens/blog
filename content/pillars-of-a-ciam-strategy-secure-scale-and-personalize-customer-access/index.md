@@ -251,7 +251,7 @@ channels, it leads to disjointed experiences. Customers may need to
 register multiple times, and businesses miss opportunities to
 personalize interactions.
 
-#### **Single Customer View (SCV)**
+#### **Single Customer View**
 
 SCV refers to the unification of customer identities across various
 platforms into one comprehensive profile. By consolidating data from
