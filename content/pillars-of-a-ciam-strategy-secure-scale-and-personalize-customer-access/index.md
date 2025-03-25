@@ -328,7 +328,7 @@ This not only improves customer retention, but also reduces the risk of
 security breaches and fraud. One such example is the [Arena Club team
 who was able to get SuperTokens integrated within 2.5 weeks, with
 minimal impact on the user
-experience.](https://supertokens.com/customers/arena-club)
+experience](https://supertokens.com/customers/arena-club).
 SuperTokens enables a more secure flow with MFA and a native integration
 in mobile experiences. All of which were key for Arena Club.
 
