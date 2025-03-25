@@ -324,7 +324,7 @@ SuperTokens, the platform can enable passwordless authentication for a
 smoother user experience while also ensuring robust session management
 and compliance with global data protection regulations.
 
-This not only improves customer retention but also reduces the risk of
+This not only improves customer retention, but also reduces the risk of
 security breaches and fraud. One such example is the [Arena Club team
 which was able to get SuperTokens integrated within 2.5 weeks with
 minimum impact on the user
