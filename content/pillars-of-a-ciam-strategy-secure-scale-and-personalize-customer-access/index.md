@@ -41,7 +41,7 @@ provide a seamless experience. This means CIAM strategies emphasize:
 -   **User Experience (UX):** Every touchpoint, from sign-up to ongoing
     access, should be intuitive and frictionless.
 
--   **Scalability:** CIAM solutions need to handle high volumes of users
+-   **Scalability:** CIAM solutions need to handle high volumes of users,
     without compromising performance.
 
 -   **Privacy and Compliance:** With regulations such as GDPR and CCPA,
