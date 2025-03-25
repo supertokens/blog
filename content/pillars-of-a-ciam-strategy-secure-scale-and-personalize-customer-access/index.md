@@ -124,7 +124,7 @@ without compromising on performance. This means the back-end
 infrastructure should be designed to support rapid growth and high
 concurrency, while maintaining low latency.
 
-#### **Handling SUAs (Shared User Accounts)**
+#### **Handling Shared User Accounts**
 
 Shared user accounts, common in platforms like Netflix or
 family-oriented streaming services, add another layer of complexity. The
