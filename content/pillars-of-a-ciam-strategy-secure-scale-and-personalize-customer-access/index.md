@@ -17,7 +17,7 @@ post, we break down the five essential pillars of a winning CIAM
 strategy and explore how to implement them with cutting-edge tools like
 [SuperTokens](https://supertokens.com/).
 
-## **What is CIAM & Why Does It Matter?**
+## **What is CIAM and Why Does It Matter?**
 
 At its core, CIAM is the process of securely managing and authenticating
 customer identities at scale. Unlike traditional Identity and Access
