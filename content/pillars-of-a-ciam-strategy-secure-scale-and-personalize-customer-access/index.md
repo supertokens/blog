@@ -90,7 +90,7 @@ safeguard access without slowing down the customer journey.
 2.  **Adaptive Multi-Factor Authentication (MFA):** Rather than applying
     the same level of scrutiny to every login attempt, adaptive MFA
     uses contextual data &mdash; like device information and login
-    behavior---to determine the appropriate level of verification.
+    behavior &mdash; to determine the appropriate level of verification.
     This approach reduces friction for low-risk activities while
     tightening security for suspicious logins.
 
