@@ -22,7 +22,7 @@ strategy and explore how to implement them with cutting-edge tools like
 At its core, CIAM is the process of securely managing and authenticating
 customer identities at scale. Unlike traditional Identity and Access
 Management (IAM) &mdash; which primarily focuses on employee or internal user
-access---CIAM is tailored for consumer interactions across web, mobile,
+access &mdash; CIAM is tailored for consumer interactions across web, mobile,
 and IoT environments. It encompasses everything from registration and
 authentication to consent management and customer data privacy.
 
