@@ -192,7 +192,7 @@ right users, at the right time.
 
 Stripe uses OAuth 2.0 to manage access to customer data across
 third-party applications. This system enables external partners to
-securely integrate with Stripe's payment infrastructure without
+integrate with Stripe's payment infrastructure securely, without
 compromising customer privacy or data security.
 
 ### **Pillar 4: Privacy, Compliance & Customer Data Protection**
