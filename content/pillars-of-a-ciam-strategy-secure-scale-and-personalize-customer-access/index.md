@@ -166,7 +166,7 @@ where robust access control and authorization come into play.
 
 Authorization ensures that every action a customer takes is within their
 permitted scope. It's about granting the right level of access to the
-right users at the right time.
+right users, at the right time.
 
 #### **Techniques for Secure Authorization**
 
