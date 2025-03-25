@@ -321,7 +321,7 @@ business needs.
 Consider a SaaS platform that needs to cater to users from different
 regions and with varying authentication needs. By integrating
 SuperTokens, the platform can enable passwordless authentication for a
-smoother user experience while also ensuring robust session management
+smoother user experience, while also ensuring robust session management
 and compliance with global data protection regulations.
 
 This not only improves customer retention, but also reduces the risk of
