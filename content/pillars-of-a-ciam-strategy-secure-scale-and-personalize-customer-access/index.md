@@ -234,7 +234,7 @@ fostering trust and transparency.
 Apple's CIAM model is often cited as a gold standard in privacy. With
 its privacy-first approach, Apple ensures that user data is encrypted
 and that customers have clear control over what data is shared. This
-transparency and robust data protection significantly strengthen
+transparency and robust data protection significantly strengthens
 customer trust.
 
 ### **Pillar 5: Unified Customer Identity Across Channels**
