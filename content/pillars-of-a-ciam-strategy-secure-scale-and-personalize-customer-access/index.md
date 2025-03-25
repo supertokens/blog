@@ -66,7 +66,7 @@ A high-performing CIAM strategy is built on five core pillars that
 together ensure security, scalability, and personalization. Let's
 explore each pillar in detail.
 
-### **Pillar 1: Seamless & Secure Authentication**
+### **Pillar 1: Seamless and Secure Authentication**
 
 Authentication is the first line of defense and the starting point of
 any CIAM strategy. The challenge is to balance robust security measures
