@@ -266,7 +266,7 @@ customers, which is crucial for personalization and effective marketing.
     for a seamless user experience across different brands or
     platforms.
 
--   **Centralized vs. Decentralized Models:** Depending on the business
+-   **Centralized vs. Decentralized Models:** Depending on business
     needs, companies can choose to implement centralized CIAM systems
     that consolidate identity data in one repository, or decentralized
     models where data remains at the channel level but is synchronized
