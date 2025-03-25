@@ -91,7 +91,7 @@ safeguard access without slowing down the customer journey.
     the same level of scrutiny to every login attempt, adaptive MFA
     uses contextual data &mdash; like device information and login
     behavior &mdash; to determine the appropriate level of verification.
-    This approach reduces friction for low-risk activities while
+    This approach reduces friction for low-risk activities, while
     tightening security for suspicious logins.
 
 3.  **Risk-Based Authentication:** By continuously analyzing factors
