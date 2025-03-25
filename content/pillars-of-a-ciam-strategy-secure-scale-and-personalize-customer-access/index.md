@@ -218,7 +218,7 @@ fostering trust and transparency.
 
 #### **Security Measures for Data Protection**
 
--   **Encryption:** Encrypt customer data both in transit (using
+-   **Encryption:** Encrypt customer data both in transit (by using
     TLS/SSL) and at rest to protect against data breaches.
 
 -   **Tokenization:** Replace sensitive data elements with non-sensitive
