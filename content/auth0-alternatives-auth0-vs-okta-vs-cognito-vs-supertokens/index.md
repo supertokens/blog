@@ -1,6 +1,6 @@
 ---
 title: "Top Auth0 alternatives: Auth0 vs Okta vs Cognito vs SuperTokens [2024]"
-description: "An in depth review of Auth0 alternatives for 2023: Auth0 vs Okta vs Cognito vs SuperTokens"
+description: "An in depth review of Auth0 alternatives for 2024: Auth0 vs Okta vs Cognito vs SuperTokens"
 date: "2024-07-11"
 cover: "auth_comparison_header.png"
 category: "featured"
@@ -34,15 +34,19 @@ SuperTokens is an open-source authentication solution designed for developers wh
 
 ### Pricing
 
-SuperTokens offers a free open-source version. For managed services, pricing starts at $25 per month for the Pro plan, which includes features like managed hosting, priority support, and custom domain support. Enterprise pricing is available on request and includes additional features such as SLA, dedicated support, and custom SLAs.
+SuperTokens offers a free open-source version with optional paid features like Multi Factor Authentication, Multi-Tenancy and Account Linking. The Managed serice is free for customers with less than 5000 MAUs, post wchich customers will be billed $0.02 per MAU. Enterprise pricing is available on request and includes additional features such as SLA, dedicated support, and custom SLAs.
 
 ### Limitations
 
 - Support for a limited number of backend languages and frameworks.
-- Limited integrations compared to some commercial solutions
+- Limited integrations compared to some enterprise solutions.
+
 
 ### When to Use It
 Use SuperTokens if you need a flexible, open-source solution with strong session management and advanced security features, and are comfortable managing your own infrastructure.
+
+> **Note:**
+> As of 2025, SuperTokens now supports [Unified login](https://supertokens.com/docs/authentication/unified-login/introduction) across multiple domains, [Machine to Machine Authentication](https://supertokens.com/docs/authentication/m2m/introduction) and a suite of [Attack protection features](https://supertokens.com/features/attack-protection-suite), making it suitble for enterprise use cases. 
 
 ## Okta
 ![Okta logo](./okta_logo.png)
@@ -60,7 +64,10 @@ Okta is a comprehensive identity management solution designed for large enterpri
 ### Pricing
 Okta's pricing is tiered:
 - **Workforce Identity**: Starts at $2 per user per month for single sign-on. Advanced features like MFA and lifecycle management are available at higher tiers.
+  - Workforce Identity contracts also have a minimum billing of $1500 anually.
 - **Customer Identity**: Starts at $23 per month for 1,000 MAUs. Advanced features like adaptive MFA and API access management are priced higher.
+
+> **Note:** As of 2025, Okta now redirects users to Auth0 for Customer Identity use cases.
 
 ### Limitations
 - Can be expensive for small businesses
@@ -110,6 +117,8 @@ Cognito offers a free tier with limited usage:
 - **Free Tier**: 50,000 MAUs
 - **Beyond Free Tier**: $0.0055 per MAU, plus additional charges for advanced security features and federation options
 
+> Note: In late 2024, Cognito have revamped their [pricing model](https://news.ycombinator.com/item?id=42250254). They now have 3 different tiers. Lite, Essentials and Plus. This has drummed some conterversy as if you were just using basic email-password authentication and had 50,000 MAUs, your billing would now triple in the new scheme. Although this pricing change seems egregious, Amazon also brought down the costs for the advanced features. 
+
 ### Limitations
 - Tied closely to the AWS ecosystem
 - Limited customization compared to some alternatives
@@ -120,33 +129,33 @@ Use Cognito if you are heavily invested in the AWS ecosystem and need a scalable
 
 ### Overall comparison of authentication providers
 
-| Feature                                             | SuperTokens   | Auth0         | AWS Cognito | Keycloak      | Firebase      |
-|-----------------------------------------------------|---------------|---------------|-------------|---------------|---------------|
-| Pricing                                             | $$ / Free     | $$$$$$        | Free        | $$            | $$            |
-| User Satisfaction                                   | High          | Medium        | Low         | Low           | High          |
-| Ease of UI and backend customizability              | Easy          | Medium        | High        | High          | High          |
-| Size of the company offering services               | Startup       | Enterprise    | Enterprise  | Enterprise    | Enterprise    |
-| Company provided support for free tiers             | High          | Low           | Low         | None          | Medium        |
-| Self hostable                                       | Yes           | Yes           | No          | Yes           | No            |
-| Open Source                                         | Yes           | No            | No          | Yes           | No            |
-| Managed Service                                     | Yes           | Yes           | Yes         | No            | Yes           |
-| Supported Cloud Providers                           | All           | All           | AWS         | All           | GCP           |
-| Compliance (SOC2, GDPR)                             | Yes           | Yes           | Yes         | Self hosted   | Yes           |
-| User management dashboard                           | Yes           | Yes           | Yes         | Yes           | Yes           |
-| Passwordless login (email + phone no)               | Yes           | Yes           | Partial     | Yes           | Yes           |
-| Social and Email Password login                     | Yes           | Yes           | Yes         | Yes           | Yes           |
-| Custom Open ID connector                            | Yes           | Yes           | Yes         | Yes           | Yes           |
-| SAML Login                                          | Yes           | Yes           | Yes         | Yes           | Yes           |
-| Unified login                                       | Partial       | Yes           | Yes         | Yes           | Yes           |
-| External Database                                   | Yes           | Yes           | No          | Yes           | Yes           |
-| SLA guarantees                                      | Yes           | Yes           | Yes         | No            | Not Known     |
-| 2FA / MFA                                           | Yes           | Yes           | Yes         | Yes           | Partial       |
-| Roles and permissions                               | Yes           | Yes           | Yes         | Yes           | Yes           |
-| Web3 login                                          | No            | Yes           | No          | No            | No            |
-| Machine to machine                                  | Partial       | Yes           | Yes         | Yes           | Partial       |
-| Multi tenancy                                       | Yes           | Yes           | Limit to 4  | Yes           | Yes           |
-| Cookie based session management (Out of the box)    | Yes           | No            | No          | No            | No            |
-| Customize Emails and SMS                            | Yes           | Yes           | Partial     | Partial       | Partial       |
+| Feature                                             | SuperTokens   | Auth0         | AWS Cognito | Keycloak      |
+|-----------------------------------------------------|---------------|---------------|-------------|---------------|
+| Pricing                                             | $$ / Free     | $$$$$$        | $$$/ Free        | Free            |
+| User Satisfaction                                   | High          | Medium        | Low         | Low           | 
+| Ease of UI and backend customizability              | Easy          | Medium        | High        | High          |
+| Size of the company offering services               | Startup/Mid Market       | Enterprise    | Enterprise  | Enterprise    |
+| Company provided support for free tiers             | High          | Low           | Low         | None          |
+| Self hostable                                       | Yes           | Yes           | No          | Yes           |
+| Open Source                                         | Yes           | No            | No          | Yes           |
+| Managed Service                                     | Yes           | Yes           | Yes         | No            |
+| Supported Cloud Providers                           | All           | All           | AWS         | All           |
+| Compliance (SOC2, GDPR)                             | Yes           | Yes           | Yes         | Self hosted   |
+| User management dashboard                           | Yes           | Yes           | Yes         | Yes           |
+| Passwordless login (email + phone no)               | Yes           | Yes           | Partial     | Yes           |
+| Social and Email Password login                     | Yes           | Yes           | Yes         | Yes           |
+| Custom Open ID connector                            | Yes           | Yes           | Yes         | Yes           |
+| SAML Login                                          | Yes           | Yes           | Yes         | Yes           |
+| Unified login                                       | Yes      | Yes           | Yes         | Yes           |
+| External Database                                   | Yes           | Yes           | No          | Yes           |
+| SLA guarantees                                      | Yes           | Yes           | Yes         | No            |
+| 2FA / MFA                                           | Yes           | Yes           | Yes         | Yes           |
+| Roles and permissions                               | Yes           | Yes           | Yes         | Yes           |
+| Web3 login                                          | No            | Yes           | No          | No            |
+| Machine to machine                                  | Yes       | Yes           | Yes         | Yes           |
+| Multi tenancy                                       | Yes           | Yes           | Limit to 4  | Yes           |
+| Cookie based session management (Out of the box)    | Yes           | No            | No          | No            |
+| Customize Emails and SMS                            | Yes           | Yes           | Partial     | Partial       |
 
 For more details, you can visit the [SuperTokens Pricing page](https://supertokens.com/pricing#comparison-chart).
 
@@ -160,7 +169,10 @@ Ensure the solution integrates well with your existing tech stack and supports t
 ### Factor 2: Customizability and Control
 Evaluate the level of customization and control you require over the authentication process and user data.
 
-### Factor 3: Pricing and Scalability
+### Factor 3: Migration and Vendor Lock-in
+Priorities change and so do companies. Between price hikes or a catastrophic faliure, there are a number of reasons why you may want to migrate away from an auth solution. Make sure the product you chose does not lock you into the their eco system.
+
+### Factor 4: Pricing and Scalability
 Consider your budget and the solution's ability to scale with your user base and feature requirements.
 
 ## Conclusion
