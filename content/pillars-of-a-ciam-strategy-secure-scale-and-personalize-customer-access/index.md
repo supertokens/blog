@@ -150,7 +150,7 @@ account.
 #### **Example in Action**
 
 Spotify is a great example of scalable user management. Spotify allows
-users to sign in using various methods---whether through email, social
+users to sign in by using various methods &mdash; whether through email, social
 media accounts, or mobile credentials---while also supporting multiple
 profiles under one subscription. This flexibility has enabled Spotify to
 offer a highly personalized experience to millions of users around the
