@@ -109,7 +109,7 @@ seamless. But if an unusual pattern is detected, the system
 automatically introduces extra security steps without burdening every
 customer.
 
-### **Pillar 2: Scalable User Management & SUAs (Shared User Accounts)**
+### **Pillar 2: Scalable User Management and Shared User Accounts**
 
 Managing millions of customer identities in a fast-growing digital
 ecosystem requires both scalability and smart user management
