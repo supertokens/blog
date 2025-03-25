@@ -26,7 +26,7 @@ access &mdash; CIAM is tailored for consumer interactions across web, mobile,
 and IoT environments. It encompasses everything from registration and
 authentication, to consent management and customer data privacy.
 
-**CIAM application reference architecture**
+**CIAM Application Reference Architecture**
 
 ![CIAM application reference architecture](./CIAM-application-reference-architecture.png)
 
