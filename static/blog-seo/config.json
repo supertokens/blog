@@ -3393,5 +3393,28 @@
         ],
         "title": "Metadata in Next.js: Enhancing SEO and User Experience",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/nextjs-metadata\"\n            },\n            \"headline\": \"Learn how to effectively manage metadata in Next.js to boost SEO and improve user engagement through static and dynamic configurations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/metadata-in-nextjs.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/sim-swapping",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn about SIM swapping scams, their impact on personal security, and effective strategies to safeguard your mobile identity.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"SIM Swapping Is Hijacking Your User Accounts: How to Shut It Down\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/sim-swapping\" />",
+            "<meta property=\"og:description\" content=\"Learn about SIM swapping scams, their impact on personal security, and effective strategies to safeguard your mobile identity.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/sim-swapping.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn about SIM swapping scams, their impact on personal security, and effective strategies to safeguard your mobile identity.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/sim-swapping\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/sim-swapping.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/sim-swapping\">"
+        ],
+        "title": "SIM Swapping Is Hijacking Your User Accounts: How to Shut It Down",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/sim-swapping\"\n            },\n            \"headline\": \"Learn about SIM swapping scams, their impact on personal security, and effective strategies to safeguard your mobile identity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/sim-swapping.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
