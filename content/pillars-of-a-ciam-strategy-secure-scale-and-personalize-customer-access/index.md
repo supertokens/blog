@@ -380,7 +380,7 @@ experiences, driving growth and competitive differentiation.
 
 A strong CIAM strategy is essential in today's digital landscape for
 secure, scalable, and personalized customer experiences. By focusing on
-five pillars---authentication, user management, access control, privacy,
+five pillars &mdash; authentication, user management, access control, privacy,
 and unified identity---businesses can protect data and boost engagement.
 Solutions like SuperTokens further enhance implementation with
 customizable options. Investing in CIAM not only improves security and
