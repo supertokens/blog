@@ -15,7 +15,7 @@ multiple channels. A well-crafted CIAM strategy reduces login headaches,
 prevents security breaches, and keeps regulatory risks at bay. In this
 post, we break down the five essential pillars of a winning CIAM
 strategy and explore how to implement them with cutting-edge tools like
-[SuperTokens.](https://supertokens.com/)
+[SuperTokens](https://supertokens.com/).
 
 ## **What is CIAM & Why Does It Matter?**
 
