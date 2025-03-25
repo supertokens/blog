@@ -277,7 +277,7 @@ customers, which is crucial for personalization and effective marketing.
 Microsoft provides a stellar example of unified CIAM. With a single
 identity that works across Office 365, Teams, and Azure, Microsoft
 ensures that users enjoy a seamless experience regardless of the
-application. This unified approach not only simplifies access but also
+application. This unified approach not only simplifies access, but also
 enables personalized services based on comprehensive customer profiles.
 
 ## **Implementing CIAM with SuperTokens**
