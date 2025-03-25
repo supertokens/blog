@@ -134,7 +134,7 @@ account.
 
 #### **Best Practices for User Identity Storage**
 
--   **Federated Identity:** Allowing customers to sign in with trusted
+-   **Federated Identity:** Allowing customers to sign in by using trusted
     providers like Google, Apple, or enterprise Single Sign-On (SSO)
     streamlines the login process and enhances security. Federated
     identity reduces the burden on your system to manage and secure
