@@ -126,7 +126,7 @@ concurrency, while maintaining low latency.
 
 #### **Handling Shared User Accounts**
 
-Shared user accounts, common in platforms like Netflix or
+SUAs, common in platforms like Netflix or
 family-oriented streaming services, add another layer of complexity. The
 CIAM system must differentiate between individual profiles within a
 shared account while maintaining the overall security of the master
