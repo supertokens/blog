@@ -294,7 +294,7 @@ play.
 SuperTokens is a secure, scalable, open-source CIAM platform that offers
 an excellent alternative to proprietary systems. It provides the
 building blocks needed to implement the five pillars of a winning CIAM
-strategy while allowing for extensive customization to meet unique
+strategy, while allowing for extensive customization to meet unique
 business needs.
 
 ### **Key Features of SuperTokens for CIAM**
