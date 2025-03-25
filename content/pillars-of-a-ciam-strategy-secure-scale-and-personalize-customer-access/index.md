@@ -337,7 +337,7 @@ in mobile experiences. All of which were key for ArenaClub.
 ![Impacts of CIAM Framework](./Impacts-of-CIAM-Framework.png)
 
 Investing in a strong CIAM strategy isn't just about preventing security
-breaches---it's about driving business growth. Here's how a robust CIAM
+breaches &mdash; it's about driving business growth. Here's how a robust CIAM
 framework impacts your bottom line:
 
 ### **Improved Security and Reduced Fraud**
