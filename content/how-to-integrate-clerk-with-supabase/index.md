@@ -141,3 +141,92 @@ You can [**customize the number of times a sign-in can be attempted before the a
 ![Supabase homepage screenshot](image-1.png)
 
 Supabase is an **open-source backend platform** that makes it easy for developers to build powerful applications. It provides a **PostgreSQL database**, **real-time capabilities**, and **auto-generated API**s, so you can focus on your app without worrying about backend complexity.
+
+## Integrating Supabase with Clerk 
+The Clerk integration uses the authorization logic available in Supabase through PostgreSQL Row Level Security (RLS) policies.
+
+**Prerequisites:**
+- Have a Supabase account
+- Have a database project set up 
+
+### How the Integration Works 
+RLS works by validating database queries according to the restrictions defined in the RLS policies applied to the table.
+
+Users should only be able to access data that belongs to them. 
+
+**In this guide, you will:**
+- Create a function in Supabase to parse the Clerk user ID from the authentication token. 
+- Create a `user_id` columns that defaults to the Clerk user's ID when new records are created. 
+- Create policies to restrict what data can be read and inserted. 
+- Use the Clerk Supabase integration helper in your code to authenticate with Supabase and execute queries. 
+
+#### Step 1: Create your project
+
+![alt text](image-2.png)
+
+- Choose a name for your project. If you want to follow along with this guide name it Book Wishlist -- which is what this app would be. 
+- For the password we want something strong so that the database is protected. Supabase has a Generate a password button. Click that button to generate a random password and make sure to save your password somewhere secure. Ideally in a password manager. 
+- You can leave the region as is, or pick a region that is closer to where you are (or where your users would be). In this example I am picking West US. 
+- Go ahead and click the Create new project button. 
+
+> Your project will have its own dedicated instance and full Postgres database. An API will be set up so you can easily interact with your new database.
+
+When you first create the project you will see a loading Project Status while your project is still being set up. But 
+
+When it is done -- in about a minute or so -- you should see all the checks come out healthy like so: 
+
+![alt text](image-5.png)
+
+Now your project has all been set up with its own Postgres database and its own API all set up and ready for you to use. How exciting!
+
+Take a minute to explore what you see. If this is your first time seeing this dashboard it's normal to feel a bit overwhelmed because it's new. Supabase's dashboard however looks pretty clean. 
+
+Now you can get started by building out your database. For the sake of this guide we will keep it simple. 
+You have three options regarding your database: 
+- A visual table editor if you prefer a visual approach to building out your database 
+- a SQL editor if writing SQL queries is your jam. 
+- A link where you can learn about teh Postgres database so you are not lost, or if you are, you can find all the information you need. 
+
+![alt text](image-3.png)
+
+If you scroll further down, Supabase shows you some of the other products they offer -- **Authentication**, **Storage**, **Edge Functions**, **Real Time** -- but we are just using the database functionality here because we are integrating Clerk for the authentication part. 
+
+If you scroll a little further you will see the section **Connecting to your new project**, wehre you will see the information on your Project API -- Project URL with an endpoint for querying and managing your database, an API Key, and a code sample for importing the Supabase client and setting it up in your chosen language. Here we are using javascript: 
+
+```javascript
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = 'https://qrgtntmikigtrzznravc.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
+```
+***
+
+#### Step 2: Create a `books` Table
+- In your Supabase dashboard, go to the Table Editor tab.
+- Click New Table and configure it as follows:
+
+| Column Name | Data Type | Constraints |
+|--------------|------------|--------------|
+| `id`          | UUID        | Primary key (default UUID generation) |
+| `title`        | Text        | Not null |
+| `author`       | Text        | Optional |
+| `status`       | Text        | Default: `"Wishlist"` |
+| `user_id`      | UUID        | Foreign key to `auth.users` |
+
+- For the `user_id` field:
+  - In the **Foreign Key** dropdown, select `auth.users` &rarr; `id`.
+
+#### Step 3: Add Row-Level Security (RLS)
+Supabase requires RLS for secure data handling. Here's how to enable it:
+
+- Go to the **Table Editor** tab and open the `books` table.
+- Click on the **RLS** tab.
+- Click **Enable RLS**.
+- Add a new policy:
+  - **Name:** `User can access their own books`
+  - **Target Roles:** `authenticated`
+  - **Expression:** 
+  ```sql
+  user_id = auth.uid()
+  ```
