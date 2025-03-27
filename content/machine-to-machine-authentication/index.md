@@ -26,27 +26,27 @@ toHeading: 3
 ## What is a Machine? 
 In machine-to-machine communication, the term "machine" covers a lot of ground. It can mean servers, applications, APIs, Internet of Things (IoT) devices, or even cronjobs.
 
-For this article, we're focusing on authentication between services  &mdash; not IoT gadgets like robots or smart home devices.
+For this article, we're focusing on authentication between services &mdash; not IoT gadgets like robots or smart home devices.
 
 ## M2M Communication
-Simply put, M2M communication is the automated exchange of information between machines  &mdash; no human involvement required. ❌🧑
+Simply put, M2M communication is the automated exchange of information between machines &mdash; no human involvement required. ❌🧑
 
 ### Examples of M2M Communication: 
 - ☁️ A cloud service retrieving data from a database
 - 🔄 An API fetching information from another service 
 - 📡 Two or more IoT devices syncing their status
 
-Unlike human-to-machine communication (like logging into a website with a username and password 💻), where a **person's** identity needs to be verified, M2M communication requires authentication methods that confirm the **identity of a machine** instead.
+Unlike human-to-machine communication (like logging into a website with a username and password 💻), where a **person's** identity needs to be verified, M2M communication requires authentication methods that confirm the **identity of a machine**, instead.
 
-## M2M Authentication?
+## M2M Authentication
 
 Machine-to-machine (M2M) authentication is the process of verifying the identity of a machine that’s trying to communicate with another machine. While this sounds straightforward, it covers a broad range of scenarios.
 
-M2M communication  &mdash; and therefore authentication  &mdash; can happen in both hardware and software.
+M2M communication &mdash; and therefore authentication &mdash; can happen in both hardware and software.
 
-Take the Mars Rover, for example. This iconic piece of hardware needs to communicate securely with other systems to send data back to Earth  &mdash; and those systems must authenticate each other to ensure the data isn't intercepted or altered.  
+Take the Mars Rover, for example. This iconic piece of hardware needs to communicate securely with other systems to send data back to Earth &mdash; and those systems must authenticate each other to ensure the data isn't intercepted or altered.  
 
-In software, M2M communication happens constantly. Services exchange data, make requests, and pass information back and forth  &mdash; and this needs to happen securely. Authenticating these services ensures sensitive data doesn't end up in the wrong hands. 🦾 
+In software, M2M communication happens constantly. Services exchange data, make requests, and pass information back and forth &mdash; and this needs to happen securely. Authenticating these services ensures sensitive data doesn't end up in the wrong hands. 🦾 
 
 **Common methods include:**
 - API keys
@@ -59,11 +59,11 @@ In software, M2M communication happens constantly. Services exchange data, make 
 | Requires human interaction (e.g., login form, password) | Fully automated (no human input) |
 | Uses username/password or social logins (OAuth Authorization Code Flow) | Uses **client ID and secret** or service accounts |
 | Access is tied to a user session | Access is tied to a **machine identity** |
-| Example: A user logs into a social media site and gets a session token | Example: A backend service calls an API using a client credentials token |
+| Example: A user logs into a social media site and gets a session token | Example: A backend service calls an API by using a client credentials token |
 
 By ensuring machines can confidently identify each other, M2M authentication plays a crucial role in keeping modern digital ecosystems secure.
 
-## M2M authentication vs M2M authorization
+## M2M Authentication vs M2M Authorization
 Developers often mix up M2M authentication and M2M authorization, but they’re not the same. Here's a simple way to remember the difference:
 
 - **M2M authentication** verifies *who* the machine is.
@@ -103,7 +103,7 @@ M2M authentication often uses the [**Client Credentials Grant Flow**](https://da
 The **Client Credentials Grant Flow** involves an application exchanging its application credentials, such as client ID and client secret, for an access token. This flow is ideal for M2M applications where the system needs to authenticate and authorize the application itself rather than a user.
 
 Here's how it works:
-1. The **Client** authenticates with the **Authorization Server** using its **Client ID** and **Client Secret**.
+1. The **Client** authenticates with the **Authorization Server** by using its **Client ID** and **Client Secret**.
 2. The **Authorization Server** verifies the credentials.
 3. If valid, the **Authorization Server** issues an **OAuth2 Access Token**.
 4. The **Client** includes the **Access Token** in its requests to the **Resource Server**.
@@ -136,7 +136,7 @@ SuperTokens recommends securing your machine-to-machine communication with **OAu
 
 1. **Service A** reaches out to the **SuperTokens Backend SDK** to get an **OAuth Access Token**.
 2. The **SuperTokens Backend SDK** responds back to **Service A** with an **OAuth2 Access Token**.
-3. **Service A** then communicates with **Service B** using the **OAuth Access Token**.
+3. **Service A** then communicates with **Service B** by using the **OAuth Access Token**.
 4. **Service B** talks to the **SuperTokens Core Service** to validate the **OAuth Access Token**.
 5. If the **OAuth Access Token** is valid, then **Service B** returns the requested resource. 
 
@@ -295,7 +295,7 @@ This checks:
 - **stt (SuperTokens Token Type)** &mdash; Ensures it's an OAuth2 token.
 - **scp (Scope)** &mdash; Confirms the token has the required permission.
 
-### 🌍 Step 7: Example of Two Services Communicating Using M2M
+### 🌍 Step 7: Example of Two Services Communicating By Using M2M
 Imagine you have two services:
 
 - Task Service &mdash; Creates tasks.
@@ -362,13 +362,13 @@ app.post('/events', async (req, res) => {
 
 ## Conclusion 
 
-**Machine-to-machine (M2M) authentication** is a way for services to securely communicate without human involvement. Instead of a person logging in, one service presents a token or key to prove its identity to another service.
+**Machine-to-machine (M2M) authentication** is a way for services to communicate securely, without human involvement. Instead of a person logging in, one service presents a token or key to prove its identity to another service.
 
 M2M authentication is especially important for:
 - ✅ **Microservices** that need to share data securely.
 - ✅ **Automated systems** like order processing, data syncing, or scheduled tasks.
 - ✅ **API integrations** that connect external services safely.
 
-By implementing M2M authentication, you ensure that your services can trust one another, reducing the risk of unauthorized access and improving overall system security.
+By implementing M2M authentication, you ensure that your services can trust one another, thereby reducing the risk of unauthorized access and improving overall system security.
 
-By using M2M authentication, your services can trust each other, reducing security risks and keeping data safe. Whether you're working with microservices, internal APIs, or third-party integrations, this method offers a solid, lightweight solution for secure communication.
+Whether you're working with microservices, internal APIs, or third-party integrations, this method offers a solid, lightweight solution for secure communication.
