@@ -325,5 +325,7 @@
     },
     {
         "location": "https://supertokens.com/blog/sim-swapping"
+    }, {
+        "location":"https://supertokens.com/blog/auth0-pricing-the-complete-guide"
     }
 ]
