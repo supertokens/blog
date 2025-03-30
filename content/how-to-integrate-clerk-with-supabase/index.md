@@ -11,75 +11,330 @@ author: "Maria Shimkovska"
 
 Combining Supabase with Clerk allows you to take advantage of both Supabase's powerful database capabilities and Clerk's authentication features, prebuilt components, and webhooks. In this guide we are going over the fundamentals of Clerk and Supabase, show you how to use them together to build an application, discuss the pros and cons of using Clerk for your authentication needs, and then talk about an exciting alternative. 
 
-## What is Clerk? 
+## 🧩 What is Clerk? 
 
-![Clerk homemade screenshot](image.png)
+**[Will ask nevil for an image here for Clerk]**
 
-[**Clerk**](https://clerk.com/) is a **platform that makes user management easy** for developers. Instead of building authentication from scratch, you can use Clerk's ready-made sign-in and **user management UI components**, saving you time and giving your users a smooth experience.
-
-Clerk provides a set of tools that make it easy to add authentication and multi-tenancy to your app. You can customize how the login and signup forms look, control the entire sign-in process to match your needs, and create powerful SaaS applications.
-
-Clerk provides a few integration you can use it with, one of which is Next.js for their fullstack option: 
-- For the **frontend** you can pick from pretty popular options like React, Vue, JavaScript, and even for mobile apps using Expo and iOS. 
-- For the **backend** it's pretty limited to Express and Fastify. 
-
-### 💰 Pricing 
-Clerk is **free for the first 10,000 monthly active users** and **100 monthly active organizations**.
-
-### 🌟 Overview of Clerk 
-**Setting up Clerk is done through the Clerk Dashboard.** 
-
-The Clerk Dashboard is where you as the app owner and developer can **manage the app's settings, users, and organizations.** 
-
-For example if you want to :
-- Enable other authentication methods like phone number authentication, MFA authentication, social authentication like logging in with Google
-- Delete users
-- Create organizations
-
-...you can do it all from the **Clerk Dashboard.**
-
-***
-
-#### List of Clerk Prebuilt Components 
-Clerk has a comprehensive suite of components designed to seamlessly integrate authentication and multi-tenancy into your application. 
-
-#### Clerk Authentication Security 
-These features do not cost extra — they are included for every application by default.
-
-##### Vulnerability Disclosure Policy 
-Researchers must avoid privacy violations, user disruptions, and data destruction. Testing should stay within defined scope, and vulnerabilities should be reported via designated channels. Discovered issues must remain confidential for 90 days.
-
-##### XSS Leak Protection
-Clerk mitigates XSS risks by using HttpOnly cookies for authenticated requests, which are inaccessible to JavaScript, preventing token theft during an attack. For maximum security, avoid storing session tokens in JavaScript-accessible locations like localStorage or non-HttpOnly cookies.
-
-##### CSRF Protection
-Clerk mitigates CSRF risks by setting the SameSite flag on session cookies to Lax, which blocks cookies from being sent during most cross-site requests while still ensuring a smooth user experience.
-
-- **Strict** offers stronger protection but may sign users out when they visit from external links.
-- **Lax** is the default in modern browsers and balances security with usability.
-- **None** allows all requests but is less secure.
-
-Although Clerk handles CSRF protection, developers should ensure that navigation actions never trigger backend mutations to avoid accidental vulnerabilities.
-
-##### Fixation Protection
-Clerk resets the session token each time a user signs in or out of a browser. When the session is reset, the old session token is invalidated and can no longer be used for authentication.
-
-##### Password Protection and Rules
-Clerk contracts with [**HaveIBeenPwned**](https://haveibeenpwned.com/) to compare prospective passwords against its corpus of over 10 billion compromised credentials.
-
-##### Brute Force Protection and User Account Locking
-Clerk applications will lock user accounts after 100 failed sign-in attempts and require a one hour cool down period before anyone can attempt to sign into that account again. (While 100 attempts may seem like a lot to a human, it is very easy to reach this maximum for a bot!)
-
-You can [**customize the number of times a sign-in can be attempted before the account is locked, and how long lockouts last**](https://clerk.com/docs/security/customize-user-lockout).
+[**Clerk**](https://clerk.com/) is a platform that simplifies user management for developers by providing ready-made sign-in and user management UI components, saving time and enhancing the user experience. It offers tools to easily add authentication and multi-tenancy to your app, with customizable login and signup forms, giving you full control over the sign-in process to build powerful SaaS applications.
 
 ## What is Supabase? 
 
-![Supabase homepage screenshot](image-1.png)
+**[Will ask nevil for an image here for Supabase]**
 
 Supabase is an **open-source backend platform** that makes it easy for developers to build powerful applications. It provides a **PostgreSQL database**, **real-time capabilities**, and **auto-generated API**s, so you can focus on your app without worrying about backend complexity.
 
-## Integrating Supabase with Clerk 
+## Setting Up Clerk With Your Application
+**Steps:** 
+1. Set up your Clerk account
+2. Create a new application from your Clerk dashboard
+  - Choose an application name (e.g., Book Wishlist)
+  - Choose your sign in option (e.g., check email box and Google box)
+  - Click **Create application** button &rarr; This will customize and create your **`<SignIn />`** drop-in component
+
+![alt text](image.png)
+
+3. Take a breather and explore the dashboard -- especially if this is your first time seeing it. 
+4. In the **Overview** tab, select Next.js and follow the setup steps to add Clerk and sign up your first user.
+5. Follow the steps in the guide: 
+  - **Install `@clerk/next.js`**: Run `npm install @clerk/nextjs`.  
+  - **Set up API keys**: Add your Clerk keys to `.env`.  
+  - **Update/create `middleware.ts`**: Place it in the root or `src/` directory.  
+  - **Add `ClerkProvider`**: Wrap your app with `ClerkProvider` in `layout.tsx` for global auth access.  
+
+```javascript{2-9, 33, 37-43, 48}
+import { type Metadata } from 'next'
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs'
+import { Geist, Geist_Mono } from 'next/font/google'
+import './globals.css'
+
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+})
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+})
+
+export const metadata: Metadata = {
+  title: 'Clerk Next.js Quickstart',
+  description: 'Generated by create next app',
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <ClerkProvider> 
+      <html lang="en">
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          <header className="flex justify-end items-center p-4 gap-4 h-16">
+            <SignedOut>
+              <SignInButton />
+              <SignUpButton />
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+          </header>
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
+  )
+}
+```
+6. **Create your first user:** Run your project using `npm run dev` and then visit your app's homepage at `http://localhost:3000` to sign up your first user. 🎉 🥳 🎊
+
+![alt text](image-6.png)
+
+7. Replace the code in the page.tsx file with the one below. This will be the wishlist of each user. And each wishlist will be unique and only visible to the authenticated user. 
+
+```javascript
+"use client";
+import { useState } from "react";
+import styles from "./page.module.css";
+
+interface Book {
+  title: string;
+  author: string;
+}
+
+export default function Home() {
+  const [wishlist, setWishlist] = useState<Book[]>([]);
+  const [bookTitle, setBookTitle] = useState<string>("");
+  const [bookAuthor, setBookAuthor] = useState<string>("");
+
+  const addBook = () => {
+    if (bookTitle.trim() !== "" && bookAuthor.trim() !== "") {
+      setWishlist([...wishlist, { title: bookTitle, author: bookAuthor }]);
+      setBookTitle("");
+      setBookAuthor("");
+    }
+  };
+
+  // Handle pressing the Enter key
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      addBook();
+    }
+  };
+  
+  return (
+    <div className={styles.page}>
+      <main className={styles.main}>
+        <h1>📚 My Wishlist</h1>
+        
+        <div>
+          <input
+            type="text"
+            value={bookTitle}
+            onChange={(e) => setBookTitle(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Enter book title"
+          />
+          <input
+            type="text"
+            value={bookAuthor}
+            onChange={(e) => setBookAuthor(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Enter author name"
+          />
+          <button onClick={addBook}>Add</button>
+        </div>
+
+        {wishlist.length > 0 ? (
+          <ol>
+            {wishlist.map((book, index) => (
+              <li key={index}>
+                <strong>{book.title}</strong> by {book.author}
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p>No books in wishlist yet.</p>
+        )}
+      </main>
+    </div>
+  );
+}
+```
+
+Now when you go to localhost:3000 you will see the following (if you are authenticated)
+
+![alt text](image-7.png)
+
+You can now add a book title and the author in the list, but the data will not persist. As soon as you reload the page or sign out, all the data will be lost. We need a database to be able to save it to and here is where we will integrate Supabase with Clerk so our users can save their lists even if they log out or refresh the data. 
+
+## Create your books table in Supabase 
+To create a Supabase table for a book wishlist that associates books with a user, you'll need to do a few things:
+1. Create a table for storing the wishlist data (book titles, authors, and any additional information).
+2. Ensure the table is associated with the user so that each user can have their own wishlist.
+3. Use Row Level Security (RLS) policies to restrict access based on the authenticated user.
+
+### 1. Create the Wishlist Table
+
+| Column Name   | Description                                                                 |
+|---------------|-----------------------------------------------------------------------------|
+| `id`          | A primary key to uniquely identify each wishlist item.                       |
+| `user_id`     | A foreign key referencing `auth.users(id)` from Supabase’s authentication system, connecting each wishlist item to a specific user. |
+| `title`       | The book's title.                                                            |
+| `author`      | The book's author.                                                           |
+| `created_at`  | Timestamp for when the wishlist item was added.                              |
+| `updated_at`  | Timestamp for when the wishlist item was last updated.                       |
+
+SQL script to create the wishlist table:
+
+```sql 
+-- Create the wishlist table
+create table wishlist (
+  id serial primary key,                 -- Unique identifier for each wishlist item
+  user_id uuid references auth.users(id), -- User associated with the wishlist item (foreign key)
+  title text not null,                   -- Title of the book
+  author text not null,                  -- Author of the book
+  created_at timestamptz default now(),   -- Timestamp of when the book was added
+  updated_at timestamptz default now()    -- Timestamp for when the wishlist entry was updated
+);
+
+-- Enable Row Level Security (RLS)
+alter table wishlist enable row level security;
+
+-- Create a policy to allow authenticated users to only access their own wishlist
+create policy "Users can insert their wishlist items" 
+  on wishlist
+  for insert
+  to authenticated
+  with check (user_id = auth.uid());
+
+create policy "Users can select their wishlist items" 
+  on wishlist
+  for select
+  to authenticated
+  using (user_id = auth.uid());
+
+create policy "Users can update their wishlist items" 
+  on wishlist
+  for update
+  to authenticated
+  using (user_id = auth.uid())
+  with check (user_id = auth.uid());
+
+create policy "Users can delete their wishlist items" 
+  on wishlist
+  for delete
+  to authenticated
+  using (user_id = auth.uid());
+```
+
+### 2. Enabling RLS in Supabase
+To enable RLS (Row Level Security) in Supabase:
+1. Go to your Supabase project.
+2. Navigate to the SQL Editor.
+3. Run the SQL script to create the table and apply the RLS policies.
+
+### 3. Using the Wishlist Table in Your App
+Once the table is created, you can interact with it using the Supabase client in your Next.js app.
+
+Here’s an example of how you can use the Supabase client to fetch, add, and delete wishlist items based on the authenticated user.
+
+#### Fetch Wishlist Data: 
+```ts
+// /src/app/api/getWishlist.ts
+import { NextApiRequest, NextApiResponse } from "next";
+import supabase from "../../lib/supabase"; // Import your Supabase client
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { data, error } = await supabase
+    .from("wishlist")
+    .select("*")
+    .eq("user_id", req.user.id); // Assuming user.id is set from authentication
+  
+  if (error) {
+    return res.status(500).json({ error: error.message });
+  }
+
+  res.status(200).json(data);
+}
+```
+
+#### Add a book to wishlist 
+```ts
+// /src/app/api/addBook.ts
+import { NextApiRequest, NextApiResponse } from "next";
+import supabase from "../../lib/supabase"; // Import your Supabase client
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { title, author } = req.body; // Getting book details from the request body
+  
+  // Assuming user ID is coming from the authenticated session
+  const userId = req.user.id; 
+
+  const { data, error } = await supabase
+    .from("wishlist")
+    .insert([{ user_id: userId, title, author }]);
+
+  if (error) {
+    return res.status(500).json({ error: error.message });
+  }
+
+  res.status(200).json(data);
+}
+```
+
+### 4. Authenticate the User
+Make sure you authenticate the user with Clerk (or any other authentication system) and pass the authenticated user's ID when interacting with the wishlist.
+
+For example, in an API route, you can extract the user ID from the Clerk session token to ensure the user is authorized to modify their wishlist.
+
+**Final Notes:**
+The auth.users table in Supabase contains all user information (such as email and user ID). This ensures each wishlist item is linked to the correct user.
+
+You may also want to adjust the policies depending on whether you want users to be able to update or delete their wishlist items, or if you want to include additional fields like status or rating for each book.
+
+## Use Clerk with your Supabase project
+This guide covers the new Supabase integration way. From April 1, 2025, the old way was deprecated and this is how Supabase handles Clerk integration now. We will go over it in this section, but if you want to read about it from their documentation, [**you can do so here**](https://supabase.com/docs/guides/auth/third-party/clerk).
+
+Steps: 
+1. Go to https://dashboard.clerk.com/setup/supabase and activate the integration. 
+2. This will give you a Clerk domain which you will need to copy into your Supabase third-party auth settings. 
+3. Go to Authentication &rarr; Sign In/Up Third Party Auth and click **Add provider** to add the Clerk domain you just copied.
+4. Click **Create connection** (may take a little time so just wait it out.) This step tells Supabase that Clerk will be an external authentication provider. Users who log in via Clerk will be authenticated and recognized by Supabase.
+5. Setup the Supabase client library 
+
+In your lib folder create a supabase.ts file and paste the following code: 
+
+```typescript 
+import { createClient } from '@supabase/supabase-js'
+
+// Create the Supabase client
+const supabase = createClient('https://<supabase-project>.supabase.co', 'SUPABASE_ANON_KEY', {
+  accessToken: () => {
+
+    // Clerk's session token is passed here, which includes the user's authentication details
+    return Clerk.session?.getToken()
+  },
+})
+```
+* `<supabase-project>`: Replace this with your actual Supabase project URL.
+
+* `SUPABASE_ANON_KEY`: Replace this with your Supabase anon key (found in the project settings).
+
+* `Clerk.session?.getToken()`: This retrieves the user's session token from Clerk, which will be used for authentication when interacting with Supabase.
+
 The Clerk integration uses the authorization logic available in Supabase through PostgreSQL Row Level Security (RLS) policies.
+
+**Row-Level Security (RLS)** is a way to secure access to your database by ensuring that users can only see or modify rows of data that they’re allowed to. In this case, you're using Clerk's JWT claims to define rules for data access.
+
 
 **Prerequisites:**
 - Have a Supabase account
@@ -184,9 +439,11 @@ VALUES
 ***
 
 ### Connecting Clerk and Supabase 
-You'll likely want to sync authenticated users in Clerk with records in Supabase:
-- Use Clerk's webhooks to listen for user creation events and insert the user into Supabase.
-- Alternatively, you can create a middleware in Next.js that ensures authenticated users exist in your Supabase tables.
+Steps: 
+- In your **Clerk dashboard** go to **Configure**.
+- Under **Session management** go to **JWT templates**.
+- Click **New template** and choose **Supabase**.
+
 
 #### User Authentication Flow
 - Set up Clerk's **`SignIn`** and **`SignUp`** components.
@@ -451,3 +708,8 @@ npx create-supertokens-app@latest --frontend=next --recipe=emailpassword
 
 ![alt text](image-4.png)
 
+## Sources: 
+* [**Open Source Auth with login and secure sessions**](https://supabase.com/partners/integrations/supertokens)
+* [**Clerk and Supabase**](https://supabase.com/partners/integrations/clerk)
+* [**Integrate Supabase with Clerk**](https://clerk.com/docs/integrations/databases/supabase)
+* [**JavaScript Client Library**](https://supabase.com/docs/reference/javascript/introduction)
