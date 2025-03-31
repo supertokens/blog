@@ -306,6 +306,9 @@
         "location": "https://supertokens.com/blog/what-is-passwordless-authentication"
     },
     {
+        "location": "https://supertokens.com/blog/webhook-vs-api"
+    },
+    {
         "location": "https://supertokens.com/blog/multi-tenant-architecture"
     },
     {
@@ -319,5 +322,8 @@
     },
     {
         "location": "https://supertokens.com/blog/nextjs-metadata"
+    },
+    {
+        "location": "https://supertokens.com/blog/sim-swapping"
     }
 ]
