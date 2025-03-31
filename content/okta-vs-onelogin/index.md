@@ -98,6 +98,9 @@ Both Okta and OneLogin provide extensive pre-built integrations. Based on their 
 Both provide solid protection, but the right choice may depend on your team's specific security needs.
 
 ### Pricing Structure
+
+**Disclaimer:** The pricing information provided in this article is accurate as of the date of publication. Prices and plan details may change over time, so we recommend checking the official websites of Okta and OneLogin for the most up-to-date information.
+
 ***
 #### Okta Pricing
 
