@@ -225,6 +225,9 @@
         "location": "https://supertokens.com/blog/multi-factor-authentication-examples"
     },
     {
+        "location": "https://supertokens.com/blog/react-user-authentication"
+    },
+    {
         "location": "https://supertokens.com/blog/idp-auth"
     },
     {
@@ -309,6 +312,9 @@
         "location": "https://supertokens.com/blog/what-is-passwordless-authentication"
     },
     {
+        "location": "https://supertokens.com/blog/webhook-vs-api"
+    },
+    {
         "location": "https://supertokens.com/blog/multi-tenant-architecture"
     },
     {
@@ -319,6 +325,13 @@
     },
     {
         "location": "https://supertokens.com/blog/top-8-identity-management-solutions-for-developers-and-businesses"
-
+    },
+    {
+        "location": "https://supertokens.com/blog/nextjs-metadata"
+    },
+    {
+        "location": "https://supertokens.com/blog/sim-swapping"
+    }, {
+        "location":"https://supertokens.com/blog/auth0-pricing-the-complete-guide"
     }
 ]
