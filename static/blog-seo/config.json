@@ -3418,6 +3418,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/nextjs-metadata\"\n            },\n            \"headline\": \"Learn how to effectively manage metadata in Next.js to boost SEO and improve user engagement through static and dynamic configurations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/metadata-in-nextjs.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/machine-to-machine-authentication",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore the essentials of machine-to-machine authentication and best practices for implementing secure M2M communication.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Understanding Machine-to-Machine (M2M) Authentication: 2025 Guide\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/machine-to-machine-authentication\" />",
+            "<meta property=\"og:description\" content=\"Explore the essentials of machine-to-machine authentication and best practices for implementing secure M2M communication.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/M2M.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore the essentials of machine-to-machine authentication and best practices for implementing secure M2M communication.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/machine-to-machine-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/M2M.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/machine-to-machine-authentication\">"
+        ],
+        "title": "Understanding Machine-to-Machine (M2M) Authentication: 2025 Guide",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/machine-to-machine-authentication\"\n            },\n            \"headline\": \"Explore the essentials of machine-to-machine authentication and best practices for implementing secure M2M communication.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/M2M.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
         "path": "/blog/sim-swapping",
         "metaTags": [
             "<meta name=\"description\" content=\"Learn about SIM swapping scams, their impact on personal security, and effective strategies to safeguard your mobile identity.\" />",
