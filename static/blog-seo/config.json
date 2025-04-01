@@ -2022,6 +2022,29 @@
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/flask-user-authentication\"},\"headline\":\"Adding Authentication to Your Flask Backend with SuperTokens\",\"description\":\"Learn how to seamlessly add authentication to your Flask backend using SuperTokens. This guide covers setting up authentication with the SuperTokens CLI or manual configuration, enabling you to focus on building application logic instead of authentication infrastructure.\",\"image\":\"https://supertokens.com/blog-meta-images/flask-user-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     },
     {
+        "path": "/blog/react-user-authentication",
+        "metaTags": [
+            "<meta name=\"description\" content=\"User authentication forms the backbone of security in modern web applications, especially within the React ecosystem. Ensuring that only authenticated users can access specific parts of your application is crucial for safeguarding data integrity and access control.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How to Set Up React User Authentication\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/react-user-authentication\" />",
+            "<meta property=\"og:description\" content=\"User authentication forms the backbone of security in modern web applications, especially within the React ecosystem. Ensuring that only authenticated users can access specific parts of your application is crucial for safeguarding data integrity and access control.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/react-setup.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"User authentication forms the backbone of security in modern web applications, especially within the React ecosystem. Ensuring that only authenticated users can access specific parts of your application is crucial for safeguarding data integrity and access control.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/react-user-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/react-setup.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/react-user-authentication\">"
+        ],
+        "title": "How to Set Up React User Authentication",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/react-user-authentication\"\n            },\n            \"headline\": \"User authentication forms the backbone of security in modern web applications, especially within the React ecosystem. Ensuring that only authenticated users can access specific parts of your application is crucial for safeguarding data integrity and access control.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/react-setup.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
         "path": "/blog/idp-auth",
         "metaTags": [
             "<meta name=\"description\" content=\"Learn how IDP authentication works, why it’s critical for secure access management, and how to integrate tools like SuperTokens for seamless implementation.\" />",
@@ -3393,6 +3416,29 @@
         ],
         "title": "Metadata in Next.js: Enhancing SEO and User Experience",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/nextjs-metadata\"\n            },\n            \"headline\": \"Learn how to effectively manage metadata in Next.js to boost SEO and improve user engagement through static and dynamic configurations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/metadata-in-nextjs.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/machine-to-machine-authentication",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore the essentials of machine-to-machine authentication and best practices for implementing secure M2M communication.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Understanding Machine-to-Machine (M2M) Authentication: 2025 Guide\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/machine-to-machine-authentication\" />",
+            "<meta property=\"og:description\" content=\"Explore the essentials of machine-to-machine authentication and best practices for implementing secure M2M communication.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/M2M.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore the essentials of machine-to-machine authentication and best practices for implementing secure M2M communication.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/machine-to-machine-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/M2M.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/machine-to-machine-authentication\">"
+        ],
+        "title": "Understanding Machine-to-Machine (M2M) Authentication: 2025 Guide",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/machine-to-machine-authentication\"\n            },\n            \"headline\": \"Explore the essentials of machine-to-machine authentication and best practices for implementing secure M2M communication.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/M2M.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
         "path": "/blog/sim-swapping",
