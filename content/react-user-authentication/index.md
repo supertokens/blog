@@ -1,6 +1,6 @@
 ---
 title: How to Set Up React User Authentication
-date: "2025-01-28"
+date: "2025-03-02"
 description: "User authentication forms the backbone of security in modern web applications, especially within the React ecosystem. Ensuring that only authenticated users can access specific parts of your application is crucial for safeguarding data integrity and access control."
 cover: "react-setup.png"
 category: "authentication, examples, react, sdk"
