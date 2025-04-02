@@ -86,13 +86,7 @@ function appendBlogMetadataToFile(frontmatter, urlSlug, outputFilePath) {
         let existingData = [];
         if (fs.existsSync(outputFilePath)) {
             const fileContent = fs.readFileSync(outputFilePath, 'utf-8');
-            try {
-                existingData = JSON.parse(fileContent); // Try to parse the JSON
-            } catch (error) {
-                console.error(`Error parsing JSON from file: ${outputFilePath}`);
-                console.error(error.message);
-                return; // Return early if JSON parsing fails
-            }
+            existingData = JSON.parse(fileContent);
         }
 
         // Append the new metadata to the array
