@@ -109,7 +109,7 @@ Both provide solid protection, but the right choice may depend on your team's sp
 ***
 #### Okta Pricing
 
-![alt text](image.png)
+![Screenshot of Okta's pricing page](image.png)
 [**Okta’s pricing**](https://www.okta.com/pricing/) is based on a **per-user model with extra costs for additional features** — and those costs can add up fast. Their IAM platform has four pricing tiers: **Starter**, **Essentials**, **Professional**, and **Enterprise**.
 - The **Starter plan** is the most affordable at **$6 per user/month**. It includes basics like Universal Directory, Single Sign-On (SSO), Multi-Factor Authentication (MFA), and up to five Workflows.
 - If you need features like Adaptive MFA, Lifecycle Management, Access Governance, or Privileged Access, you’ll be looking at **$17 per user/month.**
@@ -125,7 +125,7 @@ We have an article that further breaks down Okta's pricing for each feature if y
 
 #### OneLogin Pricing
 
-![alt text](image-1.png)
+![Screenshot of OneLogin's pricing page](image-1.png)
 [**OneLogin’s pricing**](https://www.onelogin.com/product/pricing) also follows a **per-user model** with feature-based tiers, and it’s often seen as more budget-friendly than some competitors. OneLogin offers three main plans: **Starter**, **Advanced**, and **Professional**.
 - The **Starter plan** begins at **$4 per user/month** and includes essentials like Single Sign-On (SSO), Multi-Factor Authentication (MFA), and basic reporting.
 - For more **advanced security features** like Adaptive MFA, SmartFactor Authentication, and policy enforcement, you'll need the Advanced plan, which starts at **$8 per user/month**.
