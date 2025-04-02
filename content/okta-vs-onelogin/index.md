@@ -1,8 +1,8 @@
 ---
 title: "Okta vs OneLogin: The Main Differences"
 description: "Explore the differences between Okta and OneLogin to help you choose the right IAM solution."
-date: "2025-03-30"
-cover: ""
+date: "2025-04-02"
+cover: "okta-vs-onelogin.png"
 category: "featured"
 author: "Maria Shimkovska"
 ---
@@ -14,6 +14,11 @@ But which one is the right fit for your organization?
 In this guide, we’ll compare both side by side, exploring their key features, price structure, and differences. By the end, you’ll have a clear picture of what each platform brings to the table — and which one might be your ideal match. ❤️
 
 Both solutions provide the basics of what you would need, so at the end of the day your pick should depend on which one has a feature you absolutely need to have. 
+
+```toc
+tight: true
+toHeading: 3
+```
 
 ## Introduction to Identity and Access Management 🔐
 
