@@ -1,5 +1,5 @@
 ---
-title: "Thinking About Going Passwordless? Here's How To Do It Right"
+title: "Thinking About Going Passwordless? Here's How To Do It Right 🔑"
 date: "2025-03-30"
 description: "Explore the steps to adopt passwordless authentication, understand its benefits, and learn how solutions like SuperTokens facilitate secure, password-free logins.​"
 cover: ""
@@ -8,7 +8,13 @@ author: "Maria Shimkovska"
 ---
 
 # Transitioning to Passwordless Authentication
-An in-depth guide on moving away from traditional passwords to enhance security and user experience. 
+If you're thinking, "Oh great, another article telling me how terrible passwords are..." &mdash; well, you're not wrong. That's definitely part of it.
+
+But don't worry, we're not here *just* to complain—we’re here to help you break free from the password struggle once and for all.
+
+Let's dive in! 🚀 
+
+This guide will walk you through ditching traditional passwords for good, boosting both security and user experience.
 
 ## Understanding Passwordless Login
 This section goes over what passwordless login is and some of the benefits of going passwordless. 
@@ -41,7 +47,12 @@ Physical devices generating time-based codes for authentication
 ### Public Key Infrastructure (PKI)
 leveraging cryptographic key pairs for secure authentication 
 
-## Implementing SSH Passwordless login 
+## Implementing SSH Passwordless login 🔑
+
+SSH (Secure Shell) is a network protocol that allows users to securely access a computer over an unsecured network.
+
+How are the public and private keys in SSH related? 
+
 A step-by-step guide to setting up SSH passwordless login using public-private key pairs. 
 
 1. Generate SSH Key Pair
