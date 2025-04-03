@@ -2022,6 +2022,29 @@
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/flask-user-authentication\"},\"headline\":\"Adding Authentication to Your Flask Backend with SuperTokens\",\"description\":\"Learn how to seamlessly add authentication to your Flask backend using SuperTokens. This guide covers setting up authentication with the SuperTokens CLI or manual configuration, enabling you to focus on building application logic instead of authentication infrastructure.\",\"image\":\"https://supertokens.com/blog-meta-images/flask-user-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     },
     {
+        "path": "/blog/react-user-authentication",
+        "metaTags": [
+            "<meta name=\"description\" content=\"User authentication forms the backbone of security in modern web applications, especially within the React ecosystem. Ensuring that only authenticated users can access specific parts of your application is crucial for safeguarding data integrity and access control.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How to Set Up React User Authentication\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/react-user-authentication\" />",
+            "<meta property=\"og:description\" content=\"User authentication forms the backbone of security in modern web applications, especially within the React ecosystem. Ensuring that only authenticated users can access specific parts of your application is crucial for safeguarding data integrity and access control.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/react-setup.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"User authentication forms the backbone of security in modern web applications, especially within the React ecosystem. Ensuring that only authenticated users can access specific parts of your application is crucial for safeguarding data integrity and access control.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/react-user-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/react-setup.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/react-user-authentication\">"
+        ],
+        "title": "How to Set Up React User Authentication",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/react-user-authentication\"\n            },\n            \"headline\": \"User authentication forms the backbone of security in modern web applications, especially within the React ecosystem. Ensuring that only authenticated users can access specific parts of your application is crucial for safeguarding data integrity and access control.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/react-setup.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
         "path": "/blog/idp-auth",
         "metaTags": [
             "<meta name=\"description\" content=\"Learn how IDP authentication works, why it’s critical for secure access management, and how to integrate tools like SuperTokens for seamless implementation.\" />",
@@ -2066,8 +2089,8 @@
         ],
         "title": "Top Open Source Identity Management Systems",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/open-source-identity-management\"\n            },\n            \"headline\": \"As cyber threats grow more sophisticated and compliance demands tighten, organizations are rethinking how they secure identities and control access. Traditional IAM solutions can be rigid, expensive, and opaque—leaving businesses locked into costly, one-size-fits-all models. Enter open-source IAM: a powerful, transparent alternative that puts control back in the hands of organizations. Offering unmatched flexibility, scalability, and security, open-source IAM is quietly reshaping the way enterprises safeguard their most valuable asset—identity. But is it the right fit for your business?\",\n            \"image\": \"https://supertokens.com/blog-meta-images/foss-iam.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
-     },
-     {
+    },
+    {
         "path": "/blog/sso-implementation",
         "metaTags": [
             "<meta name=\"description\" content=\"This blog explores the benefits and functionalities of Single Sign-On (SSO), highlighting how it simplifies user authentication, enhances security, and integrates with modern identity management systems. It also covers how open standards like OAuth 2.0 and OIDC enable seamless access to applications, including the use of social logins from services like Google, Facebook, and Twitter.\" />",
@@ -3251,6 +3274,31 @@
             "<!--OG Tags-->",
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/risk-based-authentication\">"
         ],
+        "title": "What is Passwordless Authentication: The Cool Kid on The Block? 🔒🚫",
+        "schema": "<script type=\"application/ld+json\">\n {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/what-is-passwordless-authentication\"\n            },\n            \"headline\": \"What is passwordless authentication? Solve login challenges, explore methods, benefits, and tools for secure implementations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/what-is-passwordless-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        } </script>"
+    },
+    {
+        "path": "/blog/webhook-vs-api",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore the distinctions between webhooks and APIs, their functionalities, and determine the best scenarios for each in your integration strategy.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Webhook vs API: Key Differences and Use Cases\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/webhook-vs-api\" />",
+            "<meta property=\"og:description\" content=\"Explore the distinctions between webhooks and APIs, their functionalities, and determine the best scenarios for each in your integration strategy.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/webhook-vs-api.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore the distinctions between webhooks and APIs, their functionalities, and determine the best scenarios for each in your integration strategy.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/webhook-vs-api\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/webhook-vs-api.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/webhook-vs-api\">"
+        ],
+        "title": "Webhook vs API: Key Differences and Use Cases",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/webhook-vs-api\"\n            },\n            \"headline\": \"Explore the distinctions between webhooks and APIs, their functionalities, and determine the best scenarios for each in your integration strategy.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/webhook-vs-api.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
         "title": "What is Risk-Based Authentication? A Complete Guide",
         "schema": "{\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/risk-based-authentication\"\n            },\n            \"headline\": \"Learn how Risk-Based Authentication enhances security by adapting to user behavior and mitigating threats in real-time.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/risk-based-authentication.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }"
     },
@@ -3322,7 +3370,7 @@
         ],
         "title": "Multi-Tenant Architecture: Benefits, Practices & Implementation",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/multi-tenant-architecture\"\n            },\n            \"headline\": \" This blog provides an in-depth exploration of how multi‑tenant SaaS architectures boost scalability, reduce costs, and enhance security through SuperTokens' innovative approach.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/multi-tenant-architecture.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
-    },        
+    },
     {
         "path": "/blog/integrating-oauth-providers-for-seamless-authentication",
         "metaTags": [
@@ -3345,8 +3393,8 @@
         ],
         "title": "Integrating OAuth Providers for Seamless Authentication",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/integrating-oauth-providers-for-seamless-authentication\"\n            },\n            \"headline\": \"Discover how to integrate OAuth providers for seamless authentication.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/integrating-oauth-providers-for-seamless-authentication.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
-      },
-      {  
+    },
+    {
         "path": "/blog/top-8-identity-management-solutions-for-developers-and-businesses",
         "metaTags": [
             "<meta name=\"description\" content=\"Discover the top 9 user management software tools for 2024! Streamline\" />",
@@ -3368,6 +3416,74 @@
         ],
         "title": "Top 8 Identity Management Solutions for Developers and Businesses",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/top-8-identity-management-solutions-for-developers-and-businesses\"\n            },\n            \"headline\": \"Discover the top 9 user management software tools for 2024! Streamline\",\n            \"image\": \"https://supertokens.com/blog-meta-images/top-8-identity-management-solutions-for-developers-and-businesses.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
-
+    },
+    {
+        "path": "/blog/nextjs-metadata",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how to effectively manage metadata in Next.js to boost SEO and improve user engagement through static and dynamic configurations.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Metadata in Next.js: Enhancing SEO and User Experience\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/nextjs-metadata\" />",
+            "<meta property=\"og:description\" content=\"Learn how to effectively manage metadata in Next.js to boost SEO and improve user engagement through static and dynamic configurations.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/metadata-in-nextjs.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how to effectively manage metadata in Next.js to boost SEO and improve user engagement through static and dynamic configurations.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/nextjs-metadata\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/metadata-in-nextjs.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/nextjs-metadata\">"
+        ],
+        "title": "Metadata in Next.js: Enhancing SEO and User Experience",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/nextjs-metadata\"\n            },\n            \"headline\": \"Learn how to effectively manage metadata in Next.js to boost SEO and improve user engagement through static and dynamic configurations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/metadata-in-nextjs.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/machine-to-machine-authentication",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore the essentials of machine-to-machine authentication and best practices for implementing secure M2M communication.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Understanding Machine-to-Machine (M2M) Authentication: 2025 Guide\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/machine-to-machine-authentication\" />",
+            "<meta property=\"og:description\" content=\"Explore the essentials of machine-to-machine authentication and best practices for implementing secure M2M communication.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/M2M.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore the essentials of machine-to-machine authentication and best practices for implementing secure M2M communication.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/machine-to-machine-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/M2M.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/machine-to-machine-authentication\">"
+        ],
+        "title": "Understanding Machine-to-Machine (M2M) Authentication: 2025 Guide",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/machine-to-machine-authentication\"\n            },\n            \"headline\": \"Explore the essentials of machine-to-machine authentication and best practices for implementing secure M2M communication.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/M2M.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/sim-swapping",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn about SIM swapping scams, their impact on personal security, and effective strategies to safeguard your mobile identity.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"SIM Swapping Is Hijacking Your User Accounts: How to Shut It Down\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/sim-swapping\" />",
+            "<meta property=\"og:description\" content=\"Learn about SIM swapping scams, their impact on personal security, and effective strategies to safeguard your mobile identity.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/sim-swapping.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn about SIM swapping scams, their impact on personal security, and effective strategies to safeguard your mobile identity.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/sim-swapping\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/sim-swapping.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/sim-swapping\">"
+        ],
+        "title": "SIM Swapping Is Hijacking Your User Accounts: How to Shut It Down",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/sim-swapping\"\n            },\n            \"headline\": \"Learn about SIM swapping scams, their impact on personal security, and effective strategies to safeguard your mobile identity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/sim-swapping.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
