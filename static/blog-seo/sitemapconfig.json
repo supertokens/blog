@@ -325,13 +325,17 @@
     },
     {
         "location": "https://supertokens.com/blog/nextjs-metadata"
-    }, 
+    },
     {
         "location": "https://supertokens.com/blog/machine-to-machine-authentication"
     },
     {
         "location": "https://supertokens.com/blog/sim-swapping"
-    }, {
-        "location":"https://supertokens.com/blog/auth0-pricing-the-complete-guide"
+    },
+    {
+        "location": "https://supertokens.com/blog/auth0-pricing-the-complete-guide"
+    },
+    {
+        "location": "https://supertokens.com/blog/okta-vs-onelogin"
     }
 ]

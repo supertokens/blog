@@ -3299,8 +3299,6 @@
         ],
         "title": "Webhook vs API: Key Differences and Use Cases",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/webhook-vs-api\"\n            },\n            \"headline\": \"Explore the distinctions between webhooks and APIs, their functionalities, and determine the best scenarios for each in your integration strategy.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/webhook-vs-api.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
-        "title": "What is Risk-Based Authentication? A Complete Guide",
-        "schema": "{\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/risk-based-authentication\"\n            },\n            \"headline\": \"Learn how Risk-Based Authentication enhances security by adapting to user behavior and mitigating threats in real-time.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/risk-based-authentication.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }"
     },
     {
         "path": "/blog/otp-bots",
@@ -3462,5 +3460,28 @@
         ],
         "title": "SIM Swapping Is Hijacking Your User Accounts: How to Shut It Down",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/sim-swapping\"\n            },\n            \"headline\": \"Learn about SIM swapping scams, their impact on personal security, and effective strategies to safeguard your mobile identity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/sim-swapping.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/okta-vs-onelogin",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore the differences between Okta and OneLogin to help you choose the right IAM solution.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Okta vs OneLogin: The Main Differences\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/okta-vs-onelogin\" />",
+            "<meta property=\"og:description\" content=\"Explore the differences between Okta and OneLogin to help you choose the right IAM solution.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/okta-vs-onelogin.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore the differences between Okta and OneLogin to help you choose the right IAM solution.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/okta-vs-onelogin\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/okta-vs-onelogin.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/okta-vs-onelogin\">"
+        ],
+        "title": "Okta vs OneLogin: The Main Differences",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/okta-vs-onelogin\"\n            },\n            \"headline\": \"Explore the differences between Okta and OneLogin to help you choose the right IAM solution.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/okta-vs-onelogin.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
