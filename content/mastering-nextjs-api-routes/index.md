@@ -310,9 +310,9 @@ describe("Integration Test for /api/hello", () => {
 
 In this integration test:
 
-- We prepare the Next.js app and create a real HTTP server using createServer.
+- We prepare the Next.js app and create a real HTTP server using `createServer`.
 
-- The test makes an actual GET request to /api/hello on the server.
+- The test makes an actual GET request to `/api/hello` on the server.
 
 - We then validate the response status and body.
 
