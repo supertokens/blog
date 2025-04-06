@@ -252,13 +252,191 @@ A step-by-step guide to setting up SSH passwordless login using public-private k
 ![alt text](image-3.png)
 
 ## 🔐 Exploring SuperTokens for Passwordless Authentication
-SuperTokens is an open-source authentication solution offering passwordless capabilities. 
+SuperTokens is an open-source authentication solution offering passwordless capabilities. One word you will see quite a bit in the documentation is **recipe**. 🧑‍🍳
+
+> **What is a recipe?** 🍲
+>
+> Each login method in SuperTokens is called a recipe. For example, use the **email-password recipe** for email logins, or the **passwordless recipe** for passwordless login. You can even combine recipes — most setups use a login recipe along with the session recipe.
+>
+> **Recipes keep things modular 🧩, so each one has its own config and types. That makes customizing your auth flow easier.**
 
 ### Integration Steps
 Outlining how to implement SuperTokens' passwordless features in web applications. 
 
+In this section we will guide you through the integration steps of setting up SuperTokens for your passwordless authentication needs, but you can also check out the full [**quickstart in the documentation**](https://supertokens.com/docs/quickstart/introduction).
+
+A SuperTokens deployment consists of three components:
+1. **Frontend SDK:** Responsible for rendering the login UI widgets and managing authentication sessions automatically.
+2. **Backend SDK:** Provides authentication APIs for the frontend and communicates with the SuperTokens core These APIs appear on the same domain as your application's APIs.
+3. **SuperTokens Core:** An HTTP service that handles the main authentication logic and talks to your database. The backend SDK sends it requests when it needs to read or write authentication data. You can also host it yourself in your own infrastructure.
+
+![alt text](image-4.png)
+
+> **Note:** Your app's frontend doesn't talk to the SuperTokens core directly. Instead, it talks to the authentication APIs exposed by the backend SDK in your API layer. The SDK then talks to the SuperTokens core.
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/lUjAx75hF8I"
+  title="How SuperTokens Works"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+#### Frontend Setup 
+**Install ReactJS SDK** (There is also an SDK for Angular and for Vue)
+```bash
+  npm i -s supertokens-auth-react
+```
+
+**Initialize the SDK:**
+```javascript
+SuperTokens.init({
+  appInfo: {
+    // learn more about this on https://supertokens.com/docs/references/frontend-sdks/reference#sdk-configuration
+    appName: "testing-app",
+    apiDomain: "<YOUR_API_DOMAIN>",
+    websiteDomain: "localhost:3000",
+    apiBasePath: "/auth",
+    websiteBasePath: "/auth",
+  },
+  recipeList: [EmailPassword.init(), Session.init()],
+});
+```
+
+**Wrap your app in `<SuperTokensWrapper>` component:**
+```javascript
+/* Your App */
+class App extends React.Component {
+  render() {
+    return (
+      <SuperTokensWrapper>
+        {/*Your app components*/}
+      </SuperTokensWrapper>
+    );
+  }
+}
+```
+
+So your full frontend setup should look something like this: 
+```javascript 
+import React from "react";
+
+import SuperTokens, { SuperTokensWrapper } from "supertokens-auth-react";
+import EmailPassword from "supertokens-auth-react/recipe/emailpassword";
+import Session from "supertokens-auth-react/recipe/session";
+
+SuperTokens.init({
+  appInfo: {
+    // learn more about this on https://supertokens.com/docs/references/frontend-sdks/reference#sdk-configuration
+    appName: "testing-app",
+    apiDomain: "<YOUR_API_DOMAIN>",
+    websiteDomain: "localhost:3000",
+    apiBasePath: "/auth",
+    websiteBasePath: "/auth",
+  },
+  recipeList: [EmailPassword.init(), Session.init()],
+});
+
+/* Your App */
+class App extends React.Component {
+  render() {
+    return (
+      <SuperTokensWrapper>
+        {/*Your app components*/}
+      </SuperTokensWrapper>
+    );
+  }
+}
+```
+
+#### Backend Setup 
+**Install Node:**
+```bash
+npm i -s supertokens-node
+```
+
+**Initialize backend SDK:**
+```javascript
+import supertokens from "supertokens-node";
+import Session from "supertokens-node/recipe/session";
+import EmailPassword from "supertokens-node/recipe/emailpassword";
+
+supertokens.init({
+    framework: "express",
+    supertokens: {
+        // We use try.supertokens for demo purposes.
+        connectionURI: "https://try.supertokens.io",
+        // apiKey: <YOUR_API_KEY>
+    },
+    appInfo: {
+        // learn more about this on https://supertokens.com/docs/session/appinfo
+        appName: "testing-app",
+        apiDomain: "<YOUR_API_DOMAIN>",
+        websiteDomain: "localhost:3000",
+        apiBasePath: "/auth",
+        websiteBasePath: "/auth",
+    },
+    recipeList: [
+        EmailPassword.init(), // initializes signin / sign up features
+        Session.init() // initializes session features
+    ]
+});
+```
+**Add SuperTokens APIs and Configure CORS:**
+Now you need to expose the endpoints that will be used by the frontend SDKs.
+
+> Note: 
+> * Add the middleware **BEFORE** all your routes.
+> * Add the cors middleware **BEFORE** the SuperTokens middleware as shown below.
+
+```javascript
+import express from "express";
+import cors from "cors";
+import supertokens from "supertokens-node";
+import { middleware } from "supertokens-node/framework/express";
+
+let app = express();
+
+app.use(
+	cors({
+		origin: "localhost:3000",
+		allowedHeaders: ["content-type", ...supertokens.getAllCORSHeaders()],
+		credentials: true,
+	}),
+);
+
+app.use(middleware());
+
+// ...your API routes
+```
+
+**Secure Application Routes:**
+Now that your server can authenticate users, the final step that you need to take care of is to prevent unauthorized access to certain parts of the application.
+```javascript
+
+import express from "express";
+import { verifySession } from "supertokens-node/recipe/session/framework/express";
+import { SessionRequest } from "supertokens-node/framework/express";
+
+let app = express();
+
+app.post("/like-comment", verifySession(), (req: SessionRequest, res) => {
+	let userId = req.session!.getUserId();
+	//....
+});
+```
+> **Note:** The middleware function returns a `401` to the frontend if a session doesn't exist, or if the access token has expired, in which case, our frontend SDK automatically refreshes the session.
+
+**Test the Login Flow:** Now that you have configured both the frontend and the backend, you can return to the frontend login page. From here follow these steps to confirm that your setup is working properly.
+
+1. Click on the Sign up button to create a new account.
+2. After you have created the account go to Login page and fill in your credentials.
+3. If you are greeted with the login screen you have completed the quickstart setup.
+
 ### Advantages
-highlighing benefits such as customization, scalability, and enhanced security
+Highlighting benefits such as customization, scalability, and enhanced security
 
 ## 🧑‍🔧 Best Practices for Adopting Passwordless Authentication 
 1. **User Education** &mdash; Inform users about the new authentication method and its benefits. 
@@ -271,7 +449,7 @@ Implementation Costs: Discuss potential expenses associated with transitioning t
 User Adaptation: Address the learning curve and user acceptance challenges.​
 Recovery Options: Explore strategies for account recovery without traditional passwords.​
 
-## 🔮 Future Trends in Passwordless Authen
+## 🔮 Future Trends in Passwordless Authentication
 Emerging Technologies: Examine advancements like passkeys and their impact on authentication.​ AP News, 1Google for Developers
 Industry Adoption: Discuss how major companies are implementing passwordless solutions.​
 
