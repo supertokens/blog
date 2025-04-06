@@ -55,7 +55,7 @@ Life is all about balance &mdash; and passwordless login is no exception. While 
 Let's go more in-depth of some of the most common passworldess authentication methods you have available as your options.
 Each example also contains use cases, as well as benefits and drawbacks to help you make an informed decision. 
 
-### Biometric Authentication 
+### Biometric Authentication 🧬
 Utilizing fingerprints, facial recognition, or retinal scans for user verification
 
 **The typical flow of a face recognition authentication is as follows:**
@@ -68,7 +68,7 @@ Utilizing fingerprints, facial recognition, or retinal scans for user verificati
 7. That credential is sent to your server, which verifies it (e.g., through a signed challenge, token, or session initiation)
 8. User is logged in 🥳 and you can store their login in a cookie 🍪 or session
 
-### One-Time Passcodes (OTP)
+### One-Time Passcodes (OTP) 🔢
 Codes sent via SMS or email for single-use authentication
 
 **The typical flow of OTP authentication is as follows:**
@@ -169,7 +169,7 @@ app.get("/verify", (req, res) => {
 </html>
 ```
 
-### Hardware Tokens
+### Hardware Tokens 🔑
 Physical devices generating time-based codes for authentication (like YubiKey or other FIDO2-compliant devices).
 
 **The typical flow of a hardware token authentication is as follows:**
@@ -182,7 +182,7 @@ Physical devices generating time-based codes for authentication (like YubiKey or
 7. The signed challenge is sent back to your server, which verifies it using the stored public key
 8. User is logged in 🥳 and you can store their login in a cookie 🍪 or session
 
-### Public Key Infrastructure (PKI)
+### Public Key Infrastructure (PKI) 🔐
 Leveraging cryptographic key pairs for secure authentication 
 
 **The typical flow of a PKI-based authentication is as follows:**
@@ -195,24 +195,24 @@ Leveraging cryptographic key pairs for secure authentication
 7. The user’s device signs the challenge using the private key stored securely (e.g., in a smart card, TPM, or software key store)
 8. The server verifies the signature using the public key in the certificate — if it’s valid, the user is authenticated 🥳 and you can store their login in a cookie or session
 
-## 🖥️ Implementing SSH Passwordless Login 🔑
+## 🖥️ Implementing SSH Passwordless Login 
 
 **SSH (Secure Shell)** is a network protocol that allows users to securely access a computer over an unsecured network.
+
+Here is how connecting to a remote server works using a password: 
+![alt text](image-1.png)
 
 How are the public and private keys in SSH related? 
 
 A step-by-step guide to setting up SSH passwordless login using public-private key pairs. 
 
-1. Generate SSH Key Pair
-    - Create a public and private key pair on the client machine. 
-2. Create SSH Directory on Server
-    - Ensure the `.ssh` directory exists on the remote server 
-3. Upload Public Key to Server
-    - Add the public key to the server's `~/.ssh/authorized_keys` file
-4. Set Appropriate Permissions
-    - Adjust file permissions to secure the `.ssh` directory and `authorized_keys` file.
-5. Test the Connection
-    - Verify that the SSH connection no longer requires a password. 
+![alt text](image-2.png)
+
+1. **Generate SSH Key Pair:** Create a public and private key pair on the client machine. 
+2. **Create SSH Directory on Server:** Ensure the `.ssh` directory exists on the remote server 
+3. **Upload Public Key to Server:** Add the public key to the server's `~/.ssh/authorized_keys` file
+4. **Set Appropriate Permissions:** Adjust file permissions to secure the `.ssh` directory and `authorized_keys` file.
+5. **Test the Connection:** Verify that the SSH connection no longer requires a password. 
 
 ### Steps to Set Up SSH Passwordless Login
 1. 🔑 **Generate an Ed25519 SSH key pair (if you don't already have one):**<br />
@@ -248,6 +248,8 @@ A step-by-step guide to setting up SSH passwordless login using public-private k
         IdentityFile ~/.ssh/id_ed25519
     ```
     Now you can connect just by typing `ssh my-server` without needing to type the full host details.
+
+![alt text](image-3.png)
 
 ## 🔐 Exploring SuperTokens for Passwordless Authentication
 SuperTokens is an open-source authentication solution offering passwordless capabilities. 
