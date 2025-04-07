@@ -986,7 +986,6 @@ The implementation we've explored is just the beginning. SuperTokens offers exte
 
 * [WebAuthn Implementation Guide](https://supertokens.com/docs/authentication/passkeys/initial-setup) \- Detailed setup instructions  
 * [Multi-factor Authentication](https://supertokens.com/docs/additional-verification/mfa/initial-setup) \- Advanced policies and flows  
-* [Session Management](https://supertokens.com/docs/session/common-customizations/sessions) \- Token configuration and lifecycle management  
 * [User Roles and Permissions](https://supertokens.com/docs/userroles/introduction) \- Role-based authentication requirements
 
 ## **Conclusion**
