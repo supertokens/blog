@@ -1,0 +1,67 @@
+name: Deploy
+run-name: Deploy to ${{ github.ref_name == 'master' && 'supertokens.com' || 'test.supertokens.com' }}
+
+on:
+  pull_request:
+    paths:
+      - "src/**"
+      - "content/**"
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "16"
+          cache: "npm"
+          cache-dependency-path: "package-lock.json"
+
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Build Blog
+        run: npm run build
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: blog-build
+          path: public
+          retention-days: 1
+
+  trigger:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set STAGE environment variable
+        shell: bash
+        run: |
+          if [[ "${{ github.ref_name }}" == "master" ]]; then
+            STAGE="production"
+          else
+            STAGE="preview"
+          fi
+          echo "STAGE=$STAGE" >> $GITHUB_ENV
+
+      - name: Trigger the backend website CI
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.BACKEND_WEBSITE_TOKEN }}
+          script: |
+            github.rest.actions.createWorkflowDispatch({
+                owner: 'supertokens',
+                repo: 'supertokens-backend-website',
+                workflow_id: 'release-blog-changes.yml',
+                ref: 'master',
+                inputs: {
+                  "run-id": `${{ github.run_id }}`,
+                  "stage":  "${{ env.STAGE }}"
+                }
+              })
