@@ -190,5 +190,18 @@ module.exports = [{
   ],
   bio:
     "Mobile engineer, Indie software dev, Gaming enthusiast, and a tea lover.",
-}
+},
+{
+  name: "Maurice Saldivar",
+  jobTitle: "Technical Writer",
+  image: "TODO.jpg",
+  socials: [
+, {
+      name: "github",
+      url: "https://github.com/msaldivar"
+    }
+  ],
+  bio:
+    "Audiobook fan, avid golfer, and no zero-days.",
+},
 ]
