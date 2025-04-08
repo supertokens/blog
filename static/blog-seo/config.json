@@ -2023,6 +2023,30 @@
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/flask-user-authentication\"},\"headline\":\"Adding Authentication to Your Flask Backend with SuperTokens\",\"description\":\"Learn how to seamlessly add authentication to your Flask backend using SuperTokens. This guide covers setting up authentication with the SuperTokens CLI or manual configuration, enabling you to focus on building application logic instead of authentication infrastructure.\",\"image\":\"https://supertokens.com/blog-meta-images/flask-user-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     },
     {
+
+        "path": "/blog/multi-factor-authentication-examples",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Security has always been crucial, especially in today’s digital landscape, where so much is at stake if security practices are weak or missing. The challenge with security is that the solutions and best practices are often logical and even obvious—yet, for various reasons, we sometimes choose to ignore them..\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Real World Examples of Multi-Factor Authentication\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/multi-factor-authentication-examples\" />",
+            "<meta property=\"og:description\" content=\"Security has always been crucial, especially in today’s digital landscape, where so much is at stake if security practices are weak or missing. The challenge with security is that the solutions and best practices are often logical and even obvious—yet, for various reasons, we sometimes choose to ignore them..\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/mfa-examples.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Security has always been crucial, especially in today’s digital landscape, where so much is at stake if security practices are weak or missing. The challenge with security is that the solutions and best practices are often logical and even obvious—yet, for various reasons, we sometimes choose to ignore them..\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/multi-factor-authentication-examples\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/mfa-examples.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/multi-factor-authentication-examples\">"
+        ],
+        "title": "Real World Examples of Multi-Factor Authentication",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/multi-factor-authentication-examples\"\n            },\n            \"headline\": \"Security has always been crucial, especially in today’s digital landscape, where so much is at stake if security practices are weak or missing. The challenge with security is that the solutions and best practices are often logical and even obvious—yet, for various reasons, we sometimes choose to ignore them..\",\n            \"image\": \"https://supertokens.com/blog-meta-images/mfa-examples.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
         "path": "/blog/nextauth-alternatives",
         "metaTags": [
             "<meta name=\"description\" content=\"Authentication is the cornerstone of any secure application, and for many developers, NextAuth has been a go-to solution. Its ease of use and compatibility with Next.js make it a strong option for basic authentication needs. However, developers often encounter limitations with NextAuth, such as restricted customization, complex multi-platform integration, and insufficient support for advanced authentication protocols.\" />",
