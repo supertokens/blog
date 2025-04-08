@@ -2,7 +2,7 @@
 title: "4 Best 2FA Services for Developers to Secure Applications"
 date: "2025-03-25"
 description: "Discover the best 2FA services for developers to secure applications with minimal friction. Compare top vendors and explore how SuperTokens simplifies 2FA integration."
-cover: "2fa_services.png"
+cover: "2fa-services.png"
 category: "programming"
 author: "Darko Bozhinovski"
 ---
