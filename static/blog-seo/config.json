@@ -1902,6 +1902,7 @@
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/enterprise-sso\"},\"headline\":\"Best Practices for Enterprise SSO\",\"description\":\"This guide will dive into what enterprise SSO is and why it’s necessary for modern organizations. It will also provide actionable tips for implementing it effectively\",\"image\":\"https://supertokens.com/blog-meta-images/enterprise-sso.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     },
     {
+
         "path": "/blog/what-is-jwt",
         "metaTags": [
             "<meta name=\"description\" content=\"Discover the fundamentals of JWTs, their structure, use cases, and potential security risks. Learn how to manage tokens securely with SuperTokens.\" />",
@@ -2020,6 +2021,29 @@
         ],
         "title": "Adding Authentication to Your Flask Backend with SuperTokens",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/flask-user-authentication\"},\"headline\":\"Adding Authentication to Your Flask Backend with SuperTokens\",\"description\":\"Learn how to seamlessly add authentication to your Flask backend using SuperTokens. This guide covers setting up authentication with the SuperTokens CLI or manual configuration, enabling you to focus on building application logic instead of authentication infrastructure.\",\"image\":\"https://supertokens.com/blog-meta-images/flask-user-authentication.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    },
+    {
+        "path": "/blog/nextauth-alternatives",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Authentication is the cornerstone of any secure application, and for many developers, NextAuth has been a go-to solution. Its ease of use and compatibility with Next.js make it a strong option for basic authentication needs. However, developers often encounter limitations with NextAuth, such as restricted customization, complex multi-platform integration, and insufficient support for advanced authentication protocols.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Top 7 NextAuth Alternatives for Secure Authentication [2024]\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/nextauth-alternatives\" />",
+            "<meta property=\"og:description\" content=\"Authentication is the cornerstone of any secure application, and for many developers, NextAuth has been a go-to solution. Its ease of use and compatibility with Next.js make it a strong option for basic authentication needs. However, developers often encounter limitations with NextAuth, such as restricted customization, complex multi-platform integration, and insufficient support for advanced authentication protocols.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/nextauth-alternatives.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Authentication is the cornerstone of any secure application, and for many developers, NextAuth has been a go-to solution. Its ease of use and compatibility with Next.js make it a strong option for basic authentication needs. However, developers often encounter limitations with NextAuth, such as restricted customization, complex multi-platform integration, and insufficient support for advanced authentication protocols.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/nextauth-alternatives\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/nextauth-alternatives.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/nextauth-alternatives\">"
+        ],
+        "title": "Top 7 NextAuth Alternatives for Secure Authentication [2024]",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/nextauth-alternatives\"\n            },\n            \"headline\": \"Authentication is the cornerstone of any secure application, and for many developers, NextAuth has been a go-to solution. Its ease of use and compatibility with Next.js make it a strong option for basic authentication needs. However, developers often encounter limitations with NextAuth, such as restricted customization, complex multi-platform integration, and insufficient support for advanced authentication protocols.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/nextauth-alternatives.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
         "path": "/blog/react-user-authentication",
