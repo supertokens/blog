@@ -13,7 +13,7 @@ Think of it like having a single key that opens all the doors you’re supposed 
 
 ## What is Single Sign-On (SSO)?
 
-But analogies aside, let's define SSO. Deferring to [Wikipedia's wisdom](https://en.wikipedia.org/wiki/Single_sign-on):
+Analogies aside, let's define SSO. Deferring to [Wikipedia's wisdom](https://en.wikipedia.org/wiki/Single_sign-on):
 
 > Single sign-on (SSO) is an authentication scheme that allows a user to log in with a single SSO ID to any of several related, yet independent, software systems.
 
