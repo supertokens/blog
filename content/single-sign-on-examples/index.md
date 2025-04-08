@@ -1,8 +1,8 @@
 ---
 title: "SSO Examples: Real-World Use Cases and How to Implement Them"
-date: "2025-02-17"
+date: "2025-03-18"
 description: "Explore real-world Single Sign-On (SSO) examples, use cases, and step-by-step implementation methods. Learn how tools like SuperTokens simplify SSO for developers."
-cover: "sso_examples.png"
+cover: "sso-examples.png"
 category: "programming"
 author: "Darko Bozhinovski"
 ---
