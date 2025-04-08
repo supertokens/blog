@@ -28,27 +28,26 @@ These challenges lead developers to explore more versatile and feature-rich auth
 
 ### **1. SuperTokens**
 
-SuperTokens is a developer-centric, open-source authentication platform that provides flexibility and customization unmatched by many competitors.
+SuperTokens is a developer-centric, open-source authentication platform that provides flexibility and customization unmatched by many competitors. With both a managed service and a self-hosted product, users can deploy SuperTokens in an environment suited to their requirements. 
 
 - **Key Features**:
-  - **Customizable Authentication Flows**: Tailor login flows to your application's unique needs.
+  - **[Customizable Authentication Flows](https://supertokens.com/docs/references)**: Tailor login flows to your application's unique needs.
   - **Multi-Factor Authentication (MFA)**: Built-in support for added security.
   - **Passwordless Login**: Simplify user experience with email or SMS-based login.
-  - **Session Management**: Advanced session management, including JWT and session token options.
+  - **Session Management**: Advanced session management, including rotating refresh tokens with token theft detection.
   - **Wide Platform Support**: SDKs for web and mobile apps, including React, Angular, Vue, iOS, and Android.
 
 - **Pricing**:
-  - **Free Tier**: Supports up to 5,000 monthly active users.
-  - **Pro Plan**: Starts at $99/month (pricing scales based on active users).
-  - **Enterprise**: Custom pricing options are available.
-  - **Add-ons include**:
-    - Multi‑factor authentication at about **$0.01 per MAU** (minimum $100/month)
-    - Account linking at about **$0.005 per MAU** (minimum $100/month)
-    - Extra dashboard seats at **$20/month** each
+  - **Self-Hosted Plan:** Free and open-source with no limits on Monthly Active Users (MAUs).
+  - **Managed Service Plan:** Free for up to 5,000 MAUs; beyond this, it's $0.02 per additional MAU.
+  - **Multi-Factor Authentication (MFA):** Available as an add-on at $0.01 per MAU, with a minimum billing of $100 per month.
+  - **Account Linking:** Offered at $0.005 per MAU.
+  - **Additional Dashboard Users:** Three users are included for free; each extra user costs $20 per month.
+
 
 - **Limitations**:
   - Requires initial setup effort and an understanding of its architecture.
-  - Smaller community compared to tools like Firebase.
+  - May lack some features required by Enterprises
 
 **Why Choose SuperTokens?**
 SuperTokens empowers developers with full control over authentication, making it ideal for applications where customization, scalability, and security are top priorities.
@@ -58,22 +57,23 @@ SuperTokens empowers developers with full control over authentication, making it
 Auth0 is a well-established identity platform trusted by startups and enterprises alike.
 
 - **Key Features**:
-  - **Extensive Provider Integration**: Includes social logins (e.g., Google, Facebook), enterprise solutions (e.g., SAML, LDAP), and OpenID Connect.
+  - **Extensive Provider Integration**: Supports social logins (e.g., Google, Facebook), enterprise solutions (e.g., SAML, LDAP), and OpenID Connect.
   - **Customizable Rules and Hooks**: Adapt authentication workflows with serverless code.
-  - **Advanced Security**: Adaptive MFA, anomaly detection, and bot protection.
-  - **Developer Tools**: Comprehensive documentation, SDKs, and analytics.
+  - **Advanced Security**: Offers adaptive Multi-Factor Authentication (MFA), anomaly detection, and bot protection.
+  - **Developer Tools**: Provides comprehensive documentation, SDKs, and analytics.
 
 - **Pricing**:
-  - **Free Plan**: Limited to **25,000 active users/month** with basic features.
+  - **Free Plan**: Limited to **7,500 monthly active users (MAUs)** with basic features.
   - **Essentials Plan**: Starts at **$35/month** for up to 500 MAUs.
   - **Professional Plan**: Priced at **$240/month** for up to 1,000 MAUs.
 
 - **Limitations**:
-  - Costs escalate quickly with larger user bases.
-  - Advanced customizations require learning the platform’s rules and hooks.
+  - Costs can escalate quickly with larger user bases.
+  - Advanced customizations may require learning the platform’s rules and hooks.
 
-**Why Choose Auth0?**
+**Why Choose Auth0?**  
 Auth0 offers unmatched reliability for scaling applications, making it a top choice for businesses focused on growth and security.
+
 
 ### **3. Firebase Authentication**
 
