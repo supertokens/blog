@@ -3506,5 +3506,28 @@
         ],
         "title": "Okta vs OneLogin: The Main Differences",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/okta-vs-onelogin\"\n            },\n            \"headline\": \"Explore the differences between Okta and OneLogin to help you choose the right IAM solution.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/okta-vs-onelogin.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/identity-and-access-management-tools",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Identity and Access Management (IAM) tools have become a cornerstone for businesses to securely manage user access across multiple systems and applications. With the growing threat landscape and increasingly complex compliance requirements, choosing the right IAM solution can significantly improve security, optimize user experiences, and simplify the lifecycle of identity management.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Top 8 Identity and Access Management Tools\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/identity-and-access-management-tools\" />",
+            "<meta property=\"og:description\" content=\"Identity and Access Management (IAM) tools have become a cornerstone for businesses to securely manage user access across multiple systems and applications. With the growing threat landscape and increasingly complex compliance requirements, choosing the right IAM solution can significantly improve security, optimize user experiences, and simplify the lifecycle of identity management.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/iam-tools.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Identity and Access Management (IAM) tools have become a cornerstone for businesses to securely manage user access across multiple systems and applications. With the growing threat landscape and increasingly complex compliance requirements, choosing the right IAM solution can significantly improve security, optimize user experiences, and simplify the lifecycle of identity management.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/identity-and-access-management-tools\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/iam-tools.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/identity-and-access-management-tools\">"
+        ],
+        "title": "Top 8 Identity and Access Management Tools",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-tools\"\n            },\n            \"headline\": \"Identity and Access Management (IAM) tools have become a cornerstone for businesses to securely manage user access across multiple systems and applications. With the growing threat landscape and increasingly complex compliance requirements, choosing the right IAM solution can significantly improve security, optimize user experiences, and simplify the lifecycle of identity management.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-tools.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
