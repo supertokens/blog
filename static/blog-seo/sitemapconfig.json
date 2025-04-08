@@ -222,6 +222,12 @@
         "location": "https://supertokens.com/blog/flask-user-auth"
     },
     {
+        "location": "https://supertokens.com/blog/nextauth-alternatives"
+    },
+    {
+        "location": "https://supertokens.com/blog/react-user-authentication"
+    },
+    {
         "location": "https://supertokens.com/blog/idp-auth"
     },
     {
@@ -306,6 +312,12 @@
         "location": "https://supertokens.com/blog/what-is-passwordless-authentication"
     },
     {
+        "location": "https://supertokens.com/blog/enumeration-attack"
+    },
+    {
+        "location": "https://supertokens.com/blog/webhook-vs-api"
+    },
+    {
         "location": "https://supertokens.com/blog/multi-tenant-architecture"
     },
     {
@@ -319,5 +331,23 @@
     },
     {
         "location": "https://supertokens.com/blog/2fa-services"
+    },
+    {
+        "location": "https://supertokens.com/blog/nextjs-metadata"
+    },
+    {
+        "location": "https://supertokens.com/blog/machine-to-machine-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/sim-swapping"
+    },
+    {
+        "location": "https://supertokens.com/blog/auth0-pricing-the-complete-guide"
+    },
+    {
+        "location": "https://supertokens.com/blog/okta-vs-onelogin"
+    },
+    {
+        "location": "https://supertokens.com/blog/identity-and-access-management-tools"
     }
 ]
