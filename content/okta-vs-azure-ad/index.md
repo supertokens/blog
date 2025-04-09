@@ -9,11 +9,11 @@ author: "Maria Shimkovska"
 
 ## The Battle of Identity Providers 🤺
 
-It goes without saying that security is a crucial part of your business. When securing your company resources one of the decisions you will need to make is to choose an Identity and Access Management (IAM) solution. 
+Security is a crucial part of any business. When securing your company resources, one of the decisions you will need to make is to choose an Identity and Access Management (IAM) solution. 
 
-Now let's introduce the two champions today!
+Let’s meet our two contenders for today!
 
-In the blue corner, we have Okta -- the cloud-native security expert. And in the red corner, Azure AD -- the heavyweight champion of enterprises. Who will emerge victorious in the IAM battle royale? Let’s find out!
+In the blue corner, we have Okta &mdash; the cloud-native security expert. And in the red corner, Azure AD &mdash; the heavyweight champion of enterprises. Who will emerge victorious in the IAM battle royale? Let’s find out!
 
 
 ### Why Identity and Access Management (IAM) is Critical for Businesses Today
@@ -25,13 +25,13 @@ Cyberattacks often target compromised user credentials, making IAM a vital layer
 - Track and manage user access.
 - Automate user provisioning and de-provisioning to reduce security risks.
 
-If you want to learn more about the benefits of IAM for your business' security, we've written a more in depth article for you on this very topic -- [**8 Benefits of Identity and Access Management (IAM) for Security**](https://supertokens.com/blog/8-benefits-of-identity-and-access-management-for-security).
+If you want to learn more about the benefits of IAM for your business' security, we've written a more in-depth article on this topic: [**8 Benefits of Identity and Access Management (IAM) for Security**](https://supertokens.com/blog/8-benefits-of-identity-and-access-management-for-security).
 
-### Quick Intro to Okta and Azure AD—-Two of the Biggest Players in the IAM Space
+### Quick Intro to Okta and Azure AD &mdash; Two of the Biggest Players in the IAM Space
 
-Let's get into a little introduction about the two giants in the IAM space -- Okta and Azure AD (Microsoft Entra ID)
+Let's get into a little introduction about the two giants in the IAM space &mdash; Okta and Azure AD (Microsoft Entra ID)
 
-We will use both names for Azure AD in the article. This is not to confuse you. On the contrary -- Microsoft is still in the process of making sure everyone is familiar with the new name and we want to help illustrate that these are the same things. Microsoft has been clear that the new name is just that -- a new name.
+We’ll use both names &mdash; Azure AD and Microsoft Entra ID &mdash; throughout this article. Microsoft is still transitioning to the new name, and we want to clarify that they refer to the same product.
 
 ### Okta: The Cloud IAM Wizard 🧙‍♂️
 ![Okta homepage screenshot](image.png)
@@ -40,13 +40,13 @@ We will use both names for Azure AD in the article. This is not to confuse you. 
 In this guide we are going over Okta Platform which is Okta's IAM solution for secure authentication of your employees, contractors, and partners. 
 
 **The Key Features of Okta Platform:**
-- **Single Sign On** -- One username, one password, and you’re in! Employees can access everything they need from one handy dashboard, no matter what device they’re using.
-- **Adaptive Multi-Factor Authentication** -- Extra security that’s smart. Depending on things like where you’re logging in from, it might ask for a second step — like confirming on your phone or scanning your fingerprint.
-- **Identity Governance** -- Think of this as organized access control. It makes sure people only get access to what they actually need — and keeps track of it all for security peace of mind.
-- **Privileged Access**  -- Some accounts need extra protection. Protects your most sensitive accounts by giving higher-level controls to admins and limiting access to critical systems.
-- **Identity Threat Protection** -- Detects suspicious activity, like unusual login attempts, and takes steps to block threats before they cause harm.
-- **Lifecycle Management** — Automates user account creation and removal, so when employees join, switch roles, or leave, their access updates automatically.
-- **Extensive App Integrations** -- Connects seamlessly with over 7,000 pre-built app integrations, making it easy to link Okta with the tools your team already uses.
+- **Single Sign On** &mdash; One username, one password, and you’re in! Employees can access everything they need from one handy dashboard, no matter what device they’re using.
+- **Adaptive Multi-Factor Authentication** &mdash; Extra security that’s smart. Depending on things like where you’re logging in from, it might ask for a second step — like confirming on your phone or scanning your fingerprint.
+- **Identity Governance** &mdash; Think of this as organized access control. It makes sure people only get access to what they actually need — and keeps track of it all for security peace of mind.
+- **Privileged Access** &mdash; Some accounts need extra protection. Protects your most sensitive accounts by giving higher-level controls to admins and limiting access to critical systems.
+- **Identity Threat Protection** &mdash; Detects suspicious activity, like unusual login attempts, and takes steps to block threats before they cause harm.
+- **Lifecycle Management** &mdash; Automates user account creation and removal, so when employees join, switch roles, or leave, their access updates automatically.
+- **Extensive App Integrations** &mdash; Connects seamlessly with over 7,000 pre-built app integrations, making it easy to link Okta with the tools your team already uses.
 
 #### Pros and Cons of Okta 
 
@@ -60,16 +60,16 @@ In this guide we are going over Okta Platform which is Okta's IAM solution for s
 ### Azure AD: The Microsoft Identity Fortress 🏰
 ![Azure AD (Microsoft Entra ID) homepage screenshot](image-1.png)
 
-[**Microsoft Entra ID**](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id) -- previously called Azure Active Directory (Azure AD) -- is Microsoft's IAM product built to help you manage and protect identities across both cloud and on-premises environments. It’s tightly integrated with Azure, Office 365, and Windows, making it a natural fit for businesses already using Microsoft services.
+[**Microsoft Entra ID**](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id) &mdash; previously called Azure Active Directory (Azure AD) &mdash; is Microsoft's IAM product built to help you manage and protect identities across both cloud and on-premises environments. It’s tightly integrated with Azure, Office 365, and Windows, making it a natural fit for businesses already using Microsoft services.
 
 **The Key Features of Microsoft Entra ID (Azure AD):**
-- **Single Sign-On (SSO) and Conditional Access** —- Users can sign in once to securely access Microsoft 365 and other connected apps. Conditional Access adds extra security by requiring things like MFA or location checks when needed.
+- **Single Sign-On (SSO) and Conditional Access** &mdash; Users can sign in once to securely access Microsoft 365 and other connected apps. Conditional Access adds extra security by requiring things like MFA or location checks when needed.
 
-- **Azure Multi-Factor Authentication (MFA)** —- Strengthens security by asking for additional verification, such as a phone notification or biometric scan, especially when logging in from unfamiliar devices or locations. It’s like having a digital bodyguard for your data -- minus the cool sunglasses 🕶️ and earpiece.
+- **Azure Multi-Factor Authentication (MFA)** &mdash; Strengthens security by asking for additional verification, such as a phone notification or biometric scan, especially when logging in from unfamiliar devices or locations.
 
-- **Privileged Identity Management (PIM)** -— Helps manage and control admin roles with extra safeguards. It allows you to assign temporary permissions, require approval for sensitive actions, and track role changes.
+- **Privileged Identity Management (PIM)** &mdash; Some accounts need extra protection. Provides additional safeguards for sensitive accounts by granting higher-level controls to administrators and limiting access to critical systems
 
-- **Hybrid Identity Support** -— Bridges the gap between cloud and on-premises setups by working with your existing Active Directory (AD), making it easier to manage legacy systems alongside modern cloud tools.
+- **Hybrid Identity Support** &mdash; Supports hybrid identity by bridging cloud and on-premises environments, allowing integration with existing Active Directory setups.
 
 #### Pros and Cons of Microsoft Entra ID (Azure AD)
 
@@ -85,13 +85,13 @@ In this guide we are going over Okta Platform which is Okta's IAM solution for s
 |:------------------------|:-----------------------------------------------------|:----------------------------------------------------|
 | **Security & Authentication** 🔒 | Strong in adaptive authentication and AI-driven security | Ideal for enterprises with built-in Microsoft Defender integration |
 | **Integration & Ecosystem** 🔗 | Excels with 7,000+ third-party integrations (Google, AWS, Salesforce, etc.) | Best suited for Microsoft environments (Azure, Office 365) |
-| **Pricing & Scalability** 💰 | Per-user pricing can add up but offers a tailored IAM solution | Often bundled with Microsoft 365, making it cost-effective for existing Microsoft users |
+| **Pricing & Scalability** 💰 | While Okta's per-user pricing can become expensive at scale, it offers a highly tailored IAM solution. | Often bundled with Microsoft 365, making it cost-effective for existing Microsoft users |
 
 ### Best Use Cases
 - **Use Okta if:** You need a cloud-agnostic IAM solution with deep third-party integrations.
 - **Use Microsoft Entra ID (Azure AD) if:** Your business is heavily invested in Microsoft services and Windows infrastructure.
 
-## SuperTokens – The Open-Source Alternative
+## SuperTokens &mdash; The Open-Source Alternative
 
 ### Why Consider SuperTokens?
 SuperTokens is an open-source, developer-friendly solution for managing user authentication. Unlike services like Okta or Azure AD, SuperTokens gives you complete control by allowing you to self-host it on your own infrastructure. Here’s why it’s worth considering:
@@ -100,12 +100,12 @@ SuperTokens is an open-source, developer-friendly solution for managing user aut
 SuperTokens is built with developers in mind. Its lightweight design makes it easy to integrate, customize, and maintain. Plus, since it's open-source, you can inspect the code, contribute to improvements, and avoid unexpected costs.
 
 #### 🔓 No Vendor Lock-In
-With SuperTokens, you're not tied to a specific provider. You can design your own authentication flows, customize the user experience, and adapt it to your project’s unique needs — all without relying on a third-party platform.
+With SuperTokens, you're not tied to a specific provider. You can design your own authentication flows, customize the user experience, and adapt it to your project’s unique needs &mdash; all without relying on a third-party platform.
 
 #### 🛡️ Greater Control Over Security & Sessions
 SuperTokens offers more flexibility when it comes to managing security and user sessions. Because you control the hosting, you can fine-tune security settings, session lifetimes, and data storage to align with your company’s policies.
 
-If you’re looking for an affordable, flexible alternative to traditional IAM providers, SuperTokens could be the right fit. You can also explore other open source alternative in our guide -- [**Top Open Source Identity Management Systems**](https://supertokens.com/blog/open-source-identity-management)
+If you’re looking for an affordable, flexible alternative to traditional IAM providers, SuperTokens could be the right fit. You can also explore other open-source alternative in our guide &mdash; [**Top Open Source Identity Management Systems**](https://supertokens.com/blog/open-source-identity-management)
 
 ## Final Verdict – Which IAM Solution Should You Choose?
 Choosing the right identity and access management (IAM) solution depends on your company's needs:
