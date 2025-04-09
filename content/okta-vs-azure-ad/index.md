@@ -43,7 +43,7 @@ In this guide we are going over Okta Platform which is Okta's IAM solution for s
 - **Single Sign On** &mdash; One username, one password, and you’re in! Employees can access everything they need from one handy dashboard, no matter what device they’re using.
 - **Adaptive Multi-Factor Authentication** &mdash; Extra security that’s smart. Depending on things like where you’re logging in from, it might ask for a second step — like confirming on your phone or scanning your fingerprint.
 - **Identity Governance** &mdash; Think of this as organized access control. It makes sure people only get access to what they actually need — and keeps track of it all for security peace of mind.
-- **Privileged Access** &mdash; Some accounts need extra protection. Protects your most sensitive accounts by giving higher-level controls to admins and limiting access to critical systems.
+- **Privileged Access** &mdash; Some accounts need extra protection. Provides additional safeguards for sensitive accounts by granting higher-level controls to administrators and limiting access to critical systems.
 - **Identity Threat Protection** &mdash; Detects suspicious activity, like unusual login attempts, and takes steps to block threats before they cause harm.
 - **Lifecycle Management** &mdash; Automates user account creation and removal, so when employees join, switch roles, or leave, their access updates automatically.
 - **Extensive App Integrations** &mdash; Connects seamlessly with over 7,000 pre-built app integrations, making it easy to link Okta with the tools your team already uses.
