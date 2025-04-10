@@ -17,7 +17,7 @@ Multi-factor authentication has become a standard security recommendation, but n
 
 ### SIM Swapping: When Your Phone Number Betrays You
 
-This attack occurs when bad actors convince mobile carriers to transfer a victim's phone number to a device they control. Once successful, they can intercept SMS-based verification codes meant for the legitimate user. In 2022, CEO of Transform Ventures Michael Terpin [won a $75 million lawsuit against a SIM-swapping perpetrator who stole millions in digital assets](https://commsrisk.com/the-story-of-a-24mn-sim-swap/) by hijacking his phone number. 
+This attack occurs when bad actors convince mobile carriers to transfer a victim's phone number to a device they control. Once successful, they can intercept SMS-based verification codes meant for the legitimate user. This isn't some obscure practice either, in 2022 CEO of Transform Ventures Michael Terpin [won a $75 million lawsuit against a SIM-swapping perpetrator who stole millions in digital assets](https://commsrisk.com/the-story-of-a-24mn-sim-swap/) by hijacking his phone number. 
 
 ### Phishing For Credentials 
 
@@ -51,23 +51,23 @@ Let's get started with a robust implementation that will protect your users from
 
 ## **Step 1 – Setting Up SuperTokens for Authentication**
 
-* Installing SuperTokens Core and Backend SDK. More details about Core service and SDKs can be found out our docs \- [here](https://supertokens.com/docs/quickstart/introduction)
+* Installing SuperTokens Core and Backend SDK. More details about the Core service and SDKs can be found at the Supertokens docs \- [here](https://supertokens.com/docs/quickstart/introduction)
 
   `npx create-supertokens-app@latest --recipe=emailpassword`
 
-* Once everything has finished installing `cd` into the new project directory and run `npm start`. Visit [`http://localhost:3000/auth`](http://localhost:3000/auth) in your browser to see the demo app working. 
+* Once everything has finished installing `cd` into the new project directory and run `npm start`. Visit [`http://localhost:3000/auth`](http://localhost:3000) in your browser to see the demo app working. 
 
 ## **Step 2 – Enabling WebAuthn for Passwordless, Phishing-Resistant MFA**
 
 ### Why WebAuthn? 
 
-Phishing remains one of the most effective attack vectors against traditional authentication. WebAuthn counters this by binding authentication directly to the user's device through public-key cryptography.When users register with WebAuthn, their device generates a unique key pair for that service. The private key never leaves the device, while the public key is stored on the server. During authentication, the server sends a challenge only the correct private key can sign.
+Phishing remains one of the most effective attack vectors against traditional authentication. WebAuthn counters this by binding authentication directly to the user's device through public-key cryptography. When users register with WebAuthn, their device generates a unique key pair for that service. The private key never leaves the device, while the public key is stored on the server. During authentication, the server sends a challenge only the correct private key can sign.
 
 The critical phishing protection comes from origin binding \- the browser ensures authentication requests can only come from the exact domain that registered the credential. Even perfect site clones at different URLs will fail because the origins don't match. For developers, this means implementing authentication that protects users regardless of their susceptibility to phishing attempts.
 
 ### How WebAuthn works
 
-WebAuthn creates a secure authentication framework built on asymmetric cryptography. Instead of storing shared secrets like passwords on servers, it employs public-private key pairs. When users register, their device generates these unique keys—the private key remains secured on the device while the public key is stored on the server.The absence of passwords eliminates common vulnerabilities like credential stuffing, password spraying, and database breaches. There's simply no password to steal, reuse, or crack, removing entire categories of attacks from consideration.
+WebAuthn creates a secure authentication framework built on asymmetric cryptography. Instead of storing shared secrets like passwords on servers, it employs public-private key pairs. When users register their device generates these unique keys - the private key remains secured on the device while the public key is stored on the server.The absence of passwords eliminates common vulnerabilities like credential stuffing, password spraying, and database breaches. There's simply no password to steal, reuse, or crack, removing entire categories of attacks from consideration.
 
 User verification happens locally on the device through either biometrics (fingerprints, facial recognition) or hardware security keys. This verification proves the legitimate user is present without transmitting biometric data to the server. The local device handles all sensitive verification, then cryptographically signs the authentication challenge using the private key only after successful verification.
 
@@ -145,7 +145,7 @@ export const ComponentWrapper = (props: { children: JSX.Element }): JSX.Element 
 </details>
 
 
-Now we’ll update the backend. Find the config.ts file located in `/backend/config.ts`, and Import WebAuthn from the recipe
+Now we’ll update the backend. Find the `config.ts` file located in `/backend/config.ts`, and Import WebAuthn from the recipe
 
 <details><summary>Backend config.tsx</summary>
 
@@ -996,4 +996,4 @@ The combination of SuperTokens' flexible architecture, WebAuthn's cryptographic 
 
 As phishing attacks continue to evolve in sophistication, this implementation ensures your authentication system remains resilient against current and future threats.
 
-### 
+###
