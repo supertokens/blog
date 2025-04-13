@@ -1,40 +1,11 @@
 ---
-title:  "How to Use Lambda Authorizers to Secure Your API Gateway"
+title: "How to Use Lambda Authorizers to Secure Your API Gateway"
 date: "2025-04-01"
 description: "Learn how to secure your API Gateway using Lambda Authorizers with JWT. Discover setup tips, best practices, and integration steps for robust API security."
 cover: 
 category: "programming"
-author: "Joel Coutinho"
+author: "Nick Babic"
 ---
-
-## Table of Content
-
-- [How to Use Lambda Authorizers to Secure Your API Gateway](#how-to-use-lambda-authorizers-to-secure-your-api-gateway)
-- [What Is a Lambda Authorizer?](#what-is-a-lambda-authorizer)
-- [Why Use Lambda Authorizers?](#why-use-lambda-authorizers)
-- [Setting Up a Lambda Authorizer for API Gateway](#setting-up-a-lambda-authorizer-for-api-gateway)
-  - [Creating a Lambda Function](#creating-a-lambda-function)
-  - [Configuring API Gateway](#configuring-api-gateway)
-  - [Testing the Authorizer](#testing-the-authorizer)
-- [Using JWT with Lambda Authorizers](#using-jwt-with-lambda-authorizers)
-  - [How JWT Works](#how-jwt-works)
-  - [Validating JWT in Lambda Authorizers](#validating-jwt-in-lambda-authorizers)
-- [Enhancing Security with SuperTokens and Lambda Authorizers](#enhancing-security-with-supertokens-and-lambda-authorizers)
-  - [What Is SuperTokens?](#what-is-supertokens)
-  - [Integrating SuperTokens with Lambda Authorizers](#integrating-supertokens-with-lambda-authorizers)
-- [Best Practices for Using Lambda Authorizers](#best-practices-for-using-lambda-authorizers)
-  - [Performance Considerations](#performance-considerations)
-  - [Security Recommendations](#security-recommendations)
-- [Troubleshooting Common Issues with Lambda Authorizers](#troubleshooting-common-issues-with-lambda-authorizers)
-  - [Debugging Authentication Failures](#debugging-authentication-failures)
-  - [Handling API Gateway Errors](#handling-api-gateway-errors)
-- [Comparison: Lambda Authorizers vs. AWS Cognito](#comparison-lambda-authorizers-vs-aws-cognito)
-  - [When to Choose Lambda Authorizers](#when-to-choose-lambda-authorizers)
-  - [When to Choose AWS Cognito](#when-to-choose-aws-cognito)
-- [Conclusion](#conclusion)
-
-
-# How to Use Lambda Authorizers to Secure Your API Gateway
 
 If you’re building microservices, serverless apps, or cloud-native systems, securing your APIs isn’t optional—it’s survival. Imagine your API as a nightclub. Without a bouncer, anyone can waltz in, steal your drinks, and crash the party. That’s where AWS API Gateway and its trusty sidekick, Lambda Authorizers, come in.
 
