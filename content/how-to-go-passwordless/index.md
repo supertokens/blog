@@ -38,20 +38,19 @@ At its core, **passwordless authentication** is exactly what it sounds like: any
 If you're looking for a deeper dive into this topic, check out our article ["What Is Passwordless Authentication"](https://supertokens.com/blog/what-is-passwordless-authentication) for more comprehensive information.
 
 ### Why Passwordless Login Is a Game-Changer (And How It Helps You)
-Passwordless authentication
+* **Enhanced security** &mdash; Eliminates weak password vulnerabilities by using cryptographic keys or biometrics instead.
+* **Phishing Resistance** &mdash; With no passwords to steal, phishing attacks become much less effective. That said, not all passwordless authentication methods are created equal &mdash; some are still susceptible to phishing attacks, but removing passwords generally makes phishing much harder.
+* **User-Friendly** &mdash; This is hands down my favorite perk. Every time I discover a new app and don't have to set up yet another password, it feels like a little birthday present and I am much more likely to try out a new application. 🎁
+* **Cost Efficiency** &mdash; Passwords are expensive because users forget them constantly. According to [**NordPass**](https://nordpass.com/blog/how-many-passwords-does-average-person-have/), the average person has more than 160 passwords. I checked my own password manager &mdash;I have 442 passwords 🤯. How did that happen?
+* **Better Scalability** &mdash; Easily accommodates growth without the typical password-reset headaches when adding users or applications.
 
-* **Improved security** &mdash; Passwordless authentication eliminates the risk of weak or reused passwords, making it much harder for attackers to gain unauthorized access. By relying on cryptographic keys or biometrics, it significantly reduces common vulnerabilities.
-* **Reduced phishing risks** &mdash; Since there’s no password to steal, phishing attacks become far less effective. Even if an attacker tries to trick you into revealing login details, there’s simply nothing for them to capture.
-* **Enhanced user convenience** &mdash; As a user, this is hands down my favorite perk. Every time I come across an exciting new app and realize I don’t have to set up yet another password, it feels like a little birthday present. 🎁
-* **Reduced IT costs** &mdash; Passwords are expensive because users forget them and businesses need to store and maintain password databases. According to a [**survey conducted by NordPass**](https://nordpass.com/blog/how-many-passwords-does-average-person-have/), the average person has more than 160 passwords. Just for fun, I checked my own password manager to see how many I have &mdash; I have 442 passwords 🤯. I have no idea how that happened.
-* **Scalability** &mdash; Passwordless systems are generally easier to scale across growing organizations. As you add more users or applications, you don't face the exponential growth in password management issues. The same authentication infrastructure can handle increasing numbers of users without the corresponding increase in password reset tickets, account lockouts, or security vulnerabilities that traditionally come with expansion.
+### Challenges and Considerations in Going Passwordless
+Life is all about balance &mdash; and passwordless login is no exception. While ditching passwords sounds like a dream, it’s not all sunshine and seamless logins. Before making the switch, it's worth knowing the potential pitfalls so you can plan your authentication strategy accordingly. ⚖️
 
-### Drawbacks of Passwordless Login and How to Overcome Them
-Life is all about balance &mdash; and passwordless login is no exception. While ditching passwords sounds like a dream, it’s not all sunshine and seamless logins. Before making the switch, it’s worth knowing the potential pitfalls so you can keep your authentication as secure as possible. 🔒✨
-
-* **Implementation costs** &mdash; 
-* **Training and expertise needed** &mdash; 
-* **Single point of failure** &mdash; 
+Transitioning to passwordless authentication brings several hurdles worth planning for: 
+* **Implementation costs** can be significant, requiring investments in new infrastructure, integration work, and staff training. 
+* **User adaptation** presents another challenge, as people are creatures of habit who may resist unfamiliar login methods despite their benefits. 
+* Additionally, organizations must carefully **design account recovery processes** that maintain security without falling back on password-based vulnerabilities, ensuring users can regain access when they lose devices or biometric authentication fails.
 
 ## 🛠️ Common Passwordless Authentication Methods 
 Let's go more in-depth of some of the most common passworldess authentication methods you have available as your options.
@@ -445,11 +444,6 @@ Highlighting benefits such as customization, scalability, and enhanced security
 2. **Fallback mechanism** &mdash; Provide alternative authentication methods in case of issues. 
 3. **Regular Audits** &mdash; Conduct periodic security assessments of the authentication system. 
 4. **Compliance** &mdash; Ensure adherence to relevant regulations and standards. 
-
-## 🛡️ Challenges and Considerations in Going Passwordless
-Implementation Costs: Discuss potential expenses associated with transitioning to passwordless systems.​
-User Adaptation: Address the learning curve and user acceptance challenges.​
-Recovery Options: Explore strategies for account recovery without traditional passwords.​
 
 ## 🔮 Future Trends in Passwordless Authentication
 Emerging Technologies: Examine advancements like passkeys and their impact on authentication.​ AP News, 1Google for Developers
