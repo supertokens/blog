@@ -23,6 +23,9 @@ toHeading: 3
 ```
 
 ## 🙅 Why Passwords Just Don't Cut It Anymore
+
+![A cartoon gif of a man spilling out his passwords from his brain and feeding them all to his laptop](william-garrat-gif.gif)
+
 Let's face it &mdash; most of us struggle with creating strong passwords. We reuse them, forget them, and often default to simple options like 123456 or our pet's name 🐶. And while your beloved dog might be a treasure to your family, their name simply isn't secure &mdash; unless they happen to be named something like xT5!9pL@3qR& 🤓.
 
 Even with password managers, the challenges persist &mdash; for both users juggling [hundreds of logins](https://nordpass.com/blog/how-many-passwords-does-average-person-have/) and developers handling endless password resets, security breaches, and support requests.
