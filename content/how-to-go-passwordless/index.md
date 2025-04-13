@@ -7,11 +7,11 @@ category: "featured"
 author: "Maria Shimkovska"
 ---
 
-I am a firm believer that New Year's should not be the only time we set resolutions for the upcoming year. Every day we wake up is another opportunity to make improvements by setting up new goals. 🤗 🌅
+I am a firm believer that New Year's shouldn't be the only time we set resolutions. Every day we wake up offers a fresh opportunity to improve by establishing new goals. 🤗 🌅
 
-If you are here because your new goal is to go passwordless, but are unsure how to get started, no worries &mdash; this guide has you covered. 
+If you're here because going passwordless is your new objective, but you're unsure how to begin, don't worry &mdash; this guide has you covered. 
 
-From **logging into accounts**, to **securing infrastructure with SSH**, to **simplifying access across devices** &mdash; we'll show you how to make passwords a thing of the past 🔐✨
+Whether you're looking to **transform how you log into accounts**, **secure your infrastructure with SSH**, or **simplify access across all your devices** &mdash; we'll show you how to make passwords a thing of the past 🔐✨
 
 Let's dive in! 🚀 
 
@@ -22,18 +22,20 @@ tight: true
 toHeading: 3
 ```
 
-## 🔐 Why Passwords Just Don't Cut It Anymore
-Let's face it &mdash; most of us aren't great at creating strong passwords. We reuse them, forget them, and often go for easy-to-remember ones like *123456* or our pet's name 🐱. And while your beloved pet is the family favorite, their name is just not that secure &mdash; *unless their name is a combination of at least 12 random letters, numbers, and special characters* 🤓.
+## 🙅 Why Passwords Just Don't Cut It Anymore
+Let's face it &mdash; most of us struggle with creating strong passwords. We reuse them, forget them, and often default to simple options like 123456 or our pet's name 🐶. And while your beloved dog might be a treasure to your family, their name simply isn't secure &mdash; unless they happen to be named something like xT5!9pL@3qR& 🤓.
 
-Even with tools like password managers, the struggle is real &mdash; both for users and developers dealing with constant resets, breaches, and support headaches.
+Even with password managers, the challenges persist &mdash; for both users juggling [hundreds of logins](https://nordpass.com/blog/how-many-passwords-does-average-person-have/) and developers handling endless password resets, security breaches, and support requests.
 
-The good news? There's a better way: **passwordless authentication**, which conveniently is the topic of our next section. 😉
+The good news? There's a better approach: **passwordless authentication**, which conveniently brings us to our next section. 😉
 
-## 🧠 Understanding Passwordless Authentication
-This section explains what passwordless authentication is, along with its pros and cons, so you can make an informed choice.
+## 📖 Understanding Passwordless Authentication
+This section explores the concept of passwordless authentication, its advantages, and its limitations. Before fully committing to this approach, it's important to understand both its strengths and potential drawbacks to make an informed decision for your security needs.
 
 ### What *is* Passwordless Authentication 🤔
-It's pretty simple really, nothing fancy. **Passwordless authentication** is any process that allows users to log in **without using a password** (e.g., biometrics, magic links, OTPs, hardware tokens, or PKIs). 
+At its core, **passwordless authentication** is exactly what it sounds like: any method that lets users securely access their accounts without typing in a traditional password. Instead, you might use your fingerprint, receive a one-time link via email, enter a temporary code from your phone, plug in a physical security key, or use cryptographic keys working quietly in the background.
+
+If you're looking for a deeper dive into this topic, check out our article ["What Is Passwordless Authentication"](https://supertokens.com/blog/what-is-passwordless-authentication) for more comprehensive information.
 
 ### Why Passwordless Login Is a Game-Changer (And How It Helps You)
 Passwordless authentication
@@ -42,7 +44,7 @@ Passwordless authentication
 * **Reduced phishing risks** &mdash; Since there’s no password to steal, phishing attacks become far less effective. Even if an attacker tries to trick you into revealing login details, there’s simply nothing for them to capture.
 * **Enhanced user convenience** &mdash; As a user, this is hands down my favorite perk. Every time I come across an exciting new app and realize I don’t have to set up yet another password, it feels like a little birthday present. 🎁
 * **Reduced IT costs** &mdash; Passwords are expensive because users forget them and businesses need to store and maintain password databases. According to a [**survey conducted by NordPass**](https://nordpass.com/blog/how-many-passwords-does-average-person-have/), the average person has more than 160 passwords. Just for fun, I checked my own password manager to see how many I have &mdash; I have 442 passwords 🤯. I have no idea how that happened.
-* **Scalability** &mdash;
+* **Scalability** &mdash; Passwordless systems are generally easier to scale across growing organizations. As you add more users or applications, you don't face the exponential growth in password management issues. The same authentication infrastructure can handle increasing numbers of users without the corresponding increase in password reset tickets, account lockouts, or security vulnerabilities that traditionally come with expansion.
 
 ### Drawbacks of Passwordless Login and How to Overcome Them
 Life is all about balance &mdash; and passwordless login is no exception. While ditching passwords sounds like a dream, it’s not all sunshine and seamless logins. Before making the switch, it’s worth knowing the potential pitfalls so you can keep your authentication as secure as possible. 🔒✨
