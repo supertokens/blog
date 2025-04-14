@@ -1,5 +1,5 @@
 ---
-title: "Thinking About Going Passwordless? Here's How To Do It Right 🔑"
+title: "Thinking About Going Passwordless? Here's How To Do It Right - Part 2: Secure SSH Without Passwords"
 date: "2025-03-30"
 description: "Explore the steps to adopt passwordless authentication, understand its benefits, and learn how solutions like SuperTokens facilitate secure, password-free logins.​"
 cover: ""
@@ -36,12 +36,12 @@ The good news? There's a better approach: **passwordless authentication**, which
 This section explores the concept of passwordless authentication, its advantages, and its limitations. Before fully committing to this approach, it's important to understand both its strengths and potential drawbacks to make an informed decision for your security needs.
 
 ### What *is* Passwordless Authentication 🤔
-At its core, **passwordless authentication** is exactly what it sounds like: any method that lets users securely access their accounts without typing in a traditional password. Instead, you might use your fingerprint, receive a one-time link via email, enter a temporary code from your phone, plug in a physical security key, or use cryptographic keys working quietly in the background.
+At its core, **passwordless authentication** is exactly what it sounds like: any method that lets users securely access their accounts without typing in a traditional password. Instead, a user might use their fingerprint, receive a one-time link via email, enter a temporary code from their phone, plug in a physical security key, or use cryptographic keys working quietly in the background.
 
 If you're looking for a deeper dive into this topic, check out our article ["What Is Passwordless Authentication"](https://supertokens.com/blog/what-is-passwordless-authentication) for more comprehensive information.
 
-### Why Passwordless Login Is a Game-Changer (And How It Helps You)
-* **Enhanced security** &mdash; Eliminates weak password vulnerabilities by using cryptographic keys or biometrics instead.
+### Why Passwordless Is a Game-Changer 
+* **Enhanced security** &mdash; Eliminates weak password vulnerabilities by removing the weakest link in authentication, human error like forgetting passwords or setting weak ones. 
 * **Phishing Resistance** &mdash; With no passwords to steal, phishing attacks become much less effective. That said, not all passwordless authentication methods are created equal &mdash; some are still susceptible to phishing attacks, but removing passwords generally makes phishing much harder.
 * **User-Friendly** &mdash; This is hands down my favorite perk. Every time I discover a new app and don't have to set up yet another password, it feels like a little birthday present and I am much more likely to try out a new application. 🎁
 * **Cost Efficiency** &mdash; Passwords are expensive because users forget them constantly. According to [**NordPass**](https://nordpass.com/blog/how-many-passwords-does-average-person-have/), the average person has more than 160 passwords. I checked my own password manager &mdash;I have 442 passwords 🤯. How did that happen?
@@ -201,7 +201,12 @@ Leveraging cryptographic key pairs for secure authentication
 
 ## 🖥️ Implementing SSH Passwordless Login 
 
-**SSH (Secure Shell)** is a network protocol that allows users to securely access a computer over an unsecured network.
+**SSH (Secure Shell)** is a network protocol that allows users to securely access a computer over an unsecured network like the internet. It was designed as a replacement for older, insecure protocols like [Telnet and rsh (remote shell)](https://www.techtarget.com/searchsecurity/definition/Secure-Shell).
+
+SSH allows you to log onto another computer over a network, execute commands on that remote machines, and move files between computers. All communication between the client and server is encrypted, protecting your data from eavesdropping and Man-in-the-Middle attacks [(sometimes also called Monster-in-the-Middle attacks)](https://www.techtarget.com/iotagenda/definition/man-in-the-middle-attack-MitM).
+
+### SSH Authentication
+You can authenticate through SSH using a password or by using a passwordless approach by using cryptographic key pairs. 
 
 Here is how connecting to a remote server works using a password: 
 ![alt text](image-1.png)
