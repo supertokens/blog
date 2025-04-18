@@ -6,6 +6,7 @@ on:
     paths:
       - "src/**"
       - "content/**"
+      - "static/**"
   push:
     branches:
       - master
