@@ -7,19 +7,25 @@ category: "programming"
 author: "Maria Shimkovska"
 ---
 
-## Clerk + Supabase: How to Build Secure Authentication in Your App 
+Combining Supabase with Clerk allows you to take advantage of both Supabase's powerful database capabilities and Clerk's authentication features, prebuilt components, and webhooks. 
 
-Combining Supabase with Clerk allows you to take advantage of both Supabase's powerful database capabilities and Clerk's authentication features, prebuilt components, and webhooks. In this guide we are going over the fundamentals of Clerk and Supabase, show you how to use them together to build an application, discuss the pros and cons of using Clerk for your authentication needs, and then talk about an exciting alternative. 
+In this guide we are going to: 
+* 📘 Go over the fundamentals of Clerk and Supabase
+* 🛠 Show you how to use them together to build an application
+* ⚖️ Discuss the pros and cons of using Clerk for your authentication needs
+* 🚀 Talk about an exciting alternative. 
+
+Before we dive in, here’s a quick video demo of the app we’ll be building—starting with no authentication or persistence, just to show the baseline experience.
+
+🧜‍♀️ The app is a [MermaidJS](https://github.com/mermaid-js/mermaid) visualizer, where you can write Mermaid code to generate graphs, and eventually save them once we add persistence.
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe id="js_video_iframe" src="https://jumpshare.com/embed/YOpxWr5WU4Hc9T2JEAXY" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"></iframe></div>
 
 ## 🧩 What is Clerk? 
-
-**[Will ask nevil for an image here for Clerk]**
 
 [**Clerk**](https://clerk.com/) is a platform that simplifies user management for developers by providing ready-made sign-in and user management UI components, saving time and enhancing the user experience. It offers tools to easily add authentication and multi-tenancy to your app, with customizable login and signup forms, giving you full control over the sign-in process to build powerful SaaS applications.
 
 ## What is Supabase? 
-
-**[Will ask nevil for an image here for Supabase]**
 
 Supabase is an **open-source backend platform** that makes it easy for developers to build powerful applications. It provides a **PostgreSQL database**, **real-time capabilities**, and **auto-generated API**s, so you can focus on your app without worrying about backend complexity.
 
@@ -30,8 +36,6 @@ Supabase is an **open-source backend platform** that makes it easy for developer
   - Choose an application name (e.g., Book Wishlist)
   - Choose your sign in option (e.g., check email box and Google box)
   - Click **Create application** button &rarr; This will customize and create your **`<SignIn />`** drop-in component
-
-![alt text](image.png)
 
 3. Take a breather and explore the dashboard -- especially if this is your first time seeing it. 
 4. In the **Overview** tab, select Next.js and follow the setup steps to add Clerk and sign up your first user.
@@ -95,8 +99,6 @@ export default function RootLayout({
 }
 ```
 6. **Create your first user:** Run your project using `npm run dev` and then visit your app's homepage at `http://localhost:3000` to sign up your first user. 🎉 🥳 🎊
-
-![alt text](image-6.png)
 
 7. Replace the code in the page.tsx file with the one below. This will be the wishlist of each user. And each wishlist will be unique and only visible to the authenticated user. 
 
@@ -171,8 +173,6 @@ export default function Home() {
 ```
 
 Now when you go to localhost:3000 you will see the following (if you are authenticated)
-
-![alt text](image-7.png)
 
 You can now add a book title and the author in the list, but the data will not persist. As soon as you reload the page or sign out, all the data will be lost. We need a database to be able to save it to and here is where we will integrate Supabase with Clerk so our users can save their lists even if they log out or refresh the data. 
 
@@ -353,8 +353,6 @@ Users should only be able to access data that belongs to them.
 
 #### Step 1: Create your project
 
-![alt text](image-2.png)
-
 - Choose a name for your project. If you want to follow along with this guide name it Book Wishlist -- which is what this app would be. 
 - For the password we want something strong so that the database is protected. Supabase has a Generate a password button. Click that button to generate a random password and make sure to save your password somewhere secure. Ideally in a password manager. 
 - You can leave the region as is, or pick a region that is closer to where you are (or where your users would be). In this example I am picking West US. 
@@ -366,8 +364,6 @@ When you first create the project you will see a loading Project Status while yo
 
 When it is done -- in about a minute or so -- you should see all the checks come out healthy like so: 
 
-![alt text](image-5.png)
-
 Now your project has all been set up with its own Postgres database and its own API all set up and ready for you to use. How exciting!
 
 Take a minute to explore what you see. If this is your first time seeing this dashboard it's normal to feel a bit overwhelmed because it's new. Supabase's dashboard however looks pretty clean. 
@@ -377,8 +373,6 @@ You have three options regarding your database:
 - A visual table editor if you prefer a visual approach to building out your database 
 - a SQL editor if writing SQL queries is your jam. 
 - A link where you can learn about teh Postgres database so you are not lost, or if you are, you can find all the information you need. 
-
-![alt text](image-3.png)
 
 If you scroll further down, Supabase shows you some of the other products they offer -- **Authentication**, **Storage**, **Edge Functions**, **Real Time** -- but we are just using the database functionality here because we are integrating Clerk for the authentication part. 
 
@@ -705,9 +699,6 @@ Download and run an example Next.js app quickly using the following command:
 ```bash
 npx create-supertokens-app@latest --frontend=next --recipe=emailpassword
 ```
-
-![alt text](image-4.png)
-
 ## Sources: 
 * [**Open Source Auth with login and secure sessions**](https://supabase.com/partners/integrations/supertokens)
 * [**Clerk and Supabase**](https://supabase.com/partners/integrations/clerk)
