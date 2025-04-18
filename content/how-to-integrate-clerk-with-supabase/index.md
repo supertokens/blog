@@ -1,6 +1,6 @@
 ---
 title: "How to Integrate Clerk with Supabase (+ One Better Choice)"
-date: "2025-03-11"
+date: "2025-04-18"
 description: "Learn how to seamlessly integrate Clerk's authentication with Supabase's database services to enhance user management and security in your applications."
 cover: ""
 category: "programming"
@@ -9,25 +9,32 @@ author: "Maria Shimkovska"
 
 Combining Supabase with Clerk allows you to take advantage of both Supabase's powerful database capabilities and Clerk's authentication features, prebuilt components, and webhooks. 
 
-In this guide we are going to: 
+In this guide, we are going to: 
 * 📘 Go over the fundamentals of Clerk and Supabase
 * 🛠 Show you how to use them together to build an application
 * ⚖️ Discuss the pros and cons of using Clerk for your authentication needs
-* 🚀 Talk about an exciting alternative. 
+* 🤗 Talk about an exciting alternative. 
 
 Before we dive in, here’s a quick video demo of the app we’ll be building—starting with no authentication or persistence, just to show the baseline experience.
 
-🧜‍♀️ The app is a [MermaidJS](https://github.com/mermaid-js/mermaid) visualizer, where you can write Mermaid code to generate graphs, and eventually save them once we add persistence.
+🧜‍♀️ The app is a [**MermaidJS**](https://github.com/mermaid-js/mermaid) visualizer, where you can write Mermaid code to generate graphs, and eventually save them once we add persistence.
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe id="js_video_iframe" src="https://jumpshare.com/embed/YOpxWr5WU4Hc9T2JEAXY" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"></iframe></div>
 
 ## 🧩 What is Clerk? 
 
-[**Clerk**](https://clerk.com/) is a platform that simplifies user management for developers by providing ready-made sign-in and user management UI components, saving time and enhancing the user experience. It offers tools to easily add authentication and multi-tenancy to your app, with customizable login and signup forms, giving you full control over the sign-in process to build powerful SaaS applications.
+[**Clerk**](https://clerk.com/) is a developer-friendly authentication service that helps you add sign-up, sign-in, and user management to your app with minimal effort. It comes with prebuilt UI components, robust APIs, and support for modern auth features like social logins, multi-factor authentication, and webhooks.
 
-## What is Supabase? 
+Instead of building your own auth flows from scratch, Clerk lets you plug in secure, customizable components—so you can focus on building your product, not re-inventing login.
 
-Supabase is an **open-source backend platform** that makes it easy for developers to build powerful applications. It provides a **PostgreSQL database**, **real-time capabilities**, and **auto-generated API**s, so you can focus on your app without worrying about backend complexity.
+## 🗄️ What is Supabase? 
+
+[**Supabase**](https://supabase.com/) is an open-source backend-as-a-service that gives you a full Postgres database, real-time subscriptions, storage, and auth—right out of the box. It’s like Firebase, but with SQL and a developer experience that doesn’t make you want to flip a table. 
+
+With Supabase, you get powerful tools like row-level security, instant APIs, and a slick dashboard—all built on top of technologies you already know and love. It's fast, flexible, and plays really nicely with frameworks like Next.js, React, and more.
+
+Basically, it’s your app’s backend without the backend headaches.
+
 
 ## Setting Up Clerk With Your Application
 **Steps:** 
