@@ -222,6 +222,12 @@
         "location": "https://supertokens.com/blog/flask-user-auth"
     },
     {
+        "location": "https://supertokens.com/blog/multi-factor-authentication-examples"
+    },
+    {
+        "location": "https://supertokens.com/blog/nextauth-alternatives"
+    },
+    {
         "location": "https://supertokens.com/blog/react-user-authentication"
     },
     {
@@ -306,6 +312,9 @@
         "location": "https://supertokens.com/blog/mastering-nextjs-api-routes"
     },
     {
+        "location": "https://supertokens.com/blog/pillars-of-a-ciam-strategy-secure-scale-and-personalize-customer-access"
+    },
+    {
         "location": "https://supertokens.com/blog/risk-based-authentication"
     },
     {
@@ -330,6 +339,9 @@
         "location": "https://supertokens.com/blog/top-8-identity-management-solutions-for-developers-and-businesses"
     },
     {
+        "location": "https://supertokens.com/blog/2fa-services"
+    },
+    {
         "location": "https://supertokens.com/blog/nextjs-metadata"
     },
     {
@@ -343,5 +355,11 @@
     },
     {
         "location": "https://supertokens.com/blog/okta-vs-onelogin"
+    },
+    {
+        "location": "https://supertokens.com/blog/identity-and-access-management-tools"
+    },
+    {
+        "location": "https://supertokens.com/blog/single-sign-on-examples"
     }
 ]
