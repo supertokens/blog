@@ -1,9 +1,9 @@
 ---
 title: "Authelia vs Keycloak: Which One Suits You Best?"
-date: "2025-02-28"
+date: "2025-04-21"
 description: "In today’s world of logins, passwords, and the eternal struggle to remember which one you used where, organizations are on the hunt for single sign-on (SSO) solutions that don’t just work but actually make life easier. Think security that doesn’t buckle under pressure, scalability that grows with you, and integrations that play nice with all your apps and systems—basically, the holy trinity of access control."
-cover: "authelia-alternatives.png"
-category: "listicles, comparison, iam"
+cover: "authelia-vs-keycloak.png"
+category: "iam"
 author: "Dejan Lukic"
 ---
 In today’s world of logins, passwords, and the eternal struggle to remember which one you used where, organizations are on the hunt for single sign-on (SSO) solutions that don’t just work but actually make life easier. Think security that doesn’t buckle under pressure, scalability that grows with you, and integrations that play nice with all your apps and systems—basically, the holy trinity of access control.
