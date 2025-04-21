@@ -3370,6 +3370,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/webhook-vs-api\"\n            },\n            \"headline\": \"Explore the distinctions between webhooks and APIs, their functionalities, and determine the best scenarios for each in your integration strategy.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/webhook-vs-api.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/pillars-of-a-ciam-strategy-secure-scale-and-personalize-customer-access",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore the key elements of a successful CIAM strategy: ensuring security, scalability, and personalized access for your customers. Start optimizing now!\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Pillars of a CIAM Strategy: Secure, Scale & Personalize Customer Access\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/pillars-of-a-ciam-strategy-secure-scale-and-personalize-customer-access\" />",
+            "<meta property=\"og:description\" content=\"Explore the key elements of a successful CIAM strategy: ensuring security, scalability, and personalized access for your customers. Start optimizing now!\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/pillars-of-a-ciam-strategy-secure-scale-&-personalize-customer-access.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore the key elements of a successful CIAM strategy: ensuring security, scalability, and personalized access for your customers. Start optimizing now!\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/pillars-of-a-ciam-strategy-secure-scale-and-personalize-customer-access\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/pillars-of-a-ciam-strategy-secure-scale-&-personalize-customer-access.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/pillars-of-a-ciam-strategy-secure-scale-and-personalize-customer-access\">"
+        ],
+        "title": "Pillars of a CIAM Strategy: Secure, Scale & Personalize Customer Access",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/pillars-of-a-ciam-strategy-secure-scale-and-personalize-customer-access\"\n            },\n            \"headline\": \"Explore the key elements of a successful CIAM strategy: ensuring security, scalability, and personalized access for your customers. Start optimizing now!\",\n            \"image\": \"https://supertokens.com/blog-meta-images/pillars-of-a-ciam-strategy-secure-scale-&-personalize-customer-access.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },    
+      {    
         "path": "/blog/otp-bots",
         "metaTags": [
             "<meta name=\"description\" content=\"Explore how OTP bots bypass two-factor authentication (2FA), their growing threats, and strategies to protect your application using tools like SuperTokens.\" />",
