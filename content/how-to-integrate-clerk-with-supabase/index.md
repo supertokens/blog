@@ -111,7 +111,7 @@ export const config = {
 
 In the `layout.tsx` file, import and initialize Clerk like so:
 
-```javascript
+```javascript{4-11, 34, 39-42, 44-45, 47, 52}
 import { type Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
