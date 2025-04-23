@@ -23,7 +23,9 @@ Before we dive in, here’s a quick video demo of the app we’ll be building on
 
 🧜‍♀️ The app is a [**MermaidJS**](https://github.com/mermaid-js/mermaid) **visualizer**, where you can write Mermaid code to generate graphs, and eventually save them once we add persistence. Without user authentication and a database the charts are visible to everyone and the saved charts disappear once we reload. 
 
+
 ![alt text](image.png)
+
 
 We’ll be combining the strengths of both Clerk and Supabase to bring the app to life:
 * 🔐 Clerk will handle authentication and user management, so people can sign up, log in, and have their own accounts.
