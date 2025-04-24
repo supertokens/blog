@@ -1,8 +1,8 @@
 ---
 title: "What is Cloud-Based Authentication? A Detailed Guide"
 description: "Cloud-based authentication refers to verifying user identities (often leveraging identity and access management, or IAM) and granting user access through services hosted offsite—often by dedicated identity providers—rather than keeping everything locked down on your own physical on-premises servers. This fundamental shift spares organizations from the headaches of provisioning hardware, configuring security solutions, and maintaining on-prem infrastructure. It also allows you to tap into more sophisticated authentication methods (like multi-factor authentication (MFA) or passwordless approaches) without massive up-front investments or complex, in-house integrations."
-date: "2025-02-24"
-cover: "cloud-based-auth.png"
+date: "2025-04-15"
+cover: "cloud-based-authentication.png"
 category: "featured"
 author: "Dejan Lukic"
 ---
