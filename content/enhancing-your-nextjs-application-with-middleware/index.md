@@ -1,6 +1,6 @@
 ---
 title: "Enhancing Your Next.js Application with Middleware"
-date: "2025-03-12"
+date: "2025-04-12"
 description: "Transform your Next.js app with middleware! Learn essential strategies to enhance functionality and streamline your development process today."
 cover: "enhancing-your-nextjs-application-with-middleware.png"
 category: "programming"
