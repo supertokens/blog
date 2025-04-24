@@ -7,8 +7,6 @@ category: "programming, mfa"
 author: "Maurice Saldivar"
 ---
 
-# Implementing Phishing-Resistant MFA: Hands-On Developer Guide
-
 ## Why Traditional Multi-Factor Authentication (MFA) Is No Longer Enough 
 
 Multi-factor authentication has become a standard security recommendation, but not all MFA implementations are created equal. Traditional MFA methods, despite adding a security layer beyond passwords, contain critical vulnerabilities that sophisticated attackers regularly exploit. Traditional MFA methods \- SMS codes, authenticator apps with time-based one-time passwords (TOTPs), and even email verification have proven vulnerable to sophisticated phishing attacks.
@@ -17,7 +15,7 @@ Multi-factor authentication has become a standard security recommendation, but n
 
 ### SIM Swapping: When Your Phone Number Betrays You
 
-This attack occurs when bad actors convince mobile carriers to transfer a victim's phone number to a device they control. Once successful, they can intercept SMS-based verification codes meant for the legitimate user. This isn't some obscure practice either, in 2022 CEO of Transform Ventures Michael Terpin [won a $75 million lawsuit against a SIM-swapping perpetrator who stole millions in digital assets](https://commsrisk.com/the-story-of-a-24mn-sim-swap/) by hijacking his phone number. 
+This attack occurs when bad actors convince mobile carriers to transfer a victim's phone number to a device they control. Once successful, they can intercept SMS-based verification codes meant for the legitimate user. This isn't some obscure practice either, in 2022 CEO of Transform Ventures Michael Terpin [won a $75 million lawsuit against a SIM-swapping perpetrator who stole millions in digital assets](https://commsrisk.com/the-story-of-a-24mn-sim-swap/) by hijacking his phone number. More information can be found on our dedicated [SIM Swapping Post](https://supertokens.com/blog/sim-swapping).  
 
 ### Phishing For Credentials 
 
