@@ -28,8 +28,8 @@ Before we dive in, here’s a quick video demo of the app we’ll be building on
 
 
 We’ll be combining the strengths of both Clerk and Supabase to bring the app to life:
-* 🔐 Clerk will handle authentication and user management, so people can sign up, log in, and have their own accounts.
-* 🗄️ Supabase will store each user’s charts and make sure they’re linked to their accounts—so users only see their saved graphs, not anyone else’s.
+1. 🔐 Clerk will handle authentication and user management, so people can sign up, log in, and have their own accounts.
+2. 🗄️ Supabase will store each user’s charts and make sure they’re linked to their accounts—so users only see their saved graphs, not anyone else’s.
 
 By the end, we’ll go from a simple, ephemeral demo to a fully authenticated app with persistent, user-specific data. Let’s get into it 👇
 
@@ -337,6 +337,144 @@ create policy "Users can delete their own charts"
   USING (user_id = current_setting('request.jwt.claims', true)::json->>'sub');
 ```
 
+## SuperTokens Instead of Clerk 
+
+Supertokens is an open source authentication solutions which provides many strategies for authenticating and managing users. You can use the managed services for eas setup or you can self host the solution to have complete control over your data. 
+
+With SuperTokens, Supabase can be used to store and authorize access to user data. 
+
+Step 1: Create a new Supabase project 
+We will use the project we already have setup 
+
+Step 2: Creating tables in Supabase 
+We will need to create a new table for users 
+
+```sql
+create table IF NOT EXISTS users (
+  user_id text NOT NULL PRIMARY KEY,
+  email text NOT NULL
+);
+
+-- Enable Row Level Security
+ALTER TABLE users ENABLE ROW LEVEL SECURITY;
+```
+
+Step 3: Setup your NextJS App with SuperTokens 
+
+Step 4: Creating a Supabase JWT to access Supabase 
+
+When a user signs up, we want to: 
+1. Store the user's email in Supabase
+2. Retrieve and display that email on the frontend 
+
+To do this securely, Supabase needs to trust the request. So, you'll create a JWT (JSON WebToken) that Supabase can verify, proving that the request is coming from an authenticated user. 
+
+**JWT -- A Secure Passport**
+JWTs are tokens signed with a secret key. In this case, Supabase will verify the JWT using your Supabase Signing Secret. This proves that the user is authenticated and authorized to access data. 
+
+**Why You Need a Supabase JWT**
+Supabase needs to verify that your app's requests (like saving/fetching user data) are coming from an authenticated user. 
+
+To verify this: 
+* Supabase expects a JWT signed with a secret key (your Supabase project's JWT secret).
+* This JWT should include info like the userId so Supabase knows who the user is. 
+
+**How To Create This JWT Flow**
+
+You're using SuperTokens to handle sign-ins/ups and sessions. You will need to generate a Supabase JWT whenever a session is created so you can use that JWT to interact with Supabase. 
+
+Here is how you can set it up: 
+1. User signs up or logs in using SuperTokens
+2. In your backend config, you override SuperTokens' createNewSession function
+3. Inside this override: 
+    - You generate a JWT signed with Supabase's signing secret 
+    - The JWT includes the user's info (e.g., `userId`)
+    - You attach this JWT to the session (either )
+4. Now, whenever the session is verified (frontend or backend), you can retrieve that Supabase JWT 
+5. Use this JWT to make authenticated calls to Supabase to read or write data
+
+```sql
+User signs up/login → SuperTokens creates session → You generate Supabase JWT → Store it in session
+    ↓
+Frontend/Backend verifies session → Pull Supabase JWT from session → Use it to call Supabase
+```
+
+**Why Override `createNewSession`?**
+
+Because that's the hook SuperTokens provides to customize what happens when a new session is made. It's the perfect place to slip in your logic for adding a Supabase-compatible JWT.
+
+You're using SuperTokens for authentication and session management. When a user logs in, SuperTokens creates a session for them.
+
+Now you can override the default session creating logic to do one extra thing: 
+* Create a JWT (for Supabase) and attach it to the user's session
+
+**The Custom Session Code Explained**
+You override SuperTokens' createNewSession function like this: 
+
+```javascript
+createNewSession: async function (input) {
+  const payload = {
+    userId: input.userId, // Put the user ID in the JWT payload
+    exp: Math.floor(Date.now() / 1000) + 60 * 60, // Token expires in 1 hour
+  }
+
+  // Create JWT using Supabase's secret
+  const supabase_jwt_token = jwt.sign(payload, process.env.SUPABASE_SIGNING_SECRET);
+
+  // Store this JWT in the access token payload so it can be accessed later
+  input.accessTokenPayload = {
+    ...inout.accessTokenPayload, 
+    supabase_token: supabase_jwt_token,
+  }
+
+  return await originalImplementation.createNewSession(input);
+}
+```
+
+**What's Happening Here**
+* You create a Supabase JWT right when the session is created 
+* You add that token to the accessTokenPayload, which is part of the user's session
+* This means on boths the frontend and backend, you can access this supabase_token and use it to call Supabase
+
+**Frontend Usage**
+On the frontend, after verifying the SuperTokens session, you can retrieve the `supabase_token` and use it with the Supabase client to make authenticated requests. 
+
+**Visual Flow: SuperTokens + Supabase JWT Flow**
+```pgsql
++-----------------+      1. Signup/Login       +----------------------+
+|   Frontend App  |  ----------------------->  | SuperTokens Backend  |
+| (Next.js + ST)  |                           |                      |
++-----------------+                           +----------------------+
+                                                     |
+                                                     | 2. Override `createNewSession`
+                                                     v
+                                            +---------------------------+
+                                            | Generate Supabase JWT     |
+                                            | - payload: userId + exp   |
+                                            | - signed w/ Supabase key |
+                                            +---------------------------+
+                                                     |
+                                                     v
++-----------------+      3. Token in accessPayload    |
+|   Session with  |  <------------------------------+
+| supabase_token  |
++-----------------+
+
+     |
+     | 4. Get session on frontend (e.g. getSession)
+     v
++-------------------------------+
+| Extract supabase_token       |
+| Use with Supabase client     |
++-------------------------------+
+
+     |
+     v
++-------------------------------+
+| Make secure DB request to     |
+| Supabase with JWT             |
++-------------------------------+
+```
 
 
 ## Sources: 
