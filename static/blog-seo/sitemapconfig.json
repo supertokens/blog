@@ -358,5 +358,8 @@
     },
     {
         "location": "https://supertokens.com/blog/single-sign-on-examples"
+    },
+    {
+        "location": "https://supertokens.com/blog/phishing-resistant-mfa"
     }
 ]

@@ -35,6 +35,18 @@ The core issue? These methods rely on shared secrets that can be intercepted or 
 
 In this guide, we'll implement a bulletproof phishing-resistant MFA system using SuperTokens, WebAuthn, and FIDO2 standards. This approach not only strengthens security but also improves user experience by reducing friction.
 
+### Why WebAuthn? 
+
+Phishing remains one of the most effective attack vectors against traditional authentication. WebAuthn counters this by binding authentication directly to the user's device through public-key cryptography. When users register with WebAuthn, their device generates a unique key pair for that service. The private key never leaves the device, while the public key is stored on the server. During authentication, the server sends a challenge only the correct private key can sign.
+
+The critical phishing protection comes from origin binding \- the browser ensures authentication requests can only come from the exact domain that registered the credential. Even perfect site clones at different URLs will fail because the origins don't match. For developers, this means implementing authentication that protects users regardless of their susceptibility to phishing attempts.
+
+### How WebAuthn works
+
+WebAuthn creates a secure authentication framework built on asymmetric cryptography. Instead of storing shared secrets like passwords on servers, it employs public-private key pairs. When users register their device generates these unique keys - the private key remains secured on the device while the public key is stored on the server.The absence of passwords eliminates common vulnerabilities like credential stuffing, password spraying, and database breaches. There's simply no password to steal, reuse, or crack, removing entire categories of attacks from consideration.
+
+User verification happens locally on the device through either biometrics (fingerprints, facial recognition) or hardware security keys. This verification proves the legitimate user is present without transmitting biometric data to the server. The local device handles all sensitive verification, then cryptographically signs the authentication challenge using the private key only after successful verification.
+
 ## Prerequisites – What You Need to Get Started
 
 Before diving into implementation, ensure you have:
@@ -57,18 +69,6 @@ Let's get started with a robust implementation that will protect your users from
 
 ## **Step 2 – Enabling WebAuthn for Passwordless, Phishing-Resistant MFA**
 
-### Why WebAuthn? 
-
-Phishing remains one of the most effective attack vectors against traditional authentication. WebAuthn counters this by binding authentication directly to the user's device through public-key cryptography. When users register with WebAuthn, their device generates a unique key pair for that service. The private key never leaves the device, while the public key is stored on the server. During authentication, the server sends a challenge only the correct private key can sign.
-
-The critical phishing protection comes from origin binding \- the browser ensures authentication requests can only come from the exact domain that registered the credential. Even perfect site clones at different URLs will fail because the origins don't match. For developers, this means implementing authentication that protects users regardless of their susceptibility to phishing attempts.
-
-### How WebAuthn works
-
-WebAuthn creates a secure authentication framework built on asymmetric cryptography. Instead of storing shared secrets like passwords on servers, it employs public-private key pairs. When users register their device generates these unique keys - the private key remains secured on the device while the public key is stored on the server.The absence of passwords eliminates common vulnerabilities like credential stuffing, password spraying, and database breaches. There's simply no password to steal, reuse, or crack, removing entire categories of attacks from consideration.
-
-User verification happens locally on the device through either biometrics (fingerprints, facial recognition) or hardware security keys. This verification proves the legitimate user is present without transmitting biometric data to the server. The local device handles all sensitive verification, then cryptographically signs the authentication challenge using the private key only after successful verification.
-
 ### Implementation
 
 Note: Any project structure is based on the used cli command from above
@@ -83,7 +83,7 @@ You're file should look like the following:
 
 
 
-<details><summary>Frontend config.tsx</summary>
+Frontend `config.tsx`
 
 ```javascript
 
@@ -140,12 +140,10 @@ export const ComponentWrapper = (props: { children: JSX.Element }): JSX.Element 
     return props.children;
 };
 ```
-</details>
 
 
 Now we’ll update the backend. Find the `config.ts` file located in `/backend/config.ts`, and Import WebAuthn from the recipe
 
-<details><summary>Backend config.tsx</summary>
 
 ```javascript
 
@@ -192,7 +190,6 @@ export const SuperTokensConfig: TypeInput = {
 };
 ```
 
-</details>
 
 Navigate to http://localhost:3000/auth you’ll see a new option to use the passkey as an auth option
 
@@ -201,7 +198,7 @@ Navigate to http://localhost:3000/auth you’ll see a new option to use the pass
 
 To enable mfa we’ll use the [MFA recipe](https://supertokens.com/docs/additional-verification/mfa/initial-setup) to require multi-factor authentication, currently mfa has the support for Email/SMS One-Time Password (OTP) or Time-based One-Time Password (TOTP). Just like above we'll be adding recipes to both the front and backend config files. 
 
-<details><summary>Frontend adding mfa config.tsx</summary>
+Frontend adding mfa config.tsx
 
 ```javascript
 
@@ -278,9 +275,7 @@ export const ComponentWrapper = (props: { children: JSX.Element }): JSX.Element 
 
 ```
 
-</details>
-
-<details><summary>Backend adding mfa config.tsx</summary>
+Backend adding mfa `config.tsx`
 
 ```javascript
 import EmailPassword from "supertokens-node/recipe/emailpassword";
@@ -378,14 +373,12 @@ export const SuperTokensConfig: TypeInput = {
 
 ```
 
-</details>
-
 ## Testing Your MFA Implementation
 
 ### Unit Tests
 Let's add some unit tests to test the flow - Sign up, Session verification, Refreshing session tokens, and Logout. Create a test directory in the backend `/backend/__tests__`
 
-<details><summary>Backend auth-flow.test.ts</summary>
+Backend `auth-flow.test.ts`
 
 ```javascript
 
@@ -638,11 +631,9 @@ describe('Authentication Flow Tests', () => {
 });
 ```
 
-</details>
-
 Updates also need to be made to the `package.json` to include our test packages and to add the cmd `npm test`
 
-<details><summary>package.json</summary>
+`package.json`
 
 ```javascript
 
@@ -684,8 +675,6 @@ Updates also need to be made to the `package.json` to include our test packages 
 
 ```
 
-</details>
-
 Run `npm install` then `npm test` 
 
 It's worth noting the unit tests we added are mocking the api calls. In an enterprise environment ideally there would also be a staging/canary environment that allows full live end-to-end testing for the service. 
@@ -696,7 +685,7 @@ Logging and Metrics are two important aspects every service should have. They he
 
 Looking at `/backend/main.ts` we’ll track how many times a user has logged in, maybe this can provide an insight into strange user behavior to keep an eye out for: 
 
-<details><summary>Backend main.ts</summary>
+Backend `main.ts`
 
 ```javascript
 
@@ -781,11 +770,9 @@ if (!module.parent) app.listen(3001, () => console.log("API Server listening on 
 
 ```
 
-</details>
-
 Each recipe on the frontend `/frontend/src/config.tsx` has a `onHandleEvent` to help log what is currently happening in the system. 
 
-<details><summary>Frontend config.tsx</summary>
+Frontend `config.tsx`
 
 ```javascript
 
@@ -879,8 +866,6 @@ export const ComponentWrapper = (props: { children: JSX.Element }): JSX.Element 
 
 
 ```
-
-</details>
 
 ### How this setup prevents a phishing attack
 
