@@ -312,6 +312,10 @@
         "location": "https://supertokens.com/blog/mastering-nextjs-api-routes"
     },
     {
+
+        "location": "https://supertokens.com/blog/enhancing-your-nextjs-application-with-middleware"
+    },
+    {
         "location": "https://supertokens.com/blog/pillars-of-a-ciam-strategy-secure-scale-and-personalize-customer-access"
     },
     {
@@ -361,5 +365,8 @@
     },
     {
         "location": "https://supertokens.com/blog/single-sign-on-examples"
+    },
+    {
+        "location": "https://supertokens.com/blog/okta-vs-azure-ad"
     }
 ]
