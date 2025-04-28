@@ -361,5 +361,8 @@
     },
     {
         "location": "https://supertokens.com/blog/single-sign-on-examples"
+    },
+    {
+        "location": "https://supertokens.com/blog/okta-vs-azure-ad"
     }
 ]

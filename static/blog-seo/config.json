@@ -3667,5 +3667,28 @@
         ],
         "title": "SSO Examples: Real-World Use Cases and How to Implement Them",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/single-sign-on-examples\"\n            },\n            \"headline\": \"Explore real-world Single Sign-On (SSO) examples, use cases, and step-by-step implementation methods. Learn how tools like SuperTokens simplify SSO for developers.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/sso-examples.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/okta-vs-azure-ad",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore the differences between Okta and Azure Active Directory (AD) to help you choose the right IAM solution. \" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Okta vs Azure AD: Which IAM Solution Wins?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/okta-vs-azure-ad\" />",
+            "<meta property=\"og:description\" content=\"Explore the differences between Okta and Azure Active Directory (AD) to help you choose the right IAM solution. \"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/okta-vs-azure.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore the differences between Okta and Azure Active Directory (AD) to help you choose the right IAM solution. \" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/okta-vs-azure-ad\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/okta-vs-azure.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/okta-vs-azure-ad\">"
+        ],
+        "title": "Okta vs Azure AD: Which IAM Solution Wins?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/okta-vs-azure-ad\"\n            },\n            \"headline\": \"Explore the differences between Okta and Azure Active Directory (AD) to help you choose the right IAM solution. \",\n            \"image\": \"https://supertokens.com/blog-meta-images/okta-vs-azure.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
