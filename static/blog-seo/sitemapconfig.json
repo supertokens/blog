@@ -309,6 +309,9 @@
         "location": "https://supertokens.com/blog/identity-and-access-management-strategy"
     },
     {
+        "location": "https://supertokens.com/blog/enhancing-your-nextjs-application-with-middleware"
+    },
+    {
         "location": "https://supertokens.com/blog/pillars-of-a-ciam-strategy-secure-scale-and-personalize-customer-access"
     },
     {
@@ -361,5 +364,8 @@
     },
     {
         "location": "https://supertokens.com/blog/authelia-vs-keycloak"
+    },
+    {
+        "location": "https://supertokens.com/blog/okta-vs-azure-ad"
     }
 ]
