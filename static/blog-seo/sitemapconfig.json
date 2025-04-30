@@ -312,7 +312,6 @@
         "location": "https://supertokens.com/blog/mastering-nextjs-api-routes"
     },
     {
-
         "location": "https://supertokens.com/blog/enhancing-your-nextjs-application-with-middleware"
     },
     {
@@ -344,7 +343,8 @@
     },
     {
         "location": "https://supertokens.com/blog/cloud-based-authentication"
-    }
+    },
+    {
         "location": "https://supertokens.com/blog/2fa-services"
     },
     {
@@ -373,5 +373,8 @@
     },
     {
         "location": "https://supertokens.com/blog/okta-vs-azure-ad"
+    },
+    {
+        "location": "https://supertokens.com/blog/phishing-resistant-mfa"
     }
 ]
