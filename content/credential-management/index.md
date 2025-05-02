@@ -1,6 +1,6 @@
 ---
 title: "Credential Management: What It Is and Why It Matters"
-date: "2025-03-27"
+date: "2025-04-06"
 description: "Learn about credential management, its importance, common security risks, and best practices. Discover how SuperTokens simplifies secure credential management."
 cover: "credential-management.png"
 category: "programming"
