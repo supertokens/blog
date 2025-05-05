@@ -7,37 +7,34 @@ category: "programming"
 author: "Maria Shimkovska"
 ---
 
-**Picture this:** You're building the next big thing. Your app idea is brilliant. Your UI design is pixel-perfect. Your code is *chef's kiss* beautiful. 
+**Picture this:** You’re building the next big thing. The idea? Brilliant. The UI? Pixel-perfect. The code? Chef’s kiss.
 
-But then comes the dreaded question: <br />
-**"How do I handle authentication AND database stuff without losing my mind?"** 😭
+Then reality hits: <br />
+**"How do I handle authentication *and* database stuff without losing my mind?"** 😭
 
-Let's face it, if you want users to be able to use your app with accounts and be able to save their data, you will need authentication and a database. Without these two working together, your users might as well be anonymous ghosts shouting into the void. Not exactly the personalized experience we're aiming for today, right?
+If your app needs accounts and saved user data (and let’s face it, it probably does), you need auth and a database working together. Otherwise, your users are just anonymous ghosts shouting into the void. Not exactly the personalized experience we're aiming for today, right?
 
-But with so many authentication options available, how do you choose the right one for your Supabase-powered app?
+Let's say you already picked Supabase for your backend need. But with so many authentication options available, how do you choose the right one for your Supabase-powered app?
 
-To help you make this decision, we've created a comprehensive two-part guide:
+This two-part guide is here to help:
+* **Part I:** Integrate Clerk for authentication with Supabase in a Next.js app
+* **Part II:** Swap in SuperTokens as an alternative auth solution
 
-* **Part I:** Integrating Clerk for authentication with Supabase for database management in a Next.js project
-* **Part II:** (Coming soon) Using the same base app and Supabase project but implementing SuperTokens as the authentication service
+By the end, you’ll be able to compare both approaches side-by-side and choose what fits your project best.
 
-By following both guides, you'll be able to compare these powerful authentication approaches side-by-side and choose the best fit for your project.
+We’ll use a [**Mermaid**](https://mermaid.js.org/) charting app as our running example—a tool that lets users create, save, and manage diagrams securely.
 
-We'll use a [**Mermaid**](https://mermaid.js.org/) powered charting app as our example throughout both guides—a tool that allows users to create, save, and manage diagrams securely.
+**In Part I, you'll:** 
+* 📘 Learn the basics of Clerk and Supabase
+* 🛠 Combine them to build a secure, data-driven app
+* ⚖️ Weigh the pros and cons of Clerk
+* 🤗 Get a sneak peek at an exciting alternative
 
-**In Part I, we'll:** 
-* 📘 Get friendly with the basics of Clerk and Supabase
-* 🛠 Combine their powers to build a secure, data-driven application
-* ⚖️ Evaluate the pros and cons of Clerk for your authentication needs
-* 🤗 Discover an exciting alternative that might be an even better fit (spoiler alert: there is one!)
-
-Let’s make authentication and database management actually *enjoyable*. 
-
-But before we dive in, we’ll start with a quick overview of the app. First, we’ll look at a version with no authentication or persistence -- just to set the baseline. Then, we’ll layer on features and explore how each addition improves the experience.
+Let’s make auth and data storage actually enjoyable. First, we’ll look at a stripped-down version of the app—no auth, no persistence—so you can see the baseline. Then we’ll layer in features and see how each one improves the experience.
 
 ## 💻 Project Overview 
 
-**[Check out the GitHub repository for the demo app here.](https://github.com/meems1996/mermaid-charting-app)**
+🛠️ **[Check out the GitHub repository for the demo app here.](https://github.com/meems1996/mermaid-charting-app)**
 
 
 The Mermaid Charting App is a **Next.js**-based tool that integrates **Clerk** and **Supabase** to provide the following features:
@@ -45,60 +42,71 @@ The Mermaid Charting App is a **Next.js**-based tool that integrates **Clerk** a
 * **MermaidJS Editor**: A real-time editor for creating diagrams using Mermaid syntax.
 * **Authentication with Clerk**: Users can sign in or sign up, and their sessions are managed securely.
 * **Chart Storage with Supabase**: Authenticated users can save their diagrams to a Supabase database and retrieve them later.
+
+🧜‍♀️ In the video below, you’ll see the core features of the app in action -- writing and rendering a Mermaid chart, and saving it to your Saved Charts section. At this stage, the app **doesn’t** include authentication or persistence. That means anyone can view charts, and saved work vanishes when the page reloads. It’s the perfect baseline to show how Clerk and Supabase transform the experience.
  
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe id="js_video_iframe" src="https://jumpshare.com/embed/YOpxWr5WU4Hc9T2JEAXY" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"></iframe></div>
 
 <br />
 
-🧜‍♀️ The app is a [**MermaidJS**](https://github.com/mermaid-js/mermaid) **visualizer**, where you can write Mermaid code to generate graphs, and eventually save them once we add persistence. Without user authentication and a database the charts are visible to everyone and the saved charts disappear once we reload. 
-
-We’ll be combining the strengths of both Clerk and Supabase to bring the app to life:
-1. 🔐 Clerk will handle authentication and user management, so people can sign up, log in, and have their own accounts.
-2. 🗄️ Supabase will store each user’s charts and make sure they’re linked to their accounts—so users only see their saved graphs, not anyone else’s.
+We’ll combine Clerk and Supabase to bring this app to life:
+1. 🔐 **Clerk** will manage authentication and user sessions, allowing users to sign up, log in, and have personalized accounts.
+2. 🗄️ **Supabase** will store charts and associate them with the authenticated user—so each person only sees their own saved diagrams.
 
 ![alt text](image.png)
 
-By the end, we’ll go from a simple, ephemeral demo to a fully authenticated app with persistent, user-specific data. Let’s get into it 👇
+By the end of this guide, we’ll have evolved from a stateless prototype to a secure, fully featured app with persistent, user-specific data.
 
 ## 🧩 What is Clerk? 
 
-[**Clerk**](https://clerk.com/) is a developer-friendly authentication service that helps you add sign-up, sign-in, and user management to your app with minimal effort. It comes with prebuilt UI components, robust APIs, and support for modern auth features like social logins, multi-factor authentication, and webhooks.
+[**Clerk**](https://clerk.com/) is a developer-friendly authentication service that makes it easy to add sign-up, sign-in, and user management to your app. It offers:
 
-Instead of building your own auth flows from scratch, Clerk lets you plug in secure, customizable components—so you can focus on building your product, not re-inventing login.
+* ✅ Prebuilt, customizable UI components
+* 🔐 Support for modern auth features like social logins, multi-factor authentication, and webhooks
+* ⚙️ Robust APIs to help you stay in control when needed
 
-In this project, Clerk is used to authenticate users and provide a unique user ID, which is essential for associating user-specific data in the database.
+Instead of building authentication from scratch, Clerk lets you plug in secure, polished components—so you can spend less time reinventing the login screen and more time building your product.
+
+In this project, we’ll use Clerk to authenticate users and assign each one a unique user ID. That ID is key—it lets us store and retrieve each user's charts individually in Supabase.
 
 ## 🗄️ What is Supabase? 
 
-[**Supabase**](https://supabase.com/) is an open-source backend-as-a-service that gives you a full Postgres database, real-time subscriptions, storage, and auth—right out of the box. It’s like Firebase, but with SQL and a developer experience that doesn’t make you want to flip a table. 
+[**Supabase**](https://supabase.com/) is an open-source backend-as-a-service that gives you a full Postgres database, real-time subscriptions, storage, and auth—right out of the box. Think of it like Firebase, but with SQL and a developer experience that doesn’t make you want to flip a table. 🙃
 
-With Supabase, you get powerful tools like row-level security, instant APIs, and a slick dashboard—all built on top of technologies you already know and love. It's fast, flexible, and plays really nicely with frameworks like Next.js, React, and more.
+With Supabase, you get:
 
-Basically, it’s your app’s backend without the backend headaches.
+* 🧠 A powerful Postgres database with row-level security
+* ⚡️ Auto-generated APIs for your tables
+* 📊 A slick dashboard for managing data and users
+* 💾 Built-in storage and real-time capabilities
 
-In this project, Supabase is used to store and retrieve user-specific Mermaid charts. Each chart is tied to a user ID provided by Clerk, ensuring secure and personalized data management.
+> **Bonus:** Supabase’s row-level security makes it easy to enforce per-user access rules—so your users only ever see their own data.
 
-## Setting Up Clerk 🔐
+It’s fast, flexible, and works seamlessly with frameworks like Next.js and React.
+
+Basically, it’s your app’s backend—without the backend headaches.
+
+In this project, Supabase stores and retrieves each user's Mermaid charts. Every saved chart is linked to the unique user ID provided by Clerk. This setup ensures data is private, secure, and only visible to the right user.
+
+## 💻 Setting Up Clerk 
 To get started with Clerk, follow these simple steps to set up authentication in your app.
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe id="js_video_iframe" src="https://jumpshare.com/embed/AnOxQNnud4HnDbJP94ev" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"></iframe></div>
-
 ### 1. Sign Up for Clerk 
-First, head over to Clerk's website and sign up for an account. You’ll need to provide your email and create a password. Once you're in, you'll be taken to the Clerk dashboard, where you'll manage your app’s authentication settings.
+First, head over to [Clerk's website](https://clerk.com/) and sign up for an account. You’ll need to provide your email and create a password. Once you're in, you'll be taken to the Clerk dashboard, where you'll manage your app’s authentication settings.
 
 ### 2. Create a New Application
 1. In your Clerk dashboard, click on the **Create Application** button.
 2. Choose a name for your app (e.g., *Mermaid Visualizer*).
 3. Choose the authentication methods from a list.
     - In this demo, we are selecting just the Email authentication method for simplicity.
-4. Clerk will generate a set of steps to follow to continue setting up Clerk in your application: 
-    - Install `@clerk/mextjs`
-    - Set your Clerk API keys
-    - Update `middleware.ts`
-    - Add `ClerkProvider` to your app
-    - Create your first user
 
-### 3. Install Clerk SDK 
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe id="js_video_iframe" src="https://jumpshare.com/embed/AnOxQNnud4HnDbJP94ev" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"></iframe></div>
+
+<br />
+
+Clerk will generate a set of steps to follow to continue setting up Clerk in your application.
+
+### 3. Install the Clerk SDK 
 To integrate Clerk into your project, you'll need to install the Clerk SDK. Open your terminal and run the following command:
 
 ```bash 
@@ -113,11 +121,11 @@ pnpm add @clerk/nextjs
 ```
 
 ### 4. Set your Clerk API keys
-Add these keys to your `.env` or create the file if it doesn't exist. 
+Add these keys to your `.env` file, or create the file if it doesn't exist. 
 
 ```text
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=YOUR_CLERK_KEY
-CLERK_SECRET_KEY=YOUR_CLERK_SECRET
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your-clerk-key
+CLERK_SECRET_KEY=your-clerk-secret
 ```
 
 ### 5. Update `middleware.ts`
@@ -140,11 +148,15 @@ export const config = {
 };
 ```
 
-### 6. Add `ClerkProvider` and the `SignUp/SignIn` Buttons
+### 6. Add ClerkProvider and the SignUp/SignIn Buttons
 
-Use the `ClerkProvider` in your `layout.tsx` file to enable Clerk across your app.
+To enable Clerk throughout your app, you’ll use the ClerkProvider in your layout.tsx file.
 
-In the `layout.tsx` file, import and initialize Clerk like so:
+Here’s what to do:
+* **Import the necessary components** from `@clerk/nextjs`.
+* **Wrap your app** with `ClerkProvider` to make Clerk’s features available globally.
+* Use `SignedOut` to wrap the `SignInButton` and`SignUpButton`. These will only appear when the user is signed out.
+* Use `SignedIn` to wrap both the `UserButton` and your app’s content. These will only show when the user is signed in.
 
 ```javascript{4-11, 34, 39-42, 44-45, 47, 52}
 import { type Metadata } from "next";
@@ -203,12 +215,10 @@ export default function RootLayout({
 }
 ```
 
-This will display the sign-up and sign-in forms automatically! Clerk handles all the UI and backend auth logic for you.
-
-With these steps, you've set up Clerk for user authentication in your app! 🎉
+🎉 And that’s it! You’ve now set up Clerk for user authentication in your app. Users can sign in, sign up, and see personalized content based on their auth state.
 
 ### 7. Run Your Project and Get Your First User
-
+Start your dev server:
 ```bash
 # If you're using npm 
 npm run dev
@@ -220,11 +230,11 @@ yarn dev
 pnpm dev
 ```
 
-Then, visit your app's homepage at `http://localhost:3000` and sign up to create your first user.
+Once it’s running, head to `http://localhost:3000` in your browser. You should see your app with sign-in and sign-up options. Go ahead and register—this will create your first authenticated user.
 
-In the next section, we’ll dive into how to set up Supabase to handle storing user-specific data like your graphs. Ready to roll?
+Next up: we'll connect Supabase and set it up to store user-specific data like saved Mermaid graphs.
 
-## Setting Up Supabase
+## 💻 Setting Up Supabase
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe id="js_video_iframe" src="https://jumpshare.com/embed/a2VexfxNR8imzVJ8Q4mJ" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"></iframe></div>
 
