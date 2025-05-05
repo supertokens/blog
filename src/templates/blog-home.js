@@ -33,36 +33,57 @@ const BlogHomeTemplate = (props) => {
             id="tab-1-id"
             className={`blog-categories__category ${selectedCategory === "all" && "selected"}`}
             onClick={() => updateCategory("all")}
-            >
+          >
             All
           </button>
           <button
             id="tab-2-id"
-            className={`blog-categories__category ${selectedCategory === "sessions" && "selected"}`}
-            onClick={() => updateCategory("sessions")}
-            >
-            Sessions
+            className={`blog-categories__category ${selectedCategory === "authentication-identity" && "selected"}`}
+            onClick={() => updateCategory("authentication-identity")}
+          >
+            Authentication & Identity
           </button>
           <button
             id="tab-3-id"
-            className={`blog-categories__category ${selectedCategory === "featured" && "selected"}`}
-            onClick={() => updateCategory("featured")}
-            >
-            Featured
+            className={`blog-categories__category ${selectedCategory === "security-compliance" && "selected"}`}
+            onClick={() => updateCategory("security-compliance")}
+          >
+            Security & Compliance
           </button>
           <button
             id="tab-4-id"
-            className={`blog-categories__category ${selectedCategory === "programming" && "selected"}`}
-            onClick={() => updateCategory("programming")}
+            className={`blog-categories__category ${selectedCategory === "developer-guides" && "selected"}`}
+            onClick={() => updateCategory("developer-guides")}
           >
-            Programming
+            Developer Guides & Tutorials
           </button>
           <button
             id="tab-5-id"
-            className={`blog-categories__category ${selectedCategory === "test" && "selected"}`}
-            onClick={() => updateCategory("Test")}
+            className={`blog-categories__category ${selectedCategory === "product-updates" && "selected"}`}
+            onClick={() => updateCategory("product-updates")}
           >
-            Test
+            Product Updates & Announcements
+          </button>
+          <button
+            id="tab-6-id"
+            className={`blog-categories__category ${selectedCategory === "company-news" && "selected"}`}
+            onClick={() => updateCategory("company-news")}
+          >
+            Company News & Events
+          </button>
+          <button
+            id="tab-7-id"
+            className={`blog-categories__category ${selectedCategory === "case-studies" && "selected"}`}
+            onClick={() => updateCategory("case-studies")}
+          >
+            Case Studies & Customer Stories
+          </button>
+          <button
+            id="tab-8-id"
+            className={`blog-categories__category ${selectedCategory === "industry-insights" && "selected"}`}
+            onClick={() => updateCategory("industry-insights")}
+          >
+            Industry Insights & Trends
           </button>
         </div>
       </div>
