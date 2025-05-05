@@ -55,7 +55,7 @@ exports.createPages = async ({ actions, graphql }) => {
     programming: ""
   }
 
-  const allFilters = ["all", "sessions", "featured", "programming", "test"]
+  const allFilters = ["all", "Authentication & Identity", "Security & Compliance", "Developer Guides & Tutorials", "Product Updates & Announcements", "Company News & Events", "Case Studies & Customer Stories", "Industry Insights & Trends"]
   allFilters.forEach((filter) => {
     postsAsHTMLString[filter] = sortedPosts.filter((post) => {
       if (filter === "all") {
