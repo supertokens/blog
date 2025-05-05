@@ -7,29 +7,56 @@ category: "programming"
 author: "Maria Shimkovska"
 ---
 
-Combining Supabase with Clerk allows you to take advantage of both Supabase's powerful database capabilities and Clerk's authentication features, prebuilt components, and webhooks. 
+**Picture this:** You're building the next big thing. Your app idea is brilliant. Your UI design is pixel-perfect. Your code is *chef's kiss* beautiful. 
 
-In this guide, we are going to: 
-* 📘 Go over the fundamentals of Clerk and Supabase
-* 🛠 Show you how to use them together to build an application
-* ⚖️ Discuss the pros and cons of using Clerk for your authentication needs
-* 🤗 Talk about an exciting alternative. 
+But then comes the dreaded question: <br />
+**"How do I handle authentication AND database stuff without losing my mind?"** 😭
 
-Before we dive in, here’s a quick video demo of the app we’ll be building onto—starting with no authentication or persistence, just to show the baseline experience. 
+Let's face it, if you want users to be able to use your app with accounts and be able to save their data, you will need authentication and a database. Without these two working together, your users might as well be anonymous ghosts shouting into the void. Not exactly the personalized experience we're aiming for today, right?
 
+But with so many authentication options available, how do you choose the right one for your Supabase-powered app?
+
+To help you make this decision, we've created a comprehensive two-part guide:
+
+* **Part I:** Integrating Clerk for authentication with Supabase for database management in a Next.js project
+* **Part II:** (Coming soon) Using the same base app and Supabase project but implementing SuperTokens as the authentication service
+
+By following both guides, you'll be able to compare these powerful authentication approaches side-by-side and choose the best fit for your project.
+
+We'll use a [**Mermaid**](https://mermaid.js.org/) powered charting app as our example throughout both guides—a tool that allows users to create, save, and manage diagrams securely.
+
+**In Part I, we'll:** 
+* 📘 Get friendly with the basics of Clerk and Supabase
+* 🛠 Combine their powers to build a secure, data-driven application
+* ⚖️ Evaluate the pros and cons of Clerk for your authentication needs
+* 🤗 Discover an exciting alternative that might be an even better fit (spoiler alert: there is one!)
+
+Let’s make authentication and database management actually *enjoyable*. 
+
+But before we dive in, we’ll start with a quick overview of the app. First, we’ll look at a version with no authentication or persistence -- just to set the baseline. Then, we’ll layer on features and explore how each addition improves the experience.
+
+## 💻 Project Overview 
+
+**[Check out the GitHub repository for the demo app here.](https://github.com/meems1996/mermaid-charting-app)**
+
+
+The Mermaid Charting App is a **Next.js**-based tool that integrates **Clerk** and **Supabase** to provide the following features:
+
+* **MermaidJS Editor**: A real-time editor for creating diagrams using Mermaid syntax.
+* **Authentication with Clerk**: Users can sign in or sign up, and their sessions are managed securely.
+* **Chart Storage with Supabase**: Authenticated users can save their diagrams to a Supabase database and retrieve them later.
+ 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe id="js_video_iframe" src="https://jumpshare.com/embed/YOpxWr5WU4Hc9T2JEAXY" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"></iframe></div>
 
 <br />
 
 🧜‍♀️ The app is a [**MermaidJS**](https://github.com/mermaid-js/mermaid) **visualizer**, where you can write Mermaid code to generate graphs, and eventually save them once we add persistence. Without user authentication and a database the charts are visible to everyone and the saved charts disappear once we reload. 
 
-
-![alt text](image.png)
-
-
 We’ll be combining the strengths of both Clerk and Supabase to bring the app to life:
 1. 🔐 Clerk will handle authentication and user management, so people can sign up, log in, and have their own accounts.
 2. 🗄️ Supabase will store each user’s charts and make sure they’re linked to their accounts—so users only see their saved graphs, not anyone else’s.
+
+![alt text](image.png)
 
 By the end, we’ll go from a simple, ephemeral demo to a fully authenticated app with persistent, user-specific data. Let’s get into it 👇
 
@@ -39,6 +66,8 @@ By the end, we’ll go from a simple, ephemeral demo to a fully authenticated ap
 
 Instead of building your own auth flows from scratch, Clerk lets you plug in secure, customizable components—so you can focus on building your product, not re-inventing login.
 
+In this project, Clerk is used to authenticate users and provide a unique user ID, which is essential for associating user-specific data in the database.
+
 ## 🗄️ What is Supabase? 
 
 [**Supabase**](https://supabase.com/) is an open-source backend-as-a-service that gives you a full Postgres database, real-time subscriptions, storage, and auth—right out of the box. It’s like Firebase, but with SQL and a developer experience that doesn’t make you want to flip a table. 
@@ -46,6 +75,8 @@ Instead of building your own auth flows from scratch, Clerk lets you plug in sec
 With Supabase, you get powerful tools like row-level security, instant APIs, and a slick dashboard—all built on top of technologies you already know and love. It's fast, flexible, and plays really nicely with frameworks like Next.js, React, and more.
 
 Basically, it’s your app’s backend without the backend headaches.
+
+In this project, Supabase is used to store and retrieve user-specific Mermaid charts. Each chart is tied to a user ID provided by Clerk, ensuring secure and personalized data management.
 
 ## Setting Up Clerk 🔐
 To get started with Clerk, follow these simple steps to set up authentication in your app.
@@ -110,6 +141,8 @@ export const config = {
 ```
 
 ### 6. Add `ClerkProvider` and the `SignUp/SignIn` Buttons
+
+Use the `ClerkProvider` in your `layout.tsx` file to enable Clerk across your app.
 
 In the `layout.tsx` file, import and initialize Clerk like so:
 
@@ -195,13 +228,13 @@ In the next section, we’ll dive into how to set up Supabase to handle storing 
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe id="js_video_iframe" src="https://jumpshare.com/embed/a2VexfxNR8imzVJ8Q4mJ" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"></iframe></div>
 
-**Supabase Architecture**
-1. The user signs in with Clerk and receives a JWT
-2. User requests data from the client 
-3. Supabase checks the JWT against Clerk to verify its authenticity
-4. Data goes through the Data API to the database 
-5. Database returns requested data
-6. API sends data to the client
+To integrate Supabase into your project, follow these steps:
+1. **Create a Supabase Account**: Sign up at Supabase.com and create a new project.
+2. **Install Supabase**: Add the Supabase package to your project:
+
+```bash
+npm install @supabase/supabase-js
+```
 
 ### Steps to get started 
 You can visit [**Supabase's official documentation**](https://supabase.com/docs/guides/auth/third-party/clerk) on the subject, but we will break down the steps for our project in this section. As of April 1 2025, Supabase changed how they integrate with Clerk from JWT template to a native integration approach for enhanced security. 
@@ -337,148 +370,90 @@ create policy "Users can delete their own charts"
   USING (user_id = current_setting('request.jwt.claims', true)::json->>'sub');
 ```
 
-## SuperTokens Instead of Clerk 
+## Integrating Clerk and Supabase in Next.js
 
-Supertokens is an open source authentication solutions which provides many strategies for authenticating and managing users. You can use the managed services for eas setup or you can self host the solution to have complete control over your data. 
+The integration between Clerk and Supabase works as follows: 
+1. **Authentication with Clerk**: When a user logs in, Clerk provides a unique user ID.
+2. **Data Storage with Supabase**: The user ID is used to associate charts with the logged-in user in the Supabase database.
 
-With SuperTokens, Supabase can be used to store and authorize access to user data. 
+Here’s how the integration is implemented.
 
-Step 1: Create a new Supabase project 
-We will use the project we already have setup 
+### Middleware for Clerk
+The middleware.ts file ensures that Clerk handles authentication for protected routes:
 
-Step 2: Creating tables in Supabase 
-We will need to create a new table for users 
+```javascript 
+import { clerkMiddleware } from "@clerk/nextjs/server";
 
-```sql
-create table IF NOT EXISTS users (
-  user_id text NOT NULL PRIMARY KEY,
-  email text NOT NULL
-);
+export default clerkMiddleware();
 
--- Enable Row Level Security
-ALTER TABLE users ENABLE ROW LEVEL SECURITY;
+export const config = {
+  matcher: [
+    '/((?!_next|[^?]*\\.(?:html?|css|js|png|svg)).*)',
+    '/(api|trpc)(.*)',
+  ],
+};
 ```
 
-Step 3: Setup your NextJS App with SuperTokens 
+### Supabase Provider
+The SupabaseProvider initializes a Supabase client with the user’s session token:
 
-Step 4: Creating a Supabase JWT to access Supabase 
+```javascript 
+import { createClient } from "@supabase/supabase-js";
+import { useSession } from "@clerk/nextjs";
 
-When a user signs up, we want to: 
-1. Store the user's email in Supabase
-2. Retrieve and display that email on the frontend 
+export default function SupabaseProvider({ children }: { children: React.ReactNode }) {
+  const { session } = useSession();
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    { accessToken: () => session?.getToken() }
+  );
 
-To do this securely, Supabase needs to trust the request. So, you'll create a JWT (JSON WebToken) that Supabase can verify, proving that the request is coming from an authenticated user. 
-
-**JWT -- A Secure Passport**
-JWTs are tokens signed with a secret key. In this case, Supabase will verify the JWT using your Supabase Signing Secret. This proves that the user is authenticated and authorized to access data. 
-
-**Why You Need a Supabase JWT**
-Supabase needs to verify that your app's requests (like saving/fetching user data) are coming from an authenticated user. 
-
-To verify this: 
-* Supabase expects a JWT signed with a secret key (your Supabase project's JWT secret).
-* This JWT should include info like the userId so Supabase knows who the user is. 
-
-**How To Create This JWT Flow**
-
-You're using SuperTokens to handle sign-ins/ups and sessions. You will need to generate a Supabase JWT whenever a session is created so you can use that JWT to interact with Supabase. 
-
-Here is how you can set it up: 
-1. User signs up or logs in using SuperTokens
-2. In your backend config, you override SuperTokens' createNewSession function
-3. Inside this override: 
-    - You generate a JWT signed with Supabase's signing secret 
-    - The JWT includes the user's info (e.g., `userId`)
-    - You attach this JWT to the session (either )
-4. Now, whenever the session is verified (frontend or backend), you can retrieve that Supabase JWT 
-5. Use this JWT to make authenticated calls to Supabase to read or write data
-
-```sql
-User signs up/login → SuperTokens creates session → You generate Supabase JWT → Store it in session
-    ↓
-Frontend/Backend verifies session → Pull Supabase JWT from session → Use it to call Supabase
-```
-
-**Why Override `createNewSession`?**
-
-Because that's the hook SuperTokens provides to customize what happens when a new session is made. It's the perfect place to slip in your logic for adding a Supabase-compatible JWT.
-
-You're using SuperTokens for authentication and session management. When a user logs in, SuperTokens creates a session for them.
-
-Now you can override the default session creating logic to do one extra thing: 
-* Create a JWT (for Supabase) and attach it to the user's session
-
-**The Custom Session Code Explained**
-You override SuperTokens' createNewSession function like this: 
-
-```javascript
-createNewSession: async function (input) {
-  const payload = {
-    userId: input.userId, // Put the user ID in the JWT payload
-    exp: Math.floor(Date.now() / 1000) + 60 * 60, // Token expires in 1 hour
-  }
-
-  // Create JWT using Supabase's secret
-  const supabase_jwt_token = jwt.sign(payload, process.env.SUPABASE_SIGNING_SECRET);
-
-  // Store this JWT in the access token payload so it can be accessed later
-  input.accessTokenPayload = {
-    ...inout.accessTokenPayload, 
-    supabase_token: supabase_jwt_token,
-  }
-
-  return await originalImplementation.createNewSession(input);
+  return <Context.Provider value={{ supabase }}>{children}</Context.Provider>;
 }
 ```
 
-**What's Happening Here**
-* You create a Supabase JWT right when the session is created 
-* You add that token to the accessTokenPayload, which is part of the user's session
-* This means on boths the frontend and backend, you can access this supabase_token and use it to call Supabase
+## Code Walkthrough 
+### Saving Charts
+The handleSave function saves a Mermaid chart to the Supabase database:
 
-**Frontend Usage**
-On the frontend, after verifying the SuperTokens session, you can retrieve the `supabase_token` and use it with the Supabase client to make authenticated requests. 
+```javascript 
+const handleSave = async () => {
+  if (!supabase || !user) return;
 
-**Visual Flow: SuperTokens + Supabase JWT Flow**
-```pgsql
-+-----------------+      1. Signup/Login       +----------------------+
-|   Frontend App  |  ----------------------->  | SuperTokens Backend  |
-| (Next.js + ST)  |                           |                      |
-+-----------------+                           +----------------------+
-                                                     |
-                                                     | 2. Override `createNewSession`
-                                                     v
-                                            +---------------------------+
-                                            | Generate Supabase JWT     |
-                                            | - payload: userId + exp   |
-                                            | - signed w/ Supabase key |
-                                            +---------------------------+
-                                                     |
-                                                     v
-+-----------------+      3. Token in accessPayload    |
-|   Session with  |  <------------------------------+
-| supabase_token  |
-+-----------------+
+  const { data, error } = await supabase
+    .from('charts')
+    .insert({ content: code, user_id: user.id });
 
-     |
-     | 4. Get session on frontend (e.g. getSession)
-     v
-+-------------------------------+
-| Extract supabase_token       |
-| Use with Supabase client     |
-+-------------------------------+
-
-     |
-     v
-+-------------------------------+
-| Make secure DB request to     |
-| Supabase with JWT             |
-+-------------------------------+
+  if (error) console.error('Error saving chart:', error);
+};
 ```
 
+### Fetching Charts
+The fetchCharts function retrieves charts for the logged-in user:
 
-## Sources: 
-* [**Open Source Auth with login and secure sessions**](https://supabase.com/partners/integrations/supertokens)
-* [**Clerk and Supabase**](https://supabase.com/partners/integrations/clerk)
-* [**Integrate Supabase with Clerk**](https://clerk.com/docs/integrations/databases/supabase)
-* [**JavaScript Client Library**](https://supabase.com/docs/reference/javascript/introduction)
+```javascript 
+const fetchCharts = async () => {
+  const { data, error } = await supabase
+    .from('charts')
+    .select('content')
+    .order('created_at', { ascending: false });
+
+  if (data) setSavedCharts(data.map((item) => item.content));
+};
+```
+
+### Challenges and Solutions
+* **Session Management**: Ensure Clerk’s session is available before initializing Supabase.
+    * Solution: Use useEffect to wait for the session before creating the Supabase client.
+* **Error Handling**: Handle errors gracefully when saving or fetching data.
+    * Solution: Add error checks and display user-friendly messages.
+
+## Conclusion
+By integrating Clerk and Supabase, you can build secure and scalable applications with ease. Clerk handles authentication, while Supabase manages user-specific data. This combination is ideal for projects like the Mermaid Charting App, where personalized user experiences are key
+
+## Further Reading
+Clerk Documentation
+Supabase Documentation
+Next.js Documentation
+MermaidJS Documentation
