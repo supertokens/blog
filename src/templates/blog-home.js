@@ -57,6 +57,13 @@ const BlogHomeTemplate = (props) => {
           >
             Programming
           </button>
+          <button
+            id="tab-5-id"
+            className={`blog-categories__category ${selectedCategory === "test" && "selected"}`}
+            onClick={() => updateCategory("Test")}
+          >
+            Test
+          </button>
         </div>
       </div>
 
