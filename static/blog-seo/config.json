@@ -3301,6 +3301,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-strategy\"\n            },\n            \"headline\": \"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-strategy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/credential-management",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn about credential management, its importance, common security risks, and best practices. Discover how SuperTokens simplifies secure credential management.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Credential Management: What It Is and Why It Matters\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/credential-management\" />",
+            "<meta property=\"og:description\" content=\"Learn about credential management, its importance, common security risks, and best practices. Discover how SuperTokens simplifies secure credential management.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/credential-management.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn about credential management, its importance, common security risks, and best practices. Discover how SuperTokens simplifies secure credential management.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/credential-management\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/credential-management.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/credential-management\">"
+        ],
+        "title": "Credential Management: What It Is and Why It Matters",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/credential-management\"\n            },\n            \"headline\": \"Learn about credential management, its importance, common security risks, and best practices. Discover how SuperTokens simplifies secure credential management.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/credential-management.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {   
         "path": "/blog/mastering-nextjs-api-routes",
         "metaTags": [
             "<meta name=\"description\" content=\"Learn how to create and optimize API Routes in Next.js, handle requests effectively, and integrate authentication with SuperTokens for secure backend operations.\" />",
