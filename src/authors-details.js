@@ -194,7 +194,7 @@ module.exports = [{
 {
   name: "Maurice Saldivar",
   jobTitle: "Technical Writer",
-  image: "TODO.jpg",
+  image: "maurice.jpg",
   socials: [
 , {
       name: "github",

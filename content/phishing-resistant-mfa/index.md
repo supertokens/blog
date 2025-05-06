@@ -1,8 +1,8 @@
 ---
 title: "Implementing Phishing-Resistant MFA: Hands-On Developer Guide"
 description: "Learn how to implement phishing-resistant MFA with FIDO2, WebAuthn, and SuperTokens. Step-by-step tutorial for secure, developer-friendly authentication."
-date: "2025-04-06"
-cover: "TODO.png"
+date: "2025-05-06"
+cover: "Implementing-Phishing-Resistant-MFA.png"
 category: "programming, mfa"
 author: "Maurice Saldivar"
 ---
