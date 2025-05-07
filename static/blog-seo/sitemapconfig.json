@@ -346,7 +346,8 @@
     },
     {
         "location": "https://supertokens.com/blog/cloud-based-authentication"
-    }
+    },
+    {
         "location": "https://supertokens.com/blog/2fa-services"
     },
     {
@@ -375,5 +376,8 @@
     },
     {
         "location": "https://supertokens.com/blog/okta-vs-azure-ad"
+    },
+    {
+        "location": "https://supertokens.com/blog/phishing-resistant-mfa"
     }
 ]
