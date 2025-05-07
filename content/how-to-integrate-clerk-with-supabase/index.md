@@ -498,4 +498,4 @@ By integrating both, you can leverage the strengths of each platform to build a 
 ## Conclusion
 Integrating Clerk with Supabase provides a solid foundation for authentication and data management. However, for applications where session security is paramount, incorporating SuperTokens can address potential vulnerabilities.
 
-**Stay tuned for Part 2, where we'll explore how to swap in SuperTokens for enhanced session management and security.**
+Curious how SuperTokens compares? In Part II, we’ll show you how to build the same app using a self-hosted alternative for more control.
