@@ -1,36 +1,74 @@
 ---
 title: "How to Integrate Clerk with Supabase (+ One Better Choice)"
-date: "2025-04-18"
+date: "2025-05-06"
 description: "Learn how to seamlessly integrate Clerk's authentication with Supabase's database services to enhance user management and security in your applications."
-cover: ""
+cover: "integrate-clerk-with-supabase.png"
 category: "programming"
 author: "Maria Shimkovska"
 ---
 
-**Picture this:** You’re building the next big thing. The idea? Brilliant. The UI? Pixel-perfect. The code? Chef’s kiss.
+**Picture this:** You’re building the next big thing.  <br />The idea? Brilliant. The UI? Pixel-perfect. The code? Chef’s kiss.
 
 Then reality hits: <br />
 **"How do I handle authentication *and* database stuff without losing my mind?"** 😭
 
-If your app needs accounts and saved user data (and let’s face it, it probably does), you need auth and a database working together. Otherwise, your users are just anonymous ghosts shouting into the void. Not exactly the personalized experience we're aiming for today, right?
+If your app needs accounts and saved user data (and let’s face it, it probably does), you need authentication and a database working together. Without that, your users are just anonymous ghosts shouting into the void—not exactly the personalized experience you’re aiming for.
 
-Let's say you already picked Supabase for your backend need. But with so many authentication options available, how do you choose the right one for your Supabase-powered app?
+Let’s say you’ve already picked Supabase for your backend (great choice). But now you’re wondering: <br />
+**“Which authentication provider works best with Supabase in a Next.js app?”**
 
-This two-part guide is here to help:
-* **Part I:** Integrate Clerk for authentication with Supabase in a Next.js app
-* **Part II:** Swap in SuperTokens as an alternative auth solution
+This two-part guide walks you through two popular options—**Clerk** and **SuperTokens**—so you can see how they compare in real projects.
+
+* **Part I:** How to integrate **Clerk** with **Supabase** in a **Next.js** app if you want to ship quickly using beautiful out of the box components.
+* **Part II:** How to swap in **SuperTokens** as an alternative auth solution if you’re looking for more control, self-hosting, customizable flows, and advanced features like multi-tenancy, passwordless login, and seamless session management—all while staying fully in charge of your user data.
+
+## 📖 What You'll Learn
 
 By the end, you’ll be able to compare both approaches side-by-side and choose what fits your project best.
 
-We’ll use a [**Mermaid**](https://mermaid.js.org/) charting app as our running example—a tool that lets users create, save, and manage diagrams securely.
+We’ll use a [**Mermaid**](https://mermaid.js.org/) diagramming app as our running example—a tool that lets users create, save, and manage diagrams securely.
 
-**In Part I, you'll:** 
+**In Part I, You'll:** 
 * 📘 Learn the basics of Clerk and Supabase
 * 🛠 Combine them to build a secure, data-driven app
-* ⚖️ Weigh the pros and cons of Clerk
-* 🤗 Get a sneak peek at an exciting alternative
+* ⚖️ Weigh the pros and cons of using Clerk for authentication
+* 🤗 Get a sneak peek at an alternative: SuperTokens
 
-Let’s make auth and data storage actually enjoyable. First, we’ll look at a stripped-down version of the app—no auth, no persistence—so you can see the baseline. Then we’ll layer in features and see how each one improves the experience.
+Let’s make auth and data storage actually enjoyable. <br /> First, we’ll look at a stripped-down version of the app—no auth, no persistence—so you can see the baseline. Then we’ll layer in features and see how each one improves the experience.
+
+## 🔗 How Clerk and Supabase Work Together
+
+Clerk and Supabase handle two essential—but separate—parts of your app:
+
+* **Clerk = Auth & Identity** <br />Clerk manages everything about who the user is: their credentials, session, and identity. When someone signs in, Clerk gives them a unique userId.
+
+* **Supabase = Data Storage & Rules** <br />Supabase stores and retrieves the actual user content—like saved diagrams. But crucially, it doesn’t know who a user is unless you connect the dots.
+
+Here’s how the connection works:
+
+1. **Clerk handles authentication.**<br /> When a user signs in, Clerk generates a session and provides a secure, unique identifier (`userId`).
+2. **You send that `userId` to Supabase** when saving or retrieving data. <br />This happens in your client or server code—any time you store or fetch data, you include the user’s ID.
+3. **Supabase enforces access rules using Row Level Security (RLS).** <br />With RLS enabled, you write SQL policies that make sure users can only read/write rows that belong to their userId.
+
+    For example:
+
+    ```sql
+    policy "Users can access their own charts"
+    on charts
+    for all
+    using (auth.uid() = user_id);
+    ```
+
+This setup means:
+* Users must be logged in to interact with data.
+* Every saved chart is associated with a specific user.
+* Users can only see or update their own charts.
+
+It’s a clean separation of concerns:
+* Clerk handles who a user is.
+* Supabase handles what they can access.
+
+Together, they make it easy to build secure, personalized apps—without needing to spin up your own authentication or backend from scratch.
 
 ## 💻 Project Overview 
 
@@ -39,7 +77,7 @@ Let’s make auth and data storage actually enjoyable. First, we’ll look at a 
 
 The Mermaid Charting App is a **Next.js**-based tool that integrates **Clerk** and **Supabase** to provide the following features:
 
-* **MermaidJS Editor**: A real-time editor for creating diagrams using Mermaid syntax.
+* **MermaidJS Editor**: An interactive editor for generating diagrams from Mermaid syntax.
 * **Authentication with Clerk**: Users can sign in or sign up, and their sessions are managed securely.
 * **Chart Storage with Supabase**: Authenticated users can save their diagrams to a Supabase database and retrieve them later.
 
@@ -50,7 +88,7 @@ The Mermaid Charting App is a **Next.js**-based tool that integrates **Clerk** a
 <br />
 
 We’ll combine Clerk and Supabase to bring this app to life:
-1. 🔐 **Clerk** will manage authentication and user sessions, allowing users to sign up, log in, and have personalized accounts.
+1. 🔐 **Clerk** will manage user authentication and user sessions, allowing people to sign up, log in, and have personalized accounts.
 2. 🗄️ **Supabase** will store charts and associate them with the authenticated user—so each person only sees their own saved diagrams.
 
 ![alt text](image.png)
@@ -158,17 +196,18 @@ Here’s what to do:
 * Use `SignedOut` to wrap the `SignInButton` and`SignUpButton`. These will only appear when the user is signed out.
 * Use `SignedIn` to wrap both the `UserButton` and your app’s content. These will only show when the user is signed in.
 
-```javascript{4-11, 34, 39-42, 44-45, 47, 52}
+```javascript{4-12, 36, 41-45, 47-51, 56}
 import { type Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+// 🔐 Clerk components for authentication flows
 import {
-  ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
+  ClerkProvider, // Wraps your app to provide authentication context
+  SignInButton, // Renders a sign-in button that opens Clerk's sign-in modal
+  SignUpButton, // Renders a sign-up button that opens Clerk's sign-up modal
+  SignedIn, // Conditionally renders children *only* if the user is signed in
+  SignedOut, // Conditionally renders children *only* if the user is signed out
+  UserButton, // Displays the user's avatar with a dropdown for account management
 } from '@clerk/nextjs'
 
 const geistSans = Geist({
@@ -192,19 +231,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    // ✅ ClerkProvider wraps the entire app, enabling access to auth state and Clerk components
     <ClerkProvider>
       <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
           <header className="p-5">
 
+          {/* 👋 Show these only when the user is signed out */}
           <SignedOut>
-            <SignInButton />
-            <SignUpButton />
+            <SignInButton /> {/* Opens a modal for users to sign in */}
+            <SignUpButton /> {/* Opens a modal for users to create an account */}
           </SignedOut>
 
+          {/* 🙌 Show these only when the user is signed in */}
           <SignedIn>
-            <UserButton />
-            {children}
+            <UserButton /> {/* Shows user profile options like sign out */}
+            {children}  {/* Show the app content only to signed-in users */}
           </SignedIn>
           
         </header>
@@ -235,6 +277,13 @@ Once it’s running, head to `http://localhost:3000` in your browser. You should
 Next up: we'll connect Supabase and set it up to store user-specific data like saved Mermaid graphs.
 
 ## 💻 Setting Up Supabase
+To integrate Supabase into your project, follow these steps. 
+
+### 1. Create a Supabase Account
+Head over to [Supabase's website](https://supabase.com/) and sign up for an account. Once you have an account, you can create your first project. 
+
+### 2. Create a New Project 
+Create a new project, pick a project name (e.g., *Mermaid Visualizer*), and a strong password. Supabase has an option (*Generate a password*) that creates a strong password for you. Make sure to use your Password Manager of choice to secure your new password. For the Region, pick the closest one to where your users may be. 
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe id="js_video_iframe" src="https://jumpshare.com/embed/a2VexfxNR8imzVJ8Q4mJ" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"></iframe></div>
 
@@ -463,7 +512,7 @@ const fetchCharts = async () => {
 By integrating Clerk and Supabase, you can build secure and scalable applications with ease. Clerk handles authentication, while Supabase manages user-specific data. This combination is ideal for projects like the Mermaid Charting App, where personalized user experiences are key
 
 ## Further Reading
-Clerk Documentation
-Supabase Documentation
-Next.js Documentation
-MermaidJS Documentation
+* Clerk Documentation
+* Supabase Documentation
+* Next.js Documentation
+* MermaidJS Documentation
