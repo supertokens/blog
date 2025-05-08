@@ -78,6 +78,14 @@ The architecture is similar to Clerk and Supabase - but with more explicit contr
 
 Just like with Clerk, we use a custom SQL helper in Supabase to parse the JWT's `sub` field (*which holds the user ID*).
 
+## 💻 Project Overview
+🛠️ We’ll use the same Mermaid Charting App, but replace Clerk with SuperTokens. Here's what it includes:
+* 👥 Sign up / Sign in using email-password (or passwordless if you prefer)
+* ✍️ MermaidJS editor to write and render diagrams
+* 📁 Supabase to store saved charts securely by user
+
+GitHub repo for this version: **[coming soon]**
+
 ## 🔧 Setting Up SuperTokens
 
 ### 1. Install Dependencies
@@ -235,5 +243,9 @@ Want to see the whole setup? Check out the full working demo here:<br />
 * You need full control over auth and sessions.
 * You want to self-host or stay GDPR-compliant.
 * You’re building complex auth flows (multi-tenant, B2B, etc.)
+
+Both are solid choices. It just depends what kind of product you’re building—and how much control you want over your stack.
+
+
 
 Thanks for following this two-part guide! 🎉
