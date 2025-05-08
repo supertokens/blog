@@ -1,7 +1,7 @@
 ---
-title: "How to Integrate SuperTokens with Supabase (The Power-User Alternative)"
+title: "How to Integrate SuperTokens with Supabase (And Why You Might Choose It Over Clerk)"
 date: "2025-05-07"
-description: "🔒 Discover how to implement custom, self-hosted authentication using SuperTokens and Supabase—ideal for devs who need flexibility, control, and advanced auth flows."
+description: "🧩 Looking for an auth solution that’s open-source, self-hostable, and highly customizable? Here's how to set up SuperTokens with Supabase in a Next.js app—and when it’s the smarter choice over Clerk."
 # cover: "integrate-supertokens-with-supabase.png"
 category: "programming"
 author: "Maria Shimkovska"
@@ -11,30 +11,19 @@ Welcome back! 👋
 
 In Part I, we used Clerk to get a fast, sleek authentication system running in our Mermaid diagramming app. Clerk’s plug-and-play components are great when you want to ship quickly.
 
-But what if you need more control?
+But what if your app needs more control? <br />
+What if you need to self-host your auth, define custom logic, or support multiple tenants?
 
-Want to self-host your auth logic?
+Welcome to Part II—where we swap Clerk for SuperTokens, a powerful alternative for developers who want full control over authentication and session management without losing their minds.
 
-Need advanced flows like multi-tenancy, passwordless login, or magic links?
+## 📖 What You’ll Learn
+In this guide, you'll: 
+* Set up SuperTokens in your Next.js app
+* Connect it to Supabase for storing-specific data
+* Compare the developer experience to Clerk 
+* Customize auth flows and learn how SuperTokens gives you more control 
 
-Don’t want your user data leaving your infrastructure?
-
-Then it's time to meet SuperTokens.
-
-## ⚖️ Clerk vs SuperTokens (Quick Recap)
-
-| Feature                    | Clerk                 | SuperTokens                     |
-|----------------------------|------------------------|----------------------------------|
-| Hosted or Self-Hosted      | Hosted (SaaS)          | Self-host or Managed            |
-| UI Components              | Prebuilt & polished    | Prebuilt or build your own                  |
-| Customization              | Moderate               | Full control                    |
-| Session Management         | Built-in               | Fine-grained                    |
-| Magic Links, Passwordless  | ✅                     | ✅ (fully customizable)         |
-| Social Login               | ✅                     | ✅                              |
-| Pricing                    | Free tier, usage-based | Open source, optional managed plans |
-| GDPR/Compliance            | Data stored externally | Full control over data residency |
-
-If you're building a project where **you need fine-grained control** over auth and user management, **SuperTokens is the way to go.**
+As with Part I, we'll use the [**Mermaid Charting App**]() as our demo project. 
 
 ## 🧠 What is SuperTokens?
 
@@ -50,6 +39,26 @@ SuperTokens can be configured in password, social login, or passwordless mode—
 
 In this guide, we’ll integrate SuperTokens with Supabase to protect and persist user-created Mermaid diagrams, just like we did with Clerk.
 
+## 💬 Why SuperTokens
+SuperTokens is a developer-first authentication that can be self-hosted or managed through the SuperTokens Cloud. It's open-source, privacy-conscious, and gives you deeper control over the authentication stack. 
+
+Here is what makes SuperTokens stands out.
+
+### ⚖️ SuperTokens vs Clerk (Quick Recap)
+
+| Feature                    | Clerk                 | SuperTokens                     |
+|----------------------------|------------------------|----------------------------------|
+| Hosted or Self-Hosted      | Hosted (SaaS)          | Self-host or Managed            |
+| UI Components              | Prebuilt & polished    | Prebuilt or build your own                  |
+| Customization              | Moderate               | Full control                    |
+| Session Management         | Built-in               | Fine-grained                    |
+| Magic Links, Passwordless  | ✅                     | ✅ (fully customizable)         |
+| Social Login               | ✅                     | ✅                              |
+| Pricing                    | Free tier, usage-based | Open source, optional managed plans |
+| GDPR/Compliance            | Data stored externally | Full control over data residency |
+
+If you need advanced logic, ownership of your user data, or compliance with stricter regulations (e.g. healthcare, government, EU), SuperTokens is the better fit.
+
 ## 🗺️ App Architecture Overview
 Here’s the high-level setup:
 * **SuperTokens = Auth and Session Management**
@@ -60,6 +69,14 @@ Here’s the high-level setup:
 We’ll store Mermaid charts in Supabase, each associated with the user’s unique ID from SuperTokens.
 
 Let’s dive in. 🧵
+
+## 🔗 How SuperTokens + Supabase Work Together
+The architecture is similar to Clerk and Supabase - but with more explicit control at each step. 
+1. **SuperTokens handles authentication and session tokens.**
+2. **Your app extracts the user ID from the token**, then uses that ID to interact with Supabase. 
+3. **Supabase uses Row Level Security (RLS)** to make sure users only access their own data. 
+
+Just like with Clerk, we use a custom SQL helper in Supabase to parse the JWT's `sub` field (*which holds the user ID*).
 
 ## 🔧 Setting Up SuperTokens
 
