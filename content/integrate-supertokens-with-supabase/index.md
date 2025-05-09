@@ -1,8 +1,8 @@
 ---
-title: "How to Integrate SuperTokens with Supabase (And Why You Might Choose It Over Clerk)"
+title: "How to Integrate SuperTokens with Supabase (+ Why You Might Choose It Over Clerk)"
 date: "2025-05-07"
 description: "🧩 Looking for an auth solution that’s open-source, self-hostable, and highly customizable? Here's how to set up SuperTokens with Supabase in a Next.js app—and when it’s the smarter choice over Clerk."
-# cover: "integrate-supertokens-with-supabase.png"
+cover: "integrate-supertokens-with-supabase.png"
 category: "programming"
 author: "Maria Shimkovska"
 ---
@@ -14,7 +14,7 @@ In Part I, we used Clerk to get a fast, sleek authentication system running in o
 But what if your app needs more control? <br />
 What if you need to self-host your auth, define custom logic, or support multiple tenants?
 
-Welcome to Part II—where we swap Clerk for SuperTokens, a powerful alternative for developers who want full control over authentication and session management without losing their minds.
+Welcome to Part II —- where **we swap Clerk for SuperTokens**, a powerful alternative for developers who want **full control over authentication and session management** without losing their minds.
 
 ## 📖 What You’ll Learn
 In this guide, you'll: 
