@@ -21,12 +21,16 @@ Because Firebase is proprietary and serverless, developers have **limited contro
 
 Finally, relying on Firebase for data storage raises **ownership, privacy, and compliance** questions. While Firebase is GDPR-compliant, meeting stricter regulations or maintaining fine-grained control over user data can be challenging. 
 
+![Screenshot of a Redditor sharing their experience with a massive surprise Firebase bill](firebase-cost.png)
+
 * **Vendor lock-in:** Firebase's cloud-native design tied you to Google's ecosystem. Migrating data and logic to another backend often requires significant re-engineering. 
 * **Rising costs:** Firebase's free tier is generous for small apps, but its pay-as-you-go model charges per database read/write, storage, and bandwidth. In practice, high-traffic apps can face **surprising bills**.
 * **Limited backend flexibility:** As a managed serverless service, Firebase abstracts away server control. This simplifies prototyping, but hinders advanced customization of backend processes or complex relational data handling. 
 * **Data ownership and compliance:** Data lives on Google's servers. Satisfying industry regulations (GDPR, HIPAA, etc.) may require extra configuration, since Firebase's built-in tools don't always offer the granular control needed.
 
 These challenges motivate many teams to explore **Firebase alternatives** that offer more flexibility, cost predictability, or open-source freedom. 
+
+![Another screenshot of a Redditor sharing their experience with a massive surprise Firebase bill](firebase-surprise-bill.png)
 
 ## Key Factors to Look for in a Firebase Alternative 
 When evaluating BaaS platforms to replace Firebase, consider several technical criteria and trade-offs.
@@ -53,6 +57,9 @@ Keeping these factors in mind will help you choose a backend that aligns with yo
 Below we compare four leading Firebase alternatives, highlighting their key features, pros/cons, and best-use scenarios. 
 
 ### Supabase
+
+![Screenshot of partial Supabase website](supabase.png)
+
 * **Key Features:** Supabase bills itself as “the open-source Firebase alternative”. it is built on a PostgreSQL database, giving your relational queries and ACID guarantees out of the box. Supabase auto-generates RESTful (and GraphQL) APIs for your database, and it includes real-time subscriptions so you can listen to data changes just like Firebase’s realtime DB. 
 
     Supabase also provides a built-in Authentication service (with user management and Row-Level Security) and support for third-party OAuth providers (Google, Apple, Facebook, etc.). Other features include scalable file Storage, and “Edge Functions” (serverless functions you can write in JavaScript/TypeScript). Overall, Supabase mirrors many Firebase capabilities but on an open platform.
@@ -60,24 +67,54 @@ Below we compare four leading Firebase alternatives, highlighting their key feat
 * **Cons:** Supabase is still maturing compared to older platforms. Its ecosystem and third-party tooling are smaller than Firebase’s. Some advanced features (like certain analytic or machine-learning integrations) may not yet exist or be in beta. If your app relies on very large-scale distributed data or very high-volume workloads, you may encounter scaling trade-offs until more of Supabase’s scalability features stabilize.
 * **Best for:** Developers who want a Firebase-like experience with SQL underpinnings and who value open-source. Supabase is a great fit if you need relational data or want to avoid lock-in, and you’re comfortable being an early adopter of a growing platform.
 
+*** 
+
 ### Appwrite
 
-* **Key Features:**
-* **Pros:** 
-* **Cons:**
-* **Best for:** 
+![Screenshot of partial Appwrite website](appwrite.png)
+
+* **Key Features:** Appwrite is an open-source self-hosted backend server designed for web and mobile pps. It offers a comprehensive suite: Authentication, NoSQL database, file storage, cloud Functions (serverless code), messaging, and real-time capabilities. Appwrite is built to be deployed with Docker. In fact, its docs state that “you can install and run Appwrite on any OS that can run Docker CLI”. 
+
+    This means you can host the entire backend on your own infrastructure (on-prem or any cloud) for full data ownership. It also provides an intuitive user-friendly console and supports 30+ login methods, multi-factor auth, rate limits, and more as standard.
+* **Pros:** Because you self-host Appwrite, you get full control and privacy over your backend and data. You can scale it as you like (*by provisioning more servers*) and are not forced into any single cloud provider. 
+    
+    Appwrite’s modular design and SDKs for multiple languages make it easy to integrate. Its developer experience is a focus – for example, it integrates with many common frameworks and even has built-in support for OAuth and enterprise logins.
+* **Cons:** The trade-off for control is operational overhead. Using Appwrite means DevOps responsibilities. You must manage the servers, updates, scaling, and backups yourself. Teams without dedicated infrastructure expertise may find this burdensome. Also, like Supabase, Appwrite is relatively new, so its ecosystem is still growing. Some advanced enterprise features may be less mature than large cloud providers’.
+* **Best for:** Teams that prioritize customization, compliance, and data ownership. If you want a Firebase-like feature set but need to run everything on your own terms (or use Docker), Appwrite is a strong choice. It suits projects where having control over the environment is more important than a turnkey hosted solution.
+
+*** 
 
 ### AWS Amplify 
-* **Key Features:**
-* **Pros:** 
-* **Cons:**
-* **Best for:** 
+
+![Screenshot of partial AWS Amplify website](aws-amplify.png)
+
+* **Key Features:** AWS Amplify is Amazon’s cloud-native development platform. It provides managed backend services (often via other AWS services) with an emphasis on integration into the AWS ecosystem. Amplify Auth is backed by Amazon Cognito, giving you robust user authentication and authorization out of the box. 
+
+    You can configure GraphQL APIs (via AWS AppSync) or REST APIs easily, with support for offline data synchronization. Amplify also includes managed hosting (using S3 and CloudFront), analytics (AWS Pinpoint), and even machine learning integrations. In practice, Amplify ties together many AWS services – for example, S3 for file storage, DynamoDB or RDS for data, and Pinpoint for analytics.
+* **Pros:** Amplify’s biggest strength is scalability and robustness. It runs on AWS’s global cloud infrastructure, so it can handle massive scale and offers enterprise-grade reliability. If your app is already using AWS (or plans to), Amplify provides excellent integration with the rest of AWS’s services. 
+
+    For example, it’s easy to add Cognito authentication, attach AWS Lambda functions, and use AWS’s security features. The SigNoz comparison notes that Amplify is very flexible and highly scalable, making it suitable for large applications
+* **Cons:** Amplify can be complex. Its pricing model involves multiple AWS services, which can make costs hard to predict and potentially high at scale. There is a steep learning curve if you’re not already familiar with AWS. Some developers find that Firebase is simpler and more straightforward for small projects, whereas Amplify shines in large, AWS-centric deployments. 
+
+    In short, Amplify can feel like overkill for simple apps, and AWS’s intricacies (IAM roles, permissions, etc.) can add complexity.
+* **Best for:** Teams building on AWS or needing enterprise-scale capabilities. If your infrastructure is already on AWS, or you need to leverage AWS services (ML, enterprise security, etc.), Amplify is a natural fit. It’s ideal for apps that will grow into the tens or hundreds of thousands of users and need tight integration with Amazon’s cloud.
+
+***
 
 ### Backendless 
-* **Key Features:**
-* **Pros:** 
-* **Cons:**
-* **Best for:** 
+
+![Screenshot of partial Backendless website](backendless.png)
+
+* **Key Features:** Backendless is a low-code/no-code visual app platform. It provides a drag-and-drop UI builder and codeless logic editor so that developers (even non-technical users) can define backend workflows and UI visually. Under the hood, it offers an mBaaS (*mobile Backend as a Service*) with built-in user management, real-time database syncing, messaging (publish/subscribe), and file storage. 
+
+    Notably, Backendless supports a dynamic database that combines SQL and NoSQL features – you get the flexibility of NoSQL with the ability to run SQL queries and relational logic. It also includes features like geolocation, geo-relations, and automated push notifications for mobile apps.
+* **Pros:** Backendless excels at rapid prototyping and ease of use. Its visual tools allow teams to spin up full apps quickly without writing much code. Features like its built-in push notification service and real-time data sync are user-friendly for non-dev teams. The platform even advertises “unlimited data retrieval” and built-in security for your APIs. 
+
+    In short, for simple projects, startups, or internal tools, it can significantly accelerate development by abstracting much of the backend plumbing.
+* **Cons:** The low-code convenience has a price. Backendless’s hosted plans can become expensive at scale compared to rolling your own self-hosted backend. The free tier is very limited (you must complete tasks to unlock it), and paid plans start around $25/month. 
+
+    There’s also less transparency since much of the platform is a managed service. Advanced customization (beyond what the UI builder offers) may require diving into code or APIs.
+* **Best for:** Fast prototyping and teams with limited coding resources. Backendless is particularly well-suited to MVPs, proof-of-concepts, or businesses that want to involve non-technical stakeholders in development. It’s a strong choice for small apps that need mobile push notifications, real-time updates, and a quick setup, but it’s less ideal for very large-scale or highly customized backends.
 
 ## How SuperTokens Improves Authentication in Firebase Alternatives 
 
@@ -114,4 +151,4 @@ In every case, pairing your backend with a dedicated auth solution like SuperTok
 
 SuperTokens works as a drop-in auth layer (supporting passwordless login, social login, MFA, and strong session management) that you can integrate on top of Supabase, Appwrite, Amplify, Backendless, or any other backend. By decoupling authentication from your core backend, you avoid vendor lock-in and gain customization freedom. 
 
-This setup – choosing the right backend BaaS and combining it with a robust auth framework like SuperTokens – gives you a truly scalable, secure, and flexible architecture for your app.
+This setup, choosing the right backend BaaS and combining it with a robust auth framework like SuperTokens, gives you a truly scalable, secure, and flexible architecture for your app.
