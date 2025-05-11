@@ -25,7 +25,7 @@ toHeading: 3
 
 ## Why Consider Firebase Alternatives?
 
-Firebase, Google's popular Backend-as-a-Service (BaaS) launched in 2011 and acquired by Google in 2014, provides developers with a comprehensive suite of tools including hosting, real-time NoSQL databases, authentication, and cloud functions, all with minimal setup.
+[**Firebase**](https://firebase.google.com/), Google's popular Backend-as-a-Service (BaaS) launched in 2011 and acquired by Google in 2014, provides developers with a comprehensive suite of tools including hosting, real-time NoSQL databases, authentication, and cloud functions, all with minimal setup.
 
 ![Screenshot of the Firebase website](firebase.png)
 
@@ -95,9 +95,9 @@ Keeping these factors in mind will help you choose a backend that aligns with yo
 
 Below we compare four leading Firebase alternatives, highlighting their key features, pros/cons, and best-use scenarios. 
 
-### [Supabase](https://supabase.com/): The Open-Source SQL Alternative
+### Supabase: The Open-Source SQL Alternative
 
-Supabase is an open-source backend platform that offers a Firebase-like developer experience—but with a PostgreSQL database at its core. It’s often called “the open-source Firebase” because it replicates many Firebase services like auth, real-time data, and file storage, while providing full control and relational data modeling.
+[**Supabase**](https://supabase.com/) is an open-source backend platform that offers a Firebase-like developer experience—but with a PostgreSQL database at its core. It’s often called “the open-source Firebase” because it replicates many Firebase services like auth, real-time data, and file storage, while providing full control and relational data modeling.
 
 ![Screenshot of partial Supabase website](supabase.png)
 
@@ -130,10 +130,9 @@ Supabase is an open-source backend platform that offers a Firebase-like develope
 
 ### Appwrite: Developer-Centric
 
-Appwrite is a self-hosted backend server packaged as a set of Docker containers. It offers a developer-centric approach, giving you complete control over data, infrastructure, and compliance. Appwrite provides essential backend services out of the box—databases, authentication, storage, functions, and real-time capabilities—without tying you to a specific cloud vendor.
+[**Appwrite**](https://appwrite.io/) is a self-hosted backend server packaged as a set of Docker containers. It offers a developer-centric approach, giving you complete control over data, infrastructure, and compliance. Appwrite provides essential backend services out of the box—databases, authentication, storage, functions, and real-time capabilities—without tying you to a specific cloud vendor.
 
 ![Screenshot of partial Appwrite website](appwrite.png)
-
 
 #### Key Features
 
@@ -168,7 +167,7 @@ Appwrite is a self-hosted backend server packaged as a set of Docker containers.
 
 ### AWS Amplify: Enterprise-Grade Scalability
 
-AWS Amplify is Amazon’s answer to full-stack app development. It combines powerful backend services from AWS (like Cognito, AppSync, S3, Lambda) into a more approachable framework for frontend and mobile developers. It shines in enterprise environments and apps expecting massive scale, offering unmatched integration with AWS’s global infrastructure.
+[**AWS Amplify**](https://aws.amazon.com/amplify/) is Amazon’s answer to full-stack app development. It combines powerful backend services from AWS (like Cognito, AppSync, S3, Lambda) into a more approachable framework for frontend and mobile developers. It shines in enterprise environments and apps expecting massive scale, offering unmatched integration with AWS’s global infrastructure.
 
 ![Screenshot of partial AWS Amplify website](aws-amplify.png)
 
@@ -202,7 +201,7 @@ AWS Amplify is Amazon’s answer to full-stack app development. It combines powe
 
 ### Backendless: Low-Code Rapid Development
 
-Backendless is a low-code platform that combines a visual UI builder, codeless logic tools, and a powerful [mBaaS (*mobile Backend as a Service*)](https://backendless.com/what-is-mobile-backend-as-a-service-mbaas/) backend. It’s uniquely positioned for non-technical teams or fast-moving startups that need to build and launch apps quickly without managing server infrastructure or writing complex backend code.
+[**Backendless**](https://backendless.com/) is a low-code platform that combines a visual UI builder, codeless logic tools, and a powerful [mBaaS (*mobile Backend as a Service*)](https://backendless.com/what-is-mobile-backend-as-a-service-mbaas/) backend. It’s uniquely positioned for non-technical teams or fast-moving startups that need to build and launch apps quickly without managing server infrastructure or writing complex backend code.
 
 
 ![Screenshot of partial Backendless website](backendless.png)
