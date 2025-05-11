@@ -50,6 +50,8 @@ These challenges motivate many teams to explore **Firebase alternatives** that o
 
 ![Another screenshot of a Redditor sharing their experience with a massive surprise Firebase bill](firebase-surprise-bill.png)
 
+Firebase alternatives are backend-as-a-service (BaaS) platforms that provide similar functionality to Firebase but with different features, pricing models, or technological approaches. The top alternatives include Supabase, AWS Amplify, Appwrite, and Backendless.
+
 ## Key Factors to Consider When Choosing a Firebase Alternative 
 When evaluating backend platforms, focus on these critical factors:
 
@@ -99,7 +101,7 @@ Below we compare four leading Firebase alternatives, highlighting their key feat
 
 [**Supabase**](https://supabase.com/) is an open-source backend platform that offers a Firebase-like developer experience—but with a PostgreSQL database at its core. It’s often called “the open-source Firebase” because it replicates many Firebase services like auth, real-time data, and file storage, while providing full control and relational data modeling.
 
-![Screenshot of partial Supabase website](supabase.png)
+![Screenshot of partial Supabase website](firebase-alternative-supabase.png)
 
 #### Key Features
 * PostgreSQL database with relational queries and ACID guarantees
@@ -132,7 +134,7 @@ Below we compare four leading Firebase alternatives, highlighting their key feat
 
 [**Appwrite**](https://appwrite.io/) is a self-hosted backend server packaged as a set of Docker containers. It offers a developer-centric approach, giving you complete control over data, infrastructure, and compliance. Appwrite provides essential backend services out of the box—databases, authentication, storage, functions, and real-time capabilities—without tying you to a specific cloud vendor.
 
-![Screenshot of partial Appwrite website](appwrite.png)
+![Screenshot of partial Appwrite website](firebase-alternative-appwrite.png)
 
 #### Key Features
 
@@ -169,7 +171,7 @@ Below we compare four leading Firebase alternatives, highlighting their key feat
 
 [**AWS Amplify**](https://aws.amazon.com/amplify/) is Amazon’s answer to full-stack app development. It combines powerful backend services from AWS (like Cognito, AppSync, S3, Lambda) into a more approachable framework for frontend and mobile developers. It shines in enterprise environments and apps expecting massive scale, offering unmatched integration with AWS’s global infrastructure.
 
-![Screenshot of partial AWS Amplify website](aws-amplify.png)
+![Screenshot of partial AWS Amplify website](firebase-alternative-aws-amplify.png)
 
 #### Key Features
 * Integration with the broader AWS ecosystem
@@ -204,7 +206,7 @@ Below we compare four leading Firebase alternatives, highlighting their key feat
 [**Backendless**](https://backendless.com/) is a low-code platform that combines a visual UI builder, codeless logic tools, and a powerful [mBaaS (*mobile Backend as a Service*)](https://backendless.com/what-is-mobile-backend-as-a-service-mbaas/) backend. It’s uniquely positioned for non-technical teams or fast-moving startups that need to build and launch apps quickly without managing server infrastructure or writing complex backend code.
 
 
-![Screenshot of partial Backendless website](backendless.png)
+![Screenshot of partial Backendless website](firebase-alternative-backendless.png)
 
 #### Key Features
 
