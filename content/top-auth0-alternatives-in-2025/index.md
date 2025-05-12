@@ -1,6 +1,6 @@
 ---
 title: "Top Auth0 Alternatives in 2025: The Best CIAM Solutions Compared | SuperTokens"
-date: "2025-03-25"
+date: "2025-04-25"
 description: "Explore the top Auth0 alternatives for authentication and authorization. Discover solutions like SuperTokens, Okta, and Keycloak to find the perfect fit for your business needs."
 cover: "top-auth0-alternatives-in-2025.png"
 category: "programming"
