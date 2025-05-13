@@ -3807,6 +3807,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/okta-vs-azure-ad\"\n            },\n            \"headline\": \"Explore the differences between Okta and Azure Active Directory (AD) to help you choose the right IAM solution. \",\n            \"image\": \"https://supertokens.com/blog-meta-images/okta-vs-azure.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/multi-factor-auth-cost",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore the true cost of Multi-Factor Authentication (MFA), including licensing, integration, maintenance, and hidden risks. Learn how SuperTokens helps optimize MFA costs without compromising security.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Breaking Down the Cost of Multi-Factor Authentication: Is It Worth It?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/multi-factor-auth-cost\" />",
+            "<meta property=\"og:description\" content=\"Explore the true cost of Multi-Factor Authentication (MFA), including licensing, integration, maintenance, and hidden risks. Learn how SuperTokens helps optimize MFA costs without compromising security.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/multi-factor-auth-cost.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore the true cost of Multi-Factor Authentication (MFA), including licensing, integration, maintenance, and hidden risks. Learn how SuperTokens helps optimize MFA costs without compromising security.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/multi-factor-auth-cost\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/multi-factor-auth-cost.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/multi-factor-auth-cost\">"
+        ],
+        "title": "Breaking Down the Cost of Multi-Factor Authentication: Is It Worth It?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/multi-factor-auth-cost\"\n            },\n            \"headline\": \"Explore the true cost of Multi-Factor Authentication (MFA), including licensing, integration, maintenance, and hidden risks. Learn how SuperTokens helps optimize MFA costs without compromising security.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/multi-factor-auth-cost.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
         "path": "/blog/phishing-resistant-mfa",
         "metaTags": [
             "<meta name=\"description\" content=\"Learn how to implement phishing-resistant MFA with FIDO2, WebAuthn, and SuperTokens. Step-by-step tutorial for secure, developer-friendly authentication.\" />",
