@@ -364,5 +364,8 @@
     },
     {
         "location": "https://supertokens.com/blog/okta-vs-azure-ad"
+    },
+    {
+        "location": "https://supertokens.com/blog/multi-factor-auth-cost"
     }
 ]
