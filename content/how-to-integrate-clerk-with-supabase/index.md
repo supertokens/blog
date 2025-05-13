@@ -87,11 +87,11 @@ The Mermaid Charting App is a **Next.js**-based tool that integrates **Clerk** a
 * **Authentication with Clerk**: Users can sign in or sign up, and their sessions are managed securely.
 * **Chart Storage with Supabase**: Authenticated users can save their diagrams to a Supabase database and retrieve them later.
 
-🧜‍♀️ In the video below, you’ll see the core features of the app in action -- writing and rendering a Mermaid chart, and saving it to your Saved Charts section. At this stage, the app **doesn’t** include authentication or persistence. That means anyone can view charts, and saved work vanishes when the page reloads. 
+🧜‍♀️ In screenshot you’ll see the core features of the app in action -- writing and rendering a Mermaid chart, and saving it to your Saved Charts section. At this stage, the app **doesn’t** include authentication or persistence. That means anyone can view charts, and saved work vanishes when the page reloads. 
 
 This baseline helps demonstrate the value Clerk and Supabase bring to the table as we layer in authentication and data persistence.
  
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe id="js_video_iframe" src="https://jumpshare.com/embed/YOpxWr5WU4Hc9T2JEAXY" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"></iframe></div>
+**[Add screenshot]**
 
 <br />
 
@@ -139,7 +139,7 @@ First, head over to [Clerk's website](https://clerk.com/) and sign up for an acc
 3. Choose the authentication methods from a list.
     - In this demo, we are selecting just the Email authentication method for simplicity.
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe id="js_video_iframe" src="https://jumpshare.com/embed/AnOxQNnud4HnDbJP94ev" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"></iframe></div>
+**[Add screenshot of the selection window]**
 
 <br />
 
@@ -285,9 +285,6 @@ To integrate Supabase with your Next.js project and secure user-specific data us
 * Once inside the dashboard, click **“New Project”**.
 * Choose a **Project Name** (e.g. *Mermaid Visualizer*), select the **closest region** for your users, and set a strong password (you can use the “Generate Password” feature).
 * Save this password in your password manager.
-
-📹 Need a quick demo? Here’s a walkthrough:
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe id="js_video_iframe" src="https://jumpshare.com/embed/a2VexfxNR8imzVJ8Q4mJ" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"></iframe></div>
 
 ### 2. Install Supabase Client
 Install the Supabase JavaScript client in your project:
