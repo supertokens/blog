@@ -1,8 +1,9 @@
 ---
-
+title: Angular Authentication: Secure Your App the Right Way
 description: "Learn how Angular authentication works, key methods to secure apps, and how to integrate with providers like SuperTokens or OAuth."
 date: "2025-05-18"
 cover: "TODO.png"
+category: "programming, angular, authentication"
 author: "Maurice Saldivar"
 ---
 
