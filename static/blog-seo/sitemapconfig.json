@@ -379,5 +379,8 @@
     },
     {
         "location": "https://supertokens.com/blog/phishing-resistant-mfa"
+    },
+    {
+        "location": "https://supertokens.com/blog/lambda-authorizers"
     }
 ]
