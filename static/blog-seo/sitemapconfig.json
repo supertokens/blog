@@ -309,6 +309,9 @@
         "location": "https://supertokens.com/blog/identity-and-access-management-strategy"
     },
     {
+        "location": "https://supertokens.com/blog/top-auth0-alternatives-in-2025"
+    },
+    {
         "location": "https://supertokens.com/blog/credential-management"
     },
     {
@@ -376,6 +379,9 @@
     },
     {
         "location": "https://supertokens.com/blog/okta-vs-azure-ad"
+    },
+    {
+        "location": "https://supertokens.com/blog/multi-factor-auth-cost"
     },
     {
         "location": "https://supertokens.com/blog/phishing-resistant-mfa"
