@@ -8,15 +8,15 @@ author: "Maria Shimkovska"
 ---
 
 ## TL;DR
-* **Firebase limitations:** Vendor lock-in, unpredictable costs, limited backend control, compliance challenges
-* **Top 4 alternatives:** Supabase, Appwrite, AWS Amplify, and Backendless
-* **Key factors to consider:** Scalability, data flexibility, authentication, pricing, open-source vs. managed
+* **Firebase limitations:** Vendor lock-in, unpredictable costs, limited backend control, compliance challenges.
+* **Top 4 alternatives:** Supabase, Appwrite, AWS Amplify, and Backendless.
+* **Key factors to consider:** Scalability, data flexibility, authentication, pricing, open-source vs. managed.
 
 *** 
 
 🚀🌕 If you're aiming to take your app to the moon, you need to do some planning on how it will affect your users and bank account. Unlike the limitless stars we see when we look up at the night sky (if you are in a field, away from the busy city lights and when it's not cloudy 👀), our money sadly is not limitless. So it's vital to choose your backend platform well. 
 
-If you're thinking about moving away from Firebase or exploring alternatives because you know it’s not the right fit, this guide can help you choose the best solution to fuel your app’s journey.
+If you're thinking about moving away from Firebase or exploring alternatives, this guide can help you choose the best solution to fuel your app’s journey.
 
 ```toc
 tight: true
@@ -25,7 +25,7 @@ toHeading: 3
 
 ## Why Consider Firebase Alternatives?
 
-[**Firebase**](https://firebase.google.com/), Google's popular Backend-as-a-Service (BaaS) launched in 2011 and acquired by Google in 2014, provides developers with a comprehensive suite of tools including hosting, real-time NoSQL databases, authentication, and cloud functions, all with minimal setup.
+[**Firebase**](https://firebase.google.com/), the popular Backend-as-a-Service (BaaS) launched in 2011 &mdash; acquired by Google in 2014 &mdash; provides developers with a comprehensive suite of tools including hosting, real-time NoSQL databases, authentication, and cloud functions &mdash; all with minimal setup.
 
 ![Screenshot of the Firebase website](firebase.png)
 
@@ -35,7 +35,7 @@ However, Firebase is not without drawbacks. Its deep integration with Google's c
 
 ![Screenshot of a Redditor sharing their experience with a massive surprise Firebase bill](firebase-cost.png)
 
-> "My firebase cost jumped from under $50 per month to $121,000 for [the] last 2 days." - Reddit user 
+> "My [F]irebase cost jumped from under $50 per month to $121,000 for [the] last 2 days." &mdash; Reddit user 
 
 Because Firebase is proprietary and serverless, developers have **limited control over backend logic** and infrastructure, which can be a constraint for complex, custom applications. 
 
@@ -58,38 +58,38 @@ When evaluating backend platforms, focus on these critical factors:
 ### 1. Scalability and Performance
 Can the platform grow with your user base? Look for solutions that offer:
 
-* Horizontal and vertical scaling
-* Proven performance under heavy loads
-* Ability to handle traffic spikes without major redesign
+* Horizontal and vertical scaling.
+* Proven performance under heavy loads.
+* Ability to handle traffic spikes without major redesign.
 
-### 2. Data flexibility (SQL vs NoSQL)
+### 2. Data Flexibility (SQL vs NoSQL)
 Firebase uses NoSQL document storage, which works well for simple data models but has limitations:
 
-* Complex applications often need relational structures
-* Look for platforms supporting PostgreSQL or other SQL engines
-* Consider solutions offering both SQL and NoSQL options for maximum flexibility
+* Complex applications often need relational structures.
+* Look for platforms supporting PostgreSQL or other SQL engines.
+* Consider solutions offering both SQL and NoSQL options for maximum flexibility.
 
 ### 3. Authentication and Security
 Robust authentication is essential for any modern app:
 
-* Check for built-in auth methods (email/password, OAuth, SSO, passwordless)
-* Verify secure session management and account recovery flows
-* Ensure protection against common attacks (encryption, CSRF/XSS prevention)
-* Confirm compliance capabilities (GDPR, HIPAA) if handling sensitive data
+* Check for built-in auth methods (email/password, OAuth, SSO, passwordless).
+* Verify secure session management and account recovery flows.
+* Ensure protection against common attacks (encryption, CSRF/XSS prevention).
+* Confirm compliance capabilities (GDPR, HIPAA) if handling sensitive data.
 
-### 4. Pricing transparency
+### 4. Pricing Transparency
 Avoid unexpected costs with:
 
-* Clear, predictable pricing models
-* Generous free tiers for development and testing
-* Ability to estimate and cap expenses
-* Free or open-source options (factoring in hosting/maintenance costs)
+* Clear, predictable pricing models.
+* Generous free tiers for development and testing.
+* Ability to estimate and cap expenses.
+* Free or open-source options (factoring in hosting/maintenance costs).
 
-### 5. Open-source vs managed service
+### 5. Open-source vs Managed Service
 Consider your team's preferences and capabilities:
 
-* **Open-source:** Full control, transparency, and data ownership, but requires deployment and maintenance
-* **Managed services:** Easier to start but may introduce vendor lock-in and customization limits
+* **Open-source:** Full control, transparency, and data ownership, but requires deployment and maintenance.
+* **Managed services:** Easier to start but may introduce vendor lock-in and customization limits.
 
 Keeping these factors in mind will help you choose a backend that aligns with your app’s technical and business needs.
 
@@ -104,30 +104,30 @@ Below we compare four leading Firebase alternatives, highlighting their key feat
 ![Screenshot of partial Supabase website](firebase-alternative-supabase.png)
 
 #### Key Features
-* PostgreSQL database with relational queries and ACID guarantees
-* Auto-generated RESTful and GraphQL APIs
-* Real-time subscriptions for data change monitoring
-* Built-in authentication with user management and Row-Level Security
-* OAuth provider support (Google, Apple, Facebook, etc.)
-* Scalable file storage and Edge Functions
+* PostgreSQL database with relational queries and ACID guarantees.
+* Auto-generated RESTful and GraphQL APIs.
+* Real-time subscriptions for data change monitoring.
+* Built-in authentication with user management and Row-Level Security.
+* OAuth provider support (Google, Apple, Facebook, etc.).
+* Scalable file storage and Edge Functions.
 
 #### Pros
-* Open-source transparency and control with self-hosting options
-* Powerful SQL query capabilities that Firebase's NoSQL lacks
-* Real-time capabilities comparable to Firebase
-* Developer-friendly experience with easy data migration
+* Open-source transparency and control with self-hosting options.
+* Powerful SQL query capabilities that Firebase's NoSQL lacks.
+* Real-time capabilities comparable to Firebase.
+* Developer-friendly experience with easy data migration.
 
 #### Cons
-* Still maturing compared to established platforms
-    - That said, Supabase recently raised [$200 million Series D at $2 billion valuation](https://fortune.com/2025/04/22/exclusive-supabase-raises-200-million-series-d-at-2-billion-valuation/) 
-* Smaller ecosystem and third-party tooling than Firebase
-* Some advanced features may be in beta or missing
-* Potential scaling challenges for very high-volume workloads
+* Still maturing compared to established platforms.
+    - That said, Supabase recently raised [$200 million Series D at $2 billion valuation](https://fortune.com/2025/04/22/exclusive-supabase-raises-200-million-series-d-at-2-billion-valuation/) .
+* Smaller ecosystem and third-party tooling than Firebase.
+* Some advanced features may be in beta or missing.
+* Potential scaling challenges for very high-volume workloads.
 
 #### Best for
-* Developers who want Firebase-like experience with SQL capabilities
-* Teams avoiding vendor lock-in while needing relational data
-* Projects where open-source values are important
+* Developers who want Firebase-like experience with SQL capabilities.
+* Teams avoiding vendor lock-in while needing relational data.
+* Projects where open-source values are important.
 *** 
 
 ### Appwrite: Developer-Centric
@@ -138,32 +138,32 @@ Below we compare four leading Firebase alternatives, highlighting their key feat
 
 #### Key Features
 
-* Comprehensive suite: Authentication, NoSQL database, file storage
-* Cloud Functions for serverless code execution
-* Messaging and real-time capabilities
-* Docker-based deployment on any infrastructure
-* Intuitive console with 30+ login methods
-* Multi-factor authentication and rate limiting
+* Comprehensive suite: Authentication, NoSQL database, file storage.
+* Cloud Functions for serverless code execution.
+* Messaging and real-time capabilities.
+* Docker-based deployment on any infrastructure.
+* Intuitive console with 30+ login methods.
+* Multi-factor authentication and rate limiting.
 
 #### Pros
 
-* Complete control and privacy through self-hosting
-* Freedom to scale on your own terms without cloud provider constraints
-* Modular design with SDKs for multiple languages
-* Strong support for OAuth and enterprise logins
+* Complete control and privacy through self-hosting.
+* Freedom to scale on your own terms without cloud provider constraints.
+* Modular design with SDKs for multiple languages.
+* Strong support for OAuth and enterprise logins.
 
 #### Cons
 
-* Requires DevOps expertise for server management
-* Operational overhead for updates, scaling, and backups
-* Relatively new with a growing ecosystem
-* Less mature enterprise features than established providers
+* Requires DevOps expertise for server management.
+* Operational overhead for updates, scaling, and backups.
+* Relatively new with a growing ecosystem.
+* Less mature enterprise features than established providers.
 
 #### Best For
 
-* Teams prioritizing customization, compliance, and data ownership
-* Projects requiring Docker deployment
-* Organizations willing to manage their own infrastructure for greater control
+* Teams prioritizing customization, compliance, and data ownership.
+* Projects requiring Docker deployment.
+* Organizations willing to manage their own infrastructure for greater control.
 
 *** 
 
@@ -174,30 +174,30 @@ Below we compare four leading Firebase alternatives, highlighting their key feat
 ![Screenshot of partial AWS Amplify website](firebase-alternative-aws-amplify.png)
 
 #### Key Features
-* Integration with the broader AWS ecosystem
-* Robust authentication via Amazon Cognito
-* GraphQL APIs (via AWS AppSync) and REST APIs
-* Offline data synchronization support
-* Managed hosting using S3 and CloudFront
-* Analytics through AWS Pinpoint
-* Machine learning integrations
+* Integration with the broader AWS ecosystem.
+* Robust authentication via Amazon Cognito.
+* GraphQL APIs (via AWS AppSync) and REST APIs.
+* Offline data synchronization support.
+* Managed hosting using S3 and CloudFront.
+* Analytics through AWS Pinpoint.
+* Machine learning integrations.
 
 #### Pros
-* Exceptional scalability leveraging AWS's global infrastructure
-* Enterprise-grade reliability and security
-* Seamless integration with other AWS services
-* Advanced features like Lambda functions and AWS security tools
+* Exceptional scalability leveraging AWS's global infrastructure.
+* Enterprise-grade reliability and security.
+* Seamless integration with other AWS services.
+* Advanced features like Lambda functions and AWS security tools.
 
 #### Cons
-* Significant complexity, especially for AWS newcomers
-* Potentially high costs across multiple AWS services
-* Steep learning curve compared to Firebase
-* Can feel overwhelming for simple applications
+* Significant complexity, especially for AWS newcomers.
+* Potentially high costs across multiple AWS services.
+* Steep learning curve compared to Firebase.
+* Can feel overwhelming for simple applications.
 
 #### Best For
-* Teams already building on AWS or requiring enterprise capabilities
-* Applications projected to scale to hundreds of thousands of users
-* Projects needing tight integration with Amazon's cloud ecosystem
+* Teams already building on AWS or requiring enterprise capabilities.
+* Applications projected to scale to hundreds of thousands of users.
+* Projects needing tight integration with Amazon's cloud ecosystem.
 
 ***
 
@@ -210,34 +210,34 @@ Below we compare four leading Firebase alternatives, highlighting their key feat
 
 #### Key Features
 
-* Drag-and-drop UI builder and codeless logic editor
-* Visual development for non-technical users
-* Hybrid database combining SQL and NoSQL features
-* Real-time database synchronization
-* Messaging with publish/subscribe capabilities
-* Geolocation and geo-relations support
-* Automated push notifications for mobile apps
+* Drag-and-drop UI builder and codeless logic editor.
+* Visual development for non-technical users.
+* Hybrid database combining SQL and NoSQL features.
+* Real-time database synchronization.
+* Messaging with publish/subscribe capabilities.
+* Geolocation and geo-relations support.
+* Automated push notifications for mobile apps.
 
 #### Pros
 
-* Exceptional for rapid prototyping and MVPs
-* User-friendly for teams with limited coding resources
-* Built-in push notification services
-* Real-time data synchronization without complex setup
+* Exceptional for rapid prototyping and MVPs.
+* User-friendly for teams with limited coding resources.
+* Built-in push notification services.
+* Real-time data synchronization without complex setup.
 
 #### Cons
 
-* Potentially expensive at scale compared to self-hosted options
-* Limited free tier requiring task completion to unlock
-* Less transparency as a managed service
-* Customization constraints beyond the UI builder's capabilities
+* Potentially expensive at scale compared to self-hosted options.
+* Limited free tier requiring task completion to unlock.
+* Less transparency as a managed service.
+* Customization constraints beyond the UI builder's capabilities.
 
 #### Best For
 
-* Fast prototyping and quick MVPs
-* Teams with limited coding resources
-* Projects requiring rapid mobile app development
-* Small applications needing push notifications and real-time updates
+* Fast prototyping and quick MVPs.
+* Teams with limited coding resources.
+* Projects requiring rapid mobile app development.
+* Small applications needing push notifications and real-time updates.
 
 ## How SuperTokens Improves Authentication in Firebase Alternatives 
 
@@ -245,7 +245,7 @@ Even with a great backend in place, robust authentication is crucial. In the wor
 
 ## Why Authentication Matters in a Firebase Alternative 
 
-Firebase’s built-in Auth service is convenient – it supports email/password, phone, and popular social logins (Google, Facebook, etc.) – but it has notable drawbacks. It’s a proprietary, Google-hosted system, so using it locks you into Firebase’s infrastructure. ts customization is limited; for example, if you need custom identity providers or advanced workflows, you might struggle with what Firebase offers out of the box. 
+Firebase’s built-in Auth service is convenient &mdash; it supports email/password, phone, and popular social logins (Google, Facebook, etc.) &mdash; but it has notable drawbacks. It's a proprietary, Google-hosted system, so using it locks you into Firebase’s infrastructure. ts customization is limited; for example, if you need custom identity providers or advanced workflows, you might struggle with what Firebase offers out of the box. 
 
 Additionally, some organizations have strict compliance needs: while Firebase Auth helps with basic GDPR compliance, it may not suffice for highly regulated industries. For these reasons, many teams seek an auth platform that is secure, extensible, and can run independently of any single cloud vendor.
 
@@ -254,20 +254,20 @@ SuperTokens offers several advantages:
 
 ### Key Features 
 
-* **Full ownership:** Open-source with self-hosting or managed options
-* **Comprehensive auth methods:** Email/password, passwordless, social logins
-* **Enhanced security:** Built-in MFA and account protection
-* **Superior session management:** Encrypted tokens with automatic refresh
-* **Extensive customization:** Custom fields, password policies, verification flows
-* **Developer-friendly:** Pre-built UI components and multiple SDKs
-* **Universal integration:** Works with any backend platform
+* **Full ownership:** Open-source with self-hosting or managed options.
+* **Comprehensive auth methods:** Email/password, passwordless, social logins.
+* **Enhanced security:** Built-in MFA and account protection.
+* **Superior session management:** Encrypted tokens with automatic refresh.
+* **Extensive customization:** Custom fields, password policies, verification flows.
+* **Developer-friendly:** Pre-built UI components and multiple SDKs.
+* **Universal integration:** Works with any backend platform.
 
-By pairing your chosen backend with SuperTokens, you gain:
+### Benefits of SuperTokens
 
-* Improved security across your application
-* Freedom from vendor lock-in for authentication
-* Greater customization of user flows and experiences
-* Better compliance capabilities for regulated industries
+* Improved security across your application.
+* Freedom from vendor lock-in for authentication.
+* Greater customization of user flows and experiences.
+* Better compliance capabilities for regulated industries.
 
 ## Making Your Decision: Which Alternative Is Right for You?
 
@@ -281,10 +281,10 @@ By pairing your chosen backend with SuperTokens, you gain:
 
 
 ## Final Recommendations – Choosing the Right Firebase Alternative
-1. **Choose Supabase** if you need relational data capabilities with an open-source approach
-2. **Select Appwrite** when data ownership and customization are non-negotiable
-3. **Go with AWS Amplify** for enterprise-scale applications, especially in the AWS ecosystem
-4. **Pick Backendless** for quick MVPs or when developer resources are limited
+1. **Choose Supabase** if you need relational data capabilities with an open-source approach.
+2. **Select Appwrite** when data ownership and customization are non-negotiable.
+3. **Go with AWS Amplify** for enterprise-scale applications, especially in the AWS ecosystem.
+4. **Pick Backendless** for quick MVPs or when developer resources are limited.
 
 Regardless of your backend choice, consider SuperTokens for authentication to improve security, avoid vendor lock-in, and gain customization freedom.
 
