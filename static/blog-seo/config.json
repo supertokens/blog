@@ -3416,6 +3416,29 @@
         "schema": "<script type=\"application/ld+json\">\n {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/what-is-passwordless-authentication\"\n            },\n            \"headline\": \"What is passwordless authentication? Solve login challenges, explore methods, benefits, and tools for secure implementations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/what-is-passwordless-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        } </script>"
     },
     {
+        "path": "/blog/firebase-alternatives",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover the top Firebase alternatives, their features, and how they compare. Learn why SuperTokens is the best authentication solution for secure and scalable apps.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"4 Best Firebase Alternatives for Scalable App Development [2025 Guide]\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/firebase-alternatives\" />",
+            "<meta property=\"og:description\" content=\"Discover the top Firebase alternatives, their features, and how they compare. Learn why SuperTokens is the best authentication solution for secure and scalable apps.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/firebase-alternatives.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Discover the top Firebase alternatives, their features, and how they compare. Learn why SuperTokens is the best authentication solution for secure and scalable apps.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/firebase-alternatives\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/firebase-alternatives.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/firebase-alternatives\">"
+        ],
+        "title": "4 Best Firebase Alternatives for Scalable App Development [2025 Guide]",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/firebase-alternatives\"\n            },\n            \"headline\": \"Discover the top Firebase alternatives, their features, and how they compare. Learn why SuperTokens is the best authentication solution for secure and scalable apps.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/firebase-alternatives.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
         "path": "/blog/enumeration-attack",
         "metaTags": [
             "<meta name=\"description\" content=\"Discover the top 7 tactics hackers use in enumeration attacks and learn effective strategies to safeguard your authentication systems.\" />",
