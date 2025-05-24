@@ -104,7 +104,9 @@ Enterprise connections link Auth0 to external identity providers such as Microso
 
     -   SAML Response Binding
 
-4.  After saving, download the Auth0 metadata file and provide it to your IdP to complete the trust relationship.
+4.  Click **Save** to apply the configuration.
+
+5.  After saving, download the Auth0 metadata file and provide it to your IdP to complete the trust relationship.
 
 **For OIDC Connections:**
 
@@ -121,6 +123,8 @@ Enterprise connections link Auth0 to external identity providers such as Microso
     -   Scopes to request
 
 4.  Configure the callback URLs in both Auth0 and your identity provider.
+
+5.  Click **Save** to complete the setup.
 
 ### **Step 3: Map Claims and Roles**
 
@@ -271,7 +275,7 @@ Auth0\'s session management has several limitations:
 
 -   Difficult to implement custom session behaviors.
 
-These restrictions can be particularly challenging for applications that require fine-grained control over session security or custom
+These restrictions can be particularly challenging for applications that require granular control over session security or custom
 validation logic.
 
 ### **Vendor Lock-in**
@@ -484,11 +488,8 @@ For security-conscious organizations, this transparency can be invaluable.
 
 ## **Final Thoughts: Moving Beyond Auth0 for Scalable SSO**
 
-Auth0 is a leading authentication platform known for its ease of setup and extensive features. However, it has limitations, including high
-costs, limited customization, and vendor lock-in, which can be challenging for growing businesses.
+Auth0 is a leading authentication platform known for its ease of setup and extensive features. However, it has limitations, including high costs, limited customization, and vendor lock-in, which can be challenging for growing businesses.
 
-SuperTokens offers an open-source alternative that emphasizes developer control, transparency, and flexibility. It enables sophisticated
-authentication systems, without the drawbacks of traditional providers, making it ideal for teams seeking customizable solutions with predictable costs.
+SuperTokens offers an open-source alternative that emphasizes developer control, transparency, and flexibility. It enables sophisticated authentication systems, without the drawbacks of traditional providers, making it ideal for teams seeking customizable solutions with predictable costs.
 
-For those building new applications or considering a migration from Auth0, SuperTokens may align better with long-term technical
-and business goals, representing a shift towards transparent and adaptable authentication technology.
+For those building new applications or considering a migration from Auth0, SuperTokens may align better with long-term technical and business goals, and provide your organization with transparent and adaptable authentication technology.
