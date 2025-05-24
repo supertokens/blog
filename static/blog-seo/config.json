@@ -3853,26 +3853,26 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/phishing-resistant-mfa\"\n            },\n            \"headline\": \"Learn how to implement phishing-resistant MFA with FIDO2, WebAuthn, and SuperTokens. Step-by-step tutorial for secure, developer-friendly authentication.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
-        "path": "/blog/angular-authentication",
+        "path": "/blog/lambda-authorizers",
         "metaTags": [
-            "<meta name=\"description\" content=\"Learn how Angular authentication works, key methods to secure apps, and how to integrate with providers like SuperTokens or OAuth.\" />",
+            "<meta name=\"description\" content=\"Learn how to secure your API Gateway using Lambda Authorizers with JWT. Discover setup tips, best practices, and integration steps for robust API security.\" />",
             "",
             "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"Angular Authentication: Secure Your App the Right Way\" />",
+            "<meta property=\"og:title\" content=\"How to Use Lambda Authorizers to Secure Your API Gateway\" />",
             "<meta property=\"og:type\" content=\"article\" />",
-            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/angular-authentication\" />",
-            "<meta property=\"og:description\" content=\"Learn how Angular authentication works, key methods to secure apps, and how to integrate with providers like SuperTokens or OAuth.\"/>",
-            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/lambda-authorizers\" />",
+            "<meta property=\"og:description\" content=\"Learn how to secure your API Gateway using Lambda Authorizers with JWT. Discover setup tips, best practices, and integration steps for robust API security.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/lambda-authorizers.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Learn how Angular authentication works, key methods to secure apps, and how to integrate with providers like SuperTokens or OAuth.\" />",
-            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/angular-authentication\" />",
-            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" /> ",
+            "<meta name=\"twitter:title\" content=\"Learn how to secure your API Gateway using Lambda Authorizers with JWT. Discover setup tips, best practices, and integration steps for robust API security.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/lambda-authorizers\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/lambda-authorizers.png\" /> ",
             "<!--OG Tags-->",
-            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/angular-authentication\">"
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/lambda-authorizers\">"
         ],
-        "title": "Angular Authentication: Secure Your App the Right Way",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/angular-authentication\"\n            },\n            \"headline\": \"Learn how Angular authentication works, key methods to secure apps, and how to integrate with providers like SuperTokens or OAuth.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+        "title": "How to Use Lambda Authorizers to Secure Your API Gateway",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/lambda-authorizers\"\n            },\n            \"headline\": \"Learn how to secure your API Gateway using Lambda Authorizers with JWT. Discover setup tips, best practices, and integration steps for robust API security.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/lambda-authorizers.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
