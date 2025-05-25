@@ -388,5 +388,8 @@
     },
     {
         "location": "https://supertokens.com/blog/lambda-authorizers"
+    },
+    {
+        "location": "https://supertokens.com/blog/angular-authentication"
     }
 ]
