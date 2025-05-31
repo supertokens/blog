@@ -40,7 +40,7 @@ The separation of concerns allows Angular applications to integrate with virtual
 
 ## Authentication vs Authorization in Angular
 
-People often use authentication and authorization interchangeably; this is a mistake, both serve distinct security functions in Angular applications. 
+People often use authentication and authorization interchangeably; this is a mistake, both serve distinct security functions in Angular applications. For a more detailed breakdown read this blog: [Authentication vs Authorization: What's the difference?](https://supertokens.com/blog/authentication-vs-authorization)
 
 ### Verifying Who The User Is:
 
@@ -1073,7 +1073,7 @@ Navigate to http://localhost:4200 in your browser, notice the backend server wil
 ## How SuperTokens Simplifies Angular Authentication
 After implementing JWT authentication from scratch, you've seen firsthand the complexities involved: token storage decisions, interceptor setup, session management, and this is before even considering long-term support. While building it yourself provides valuable learning, production applications often benefit from specialized authentication libraries. This is where SuperTokens shines:
 
-### 1. Passwordless or Password-Based Authentication
+## 1. Passwordless or Password-Based Authentication
 SuperTokens supports multiple authentication methods out of the box:
 
 ### Email-Password Authentication
@@ -1096,7 +1096,7 @@ Modern authentication without passwords:
 
 The beauty of SuperTokens is that these authentication methods require minimal boilerplate. The library provides pre-built UI components that you can use as-is or customize to match your application's design.
 
-### 2. Frontend SDK for Angular
+## 2. Frontend SDK for Angular
 SuperTokens provides a dedicated Angular SDK that integrates smoothly with Angular's architecture:
 
 ### Key Features
@@ -1119,7 +1119,7 @@ SuperTokens automatically handles complex session-related tasks:
 ### Route Protection
 With SuperTokens' built-in route guards, protecting routes in your Angular application becomes straightforward. The guards integrate with Angular's router to check authentication status before allowing access to protected routes.
 
-### 3. Security Benefits
+## 3. Security Benefits
 SuperTokens provides several security advantages over a custom implementation:
 
 ### HttpOnly Cookies
@@ -1137,7 +1137,7 @@ SuperTokens implements rotating refresh tokens, enhancing security by making sto
 ### Revocation
 SuperTokens supports immediate session revocation, allowing you to log out users from all devices in case of a security breach or suspicious activity.
 
-### 4. Integration Process Overview
+## 4. Integration Process Overview
 Integrating SuperTokens into an Angular application involves a few high-level steps:
 
 ### Backend Setup
@@ -1155,7 +1155,7 @@ Integrating SuperTokens into an Angular application involves a few high-level st
 
 The entire process typically takes hours rather than days, with most of the security complexities handled automatically by SuperTokens.
 
-### 5. SuperTokens Documentation
+## 5. SuperTokens Documentation
 More information can be found at the SuperTokens documentation: 
 
 [SuperTokens Frontend Angular setup](https://supertokens.com/docs/quickstart/frontend-setup)
