@@ -2,12 +2,10 @@
 title: Angular Authentication
 description: "Learn how Angular authentication works, key methods to secure apps, and how to integrate with providers like SuperTokens or OAuth."
 date: "2025-05-18"
-cover: "TODO.png"
+cover: "angular-authentication.png"
 category: "programming, angular, authentication"
 author: "Maurice Saldivar"
 ---
-
-# Angular Authentication – A Complete Guide for Secure Web Apps
 
 ## What Is Authentication in Angular?
 
@@ -181,6 +179,8 @@ Each authentication method has distinct security characteristics and implementat
 
 Before we begin let’s make sure we have a project structure  
 `mkdir jwt-auth-project`
+
+>NOTE: All code for this project can be found at this [repo](https://github.com/msaldivar/SuperTokens-Blog-Related-Code/tree/main/angular_authentication)
 
 1. ### Set up the Backend to Issue JWTs
 
