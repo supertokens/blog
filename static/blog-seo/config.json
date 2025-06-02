@@ -3298,7 +3298,99 @@
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/identity-and-access-management-strategy\">"
         ],
         "title": "How to Build Effective Identity & Access Management Strategy",
-        "schema": "{\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-strategy\"\n            },\n            \"headline\": \"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-strategy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }"
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-strategy\"\n            },\n            \"headline\": \"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-strategy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/top-auth0-alternatives-in-2025",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore the top Auth0 alternatives for authentication and authorization. Discover solutions like SuperTokens, Okta, and Keycloak to find the perfect fit for your business needs.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Top Auth0 Alternatives in 2025: The Best CIAM Solutions Compared | SuperTokens\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/top-auth0-alternatives-in-2025\" />",
+            "<meta property=\"og:description\" content=\"Explore the top Auth0 alternatives for authentication and authorization. Discover solutions like SuperTokens, Okta, and Keycloak to find the perfect fit for your business needs.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/top-auth0-alternatives-in-2025.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore the top Auth0 alternatives for authentication and authorization. Discover solutions like SuperTokens, Okta, and Keycloak to find the perfect fit for your business needs.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/top-auth0-alternatives-in-2025\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/top-auth0-alternatives-in-2025.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/top-auth0-alternatives-in-2025\">"
+        ],
+        "title": "Top Auth0 Alternatives in 2025: The Best CIAM Solutions Compared | SuperTokens",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/top-auth0-alternatives-in-2025\"\n            },\n            \"headline\": \"Explore the top Auth0 alternatives for authentication and authorization. Discover solutions like SuperTokens, Okta, and Keycloak to find the perfect fit for your business needs.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/top-auth0-alternatives-in-2025.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/credential-management",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn about credential management, its importance, common security risks, and best practices. Discover how SuperTokens simplifies secure credential management.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Credential Management: What It Is and Why It Matters\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/credential-management\" />",
+            "<meta property=\"og:description\" content=\"Learn about credential management, its importance, common security risks, and best practices. Discover how SuperTokens simplifies secure credential management.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/credential-management.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn about credential management, its importance, common security risks, and best practices. Discover how SuperTokens simplifies secure credential management.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/credential-management\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/credential-management.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/credential-management\">"
+        ],
+        "title": "Credential Management: What It Is and Why It Matters",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/credential-management\"\n            },\n            \"headline\": \"Learn about credential management, its importance, common security risks, and best practices. Discover how SuperTokens simplifies secure credential management.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/credential-management.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/mastering-nextjs-api-routes",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how to create and optimize API Routes in Next.js, handle requests effectively, and integrate authentication with SuperTokens for secure backend operations.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Mastering Next.js API Routes: The Developer's Guide to Backend Functionality\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/mastering-nextjs-api-routes\" />",
+            "<meta property=\"og:description\" content=\"Learn how to create and optimize API Routes in Next.js, handle requests effectively, and integrate authentication with SuperTokens for secure backend operations.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/mastering-nextjs-api-routes.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how to create and optimize API Routes in Next.js, handle requests effectively, and integrate authentication with SuperTokens for secure backend operations.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/mastering-nextjs-api-routes\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/mastering-nextjs-api-routes.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/mastering-nextjs-api-routes\">"
+        ],
+        "title": "Mastering Next.js API Routes: The Developer's Guide to Backend Functionality",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/mastering-nextjs-api-routes\"\n            },\n            \"headline\": \"Learn how to create and optimize API Routes in Next.js, handle requests effectively, and integrate authentication with SuperTokens for secure backend operations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/mastering-nextjs-api-routes.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/enhancing-your-nextjs-application-with-middleware",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Transform your Next.js app with middleware! Learn essential strategies to enhance functionality and streamline your development process today.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Enhancing Your Next.js Application with Middleware\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/enhancing-your-nextjs-application-with-middleware\" />",
+            "<meta property=\"og:description\" content=\"Transform your Next.js app with middleware! Learn essential strategies to enhance functionality and streamline your development process today.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/enhancing-your-nextjs-application-with-middleware.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Transform your Next.js app with middleware! Learn essential strategies to enhance functionality and streamline your development process today.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/enhancing-your-nextjs-application-with-middleware\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/enhancing-your-nextjs-application-with-middleware.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/enhancing-your-nextjs-application-with-middleware\">"
+        ],
+        "title": "Enhancing Your Next.js Application with Middleware",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/enhancing-your-nextjs-application-with-middleware\"\n            },\n            \"headline\": \"Transform your Next.js app with middleware! Learn essential strategies to enhance functionality and streamline your development process today.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/enhancing-your-nextjs-application-with-middleware.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
         "path": "/blog/risk-based-authentication",
@@ -3322,6 +3414,29 @@
         ],
         "title": "What is Passwordless Authentication: The Cool Kid on The Block? 🔒🚫",
         "schema": "<script type=\"application/ld+json\">\n {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/what-is-passwordless-authentication\"\n            },\n            \"headline\": \"What is passwordless authentication? Solve login challenges, explore methods, benefits, and tools for secure implementations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/what-is-passwordless-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        } </script>"
+    },
+    {
+        "path": "/blog/firebase-alternatives",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover the top Firebase alternatives, their features, and how they compare. Learn why SuperTokens is the best authentication solution for secure and scalable apps.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"4 Best Firebase Alternatives for Scalable App Development [2025 Guide]\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/firebase-alternatives\" />",
+            "<meta property=\"og:description\" content=\"Discover the top Firebase alternatives, their features, and how they compare. Learn why SuperTokens is the best authentication solution for secure and scalable apps.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/firebase-alternatives.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Discover the top Firebase alternatives, their features, and how they compare. Learn why SuperTokens is the best authentication solution for secure and scalable apps.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/firebase-alternatives\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/firebase-alternatives.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/firebase-alternatives\">"
+        ],
+        "title": "4 Best Firebase Alternatives for Scalable App Development [2025 Guide]",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/firebase-alternatives\"\n            },\n            \"headline\": \"Discover the top Firebase alternatives, their features, and how they compare. Learn why SuperTokens is the best authentication solution for secure and scalable apps.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/firebase-alternatives.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
         "path": "/blog/enumeration-attack",
@@ -3391,8 +3506,8 @@
         ],
         "title": "Pillars of a CIAM Strategy: Secure, Scale & Personalize Customer Access",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/pillars-of-a-ciam-strategy-secure-scale-and-personalize-customer-access\"\n            },\n            \"headline\": \"Explore the key elements of a successful CIAM strategy: ensuring security, scalability, and personalized access for your customers. Start optimizing now!\",\n            \"image\": \"https://supertokens.com/blog-meta-images/pillars-of-a-ciam-strategy-secure-scale-&-personalize-customer-access.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
-    },    
-      {    
+    },
+    {
         "path": "/blog/otp-bots",
         "metaTags": [
             "<meta name=\"description\" content=\"Explore how OTP bots bypass two-factor authentication (2FA), their growing threats, and strategies to protect your application using tools like SuperTokens.\" />",
@@ -3483,6 +3598,29 @@
         ],
         "title": "Top 8 Identity Management Solutions for Developers and Businesses",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/top-8-identity-management-solutions-for-developers-and-businesses\"\n            },\n            \"headline\": \"Discover the top 9 user management software tools for 2024! Streamline\",\n            \"image\": \"https://supertokens.com/blog-meta-images/top-8-identity-management-solutions-for-developers-and-businesses.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/cloud-based-authentication",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Cloud-based authentication refers to verifying user identities (often leveraging identity and access management, or IAM) and granting user access through services hosted offsite—often by dedicated identity providers—rather than keeping everything locked down on your own physical on-premises servers. This fundamental shift spares organizations from the headaches of provisioning hardware, configuring security solutions, and maintaining on-prem infrastructure. It also allows you to tap into more sophisticated authentication methods (like multi-factor authentication (MFA) or passwordless approaches) without massive up-front investments or complex, in-house integrations.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What is Cloud-Based Authentication? A Detailed Guide\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/cloud-based-authentication\" />",
+            "<meta property=\"og:description\" content=\"Cloud-based authentication refers to verifying user identities (often leveraging identity and access management, or IAM) and granting user access through services hosted offsite—often by dedicated identity providers—rather than keeping everything locked down on your own physical on-premises servers. This fundamental shift spares organizations from the headaches of provisioning hardware, configuring security solutions, and maintaining on-prem infrastructure. It also allows you to tap into more sophisticated authentication methods (like multi-factor authentication (MFA) or passwordless approaches) without massive up-front investments or complex, in-house integrations.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/cloud-based-auth.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Cloud-based authentication refers to verifying user identities (often leveraging identity and access management, or IAM) and granting user access through services hosted offsite—often by dedicated identity providers—rather than keeping everything locked down on your own physical on-premises servers. This fundamental shift spares organizations from the headaches of provisioning hardware, configuring security solutions, and maintaining on-prem infrastructure. It also allows you to tap into more sophisticated authentication methods (like multi-factor authentication (MFA) or passwordless approaches) without massive up-front investments or complex, in-house integrations.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/cloud-based-authentication\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/cloud-based-auth.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/cloud-based-authentication\">"
+        ],
+        "title": "What is Cloud-Based Authentication? A Detailed Guide",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/cloud-based-authentication\"\n            },\n            \"headline\": \"Cloud-based authentication refers to verifying user identities (often leveraging identity and access management, or IAM) and granting user access through services hosted offsite—often by dedicated identity providers—rather than keeping everything locked down on your own physical on-premises servers. This fundamental shift spares organizations from the headaches of provisioning hardware, configuring security solutions, and maintaining on-prem infrastructure. It also allows you to tap into more sophisticated authentication methods (like multi-factor authentication (MFA) or passwordless approaches) without massive up-front investments or complex, in-house integrations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/cloud-based-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
         "path": "/blog/2fa-services",
@@ -3644,5 +3782,120 @@
         ],
         "title": "SSO Examples: Real-World Use Cases and How to Implement Them",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/single-sign-on-examples\"\n            },\n            \"headline\": \"Explore real-world Single Sign-On (SSO) examples, use cases, and step-by-step implementation methods. Learn how tools like SuperTokens simplify SSO for developers.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/sso-examples.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/authelia-vs-keycloak",
+        "metaTags": [
+            "<meta name=\"description\" content=\"In today’s world of logins, passwords, and the eternal struggle to remember which one you used where, organizations are on the hunt for single sign-on (SSO) solutions that don’t just work but actually make life easier. Think security that doesn’t buckle under pressure, scalability that grows with you, and integrations that play nice with all your apps and systems—basically, the holy trinity of access control.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Authelia vs Keycloak: Which One Suits You Best?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/authelia-vs-keycloak\" />",
+            "<meta property=\"og:description\" content=\"In today’s world of logins, passwords, and the eternal struggle to remember which one you used where, organizations are on the hunt for single sign-on (SSO) solutions that don’t just work but actually make life easier. Think security that doesn’t buckle under pressure, scalability that grows with you, and integrations that play nice with all your apps and systems—basically, the holy trinity of access control.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/authelia-vs-keycloak.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"In today’s world of logins, passwords, and the eternal struggle to remember which one you used where, organizations are on the hunt for single sign-on (SSO) solutions that don’t just work but actually make life easier. Think security that doesn’t buckle under pressure, scalability that grows with you, and integrations that play nice with all your apps and systems—basically, the holy trinity of access control.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/authelia-vs-keycloak\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/authelia-vs-keycloak.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/authelia-vs-keycloak\">"
+        ],
+        "title": "Authelia vs Keycloak: Which One Suits You Best?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/authelia-vs-keycloak\"\n            },\n            \"headline\": \"In today’s world of logins, passwords, and the eternal struggle to remember which one you used where, organizations are on the hunt for single sign-on (SSO) solutions that don’t just work but actually make life easier. Think security that doesn’t buckle under pressure, scalability that grows with you, and integrations that play nice with all your apps and systems—basically, the holy trinity of access control.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/authelia-vs-keycloak.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/okta-vs-azure-ad",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore the differences between Okta and Azure Active Directory (AD) to help you choose the right IAM solution. \" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Okta vs Azure AD: Which IAM Solution Wins?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/okta-vs-azure-ad\" />",
+            "<meta property=\"og:description\" content=\"Explore the differences between Okta and Azure Active Directory (AD) to help you choose the right IAM solution. \"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/okta-vs-azure.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore the differences between Okta and Azure Active Directory (AD) to help you choose the right IAM solution. \" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/okta-vs-azure-ad\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/okta-vs-azure.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/okta-vs-azure-ad\">"
+        ],
+        "title": "Okta vs Azure AD: Which IAM Solution Wins?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/okta-vs-azure-ad\"\n            },\n            \"headline\": \"Explore the differences between Okta and Azure Active Directory (AD) to help you choose the right IAM solution. \",\n            \"image\": \"https://supertokens.com/blog-meta-images/okta-vs-azure.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/multi-factor-auth-cost",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore the true cost of Multi-Factor Authentication (MFA), including licensing, integration, maintenance, and hidden risks. Learn how SuperTokens helps optimize MFA costs without compromising security.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Breaking Down the Cost of Multi-Factor Authentication: Is It Worth It?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/multi-factor-auth-cost\" />",
+            "<meta property=\"og:description\" content=\"Explore the true cost of Multi-Factor Authentication (MFA), including licensing, integration, maintenance, and hidden risks. Learn how SuperTokens helps optimize MFA costs without compromising security.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/multi-factor-auth-cost.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore the true cost of Multi-Factor Authentication (MFA), including licensing, integration, maintenance, and hidden risks. Learn how SuperTokens helps optimize MFA costs without compromising security.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/multi-factor-auth-cost\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/multi-factor-auth-cost.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/multi-factor-auth-cost\">"
+        ],
+        "title": "Breaking Down the Cost of Multi-Factor Authentication: Is It Worth It?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/multi-factor-auth-cost\"\n            },\n            \"headline\": \"Explore the true cost of Multi-Factor Authentication (MFA), including licensing, integration, maintenance, and hidden risks. Learn how SuperTokens helps optimize MFA costs without compromising security.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/multi-factor-auth-cost.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/phishing-resistant-mfa",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how to implement phishing-resistant MFA with FIDO2, WebAuthn, and SuperTokens. Step-by-step tutorial for secure, developer-friendly authentication.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Implementing Phishing-Resistant MFA: Hands-On Developer Guide\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/phishing-resistant-mfa\" />",
+            "<meta property=\"og:description\" content=\"Learn how to implement phishing-resistant MFA with FIDO2, WebAuthn, and SuperTokens. Step-by-step tutorial for secure, developer-friendly authentication.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how to implement phishing-resistant MFA with FIDO2, WebAuthn, and SuperTokens. Step-by-step tutorial for secure, developer-friendly authentication.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/phishing-resistant-mfa\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/phishing-resistant-mfa\">"
+        ],
+        "title": "Implementing Phishing-Resistant MFA: Hands-On Developer Guide",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/phishing-resistant-mfa\"\n            },\n            \"headline\": \"Learn how to implement phishing-resistant MFA with FIDO2, WebAuthn, and SuperTokens. Step-by-step tutorial for secure, developer-friendly authentication.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/lambda-authorizers",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how to secure your API Gateway using Lambda Authorizers with JWT. Discover setup tips, best practices, and integration steps for robust API security.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How to Use Lambda Authorizers to Secure Your API Gateway\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/lambda-authorizers\" />",
+            "<meta property=\"og:description\" content=\"Learn how to secure your API Gateway using Lambda Authorizers with JWT. Discover setup tips, best practices, and integration steps for robust API security.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/lambda-authorizers.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how to secure your API Gateway using Lambda Authorizers with JWT. Discover setup tips, best practices, and integration steps for robust API security.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/lambda-authorizers\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/lambda-authorizers.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/lambda-authorizers\">"
+        ],
+        "title": "How to Use Lambda Authorizers to Secure Your API Gateway",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/lambda-authorizers\"\n            },\n            \"headline\": \"Learn how to secure your API Gateway using Lambda Authorizers with JWT. Discover setup tips, best practices, and integration steps for robust API security.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/lambda-authorizers.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
