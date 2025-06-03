@@ -2,7 +2,7 @@
 title: "Auth0 SSO: Setup and Tips"
 date: "2025-05-14"
 description: "Learn how Auth0 SSO works, where it falls short, and discover a simpler open-source alternative for modern authentication flows."
-cover: "auth0-sso-setup-and-tips.png"
+cover: "auth0_sso.png"
 category: "programming"
 author: "Mostafa Ibrahim"
 ---
