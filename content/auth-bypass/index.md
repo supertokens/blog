@@ -2,7 +2,7 @@
 title: "What Is Authentication Bypass?"
 date: "2025-05-23"
 description: "Learn what authentication bypass is, how attackers exploit it, and how to secure your apps against auth bypass vulnerabilities."
-cover: "what-is-authentication-bypass.png"
+cover: "authentication_bypass.png"
 category: "programming"
 author: "Mostafa Ibrahim"
 ---
