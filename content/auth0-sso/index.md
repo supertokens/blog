@@ -65,7 +65,7 @@ Auth0 allows configuration of session durations, idle timeouts, and token lifeti
 
 ## **Steps to Implement SSO with Auth0**
 
-![Typical SSO](Typical-SSO.png)[source](https://auth0.com/blog/what-is-and-how-does-single-sign-on-work/)
+![Typical SSO](Typical-SSO.png)
 
 Implementing SSO with Auth0 requires several configuration steps that bridge your application with identity providers. Let\'s walk through the process:
 
