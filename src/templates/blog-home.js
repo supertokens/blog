@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import "../styles/blog.css"
+import { categories } from "../blog-categories";
 
 const BlogHomeTemplate = (props) => {
   const [selectedCategory, setSelectedCategory] = React.useState("all");
@@ -31,59 +32,53 @@ const BlogHomeTemplate = (props) => {
         <div className="blog-categories">
           <button
             id="tab-1-id"
-            className={`blog-categories__category ${selectedCategory === "all" && "selected"}`}
-            onClick={() => updateCategory("all")}
+            className={`blog-categories__category ${selectedCategory === categories.ALL && "selected"}`}
+            onClick={() => updateCategory(categories.ALL)}
           >
             All
           </button>
           <button
             id="tab-2-id"
-            className={`blog-categories__category ${selectedCategory === "authentication-identity" && "selected"}`}
-            onClick={() => updateCategory("authentication-identity")}
+            className={`blog-categories__category ${selectedCategory === categories.ANNOUNCEMENTS && "selected"}`}
+            onClick={() => {updateCategory(categories.ANNOUNCEMENTS)}}
           >
-            Authentication & Identity
+            Announcements
           </button>
           <button
             id="tab-3-id"
-            className={`blog-categories__category ${selectedCategory === "security-compliance" && "selected"}`}
-            onClick={() => updateCategory("security-compliance")}
+            className={`blog-categories__category ${selectedCategory === categories.AUTHENTICATION && "selected"}`}
+            onre
+            onClick={() => updateCategory(categories.AUTHENTICATION)}
           >
-            Security & Compliance
+            Authentication
           </button>
           <button
             id="tab-4-id"
-            className={`blog-categories__category ${selectedCategory === "developer-guides" && "selected"}`}
-            onClick={() => updateCategory("developer-guides")}
+            className={`blog-categories__category ${selectedCategory === categories.TUTORIALS && "selected"}`}
+            onClick={() => updateCategory(categories.TUTORIALS)}
           >
-            Developer Guides & Tutorials
+            Tutorials
           </button>
           <button
             id="tab-5-id"
-            className={`blog-categories__category ${selectedCategory === "product-updates" && "selected"}`}
-            onClick={() => updateCategory("product-updates")}
+            className={`blog-categories__category ${selectedCategory === categories.SECURITY && "selected"}`}
+            onClick={() => updateCategory(categories.SECURITY)}
           >
-            Product Updates & Announcements
+            Security
           </button>
           <button
             id="tab-6-id"
-            className={`blog-categories__category ${selectedCategory === "company-news" && "selected"}`}
-            onClick={() => updateCategory("company-news")}
+            className={`blog-categories__category ${selectedCategory === categories.NEWS && "selected"}`}
+            onClick={() => updateCategory(categories.NEWS)}
           >
-            Company News & Events
+            News
           </button>
           <button
             id="tab-7-id"
-            className={`blog-categories__category ${selectedCategory === "case-studies" && "selected"}`}
-            onClick={() => updateCategory("case-studies")}
+            className={`blog-categories__category ${selectedCategory === categories.CASE_STUDIES && "selected"}`}
+            onClick={() => updateCategory(categories.CASE_STUDIES)}
           >
-            Case Studies & Customer Stories
-          </button>
-          <button
-            id="tab-8-id"
-            className={`blog-categories__category ${selectedCategory === "industry-insights" && "selected"}`}
-            onClick={() => updateCategory("industry-insights")}
-          >
-            Industry Insights & Trends
+            Case Studies
           </button>
         </div>
       </div>
