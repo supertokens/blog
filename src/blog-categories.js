@@ -7,7 +7,6 @@ const categories = {
     TUTORIALS: "Tutorials",
     ANNOUNCEMENTS: "Announcements",
     NEWS: "News",
-    CASE_STUDIES: "Case Studies"
 }
 module.exports = {
     categories

@@ -4,7 +4,7 @@ import "../styles/blog.css"
 import { categories } from "../blog-categories";
 
 const BlogHomeTemplate = (props) => {
-  const [selectedCategory, setSelectedCategory] = React.useState("all");
+  const [selectedCategory, setSelectedCategory] = React.useState(categories.ALL);
   const [classToHideList, setClassToHideList] = React.useState("visible");
 
   React.useEffect(() => {
@@ -72,13 +72,6 @@ const BlogHomeTemplate = (props) => {
             onClick={() => updateCategory(categories.NEWS)}
           >
             News
-          </button>
-          <button
-            id="tab-7-id"
-            className={`blog-categories__category ${selectedCategory === categories.CASE_STUDIES && "selected"}`}
-            onClick={() => updateCategory(categories.CASE_STUDIES)}
-          >
-            Case Studies
           </button>
         </div>
       </div>
