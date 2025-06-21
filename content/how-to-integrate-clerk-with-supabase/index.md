@@ -1,59 +1,39 @@
 ---
-title: "How to Integrate Clerk with Supabase (+ One Better Choice)"
-date: "2025-05-06"
+title: "How to Integrate Clerk with Supabase (SuperTokens Preview)"
+date: "2025-06-21"
 description: "🔐 Learn how to integrate Clerk with Supabase for powerful authentication and database management in your Next.js applications - with step-by-step tutorial and code examples."
 cover: "integrate-clerk-with-supabase.png"
 category: "programming"
 author: "Maria Shimkovska"
 ---
 
-**Picture this:** You’re building the next big thing.  <br />The idea? Brilliant. The UI? Perfect. The code? On point.
+Looking to integrate Clerk authentication into your Supabase project? This guide walks you through exactly how to do that step by step.
 
-Then reality hits: <br />
-**"How do I handle authentication *and* database stuff without losing my mind?"** 😭
+Using a simple React app as our foundation, we’ll add Clerk for auth, use JWTs to connect to Supabase, and apply Row-Level Security to keep user data isolated.
 
-If your app needs user accounts and persistent data storage (and let’s face it, most do), you need the Clerk Supabase combination working in harmony. Without that, your users are just anonymous ghosts shouting into the void—not exactly the personalized experience you’re aiming for.
+**What You’ll Learn**
+* Set up Clerk authentication
+* Connect Clerk and Supabase using JWTs
+* Enforce Row-Level Security (RLS)
+* Build a basic diagram app that stores user-specific data
 
-This two-part guide walks you through two popular authentication options—**Clerk** and **SuperTokens**—so you can see how they compare in real projects.
+We’ll start with a no-auth version of the app, then add features gradually to see how each layer improves the developer and user experience.
 
-* **Part I:** How to seamlessly integrate **Clerk authentication** with **Supabase database** in a **Next.js** app for rapid development with beautiful pre-built components.
-* **Part II:**  An alternative approach using **SuperTokens** (for those seeking more control and advanced features).
+> In Part II, we’ll look at how to swap Clerk out for SuperTokens, an open-source alternative with advanced session management and more control. So stay tuned!
 
-**Table of Contents:** 
-```toc
-tight: true
-toHeading: 3
-```
+## How Clerk and Supabase Work Together: The Architecture
 
-## 📖 What You'll Learn About Clerk Supabase Integration
-
-By the end of this tutorial, you'll master the Clerk Supabase stack and be able to:
-
-**In Part I, You'll:** 
-* 🔐 Set up complete Clerk authentication with Supabase database storage
-* 🔄 Connect user identity between Clerk and Supabase using JWT tokens
-* 🛡️ Implement Row Level Security in Supabase with Clerk user IDs
-* 💾 Create and retrieve user-specific data from Supabase while authenticated with Clerk
-* 🧩 Understand the pros and cons of the Clerk Supabase architecture
-* 🤗 Get a sneak peek at an alternative authentication provider: SuperTokens
-
-To make this tutorial practical, we'll implement a [**Mermaid**](https://mermaid.js.org/) diagramming app -- allowing users to create, save, and manage diagrams securely using the Clerk Supabase integration.
-
-Let’s make auth and data storage actually enjoyable. <br /> First, we’ll look at a stripped-down version of the app—no auth, no persistence—so you can see the baseline. Then we’ll layer in features and see how each one improves the experience.
-
-## 🔗 How Clerk and Supabase Work Together: The Architecture
-
-The Clerk Supabase integration handles two distinct—-but complementary-—parts of your application:
+Clerk and Supabase handle two distinct but complementary roles:
 
 * **Clerk = Authentication and Identity** <br />Clerk manages everything about who the user is: their login credentials, session tokens, and identity information. When someone signs in, Clerk provides a unique userId that serves as their identity across your app.
 
-* **Supabase = Data Storage and Rules** <br />Supabase stores and retrieves user content (like saved diagrams) while enforcing security rules. The key to Clerk Supabase integration is connecting these user identities.
+* **Supabase = Data and Access Control** <br />Supabase stores and retrieves user content while enforcing security rules. The key to a Clerk Supabase integration is connecting their user identities.
 
-Here's the Clerk Supabase integration flow:
+### Integration Flow
 
-1. **Clerk authenticates the user.**<br /> When a user signs in, Clerk generates a secure session and provides a unique identifier (`userId`).
-2. **Your app passes the Clerk token to Supabase** when reading or writing data. <br />This JWT token contains the user's Clerk ID, which Supabase can extract.
-3. **Supabase enforces Row Level Security (RLS) using the Clerk userId.** <br />With properly configured RLS policies, users can only access their own data rows.
+1. **Clerk authenticates the user.**<br /> After sign-in, Clerk creates a session and issues a JWT containing the user’s `userId`.
+2. **Your app sends the JWT to Supabase**<br />Supabase extracts the `userId` from the token on each request.
+3. **Supabase enforces RLS policies** <br />RLS ensures users can only access their own data. Example:
     For example:
 
     ```sql
@@ -63,43 +43,43 @@ Here's the Clerk Supabase integration flow:
     using (auth.uid() = user_id);
     ```
 
-> Note: Row-Level Security (RLS) is a security feature that ensures users can only access their own data, even if multiple users are using the same database.
+> **What RLS does:** It guarantees that each user can only see or update rows tied to their identity, even in a shared database.
 
-**The Clerk Supabase integration ensures:**
-* Users must authenticate through Clerk to access their data
-* Every saved item in Supabase is associated with a specific Clerk user
-* Users can only see or modify their own data through Supabase RLS policies
+**Why This Works**
+* Users must authenticate through Clerk to access data
+* Each record in Supabase is tied to a Clerk `userId`
+* RLS ensures strict, per-user data access
 
-This clean separation between Clerk (authentication) and Supabase (data storage) creates a secure, scalable architecture for modern web applications.
+This clean separation between Clerk (authentication) and Supabase (data storage) creates a secure, scalable architecture.
 
-## 💻 Clerk Supabase Integration: Project Overview
+## Clerk and Supabase Integration: Project Overview
 
-🐙 **[Check out the GitHub repository for the complete Clerk Supabase demo app here.](https://github.com/meems1996/mermaid-charting-app)**
+🐙 **[View the full demo on GitHub](https://github.com/meems1996/mermaid-charting-app)**
 
-Our Clerk Supabase integration example is a **Next.js**-based tool that provides:
+This example app is built with Next.js and showcases how to integrate Clerk and Supabase to create a secure, user-aware experience.
 
-* **MermaidJS Editor**: An interactive diagram editor that renders Mermaid syntax
-* **Clerk Authentication**: Complete user sign-up, sign-in, and session management
-* **Supabase Data Storage**: Secure database for saving user-specific diagrams
-* **Row-Level Security**: Ensuring users only access their own data
+### What the App Includes
+* **MermaidJS Editor** -- Write and render Mermaid diagrams in real time
+* **Clerk Authentication** -- Handle sign-up, login, and session management
+* **Supabase Storage** -- Save diagrams to a secure, user-scoped database
+* **Row-Level Security** -- Ensure users can only access their own data
 
-🧜‍♀️ In screenshot you’ll see the core features of the app in action -- writing and rendering a Mermaid chart, and saving it to your Saved Charts section. At this stage, the app **doesn’t** include authentication or persistence. That means anyone can view charts, and saved work vanishes when the page reloads. 
+Initially, the app is a simple, stateless tool: users can write and preview charts, but there’s no login or data persistence. Once the page reloads, everything is lost.
 
-This baseline helps demonstrate the value Clerk and Supabase bring to the table as we layer in authentication and data persistence.
- 
-**[Add screenshot]**
+This baseline helps highlight what Clerk and Supabase add when introduced.
 
-<br />
+### What You’ll Build
+We’ll enhance the app by layering in:
+1. **Clerk** – For authentication and user identity
+2. **Supabase** – To store diagrams tied to each authenticated user
 
-We’ll combine Clerk and Supabase to bring this app to life:
-1. 🔐 **Clerk** will manage user authentication and user sessions, allowing people to sign up, log in, and have personalized accounts.
-2. 🗄️ **Supabase** will store charts and associate them with the authenticated user—so each person only sees their own saved diagrams.
+This integration turns a basic editor into a full-featured app with secure logins and personal saved charts.
 
 ![alt text](image.png)
 
-By the end of this guide, you'll transform a basic stateless app into a fully-featured application with secure authentication and persistent, user-specific data storage.
+By the end, you'll have a working example of how to combine authentication and secure data storage using Clerk and Supabase.
 
-## 🧩 What is Clerk? 
+## What is Clerk? 
 
 [**Clerk**](https://clerk.com/) is a comprehensive authentication and user management platform that makes it easy to add secure login, signup, and identity features to your app.
 In the Clerk Supabase integration, Clerk handles:
@@ -113,7 +93,7 @@ In the Clerk Supabase integration, Clerk handles:
 
 Clerk provides each authenticated user with a unique ID that becomes the cornerstone of your Clerk Supabase integration—linking user identity to their data in Supabase.
 
-## 🗄️ Understanding Supabase in the Clerk Supabase Stack
+## Understanding Supabase in the Clerk Supabase Stack
 
 [**Supabase**](https://supabase.com/) is an open-source backend-as-a-service that provides a PostgreSQL database, authentication, real-time subscriptions, and auto-generated APIs. It's designed to help developers build scalable applications quickly.
 
@@ -127,7 +107,7 @@ Basically, it’s your app’s backend—without the backend headaches.
 
 In this project, Supabase stores and retrieves each user's Mermaid charts. Every saved chart is linked to the unique user ID provided by Clerk. This setup ensures data is private, secure, and only visible to the right user.
 
-## ⚙️ Setting Up Clerk 
+## Setting Up Clerk 
 To get started with Clerk, follow these simple steps to set up authentication in your app.
 
 ### 1. Sign Up for Clerk 
@@ -277,7 +257,7 @@ Once it’s running, head to `http://localhost:3000` in your browser. You should
 
 Next up: we'll connect Supabase and set it up to store user-specific data like saved Mermaid charts.
 
-## ⚙️ Setting Up Supabase with Clerk
+## Setting Up Supabase with Clerk
 To integrate Supabase with your Next.js project and secure user-specific data using Clerk authentication, follow these steps: 
 
 ### 1. Create a Supabase Project
@@ -350,7 +330,7 @@ create policy "Users can view their own charts"
   );
 ```
 
-#### 🐛 Common Pitfall: `auth.uid()` Returns NULL
+#### Common Pitfall: `auth.uid()` Returns NULL
 If you previously used this:
 ```sql
 USING (auth.uid()::text = user_id)
@@ -372,7 +352,7 @@ current_setting('request.jwt.claims', true)::json->>'sub'
 ```
 This safely extracts the sub field (i.e. the Clerk user ID) from the JWT, allowing you to scope data per user, securely and correctly.
 
-## 🧬 Integrating Clerk and Supabase in Next.js
+## Integrating Clerk and Supabase in Next.js
 
 Clerk and Supabase work together seamlessly to manage authentication and user-specific data in your Next.js app. Here’s how the integration functions:
 1. **Authentication with Clerk**: When a user logs in, Clerk authenticates them and generates a unique user ID and session token.
@@ -416,7 +396,7 @@ export default function SupabaseProvider({ children }: { children: React.ReactNo
 }
 ```
 
-## 💻 Code Walkthrough 
+## Code Walkthrough 
 You can explore the full codebase in the [GitHub repository](https://github.com/meems1996/mermaid-charting-app).
 
 ### Saving Charts
@@ -452,7 +432,7 @@ const fetchCharts = async () => {
 * **Session Management**: <br />*Challenge:* Ensure Clerk’s session is available before initializing Supabase. <br />*Solution:* Use useEffect to wait for the session before creating the Supabase client.
 * **Error Handling**: <br />*Challenge:* Errors when saving or fetching data can disrupt the UX.<br />*Solution:* Implement error checks and show clear feedback to the user.
 
-## 🕵️‍♂️ What About Session Security? (The Hidden Risk No One Talks About)
+## What About Session Security? (The Hidden Risk No One Talks About)
 
 Clerk and Supabase handle authentication and data storage effectively. However, **session security is often overlooked**. Potential risks include:
 
@@ -462,7 +442,7 @@ Clerk and Supabase handle authentication and data storage effectively. However, 
 
 These vulnerabilities highlight the need for **robust session management** solutions.
 
-## 🔐 How SuperTokens Fixes This Problem
+## How SuperTokens Fixes This Problem
 
 **SuperTokens** addresses session security concerns with features like:
 
@@ -472,7 +452,7 @@ These vulnerabilities highlight the need for **robust session management** solut
 
 By integrating **SuperTokens with Supabase**, developers can achieve a **more secure and flexible authentication system**.  
 
-## 🤼 Comparing Clerk, Supabase, and SuperTokens
+## Clerk vs. Supabase vs. SuperTokens
 
 | Feature                             | Clerk 🧰          | Supabase 🗄️        | SuperTokens 🛡️       |
 |-------------------------------------|-------------------|--------------------|------------------------|
@@ -485,7 +465,7 @@ By integrating **SuperTokens with Supabase**, developers can achieve a **more se
 
 SuperTokens stands out in session management and security, offering features not natively available in Clerk or Supabase.
 
-## 🤔 Should You Use Clerk, SuperTokens, or Both?
+## Should You Use Clerk, SuperTokens, or Both?
 * **Use Clerk** if you prefer a fully managed solution with pre-built UI components for quick setup.
 * **Use SuperTokens** if you require advanced session management, self-hosting, and enhanced security features.
 * **Use Both** if you want the ease of Clerk's UI components combined with SuperTokens' robust session security.
@@ -498,6 +478,6 @@ The Clerk Supabase integration offers the best of both worlds: Clerk's powerful 
 * **Clerk** handles the "who" - managing user identity and authentication
 * **Supabase** handles the "what" - storing and retrieving user-specific data
 
-By following this guide, you've learned how to properly integrate these two powerful platforms. The complete source code for this Clerk Supabase integration tutorial is available in the [GitHub repository](https://github.com/meems1996/mermaid-charting-app). 🐙
+By following this guide, you've learned how to properly integrate these two powerful platforms. The complete source code for this Clerk Supabase integration tutorial is available in the [GitHub repository](https://github.com/meems1996/mermaid-charting-app).
 
 Ready to explore alternatives? In **Part II**, we'll show you how to achieve similar functionality using SuperTokens with Supabase for more control over authentication and session management.
