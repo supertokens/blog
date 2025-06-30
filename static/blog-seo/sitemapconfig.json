@@ -394,5 +394,8 @@
     },
     {
         "location": "https://supertokens.com/blog/supertokens-extensions"
+    },
+    {
+        "location": "https://supertokens.com/blog/angular-authentication"
     }
 ]
