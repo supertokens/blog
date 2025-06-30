@@ -1,6 +1,6 @@
 ---
 title: "SuperTokens Extensions: Customize Auth Your Way"
-date: "2025-06-16"
+date: "2025-06-30"
 description: "Discover how SuperTokens Extensions bring modular, reusable, and powerful customization to authentication with a new plugin-based system."
 cover: "supertokens-extensions.png"
 category: "programming"
