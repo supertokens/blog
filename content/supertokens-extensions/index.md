@@ -113,21 +113,14 @@ We’re rewriting these examples to match what people expect: concise, instructi
 
 Here’s how testers scored the new system:
 
-| Category                    | Avg. Score (out of 5) |
-
-|----------------------------|-----------------------|
-
-| Initial Setup Experience   | 3.8                   |
-
-| Documentation Clarity      | 2.6                   |
-
-| TypeScript Support         | 5.0                   |
-
-| Error Handling             | 4.0                   |
-
-| API Intuitiveness          | 3.9                   |
-
-| API Flexibility            | 4.8                   |
+| Category                  | Avg. Score (out of 5) |
+|--------------------------|------------------------|
+| Initial Setup Experience | 3.8                    |
+| Documentation Clarity    | 2.6                    |
+| TypeScript Support       | 5.0                    |
+| Error Handling           | 4.0                    |
+| API Intuitiveness        | 3.9                    |
+| API Flexibility          | 4.8                    |
 
 ## 🚧 What’s Next?
 
