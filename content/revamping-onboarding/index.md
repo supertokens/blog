@@ -1,7 +1,7 @@
 ---
 title: "Revamping Onboarding at SuperTokens: A New Developer Experience from the Ground Up"
 date: "2025-07-01"
-description: "more effective at getting you to “it works!”"
+description: "Impressions matter—especially when it comes to onboarding. So we rebuilt the entire experience to deliver a setup flow that's intuitive, interactive, and tailored to your tech stack."
 cover: "revamping-onboarding.png"
 category: "programming"
 author: "Joel Coutinho"
