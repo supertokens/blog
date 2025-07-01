@@ -393,6 +393,9 @@
         "location": "https://supertokens.com/blog/lambda-authorizers"
     },
     {
+        "location": "https://supertokens.com/blog/supertokens-extensions"
+    },
+    {
         "location": "https://supertokens.com/blog/angular-authentication"
     }
 ]
