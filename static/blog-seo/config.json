@@ -3901,25 +3901,25 @@
     {
         "path": "/blog/revamping-onboarding",
         "metaTags": [
-            "<meta name=\"description\" content=\"more effective at getting you to “it works!”\" />",
+            "<meta name=\"description\" content=\"Impressions matter—especially when it comes to onboarding. So we rebuilt the entire experience to deliver a setup flow that's intuitive, interactive, and tailored to your tech stack.”\" />",
             "",
             "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
             "<!--OG Tags-->",
             "<meta property=\"og:title\" content=\"Revamping Onboarding at SuperTokens: A New Developer Experience from the Ground Up\" />",
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/revamping-onboarding\" />",
-            "<meta property=\"og:description\" content=\"more effective at getting you to “it works!”\"/>",
+            "<meta property=\"og:description\" content=\"Impressions matter—especially when it comes to onboarding. So we rebuilt the entire experience to deliver a setup flow that's intuitive, interactive, and tailored to your tech stack.”\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/revamping-onboarding.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"more effective at getting you to “it works!”\" />",
+            "<meta name=\"twitter:title\" content=\"Impressions matter—especially when it comes to onboarding. So we rebuilt the entire experience to deliver a setup flow that's intuitive, interactive, and tailored to your tech stack.”\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/revamping-onboarding\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/revamping-onboarding.png\" /> ",
             "<!--OG Tags-->",
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/revamping-onboarding\">"
         ],
         "title": "Revamping Onboarding at SuperTokens: A New Developer Experience from the Ground Up",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/revamping-onboarding\"\n            },\n            \"headline\": \"more effective at getting you to “it works!”\",\n            \"image\": \"https://supertokens.com/blog-meta-images/revamping-onboarding.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/revamping-onboarding\"\n            },\n            \"headline\": \"Impressions matter—especially when it comes to onboarding. So we rebuilt the entire experience to deliver a setup flow that's intuitive, interactive, and tailored to your tech stack.”\",\n            \"image\": \"https://supertokens.com/blog-meta-images/revamping-onboarding.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
         "path": "/blog/supertokens-extensions",
