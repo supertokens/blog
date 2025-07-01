@@ -3920,7 +3920,7 @@
         ],
         "title": "SuperTokens Extensions: Customize Auth Your Way",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/supertokens-extensions\"\n            },\n            \"headline\": \"Discover how SuperTokens Extensions bring modular, reusable, and powerful customization to authentication with a new plugin-based system.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/supertokens-extensions.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
-     },
+    },
     {
         "path": "/blog/angular-authentication",
         "metaTags": [
@@ -3943,5 +3943,28 @@
         ],
         "title": "Angular Authentication",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/angular-authentication\"\n            },\n            \"headline\": \"Learn how Angular authentication works, key methods to secure apps, and how to integrate with providers like SuperTokens or OAuth.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/cli-overhaul",
+        "metaTags": [
+            "<meta name=\"description\" content=\"We overhauled our CLI to be both a teaching tool and a real project starter—making it easier than ever to add auth to any stack, your way.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Solving Auth for Everyone: The SuperTokens CLI Overhaul\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/cli-overhaul\" />",
+            "<meta property=\"og:description\" content=\"We overhauled our CLI to be both a teaching tool and a real project starter—making it easier than ever to add auth to any stack, your way.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/cli-overhaul.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"We overhauled our CLI to be both a teaching tool and a real project starter—making it easier than ever to add auth to any stack, your way.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/cli-overhaul\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/cli-overhaul.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/cli-overhaul\">"
+        ],
+        "title": "Solving Auth for Everyone: The SuperTokens CLI Overhaul",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/cli-overhaul\"\n            },\n            \"headline\": \"We overhauled our CLI to be both a teaching tool and a real project starter—making it easier than ever to add auth to any stack, your way.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/cli-overhaul.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]

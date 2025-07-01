@@ -1,7 +1,7 @@
 ---
 title: "Solving Auth for Everyone: The SuperTokens CLI Overhaul"
 description: "We overhauled our CLI to be both a teaching tool and a real project starter—making it easier than ever to add auth to any stack, your way."
-date: "2025-06-24"
+date: "2025-07-01"
 cover: "cli-overhaul.png"
 category: "featured"
 author: "Darko Bozhinovski"
