@@ -1,6 +1,6 @@
 ---
 title: "Revamping Onboarding at SuperTokens: A New Developer Experience from the Ground Up"
-date: "2025-06-19"
+date: "2025-07-01"
 description: "more effective at getting you to “it works!”"
 cover: "revamping-onboarding.png"
 category: "programming"
