@@ -47,6 +47,6 @@ By plugging in our middleware, you inherit SuperTokens' session and identity han
 
 ## What’s next?
 
-The toolkit is currently in private beta as we polish the APIs and finalize the developer experience. We’re targeting a public release by the end of this month.
+The toolkit is currently in private beta as we refine the APIs and finalize the developer experience. We’re targeting a public release by the end of this month.
 
-Looking ahead, we’re planning to expand support for more AI-powered use cases. If you’re interested in early access or have a unique scenario you’d like to explore, we’d love to hear from you — just reach out to our team!
+Looking ahead, we plan to expand support for more AI-powered use cases. If you'd like early access or have a unique scenario in mind, drop your email below — we’ll keep you in the loop!
