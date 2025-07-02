@@ -663,7 +663,7 @@
 
   .mcp-toolkit-interest-form-input {
     padding: 14px 16px;
-    font-size: 16px; /* Prevents zoom on iOS */
+    font-size: 16px;
   }
 
   .mcp-toolkit-interest-form-submit-button {
