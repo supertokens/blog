@@ -10,10 +10,10 @@ author: "Maria Shimkovska"
 In this guide, we’ll walk through integrating Clerk with Supabase step-by-step. We start with a basic, no-auth Next.js app and gradually add authentication and secure, user-specific data storage using Clerk for auth and Supabase for data. You’ll end up with a diagram editor where each user can save and retrieve their own diagrams.
 
 **What You’ll Learn**
-* Set up Clerk authentication in a Next.js app
-* Connect Clerk and Supabase (using the updated 2025 integration)
-* Configure Row-Level Security (RLS) for user-specific access
-* See it all come together in a diagram editor where authenticated users save and load their own charts
+* Set up Clerk authentication in a Next.js app.
+* Connect Clerk and Supabase (using the updated 2025 integration).
+* Configure Row-Level Security (RLS) for user-specific access.
+* See it all come together in a diagram editor where authenticated users save and load their own charts.
 
 We begin with a simple “no-auth” editor (users can draw and preview Mermaid diagrams, but nothing is saved). Then we layer on Clerk and Supabase. Clerk provides sign-in flows, session tokens, and user IDs. Supabase holds the diagrams and enforces per-user data access via RLS. 
 
@@ -29,7 +29,7 @@ In this integration, Clerk and Supabase take on two distinct roles:
 
 ### How the Integration Flow Works
 
-1. **User signs in with Clerk**<br /> Clerk verifies their credentials and returns a JWT (JSON Web Token) containing the user’s unique ID (`sub` claim)
+1. **User signs in with Clerk**<br /> Clerk verifies their credentials and returns a JWT (JSON Web Token) containing the user’s unique ID (`sub` claim).
 2. **Your app sends the JWT to Supabase**<br /> You configure the Supabase client to include Clerk’s token on each request. Supabase sees the token and uses it to identify the user.
 3. **Supabase enforces RLS policies** <br />For example, if we have a charts table with a user_id column, RLS policies can be written like:
     ```sql
@@ -405,7 +405,7 @@ Clerk and Supabase handle basic sessions well (Clerk rotates refresh tokens, etc
 * **Self-hosted & fully customizable:** You can self-host SuperTokens (or use the cloud hosting option). Because it’s open source, you have full control. This means you aren’t locked into a vendor.
 * **Advanced session management:** Out of the box, SuperTokens uses short-lived access tokens and rotating refresh tokens. Each time a refresh token is used, a new one is issued and the old one is invalidated. This one-time-use refresh scheme means a stolen refresh token is useless after first use.
 * **Token theft detection & rotation:** SuperTokens can detect if a refresh token is being reused (an anomaly indicating theft) and revoke all sessions for that user immediately.
-* **Granular session revocation:** You can revoke individual device sessions. For instance, SuperTokens provides backend functions like `Session.revokeSession(sessionHandle)` or `Session.revokeAllSessionsForUser(userId)`, letting you target a specific session or wipe all of a user’s sessions
+* **Granular session revocation:** You can revoke individual device sessions. For instance, SuperTokens provides backend functions like `Session.revokeSession(sessionHandle)` or `Session.revokeAllSessionsForUser(userId)`, letting you target a specific session or wipe all of a user’s sessions.
 
 These features directly mitigate the risks above:
 * **Stolen token → short expiry & rotation:** Even if an access token is stolen, it will expire quickly. If a refresh token is stolen, SuperTokens will notice its reuse and invalidate it, limiting damage to minutes.
@@ -484,9 +484,9 @@ SuperTokens provides guides on migrating from other auth systems, making the pro
 
 ## Clerk + Supabase Is a Great Start, But SuperTokens Takes You Further
 To summarize, the Clerk + Supabase integration we built gives you:
-* A complete app with secure user sign-in
-* Personalized data storage (each user only sees their charts)
-* Row-Level Security enforcing data isolation
+* A complete app with secure user sign-in.
+* Personalized data storage (each user only sees their charts).
+* Row-Level Security enforcing data isolation.
 
 This is elegant and suitable for many projects. Clerk handles auth beautifully, and Supabase handles data. But if your project has higher security needs or unusual requirements, SuperTokens can take you further. With SuperTokens, you can finely tune session lifetimes, detect stolen tokens, revoke individual sessions, and even self-host everything.
 
