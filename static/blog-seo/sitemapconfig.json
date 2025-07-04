@@ -405,5 +405,8 @@
         "location": "https://supertokens.com/blog/rethinking-documentation"
     },{
         "location": "https://supertokens.com/blog/cli-overhaul"
+    },
+    {
+        "location": "https://supertokens.com/blog/supertokens-mcp-toolkit"
     }
 ]
