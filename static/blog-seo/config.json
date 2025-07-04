@@ -3967,6 +3967,31 @@
         "title": "Angular Authentication",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/angular-authentication\"\n            },\n            \"headline\": \"Learn how Angular authentication works, key methods to secure apps, and how to integrate with providers like SuperTokens or OAuth.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
+    {
+
+        "path": "/blog/rethinking-documentation",
+        "metaTags": [
+            "<meta name=\"description\" content=\"We rebuilt our documentation from the ground up—reorganizing structure, enforcing consistency, and making it easier than ever for developers to navigate and customize authentication with SuperTokens.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Rethinking our documentation\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/rethinking-documentation\" />",
+            "<meta property=\"og:description\" content=\"We rebuilt our documentation from the ground up—reorganizing structure, enforcing consistency, and making it easier than ever for developers to navigate and customize authentication with SuperTokens.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/rethinking-documentation.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"We rebuilt our documentation from the ground up—reorganizing structure, enforcing consistency, and making it easier than ever for developers to navigate and customize authentication with SuperTokens.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/rethinking-documentation\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/rethinking-documentation.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/rethinking-documentation\">"
+        ],
+        "title": "Rethinking our documentation",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/rethinking-documentation\"\n            },\n            \"headline\": \"We rebuilt our documentation from the ground up—reorganizing structure, enforcing consistency, and making it easier than ever for developers to navigate and customize authentication with SuperTokens.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/rethinking-documentation.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
       "path": "/blog/cli-overhaul",
         "metaTags": [
             "<meta name=\"description\" content=\"We overhauled our CLI to be both a teaching tool and a real project starter—making it easier than ever to add auth to any stack, your way.\" />",
