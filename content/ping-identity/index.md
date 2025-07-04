@@ -116,12 +116,9 @@ developers who want lightweight, pluggable auth without enterprise complexity or
 ### **Okta Strengths**
 
 -   **User Experience:** [Okta](https://www.okta.com/products/single-sign-on-workforce-identity/) offers an intuitive admin console with plug‑and‑play integrations across 7,000+ apps, making it easy for enterprises to deploy identity solutions quickly and at scale.
--   **SaaS‑Native:** Cloud‑first architecture, minimal on‑prem footprint required. This allows organizations to scale identity services
-globally with reduced infrastructure overhead.
--   **Developer Ecosystem:** SDKs, APIs, and a developer portal with robust documentation. Developers can rapidly build, test, and
-integrate identity features into any application stack. Support for multiple programming languages and frameworks ensures flexibility in implementation.
--   **Self‑Service Onboarding:** End users can federate personal apps via OAuth and SAML. This empowers users to manage access without
-involving IT, reducing administrative load. Custom branding and policy controls ensure the onboarding experience aligns with enterprise standards.
+-   **SaaS‑Native:** Cloud‑first architecture, minimal on‑prem footprint required. This allows organizations to scale identity services globally with reduced infrastructure overhead.
+-   **Developer Ecosystem:** SDKs, APIs, and a developer portal with robust documentation. Developers can rapidly build, test, and integrate identity features into any application stack. Support for multiple programming languages and frameworks ensures flexibility in implementation.
+-   **Self‑Service Onboarding:** End users can federate personal apps via OAuth and SAML. This empowers users to manage access without involving IT, reducing administrative load. Custom branding and policy controls ensure the onboarding experience aligns with enterprise standards.
 
 ### **Ping Identity Strengths**
 
