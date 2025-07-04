@@ -408,5 +408,8 @@
     },
     {
         "location": "https://supertokens.com/blog/supertokens-mcp-toolkit"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-to-integrate-clerk-with-supabase"
     }
 ]
