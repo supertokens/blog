@@ -1,6 +1,6 @@
 ---
 title: Rethinking our documentation
-date: "2025-06-24"
+date: "2025-07-04"
 description: "We rebuilt our documentation from the ground up—reorganizing structure, enforcing consistency, and making it easier than ever for developers to navigate and customize authentication with SuperTokens."
 cover: "rethinking-documentation.png"
 category: "programming"
