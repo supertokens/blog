@@ -34,7 +34,7 @@ Where do you add a new product offering that’s cross cutting and involves mult
 As a user you end up frustrated that you need a compass to hop around different hidden sections.
 And, as a technical writer, you end up cramming and duplicating information in order to follow the baseline structure.
 
-![]()
+![The Old Documentation Structure](./old_documentation_structure.png)
 
 While our product was growing, users kept reporting that locating the necessary customization details for their chosen authentication method required sifting through numerous unrelated sections.
 This inconsistency not only slowed down the learning process but also increased the risk of errors during implementation
@@ -100,6 +100,8 @@ This led us to a new form of organization that follows the natural progression o
 - **Deployment**
   - In-depth documentation on hosting options, best practices for self-hosting the core service, and tips for ensuring uptime and security.
 
+![The New Documentation Structure](./new_documentation_structure.png)
+
 This restructuring not only streamlines the user journey but also allows our users to pick up the exact piece of information they need without excessive navigation. Each section is tailored to a specific phase of the authentication process, providing a logical flow from concept to implementation.
 
 ### Consistency between pages
@@ -132,4 +134,3 @@ As we all know, developers nowadays tend to vibe code their way into a working a
 ## Conclusion
 
 The journey to restructure the SuperTokens documentation has been both challenging and immensely rewarding. By addressing the fragmentation and inconsistencies of the past, we’ve improved the overall experience of our product through a well-organized, user-friendly resource.
-
