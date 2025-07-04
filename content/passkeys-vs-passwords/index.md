@@ -7,15 +7,10 @@ category: "featured"
 author: "Joel Coutinho"
 ---
 
-
-When it comes to online security, the method you choose to authenticate users can make or break your application’s defense. The long-standing password is under increasing scrutiny, and a modern alternative—**passkeys**—is gaining traction. But how do these two approaches compare across key dimensions like security, usability, and implementation? Let’s break it down.
+Passwords have been obsolete for some time now. They are insecure, [susceptible to a number of attack vectors](https://supertokens.com/blog/what-is-passwordless-authentication#common-problems-with-password-based-authentication-) and are honestly a pain to remember. The more astute amongst you have already moved to more secure methods like using a password manager or passwordless authentication using multiple factors but, they can be more cumbersome and require additional steps. Waiting for OTPs can take time and the delivery service can be prone to failure, setting up and managing an authenticator app is cumbersome and dealing with multiple factors is always tedious. Passkeys is a modern alternative that aim to solve a number of the issues associated with traditional and more advanced authentication methods. Let's break it down.
 
 ## What Are Passkeys and Passwords?
 
-### What Are Passwords?
-Passwords are strings of characters users must remember and enter to gain access to their accounts. They’ve been the standard authentication method for decades and rely heavily on user memory and behavior. Despite widespread adoption, passwords remain a common point of failure in authentication.
-
-### What Are Passkeys?
 Passkeys are cryptographic credentials built on **FIDO2/WebAuthn** standards. Unlike passwords, they do not depend on a user’s memory. Instead, they use a device-bound private-public key pair for authentication. Users typically unlock their credentials using biometrics (like a fingerprint or facial recognition) or a device PIN.
 
 ### Key Technical Difference
@@ -74,7 +69,7 @@ Passkeys can sync across user devices securely, making cross-platform login seam
 - Requires initial user education and UX tuning.
 - Need to support multiple authenticators (e.g., platform vs cross-platform).
 
-## How SuperTokens Supports a Passkey Future
+## Implementing Passkeys in your application (With SuperTokens!)
 
 ### WebAuthn Support
 SuperTokens includes **WebAuthn-based passwordless login**, offering full support for passkey-style authentication.
