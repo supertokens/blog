@@ -1,6 +1,6 @@
 ---
 title: "How to Integrate Clerk with Supabase (Plus another option for the curious)"
-date: "2025-07-03"
+date: "2025-06-03"
 description: "🔐 Learn how to integrate Clerk with Supabase for powerful authentication and database management in your Next.js applications - with step-by-step tutorial and code examples."
 cover: "integrate-clerk-with-supabase.png"
 category: "programming"
