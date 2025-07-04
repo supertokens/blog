@@ -123,10 +123,8 @@ developers who want lightweight, pluggable auth without enterprise complexity or
 ### **Ping Identity Strengths**
 
 -   **Protocol Customization:** Deep support for WS‑Trust, SCIM, bespoke protocols.Ideal for legacy modernization and complex B2B integrations. Enables seamless identity federation across non-standard or proprietary environments.
--   **On‑Prem & Hybrid Support:** Run fully on‑prem for air‑gapped or regulated workloads. Supports high-security deployments in
-government, defense, and financial sectors. Provides full control over data residency, patching, and infrastructure management.
--   **Risk‑Based Policies:** Adaptive MFA that integrates with network and device posture. Evaluates risk in real time to allow, deny, or
-challenge access dynamically. Reduces friction for low-risk users while tightening security where needed.
+-   **On‑Prem & Hybrid Support:** Run fully on‑prem for air‑gapped or regulated workloads. Supports high-security deployments in government, defense, and financial sectors. Provides full control over data residency, patching, and infrastructure management.
+-   **Risk‑Based Policies:** Adaptive MFA that integrates with network and device posture. Evaluates risk in real time to allow, deny, or challenge access dynamically. Reduces friction for low-risk users while tightening security where needed.
 -   **Enterprise Compliance:** Audit logs, encryption at rest/in transit, FIPS‑certified modules. Meets regulatory requirements such as HIPAA, GDPR, and FedRAMP. Delivers full visibility and traceability for access events and policy changes.
 
 |  Use Case              | Okta                        |     Ping Identity                        |
