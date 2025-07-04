@@ -8,25 +8,36 @@ author: "Bogdan Carpusor"
 ---
 
 In any successful product, especially in the realm of developer tools, documentation is not just a reference guide. It’s an essential part of the product experience.
-Our authentication solution has always been an easy fit for our customers, given the endless customization possibilities and extended support. But, as the saying goes, "your product is as good as your documentation". And, until recently, our documentation was not that great.
+Our authentication solution has always been an easy fit for our customers, given the endless customization possibilities and extended support. But, as the saying goes, "your product is as good as your documentation". And, until recently, our documentation lagged behind what the engineering team was delivering.
 
-The general feedback that we used to receive from our users was that going through it was a painful experience. With this in mind we decided to rethink our approach and to reorganize the documentation from the ground up.
+The general feedback that we used to receive from our users was that going through it was a confusing experience. With this in mind we decided to rethink our approach and to reorganize the documentation from the ground up.
 
 ## The initial challenges
 
-The previous documentation was an afterthought in the process of delivering a new feature.
-Developers wrote it and maintained it as a last hurdle before a release, which led to significant issues in both the writing style and organization.
+The previous documentation couldn’t keep up with the growth of our product. Our initial assumptions about how information should be presented to users were hitting a ceiling in terms of scaling.
 
-The lack of a structured documentation process resulted in content being added in an ad-hoc manner, without consistent guidelines or standards. Some sections from the old navigation structure became a catch-all repository for miscellaneous information. Much like a "utils" folder in a software project, where you dump things that don't fit elsewhere.
-This approach complicated content navigation and made it challenging for users to locate specific details about various authentication features and customizations effectively.
-
-That being said, we identified two different aspects on which we wanted to focus on in the process of improving the documentation:
+After an internal evaluation, that took into account user feedback, we identified two different aspects on which we wanted to focus on in the process of improving the documentation:
 
 ### Structure
 
-In the initial version users had to first choose an authentication method through a main page (or through a top level select input).  Then they were presented with a navigation menu which structured pages without a logical approach. The tutorials, which were supposed to serve as a simple and quick introduction (housed under the "Quickstart" section), were disjointed from more detailed explanations. More advanced topics such as multi-factor authentication (MFA), multi-tenancy or account linking were scattered around, leading to a lack of cohesion in the overall structure. Additionally, the content between each authentication method tended to be repetitive and confusing.
+Initially, we based our documentation on one of the core concepts of our authentication solution, **the recipe**. Each feature that we expose has an equivalent _recipe_ that you need to use inside your application.
+If you want to build a login form that authenticates users through a magic link you need to use the _Passwordless_ recipe. Pretty simple, right?
 
-Users reported that locating the necessary customization details for their chosen authentication method required sifting through numerous unrelated sections. This inconsistency not only slowed down the learning process but also increased the risk of errors during implementation.
+It works well when you are writing a code snippet.
+And it also fits basic use cases, that do not involve too many recipes at once.
+You want to know how to integrate SuperTokens with _Email/Password_ authentication? Just select the _Email/Password_ option from the top navigation menu and read the tutorial.
+Want to enable and configure _MFA_? Select the _Multi-Factor Authentication_ option and give it a go.
+
+But what happens when you need to to configure an authentication flow that uses multiple login methods?
+What if you need to do some customization and you need to reference different SDK functions?
+Where do you add a new product offering that’s cross cutting and involves multiple recipes?
+As a user you end up frustrated that you need a compass to hop around different hidden sections.
+And, as a technical writer, you end up cramming and duplicating information in order to follow the baseline structure.
+
+![]()
+
+While our product was growing, users kept reporting that locating the necessary customization details for their chosen authentication method required sifting through numerous unrelated sections.
+This inconsistency not only slowed down the learning process but also increased the risk of errors during implementation
 
 ### Consistency
 
@@ -42,40 +53,48 @@ To address the challenges outlined above, we embarked on a mission to completely
 
 ### The Two Layers: Documentation and References
 
-After assessing user feedback and analyzing our own product we decided that the documentation website should be divided into two main layers:
+Figuring out what’s the best structure was an iterative process. We started by creating a list of all the pages that we had in the previous version. After removing the duplicate content we drafted a couple of different navigation structures. We had several approaches that tried to group things together based on common patterns.
+
+From a high level perspective we have divided the main website into two main layers to account for different types of content:
 
 - **Documentation:**
+
   - Contains tutorials and guides that explain how to use the product, covering the entire authentication journey from initial setup to advanced customization.
 
 - **References:**
   - Provides direct references on the SDKs and APIs exposed by the product, offering low-level insights and technical details which experienced developers appreciate.
 
-This organization method also accounts for potential scaling issues that we might encounter in the future, as the product grows.
-
 ### Structuring each main section
 
 Deciding on how the **References** section should be organized is an easy task. Things are grouped by a specific domain: Frontend SDKs, Backend SDKs, API References.
 
-For the actual tutorials and guides, the **Documentation** section, things are a bit more challenging. Given that our product does a lot of things, and you can customize it in many ways, it’s easy to fall into the trap of organizing things by features. You end up with a long list of sections that gets extended each time you add a new feature.
+For the actual tutorials and guides, the **Documentation** section, things are a bit more challenging.
+Our initial assumption was that information should be clustered around their common denominator. _Authentication methods_, _Users_ or _Sessions_ are terms that make sense in the context of authentication. But, as we looked at it from the perspective of different tasks that a user might want to accomplish while navigating our documentation, that logic became brittle.
 
-We decided on grouping everything into sections that follow the natural progression of an authentication process. Here’s the new structure:
+This led us to a new form of organization that follows the natural progression of an authentication process. Here’s the structure that we ended up with:
 
 - **Quickstart**
+
   - Tutorials that help you integrate the product from scratch, making it easy to get up and running within minutes.
 
 - **Authentication**
+
   - Detailed guides on the various authentication methods available, including customization and troubleshooting tips.
 
 - **Additional Verification**
+
   - Information on implementing custom session verification, multi-factor authentication (MFA), email verification, and role verification.
 
 - **Post Authentication**
+
   - Guidance on managing sessions, handling user data, linking accounts, and other post-login tasks that ensure smooth user operation.
 
 - **Migration**
+
   - Step-by-step instructions on how to migrate from other authentication solutions, ensuring a seamless transition.
 
 - **Platform Configuration**
+
   - Comprehensive instructions on configuring core services and the email/SMS sending options within your environment.
 
 - **Deployment**
@@ -108,8 +127,9 @@ We have already migrated the full API specification pages, and we are working on
 
 ### Integration with LLM Workflows
 
-As we all know, developers nowadays tend to vibe code their way into a working application rather than going through a step by step tutorial. With that in mind our plan is to make sure that everyone can integrate SuperTokens seamlessly with the help of their favorite AI coding tool. The documentation already exposes llms.txt and llms-full.txt files, and we plan to add specific guides that can show how to efficiently use our documentation in LLM workflows.
+As we all know, developers nowadays tend to vibe code their way into a working application rather than going through a step by step tutorial. With that in mind our plan is to make sure that everyone can integrate SuperTokens seamlessly with the help of their favorite AI coding tool. The documentation already exposes llms.txt and llms-full.txt files, and we plan to add specific guides that will show how to efficiently use our documentation in LLM workflows.
 
 ## Conclusion
 
 The journey to restructure the SuperTokens documentation has been both challenging and immensely rewarding. By addressing the fragmentation and inconsistencies of the past, we’ve improved the overall experience of our product through a well-organized, user-friendly resource.
+
