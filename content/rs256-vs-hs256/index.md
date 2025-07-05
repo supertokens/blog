@@ -287,12 +287,13 @@ Minimum recommended key size:
 
 **Example (using OpenSSL):**
 
-bash
-*\# Generate RSA private key*
+```bash
+# Generate RSA private key
 openssl genrsa -out private-key.pem 2048
 
-*\# Extract public key*
+# Extract public key
 openssl rsa -in private-key.pem -pubout -out public-key.pem
+```
 
 ### **Storing Secrets Securely (HS256)**
 
