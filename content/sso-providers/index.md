@@ -3,7 +3,7 @@ title: Top Open Source SSO Providers to Know in 2025
 description: "Compare the best open source SSO providers in 2025 and learn how to pick the right solution for your app’s security and scalability."
 date: "2025-07-07"
 cover: "TODO.png"
-category: "sso, authentication, guide"
+category: "sso, sso providers, guide"
 author: "Maurice Saldivar"
 ---
 
@@ -122,7 +122,7 @@ Real-time alerts for suspicious activities and comprehensive audit logs support 
 
 This process uses standard protocols like SAML, OAuth 2.0, or OpenID Connect to ensure secure communication between all components.
 
-## Comparing the Top SSO Providers
+## Comparing SSO Providers
 
 | Provider | Key Features | Pricing | Ideal Use Cases |
 |----------|-------------|---------|-----------------|
