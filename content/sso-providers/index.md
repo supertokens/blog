@@ -78,7 +78,7 @@ SSO implementations rely on standardized protocols to securely exchange authenti
 
 ### SAML (Security Assertion Markup Language)
 
-SAML is an XML-based protocol that exchanges authentication data through assertions XML documents containing user information. When a user logs in, the identity provider creates a SAML assertion and sends it to the service provider for access.
+SAML is an XML-based protocol that exchanges authentication data via assertions-structured XML documents containing user identity information. When a user logs in, the identity provider creates a SAML assertion and sends it to the service provider for access.
 
 Best for enterprise applications and legacy systems requiring detailed user attributes.
 
@@ -132,6 +132,15 @@ This process uses standard protocols like SAML, OAuth 2.0, or OpenID Connect to 
 | **Authentik** | • OAuth 2.0, OIDC, SAML<br>• LDAP, RADIUS, SCIM<br>• Passwordless & social logins<br>• WebAuthn/Passkeys<br>• User federation (LDAP/AD)<br>• Multi-tenancy<br>• Self-hosted only<br>• Open source<br>• All cloud providers | • Self-hosted: Free, unlimited users<br>• Professional support: $5/user/month w/ ticket support for subscriptions over $1k/year min<br>• Enterprise: $20,000+/year<br>• No per-user fees in free tier | Technical teams wanting full control, organizations with data sovereignty requirements, cost-conscious companies with DevOps capabilities
 
 Each provider addresses different organizational needs. Consider your technical requirements, budget constraints, existing infrastructure, and team expertise when making your selection.
+
+Here's a table comparing ideal use cases:
+
+| Provider | **Best For** | **Key Advantage** | **Main Limitation** |
+|----------|-------------|-------------------|-------------------|
+| **Keycloak** | Large enterprises & government agencies | Completely free, battle-tested, enterprise-scale | Requires significant DevOps expertise |
+| **SuperTokens** | Growing startups & developer teams | Modern DX, flexible pricing that scales with growth | Limited enterprise features compared to others |
+| **Microsoft Entra ID** | Microsoft-centric organizations | Seamless M365/Azure integration, enterprise-grade | Expensive, vendor lock-in, not open source |
+| **Authentik** | Technical teams wanting full control | Unlimited free users, modern architecture | Self-hosted only, requires technical expertise |
 
 
 ## Implementing SSO with SuperTokens
