@@ -1,42 +1,44 @@
 ---
-title: "Thinking About Going Passwordless? Here's How To Do It Right - Part 2: Secure SSH Without Passwords"
-date: "2025-03-30"
+title: "Thinking About Going Passwordless? Here's How To Do It Right"
+date: "2025-07-03"
 description: "Explore the steps to adopt passwordless authentication, understand its benefits, and learn how solutions like SuperTokens facilitate secure, password-free logins.​"
 cover: ""
 category: "featured"
 author: "Maria Shimkovska"
 ---
 
-I am a firm believer that New Year's shouldn't be the only time we set resolutions. Every day we wake up offers a fresh opportunity to improve by establishing new goals. 🤗 🌅
+Password based authentication is a problem. The next section quickly goes over why. But it's a problem. So you have two options you can choose from:
+1. You can add a second layer of authentication to your password based auth. 
+2. Or, you can go completely **passwordless**. 
 
-If you're here because going passwordless is your new objective, but you're unsure how to begin, don't worry &mdash; this guide has you covered. 
+If you're here because going passwordless is your new objective, but you're unsure how to begin, don't worry &mdash; I got you covered. 
 
-Whether you're looking to **transform how you log into accounts**, **secure your infrastructure with SSH**, or **simplify access across all your devices** &mdash; we'll show you how to make passwords a thing of the past 🔐✨
-
-Let's dive in! 🚀 
-
-![alt text](passwordless-login-image.png)
+Whether you're looking to **add extra security to your logins** or **simplify access across all your devices**, I'll show you how to leave your passwords behind. 
 
 ```toc
 tight: true
 toHeading: 3
 ```
 
-## 🙅 Why Passwords Just Don't Cut It Anymore
+## Passwords Just Don't Cut It
 
 ![A cartoon gif of a man spilling out his passwords from his brain and feeding them all to his laptop](william-garrat-gif.gif)
 
-Let's face it &mdash; most of us struggle with creating strong passwords. We reuse them, forget them, and often default to simple options like 123456 or our pet's name 🐶. And while your beloved dog might be a treasure to your family, their name simply isn't secure &mdash; unless they happen to be named something like xT5!9pL@3qR& 🤓.
+Let's face it, most of us struggle with creating strong passwords. We reuse them, forget them, and often default to simple options like *123456* or our pet's name. And while your dog might be a treasure to your family, their name simply isn't secure ... well, unless they happen to be named something like *xT5!9pL@3qR&*.
 
-Even with password managers, the challenges persist &mdash; for both users juggling [hundreds of logins](https://nordpass.com/blog/how-many-passwords-does-average-person-have/) and developers handling endless password resets, security breaches, and support requests.
+Also, with the increased number of apps available, people have [**hundreds of them**](https://nordpass.com/blog/how-many-passwords-does-average-person-have/). As a result, dev teams have to handle endless password resets, security breaches, and support requests.  
 
-The good news? There's a better approach: **passwordless authentication**, which conveniently brings us to our next section. 😉
+There is an argument to be made about using a password manager, and I am a big fan. Password managers have made my life easier, that's for sure. But the issue still comes if you are a developer and want to provide a good experience for new users. 
 
-## 📖 Understanding Passwordless Authentication
-This section explores the concept of passwordless authentication, its advantages, and its limitations. Before fully committing to this approach, it's important to understand both its strengths and potential drawbacks to make an informed decision for your security needs.
+Also, on the topic of password managers, they are are still not widely used. This increases the risk users will choose a weak password. On top of that, having to come up with a new password during sign-up can create extra friction, which may discourage people from completing the process.
 
-### What *is* Passwordless Authentication 🤔
-At its core, **passwordless authentication** is exactly what it sounds like: any method that lets users securely access their accounts without typing in a traditional password. Instead, a user might use their fingerprint, receive a one-time link via email, enter a temporary code from their phone, plug in a physical security key, or use cryptographic keys working quietly in the background.
+## Understanding Passwordless Authentication
+Before fully committing to this approach, it's important to understand both its strengths and potential drawbacks to make an informed decision for your security needs.
+
+### So What *is* Passwordless Authentication 
+**Passwordless authentication** is exactly what it sounds like. It's any method that lets users securely access their accounts **without typing in a traditional password**. 
+
+Instead, a user might use their fingerprint, receive a one-time link via email, enter a temporary code from their phone, plug in a physical security key, or use cryptographic keys working quietly in the background.
 
 If you're looking for a deeper dive into this topic, check out our article ["What Is Passwordless Authentication"](https://supertokens.com/blog/what-is-passwordless-authentication) for more comprehensive information.
 
