@@ -402,6 +402,8 @@
         "location": "https://supertokens.com/blog/angular-authentication"
     },
     {
+        "location": "https://supertokens.com/blog/rethinking-documentation"
+    },{
         "location": "https://supertokens.com/blog/cli-overhaul"
     },
     {
@@ -409,5 +411,8 @@
     },
     {
         "location": "https://supertokens.com/blog/passkeys-vs-passwords"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-to-integrate-clerk-with-supabase"
     }
 ]
