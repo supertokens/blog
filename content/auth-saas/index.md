@@ -2,7 +2,7 @@
 title: "What is Authentication as a Service?"
 date: "2025-06-30"
 description: "Discover how Authentication as a Service simplifies user authentication, enhances security, and scales with your application's needs."
-cover: "what-is-auth-saas-(authentication-as-a-service).png"
+cover: "what_is_authentication_as_a_service.png"
 category: "programming"
 author: "Mostafa Ibrahim"
 ---
