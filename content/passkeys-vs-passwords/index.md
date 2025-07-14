@@ -2,7 +2,7 @@
 title: "Passkeys vs Passwords – Which Is the Better Authentication Choice?"
 date: "2025-06-25"
 description: "Explore the differences between passkeys and passwords in modern authentication. Learn why passkeys are more secure, user-friendly, and built for the future of login systems."
-cover: "what-is-passwordless-auth.png"
+cover: "passkeys-vs-passwords.png"
 category: "featured"
 author: "Joel Coutinho"
 ---
@@ -95,7 +95,71 @@ You will first need to set up SuperTokens in your web application.
 
 ### Initialize the WebAuthn recipes
 
-Once you setup SuperTokens in your application you will need to initialize the WebAuthn re
+Once you setup SuperTokens in your application you will need to initialize the WebAuthn recipes in both the frontend and backend SuperTokens configurations.
+
+> Note: The following example configs were created by the SuperTokens CLI wizard with NextJs as the stack.
+
+#### Backend configuration
+
+```ts
+export let backendConfig = (): TypeInput => {
+    return {
+        supertokens: { 
+            // this is the location of the SuperTokens core, try.supertokens.com is a demo core
+            connectionURI: "http://try.supertokens.com",
+        },
+        appInfo,
+        // recipeList contains all the modules that you want to
+        // use from SuperTokens. See the full list here: https://supertokens.com/docs/guides
+        recipeList: [EmailPasswordNode.init(), SessionNode.init(), Dashboard.init(), UserRoles.init(), WebAuthN.init()],
+        isInServerlessEnv: true,
+        framework: "custom",
+    };
+};
+```
+
+#### Frontend configuration
+
+```ts
+export const frontendConfig = (): SuperTokensConfig => {
+    return {
+        appInfo,
+        recipeList: [EmailPasswordReact.init(), WebAuthn.init(), Session.init()],
+        windowHandler: (orig) => {
+            return {
+                ...orig,
+                location: {
+                    ...orig.location,
+                    getPathName: () => routerInfo.pathName!,
+                    assign: (url) => routerInfo.router!.push(url.toString()),
+                    setHref: (url) => routerInfo.router!.push(url.toString()),
+                },
+            };
+        },
+    };
+};
+
+```
+
+#### Test the setup
+
+- You can now run your the application and you should now have passwordless setup in your login experience! It's as easy as that!
+
+![passkey setup](./passkeys-setup.png)
+
+- Click the "Continue with passkey" prompt, the following pop-up should appear
+
+![passkey prompt](./passkey-prompt.png)
+
+- Approve the passkey in your hardware device
+
+![passkey approval](./passkey-input.jpg)
+
+- Congratulations you are logged in!
+
+![passkey success](./success.png)
+
+## What does SuperTokens enable?
 
 ### WebAuthn Support
 SuperTokens includes **WebAuthn-based passwordless login**, offering full support for passkey-style authentication.
