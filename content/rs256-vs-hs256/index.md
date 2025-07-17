@@ -2,7 +2,7 @@
 title: "RS256 vs HS256: Understanding the Difference in JWT Signing"
 date: "2025-06-30"
 description: "Compare the RS256 vs HS256 JWT algorithms, understand key security differences, and find out which suits your application's needs."
-cover: "rs256-vs-hs256-understanding-the-difference-in-jwt-signing.png"
+cover: "rs256-vs-hs256.png"
 category: "programming"
 author: "Mostafa Ibrahim"
 ---
