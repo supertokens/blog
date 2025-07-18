@@ -146,7 +146,14 @@ Organizations requiring long-term support (LTS), enterprise-grade SLAs, and prof
 
 ### Cost & Licensing
 
-Both Authelia and Keycloak are open-source and free to use, but they differ in licensing. Authelia uses the permissive Apache 2.0 license, which allows for broad usage and modification with minimal restrictions. Keycloak, on the other hand, is licensed under GPL v3, a copyleft license that requires any derivative works or modifications to also be open-source. This distinction is important for organizations planning to customize or integrate Keycloak into proprietary systems.
+Both Authelia and Keycloak are open-source and free to use, but they differ in licensing. Authelia uses the permissive Apache 2.0 license, which allows for broad usage and modification with minimal restrictions.
+
+Keycloak, on the other hand uses a dual license model:
+
+* The Keycloak server itself is licensed under Apache License 2.0, a permissive open-source license.
+* However, some of Keycloak’s adapters, libraries, and tools (especially older ones) were previously under GPLv3, but many have since moved to Apache 2.0 as well.
+
+This distinction is important for organizations planning to customize or integrate Keycloak into proprietary systems.
 
 * Keycloak provides enterprise support via Red Hat, which may be a deciding factor for organizations that require official support.
 * Authelia is community-driven, making it an attractive choice for self-hosted users who prefer a lightweight authentication solution without licensing costs.
