@@ -2,7 +2,7 @@
 title: Top Open Source SSO Providers to Know in 2025
 description: "Compare the best open source SSO providers in 2025 and learn how to pick the right solution for your app’s security and scalability."
 date: "2025-07-07"
-cover: "TODO.png"
+cover: "sso_providers_2025.png"
 category: "sso, sso providers, guide"
 author: "Maurice Saldivar"
 ---
