@@ -2,7 +2,7 @@
 title: "SuperTokens Launch Week: Recap"
 date: "2025-07-09"
 description: "With SuperTokens launch week 1 behind us, let's take a look at everything we've announced."
-cover: "launch-week-1-cover.png"
+cover: "launch-week-recap.png"
 category: "programming"
 author: "Darko Bozhinovski"
 ---
