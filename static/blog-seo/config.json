@@ -3301,6 +3301,75 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-strategy\"\n            },\n            \"headline\": \"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-strategy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/rs256-vs-hs256",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Compare RS256 vs HS256 JWT algorithms, understand key security differences, and find out which suits your application's needs.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"RS256 vs HS256 - Understanding the Difference in JWT Signing\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/rs256-vs-hs256\" />",
+            "<meta property=\"og:description\" content=\"Compare RS256 vs HS256 JWT algorithms, understand key security differences, and find out which suits your application's needs.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/rs256-vs-hs256-understanding-the-difference-in-jwt-signing.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Compare RS256 vs HS256 JWT algorithms, understand key security differences, and find out which suits your application's needs.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/rs256-vs-hs256\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/rs256-vs-hs256-understanding-the-difference-in-jwt-signing.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/rs256-vs-hs256\">"
+        ],
+        "title": "RS256 vs HS256 - Understanding the Difference in JWT Signing",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/rs256-vs-hs256\"\n            },\n            \"headline\": \"Compare RS256 vs HS256 JWT algorithms, understand key security differences, and find out which suits your application's needs.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/rs256-vs-hs256-understanding-the-difference-in-jwt-signing.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/ping-identity",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Compare Ping Identity to Okta, ForgeRock, OneLogin & SuperTokens. Honest feature breakdowns, use cases, and authentication strengths.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What Is Ping Identity and How Does It Compare?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/ping-identity\" />",
+            "<meta property=\"og:description\" content=\"Compare Ping Identity to Okta, ForgeRock, OneLogin & SuperTokens. Honest feature breakdowns, use cases, and authentication strengths.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-ping-identity-and-how-does-it-compare.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Compare Ping Identity to Okta, ForgeRock, OneLogin & SuperTokens. Honest feature breakdowns, use cases, and authentication strengths.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/ping-identity\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-ping-identity-and-how-does-it-compare.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/ping-identity\">"
+        ],
+        "title": "What Is Ping Identity and How Does It Compare?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/ping-identity\"\n            },\n            \"headline\": \"Compare Ping Identity to Okta, ForgeRock, OneLogin & SuperTokens. Honest feature breakdowns, use cases, and authentication strengths.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/what-is-ping-identity-and-how-does-it-compare.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    { 
+        "path": "/blog/auth-saas",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover how Auth SaaS (Authentication as a Service) simplifies user authentication, enhances security, and scales with your application's needs.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What is Auth SaaS (Authentication as a Service)?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/auth-saas\" />",
+            "<meta property=\"og:description\" content=\"Discover how Auth SaaS (Authentication as a Service) simplifies user authentication, enhances security, and scales with your application's needs.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-auth-saas-(authentication-as-a-service).png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Discover how Auth SaaS (Authentication as a Service) simplifies user authentication, enhances security, and scales with your application's needs.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/auth-saas\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-auth-saas-(authentication-as-a-service).png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/auth-saas\">"
+        ],
+        "title": "What is Auth SaaS (Authentication as a Service)?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/auth-saas\"\n            },\n            \"headline\": \"Discover how Auth SaaS (Authentication as a Service) simplifies user authentication, enhances security, and scales with your application's needs.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/what-is-auth-saas-(authentication-as-a-service).png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {    
         "path": "/blog/top-auth0-alternatives-in-2025",
         "metaTags": [
             "<meta name=\"description\" content=\"Explore the top Auth0 alternatives for authentication and authorization. Discover solutions like SuperTokens, Okta, and Keycloak to find the perfect fit for your business needs.\" />",
@@ -4035,6 +4104,29 @@
         ],
         "title": "Bringing Secure Auth to AI: Introducing the SuperTokens MCP Toolkit",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/supertokens-mcp-toolkit\"\n            },\n            \"headline\": \"Seamlessly integrate authentication workflows into your LLM tools with the SuperTokens MCP Toolkit — a new way to bring real-time, secure auth context into AI-driven development.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/supertokens-mcp-toolkit.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/passkeys-vs-passwords",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore the differences between passkeys and passwords in modern authentication. Learn why passkeys are more secure, user-friendly, and built for the future of login systems.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Passkeys vs Passwords – Which Is the Better Authentication Choice?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/passkeys-vs-passwords\" />",
+            "<meta property=\"og:description\" content=\"Explore the differences between passkeys and passwords in modern authentication. Learn why passkeys are more secure, user-friendly, and built for the future of login systems.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/passkeys-vs-passwords.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore the differences between passkeys and passwords in modern authentication. Learn why passkeys are more secure, user-friendly, and built for the future of login systems.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/passkeys-vs-passwords\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/passkeys-vs-passwords.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/passkeys-vs-passwords\">"
+        ],
+        "title": "Passkeys vs Passwords – Which Is the Better Authentication Choice?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/passkeys-vs-passwords\"\n            },\n            \"headline\": \"Explore the differences between passkeys and passwords in modern authentication. Learn why passkeys are more secure, user-friendly, and built for the future of login systems.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/passkeys-vs-passwords.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
         "path": "/blog/how-to-integrate-clerk-with-supabase",
