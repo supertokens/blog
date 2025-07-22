@@ -414,7 +414,8 @@
     },
     {
         "location": "https://supertokens.com/blog/rethinking-documentation"
-    },{
+    },
+    {
         "location": "https://supertokens.com/blog/cli-overhaul"
     },
     {
@@ -425,5 +426,8 @@
     },
     {
         "location": "https://supertokens.com/blog/how-to-integrate-clerk-with-supabase"
+    },
+    {
+        "location": "https://supertokens.com/blog/launch-week-1-recap"
     }
 ]
