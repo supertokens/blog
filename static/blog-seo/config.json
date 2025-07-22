@@ -4173,5 +4173,28 @@
         ],
         "title": "Top Open Source SSO Providers to Know in 2025",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/sso-providers\"\n            },\n            \"headline\": \"Compare the best open source SSO providers in 2025 and learn how to pick the right solution for your app’s security and scalability.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/launch-week-1-recap",
+        "metaTags": [
+            "<meta name=\"description\" content=\"With SuperTokens launch week 1 behind us, let's take a look at everything we've announced.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"SuperTokens Launch Week: Recap\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/launch-week-1-recap\" />",
+            "<meta property=\"og:description\" content=\"With SuperTokens launch week 1 behind us, let's take a look at everything we've announced.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/launch-week-recap.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"With SuperTokens launch week 1 behind us, let's take a look at everything we've announced.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/launch-week-1-recap\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/launch-week-recap.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/launch-week-1-recap\">"
+        ],
+        "title": "SuperTokens Launch Week: Recap",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/launch-week-1-recap\"\n            },\n            \"headline\": \"With SuperTokens launch week 1 behind us, let's take a look at everything we've announced.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/launch-week-recap.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
