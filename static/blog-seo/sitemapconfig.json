@@ -312,6 +312,9 @@
         "location": "https://supertokens.com/blog/stytch-pricing"
     },
     {
+        "location": "https://supertokens.com/blog/rs256-vs-hs256"
+    },
+    {
         "location": "https://supertokens.com/blog/ping-identity"
     },
     {
@@ -414,7 +417,8 @@
     },
     {
         "location": "https://supertokens.com/blog/rethinking-documentation"
-    },{
+    },
+    {
         "location": "https://supertokens.com/blog/cli-overhaul"
     },
     {
@@ -425,5 +429,11 @@
     },
     {
         "location": "https://supertokens.com/blog/how-to-integrate-clerk-with-supabase"
+    },
+    {
+        "location": "https://supertokens.com/blog/sso-providers"
+    },
+    {
+        "location": "https://supertokens.com/blog/launch-week-1-recap"
     }
 ]

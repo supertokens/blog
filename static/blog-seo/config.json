@@ -3324,6 +3324,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/stytch-pricing\"\n            },\n            \"headline\": \"Explore Stytch’s tiers, real‑world pricing examples, hidden fees, and comparison with Auth0/Okta for clear cost insights.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/stytch-pricing–the-complete-guide.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     { 
+        "path": "/blog/rs256-vs-hs256",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Compare RS256 vs HS256 JWT algorithms, understand key security differences, and find out which suits your application's needs.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"RS256 vs HS256 - Understanding the Difference in JWT Signing\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/rs256-vs-hs256\" />",
+            "<meta property=\"og:description\" content=\"Compare RS256 vs HS256 JWT algorithms, understand key security differences, and find out which suits your application's needs.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/rs256-vs-hs256-understanding-the-difference-in-jwt-signing.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Compare RS256 vs HS256 JWT algorithms, understand key security differences, and find out which suits your application's needs.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/rs256-vs-hs256\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/rs256-vs-hs256-understanding-the-difference-in-jwt-signing.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/rs256-vs-hs256\">"
+        ],
+        "title": "RS256 vs HS256 - Understanding the Difference in JWT Signing",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/rs256-vs-hs256\"\n            },\n            \"headline\": \"Compare RS256 vs HS256 JWT algorithms, understand key security differences, and find out which suits your application's needs.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/rs256-vs-hs256-understanding-the-difference-in-jwt-signing.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
         "path": "/blog/ping-identity",
         "metaTags": [
             "<meta name=\"description\" content=\"Compare Ping Identity to Okta, ForgeRock, OneLogin & SuperTokens. Honest feature breakdowns, use cases, and authentication strengths.\" />",
@@ -4037,7 +4060,6 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/angular-authentication\"\n            },\n            \"headline\": \"Learn how Angular authentication works, key methods to secure apps, and how to integrate with providers like SuperTokens or OAuth.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
-
         "path": "/blog/rethinking-documentation",
         "metaTags": [
             "<meta name=\"description\" content=\"We rebuilt our documentation from the ground up—reorganizing structure, enforcing consistency, and making it easier than ever for developers to navigate and customize authentication with SuperTokens.\" />",
@@ -4061,7 +4083,7 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/rethinking-documentation\"\n            },\n            \"headline\": \"We rebuilt our documentation from the ground up—reorganizing structure, enforcing consistency, and making it easier than ever for developers to navigate and customize authentication with SuperTokens.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/rethinking-documentation.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
-      "path": "/blog/cli-overhaul",
+        "path": "/blog/cli-overhaul",
         "metaTags": [
             "<meta name=\"description\" content=\"We overhauled our CLI to be both a teaching tool and a real project starter—making it easier than ever to add auth to any stack, your way.\" />",
             "",
@@ -4151,5 +4173,51 @@
         ],
         "title": "How to Integrate Clerk with Supabase (Plus another option for the curious)",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/how-to-integrate-clerk-with-supabase\"\n            },\n            \"headline\": \"🔐 Learn how to integrate Clerk with Supabase for powerful authentication and database management in your Next.js applications - with step-by-step tutorial and code examples.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/integrate-clerk-with-supabase.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/sso-providers",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Compare the best open source SSO providers in 2025 and learn how to pick the right solution for your app’s security and scalability.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Top Open Source SSO Providers to Know in 2025\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/sso-providers\" />",
+            "<meta property=\"og:description\" content=\"Compare the best open source SSO providers in 2025 and learn how to pick the right solution for your app’s security and scalability.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Compare the best open source SSO providers in 2025 and learn how to pick the right solution for your app’s security and scalability.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/sso-providers\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/sso-providers\">"
+        ],
+        "title": "Top Open Source SSO Providers to Know in 2025",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/sso-providers\"\n            },\n            \"headline\": \"Compare the best open source SSO providers in 2025 and learn how to pick the right solution for your app’s security and scalability.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/launch-week-1-recap",
+        "metaTags": [
+            "<meta name=\"description\" content=\"With SuperTokens launch week 1 behind us, let's take a look at everything we've announced.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"SuperTokens Launch Week: Recap\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/launch-week-1-recap\" />",
+            "<meta property=\"og:description\" content=\"With SuperTokens launch week 1 behind us, let's take a look at everything we've announced.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/launch-week-recap.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"With SuperTokens launch week 1 behind us, let's take a look at everything we've announced.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/launch-week-1-recap\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/launch-week-recap.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/launch-week-1-recap\">"
+        ],
+        "title": "SuperTokens Launch Week: Recap",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/launch-week-1-recap\"\n            },\n            \"headline\": \"With SuperTokens launch week 1 behind us, let's take a look at everything we've announced.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/launch-week-recap.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
