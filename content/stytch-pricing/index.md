@@ -224,8 +224,9 @@ If there’s one consistent theme across user reviews of Stytch, it’s that the
 
 In reviews listed on [AWS Marketplace](https://aws.amazon.com/marketplace/reviews/reviews-list/prodview-mk7ac2kpntwec), users consistently highlight how Stytch balances powerful features with a developer-first interface. Below are the quotes that support this:
 
-- “One of the most successful and easy implementations I have worked on” — *Staff Engineer*
-- “Super intuitive auth integration with future proof features” — *Verified User*
+> “One of the most successful and easy implementations I have worked on” — *Staff Engineer*
+
+> “Super intuitive auth integration with future proof features” — *Verified User*
 
 Reviews also frequently mention:
 
