@@ -430,8 +430,11 @@
     },
     {
         "location": "https://supertokens.com/blog/launch-week-1-recap"
+<<<<<<< HEAD
     },
     {
         "location": "https://supertokens.com/blog/cors-errors"
+=======
+>>>>>>> master
     }
 ]
