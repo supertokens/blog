@@ -17,7 +17,7 @@ SuperTokens.
 
 ## What Is B2B IAM and Why Does It Matter?
 
-**B2B IAM** refers to identity and access management tailored specifically for external organizations &mdash; clients, vendors, resellers,
+**B2B IAM** refers to business-to-business identity and access management, which can be tailored specifically for external organizations &mdash; clients, vendors, resellers,
 contractors, or partners &mdash; rather than internal employees or retail consumers.
 
 ### **Key Use Cases for B2B IAM**
@@ -30,7 +30,7 @@ contractors, or partners &mdash; rather than internal employees or retail consum
 
 ### **Why B2B IAM is Different**
 
-Unlike B2C or workforce IAM, B2B IAM involves:
+Unlike Business-to-Consumer (B2C) or workforce IAM, B2B IAM involves:
 
 |  **Dimension**      |  **B2C IAM**  |    **Workforce IAM**  |     **B2B IAM**               | 
 |---------------------|---------------|-----------------------|-------------------------------|
@@ -40,7 +40,7 @@ Unlike B2C or workforce IAM, B2B IAM involves:
 |  Multi-Tenancy      | Not needed    |   Internal departments|  Essential                    |
 |  Federation and SSO | Optional      |   Internal            |  Common across organizations  |
 
-Understanding and addressing B2B IAM's unique dimensions is critical as a poorly designed B2B IAM system can create compliance risks, slow down partner onboarding, or even compromise data privacy across tenants. The right architecture improves operational efficiency, customer satisfaction, and security posture at the same time.
+Understanding and addressing the unique dimensions of B2B IAM is critical, as a poorly designed B2B IAM system can create compliance risks, slow down partner onboarding, or even compromise data privacy across tenants. The right architecture improves operational efficiency, customer satisfaction, and security posture at the same time.
 
 ## Unique Challenges in B2B Identity and Access Management
 
@@ -111,13 +111,13 @@ Many solutions offer basic access control &mdash; but very few scale elegantly a
 
 ![SuperTokens](SuperTokens.png)
 
-[SuperTokens](https://supertokens.com/) is a developer-first, open-source authentication solution built to support **enterprise-grade B2B Identity and Access Management (IAM)**. It offers unmatched flexibility, customization, and control &mdash; empowering engineering teams to scale securely without sacrificing simplicity or compliance.
+[SuperTokens](https://supertokens.com/) is a developer-first, open-source authentication solution built to support **enterprise-grade B2B Identity and Access Management (IAM)**. It offers unmatched flexibility, customization, and control &mdash; empowering engineering teams to scale securely, without sacrificing simplicity or compliance.
 
 ### **Multi-Tenant Architecture: Built for Growth**
 
 SuperTokens is designed with true multi-tenancy in mind, enabling seamless support for thousands of organizations:
 
--   **Tenant-level Isolation:** Each tenant's data, sessions, and roles are cleanly separated at the architecture level.
+-   **Tenant-Level Isolation:** Each tenant's data, sessions, and roles are cleanly separated at the architecture level.
 -   **Horizontally Scalable:** Easily scale your authentication system as your number of tenants grows.
 -   **Centralized or Decentralized Management:** Choose the right model for your business &mdash; central control for internal teams or delegated control for tenant admins.
 
@@ -135,18 +135,18 @@ SuperTokens includes the core capabilities needed for secure and compliant B2B e
 
 -   **Role-Based Access Control (RBAC) per Tenant:** Assign roles and scopes independently for each organization.
 -   **[Secure Session Management](https://supertokens.com/docs/post-authentication/session-management/introduction):** Support for rotating refresh tokens, anti-CSRF protections, and per-tenant session tracking.
--   **Comprehensive Audit Logs:** Gain visibility into user activity across tenants for auditing and incident response.
--   **SSO Support:** Enable Single Sign-On using SAML or OIDC extensions for enterprise federation.
+-   **Comprehensive Audit Logs:** Gain visibility into user activity across tenants, for auditing and incident response.
+-   **SSO Support:** Enable Single Sign-On by using SAML or OIDC extensions, for enterprise federation.
 -   **Plugin-Based Extensibility:** Hook into any part of the authentication lifecycle &mdash; from sign-up to session validation &mdash; for full customization.
 
 ### **Deployment Flexibility: Control How and Where You Deploy**
 
 SuperTokens supports modern deployment models to meet the security and compliance requirements of any business:
 
--   **Cloud Hosted:** Fully managed by SuperTokens for minimal operational overhead.
+-   **Cloud-Hosted:** Fully managed by SuperTokens, for minimal operational overhead.
 -   **Self-Hosted:** Deploy on your own infrastructure, whether on-premises or in a private cloud.
 -   **Hybrid Deployments:** Combine hosted and self-managed components to fit complex enterprise architectures.
--   **Tech Stack Agnostic:** Compatible with all major frontend and backend frameworks (React, Vue, Angular, Node.js, Go, Python, and more).
+-   **Tech Stack Agnostic:** Compatible with all major frontend and backend frameworks (e.g., React, Vue, Angular, Node.js, Go, Python).
 
 ### **Why It Matters**
 
@@ -187,7 +187,7 @@ Instead of pre-creating users, allow them to:
 
 Enable external IT teams to manage users from their own directory services:
 
--   Real-time sync via SCIM (System for Cross-domain Identity Management)
+-   Real-time sync via SCIM (System for Cross-Domain Identity Management)
 -   Automatic deactivation on HR offboarding
 -   Reduce identity sprawl and shadow accounts
 
@@ -202,7 +202,7 @@ Here\'s a neutral comparison of popular options in the market:
 | **Keycloak**                 | Open-source, highly customizable      | Operational complexity, steep learning curve  |                  
 | **FusionAuth**               | Dev-friendly, flexible APIs           | Proprietary core, limited community           |
 | **ForgeRock / Ping Identity**| Enterprise-ready, legacy integrations | Heavyweight, costly                           |
-| **AWS Cognito**              | Scalable, native to AWS               | Limited documentation, inflexible setup       |
+| **Amazon Cognito**              | Scalable, native to AWS               | Limited documentation, inflexible setup       |
 
 **Choosing the right solution** depends on your needs: control, cost, ease of integration, and long-term extensibility.
 
