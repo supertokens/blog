@@ -501,4 +501,641 @@ Authenticator apps excel as fallback mechanisms in defense-in-depth strategies.
 
 **Legacy System Bridge**: Ancient applications supporting only TOTP can't use modern authentication. Authenticator apps provide compatibility without downgrading security everywhere. Gradual migration to stronger authentication remains possible.
 
+## Implementing Both Methods in Your Auth Stack
 
+Supporting both YubiKeys and authenticator apps isn't about choosing sides. It's about giving users appropriate security options based on their risk profile and technical capabilities. Here's how to implement both without creating a maintenance nightmare.
+
+### WebAuthn Integration for YubiKeys
+
+WebAuthn implementation requires coordination between browser APIs and server-side validation. The browser handles the hardware interaction while your server manages credential storage and verification.
+
+**Client-Side Registration Flow**:
+```javascript
+// Generate registration options on server
+const registrationOptions = await fetch('/api/webauthn/register/begin', {
+  method: 'POST',
+  headers: {'Content-Type': 'application/json'},
+  body: JSON.stringify({userId: currentUser.id})
+}).then(r => r.json());
+
+// Browser creates credential with YubiKey
+const credential = await navigator.credentials.create({
+  publicKey: {
+    challenge: base64ToArrayBuffer(registrationOptions.challenge),
+    rp: {id: "example.com", name: "Your App"},
+    user: {
+      id: base64ToArrayBuffer(registrationOptions.userId),
+      name: user.email,
+      displayName: user.name
+    },
+    pubKeyCredParams: [{alg: -7, type: "public-key"}], // ES256
+    authenticatorSelection: {
+      authenticatorAttachment: "cross-platform",
+      userVerification: "discouraged"
+    },
+    timeout: 60000,
+    attestation: "none" // Skip attestation unless you need device verification
+  }
+});
+
+// Send credential to server for storage
+await fetch('/api/webauthn/register/complete', {
+  method: 'POST',
+  body: JSON.stringify({
+    credentialId: arrayBufferToBase64(credential.rawId),
+    publicKey: arrayBufferToBase64(credential.response.publicKey),
+    // Include other response fields
+  })
+});
+```
+
+**Server-Side Validation (Node.js example)**:
+```javascript
+const { verifyRegistrationResponse } = require('@simplewebauthn/server');
+
+// Store these per user
+const userCredentials = {
+  credentialId: Buffer,
+  publicKey: Buffer,
+  counter: Number,
+  transports: ['usb', 'nfc'] // How the key connects
+};
+
+// During authentication
+async function verifyWebAuthn(authResponse, expectedChallenge) {
+  const verification = await verifyAuthenticationResponse({
+    response: authResponse,
+    expectedChallenge,
+    expectedOrigin: 'https://example.com',
+    expectedRPID: 'example.com',
+    authenticator: userCredentials
+  });
+  
+  if (verification.verified) {
+    // Update counter to prevent replay attacks
+    userCredentials.counter = verification.authenticationInfo.newCounter;
+  }
+  
+  return verification.verified;
+}
+```
+
+Key implementation decisions:
+- Set `userVerification: "discouraged"` for YubiKeys without PIN requirements
+- Use `authenticatorAttachment: "cross-platform"` to support USB keys
+- Skip attestation unless you need to verify specific YubiKey models
+- Store multiple credentials per user for backup keys
+
+### TOTP Integration for Apps
+
+TOTP implementation is simpler but requires careful seed management and time synchronization handling.
+
+**Seed Generation and QR Provisioning**:
+```javascript
+const speakeasy = require('speakeasy');
+const qrcode = require('qrcode');
+
+// Generate secret for new user
+const secret = speakeasy.generateSecret({
+  length: 32,
+  name: `YourApp (${user.email})`,
+  issuer: 'YourApp'
+});
+
+// Create QR code for scanning
+const otpauthUrl = speakeasy.otpauthURL({
+  secret: secret.base32,
+  label: user.email,
+  issuer: 'YourApp',
+  encoding: 'base32'
+});
+
+const qrCodeDataUrl = await qrcode.toDataURL(otpauthUrl);
+
+// Store encrypted secret after user verifies first code
+const userTOTP = {
+  secret: encrypt(secret.base32), // Never store plaintext
+  backup_codes: generateBackupCodes(),
+  verified: false
+};
+```
+
+**Verification with Time Windows**:
+```javascript
+function verifyTOTP(userToken, encryptedSecret) {
+  const secret = decrypt(encryptedSecret);
+  
+  // Accept codes from ±1 window (90 second tolerance)
+  const verified = speakeasy.totp.verify({
+    secret: secret,
+    encoding: 'base32',
+    token: userToken,
+    window: 1
+  });
+  
+  if (verified) {
+    // Prevent immediate reuse
+    storeUsedToken(userToken, 90); // TTL in seconds
+  }
+  
+  return verified;
+}
+```
+
+**Backup Codes Generation**:
+```javascript
+function generateBackupCodes() {
+  const codes = [];
+  for (let i = 0; i < 10; i++) {
+    codes.push(crypto.randomBytes(4).toString('hex').toUpperCase());
+  }
+  return codes.map(code => bcrypt.hashSync(code, 10));
+}
+```
+
+Implementation considerations:
+- Encrypt TOTP secrets at rest using application-level encryption
+- Support ±1 time window (30 seconds each way) for clock drift
+- Generate 8-10 backup codes, hash them like passwords
+- Prevent token reuse within the validity window
+- Show the secret as text for manual entry (some users prefer this)
+
+### Flow Design
+
+Supporting both methods requires thoughtful user flows that don't overwhelm users while maintaining security.
+
+**Registration Flow**:
+```
+1. User enables MFA → Show both options with clear descriptions
+2. YubiKey selected → WebAuthn registration flow
+3. Authenticator selected → TOTP QR code flow
+4. Encourage registering both (primary + backup)
+5. Require verification before activation
+```
+
+**Authentication Decision Tree**:
+```javascript
+async function authenticateUser(email, password) {
+  const user = await validatePassword(email, password);
+  
+  // Check registered MFA methods
+  const methods = await getUserMFAMethods(user.id);
+  
+  if (methods.webauthn && methods.totp) {
+    // User choice: show both options
+    return {
+      requiresMFA: true,
+      availableMethods: ['webauthn', 'totp'],
+      preferredMethod: user.lastUsedMethod || 'webauthn'
+    };
+  } else if (methods.webauthn) {
+    // Single method: straight to WebAuthn
+    return {requiresMFA: true, method: 'webauthn'};
+  } else if (methods.totp) {
+    // Single method: straight to TOTP
+    return {requiresMFA: true, method: 'totp'};
+  }
+}
+```
+
+**Fallback Hierarchy**:
+1. Primary method fails → Offer alternative if registered
+2. No alternatives → Provide backup codes option
+3. Backup codes exhausted → Administrative recovery process
+4. Account recovery → Require additional identity verification
+
+**Method Switching**:
+```javascript
+// Allow mid-flow switching
+if (webauthnTimeout || userCancelled) {
+  showMessage("No security key detected. Use authenticator app instead?");
+  showTOTPInput();
+}
+
+// Remember preference for next login
+if (successfulAuth) {
+  updateUserPreference(method);
+}
+```
+
+### UX Tips
+
+Clear communication prevents user frustration and support tickets. Users need to understand what's expected without technical jargon.
+
+**WebAuthn Prompts**:
+- Registration: "Insert your security key and touch it when it lights up"
+- Authentication: "Insert and touch your security key to sign in"
+- Error: "Security key not detected. Is it fully inserted?"
+- Timeout: "Taking too long? Remove and reinsert your key"
+
+**TOTP Prompts**:
+- Registration: "Scan this QR code with your authenticator app"
+- Alternative: "Can't scan? Enter this code manually: XXXX-XXXX-XXXX-XXXX"
+- Authentication: "Enter the 6-digit code from your authenticator app"
+- Error: "Code incorrect or expired. Codes refresh every 30 seconds"
+
+**Visual Differentiation**:
+```css
+/* YubiKey prompt */
+.webauthn-prompt {
+  icon: usb-icon.svg;
+  animation: pulse 2s infinite; /* Subtle attention getter */
+  message: "Touch your security key";
+}
+
+/* TOTP prompt */
+.totp-prompt {
+  icon: smartphone-icon.svg;
+  input: 6 separate digit boxes; /* Makes format clear */
+  helper: "Open your authenticator app";
+}
+```
+
+**Progressive Disclosure**:
+- Start with the simplest instruction
+- Add detail only if the first attempt fails
+- Provide "Learn more" links for complex issues
+- Never show technical error messages to users
+
+**Method Selection UI**:
+```html
+<div class="mfa-selector">
+  <button class="mfa-option primary">
+    <icon>🔑</icon>
+    <span>Use security key</span>
+    <small>Recommended</small>
+  </button>
+  
+  <button class="mfa-option secondary">
+    <icon>📱</icon>
+    <span>Use authenticator app</span>
+    <small>Alternative method</small>
+  </button>
+</div>
+```
+
+The implementation should make the secure choice the easy choice. Default to WebAuthn when available, fall back gracefully to TOTP, and always provide clear recovery paths. Users shouldn't need to understand the underlying cryptography to successfully authenticate.
+
+
+## How SuperTokens Can Orchestrate YubiKey & App-Based 2FA
+
+SuperTokens provides the session management and authentication infrastructure while letting you implement the specific MFA methods your organization needs. Instead of being locked into predetermined authentication flows, you can combine YubiKey and TOTP support through SuperTokens' extensible architecture.
+
+### Extensible Recipes
+
+SuperTokens' recipe system allows adding WebAuthn support for hardware keys alongside existing authentication methods. The WebAuthn recipe handles the complexity of credential management while integrating with SuperTokens' session layer.
+
+**Adding WebAuthn Recipe**:
+```javascript
+import SuperTokens from "supertokens-node";
+import Session from "supertokens-node/recipe/session";
+import EmailPassword from "supertokens-node/recipe/emailpassword";
+import { WebAuthnRecipe } from "./custom-recipes/webauthn"; // Custom implementation
+
+SuperTokens.init({
+    appInfo: {
+        apiDomain: "http://localhost:3001",
+        appName: "YourApp",
+        websiteDomain: "http://localhost:3000"
+    },
+    recipeList: [
+        EmailPassword.init(),
+        WebAuthnRecipe.init({
+            override: {
+                apis: (originalImplementation) => ({
+                    ...originalImplementation,
+                    // Custom registration endpoint
+                    registerWebAuthn: async (input) => {
+                        const userId = input.session.getUserId();
+                        const credential = await verifyWebAuthnRegistration(input.credential);
+                        
+                        // Store credential with user
+                        await storeUserCredential(userId, credential);
+                        
+                        return { status: "OK" };
+                    }
+                })
+            }
+        }),
+        Session.init()
+    ]
+});
+```
+
+The WebAuthn recipe integrates with SuperTokens' existing user management. Users authenticate with email/password first, then register their YubiKey as a second factor. The recipe handles API routes, session verification, and credential storage patterns.
+
+### Custom TOTP Recipe
+
+TOTP integration works similarly through a custom recipe that plugs into SuperTokens' authentication flow.
+
+**TOTP Recipe Implementation**:
+```javascript
+import { RecipeInterface } from "supertokens-node/recipe/multitenancy";
+import speakeasy from "speakeasy";
+import qrcode from "qrcode";
+
+export const TOTPRecipe = {
+    init: (config) => ({
+        recipeId: "totp",
+        
+        apis: {
+            // Generate TOTP secret and QR code
+            generateTOTPSecret: async (input) => {
+                const userId = input.session.getUserId();
+                
+                const secret = speakeasy.generateSecret({
+                    length: 32,
+                    name: `${config.appName} (${userId})`,
+                    issuer: config.appName
+                });
+                
+                // Store encrypted secret temporarily
+                await storeTempSecret(userId, encrypt(secret.base32));
+                
+                const qrCodeUrl = await qrcode.toDataURL(secret.otpauth_url);
+                
+                return {
+                    status: "OK",
+                    qrCode: qrCodeUrl,
+                    secret: secret.base32 // For manual entry
+                };
+            },
+            
+            // Verify TOTP and activate
+            verifyTOTP: async (input) => {
+                const userId = input.session.getUserId();
+                const tempSecret = await getTempSecret(userId);
+                
+                const verified = speakeasy.totp.verify({
+                    secret: decrypt(tempSecret),
+                    encoding: 'base32',
+                    token: input.token,
+                    window: 1
+                });
+                
+                if (verified) {
+                    await activateTOTP(userId, tempSecret);
+                    return { status: "OK" };
+                }
+                
+                return { status: "INVALID_TOKEN" };
+            },
+            
+            // Validate during login
+            validateTOTP: async (input) => {
+                const secret = await getUserTOTPSecret(input.userId);
+                
+                if (!secret) {
+                    return { status: "NOT_ENABLED" };
+                }
+                
+                const verified = speakeasy.totp.verify({
+                    secret: decrypt(secret),
+                    encoding: 'base32',
+                    token: input.token,
+                    window: 1
+                });
+                
+                return verified 
+                    ? { status: "OK" }
+                    : { status: "INVALID_TOKEN" };
+            }
+        }
+    })
+};
+```
+
+The recipe manages TOTP lifecycle: generation, verification, storage, and validation. It integrates with SuperTokens' user metadata system for storing encrypted secrets and backup codes.
+
+### Unified Session Management
+
+SuperTokens handles session creation after successful MFA, regardless of the second factor used. This unifies the post-authentication flow.
+
+**Session Creation After 2FA**:
+```javascript
+import Session from "supertokens-node/recipe/session";
+
+async function completeAuthentication(userId, mfaMethod, req, res) {
+    // Create session with MFA metadata
+    const session = await Session.createNewSession(
+        req,
+        res,
+        userId,
+        {
+            mfaCompleted: true,
+            mfaMethod: mfaMethod, // "webauthn" or "totp"
+            mfaCompletedAt: Date.now()
+        }
+    );
+    
+    // Session tokens are automatically set as httpOnly cookies
+    return {
+        status: "OK",
+        session: {
+            userId: session.getUserId(),
+            accessToken: session.getAccessToken(),
+            mfaEnabled: true
+        }
+    };
+}
+
+// Verify MFA status for protected routes
+async function requireMFA(req, res, next) {
+    const session = await Session.getSession(req, res);
+    const mfaCompleted = await session.getAccessTokenPayload().mfaCompleted;
+    
+    if (!mfaCompleted) {
+        return res.status(403).json({
+            status: "MFA_REQUIRED",
+            message: "Complete MFA to access this resource"
+        });
+    }
+    
+    next();
+}
+```
+
+SuperTokens manages token refresh, revocation, and anti-CSRF protection. The MFA status travels with the session, enabling route-level enforcement without repeated verification.
+
+### Developer Example
+
+Here's a complete Express.js implementation combining both factors with SuperTokens:
+
+```javascript
+const express = require('express');
+const SuperTokens = require('supertokens-node');
+const { middleware, errorHandler } = require('supertokens-node/framework/express');
+
+const app = express();
+
+// Initialize SuperTokens with MFA recipes
+SuperTokens.init({
+    appInfo: {
+        apiDomain: "http://localhost:3001",
+        appName: "MFAExample",
+        websiteDomain: "http://localhost:3000"
+    },
+    recipeList: [
+        EmailPassword.init(),
+        Session.init(),
+        // Custom recipes
+        WebAuthnRecipe.init(),
+        TOTPRecipe.init()
+    ]
+});
+
+app.use(middleware());
+
+// Registration endpoints
+app.post('/auth/mfa/webauthn/register', verifySession(), async (req, res) => {
+    const userId = req.session.getUserId();
+    const { credential } = req.body;
+    
+    try {
+        // Verify and store WebAuthn credential
+        const verified = await verifyWebAuthnRegistration(credential);
+        await storeCredential(userId, verified);
+        
+        // Update user metadata
+        await UserMetadata.updateUserMetadata(userId, {
+            mfaEnabled: true,
+            webauthnEnabled: true
+        });
+        
+        res.json({ status: "OK" });
+    } catch (error) {
+        res.status(400).json({ status: "ERROR", message: error.message });
+    }
+});
+
+app.post('/auth/mfa/totp/setup', verifySession(), async (req, res) => {
+    const userId = req.session.getUserId();
+    
+    const secret = speakeasy.generateSecret({
+        length: 32,
+        name: `MFAExample (${userId})`
+    });
+    
+    // Store temporarily until verified
+    await redis.setex(`totp_temp:${userId}`, 300, encrypt(secret.base32));
+    
+    const qrCode = await qrcode.toDataURL(secret.otpauth_url);
+    
+    res.json({
+        status: "OK",
+        qrCode,
+        manualCode: secret.base32
+    });
+});
+
+// Login flow with MFA
+app.post('/auth/login', async (req, res) => {
+    const { email, password } = req.body;
+    
+    // First factor: email/password
+    const signInResult = await EmailPassword.signIn(email, password);
+    
+    if (signInResult.status !== "OK") {
+        return res.status(401).json(signInResult);
+    }
+    
+    const userId = signInResult.user.id;
+    const metadata = await UserMetadata.getUserMetadata(userId);
+    
+    if (!metadata.mfaEnabled) {
+        // No MFA, create session immediately
+        await Session.createNewSession(req, res, userId);
+        return res.json({ status: "OK", requiresMFA: false });
+    }
+    
+    // MFA required, create temporary session
+    const tempSession = await Session.createNewSession(req, res, userId, {
+        mfaCompleted: false,
+        mfaRequired: true
+    });
+    
+    // Return available MFA methods
+    res.json({
+        status: "OK",
+        requiresMFA: true,
+        availableMethods: {
+            webauthn: metadata.webauthnEnabled || false,
+            totp: metadata.totpEnabled || false
+        }
+    });
+});
+
+// MFA verification endpoints
+app.post('/auth/mfa/verify/webauthn', verifySession(), async (req, res) => {
+    const session = req.session;
+    const mfaRequired = await session.getAccessTokenPayload().mfaRequired;
+    
+    if (!mfaRequired) {
+        return res.status(400).json({ status: "MFA_NOT_REQUIRED" });
+    }
+    
+    const { credential } = req.body;
+    const userId = session.getUserId();
+    
+    const verified = await verifyWebAuthnAssertion(userId, credential);
+    
+    if (verified) {
+        // Update session to mark MFA complete
+        await session.updateAccessTokenPayload({
+            mfaCompleted: true,
+            mfaMethod: "webauthn",
+            mfaCompletedAt: Date.now()
+        });
+        
+        res.json({ status: "OK" });
+    } else {
+        res.status(401).json({ status: "INVALID_CREDENTIAL" });
+    }
+});
+
+app.post('/auth/mfa/verify/totp', verifySession(), async (req, res) => {
+    const session = req.session;
+    const { token } = req.body;
+    const userId = session.getUserId();
+    
+    const secret = await getUserTOTPSecret(userId);
+    
+    const verified = speakeasy.totp.verify({
+        secret: decrypt(secret),
+        encoding: 'base32',
+        token: token,
+        window: 1
+    });
+    
+    if (verified) {
+        await session.updateAccessTokenPayload({
+            mfaCompleted: true,
+            mfaMethod: "totp",
+            mfaCompletedAt: Date.now()
+        });
+        
+        res.json({ status: "OK" });
+    } else {
+        res.status(401).json({ status: "INVALID_TOKEN" });
+    }
+});
+
+// Protected route requiring MFA
+app.get('/api/sensitive-data', verifySession(), async (req, res) => {
+    const mfaCompleted = await req.session.getAccessTokenPayload().mfaCompleted;
+    
+    if (!mfaCompleted) {
+        return res.status(403).json({
+            status: "MFA_REQUIRED",
+            message: "Complete MFA to access this resource"
+        });
+    }
+    
+    res.json({ data: "Sensitive information" });
+});
+
+app.use(errorHandler());
+app.listen(3001);
+```
+
+This implementation leverages SuperTokens for session management while providing flexibility in MFA methods. The session tokens handle the authentication state, while custom recipes manage the specific MFA implementations. Users can register both methods, choose during login, and the system maintains security without complexity.
