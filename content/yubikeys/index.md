@@ -1139,3 +1139,432 @@ app.listen(3001);
 ```
 
 This implementation leverages SuperTokens for session management while providing flexibility in MFA methods. The session tokens handle the authentication state, while custom recipes manage the specific MFA implementations. Users can register both methods, choose during login, and the system maintains security without complexity.
+
+## Best Practices & Pitfalls to Avoid
+
+Implementing MFA correctly requires more than technical integration. The difference between secure authentication and security theater lies in addressing edge cases, recovery scenarios, and operational realities.
+
+### Backup Strategies
+
+Single points of failure in authentication create account lockout scenarios that generate support tickets and user frustration. Every user needs at least two authentication methods.
+
+**Enforcing Secondary Registration**:
+```javascript
+async function checkMFACompleteness(userId) {
+  const methods = await getUserMFAMethods(userId);
+  const methodCount = Object.values(methods).filter(Boolean).length;
+  
+  if (methodCount === 1) {
+    return {
+      status: "BACKUP_REQUIRED",
+      message: "Register a backup authentication method",
+      registered: methods,
+      suggestions: getBackupSuggestions(methods)
+    };
+  }
+  
+  return { status: "OK", methodCount };
+}
+
+// After successful MFA setup
+if (isFirstMFAMethod) {
+  redirectTo('/settings/mfa/add-backup');
+  showNotification('Add a backup method to prevent lockout');
+}
+```
+
+**Method Hierarchy**:
+- Primary: YubiKey for daily use
+- Secondary: TOTP app for YubiKey unavailable
+- Tertiary: Backup codes stored securely offline
+- Emergency: Administrative recovery with identity verification
+
+**Backup Code Implementation**:
+```javascript
+function generateBackupCodes(userId) {
+  const codes = [];
+  
+  // Generate 10 codes
+  for (let i = 0; i < 10; i++) {
+    const code = crypto.randomBytes(4).toString('hex').toUpperCase();
+    codes.push({
+      code: code,
+      hash: bcrypt.hashSync(code, 10),
+      used: false
+    });
+  }
+  
+  // Store hashes only
+  storeUserBackupCodes(userId, codes.map(c => c.hash));
+  
+  // Return plaintext codes once for user storage
+  return codes.map(c => c.code);
+}
+
+// Display with clear instructions
+function displayBackupCodes(codes) {
+  return {
+    codes: codes,
+    instructions: [
+      "Save these codes in a secure location",
+      "Each code can only be used once",
+      "Treat these like passwords",
+      "Store separately from your password manager"
+    ]
+  };
+}
+```
+
+The key insight: users won't register backup methods unless forced or incentivized. Make backup registration part of the initial MFA setup flow, not an optional step they'll skip.
+
+### Do Not Over-Whitelist
+
+Origin validation and endpoint restrictions prevent authentication bypass attacks. Loose validation negates MFA security benefits.
+
+**WebAuthn Origin Enforcement**:
+```javascript
+// WRONG: Accepting any origin
+const verification = await verifyAuthenticationResponse({
+  response: authResponse,
+  expectedOrigin: req.headers.origin, // Never do this
+  expectedRPID: new URL(req.headers.origin).hostname
+});
+
+// CORRECT: Strict origin validation
+const ALLOWED_ORIGINS = process.env.NODE_ENV === 'production'
+  ? ['https://app.example.com']
+  : ['http://localhost:3000'];
+
+const verification = await verifyAuthenticationResponse({
+  response: authResponse,
+  expectedOrigin: ALLOWED_ORIGINS,
+  expectedRPID: 'example.com'
+});
+
+if (!ALLOWED_ORIGINS.includes(req.headers.origin)) {
+  logger.warn('WebAuthn attempt from unauthorized origin', {
+    origin: req.headers.origin,
+    ip: req.ip
+  });
+  throw new Error('Invalid origin');
+}
+```
+
+**API Endpoint Protection**:
+```javascript
+// Restrict MFA endpoints to authenticated sessions
+app.post('/auth/mfa/setup/*', 
+  requireAuthentication(),
+  rateLimiter({ max: 5, windowMs: 15 * 60 * 1000 }), // 5 attempts per 15 min
+  csrfProtection(),
+  async (req, res) => {
+    // MFA setup logic
+  }
+);
+
+// Separate rate limits for verification
+const verifyLimiter = rateLimiter({
+  max: 10,
+  windowMs: 15 * 60 * 1000,
+  skipSuccessfulRequests: true, // Don't count successful attempts
+  keyGenerator: (req) => `${req.ip}:${req.session?.userId || 'anonymous'}`
+});
+
+app.post('/auth/mfa/verify/*', verifyLimiter, async (req, res) => {
+  // Verification logic
+});
+```
+
+**Common Whitelisting Mistakes**:
+- Accepting wildcard subdomains for WebAuthn
+- Allowing MFA setup without existing authentication
+- Missing CSRF protection on state-changing operations
+- Rate limiting by IP only (shared office networks)
+- Accepting expired or future-dated TOTP codes
+
+### Monitor and Log
+
+Authentication events provide security insights and debugging information. Proper logging catches attacks before they succeed.
+
+**Comprehensive Event Logging**:
+```javascript
+const authLogger = {
+  logEvent: async (event) => {
+    const entry = {
+      timestamp: new Date().toISOString(),
+      eventType: event.type,
+      userId: event.userId,
+      ip: event.ip,
+      userAgent: event.userAgent,
+      success: event.success,
+      method: event.method,
+      metadata: event.metadata
+    };
+    
+    // Store in time-series database
+    await writeToTimeSeries(entry);
+    
+    // Alert on suspicious patterns
+    if (event.type === 'MFA_FAILED') {
+      await checkFailurePattern(event.userId, event.ip);
+    }
+  }
+};
+
+// Usage throughout authentication flow
+authLogger.logEvent({
+  type: 'MFA_VERIFICATION_ATTEMPT',
+  userId: session.getUserId(),
+  ip: req.ip,
+  userAgent: req.headers['user-agent'],
+  success: false,
+  method: 'totp',
+  metadata: { reason: 'invalid_code' }
+});
+```
+
+**Key Events to Track**:
+- MFA method registration (success/failure)
+- Verification attempts with failure reasons
+- Backup code usage (critical for detecting compromise)
+- Method removal or modification
+- Recovery flow initiation
+- Unusual geographic locations or devices
+
+**Alert Thresholds**:
+```javascript
+const alertRules = {
+  multipleFailures: {
+    threshold: 5,
+    window: '15m',
+    action: 'notify_user'
+  },
+  backupCodeUsed: {
+    threshold: 1,
+    action: 'email_alert'
+  },
+  methodRemoved: {
+    threshold: 1,
+    action: 'require_reverification'
+  },
+  geographicAnomaly: {
+    distanceThreshold: 500, // km
+    timeWindow: '1h',
+    action: 'block_and_notify'
+  }
+};
+```
+
+Logging without analysis provides no value. Set up automated alerts for patterns indicating account takeover attempts or user confusion.
+
+### User Education
+
+Clear documentation prevents support burden and security bypasses. Users need to understand both setup and recovery procedures.
+
+**Setup Guide Structure**:
+```javascript
+const setupGuides = {
+  yubikey: {
+    title: "Setting up your Security Key",
+    steps: [
+      "Insert your security key into a USB port",
+      "Click 'Add Security Key' below",
+      "When your key lights up, touch the gold disk",
+      "Name your key (e.g., 'Office YubiKey')",
+      "Add a backup key or authentication app"
+    ],
+    commonIssues: [
+      { issue: "Key not detected", solution: "Try a different USB port" },
+      { issue: "Browser doesn't prompt", solution: "Check browser compatibility" }
+    ],
+    videoUrl: "/help/yubikey-setup.mp4"
+  },
+  totp: {
+    title: "Setting up Authenticator App",
+    steps: [
+      "Install Google Authenticator or Authy on your phone",
+      "Open the app and tap 'Add Account' or '+'",
+      "Scan the QR code displayed below",
+      "Enter the 6-digit code to verify",
+      "Save your backup codes securely"
+    ],
+    alternativeSetup: "Can't scan? Enter this code manually: XXXX-XXXX-XXXX",
+    recommendedApps: [
+      { name: "Google Authenticator", ios: "link", android: "link" },
+      { name: "Authy", ios: "link", android: "link" },
+      { name: "1Password", ios: "link", android: "link" }
+    ]
+  }
+};
+```
+
+**Lost Device Instructions**:
+```javascript
+const recoveryProcedures = {
+  lostYubiKey: {
+    immediate: [
+      "Log in using your backup authentication method",
+      "Remove the lost key from your account",
+      "Review recent account activity"
+    ],
+    followUp: [
+      "Order replacement YubiKey",
+      "Register new key when received",
+      "Update backup methods"
+    ]
+  },
+  lostPhone: {
+    withBackupCodes: [
+      "Use backup code to access account",
+      "Remove old authenticator app registration",
+      "Set up authenticator on new device"
+    ],
+    withoutBackupCodes: [
+      "Use backup YubiKey if available",
+      "Contact support with account verification",
+      "Provide government ID and recent transaction proof"
+    ]
+  }
+};
+
+// Contextual help during setup
+function getContextualHelp(stage, method) {
+  const helps = {
+    registration: {
+      yubikey: "Your key will blink when ready. Touch it gently.",
+      totp: "Codes refresh every 30 seconds. Wait if near expiry."
+    },
+    verification: {
+      yubikey: "Fully insert your key. Some USB-C keys need to be flipped.",
+      totp: "Check your phone's time settings. Incorrect time causes failures."
+    }
+  };
+  
+  return helps[stage]?.[method] || null;
+}
+```
+
+**Communication Templates**:
+```javascript
+const emailTemplates = {
+  mfaEnabled: {
+    subject: "Two-factor authentication activated",
+    body: `
+      You've successfully enabled two-factor authentication.
+      
+      Methods configured:
+      - ${methods.join('\n- ')}
+      
+      Important: Save your backup codes if you haven't already.
+      
+      If you didn't make this change, contact support immediately.
+    `
+  },
+  suspiciousActivity: {
+    subject: "Unusual login attempt blocked",
+    body: `
+      We blocked a login attempt from:
+      Location: ${location}
+      Device: ${device}
+      Time: ${timestamp}
+      
+      If this was you, try logging in again.
+      If not, secure your account immediately.
+    `
+  }
+};
+```
+
+Education isn't just documentation. Build it into the product through progressive disclosure, contextual help, and clear error messages. Users shouldn't need to read documentation to successfully use MFA.
+
+## Conclusion & Next Steps
+
+The choice between YubiKeys and authenticator apps isn't binary. Most organizations need both, deployed strategically based on risk profiles and user populations.
+
+### Decision Matrix Recap
+
+**Choose YubiKeys when:**
+- Protecting admin access to production systems
+- Facing targeted phishing attacks
+- Required by compliance (FIPS, NIST AAL3)
+- Implementing true passwordless authentication
+- Users handle financial transactions or sensitive data
+
+**Choose Authenticator Apps when:**
+- Serving thousands of consumer users
+- Operating under tight budget constraints
+- Users need immediate self-service enrollment
+- Supporting BYOD environments
+- Providing fallback for hardware key users
+
+**Implement Both when:**
+- You have mixed user populations (admins vs. consumers)
+- Compliance requires hardware keys for some roles
+- Users demand flexibility in authentication methods
+- Building defense-in-depth security architecture
+
+The security improvement from no MFA to any MFA far exceeds the marginal gains between methods. Start with what users will actually adopt, then enhance based on risk assessment.
+
+### Call to Action
+
+Build a proof of concept with both authentication methods using SuperTokens. The implementation effort is measured in days, not months.
+
+**Week 1: Basic Integration**
+```javascript
+// Start simple
+1. Deploy SuperTokens with email/password
+2. Add TOTP support for all users
+3. Measure adoption rate and support tickets
+```
+
+**Week 2: Enhanced Security**
+```javascript
+// Layer in hardware keys
+1. Add WebAuthn for admin accounts
+2. Require YubiKeys for production access
+3. Track authentication success rates
+```
+
+**Week 3: Optimization**
+```javascript
+// Refine based on data
+1. Identify authentication friction points
+2. Improve UX for common failure modes
+3. Document recovery procedures
+```
+
+Measure what matters:
+- MFA adoption percentage
+- Authentication failure rates by method
+- Support ticket volume
+- Time to successful authentication
+- Account recovery frequency
+
+Real data from your users beats security architecture debates. Deploy, measure, iterate.
+
+### Resources
+
+**WebAuthn Implementation**
+- [MDN WebAuthn API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API)
+- [WebAuthn.guide](https://webauthn.guide/) - Interactive debugger
+- [SimpleWebAuthn Library](https://github.com/MasterKale/SimpleWebAuthn) - Production-ready TypeScript implementation
+- [Yubico WebAuthn Developer Guide](https://developers.yubico.com/WebAuthn/)
+
+**TOTP Libraries**
+- [speakeasy](https://github.com/speakeasyjs/speakeasy) - Node.js TOTP implementation
+- [pyotp](https://github.com/pyauth/pyotp) - Python implementation
+- [otplib](https://github.com/yeojz/otplib) - Comprehensive JavaScript OTP library
+- [Google Authenticator PAM](https://github.com/google/google-authenticator-libpam) - Linux system integration
+
+**SuperTokens Guides**
+- [SuperTokens MFA Documentation](https://supertokens.com/docs/mfa)
+- [Custom Recipe Creation](https://supertokens.com/docs/contribute/recipe-design)
+- [Session Management Best Practices](https://supertokens.com/docs/session/introduction)
+- [Migration from Auth0/Firebase](https://supertokens.com/docs/migration)
+
+**Security Standards**
+- [NIST SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) - Digital Identity Guidelines
+- [FIDO2 Specifications](https://fidoalliance.org/specifications/)
+- [RFC 6238](https://datatracker.ietf.org/doc/html/rfc6238) - TOTP specification
+
+Start with SuperTokens' extensible architecture, implement the authentication methods your users need, and evolve based on actual usage patterns. The best security is the one your users will actually use.
