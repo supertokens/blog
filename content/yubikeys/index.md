@@ -1557,25 +1557,17 @@ Real data from your users beats security architecture debates. Deploy, measure, 
 
 **WebAuthn Implementation**
 - [MDN WebAuthn API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API)
-- [WebAuthn.guide](https://webauthn.guide/) - Interactive debugger
-- [SimpleWebAuthn Library](https://github.com/MasterKale/SimpleWebAuthn) - Production-ready TypeScript implementation
-- [Yubico WebAuthn Developer Guide](https://developers.yubico.com/WebAuthn/)
+- [WebAuthn Demo Site](https://webauthn.io/)
 
 **TOTP Libraries**
 - [speakeasy](https://github.com/speakeasyjs/speakeasy) - Node.js TOTP implementation
 - [pyotp](https://github.com/pyauth/pyotp) - Python implementation
 - [otplib](https://github.com/yeojz/otplib) - Comprehensive JavaScript OTP library
-- [Google Authenticator PAM](https://github.com/google/google-authenticator-libpam) - Linux system integration
 
 **SuperTokens Guides**
-- [SuperTokens MFA Documentation](https://supertokens.com/docs/mfa)
-- [Custom Recipe Creation](https://supertokens.com/docs/contribute/recipe-design)
-- [Session Management Best Practices](https://supertokens.com/docs/session/introduction)
-- [Migration from Auth0/Firebase](https://supertokens.com/docs/migration)
-
-**Security Standards**
-- [NIST SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) - Digital Identity Guidelines
-- [FIDO2 Specifications](https://fidoalliance.org/specifications/)
-- [RFC 6238](https://datatracker.ietf.org/doc/html/rfc6238) - TOTP specification
+- [SuperTokens Auth Documentation](https://supertokens.com/docs/authentication/overview)
+- [MFA Introduction](https://supertokens.com/docs/additional-verification/mfa/introduction)
+- [SuperTokens Passkey Concepts](https://supertokens.com/docs/authentication/passkeys/important-concepts)
+- [Migration ](https://supertokens.com/docs/migration/overview)
 
 Start with SuperTokens' extensible architecture, implement the authentication methods your users need, and evolve based on actual usage patterns. The best security is the one your users will actually use.
