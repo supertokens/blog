@@ -1,6 +1,15 @@
+---
+title: What Is a YubiKey and When to Use It vs. Authenticator Apps
+description: "Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow."
+date: "2025-08-18"
+cover: "TODO.png"
+category: "yubikey, authentication, guide"
+author: "Maurice Saldivar"
+---
+
 # What Is a YubiKey and When Should You Use It?
 
-A YubiKey is a hardware authentication device that generates cryptographic proofs of your identity. Unlike authenticator apps that live on your phone or SMS codes that traverse insecure networks, a YubiKey is a physical key that plugs into your device via USB, NFC, or Lightning. The core value proposition is simple: authentication that can't be phished, copied, or intercepted.
+A YubiKey is a hardware authentication device that generates cryptographic proofs of your identity. Unlike authenticator apps that live on your phone or SMS codes that traverse insecure networks, a YubiKey is a physical item that you plug into your device. The core value proposition is simple: YubiKey authentication can't be phished, copied, or intercepted.
 
 ## The Core Protocols That Matter
 
@@ -16,9 +25,9 @@ YubiKeys speak multiple authentication languages, but three protocols dominate r
 
 The authenticator app versus hardware key debate isn't about which is better. It's about understanding your threat model and operational requirements.
 
-**When YubiKeys Excel:**
+**Where YubiKeys Excel:**
 - You're protecting high-value accounts (admin access, financial systems, production infrastructure)
-- Your threat model includes targeted attacks or sophisticated adversaries
+- Your threat model includes targeted attacks or sophisticated adversaries e.g. nation-state actors
 - You need authentication that works without batteries or network connectivity
 - Compliance requires hardware-backed authentication (FIPS 140-2, Common Criteria)
 
@@ -28,7 +37,7 @@ The authenticator app versus hardware key debate isn't about which is better. It
 - Users need free, immediately accessible 2FA
 - You can't distribute physical devices to your user base
 
-The critical distinction: YubiKeys provide defense against sophisticated phishing that authenticator apps can't match. In the Cloudflare incident, employees using YubiKeys remained protected while those with TOTP fell victim to real-time phishing. This demonstrates the difference between authentication methods when facing sophisticated attacks.
+The critical distinction: YubiKeys provide defense against sophisticated phishing that authenticator apps can't match. In the Cloudflare incident, employees using YubiKeys remained protected while those with TOTP fell victim to real-time phishing. A real world example showing the differences between authentication methods when facing sophisticated attacks.
 
 ## The Decision Framework
 
@@ -185,7 +194,7 @@ Last 4 bits of hash → offset
 Truncated % 1000000 → 6-digit code: 742921
 ```
 
-Every 30 seconds, the counter increments, generating a new code. The server runs the same calculation and accepts codes within a window (usually ±1 period) to handle clock drift and user delay.
+Every 30 seconds, the counter increments, generating a new code. The server runs the same calculation and accepts codes within a window (usually ±1 period, or 60 seconds total) to handle clock drift and user delay.
 
 The security comes from the shared secret, typically 160 bits of entropy. Without that secret, generating valid codes requires brute forcing roughly 10^48 possibilities. With rate limiting on the server side, even the 6-digit codes provide adequate protection against random attacks.
 
@@ -209,11 +218,6 @@ When you scan that QR code, where does the secret go? It depends on your authent
 - Encrypted with your backup password before cloud sync
 - Local storage uses platform capabilities
 - Authy controls the master encryption keys
-
-**1Password/Bitwarden**
-- Stored in your vault, encrypted with your master password
-- Same security model as your passwords
-- Convenient, but couples 2FA with password manager compromise
 
 On a compromised device, malware with sufficient privileges can extract TOTP secrets from most authenticator apps. iOS makes this harder with its sandboxing, while Android's diversity means security varies by manufacturer. Desktop authenticator apps often present the weakest link, with Electron apps storing secrets in local databases protected only by OS-level encryption.
 
@@ -311,7 +315,7 @@ The practical differences between YubiKeys and authenticator apps become clear w
 
 ### Form Factor and Dependencies
 
-**YubiKey**: A flash drive-sized device that requires no power source. The YubiKey is an unpowered, flash drive-sized device dedicated to authentication. Works immediately when plugged in, no charging or network connectivity required.
+**YubiKey**: A flash drive-sized device that requires no power source. Works immediately when plugged in, no charging or network connectivity is required.
 
 **Authenticator App**: Depends on smartphone battery and functioning OS. Dead phone means no access. Requires navigating to the app, potentially unlocking it, and manually transcribing codes. Network connectivity needed for cloud-synced authenticators.
 
@@ -551,14 +555,14 @@ await fetch('/api/webauthn/register/complete', {
 
 **Server-Side Validation (Node.js example)**:
 ```javascript
-const { verifyRegistrationResponse } = require('@simplewebauthn/server');
+const { verifyRegistrationResponse, verifyAuthenticationResponse } = require('@simplewebauthn/server');
 
 // Store these per user
 const userCredentials = {
   credentialId: Buffer,
   publicKey: Buffer,
   counter: Number,
-  transports: ['usb', 'nfc'] // How the key connects
+  transports: ['usb', 'nfc']
 };
 
 // During authentication
@@ -612,9 +616,9 @@ const otpauthUrl = speakeasy.otpauthURL({
 
 const qrCodeDataUrl = await qrcode.toDataURL(otpauthUrl);
 
-// Store encrypted secret after user verifies first code
+// Store encrypted secret after user verifies first code. Never store plaintext
 const userTOTP = {
-  secret: encrypt(secret.base32), // Never store plaintext
+  secret: encrypt(secret.base32), // encrypt() implementation depends on your encryption library
   backup_codes: generateBackupCodes(),
   verified: false
 };
@@ -625,7 +629,7 @@ const userTOTP = {
 function verifyTOTP(userToken, encryptedSecret) {
   const secret = decrypt(encryptedSecret);
   
-  // Accept codes from ±1 window (90 second tolerance)
+  // Accept codes from ±1 window (60 seconds total tolerance)
   const verified = speakeasy.totp.verify({
     secret: secret,
     encoding: 'base32',
@@ -635,7 +639,7 @@ function verifyTOTP(userToken, encryptedSecret) {
   
   if (verified) {
     // Prevent immediate reuse
-    storeUsedToken(userToken, 90); // TTL in seconds
+    storeUsedToken(userToken, 60); // TTL in seconds
   }
   
   return verified;
@@ -644,6 +648,9 @@ function verifyTOTP(userToken, encryptedSecret) {
 
 **Backup Codes Generation**:
 ```javascript
+const crypto = require('crypto');
+const bcrypt = require('bcrypt');
+
 function generateBackupCodes() {
   const codes = [];
   for (let i = 0; i < 10; i++) {
@@ -736,18 +743,13 @@ Clear communication prevents user frustration and support tickets. Users need to
 
 **Visual Differentiation**:
 ```css
-/* YubiKey prompt */
 .webauthn-prompt {
-  icon: usb-icon.svg;
-  animation: pulse 2s infinite; /* Subtle attention getter */
-  message: "Touch your security key";
+  background-image: url('usb-icon.svg');
+  animation: pulse 2s infinite;
 }
 
-/* TOTP prompt */
-.totp-prompt {
-  icon: smartphone-icon.svg;
-  input: 6 separate digit boxes; /* Makes format clear */
-  helper: "Open your authenticator app";
+.webauthn-prompt::after {
+  content: "Touch your security key";
 }
 ```
 
@@ -761,13 +763,13 @@ Clear communication prevents user frustration and support tickets. Users need to
 ```html
 <div class="mfa-selector">
   <button class="mfa-option primary">
-    <icon>🔑</icon>
+    <span class="icon">>🔑</span>
     <span>Use security key</span>
     <small>Recommended</small>
   </button>
   
   <button class="mfa-option secondary">
-    <icon>📱</icon>
+    <span class="icon">>📱</span>
     <span>Use authenticator app</span>
     <small>Alternative method</small>
   </button>
@@ -785,38 +787,45 @@ SuperTokens provides the session management and authentication infrastructure wh
 
 SuperTokens' recipe system allows adding WebAuthn support for hardware keys alongside existing authentication methods. The WebAuthn recipe handles the complexity of credential management while integrating with SuperTokens' session layer.
 
-**Adding WebAuthn Recipe**:
+**Backend WebAuthn Configuration**:
 ```javascript
 import SuperTokens from "supertokens-node";
 import Session from "supertokens-node/recipe/session";
 import EmailPassword from "supertokens-node/recipe/emailpassword";
-import { WebAuthnRecipe } from "./custom-recipes/webauthn"; // Custom implementation
+import WebAuthN from "supertokens-node/recipe/webauthn";
 
 SuperTokens.init({
     appInfo: {
         apiDomain: "http://localhost:3001",
         appName: "YourApp",
-        websiteDomain: "http://localhost:3000"
+        websiteDomain: "http://localhost:3000",
+        apiBasePath: "/auth",
+        websiteBasePath: "/auth",
     },
     recipeList: [
         EmailPassword.init(),
-        WebAuthnRecipe.init({
-            override: {
-                apis: (originalImplementation) => ({
-                    ...originalImplementation,
-                    // Custom registration endpoint
-                    registerWebAuthn: async (input) => {
-                        const userId = input.session.getUserId();
-                        const credential = await verifyWebAuthnRegistration(input.credential);
-                        
-                        // Store credential with user
-                        await storeUserCredential(userId, credential);
-                        
-                        return { status: "OK" };
-                    }
-                })
-            }
-        }),
+        WebAuthn.init(),
+        Session.init()
+    ]
+});
+```
+
+**Frontend Configuration**:
+```javascript 
+import SuperTokens from "supertokens-auth-react";
+import WebAuthn from "supertokens-auth-react/recipe/webauthn";
+import Session from "supertokens-auth-react/recipe/session";
+
+SuperTokens.init({
+    appInfo: {
+        apiDomain: "http://localhost:3001",
+        appName: "YourApp",
+        websiteDomain: "http://localhost:3000",
+        apiBasePath: "/auth",
+        websiteBasePath: "/auth"
+    },
+    recipeList: [
+        WebAuthn.init(),
         Session.init()
     ]
 });
@@ -830,7 +839,6 @@ TOTP integration works similarly through a custom recipe that plugs into SuperTo
 
 **TOTP Recipe Implementation**:
 ```javascript
-import { RecipeInterface } from "supertokens-node/recipe/multitenancy";
 import speakeasy from "speakeasy";
 import qrcode from "qrcode";
 
@@ -850,6 +858,7 @@ export const TOTPRecipe = {
                 });
                 
                 // Store encrypted secret temporarily
+                // You need to implement these storage functions based on your database
                 await storeTempSecret(userId, encrypt(secret.base32));
                 
                 const qrCodeUrl = await qrcode.toDataURL(secret.otpauth_url);
@@ -883,6 +892,7 @@ export const TOTPRecipe = {
             
             // Validate during login
             validateTOTP: async (input) => {
+                // Define this function based on your storage
                 const secret = await getUserTOTPSecret(input.userId);
                 
                 if (!secret) {
@@ -942,7 +952,8 @@ async function completeAuthentication(userId, mfaMethod, req, res) {
 // Verify MFA status for protected routes
 async function requireMFA(req, res, next) {
     const session = await Session.getSession(req, res);
-    const mfaCompleted = await session.getAccessTokenPayload().mfaCompleted;
+    const payload = await session.getAccessTokenPayload();
+    const mfaCompleted = payload.mfaCompleted;
     
     if (!mfaCompleted) {
         return res.status(403).json({
@@ -978,8 +989,7 @@ SuperTokens.init({
     recipeList: [
         EmailPassword.init(),
         Session.init(),
-        // Custom recipes
-        WebAuthnRecipe.init(),
+        WebAuthn.init(),
         TOTPRecipe.init()
     ]
 });
@@ -1122,7 +1132,8 @@ app.post('/auth/mfa/verify/totp', verifySession(), async (req, res) => {
 
 // Protected route requiring MFA
 app.get('/api/sensitive-data', verifySession(), async (req, res) => {
-    const mfaCompleted = await req.session.getAccessTokenPayload().mfaCompleted;
+    const payload = await req.session.getAccessTokenPayload();
+    const mfaCompleted = payload.mfaCompleted;
     
     if (!mfaCompleted) {
         return res.status(403).json({
@@ -1175,7 +1186,7 @@ if (isFirstMFAMethod) {
 
 **Method Hierarchy**:
 - Primary: YubiKey for daily use
-- Secondary: TOTP app for YubiKey unavailable
+- Secondary: TOTP app when YubiKey is unavailable
 - Tertiary: Backup codes stored securely offline
 - Emergency: Administrative recovery with identity verification
 
