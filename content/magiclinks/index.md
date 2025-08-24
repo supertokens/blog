@@ -25,8 +25,9 @@ The magic link authentication flow consists of five distinct steps:
 const crypto = require('crypto');
 
 async function generateMagicLink(email) {
-  // Generate secure random token
+  // Generate token and hash
   const token = crypto.randomBytes(32).toString('hex');
+  const tokenHash = crypto.createHash('sha256').update(token).digest('hex');
   
   // Store token with metadata
   await storeToken({
@@ -132,7 +133,7 @@ Even if users click phishing emails mimicking magic link requests, attackers can
 
 **Credential Stuffing Immunity**
 
-The 2023 Shape Security report identified credential stuffing as responsible for 90% of login attempts on retail websites. Attackers use automated tools to test stolen username/password combinations across multiple services, exploiting password reuse.
+The 2023 Shape Security report identified credential stuffing as being responsible for 90% of login attempts on retail websites. Attackers use automated tools to test stolen username/password combinations across multiple services, exploiting password reuse.
 
 Magic links eliminate this attack vector completely. Without passwords to steal or reuse, credential stuffing becomes impossible. Each authentication requires a fresh token delivered to the legitimate email account, blocking automated attack tools.
 
@@ -685,7 +686,7 @@ Production magic link systems require multiple security layers to prevent abuse 
 
 **Expiration Time (15 Minutes)**
 
-Token lifetime balances security with usability. Shorter expiration times reduce risk but may frustrate users who don't check email immediately. Industry practice converges on 15-30 minute windows.
+Token lifetime balances security with usability. Shorter expiration times reduce risk but may frustrate users who don't check email immediately. Industry practice converges on 15 to 30 minute windows.
 
 ```javascript
 class TokenExpirationPolicy {
@@ -729,7 +730,7 @@ CREATE TABLE magic_link_tokens (
     used_at TIMESTAMP,
     ip_address INET,
     user_agent TEXT,
-    CONSTRAINT unique_unused_token UNIQUE (token_hash, used_at)
+    CONSTRAINT unique_unused_token UNIQUE (token_hash)
 );
 
 -- Atomic token consumption
@@ -837,15 +838,12 @@ These security measures work together to create defense in depth. No single cont
 
 Passwordless authentication encompasses multiple approaches, each with distinct trade-offs in security, user experience, and implementation complexity. Understanding these differences guides selection of the appropriate method for specific use cases.
 
-| Method | Security Level | UX Convenience | Setup Complexity | Cost Per User | Adoption Rate |
-|--------|---------------|----------------|------------------|---------------|---------------|
-| **Magic Links** | High | Very High | Moderate | $0.001-0.01 | 73% success |
-| **SMS OTP** | Medium | Moderate | Low | $0.02-0.05 | 81% success |
-| **Email OTP** | Medium-High | High | Low | $0.001-0.005 | 79% success |
-| **TOTP Apps** | High | Moderate | Moderate | Free | 67% success |
-| **WebAuthn/Biometrics** | Very High | High | High | Free-$0.10 | 92% success |
-| **Hardware Tokens** | Very High | Low | Very High | $20-50 | 95% success |
-| **Push Notifications** | High | Very High | High | $0.01-0.03 | 89% success |
+| Method | Security Level | UX Convenience | Setup Complexity 
+|--------|---------------|----------------|-----------------
+| **Magic Links** | High | Very High | Moderate | 
+| **SMS/Email OTP** | Medium | Moderate | Low | 
+| **WebAuthn/Biometrics** | Very High | High | High | 
+| **Hardware Tokens** | Very High | Low | Very High |
 
 **Security Level Definitions:**
 - **Medium**: Vulnerable to SIM swapping, phishing, or interception
@@ -981,15 +979,15 @@ Applications requiring minimal friction during initial user acquisition benefit 
 ```typescript
 interface OnboardingMetrics {
   passwordRegistration: {
-    formFields: 4,  // email, password, confirm, captcha
-    completionRate: 0.56,
-    timeToComplete: 47  // seconds
-  },
+    formFields: number;
+    completionRate: number;
+    timeToComplete: number;
+  };
   magicLink: {
-    formFields: 1,  // email only
-    completionRate: 0.78,
-    timeToComplete: 12  // seconds
-  }
+    formFields: number;
+    completionRate: number;
+    timeToComplete: number;
+  };
 }
 ```
 
@@ -1406,7 +1404,7 @@ Common deliverability issues and solutions:
 
 **Monitor Bounce Rates and Failures**
 
-Production magic link systems require active monitoring of key metrics: delivery rate, bounce rate, complaint rate, and time to inbox. AWS SES automatically suspends sending if your bounce rate exceeds 10% or complaint rate exceeds 0.5%.
+Production magic link systems require active monitoring of the key metrics: delivery rate, bounce rate, complaint rate, and time to inbox. AWS SES automatically suspends sending if your bounce rate exceeds 10% or complaint rate exceeds 0.5%.
 
 Set up alerts for critical thresholds:
 - Bounce rate above 5% indicates deliverability problems
@@ -1419,7 +1417,7 @@ Major email providers offer reputation monitoring tools. Google Postmaster Tools
 
 ### Expired Links
 
-Token expiration balances security with usability. Too short frustrates users, too long increases attack windows. Industry practice converges on 15-30 minute expiration, with 15 minutes being most common.
+Token expiration balances security with usability. Too short frustrates users, too long increases attack windows. Industry practice converges on 15 to 30 minute expiration, with 15 minutes being most common.
 
 **Provide Clear UI Messages and Link Regeneration Options**
 
@@ -1513,7 +1511,7 @@ The key to successful device recognition lies in balancing convenience with secu
 
 Magic link validity should last 10-15 minutes maximum. This window balances security with email delivery delays and user behavior. Stripe uses 10-minute expiration for payment confirmation links, while Notion allows 20 minutes for workspace invitations.
 
-The security math is straightforward: shorter windows reduce attack opportunities. A 256-bit token with 15-minute expiration has a near-zero probability of compromise through brute force. Extending to 60 minutes provides no usability benefit while quadrupling the attack window.
+The security calculation is straightforward: shorter windows reduce attack opportunities. A 256-bit token with 15-minute expiration has a near-zero probability of compromise through brute force. Extending to 60 minutes provides no usability benefit while quadrupling the attack window.
 
 Real-world data supports tight expiration windows. Slack's analysis of 50 million magic link authentications shows:
 - 71% clicked within 2 minutes
