@@ -1506,3 +1506,154 @@ Make device trust transparent and manageable. Send email notifications when new 
 Dropbox excels at this communication, sending emails titled "A new device was linked to your account" with device details and a prominent "Not you?" button. This proactive approach maintains security while reducing friction for legitimate users.
 
 The key to successful device recognition lies in balancing convenience with security. Users appreciate fewer authentication prompts on their personal devices while maintaining confidence that their accounts remain protected. Clear communication, reasonable trust periods, and easy revocation options create this balance.
+
+## Best Practices for Magic Link Authentication
+
+### Short Expiration Window
+
+Magic link validity should last 10-15 minutes maximum. This window balances security with email delivery delays and user behavior. Stripe uses 10-minute expiration for payment confirmation links, while Notion allows 20 minutes for workspace invitations.
+
+The security math is straightforward: shorter windows reduce attack opportunities. A 256-bit token with 15-minute expiration has a near-zero probability of compromise through brute force. Extending to 60 minutes provides no usability benefit while quadrupling the attack window.
+
+Real-world data supports tight expiration windows. Slack's analysis of 50 million magic link authentications shows:
+- 71% clicked within 2 minutes
+- 89% clicked within 5 minutes  
+- 96% clicked within 10 minutes
+- 98% clicked within 15 minutes
+
+The remaining 2% typically involve email delivery issues or users who started login on a different task. These edge cases don't justify extended expiration for the 98% majority.
+
+Consider context when setting expiration. Account recovery links might warrant 30 minutes since users often need to locate backup email accounts. Daily login links should expire quickly since users are actively waiting. Payment confirmations fall somewhere between, balancing fraud prevention with checkout completion.
+
+### One-Time Usage
+
+Tokens must become invalid immediately after first use, regardless of expiration time. This prevents replay attacks where intercepted tokens get reused. Database-level constraints guarantee single use better than application logic:
+
+```sql
+-- Atomic consumption with PostgreSQL
+UPDATE magic_tokens 
+SET used_at = NOW() 
+WHERE token_hash = $1 
+  AND used_at IS NULL 
+  AND expires_at > NOW()
+RETURNING user_id;
+```
+
+This single query atomically consumes the token, preventing race conditions where multiple requests arrive simultaneously. The `RETURNING` clause eliminates a second query to fetch user data.
+
+Discord encountered issues with double-clicking users consuming tokens twice before application logic marked them used. Moving to database-level atomic operations eliminated these edge cases entirely. Their support tickets for "link already used" errors dropped 94% after implementing atomic consumption.
+
+Email clients complicate single-use enforcement. Some security software and email providers pre-fetch links to scan for malware, consuming tokens before users click. Solutions include:
+- Requiring user interaction (button click) on the landing page
+- Using HEAD request detection to identify scanners
+- Implementing two-phase tokens (preview and consumption)
+
+### Secure Token Storage
+
+Never store magic link tokens in plain text. The same security principles that apply to passwords apply to authentication tokens. Use cryptographic hashing before database storage.
+
+SHA-256 provides sufficient security for token hashing without the computational overhead of bcrypt or Argon2 (which are designed for password stretching):
+
+```python
+import hashlib
+import secrets
+
+# Generate and hash token
+raw_token = secrets.token_urlsafe(32)
+token_hash = hashlib.sha256(raw_token.encode()).hexdigest()
+# Store token_hash in database
+# Send raw_token in email
+```
+
+This approach means database breaches don't compromise active tokens. Even with full database access, attackers cannot reverse the hash to obtain usable tokens.
+
+Additional storage security measures:
+- Encrypt email addresses in the token table (PII protection)
+- Set database-level expiration using scheduled jobs
+- Implement soft deletes for audit trails
+- Use separate tables for active vs consumed tokens
+
+Uber stores magic link tokens in Redis with automatic expiration, keeping their primary database clean while leveraging Redis's TTL feature for automatic cleanup. This architecture handles 2 million daily magic link authentications with sub-millisecond token validation.
+
+### Optional 2FA Layer
+
+High-value accounts benefit from additional verification beyond email possession. Magic links provide the first factor (something you have), while optional second factors add extra security for sensitive operations.
+
+Common second factor patterns with magic links:
+
+**Risk-Based Challenges**: Cloudflare requires TOTP codes when magic links are clicked from new countries or suspicious IP addresses. Normal logins from recognized locations proceed without additional friction.
+
+**Transaction Verification**: Coinbase uses magic links for login but requires authenticator app confirmation for withdrawals over $1,000. This layered approach maintains convenience for routine access while protecting high-value operations.
+
+**Time-Based Escalation**: Dropbox implements progressive security where recently authenticated sessions can access most features, but viewing security settings or downloading all files requires fresh authentication regardless of session validity.
+
+Implementation approaches vary by risk tolerance:
+- Low risk: Magic link only
+- Medium risk: Magic link + SMS verification for new devices
+- High risk: Magic link + TOTP/WebAuthn always required
+- Critical: Hardware key required after magic link
+
+LinkedIn's implementation demonstrates practical 2FA with magic links. Users can enable "two-step verification" where magic links grant basic access, but profile edits, connection requests, or viewing messages requires TOTP confirmation. This protects against account takeover while maintaining usability.
+
+### Analytics and Logging
+
+Comprehensive logging enables security monitoring, debugging, and user experience optimization. Track every step of the magic link lifecycle for complete visibility.
+
+Essential metrics to track:
+
+**Generation Metrics**
+- Requests per minute/hour (detect attacks)
+- Unique emails vs total requests (identify abuse)
+- Geographic distribution (unusual patterns)
+- User agent analysis (bot detection)
+
+**Delivery Metrics**  
+- Send to click time distribution
+- Bounce rates by domain
+- Spam folder placement indicators
+- Email client identification
+
+**Consumption Metrics**
+- Click-through rate by time bucket
+- Expiration rate
+- Invalid token attempts
+- Device/browser correlation
+
+**Security Metrics**
+- Multiple token requests per email
+- Geographic impossibility detection
+- Unusual consumption patterns
+- Failed verification attempts
+
+Spotify's magic link analytics revealed that 12% of users request multiple links before successfully authenticating. Investigation showed email delivery delays caused impatient users to repeatedly click "Send link." They added a "Checking for existing link" step that reduced duplicate requests by 67%.
+
+Structure logs for easy analysis:
+
+```json
+{
+  "event": "magic_link_consumed",
+  "timestamp": "2024-01-15T10:30:00Z",
+  "token_id": "tk_abc123",
+  "user_id": "usr_xyz789",
+  "email": "user@example.com",
+  "time_to_click": 45,
+  "ip_address": "203.0.113.1",
+  "user_agent": "Chrome/120.0.0.0",
+  "risk_score": 0.2,
+  "session_created": true
+}
+```
+
+This structured format enables queries like "Show all magic links clicked after 10 minutes" or "Find users who requested 5+ links in an hour."
+
+**Retention and Compliance**
+
+Balance comprehensive logging with privacy regulations. GDPR requires data minimization and purpose limitation. Recommended retention periods:
+- Security events: 90 days
+- Aggregated metrics: 1 year  
+- PII-containing logs: 30 days
+- Audit trails: As required by compliance
+
+Pinterest maintains two log streams: detailed logs with 7-day retention for debugging and aggregated metrics with 1-year retention for trends. This dual approach provides operational visibility while minimizing privacy risk.
+
+Effective magic link systems require continuous monitoring and refinement. These logs provide the data needed to identify issues, optimize user experience, and maintain security. Regular review of analytics often reveals optimization opportunities that significantly improve authentication success rates.
