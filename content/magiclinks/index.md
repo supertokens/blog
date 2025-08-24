@@ -1758,3 +1758,128 @@ The business impact extends beyond security metrics. These companies report:
 The success of these implementations demonstrates that magic links aren't just an authentication method, they're a strategic decision about user experience. Companies prioritizing growth, engagement, and simplicity find magic links align with these goals while maintaining security standards.
 
 The pattern is clear: platforms dealing with varied engagement patterns, team collaboration, or content consumption benefit most from magic link authentication. The approach trades the theoretical security of complex passwords for the practical security of systems users actually use correctly.
+
+## Is a Magic Link Strategy Right for You?
+
+### Great Fit If:
+
+**Your Users Rely on Email Access**
+
+Magic links work best when email is already central to your users' workflow. B2B SaaS applications excel here since business users check email constantly and have reliable access to their inboxes. Airtable found that 94% of their enterprise users preferred magic links over passwords because email was already their primary notification channel.
+
+Consider your user demographics and behavior:
+- Professional users with dedicated work emails: Excellent fit
+- Consumer users with personal emails: Good fit
+- Students with school emails: Moderate fit (variable access)
+- Users in limited connectivity regions: Poor fit
+
+The email dependency creates natural usage patterns. Project management tools like Asana and Monday.com report that users receiving magic links during work hours authenticate within 90 seconds on average. Weekend and evening authentication takes longer but still outperforms password reset flows.
+
+Newsletter platforms represent ideal magic link candidates. Substack, ConvertKit, and Ghost all defaulted to magic links because their users already live in email. When your core product revolves around email delivery, authentication through the same channel feels natural rather than disruptive.
+
+**You Want a Low-Friction Authentication Method**
+
+Magic links excel when reducing barriers to entry outweighs other considerations. Content platforms, free trials, and freemium products benefit most from frictionless authentication.
+
+Analyze your funnel metrics to determine if authentication friction impacts your business:
+- Registration abandonment above 40%: Strong magic link candidate
+- Password reset tickets exceeding 20% of support volume: Clear fit
+- Mobile traffic above 60%: Magic links eliminate mobile password pain
+- Average session frequency under once weekly: Users will forget passwords
+
+Calendly switched to magic links after discovering that 67% of registration abandonments occurred at password creation. Post-implementation, their registration completion rate increased from 43% to 71%. The simplified flow particularly benefited mobile users, who converted 3x better with magic links.
+
+Low-friction authentication makes sense for:
+- Free trial signups (remove barriers to trying product)
+- Event registrations (one-time or infrequent access)
+- Document sharing (recipients may not have accounts)
+- Waitlist applications (capture interest without commitment)
+- Survey platforms (maximize response rates)
+
+**You Prioritize Passwordless Experiences**
+
+Organizations committed to eliminating passwords entirely find magic links provide the smoothest transition path. Unlike biometrics or hardware tokens, magic links work on any device with email access.
+
+The passwordless priority often stems from:
+- Security concerns about password breaches
+- Support cost reduction initiatives
+- Modern brand positioning
+- Compliance with zero-trust architectures
+- User experience differentiation
+
+Figma's transition to passwordless authentication started with magic links before adding WebAuthn support. This staged approach let them validate passwordless workflows without requiring users to adopt new technology. Their metrics showed:
+- 91% of users successfully authenticated via magic link on first attempt
+- 7% needed to resend links (email delays)
+- 2% reverted to social login alternatives
+
+Companies successfully running passwordless-first strategies include:
+- Notion: 100% magic links, no password option
+- Slack: Magic links for guests, SSO for enterprise
+- Medium: Magic links primary, social login secondary
+- Linear: Magic links default, passwords deprecated
+
+### Not Ideal If:
+
+**Your Users Require High-Assurance Identity Verification**
+
+Magic links provide single-factor authentication tied to email access. This doesn't meet requirements for high-assurance scenarios mandated by regulations or risk assessments.
+
+Industries with strict authentication requirements include:
+- Banking and financial services (PSD2 requires strong customer authentication)
+- Healthcare (HIPAA may require multi-factor for PHI access)
+- Government (NIST 800-63 requires higher assurance levels)
+- Cryptocurrency (irreversible transactions need maximum security)
+
+A major European bank evaluated magic links for their mobile app but concluded the single-factor nature violated PSD2 requirements. They implemented WebAuthn instead, achieving similar usability with regulatory compliance.
+
+High-assurance alternatives to consider:
+- FIDO2/WebAuthn for phishing resistance
+- Hardware security keys for maximum protection
+- Biometrics with liveness detection
+- Combination of multiple factors
+
+Some organizations implement tiered authentication where magic links grant basic access but sensitive operations require additional verification. Wise (formerly TransferWise) uses magic links for account access but requires biometric confirmation for transfers above €1,000.
+
+**Your Product Is Used in Shared Device Environments**
+
+Magic links assume personal device usage where email access equals user presence. This assumption breaks in shared device scenarios common in:
+- Libraries and computer labs
+- Point-of-sale systems
+- Manufacturing floor terminals
+- Hospital workstations
+- Classroom computers
+
+A university library system abandoned magic links after six months. Students using shared computers would log into email, click magic links, then leave authenticated sessions open. The next user gained unauthorized access simply by returning to the browser. Traditional passwords with aggressive timeout policies proved more secure.
+
+Specific shared device challenges:
+- Browser history exposes magic link URLs
+- Email clients remain logged in
+- Session cookies persist between users
+- No way to enforce "logout after use"
+- IT can't centrally manage authentication
+
+Additional poor-fit scenarios include:
+- Kiosk applications (no email access)
+- Embedded systems (industrial equipment)
+- Offline-first applications (field service)
+- High-frequency authentication (trading platforms)
+- Regulated time tracking (must verify individual actions)
+
+**Decision Framework**
+
+Evaluate magic links against your specific requirements:
+
+| Factor | Good Fit | Poor Fit |
+|--------|----------|----------|
+| User Type | Knowledge workers, consumers | Shift workers, shared accounts |
+| Access Pattern | Weekly or less | Multiple times daily |
+| Security Needs | Standard web app | Financial, healthcare, government |
+| Device Type | Personal devices | Shared terminals |
+| Network | Reliable internet | Intermittent connectivity |
+| Support Resources | Limited support team | Dedicated IT help desk |
+| Compliance | General data protection | Specific auth mandates |
+
+The decision ultimately depends on your specific context. Notion thrives with magic links only, while banks require hardware tokens. Most applications fall between these extremes, where magic links can serve as one authentication option among several.
+
+Consider starting with magic links for low-risk scenarios like newsletters or trials, then require stronger authentication for paid features or sensitive data. This progressive security model balances usability with protection, letting you optimize authentication requirements based on actual user behavior and risk assessment.
+
