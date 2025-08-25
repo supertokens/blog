@@ -7,6 +7,8 @@ category: "programming"
 author: "Mostafa Ibrahim"
 ---
 
+## Introduction
+
 Descope is a modern [customer identity and access management (CIAM)](https://supertokens.com/blog/pillars-of-a-ciam-strategy-secure-scale-and-personalize-customer-access) platform built for product-led growth. It offers visual no-code/low-code flows, SSO, MFA, multi-tenancy, bot protection, and fraud detection&mdash;all designed to reduce authentication friction, without sacrificing security.
 
 Its pricing model follows a transparent freemium-to-enterprise path. Teams can start for free, then scale usage linearly with predictable overages. For developers building B2C or B2B apps, Descope offers strong defaults and built-in security&mdash;all wrapped in a visual builder that simplifies identity workflows.
