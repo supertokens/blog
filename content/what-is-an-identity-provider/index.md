@@ -1,6 +1,6 @@
 ---
 title: "What Is an Identity Provider and Why It Matters"
-date: "2025-08-08"
+date: "2025-08-15"
 description: "Learn what an identity provider does, the business problems it solves, and how to implement one powerfully by using SuperTokens."
 cover: "what-is-an-identity-provider-and-why-it-matters.png"
 category: "programming"
