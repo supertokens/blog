@@ -1,6 +1,6 @@
 ---
 title: "What Is B2B IAM?"
-date: "2025-08-08"
+date: "2025-08-10"
 description: "Learn how B2B IAM helps businesses securely manage access for partners, vendors, and external users — plus what to look for in a modern solution. "
 cover: "what-is-b2b-iam.png"
 category: "programming"
