@@ -3301,6 +3301,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-strategy\"\n            },\n            \"headline\": \"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-strategy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/what-is-b2b-iam",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how B2B IAM helps businesses securely manage access for partners, vendors, and external users — plus what to look for in a modern solution. \" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What Is B2B IAM?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/what-is-b2b-iam\" />",
+            "<meta property=\"og:description\" content=\"Learn how B2B IAM helps businesses securely manage access for partners, vendors, and external users — plus what to look for in a modern solution. \"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-b2b-iam.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how B2B IAM helps businesses securely manage access for partners, vendors, and external users — plus what to look for in a modern solution. \" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-is-b2b-iam\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-b2b-iam.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/what-is-b2b-iam\">"
+        ],
+        "title": "What Is B2B IAM?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/what-is-b2b-iam\"\n            },\n            \"headline\": \"Learn how B2B IAM helps businesses securely manage access for partners, vendors, and external users — plus what to look for in a modern solution. \",\n            \"image\": \"https://supertokens.com/blog-meta-images/what-is-b2b-iam.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {   
         "path": "/blog/descope-pricing",
         "metaTags": [
             "<meta name=\"description\" content=\"Discover Descope’s pricing tiers, real-world cost examples, hidden fees, and how it stacks vs Auth0/Okta in CIAM pricing.\" />",
