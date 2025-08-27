@@ -3324,6 +3324,52 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/what-is-an-identity-provider\"\n            },\n            \"headline\": \"Learn what an identity provider does, the business problems it solves, and how to implement one powerfully with SuperTokens.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/what-is-an-identity-provider-and-why-it-matters.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {   
+        "path": "/blog/what-is-b2b-iam",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how B2B IAM helps businesses securely manage access for partners, vendors, and external users — plus what to look for in a modern solution. \" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What Is B2B IAM?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/what-is-b2b-iam\" />",
+            "<meta property=\"og:description\" content=\"Learn how B2B IAM helps businesses securely manage access for partners, vendors, and external users — plus what to look for in a modern solution. \"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-b2b-iam.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how B2B IAM helps businesses securely manage access for partners, vendors, and external users — plus what to look for in a modern solution. \" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-is-b2b-iam\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-b2b-iam.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/what-is-b2b-iam\">"
+        ],
+        "title": "What Is B2B IAM?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/what-is-b2b-iam\"\n            },\n            \"headline\": \"Learn how B2B IAM helps businesses securely manage access for partners, vendors, and external users — plus what to look for in a modern solution. \",\n            \"image\": \"https://supertokens.com/blog-meta-images/what-is-b2b-iam.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {   
+        "path": "/blog/descope-pricing",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover Descope’s pricing tiers, real-world cost examples, hidden fees, and how it stacks vs Auth0/Okta in CIAM pricing.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Descope Pricing – The Complete Guide\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/descope-pricing\" />",
+            "<meta property=\"og:description\" content=\"Discover Descope’s pricing tiers, real-world cost examples, hidden fees, and how it stacks vs Auth0/Okta in CIAM pricing.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/descope-pricing–the-complete-guide.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Discover Descope’s pricing tiers, real-world cost examples, hidden fees, and how it stacks vs Auth0/Okta in CIAM pricing.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/descope-pricing\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/descope-pricing–the-complete-guide.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/descope-pricing\">"
+        ],
+        "title": "Descope Pricing – The Complete Guide",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/descope-pricing\"\n            },\n            \"headline\": \"Discover Descope’s pricing tiers, real-world cost examples, hidden fees, and how it stacks vs Auth0/Okta in CIAM pricing.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/descope-pricing–the-complete-guide.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {    
         "path": "/blog/rs256-vs-hs256",
         "metaTags": [
             "<meta name=\"description\" content=\"Compare RS256 vs HS256 JWT algorithms, understand key security differences, and find out which suits your application's needs.\" />",
@@ -3369,7 +3415,7 @@
         "title": "What Is Ping Identity and How Does It Compare?",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/ping-identity\"\n            },\n            \"headline\": \"Compare Ping Identity to Okta, ForgeRock, OneLogin & SuperTokens. Honest feature breakdowns, use cases, and authentication strengths.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/what-is-ping-identity-and-how-does-it-compare.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    { 
+    {
         "path": "/blog/auth-saas",
         "metaTags": [
             "<meta name=\"description\" content=\"Discover how Auth SaaS (Authentication as a Service) simplifies user authentication, enhances security, and scales with your application's needs.\" />",
@@ -3392,7 +3438,7 @@
         "title": "What is Auth SaaS (Authentication as a Service)?",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/auth-saas\"\n            },\n            \"headline\": \"Discover how Auth SaaS (Authentication as a Service) simplifies user authentication, enhances security, and scales with your application's needs.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/what-is-auth-saas-(authentication-as-a-service).png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    {    
+    {
         "path": "/blog/top-auth0-alternatives-in-2025",
         "metaTags": [
             "<meta name=\"description\" content=\"Explore the top Auth0 alternatives for authentication and authorization. Discover solutions like SuperTokens, Okta, and Keycloak to find the perfect fit for your business needs.\" />",
@@ -4219,5 +4265,28 @@
         ],
         "title": "SuperTokens Launch Week: Recap",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/launch-week-1-recap\"\n            },\n            \"headline\": \"With SuperTokens launch week 1 behind us, let's take a look at everything we've announced.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/launch-week-recap.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/cors-errors",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn what causes CORS errors, how they impact your web app, and how to fix them securely with proper headers and backend configurations.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Fixing CORS Errors What They Are and How to Resolve Them\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/cors-errors\" />",
+            "<meta property=\"og:description\" content=\"Learn what causes CORS errors, how they impact your web app, and how to fix them securely with proper headers and backend configurations.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/cors_errors.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn what causes CORS errors, how they impact your web app, and how to fix them securely with proper headers and backend configurations.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/cors-errors\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/cors_errors.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/cors-errors\">"
+        ],
+        "title": "Fixing CORS Errors What They Are and How to Resolve Them",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/cors-errors\"\n            },\n            \"headline\": \"Learn what causes CORS errors, how they impact your web app, and how to fix them securely with proper headers and backend configurations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/cors_errors.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
