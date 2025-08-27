@@ -2,7 +2,7 @@
 title: Descope Pricing–The Complete Guide
 date: "2025-08-08"
 description: "Discover Descope’s pricing tiers, real-world cost examples, hidden fees, and how it stacks vs Auth0/Okta in CIAM pricing."
-cover: "descope-pricing–the-complete-guide.png"
+cover: "descope-pricing-the-complete-guide.png"
 category: "programming"
 author: "Mostafa Ibrahim"
 ---
