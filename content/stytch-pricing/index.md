@@ -2,7 +2,7 @@
 title: "Stytch Pricing–The Complete Guide"
 date: "2025-08-05"
 description: "Explore Stytch’s tiers, real‑world pricing examples, hidden fees, and comparison with Auth0/Okta for clear cost insights."
-cover: "stytch-pricing–the-complete-guide.png"
+cover: "stytch-pricing-the-complete-guide.png"
 category: "programming"
 author: "Mostafa Ibrahim"
 ---
