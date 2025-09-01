@@ -1,42 +1,49 @@
 ---
 title: "Thinking About Going Passwordless? Here's How To Do It Right"
-date: "2025-07-03"
-description: "Explore the steps to adopt passwordless authentication, understand its benefits, and learn how solutions like SuperTokens facilitate secure, password-free logins.​"
+date: "2025-08-09"
+description: "Explore how to ditch passwords, the pros and cons of going password-free, and how tools like SuperTokens make it secure and simple.​"
 cover: ""
 category: "featured"
 author: "Maria Shimkovska"
 ---
 
-Password based authentication is a problem. The next section quickly goes over why. But it's a problem. So you have two options you can choose from:
-1. You can add a second layer of authentication to your password based auth. 
-2. Or, you can go completely **passwordless**. 
+Passwords have been our loyal gatekeepers for decades. And they've done their job well (most of the time). But in a world where we log into dozens of apps daily, reuse the same credentials, and constantly reset them, they make attackers drool. 
 
-If you're here because going passwordless is your new objective, but you're unsure how to begin, don't worry &mdash; I got you covered. 
+Keep in mind, this post isn’t about hating passwords. But their weaknesses and the need for stronger authentication are pushing us to weigh our options. Text-based passwords just can't keep up.
 
-Whether you're looking to **add extra security to your logins** or **simplify access across all your devices**, I'll show you how to leave your passwords behind. 
+When it comes to improving authentication, you’ve got two main options:
+
+1. **Add a second layer** to your password-based system (two-factor authentication).
+2. Take the leap and **go full passwordless**. 
+
+If you’re here for option #2 but have no idea where to start, grab a cup of coffee and sit down. I’ll walk you through it.
+
+The unsavory answer is that you can't just ditch passwords forever using a simple switch. 
+
+To help with this, I decided to make this article from the perspective of a fictional company, named ByeByePass who are currently struggling with their passwords and the architecture and costs that come with it. 
+
+They want to solve their issues and go full passwordless. 
 
 ```toc
 tight: true
 toHeading: 3
 ```
 
-## Passwords Just Don't Cut It
+## Passwords Just Don't Cut It Anymore
 
 ![A cartoon gif of a man spilling out his passwords from his brain and feeding them all to his laptop](william-garrat-gif.gif)
 
 Let's face it, most of us struggle with creating strong passwords. We reuse them, forget them, and often default to simple options like *123456* or our pet's name. And while your dog might be a treasure to your family, their name simply isn't secure ... well, unless they happen to be named something like *xT5!9pL@3qR&*.
 
-Also, with the increased number of apps available, people have [**hundreds of them**](https://nordpass.com/blog/how-many-passwords-does-average-person-have/). As a result, dev teams have to handle endless password resets, security breaches, and support requests.  
+With the sheer number of apps we use today, it’s not uncommon for people to juggle [**hundreds of accounts**](https://nordpass.com/blog/how-many-passwords-does-average-person-have/). That leaves developers dealing with a constant cycle of password resets, security incidents, and support tickets.
 
-There is an argument to be made about using a password manager, and I am a big fan. Password managers have made my life easier, that's for sure. But the issue still comes if you are a developer and want to provide a good experience for new users. 
+Password managers are one way to ease the pain, and I’m a fan—they’ve definitely made my life easier. But from a developer’s perspective, they don’t solve everything. They’re still not widely adopted, which means many users will stick with weak passwords. And asking someone to create yet another password during sign-up adds friction, often enough to make them abandon the process entirely.
 
-Also, on the topic of password managers, they are are still not widely used. This increases the risk users will choose a weak password. On top of that, having to come up with a new password during sign-up can create extra friction, which may discourage people from completing the process.
-
-## Understanding Passwordless Authentication
+## Let's Understand Passwordless
 Before fully committing to this approach, it's important to understand both its strengths and potential drawbacks to make an informed decision for your security needs.
 
 ### So What *is* Passwordless Authentication 
-**Passwordless authentication** is exactly what it sounds like. It's any method that lets users securely access their accounts **without typing in a traditional password**. 
+**Passwordless authentication** is exactly what it sounds like. It's any method that lets users securely access their accounts **without typing in a traditional password**. It's goal is to remove the need for passwords. And the benefits of passwordless are no password leaks, no password reuse, fewer phishing attacks, and an overall smoother user experience. 
 
 Instead, a user might use their fingerprint, receive a one-time link via email, enter a temporary code from their phone, plug in a physical security key, or use cryptographic keys working quietly in the background.
 
@@ -57,9 +64,14 @@ Transitioning to passwordless authentication brings several hurdles worth planni
 * **User adaptation** presents another challenge, as people are creatures of habit who may resist unfamiliar login methods despite their benefits. 
 * Additionally, organizations must carefully **design account recovery processes** that maintain security without falling back on password-based vulnerabilities, ensuring users can regain access when they lose devices or biometric authentication fails.
 
-## 🛠️ Common Passwordless Authentication Methods 
+## What are my passwordless options? 
 Let's go more in-depth of some of the most common passworldess authentication methods you have available as your options.
 Each example also contains use cases, as well as benefits and drawbacks to help you make an informed decision. 
+
+### Passkeys 
+Ah, yes. The new cool kid on the block. 
+
+
 
 ### Biometric Authentication 🧬
 Utilizing fingerprints, facial recognition, or retinal scans for user verification
@@ -200,67 +212,6 @@ Leveraging cryptographic key pairs for secure authentication
 6. The server sends a challenge (random message) for the user to sign with their private key
 7. The user’s device signs the challenge using the private key stored securely (e.g., in a smart card, TPM, or software key store)
 8. The server verifies the signature using the public key in the certificate — if it’s valid, the user is authenticated 🥳 and you can store their login in a cookie or session
-
-## 🖥️ Implementing SSH Passwordless Login 
-
-**SSH (Secure Shell)** is a network protocol that allows users to securely access a computer over an unsecured network like the internet. It was designed as a replacement for older, insecure protocols like [Telnet and rsh (remote shell)](https://www.techtarget.com/searchsecurity/definition/Secure-Shell).
-
-SSH allows you to log onto another computer over a network, execute commands on that remote machines, and move files between computers. All communication between the client and server is encrypted, protecting your data from eavesdropping and Man-in-the-Middle attacks [(sometimes also called Monster-in-the-Middle attacks)](https://www.techtarget.com/iotagenda/definition/man-in-the-middle-attack-MitM).
-
-### SSH Authentication
-You can authenticate through SSH using a password or by using a passwordless approach by using cryptographic key pairs. 
-
-Here is how connecting to a remote server works using a password: 
-![alt text](image-1.png)
-
-How are the public and private keys in SSH related? 
-
-A step-by-step guide to setting up SSH passwordless login using public-private key pairs. 
-
-![alt text](image-2.png)
-
-1. **Generate SSH Key Pair:** Create a public and private key pair on the client machine. 
-2. **Create SSH Directory on Server:** Ensure the `.ssh` directory exists on the remote server 
-3. **Upload Public Key to Server:** Add the public key to the server's `~/.ssh/authorized_keys` file
-4. **Set Appropriate Permissions:** Adjust file permissions to secure the `.ssh` directory and `authorized_keys` file.
-5. **Test the Connection:** Verify that the SSH connection no longer requires a password. 
-
-### Steps to Set Up SSH Passwordless Login
-1. 🔑 **Generate an Ed25519 SSH key pair (if you don't already have one):**<br />
-    On your local machine, run: 
-    ```bash
-    ssh-keygen -t ed25519 -C "your_email@example.com"
-    ```
-    Press **Enter** to accept the default file location (`~/.ssh/id_ed25519`) and leave the passphrase empty for passwordless login.
-2. 📋 **Copy your public key to the remote server:**
-    Use `ssh-copy-id` to install your public key on the remote server:
-    ```bash
-    ssh-copy-id user@remote-server
-    ```
-    You'll be prompted for your password one last time. After this, the key gets added to the server’s `~/.ssh/authorized_keys`.
-3. 🔒 **Set correct permissions (if needed):**
-    Make sure these permissions are set properly on the **remote server**:
-    ```bash
-    chmod 700 ~/.ssh
-    chmod 600 ~/.shh.authorized_keys
-    ```
-4. 🧪 **Test passwordless login:**
-    From your local machine, try: 
-    ```bash
-    ssh user@remote-server
-    ```
-    You should get in without being prompted for a password.
-5. 🔧 **(Optional) Configure SSH config for convenience:**
-    In `~/.ssh/config` on your local machine, you can add: 
-    ```ini
-    Host my-server
-        HostName remote-server
-        User your-username
-        IdentityFile ~/.ssh/id_ed25519
-    ```
-    Now you can connect just by typing `ssh my-server` without needing to type the full host details.
-
-![alt text](image-3.png)
 
 ## 🔐 Exploring SuperTokens for Passwordless Authentication
 SuperTokens is an open-source authentication solution offering passwordless capabilities. One word you will see quite a bit in the documentation is **recipe**. 🧑‍🍳
