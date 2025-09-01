@@ -7,10 +7,6 @@ category: "featured"
 author: "Maria Shimkovska"
 ---
 
-Passwords have been our loyal gatekeepers for decades. And they've done their job well (most of the time). But in a world where we log into dozens of apps daily, reuse the same credentials, and constantly reset them, they make attackers drool. 
-
-Keep in mind, this post isn’t about hating passwords. But their weaknesses and the need for stronger authentication are pushing us to weigh our options. Text-based passwords just can't keep up.
-
 When it comes to improving authentication, you’ve got two main options:
 
 1. **Add a second layer** to your password-based system (two-factor authentication).
@@ -18,11 +14,13 @@ When it comes to improving authentication, you’ve got two main options:
 
 If you’re here for option #2 but have no idea where to start, grab a cup of coffee and sit down. I’ll walk you through it.
 
-The unsavory answer is that you can't just ditch passwords forever using a simple switch. 
+And you most likely know you can't just ditch password overnight.
 
 To help with this, I decided to make this article from the perspective of a fictional company, named ByeByePass who are currently struggling with their passwords and the architecture and costs that come with it. 
 
 They want to solve their issues and go full passwordless. 
+
+But how could they do that? 
 
 ```toc
 tight: true
