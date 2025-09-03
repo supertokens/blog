@@ -21,8 +21,7 @@ Authentication requirements evolve dramatically as startups mature from initial 
 
 -   **Email/Password Authentication**: Still the most widely used baseline for user signup and account creation. This fundamental mechanism provides the entry point for user registration while maintaining familiar user experience patterns that reduce onboarding friction.
 -   **Password Reset**: A mandatory user recovery mechanism that handles inevitable account lockouts and forgotten credentials. Secure implementation requires email verification, temporary reset tokens with short expiration windows, and proper session invalidation to prevent unauthorized access.
--   **Session Management**: Secure handling of authentication tokens, cookies, and user state across browser sessions. Proper
-implementation includes token expiration policies, secure cookie configuration, and session storage that protects against common web vulnerabilities like XSS and CSRF attacks.
+-   **Session Management**: Secure handling of authentication tokens, cookies, and user state across browser sessions. Proper implementation includes token expiration policies, secure cookie configuration, and session storage that protects against common web vulnerabilities like XSS and CSRF attacks.
 
 **Day 30&mdash;180: Growth Essentials**
 
