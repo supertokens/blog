@@ -34,8 +34,7 @@ implementation includes token expiration policies, secure cookie configuration, 
 
 -   **Single Sign-On (SSO)**: A standard requirement for B2B enterprise deals that enables centralized identity management through existing corporate systems like Okta, Active Directory, or Azure AD. SSO integration often becomes a mandatory checkbox for enterprise procurement processes and significantly accelerates sales cycles.
 -   **Audit Logs**: Enables comprehensive compliance evidence collection and detailed security incident analysis required for [SOC 2](https://secureframe.com/hub/soc-2/what-is-soc-2), [GDPR](https://gdpr-info.eu/), [HIPAA](https://www.hhs.gov/hipaa/index.html), and other regulatory frameworks. Proper audit trails include user actions, administrative changes, login events, and system modifications with immutable timestamps and digital signatures.
--   **Role-Based Access Control (RBAC)**: Manages increasingly complex user hierarchies, permissions, and entitlements across different
-organizational levels. Advanced [RBAC](https://supertokens.com/blog/what-is-roles-based-access-control-vs-abac) systems support dynamic role assignment, attribute-based permissions, and granular resource access controls that scale with enterprise organizational structures.
+-   **Role-Based Access Control (RBAC)**: Manages increasingly complex user hierarchies, permissions, and entitlements across different organizational levels. Advanced [RBAC](https://supertokens.com/blog/what-is-roles-based-access-control-vs-abac) systems support dynamic role assignment, attribute-based permissions, and granular resource access controls that scale with enterprise organizational structures.
 
 In short, "auth for startups" is not static. It must expand in sophistication as the product, user base, and business model evolve.
 
