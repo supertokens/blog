@@ -5,11 +5,13 @@ import { withPrefix } from "gatsby"
 import Layout from "../components/layout"
 import BlogPostFooter from "../components/BlogPostFooter";
 import AuthorCard from "../components/AuthorCardTop";
+import McpToolkitInterestForm from "../components/McpToolkitInterestForm";
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const postSlugWithUnderscores = post.fields.slug.replaceAll("/", "").replaceAll("-", "_");
+  const isMCPBlogPost = post.fields.slug === "/supertokens-mcp-toolkit/"
 
   const getUpdatedHtml = (html) => {
     const htmlStr = `<div>${html.trim()}</div>`;
@@ -68,6 +70,7 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: getUpdatedHtml(post.html) }}
           itemProp="articleBody"
         />
+        {isMCPBlogPost && <McpToolkitInterestForm />}
         <BlogPostFooter
           idSlug={postSlugWithUnderscores}
           author={post.frontmatter.author}
