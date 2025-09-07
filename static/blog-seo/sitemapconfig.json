@@ -309,6 +309,18 @@
         "location": "https://supertokens.com/blog/identity-and-access-management-strategy"
     },
     {
+        "location": "https://supertokens.com/blog/stytch-pricing"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-an-identity-provider"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-b2b-iam"
+    },
+    {
+        "location": "https://supertokens.com/blog/descope-pricing"
+    },
+    {
         "location": "https://supertokens.com/blog/rs256-vs-hs256"
     },
     {
@@ -430,11 +442,8 @@
     },
     {
         "location": "https://supertokens.com/blog/launch-week-1-recap"
-<<<<<<< HEAD
     },
     {
         "location": "https://supertokens.com/blog/cors-errors"
-=======
->>>>>>> master
     }
 ]
