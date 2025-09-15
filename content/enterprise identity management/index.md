@@ -461,3 +461,184 @@ Run SuperTokens Core on-premise while using cloud services for specific features
 For enterprises wanting authentication without infrastructure management, SuperTokens offers managed hosting. This provides the same features with guaranteed uptime, automatic updates, and professional support. Unlike traditional SaaS, you can migrate to self-hosted anytime, taking your data and configurations with you.
 
 The deployment choice doesn't lock you in. Start with managed cloud for rapid prototyping. Move to self-hosted when regulatory requirements demand it. The architecture remains consistent across all deployment models.
+
+
+## How to Evaluate an Enterprise IAM Solution
+
+Selecting an enterprise IAM platform requires systematic evaluation across multiple dimensions. The wrong choice creates technical debt that compounds for years, while the right platform becomes a strategic enabler for digital transformation.
+
+### Security and Compliance Fit
+
+Start by mapping your regulatory requirements to platform capabilities. Generic "enterprise-grade security" claims mean nothing without specific compliance validations.
+
+**Encryption Standards**
+
+Verify the platform supports your required encryption standards. Financial services often mandate FIPS 140-2 validated cryptography. Healthcare organizations need end-to-end encryption for PHI. Government agencies require specific algorithm suites.
+
+Ask vendors for their cryptographic architecture documentation. Can you configure algorithm choices? How are keys managed and rotated? Where does key material reside? Vague answers indicate the vendor hasn't dealt with serious security requirements.
+
+Test encryption in practice. Deploy a proof of concept and use packet capture to verify that sensitive data is actually encrypted in transit. Check database storage to confirm encryption at rest. Many platforms claim encryption but implement it partially.
+
+**Audit Capabilities**
+
+Compliance isn't just about having logs; it's about having the right logs in usable formats. Your IAM platform must capture:
+* Every authentication attempt with outcome and metadata
+* All permission changes with before/after states
+* Administrative actions with justification
+* Data access patterns for sensitive resources
+
+Run a mock audit during evaluation. Can you produce a report showing every system a specific user accessed last quarter? Can you prove that terminated employees lost access within policy timelines? Can you demonstrate segregation of duties for financial transactions?
+
+The platform should export logs in standard formats (JSON, CEF, LEEF) that your SIEM can parse. Real-time streaming is essential for security monitoring. Batch exports that arrive hours later miss active attacks.
+
+**Compliance Certifications**
+
+Vendor compliance certifications provide baseline assurance but aren't sufficient alone. SOC 2 Type II reports confirm operational controls. ISO 27001 validates information security management. FedRAMP authorization enables government deployments.
+
+Read the actual audit reports, not just the marketing claims. Check the scope of certification. Some vendors certify only their managed service, not the software you'd self-host. Others exclude critical components from audit scope.
+
+### Customizability
+
+Enterprise authentication involves complex business logic that packaged solutions rarely accommodate. The platform must enable deep customization without becoming unmaintainable.
+
+**Authentication Flow Control**
+
+Can you modify authentication steps based on your requirements? Common customization needs include:
+* Checking external databases before allowing registration
+* Implementing approval workflows for privileged access
+* Adding custom MFA challenges for specific user groups
+* Integrating with fraud detection systems
+
+Request code examples showing how to implement your specific requirements. If the vendor suggests "professional services" for basic customizations, the platform lacks necessary flexibility.
+
+**UI/UX Flexibility**
+
+Users shouldn't know they're using a third-party authentication system. The platform must support complete UI customization or provide headless operation where you build the interface.
+
+Test customization depth. Can you modify individual form fields? Control error messages? Implement custom password strength indicators? Add organization-specific consent flows? Superficial theming isn't enough for enterprise deployments.
+
+**Business Logic Integration**
+
+Authentication doesn't exist in isolation. The platform must integrate with your business processes:
+
+```python
+# Example: Custom logic during authentication
+async def custom_auth_flow(credentials):
+    # Check if user is in good standing with billing
+    if not await billing_system.check_account_status(credentials.email):
+        return AuthError("Account suspended for non-payment")
+    
+    # Verify employment status with HR system
+    if not await hr_system.verify_active_employee(credentials.email):
+        return AuthError("Employment verification failed")
+    
+    # Check for active legal holds
+    if await legal_system.has_active_hold(credentials.email):
+        await legal_system.notify_authentication_attempt(credentials.email)
+    
+    # Continue with standard authentication
+    return await standard_auth_flow(credentials)
+```
+
+The platform should provide hooks, not just configuration options. You need to insert code at decision points, not just toggle features on and off.
+
+### Integration Surface
+
+Your IAM platform must integrate with everything from modern microservices to mainframe applications. Limited integration capabilities create identity silos that undermine the entire IAM strategy.
+
+**Protocol Support**
+
+Inventory your current authentication protocols. That 15-year-old ERP system might only support LDAP. The newly acquired startup uses OAuth everywhere. Partner integrations require SAML. The platform must bridge these protocols seamlessly.
+
+Test actual integrations, not just protocol support claims. Can the platform simultaneously support:
+* SAML 2.0 for enterprise SaaS applications
+* OAuth 2.0/OIDC for modern APIs
+* LDAP for legacy directory services
+* RADIUS for network equipment
+* Kerberos for Windows domains
+
+**API Coverage**
+
+Modern enterprises need programmatic control over identity operations. Evaluate API completeness:
+* Can you create users programmatically?
+* Modify permissions via API calls?
+* Query audit logs through REST endpoints?
+* Receive webhooks for security events?
+
+API rate limits matter at enterprise scale. If the platform throttles at 100 requests per second, bulk operations become impossible. You can't deprovision 10,000 users if each API call takes seconds.
+
+**Application Support**
+
+Create an inventory of your critical applications and verify integration support. Pre-built connectors save months of development time. But "supports Salesforce" might mean basic authentication only, not delegated administration or field-level permissions.
+
+For custom applications, evaluate SDK quality. Are libraries available for your programming languages? Do they follow language conventions? Is the documentation complete with working examples? Poor SDKs multiply integration effort across every application.
+
+### Scalability
+
+Scalability isn't just about user counts. Enterprise IAM must handle burst traffic, geographic distribution, and organizational complexity.
+
+**Performance at Scale**
+
+Get specific performance commitments:
+* Authentication requests per second
+* Concurrent sessions supported
+* Database size limitations
+* API throughput limits
+
+Test with realistic load patterns. Monday morning login storms when 50,000 employees authenticate within minutes. End-of-quarter processing when every system validates permissions continuously. Geographic distribution with users across time zones.
+
+Load testing should include your customizations. That HR system integration might work fine in testing but timeout under load. Custom authorization logic might create database bottlenecks. Find these issues during evaluation, not production deployment.
+
+**Multi-Region Support**
+
+Global enterprises need IAM infrastructure in multiple regions for performance and compliance. Can the platform replicate across regions? How does it handle network partitions? What's the latency impact for users far from primary data centers?
+
+Some platforms claim multi-region support but actually route all authentication through a single region. This creates unacceptable latency for global users and violates data residency requirements.
+
+**Organizational Complexity**
+
+Large enterprises aren't monolithic. They comprise subsidiaries, divisions, and acquired companies, each with unique requirements. The platform must support:
+* Multiple identity sources that might overlap
+* Delegated administration with scope limitations
+* Separate security policies per organization
+* Independent audit trails for compliance
+* Gradual migration from existing systems
+
+Test with your actual organizational structure. Create a proof of concept with multiple tenants, complex permission hierarchies, and delegated administration. If it requires workarounds during evaluation, it won't scale in production.
+
+### Operational Overhead
+
+The best IAM platform becomes a liability if you can't operate it effectively. Evaluate both initial deployment and ongoing maintenance requirements.
+
+**Deployment Complexity**
+
+How long does initial deployment actually take? Vendor estimates assume ideal conditions with dedicated resources and no complications. Reality includes:
+* Integration with dozens of existing systems
+* Data migration from current IAM solutions
+* User training and change management
+* Compliance validation and audit preparation
+
+Get references from similar organizations. How long did their deployment take? What unexpected challenges arose? What would they do differently?
+
+**Maintenance Requirements**
+
+Understand ongoing operational needs:
+* How often do updates release?
+* Can you update without downtime?
+* What breaks during updates?
+* How much testing do updates require?
+
+Self-hosted solutions require infrastructure management. Do you have the expertise to run highly available authentication infrastructure? Can your team debug distributed systems issues at 3 AM? If not, managed services might be worth the premium.
+
+**Skills and Resources**
+
+Assess your team's capabilities honestly. Running Keycloak requires Java expertise and significant infrastructure knowledge. Cloud-native solutions need different skills than on-premise deployments. 
+
+Calculate total operational cost, not just licensing. Include:
+* Infrastructure (servers, storage, networking)
+* Personnel (administrators, developers, support)
+* Training and certification
+* Backup and disaster recovery
+* Security monitoring and incident response
+
+If operational overhead exceeds 40% of total IAM budget, the platform is too complex for your organization. Authentication should enable business, not consume IT resources.
