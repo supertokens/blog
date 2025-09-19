@@ -445,5 +445,8 @@
     },
     {
         "location": "https://supertokens.com/blog/cors-errors"
+    },
+    {
+        "location": "https://supertokens.com/blog/yubikeys"
     }
 ]
