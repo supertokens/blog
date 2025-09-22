@@ -2,7 +2,7 @@
 title: Magic Links Tutorial Secure Passwordless Login Made Simple
 description: "Learn how magic links work, their benefits, and how to implement them for secure, seamless passwordless authentication."
 date: "2025-09-08"
-cover: "TODO.png"
+cover: "magic_links.png"
 category: "auth, guide, magiclinks"
 author: "Maurice Saldivar"
 ---
