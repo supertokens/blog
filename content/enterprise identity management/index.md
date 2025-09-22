@@ -35,13 +35,13 @@ At its core, enterprise identity management answers three questions for every ac
 
 Organizations didn't always need dedicated identity management systems. Twenty years ago, most companies ran a handful of on-premise applications with basic username/password authentication. IT could manually create accounts and track access in spreadsheets.
 
-That model broke as businesses transformed digitally. Cloud adoption meant corporate data lived outside the firewall. Remote work eliminated the network perimeter as a security boundary. The average enterprise now uses 130+ SaaS applications, each potentially storing sensitive data.
+That model broke as businesses transformed digitally. Cloud adoption meant corporate data lived outside the firewall. Remote work eliminated the network perimeter as a security boundary. The average enterprise now uses 100+ SaaS applications, each potentially storing sensitive data.
 
-Security breaches shifted the landscape further. The 2023 Okta breach affected hundreds of companies because attackers compromised support system access. The SolarWinds hack showed how compromised service accounts could provide backdoor access to thousands of organizations. These incidents proved that identity had become the new security perimeter.
+Security breaches shifted the landscape further. The 2023 Okta breach affected hundreds of companies because attackers compromised support system access. The [SolarWinds hack](https://www.techtarget.com/whatis/feature/SolarWinds-hack-explained-Everything-you-need-to-know) showed how compromised service accounts could provide backdoor access to thousands of organizations. These incidents proved that identity had become the new security perimeter.
 
 Compliance requirements formalized what security teams already knew. Regulations now require organizations to prove who accessed what data, when, and why. A GDPR audit asks for every system a specific user could access and what personal data they could view. SOX compliance demands evidence that financial system access follows separation of duties. Manual tracking can't provide these answers at enterprise scale.
 
-The cost of getting identity wrong extends beyond breaches and fines. Poor identity management creates friction that impacts productivity. Knowledge workers waste 11 hours weekly managing passwords and waiting for access approvals. IT teams spend 30% of their time on access-related tickets. New employees wait days for system access, delaying productivity.
+The cost of getting identity wrong extends beyond breaches and fines. Poor identity management creates friction that impacts productivity. Knowledge workers waste [11 hours yearly](https://www.thenationalnews.com/business/up-to-11-hours-spent-every-year-resetting-passwords-1.819620) managing passwords and waiting for access approvals.It's not uncommon for new employees wait days for system access, delaying productivity.
 
 ### IAM vs Enterprise IAM
 
