@@ -3324,6 +3324,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/firebase-pricing\"\n            },\n            \"headline\": \"Explore Firebase’s free vs Blaze tiers, real-world cost examples, hidden charges, and compare with Auth0/Okta for transparent pricing clarity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/firebase-pricing.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/why-startups-cant-afford-weak-auth",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Startups can't afford weak or overly complex authentication. Explore effective strategies to secure your business while keeping user experience seamless and efficient.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Why Startups Can't Afford Weak or Over-Engineered Authentication\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/why-startups-cant-afford-weak-auth\" />",
+            "<meta property=\"og:description\" content=\"Startups can't afford weak or overly complex authentication. Explore effective strategies to secure your business while keeping user experience seamless and efficient.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/why-startups-cant-afford-weak-auth.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Startups can't afford weak or overly complex authentication. Explore effective strategies to secure your business while keeping user experience seamless and efficient.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/why-startups-cant-afford-weak-auth\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/why-startups-cant-afford-weak-auth.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/why-startups-cant-afford-weak-auth\">"
+        ],
+        "title": "Why Startups Can't Afford Weak or Over-Engineered Authentication",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/why-startups-cant-afford-weak-auth\"\n            },\n            \"headline\": \"Startups can't afford weak or overly complex authentication. Explore effective strategies to secure your business while keeping user experience seamless and efficient.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/why-startups-cant-afford-weak-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {    
         "path": "/blog/stytch-pricing",
         "metaTags": [
             "<meta name=\"description\" content=\"Explore Stytch’s tiers, real‑world pricing examples, hidden fees, and comparison with Auth0/Okta for clear cost insights.\" />",
