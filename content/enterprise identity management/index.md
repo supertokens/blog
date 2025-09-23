@@ -69,7 +69,7 @@ Access certification illustrates the difference. A startup might review permissi
 
 Standard IAM handles straightforward scenarios: create user, assign role, grant access. Enterprise IAM manages complex workflows like:
 
-* Birthright provisioning that automatically grants access based on job codes from HR systems
+
 * Dynamic permissions that change based on location, time, or risk scores  
 * Segregation of duties that prevents toxic permission combinations
 * Account lifecycle management that handles transfers, leave of absence, and rehires
@@ -87,7 +87,7 @@ Authentication verifies user identity before granting system access. Modern ente
 
 **Passwordless Authentication**
 
-Enterprises increasingly adopt passwordless methods to eliminate password-related vulnerabilities. FIDO2/WebAuthn enables authentication through biometrics or hardware security keys. When a user authenticates, their device creates a cryptographic signature that proves their identity without transmitting secrets that attackers could intercept.
+Enterprises increasingly adopt passwordless methods to eliminate password-related vulnerabilities. WebAuthn enables authentication through biometrics or hardware security keys. When a user authenticates, their device creates a cryptographic signature that proves their identity without transmitting secrets that attackers could intercept.
 
 Microsoft reported that 99.9% of compromised accounts didn't use MFA. This statistic drives enterprises toward mandatory multi-factor authentication. But traditional MFA methods like SMS codes remain vulnerable. The MGM Resorts breach succeeded despite MFA because attackers convinced help desk staff to reset authentication settings.
 
@@ -214,7 +214,7 @@ Even with modern IAM platforms, enterprises face persistent identity management 
 
 ### Tool Sprawl and Identity Silos
 
-The average enterprise uses 130 SaaS applications, but that number understates the real complexity. Development teams spin up AWS accounts for projects. Marketing trials new analytics platforms. Sales experiments with prospecting tools. Each application maintains its own user directory, creating identity silos across the organization.
+The average enterprise uses 100+ SaaS applications, but that number understates the real complexity. Development teams spin up AWS accounts for projects. Marketing trials new analytics platforms. Sales experiments with prospecting tools. Each application maintains its own user directory, creating identity silos across the organization.
 
 This fragmentation creates multiple problems. Users juggle dozens of passwords despite SSO initiatives because not every application supports federation. Some legacy systems only authenticate against Active Directory. That acquired company still runs its own identity infrastructure. The result is a patchwork of partially connected identity systems.
 
@@ -226,21 +226,19 @@ The technical debt accumulates over years. That critical manufacturing system fr
 
 ### Manual Onboarding and Offboarding
 
-Despite automation capabilities, many enterprises still rely on manual processes for user lifecycle management. IT tickets request access. Managers approve via email. Administrators create accounts by hand. This worked when companies had dozens of applications. At enterprise scale, manual processes create serious risks.
+Despite automation capabilities, many enterprises still rely on manual processes for user lifecycle management. IT tickets request access, managers approve via email, and admins create accounts by hand. This worked when companies had dozens of applications. At enterprise scale, manual processes create serious risks.
 
 The numbers illustrate the problem. A 10,000-person company with 20% annual turnover handles 2,000 terminations yearly. Each termination requires disabling access across potentially 50+ systems. Miss one system and a terminated employee retains access. Multiply this by contractors, transfers, and role changes, and manual management becomes impossible.
 
-Timing creates the greatest risk. The average enterprise takes 3-7 days to fully deprovision terminated employees. During this window, disgruntled former employees could access sensitive data, delete critical resources, or steal intellectual property. The Cisco incident in 2022 occurred when a terminated employee retained access to Google credentials, enabling attackers to breach the company network months after termination.
+Timing creates the greatest risk. The average enterprise takes 3-7 days to fully deprovision terminated employees. During this window, disgruntled former employees could access sensitive data, delete critical resources, or steal intellectual property.
 
-Manual onboarding delays productivity. New employees wait days for access while tickets route through approval chains. A new developer might have laptop access but can't push code because GitHub provisioning is stuck in queue. Sales representatives can't access CRM systems during their crucial first weeks. The productivity loss compounds across thousands of annual hires.
+Manual onboarding delays productivity. New employees wait days for access while tickets route through approval chains. A new developer might have laptop access but can't push code because GitHub provisioning is stuck in a queue. Sales representatives can't access CRM systems during their crucial first weeks. The productivity loss compounds across thousands of annual hires.
 
 Manual processes also lack consistency. One administrator might grant broad permissions to expedite access. Another might follow strict least-privilege principles. Over time, similar roles accumulate vastly different permission sets based on who processed their access requests.
 
 ### Shadow IT and Unmanaged Access
 
 Shadow IT exists when business units adopt technology without IT involvement. A marketing team subscribes to a design platform using a corporate credit card. Engineers spin up personal AWS accounts for testing. Sales downloads a Chrome extension for email tracking. None of these appear in the official IT inventory.
-
-Gartner estimates that 41% of employees acquire, modify, or create technology outside IT visibility. In enterprises, this means thousands of unknown applications processing corporate data. Each represents an unmanaged identity that could expose sensitive information.
 
 Cloud platforms amplify the problem. Developers can provision entire infrastructures in minutes using personal accounts. They share AWS access keys through Slack. They store database credentials in public GitHub repositories. By the time security teams discover these resources, sensitive data has already been exposed.
 
@@ -262,7 +260,7 @@ Financial services face overlapping requirements from SOX, PCI-DSS, and regional
 
 **Global Privacy Regulations**
 
-GDPR transformed identity management by making personal data protection a board-level concern. Enterprises must track not just who can access personal data, but demonstrate the legal basis for that access. The right to be forgotten requires finding and removing personal data across all systems, including backup and archive systems that might not integrate with central IAM.
+GDPR transformed identity management by making personal data protection a board-level concern. Enterprises must track not just who can access personal data, but demonstrate the legal basis for that access. The right to be forgotten requires finding and removing personal data across all systems, including backup, and archive systems that might not integrate with central IAM.
 
 California's CPRA, Brazil's LGPD, and dozens of other privacy laws add their own requirements. Each has different definitions of personal information, consent requirements, and breach notification timelines. Multinational enterprises must implement identity controls that satisfy the strictest requirements across all jurisdictions.
 
@@ -274,7 +272,7 @@ The audit process itself creates challenges. Preparing for SOX compliance might 
 
 Cross-regulation conflicts require careful orchestration. GDPR's data minimization principle suggests deleting data quickly. Legal hold requirements demand preserving data indefinitely. Industry regulations require retaining audit logs for years. The identity management system must implement retention policies that satisfy all applicable requirements while remaining manageable.
 
-These compliance challenges aren't just about avoiding fines. Data breaches involving non-compliance trigger lawsuits, reputation damage, and loss of customer trust. The 2017 Equifax breach resulted in $1.4 billion in costs, largely due to inadequate identity and access controls that regulators deemed negligent.
+These compliance challenges aren't just about avoiding fines. Data breaches involving non-compliance trigger lawsuits, reputation damage, and loss of customer trust.
 
 ## SuperTokens for Enterprise Identity Management
 
@@ -297,7 +295,6 @@ The modular design means you only deploy what you need. If you don't use social 
 While SuperTokens doesn't provide native SAML support out of the box, it integrates with existing SSO infrastructure through flexible architecture. Enterprises typically run SuperTokens alongside their SAML identity provider, using it for modern applications while maintaining legacy SSO for older systems.
 
 ```javascript
-// Example: Integrating with existing SAML provider
 import Session from "supertokens-node/recipe/session";
 
 async function onSAMLCallback(samlResponse) {
@@ -367,7 +364,7 @@ app.get("/api/financial-reports", verifySession(), async (req, res) => {
         return res.status(403).json({ error: "Insufficient permissions" });
     }
     
-    // Return financial data
+    // Return FooBar
 });
 ```
 
@@ -450,7 +447,7 @@ Install SuperTokens Core on your servers, behind your firewall, under your compl
 
 **Private Cloud Deployment**
 
-Deploy to your AWS VPC, Azure Virtual Network, or Google Cloud Platform project. SuperTokens works with managed databases (RDS, Cloud SQL) and integrates with cloud-native services. Auto-scaling groups handle traffic spikes. Multi-region deployments provide global availability.
+Deploy to your AWS VPC, Azure Virtual Network, or Google Cloud Platform project. SuperTokens works with managed databases (RDS, Cloud SQL) and integrates with cloud-native services. Auto scaling groups handle traffic spikes. Multi-region deployments provide global availability.
 
 **Hybrid Deployment**
 
@@ -522,7 +519,6 @@ Test customization depth. Can you modify individual form fields? Control error m
 Authentication doesn't exist in isolation. The platform must integrate with your business processes:
 
 ```python
-# Example: Custom logic during authentication
 async def custom_auth_flow(credentials):
     # Check if user is in good standing with billing
     if not await billing_system.check_account_status(credentials.email):
