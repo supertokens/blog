@@ -158,7 +158,9 @@ While powerful, biometric authentication brings its own set of hurdles organizat
 - **Device Dependency** creates the primary limitation where credentials bind to specific devices, potentially creating access issues when users switch devices or experience hardware failures. Organizations must plan for device lifecycle management and credential migration scenarios.
 - **User Education Requirements** address confusion around biometricauthentication concepts, fallback mechanisms, and security implications. Many users don\'t understand the difference between biometric-only authentication and biometric-protected credentials,leading to support issues.
 - **Privacy Concerns** require clear communication that biometric data never leaves the user\'s device and isn\'t stored by web applications. Despite security benefits, the average cost of biometric data breaches reached \$5.22 million in 2024, emphasizing the importance of proper implementation.
-- **Revocation and Recovery Challenges** complicate account recovery when biometric authenticators are lost, damaged, or replaced.Organizations must implement secure backup authentication methods and account recovery procedures that don\'t undermine biometric security benefits. Cross-platform compatibility varies significantly, with some combinations of browsers and operating systems providing limited biometric support. Testing across target platforms becomes essential for consistent user experiences.
+- **Revocation and Recovery Challenges** complicate account recovery when biometric authenticators are lost, damaged, or replaced.Organizations must implement secure backup authentication methods and account recovery procedures that don\'t undermine biometric security benefits. 
+
+Cross-platform compatibility varies significantly, with some combinations of browsers and operating systems providing limited biometric support. Testing across target platforms becomes essential for consistent user experiences.
 
 ## **Best Practices for Biometric Web Authentication**
 
