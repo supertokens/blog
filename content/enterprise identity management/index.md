@@ -13,9 +13,9 @@ Managing identities at enterprise scale involves coordinating access for thousan
 
 ## The Scale Challenge
 
-Enterprise identity management differs fundamentally from standard authentication systems. A startup might handle 50 users accessing 10 applications. An enterprise manages 10,000 employees, 5,000 contractors, and 50,000 customer accounts across 500 internal applications, cloud services, and legacy systems.
+Enterprise identity management differs fundamentally from standard authentication systems. A startup might handle 50 users accessing 10 applications. An enterprise can manage 10,000 employees, 5,000 contractors, and 50,000 customer accounts across 500 internal applications, cloud services, and legacy systems.
 
-This scale creates cascading complexity. When an employee changes departments, their access permissions must update across dozens of systems instantly. When someone leaves the company, every access point needs immediate revocation. Manual processes that work for small teams become security vulnerabilities and operational bottlenecks at enterprise scale.
+This scale creates cascading complexity. When an employee changes departments, their access permissions must update across dozens of systems instantly. When someone leaves the company, every access point needs immediate revocation. Manual processes that work for small teams create security vulnerabilities and operational bottlenecks at enterprise scale.
 
 Consider a typical enterprise onboarding: A new engineer needs access to GitHub, AWS, Jira, Slack, the VPN, internal wikis, monitoring dashboards, and deployment tools. Each system has different permission models, authentication methods, and audit requirements. Without centralized identity management, IT teams spend days configuring access and months tracking down orphaned accounts.
 
@@ -41,7 +41,7 @@ Security breaches shifted the landscape further. The 2023 Okta breach affected h
 
 Compliance requirements formalized what security teams already knew. Regulations now require organizations to prove who accessed what data, when, and why. A GDPR audit asks for every system a specific user could access and what personal data they could view. SOX compliance demands evidence that financial system access follows separation of duties. Manual tracking can't provide these answers at enterprise scale.
 
-The cost of getting identity wrong extends beyond breaches and fines. Poor identity management creates friction that impacts productivity. Knowledge workers waste [11 hours yearly](https://www.thenationalnews.com/business/up-to-11-hours-spent-every-year-resetting-passwords-1.819620) managing passwords and waiting for access approvals.It's not uncommon for new employees wait days for system access, delaying productivity.
+The cost of getting identity wrong extends beyond breaches and fines. Poor identity management creates friction that impacts productivity. Knowledge workers waste [11 hours yearly](https://www.thenationalnews.com/business/up-to-11-hours-spent-every-year-resetting-passwords-1.819620) managing passwords and waiting for access approvals. New employees often wait days for system access, delaying productivity.
 
 ### IAM vs Enterprise IAM
 
@@ -364,7 +364,7 @@ app.get("/api/financial-reports", verifySession(), async (req, res) => {
         return res.status(403).json({ error: "Insufficient permissions" });
     }
     
-    // Return FooBar
+    // Return api data
 });
 ```
 
