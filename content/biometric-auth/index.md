@@ -7,16 +7,13 @@ category: "programming"
 author: "Mostafa Ibrahim"
 ---
 
-Passwords have long been the weak link in web security. They're reused, guessed, phished, or simply forgotten. In a world where data breaches and account takeovers make headlines every week, the industry is shifting to stronger, passwordless alternatives. One of the most
-promising of these is **biometric web authentication**&mdash;using your fingerprint, face, or device security hardware to log into web apps.
+Passwords have long been the weak link in web security. They're reused, guessed, phished, or simply forgotten. In a world where data breaches and account takeovers make headlines every week, the industry is shifting to stronger, passwordless alternatives. One of the most promising of these is **biometric web authentication**&mdash;using your fingerprint, face, or device security hardware to log into web apps.
 
-Thanks to modern standards like **WebAuthn** and **FIDO2**, biometrics can now be safely integrated into browsers, SaaS products, and
-enterprise applications. This blog breaks down how biometric web authentication works, its benefits, challenges, and how you can implement it in your own projects with tools like SuperTokens.
+Thanks to modern standards like **WebAuthn** and **FIDO2**, biometrics can now be safely integrated into browsers, SaaS products, and enterprise applications. This blog breaks down how biometric web authentication works, its benefits, challenges, and how you can implement it in your own projects with tools like SuperTokens.
 
 ## **What Is Biometric Web Authentication?**
 
-**Biometric web authentication** leverages device-level biometric features such as fingerprint sensors, facial recognition cameras, or
-iris scanners to authenticate users directly within web browsers. This approach eliminates password dependencies while providing stronger security guarantees than traditional credential-based systems.
+**Biometric web authentication** leverages device-level biometric features such as fingerprint sensors, facial recognition cameras, or iris scanners to authenticate users directly within web browsers. This approach eliminates password dependencies while providing stronger security guarantees than traditional credential-based systems.
 
 ### **Web Standards at the Core**
 
@@ -160,10 +157,8 @@ While powerful, biometric authentication brings its own set of hurdles organizat
 
 - **Device Dependency** creates the primary limitation where credentials bind to specific devices, potentially creating access issues when users switch devices or experience hardware failures. Organizations must plan for device lifecycle management and credential migration scenarios.
 - **User Education Requirements** address confusion around biometricauthentication concepts, fallback mechanisms, and security implications. Many users don\'t understand the difference between biometric-only authentication and biometric-protected credentials,leading to support issues.
-
 - **Privacy Concerns** require clear communication that biometric data never leaves the user\'s device and isn\'t stored by web applications. Despite security benefits, the average cost of biometric data breaches reached \$5.22 million in 2024, emphasizing the importance of proper implementation.
-- **Revocation and Recovery Challenges** complicate account recovery when biometric authenticators are lost, damaged, or replaced.Organizations must implement secure backup authentication methods and account recovery procedures that don\'t undermine biometric security benefits.
-Cross-platform compatibility varies significantly, with some combinations of browsers and operating systems providing limited biometric support. Testing across target platforms becomes essential for consistent user experiences.
+- **Revocation and Recovery Challenges** complicate account recovery when biometric authenticators are lost, damaged, or replaced.Organizations must implement secure backup authentication methods and account recovery procedures that don\'t undermine biometric security benefits. Cross-platform compatibility varies significantly, with some combinations of browsers and operating systems providing limited biometric support. Testing across target platforms becomes essential for consistent user experiences.
 
 ## **Best Practices for Biometric Web Authentication**
 
