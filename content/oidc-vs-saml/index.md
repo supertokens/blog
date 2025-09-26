@@ -15,11 +15,11 @@ The choice between them matters when working with SuperTokens. OIDC integrates n
 
 ## What Is SAML?
 
-Security Assertion Markup Language (SAML) is an XML-based standard widely used in enterprise single sign-on and federated identity. It enables a user to authenticate once with an identity provider (IdP) and then access multiple service providers (SPs) without re-entering credentials.
+Security Assertion Markup Language (SAML) is an XML-based standard widely used in enterprise single sign-on and federated identity. It enables a user to authenticate once with an identity provider (IdP), and then access multiple service providers (SPs) without re-entering credentials.
 
 Key characteristics include:
 
-- **XML assertions**: Carry authentication details between IdP and SP.
+- **XML assertions**: Carry authentication details between the IdP and SP.
 - **Certificate exchange**: Ensures the integrity and trust of each login flow.
 - **Centralized domains**: Common in enterprises running Active Directory or similar systems.
 
@@ -27,7 +27,7 @@ SAML remains valuable for organizations with **legacy systems** and long-standin
 
 ## What Is OIDC?
 
-OpenID Connect (OIDC) is a modern identity layer built on top of OAuth 2.0. It uses JSON Web Tokens (JWTs) and REST-based endpoints to securely share identity data between an identity provider (IdP) and your application.
+OpenID Connect (OIDC) is a modern identity layer built on top of OAuth 2.0. It uses JSON Web Tokens (JWTs) and REST-based endpoints to share identity data securely between an IdP and your application.
 
 Key characteristics include:
 
@@ -60,17 +60,17 @@ In practice, SAML remains the right fit for established enterprise systems, whil
 Key points:
 
 - **Built-in OIDC support**: SuperTokens can act as an OIDC provider or client. It plugs into OAuth/OIDC flows used by social logins and enterprise IdPs like Google, Azure AD, or Okta.
-- **SAML via integration**: SuperTokens is not a native SAML client. Instead, you can integrate with a service like [**BoxyHQ’s SAML Jackson**](https://supertokens.com/docs/authentication/enterprise/saml/boxy-hq-guide), which communicates with the enterprise IdP using SAML, then exposes OAuth endpoints that SuperTokens consumes.
+- **SAML via integration**: SuperTokens is not a native SAML client. Instead, you can integrate by using a service like [**BoxyHQ’s SAML Jackson**](https://supertokens.com/docs/authentication/enterprise/saml/boxy-hq-guide), which communicates with the enterprise IdP by using SAML, then exposes the OAuth endpoints that SuperTokens consumes.
 - **Unified session management**: Regardless of whether the identity came through OIDC or SAML, SuperTokens manages sessions and tokens in a consistent way across providers.
 
 ## When to Choose OIDC vs. SAML with SuperTokens
 
-The right protocol depends on the systems you need to support and the environments you’re integrating with. SuperTokens gives you the flexibility to use either, but the decision often comes down to whether you’re building for modern apps or connecting to established enterprise infrastructure.
+The right protocol depends on the systems you need to support and the environments you’re integrating with. SuperTokens gives you the flexibility to use either, but the decision often comes down to whether you’re building for modern apps or connecting to an established enterprise infrastructure.
 
 Use **OIDC** when you need:
 
 - Support for SPAs, mobile clients, and microservices
-- Lightweight tokens in JSON format and REST-friendly APIs
+- Lightweight tokens in the JSON format and REST-friendly APIs
 - Easy key rotation through the jwks_uri endpoint
 - Quick setup with broad IdP coverage (Google, Auth0, Azure AD)
 
@@ -88,9 +88,9 @@ SuperTokens simplifies how different protocols fit into your application’s aut
 
 **OIDC flow**
 
-- User selects an option like “Sign in with Google” or “Sign in with Azure”.
-- The backend uses [SuperTokens’ OIDC recipe](https://supertokens.com/docs/nodejs/modules/recipe_openid.html) to manage the OAuth/OIDC exchange.
-- Tokens are verified, and SuperTokens sets up the user session.
+- The user selects an option like “Sign in with Google” or “Sign in with Azure.”
+- The backend uses the [SuperTokens’ OIDC recipe](https://supertokens.com/docs/nodejs/modules/recipe_openid.html) to manage the OAuth/OIDC exchange.
+- The tokens are verified, and SuperTokens sets up the user session.
 
 **SAML flow (via SAML Jackson)**
 
@@ -98,9 +98,9 @@ SuperTokens simplifies how different protocols fit into your application’s aut
 - That assertion is translated into OAuth tokens (id_token, access_token).
 - SuperTokens consumes those tokens as if they came from a standard OAuth provider and manages the session.
 
-This approach keeps the developer experience uniform: whether the source is OIDC or SAML, SuperTokens ensures users are issued a secure session in the same way.
+This approach keeps the developer experience uniform. Whether the source is OIDC or SAML, SuperTokens ensures users are issued a secure session in the same way.
 
-## Security & Compliance Considerations
+## Security and Compliance Considerations
 
 Both SAML and OIDC are secure when implemented correctly, but each comes with its own risks and areas to watch. Understanding these differences helps teams choose the right protocol for their environment and compliance needs.
 
@@ -131,15 +131,18 @@ By following these practices, you reduce operational risks and ensure a smooth u
 
 ## Frequently Asked Questions
 
-**Q: Does SuperTokens support both OIDC and SAML natively?** A: OIDC is supported out of the box. SAML is available through integrations like **SAML Jackson**, which bridges SAML IdPs into OAuth/OIDC flows that SuperTokens can consume.
+**Q: Does SuperTokens support both OIDC and SAML natively?**
+OIDC is supported out of the box. SAML is available through integrations like **SAML Jackson**, which bridges SAML IdPs into OAuth/OIDC flows that SuperTokens can consume.
 
-**Q: Can I support both protocols simultaneously?** A: Yes. SuperTokens can unify sessions across providers, so users signing in with OIDC or SAML are handled consistently inside your application.
+**Q: Can I support both protocols simultaneously?**
+Yes. SuperTokens can unify sessions across providers, so users signing in with OIDC or SAML are handled consistently inside your application.
 
-**Q: Which protocol offers better performance?** A: OIDC is typically faster and lighter, since it uses JSON tokens and REST endpoints. SAML tends to be heavier because of XML parsing, certificate handling, and multiple redirect steps.
+**Q: Which protocol offers better performance?**
+OIDC is typically faster and lighter, since it uses JSON tokens and REST endpoints. SAML tends to be heavier because of XML parsing, certificate handling, and multiple redirect steps.
 
 ## Conclusion
 
-Choosing between OIDC and SAML isn’t about which protocol is “better,” but about which fits your environment. OIDC is the natural choice for modern apps &mdash; lightweight, API-friendly, and designed for SPAs, mobile, and cloud-native systems. SAML, on the other hand, remains critical for enterprises with established IdPs, compliance requirements, and XML-based workflows.
+Choosing between OIDC and SAML isn’t about which protocol is “better,” but about which is a better fit for your environment. OIDC is the natural choice for modern apps &mdash; lightweight, API-friendly, and designed for SPAs, mobile, and cloud-native systems. SAML, on the other hand, remains critical for enterprises with established IdPs, compliance requirements, and XML-based workflows.
 
 With SuperTokens, you don’t need to compromise. OIDC is supported natively, and SAML can be integrated through a bridging service like SAML Jackson. No matter the source, SuperTokens applies the same session model, giving you consistency, security, and a streamlined developer experience.
 
