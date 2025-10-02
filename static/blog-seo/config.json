@@ -3301,6 +3301,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-strategy\"\n            },\n            \"headline\": \"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-strategy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/oauth-grant-types-explained",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Confused by OAuth grant types? Learn how each one works, when to use it, and how SuperTokens simplifies implementation.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"OAuth Grant Types Explained: Which One Should You Use?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/oauth-grant-types-explained\" />",
+            "<meta property=\"og:description\" content=\"Confused by OAuth grant types? Learn how each one works, when to use it, and how SuperTokens simplifies implementation.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/oauth-grant-types-explained.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Confused by OAuth grant types? Learn how each one works, when to use it, and how SuperTokens simplifies implementation.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/oauth-grant-types-explained\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/oauth-grant-types-explained.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/oauth-grant-types-explained\">"
+        ],
+        "title": "OAuth Grant Types Explained: Which One Should You Use?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/oauth-grant-types-explained\"\n            },\n            \"headline\": \"Confused by OAuth grant types? Learn how each one works, when to use it, and how SuperTokens simplifies implementation.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/oauth-grant-types-explained.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    { 
         "path": "/blog/firebase-pricing",
         "metaTags": [
             "<meta name=\"description\" content=\"Explore Firebase’s free vs Blaze tiers, real-world cost examples, hidden charges, and compare with Auth0/Okta for transparent pricing clarity.\" />",
