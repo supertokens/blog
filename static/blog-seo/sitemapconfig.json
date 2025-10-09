@@ -311,7 +311,7 @@
     {
         "location": "https://supertokens.com/blog/oauth-grant-types-explained"
     },
-    {    
+    {
         "location": "https://supertokens.com/blog/firebase-pricing"
     },
     {
@@ -454,5 +454,8 @@
     },
     {
         "location": "https://supertokens.com/blog/cors-errors"
+    },
+    {
+        "location": "https://supertokens.com/blog/launch-week-02-open-source-auth-plugins"
     }
 ]
