@@ -6,7 +6,7 @@ cover: "what_is_a_yubikey.png"
 category: "yubikey, authentication, guide"
 author: "Maurice Saldivar"
 ---
-# Table of Contents
+## Table of Contents
 
   - [What Is a YubiKey?](#what-is-a-yubikey)
   - [The Core Protocols That Matter](#the-core-protocols-that-matter)
