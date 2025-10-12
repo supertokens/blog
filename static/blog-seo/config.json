@@ -3301,6 +3301,75 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-strategy\"\n            },\n            \"headline\": \"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-strategy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/oauth-grant-types-explained",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Confused by OAuth grant types? Learn how each one works, when to use it, and how SuperTokens simplifies implementation.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"OAuth Grant Types Explained: Which One Should You Use?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/oauth-grant-types-explained\" />",
+            "<meta property=\"og:description\" content=\"Confused by OAuth grant types? Learn how each one works, when to use it, and how SuperTokens simplifies implementation.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/oauth-grant-types-explained.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Confused by OAuth grant types? Learn how each one works, when to use it, and how SuperTokens simplifies implementation.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/oauth-grant-types-explained\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/oauth-grant-types-explained.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/oauth-grant-types-explained\">"
+        ],
+        "title": "OAuth Grant Types Explained: Which One Should You Use?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/oauth-grant-types-explained\"\n            },\n            \"headline\": \"Confused by OAuth grant types? Learn how each one works, when to use it, and how SuperTokens simplifies implementation.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/oauth-grant-types-explained.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/firebase-pricing",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore Firebase’s free vs Blaze tiers, real-world cost examples, hidden charges, and compare with Auth0/Okta for transparent pricing clarity.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Firebase Pricing–The Complete Guide\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/firebase-pricing\" />",
+            "<meta property=\"og:description\" content=\"Explore Firebase’s free vs Blaze tiers, real-world cost examples, hidden charges, and compare with Auth0/Okta for transparent pricing clarity.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/firebase-pricing.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore Firebase’s free vs Blaze tiers, real-world cost examples, hidden charges, and compare with Auth0/Okta for transparent pricing clarity.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/firebase-pricing\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/firebase-pricing.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/firebase-pricing\">"
+        ],
+        "title": "Firebase Pricing–The Complete Guide",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/firebase-pricing\"\n            },\n            \"headline\": \"Explore Firebase’s free vs Blaze tiers, real-world cost examples, hidden charges, and compare with Auth0/Okta for transparent pricing clarity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/firebase-pricing.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/why-startups-cant-afford-weak-auth",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Startups can't afford weak or overly complex authentication. Explore effective strategies to secure your business while keeping user experience seamless and efficient.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Why Startups Can't Afford Weak or Over-Engineered Authentication\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/why-startups-cant-afford-weak-auth\" />",
+            "<meta property=\"og:description\" content=\"Startups can't afford weak or overly complex authentication. Explore effective strategies to secure your business while keeping user experience seamless and efficient.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/why-startups-cant-afford-weak-auth.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Startups can't afford weak or overly complex authentication. Explore effective strategies to secure your business while keeping user experience seamless and efficient.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/why-startups-cant-afford-weak-auth\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/why-startups-cant-afford-weak-auth.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/why-startups-cant-afford-weak-auth\">"
+        ],
+        "title": "Why Startups Can't Afford Weak or Over-Engineered Authentication",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/why-startups-cant-afford-weak-auth\"\n            },\n            \"headline\": \"Startups can't afford weak or overly complex authentication. Explore effective strategies to secure your business while keeping user experience seamless and efficient.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/why-startups-cant-afford-weak-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
         "path": "/blog/stytch-pricing",
         "metaTags": [
             "<meta name=\"description\" content=\"Explore Stytch’s tiers, real‑world pricing examples, hidden fees, and comparison with Auth0/Okta for clear cost insights.\" />",
@@ -4313,72 +4382,26 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/cors-errors\"\n            },\n            \"headline\": \"Learn what causes CORS errors, how they impact your web app, and how to fix them securely with proper headers and backend configurations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/cors_errors.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
-        "path": "/blog/yubikeys",
+        "path": "/blog/launch-week-02-open-source-auth-plugins",
         "metaTags": [
-            "<meta name=\"description\" content=\"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\" />",
+            "<meta name=\"description\" content=\"Open-source auth plugins you’ll reuse: profiling, banning, CAPTCHA, tenancy tools, and telemetry. React/Node ready. \" />",
             "",
             "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"What Is a YubiKey and When to Use It vs. Authenticator Apps\" />",
+            "<meta property=\"og:title\" content=\"SuperTokens Launch Week 02: 7 Open-Source Auth Plugins\" />",
             "<meta property=\"og:type\" content=\"article\" />",
-            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/yubikeys\" />",
-            "<meta property=\"og:description\" content=\"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\"/>",
-            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/launch-week-02-open-source-auth-plugins\" />",
+            "<meta property=\"og:description\" content=\"Open-source auth plugins you’ll reuse: profiling, banning, CAPTCHA, tenancy tools, and telemetry. React/Node ready. \"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/launch-week-02-open-source-auth-plugins.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\" />",
-            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/yubikeys\" />",
-            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" /> ",
+            "<meta name=\"twitter:title\" content=\"Open-source auth plugins you’ll reuse: profiling, banning, CAPTCHA, tenancy tools, and telemetry. React/Node ready. \" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/launch-week-02-open-source-auth-plugins\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/launch-week-02-open-source-auth-plugins.png\" /> ",
             "<!--OG Tags-->",
-            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/yubikeys\">"
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/launch-week-02-open-source-auth-plugins\">"
         ],
-        "title": "What Is a YubiKey and When to Use It vs. Authenticator Apps",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/yubikeys\"\n            },\n            \"headline\": \"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
-    },
-    {
-        "path": "/blog/yubikeys",
-        "metaTags": [
-            "<meta name=\"description\" content=\"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\" />",
-            "",
-            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
-            "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"What Is a YubiKey and When to Use It vs. Authenticator Apps\" />",
-            "<meta property=\"og:type\" content=\"article\" />",
-            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/yubikeys\" />",
-            "<meta property=\"og:description\" content=\"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\"/>",
-            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" />",
-            "",
-            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\" />",
-            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/yubikeys\" />",
-            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" /> ",
-            "<!--OG Tags-->",
-            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/yubikeys\">"
-        ],
-        "title": "What Is a YubiKey and When to Use It vs. Authenticator Apps",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/yubikeys\"\n            },\n            \"headline\": \"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
-    },
-    {
-        "path": "/blog/yubikeys",
-        "metaTags": [
-            "<meta name=\"description\" content=\"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\" />",
-            "",
-            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
-            "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"What Is a YubiKey and When to Use It vs. Authenticator Apps\" />",
-            "<meta property=\"og:type\" content=\"article\" />",
-            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/yubikeys\" />",
-            "<meta property=\"og:description\" content=\"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\"/>",
-            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what_is_a_yubikey.png\" />",
-            "",
-            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\" />",
-            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/yubikeys\" />",
-            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what_is_a_yubikey.png\" /> ",
-            "<!--OG Tags-->",
-            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/yubikeys\">"
-        ],
-        "title": "What Is a YubiKey and When to Use It vs. Authenticator Apps",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/yubikeys\"\n            },\n            \"headline\": \"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/what_is_a_yubikey.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+        "title": "SuperTokens Launch Week 02: 7 Open-Source Auth Plugins",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/launch-week-02-open-source-auth-plugins\"\n            },\n            \"headline\": \"Open-source auth plugins you’ll reuse: profiling, banning, CAPTCHA, tenancy tools, and telemetry. React/Node ready. \",\n            \"image\": \"https://supertokens.com/blog-meta-images/launch-week-02-open-source-auth-plugins.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
