@@ -457,5 +457,8 @@
     },
     {
         "location": "https://supertokens.com/blog/launch-week-02-open-source-auth-plugins"
+    },
+    {
+        "location": "https://supertokens.com/blog/magiclinks"
     }
 ]
