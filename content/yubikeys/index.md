@@ -6,8 +6,62 @@ cover: "what_is_a_yubikey.png"
 category: "yubikey, authentication, guide"
 author: "Maurice Saldivar"
 ---
+# Table of Contents
 
-# What Is a YubiKey and When Should You Use It?
+  - [What Is a YubiKey?](#what-is-a-yubikey)
+  - [The Core Protocols That Matter](#the-core-protocols-that-matter)
+  - [YubiKey vs. Authenticator Apps: The Real Trade-offs](#yubikey-vs-authenticator-apps-the-real-trade-offs)
+  - [The Decision Framework](#the-decision-framework)
+  - [How YubiKeys Work: Under the Hood](#how-yubikeys-work-under-the-hood)
+    - [Hardware-Based Cryptography: Why It Matters](#hardware-based-cryptography-why-it-matters)
+    - [Protocol Deep Dive: More Than Just FIDO2](#protocol-deep-dive-more-than-just-fido2)
+    - [Authentication Flows in Practice](#authentication-flows-in-practice)
+    - [The Hidden Complexity: Resident vs Non-Resident Credentials](#the-hidden-complexity-resident-vs-non-resident-credentials)
+    - [What Actually Happens When You Touch the Button](#what-actually-happens-when-you-touch-the-button)
+  - [What Are Authenticator Apps and How Do They Differ?](#what-are-authenticator-apps-and-how-do-they-differ)
+    - [TOTP: Simple Math, Reasonable Security](#totp-simple-math-reasonable-security)
+    - [Storage Reality: Where Your Seeds Actually Live](#storage-reality-where-your-seeds-actually-live)
+    - [The User Flow: Convenience vs. Security Theater](#the-user-flow-convenience-vs-security-theater)
+    - [Cloud Sync: The Devil's Bargain](#cloud-sync-the-devils-bargain)
+    - [Why Authenticator Apps Persist Despite Limitations](#why-authenticator-apps-persist-despite-limitations)
+  - [Side-by-Side Comparison: Security, UX \& Durability](#side-by-side-comparison-security-ux--durability)
+    - [Phishing Resistance](#phishing-resistance)
+    - [Form Factor and Dependencies](#form-factor-and-dependencies)
+    - [OTP Strength and Implementation](#otp-strength-and-implementation)
+    - [Physical Durability](#physical-durability)
+    - [Practical Comparison Table](#practical-comparison-table)
+  - [When to Choose a YubiKey](#when-to-choose-a-yubikey)
+    - [High-Value Targets](#high-value-targets)
+    - [Phishing-First Threat Models](#phishing-first-threat-models)
+    - [Passwordless Ambitions](#passwordless-ambitions)
+    - [Compliance Requirements](#compliance-requirements)
+    - [Making the Decision](#making-the-decision)
+  - [When Authenticator Apps Make Sense](#when-authenticator-apps-make-sense)
+    - [Broad User Base](#broad-user-base)
+    - [Cost-Sensitive Scenarios](#cost-sensitive-scenarios)
+    - [Multi-Device Flexibility](#multi-device-flexibility)
+    - [Supplementary Factor](#supplementary-factor)
+  - [Implementing Both Methods in Your Auth Stack](#implementing-both-methods-in-your-auth-stack)
+    - [WebAuthn Integration for YubiKeys](#webauthn-integration-for-yubikeys)
+    - [TOTP Integration for Apps](#totp-integration-for-apps)
+    - [Flow Design](#flow-design)
+    - [UX Tips](#ux-tips)
+  - [How SuperTokens Can Orchestrate YubiKey \& App-Based 2FA](#how-supertokens-can-orchestrate-yubikey--app-based-2fa)
+    - [Extensible Recipes](#extensible-recipes)
+    - [Custom TOTP Recipe](#custom-totp-recipe)
+    - [Unified Session Management](#unified-session-management)
+    - [Developer Example](#developer-example)
+  - [Best Practices \& Pitfalls to Avoid](#best-practices--pitfalls-to-avoid)
+    - [Backup Strategies](#backup-strategies)
+    - [Do Not Over-Whitelist](#do-not-over-whitelist)
+    - [Monitor and Log](#monitor-and-log)
+    - [User Education](#user-education)
+  - [Conclusion \& Next Steps](#conclusion--next-steps)
+    - [Decision Matrix Recap](#decision-matrix-recap)
+    - [Call to Action](#call-to-action)
+    - [Resources](#resources)
+
+## What Is a YubiKey?
 
 A YubiKey is a hardware authentication device that generates cryptographic proofs of your identity. Unlike authenticator apps that live on your phone or SMS codes that traverse insecure networks, a YubiKey is a physical item that you plug into your device. The core value proposition is simple: YubiKey authentication can't be phished, copied, or intercepted.
 
