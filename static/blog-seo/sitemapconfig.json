@@ -309,6 +309,9 @@
         "location": "https://supertokens.com/blog/identity-and-access-management-strategy"
     },
     {
+        "location": "https://supertokens.com/blog/add-mfa-to-nextjs"
+    },
+    {    
         "location": "https://supertokens.com/blog/oauth-grant-types-explained"
     },
     {
