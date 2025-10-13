@@ -4451,6 +4451,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/launch-week-02-open-source-auth-plugins\"\n            },\n            \"headline\": \"Open-source auth plugins you’ll reuse: profiling, banning, CAPTCHA, tenancy tools, and telemetry. React/Node ready. \",\n            \"image\": \"https://supertokens.com/blog-meta-images/launch-week-02-open-source-auth-plugins.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/magiclinks",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how magic links work, their benefits, and how to implement them for secure, seamless passwordless authentication.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Magic Links Tutorial Secure Passwordless Login Made Simple\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/magiclinks\" />",
+            "<meta property=\"og:description\" content=\"Learn how magic links work, their benefits, and how to implement them for secure, seamless passwordless authentication.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/magic_links.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how magic links work, their benefits, and how to implement them for secure, seamless passwordless authentication.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/magiclinks\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/magic_links.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/magiclinks\">"
+        ],
+        "title": "Magic Links Tutorial Secure Passwordless Login Made Simple",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/magiclinks\"\n            },\n            \"headline\": \"Learn how magic links work, their benefits, and how to implement them for secure, seamless passwordless authentication.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/magic_links.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
         "path": "/blog/yubikeys",
         "metaTags": [
             "<meta name=\"description\" content=\"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\" />",
