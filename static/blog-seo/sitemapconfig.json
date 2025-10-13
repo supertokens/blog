@@ -311,6 +311,9 @@
     {
         "location": "https://supertokens.com/blog/oidc-vs-saml"
     },
+    {
+        "location": "https://supertokens.com/blog/add-mfa-to-nextjs"
+    },
     {    
         "location": "https://supertokens.com/blog/oauth-grant-types-explained"
     },
