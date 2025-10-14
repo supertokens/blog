@@ -312,6 +312,15 @@
         "location": "https://supertokens.com/blog/biometric-auth"
     },
     {    
+        "location": "https://supertokens.com/blog/oidc-vs-saml"
+    },
+    {
+        "location": "https://supertokens.com/blog/add-mfa-to-nextjs"
+    },
+    {    
+        "location": "https://supertokens.com/blog/oauth-grant-types-explained"
+    },
+    {
         "location": "https://supertokens.com/blog/firebase-pricing"
     },
     {
@@ -454,5 +463,14 @@
     },
     {
         "location": "https://supertokens.com/blog/cors-errors"
+    },
+    {
+        "location": "https://supertokens.com/blog/launch-week-02-open-source-auth-plugins"
+    },
+    {
+        "location": "https://supertokens.com/blog/magiclinks"
+    },
+    {
+        "location": "https://supertokens.com/blog/yubikeys"
     }
 ]
