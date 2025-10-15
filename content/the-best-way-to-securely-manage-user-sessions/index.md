@@ -68,7 +68,7 @@ That summarizes the discussion of the conceptual flow. Below, are some additiona
 4. Detection of refresh token theft does not require the database to explicitly store invalidated tokens. This can be achieved through structuring the refresh tokens using parent-child hierarchies (see Github implementation).
 5. Implementations with JWT access tokens can be as scalable, in terms of space and time complexity, as session flow 5 in part 1. We only need to store one refresh token per logged in user per device in the database.
 
-That concludes the bulk of the matter we have on session management. Below you will find a GitHub repository with the source code that deals with all of the implementation issues. It is highly customizable to your requirements and can be quickly integrated into your system. It is also very secure in terms of prevention and detection of token theft. We’d love to know what you think of it — please do leave a comment or [email](mailto:team@supertokens.com) us.
+That concludes the bulk of the matter we have on session management. Below you will find a GitHub repository with the source code that deals with all of the implementation issues. It is highly customizable to your requirements and can be quickly integrated into your system. It is also very secure in terms of prevention and detection of token theft. We’d love to know what you think of it — please do leave a comment or [email](mailto:support@supertokens.com) us.
 
 ## SuperTokens Library
 
@@ -91,7 +91,7 @@ For services that deal with **very sensitive data** (eg: a stock trading platfor
 
 For all other services, use our flow with **JWT access tokens** (for easier scalability) and **long lived refresh tokens**. You can also use blacklisting to instantly revoke access tokens (this would increase the time per API, but you would save on space in comparison to using Opaque access tokens). However, if you do not want to rely on one shared key for all your authentication (even if that key keeps changing), or if saving network bandwidth is of priority, then use Opaque access tokens. Additionally, security can be improved through the use of 2-factor authentication or passwordless login methods. The latter has the benefit of not requiring users to remember yet another password.
 
-And that’s it! Please do let us know what you thought while reading this through the comments or by emailing us [here](mailto:team@supertokens.com). We hope this was useful.
+And that’s it! Please do let us know what you thought while reading this through the comments or by emailing us [here](mailto:support@supertokens.com). We hope this was useful.
 
 
 
