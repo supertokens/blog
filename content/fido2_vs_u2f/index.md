@@ -46,3 +46,18 @@ However, platform authenticators tie credentials to specific devices. A credenti
 
 The credential portability question affects architectural decisions. Applications requiring cross-device authentication should support external keys even when implementing platform authenticators. Users traveling without their primary device need a fallback method. Many organizations deploy hybrid approaches: platform authenticators for convenience on primary devices, external keys for backup and cross-device scenarios.
 
+## 4. Browser & Platform Support
+
+U2F reached peak browser support around 2017 before browsers began deprecating it in favor of FIDO2. Chrome implemented U2F support first, followed by Firefox and Opera. Safari never implemented U2F natively. Edge supported it through FIDO 2.0 compatibility layers rather than native U2F implementation.
+
+Modern browsers have removed or deprecated U2F JavaScript APIs. Chrome deprecated the U2F API in Chrome 98 (2022) and removed it entirely in Chrome 115 (2023). Firefox deprecated U2F in favor of WebAuthn starting in version 60. Developers using U2F APIs receive browser console warnings directing them to migrate to FIDO2.
+
+FIDO2 through WebAuthn has universal modern browser support. Chrome, Safari, Firefox, and Edge all implement the WebAuthn standard with full functionality. Mobile browsers on iOS and Android support FIDO2, enabling authentication on smartphones and tablets. This comprehensive support eliminates the compatibility concerns that complicated U2F deployments.
+
+Platform support extends beyond browsers to operating systems. Windows 10 and later include Windows Hello as a platform authenticator. macOS and iOS support Touch ID and Face ID through WebAuthn. Android devices use fingerprint sensors and facial recognition as platform authenticators. Linux support exists through libfido2 and browser implementations.
+
+The deprecation timeline matters for existing deployments. Applications still using U2F APIs will break as browsers complete the removal process. The migration path requires rewriting authentication code to use WebAuthn APIs. Most security keys supporting U2F also support FIDO2, so hardware replacement isn't necessary, but code changes are required.
+
+For new implementations, FIDO2 is the only viable choice. Building on U2F today means implementing a deprecated standard with shrinking browser support. The technical debt accumulates immediately. Organizations planning security key deployments should implement FIDO2 from the start to avoid forced migration later.
+
+Cross-platform compatibility also differs significantly. U2F required platform-specific workarounds and polyfills for full coverage. FIDO2 works consistently across platforms through standard WebAuthn APIs. Testing and maintenance become simpler when the authentication mechanism behaves identically on Windows, macOS, iOS, Android, and Linux.
