@@ -176,7 +176,7 @@ Strong implementation isn't just about technology &mdash; it's about trust, usab
 ![Supertokens](Supertokens.png)
 
 Biometric authentication is powerful on its own, but its true value emerges when paired with a platform that ensures security, flexibility, and ease of use.
-[**SuperTokens**](https://supertokens.com/) brings this together by enabling WebAuthn-based biometrics with strong session management, customizable SDKs, and enterprise-grade protections.
+[**SuperTokens**](https://supertokens.com/) brings this together by enabling WebAuthn-based biometrics through [passkeys](https://supertokens.com/docs/authentication/passkeys/introduction) along with strong session management, customizable SDKs, and enterprise-grade protections.
 
 - **WebAuthn Integration** enables SuperTokens users to implement passwordless flows and customize authentication experiences by using WebAuthn APIs. The platform provides flexible authentication recipes that can incorporate biometric authentication alongside traditional methods.
 - **Comprehensive Session Management** handles secure session creation, automatic token rotation, and anti-CSRF protection that works seamlessly with biometric authentication flows. SuperTokens manages the complex session lifecycle while enabling biometric convenience.
