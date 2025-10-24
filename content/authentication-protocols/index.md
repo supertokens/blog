@@ -7,10 +7,14 @@ category: "programming"
 author: "Nemanja Babic"
 ---
 
-  
+  ## Table of Content
 
-# Understanding Authentication Protocols: Types and Security Measures
-
+1. [Introduction](#introduction)
+2. [What Are Authentication Protocols?](#what-are-authentication-protocols)
+3. [Types of Authentication Protocols](#types-of-authentication-protocols)
+4. [Email Authentication Protocols](#email-authentication-protocols)
+5. [Implementing Authentication Protocols](#implementing-authentication-protocols)
+6. [Conclusion](#conclusion)
   
 
 ## Introduction
