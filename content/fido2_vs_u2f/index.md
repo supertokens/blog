@@ -61,3 +61,41 @@ The deprecation timeline matters for existing deployments. Applications still us
 For new implementations, FIDO2 is the only viable choice. Building on U2F today means implementing a deprecated standard with shrinking browser support. The technical debt accumulates immediately. Organizations planning security key deployments should implement FIDO2 from the start to avoid forced migration later.
 
 Cross-platform compatibility also differs significantly. U2F required platform-specific workarounds and polyfills for full coverage. FIDO2 works consistently across platforms through standard WebAuthn APIs. Testing and maintenance become simpler when the authentication mechanism behaves identically on Windows, macOS, iOS, Android, and Linux.
+
+## 5. Passwordless Capability
+
+U2F cannot function without passwords. The protocol assumes a password or other primary credential exists before the security key verification occurs. This architectural constraint means organizations using U2F must maintain complete password infrastructure: secure storage, reset mechanisms, complexity requirements, and breach monitoring.
+
+FIDO2 enables true passwordless authentication through resident credentials, commonly called passkeys. The authenticator stores the private key internally and can present it during authentication without requiring a password first. Users prove their identity through biometrics, PIN entry on the security key itself, or platform authenticator verification.
+
+The technical difference lies in how credentials are stored and retrieved. U2F stores credential IDs server-side and sends them to the authenticator during authentication. The authenticator needs this credential ID to locate the correct private key. This design requires the user to identify themselves with a password before the server can provide the credential ID.
+
+FIDO2 resident credentials reverse this flow. The authenticator stores both the credential and its identifier internally. When a user initiates authentication, the authenticator can list available credentials for the requested domain without server involvement. The user selects which identity to use, often through a device-native interface showing registered accounts.
+
+```javascript
+// FIDO2 resident credential registration
+navigator.credentials.create({
+  publicKey: {
+    challenge: challengeBytes,
+    rp: { name: "Example Corp", id: "example.com" },
+    user: {
+      id: userIdBytes,
+      name: "user@example.com",
+      displayName: "User Name"
+    },
+    authenticatorSelection: {
+      residentKey: "required",
+      userVerification: "required"
+    },
+    pubKeyCredParams: [{ alg: -7, type: "public-key" }]
+  }
+});
+```
+
+The `residentKey: "required"` parameter instructs the authenticator to store the credential internally. The `userVerification: "required"` parameter ensures the authenticator verifies the user through biometrics or PIN before signing authentication challenges.
+
+Passwordless authentication eliminates entire categories of attacks. Phishing, credential stuffing, and password database breaches become irrelevant when no passwords exist. Users cannot choose weak passwords or reuse credentials across services. The attack surface shrinks to the security of the authenticator itself and the recovery mechanisms implemented.
+
+However, passwordless deployment requires careful planning around account recovery. When users lose or reset their device, they lose access to stored credentials. Organizations need backup authenticators, recovery codes, or support processes to restore access. This complexity exceeds traditional password reset flows but the security benefits often justify the additional overhead.
+
+The user experience improves significantly in passwordless scenarios. Authentication happens in one step rather than two. Users avoid typing passwords on potentially compromised devices. The authentication gesture (fingerprint scan, face recognition, or security key tap) provides faster access than password entry followed by second-factor verification.
