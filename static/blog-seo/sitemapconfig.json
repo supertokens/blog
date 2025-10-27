@@ -472,5 +472,8 @@
     },
     {
         "location": "https://supertokens.com/blog/yubikeys"
+    },
+    {
+        "location": "https://supertokens.com/blog/authentication-protocols"
     }
 ]
