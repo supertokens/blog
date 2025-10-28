@@ -1,8 +1,8 @@
 ---
 title: Enterprise Identity Management What You Need to Know in 2025
 description: "Explore how enterprise identity management works, the challenges it solves, and what features modern orgs need for secure, scalable access control."
-date: "10/15/2025"
-cover: "TODO.png"
+date: "10/27/2025"
+cover: "EIM.png"
 category: "authentication, compliance, enterprise"
 author: "Maurice Saldivar"
 ---
