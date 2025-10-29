@@ -1,7 +1,7 @@
 ---
 title: "WebAuthn Explained"
 description: "A comprehensive guide to understanding WebAuthn, its benefits, and implementation details."
-date: 2025-09-14
+date: 2025-10-14
 cover: "webauthn-explained.png"
 author: "Joel Coutinho"
 category: "programming"
