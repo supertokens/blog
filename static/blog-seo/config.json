@@ -4451,6 +4451,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/cors-errors\"\n            },\n            \"headline\": \"Learn what causes CORS errors, how they impact your web app, and how to fix them securely with proper headers and backend configurations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/cors_errors.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/webauthn-explained",
+        "metaTags": [
+            "<meta name=\"description\" content=\"A comprehensive guide to understanding WebAuthn, its benefits, and implementation details.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"WebAuthn Explained\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/webauthn-explained\" />",
+            "<meta property=\"og:description\" content=\"A comprehensive guide to understanding WebAuthn, its benefits, and implementation details.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/webauthn-explained.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"A comprehensive guide to understanding WebAuthn, its benefits, and implementation details.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/webauthn-explained\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/webauthn-explained.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/webauthn-explained\">"
+        ],
+        "title": "WebAuthn Explained",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/webauthn-explained\"\n            },\n            \"headline\": \"A comprehensive guide to understanding WebAuthn, its benefits, and implementation details.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/webauthn-explained.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
         "path": "/blog/launch-week-02-open-source-auth-plugins",
         "metaTags": [
             "<meta name=\"description\" content=\"Open-source auth plugins you’ll reuse: profiling, banning, CAPTCHA, tenancy tools, and telemetry. React/Node ready. \" />",
