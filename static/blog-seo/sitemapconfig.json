@@ -311,8 +311,6 @@
     {
         "location": "https://supertokens.com/blog/biometric-auth"
     },
-<<<<<<< HEAD
-=======
     {    
         "location": "https://supertokens.com/blog/oidc-vs-saml"
     },
@@ -322,7 +320,6 @@
     {    
         "location": "https://supertokens.com/blog/oauth-grant-types-explained"
     },
->>>>>>> a45722a2060e1b05226c85dc9d468c5a3c97b706
     {
         "location": "https://supertokens.com/blog/firebase-pricing"
     },
