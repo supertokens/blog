@@ -31,7 +31,7 @@ module.exports = [
   },
   {
     name: "Rishabh Poddar",
-    jobTitle: "Co-Founder and CTO at SuperTokens",
+    jobTitle: "Ex-CTO at SuperTokens",
     image: "rishabh.jpg",
     socials: [
       {

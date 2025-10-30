@@ -9,7 +9,7 @@ author: "Joel Coutinho"
 
 At SuperTokens, we believe first impressions matter—especially when it comes to onboarding. So we rebuilt the entire experience to deliver a setup flow that's intuitive, interactive, and tailored to your tech stack. The result? Developers get to their first "aha" moment faster than ever before.
 
-Our new onboarding experience is live—and it’s already converting **68% better** than the old one.
+In this blog, SuperTokens Designer [Nevil Butani](https://www.linkedin.com/in/nevil-butani-b726a1177/) and Frontend Engineer [Favour Ohanekwu](https://www.linkedin.com/in/favourohanekwu/) share how they developed a new onboarding experience that’s converting **68% better** than the old one.
 
 ## 🧩 What Was Broken?
 Before this overhaul, setting up SuperTokens felt more like assembling IKEA furniture without a manual:
