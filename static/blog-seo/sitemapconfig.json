@@ -312,6 +312,9 @@
         "location": "https://supertokens.com/blog/solidjs-auth"
     },
     {    
+        "location": "https://supertokens.com/blog/biometric-auth"
+    },
+    {    
         "location": "https://supertokens.com/blog/oidc-vs-saml"
     },
     {
@@ -465,6 +468,9 @@
         "location": "https://supertokens.com/blog/cors-errors"
     },
     {
+        "location": "https://supertokens.com/blog/webauthn-explained"
+    },
+    {
         "location": "https://supertokens.com/blog/launch-week-02-open-source-auth-plugins"
     },
     {
@@ -472,5 +478,8 @@
     },
     {
         "location": "https://supertokens.com/blog/yubikeys"
+    },
+    {
+        "location": "https://supertokens.com/blog/authentication-protocols"
     }
 ]
