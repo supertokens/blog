@@ -17,7 +17,7 @@ If you’re building with SolidJS today, the question isn’t *whether* you need
 
 SolidJS doesn’t include a built-in authentication system, so developers typically choose between a few common approaches. Each option varies in complexity, scalability, and security &mdash; and the right choice depends on how far you expect your app to grow.
 
-- **Manual JWT / DIY setup**: The simplest path is to store JWTs in `localStorage` and attach them to `fetch` requests. It works for prototypes but exposes tokens to XSS attacks and makes session refresh logic unreliable.
+- **Manual JWT / DIY setup**: The simplest path is to store JWTs in `localStorage` and attach them to `fetch` requests. This works for prototypes but exposes tokens to XSS attacks and makes session refresh logic unreliable.
 - **Firebase or Auth0**: These managed services handle the heavy lifting for you &mdash; from signup forms to OAuth. They’re fast to integrate but can introduce vendor lock-in, pricing surprises, and limited backend flexibility.
 - **Authentication frameworks like SuperTokens**: A balanced approach that gives you full control over your backend while providing ready-to-use frontend components, session management, and social login integrations &mdash; all open source and easily adaptable to SolidJS.
 
@@ -25,13 +25,13 @@ If you care about long-term security and flexibility, an open-source authenticat
 
 ## What Features Should a SolidJS Authentication Framework Provide?
 
-A good authentication framework should handle the complex parts of identity management so you can focus on your app, not on token lifecycles or OAuth edge cases. The goal is to simplify signup and login without sacrificing flexibility or security.
+A good authentication framework should handle the complex parts of identity management so you can focus on your app, not on token lifecycles or OAuth edge cases. The goal is to simplify signup and login, without sacrificing flexibility or security.
 
 - **Signup and login forms out of the box**: Save time on UI work while ensuring consistent validation and error handling.
 - **Session management with refresh tokens**: Keep users logged in securely without exposing tokens or forcing frequent reauthentication.
 - **Social login providers (Google, GitHub, etc.)**: Reduce signup friction and improve user adoption with built-in OAuth flows.
 - **Passwordless or OTP login**: Support email or phone-based login for better UX and fewer password resets.
-- **Seamless integration with SolidJS frontends and backend APIs**: Enable smooth communication between client and server while maintaining session integrity.
+- **Seamless integration with SolidJS frontends and backend APIs**: Enable smooth communication between the client and server while maintaining session integrity.
 
 A SolidJS-ready authentication framework should abstract away token logic, handle sessions automatically, and integrate naturally with your existing stack &mdash; giving you production-grade security without slowing development.
 
@@ -56,7 +56,7 @@ supertokens.init({
 
 SuperTokens provides a developer-friendly way to build authentication in SolidJS apps &mdash; combining security, modularity, and open-source control without locking you into a proprietary service.
 
-## Step-by-step: Adding SuperTokens to a SolidJS App
+## Step-By-Step: Adding SuperTokens to a SolidJS App
 
 Implementing SuperTokens in a SolidJS project follows a straightforward flow that connects the frontend and backend securely while keeping code minimal.
 
@@ -80,7 +80,7 @@ Point the client toward the backend’s authentication routes and ensure request
 await fetch("/api/user", { credentials: "include" });
 ```
 
-This allows SolidJS components to interact with protected endpoints without manually attaching JWTs.
+This allows SolidJS components to interact with protected endpoints, without manually attaching JWTs.
 
 ### 3. Add a Signup or Login Form
 
@@ -88,7 +88,7 @@ Use [SuperTokens’ prebuilt UI components](https://supertokens.com/docs/referen
 
 ### 4. Test Authentication and Route Protection
 
-Once users can sign in, verify session persistence after reloads, and restrict access to protected routes when no session exists.
+Once users can sign in, you should verify session persistence after reloads and restrict access to protected routes when no session exists.
 
 ```js
 if (!session) navigate("/login");
@@ -102,9 +102,9 @@ In short, SuperTokens handles the session layer while keeping your SolidJS codeb
 
 While SuperTokens offers an open-source, framework-friendly approach, several other authentication options are available for SolidJS developers. Each comes with its own benefits and trade-offs depending on your project’s scale, budget, and security requirements.
 
-- **Firebase Auth**: A quick way to get started with authentication using Google’s ecosystem. It offers hosted UI components and SDKs for all major frameworks, including web. However, it can introduce long-term vendor lock-in, and costs can rise as user counts grow.
+- **Firebase Auth**: A quick way to get started with authentication by using Google’s ecosystem. It offers hosted UI components and SDKs for all major frameworks, including web. However, it can introduce long-term vendor lock-in, and costs can rise as user counts grow.
 - **Auth0**: A feature-rich platform that supports nearly every authentication flow imaginable. Ideal for enterprise use cases, but the pricing model and reliance on a third-party vendor can make it less attractive for smaller teams or privacy-sensitive projects.
-- **Clerk and Magic**: Designed for fast developer onboarding with ready-made UIs and SaaS-hosted APIs. They provide great developer experience but rely on external services, limiting flexibility for custom session handling or on-prem deployment.
+- **Clerk and Magic**: Designed for fast developer onboarding with ready-made UIs and SaaS-hosted APIs. They provide great developer experience but rely on external services, which limits flexibility for custom session handling or on-prem deployment.
 - **Manual JWT or session logic**: Building your own authentication layer gives full control and zero dependencies, but maintaining secure session management at scale is error-prone. It’s generally suitable only for prototypes or small internal tools.
 
 Ultimately, SuperTokens stands out for SolidJS developers who need scalable, open-source authentication that integrates easily with both frontend and backend frameworks &mdash; offering flexibility without vendor lock-in.
@@ -125,7 +125,7 @@ Use a dedicated authentication framework like SuperTokens, which provides backen
 
 **Does SuperTokens support passwordless login in SolidJS?**
 
-Yes. SuperTokens offers a [passwordless recipe](https://supertokens.com/docs/web-js/0.2.x/modules/recipe_passwordless.html) that supports login via email or phone, enabling smoother, secure authentication without passwords.
+Yes. SuperTokens offers a [passwordless recipe](https://supertokens.com/docs/web-js/0.2.x/modules/recipe_passwordless.html) that supports login via email or phone, and enables smoother, secure authentication without passwords.
 
 ## Conclusion
 
@@ -133,4 +133,4 @@ Authentication is one area where shortcuts don’t scale. DIY JWT setups often e
 
 SuperTokens offers a balanced path forward &mdash; an open-source solution that integrates cleanly with SolidJS, supports modern authentication flows, and keeps control in your hands.
 
-**Start building securely**: Try SuperTokens with your SolidJS app today through the [quickstart guide](https://supertokens.com/docs/quickstart/introduction).
+**Start building securely**: Try SuperTokens with your SolidJS app today by using the [quickstart guide](https://supertokens.com/docs/quickstart/introduction).
