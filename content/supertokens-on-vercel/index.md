@@ -307,9 +307,9 @@ export default function ProtectedPage() {
 }
 ```
 
-This page checks if a valid session exists. If not signed in → redirects user to /auth.
+This page checks if a valid session exists. If not signed in → redirects user to `/auth`.
 
-If signed in → displays their userId or token payload.
+If signed in → displays their `userId` or token payload.
 
 **Initialize SuperTokens (Client Side)**
 
