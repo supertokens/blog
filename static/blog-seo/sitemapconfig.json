@@ -222,6 +222,21 @@
         "location": "https://supertokens.com/blog/flask-user-auth"
     },
     {
+        "location": "https://supertokens.com/blog/multi-factor-authentication-examples"
+    },
+    {
+        "location": "https://supertokens.com/blog/nextauth-alternatives"
+    },
+    {
+        "location": "https://supertokens.com/blog/react-user-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/idp-auth"
+    },
+    {
+        "location": "https://supertokens.com/blog/open-source-identity-management"
+    },
+    {
         "location": "https://supertokens.com/blog/iam-challenges"
     },
     {
@@ -288,9 +303,183 @@
         "location": "https://supertokens.com/blog/choosing-the-right-authentication-provider"
     },
     {
+        "location": "https://supertokens.com/blog/password-cracking-and-how-to-protect-against-them"
+    },
+    {
         "location": "https://supertokens.com/blog/identity-and-access-management-strategy"
     },
     {
         "location": "https://supertokens.com/blog/workos-alternatives"
+    },
+    {    
+        "location": "https://supertokens.com/blog/biometric-auth"
+    },
+    {    
+        "location": "https://supertokens.com/blog/oidc-vs-saml"
+    },
+    {
+        "location": "https://supertokens.com/blog/add-mfa-to-nextjs"
+    },
+    {    
+        "location": "https://supertokens.com/blog/oauth-grant-types-explained"
+    },
+    {
+        "location": "https://supertokens.com/blog/firebase-pricing"
+    },
+    {
+        "location": "https://supertokens.com/blog/why-startups-cant-afford-weak-auth"
+    },
+    {
+        "location": "https://supertokens.com/blog/stytch-pricing"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-an-identity-provider"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-b2b-iam"
+    },
+    {
+        "location": "https://supertokens.com/blog/descope-pricing"
+    },
+    {
+        "location": "https://supertokens.com/blog/rs256-vs-hs256"
+    },
+    {
+        "location": "https://supertokens.com/blog/ping-identity"
+    },
+    {
+        "location": "https://supertokens.com/blog/auth-saas"
+    },
+    {
+        "location": "https://supertokens.com/blog/top-auth0-alternatives-in-2025"
+    },
+    {
+        "location": "https://supertokens.com/blog/credential-management"
+    },
+    {
+        "location": "https://supertokens.com/blog/mastering-nextjs-api-routes"
+    },
+    {
+        "location": "https://supertokens.com/blog/enhancing-your-nextjs-application-with-middleware"
+    },
+    {
+        "location": "https://supertokens.com/blog/pillars-of-a-ciam-strategy-secure-scale-and-personalize-customer-access"
+    },
+    {
+        "location": "https://supertokens.com/blog/risk-based-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-passwordless-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/firebase-alternatives"
+    },
+    {
+        "location": "https://supertokens.com/blog/enumeration-attack"
+    },
+    {
+        "location": "https://supertokens.com/blog/webhook-vs-api"
+    },
+    {
+        "location": "https://supertokens.com/blog/multi-tenant-architecture"
+    },
+    {
+        "location": "https://supertokens.com/blog/otp-bots"
+    },
+    {
+        "location": "https://supertokens.com/blog/integrating-oauth-providers-for-seamless-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/top-8-identity-management-solutions-for-developers-and-businesses"
+    },
+    {
+        "location": "https://supertokens.com/blog/cloud-based-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/2fa-services"
+    },
+    {
+        "location": "https://supertokens.com/blog/nextjs-metadata"
+    },
+    {
+        "location": "https://supertokens.com/blog/machine-to-machine-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/sim-swapping"
+    },
+    {
+        "location": "https://supertokens.com/blog/auth0-pricing-the-complete-guide"
+    },
+    {
+        "location": "https://supertokens.com/blog/okta-vs-onelogin"
+    },
+    {
+        "location": "https://supertokens.com/blog/identity-and-access-management-tools"
+    },
+    {
+        "location": "https://supertokens.com/blog/single-sign-on-examples"
+    },
+    {
+        "location": "https://supertokens.com/blog/authelia-vs-keycloak"
+    },
+    {
+        "location": "https://supertokens.com/blog/okta-vs-azure-ad"
+    },
+    {
+        "location": "https://supertokens.com/blog/multi-factor-auth-cost"
+    },
+    {
+        "location": "https://supertokens.com/blog/phishing-resistant-mfa"
+    },
+    {
+        "location": "https://supertokens.com/blog/lambda-authorizers"
+    },
+    {
+        "location": "https://supertokens.com/blog/revamping-onboarding"
+    },
+    {
+        "location": "https://supertokens.com/blog/supertokens-extensions"
+    },
+    {
+        "location": "https://supertokens.com/blog/angular-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/rethinking-documentation"
+    },
+    {
+        "location": "https://supertokens.com/blog/cli-overhaul"
+    },
+    {
+        "location": "https://supertokens.com/blog/supertokens-mcp-toolkit"
+    },
+    {
+        "location": "https://supertokens.com/blog/passkeys-vs-passwords"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-to-integrate-clerk-with-supabase"
+    },
+    {
+        "location": "https://supertokens.com/blog/sso-providers"
+    },
+    {
+        "location": "https://supertokens.com/blog/launch-week-1-recap"
+    },
+    {
+        "location": "https://supertokens.com/blog/cors-errors"
+    },
+    {
+        "location": "https://supertokens.com/blog/webauthn-explained"
+    },
+    {
+        "location": "https://supertokens.com/blog/launch-week-02-open-source-auth-plugins"
+    },
+    {
+        "location": "https://supertokens.com/blog/magiclinks"
+    },
+    {
+        "location": "https://supertokens.com/blog/yubikeys"
+    },
+    {
+        "location": "https://supertokens.com/blog/authentication-protocols"
     }
 ]
