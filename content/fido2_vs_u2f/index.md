@@ -99,3 +99,32 @@ Passwordless authentication eliminates entire categories of attacks. Phishing, c
 However, passwordless deployment requires careful planning around account recovery. When users lose or reset their device, they lose access to stored credentials. Organizations need backup authenticators, recovery codes, or support processes to restore access. This complexity exceeds traditional password reset flows but the security benefits often justify the additional overhead.
 
 The user experience improves significantly in passwordless scenarios. Authentication happens in one step rather than two. Users avoid typing passwords on potentially compromised devices. The authentication gesture (fingerprint scan, face recognition, or security key tap) provides faster access than password entry followed by second-factor verification.
+
+## Comparison Table
+
+| Feature | U2F | FIDO2 |
+|---------|-----|-------|
+| **Use Case** | 2FA only | 2FA + Passwordless |
+| **Standards** | U2F API | WebAuthn + CTAP |
+| **Devices** | Hardware keys | Hardware + platform authenticators |
+| **Browser Support** | Limited (older Chrome/Firefox) | Broad (modern browsers + OS) |
+| **Passwordless Support** | ✗ | ✓ |
+
+
+## Which Should You Use Today?
+
+U2F is legacy technology. Browsers have deprecated the JavaScript APIs, and complete removal is underway. Organizations still using U2F face forced migration as browser support ends. The standard served its purpose in establishing phishing-resistant authentication, but its time has passed.
+
+FIDO2 is the current standard for phishing-resistant authentication. Apple, Google, and Microsoft have adopted FIDO2 as the foundation for passkeys, their passwordless authentication initiative. This industry alignment ensures continued development, support, and compatibility improvements.
+
+For new implementations, the choice is straightforward: use FIDO2. Building on U2F today means implementing deprecated technology that requires immediate migration planning. FIDO2 provides backward compatibility with existing U2F hardware through CTAP1, so there's no reason to use the older protocol.
+
+Existing U2F deployments should plan migration to FIDO2. The transition requires code changes but typically not hardware replacement. Most security keys supporting U2F also support FIDO2. The migration involves rewriting authentication code to use WebAuthn APIs instead of U2F JavaScript libraries.
+
+The migration timeline depends on browser deprecation schedules. Chrome removed U2F support in version 115 (July 2023). Firefox completed deprecation earlier. Organizations waiting risk breaking authentication when users update browsers. Planning the migration now avoids emergency fixes later.
+
+FIDO2 also provides growth options U2F cannot support. Passwordless authentication, platform authenticators, and cross-device credentials all require FIDO2. Organizations planning these capabilities must implement FIDO2 regardless of current U2F investments.
+
+The ecosystem has moved decisively toward FIDO2. Security key manufacturers focus development on FIDO2 features. Browser vendors prioritize WebAuthn improvements. Authentication providers build integration libraries for FIDO2. U2F receives maintenance only, no new development.
+
+For organizations evaluating security key deployment for the first time, FIDO2 enables a complete authentication strategy. Start with multi-factor authentication using hardware keys or platform authenticators. Expand to passwordless authentication as users become comfortable with the technology. The standard supports both approaches without requiring separate implementations.
