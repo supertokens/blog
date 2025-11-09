@@ -465,6 +465,9 @@
         "location": "https://supertokens.com/blog/cors-errors"
     },
     {
+<<<<<<< HEAD
+        "location": "https://supertokens.com/blog/fido2_vs_u2f"
+=======
         "location": "https://supertokens.com/blog/webauthn-explained"
     },
     {
@@ -478,5 +481,6 @@
     },
     {
         "location": "https://supertokens.com/blog/authentication-protocols"
+>>>>>>> master
     }
 ]
