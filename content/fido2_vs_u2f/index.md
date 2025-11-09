@@ -128,3 +128,91 @@ FIDO2 also provides growth options U2F cannot support. Passwordless authenticati
 The ecosystem has moved decisively toward FIDO2. Security key manufacturers focus development on FIDO2 features. Browser vendors prioritize WebAuthn improvements. Authentication providers build integration libraries for FIDO2. U2F receives maintenance only, no new development.
 
 For organizations evaluating security key deployment for the first time, FIDO2 enables a complete authentication strategy. Start with multi-factor authentication using hardware keys or platform authenticators. Expand to passwordless authentication as users become comfortable with the technology. The standard supports both approaches without requiring separate implementations.
+
+## How SuperTokens Fits Into FIDO2 Adoption
+
+SuperTokens implements FIDO2 through the WebAuthn recipe, handling the protocol complexity while exposing simple APIs to developers. The implementation supports both multi-factor and passwordless flows without requiring separate codebases for each authentication method.
+
+### Passwordless Support
+
+SuperTokens' WebAuthn recipe integrates with the session management system to enable passwordless authentication. Users register authenticators during signup or add them to existing accounts. The system handles credential storage, challenge generation, and signature verification.
+
+```javascript
+// Backend initialization with WebAuthn
+import SuperTokens from "supertokens-node";
+import WebAuthn from "supertokens-node/recipe/webauthn";
+import Session from "supertokens-node/recipe/session";
+
+SuperTokens.init({
+    appInfo: {
+        appName: "YourApp",
+        apiDomain: "https://api.yourapp.com",
+        websiteDomain: "https://yourapp.com"
+    },
+    recipeList: [
+        WebAuthn.init({
+            relyingPartyName: "YourApp",
+            origin: "https://yourapp.com"
+        }),
+        Session.init()
+    ]
+});
+```
+
+The frontend SDK handles browser API interactions, fallback scenarios, and error states. Developers avoid implementing WebAuthn's ceremony directly, which reduces implementation errors and security gaps.
+
+### Session Security Beyond FIDO2
+
+FIDO2 handles authentication but not session management. After successful authentication, applications need secure session handling to prevent token theft, session fixation, and unauthorized access. SuperTokens addresses these concerns through multiple security layers.
+
+The session system uses rotating refresh tokens to limit token theft impact. Access tokens have short lifespans, typically 15 minutes. Refresh tokens rotate on each use, invalidating the old token immediately. This rotation means stolen tokens have limited utility since they expire or become invalid quickly.
+
+CSRF protection comes built-in through anti-CSRF tokens and same-site cookie attributes. The system detects token theft attempts by tracking refresh token families. When a revoked refresh token is used, SuperTokens invalidates all tokens in that family, forcing re-authentication.
+
+These session security features work regardless of authentication method. Whether users authenticate via FIDO2, passwords, or social login, they receive the same robust session protection. This consistency simplifies security audits and reduces the attack surface.
+
+### Hybrid Auth Flows
+
+Organizations rarely deploy a single authentication method across all users. Different use cases require different approaches: employees might use FIDO2 with enterprise SSO, while customers prefer social login or email OTP. SuperTokens supports mixing authentication methods within a single application.
+
+```javascript
+// Multiple authentication methods
+import EmailPassword from "supertokens-node/recipe/emailpassword";
+import ThirdParty from "supertokens-node/recipe/thirdparty";
+import WebAuthn from "supertokens-node/recipe/webauthn";
+import Passwordless from "supertokens-node/recipe/passwordless";
+
+SuperTokens.init({
+    recipeList: [
+        EmailPassword.init(),
+        ThirdParty.init({
+            signInAndUpFeature: {
+                providers: [
+                    ThirdParty.Google.init(),
+                    ThirdParty.Github.init()
+                ]
+            }
+        }),
+        WebAuthn.init(),
+        Passwordless.init({
+            contactMethod: "EMAIL",
+            flowType: "USER_INPUT_CODE"
+        }),
+        Session.init()
+    ]
+});
+```
+
+Account linking allows users to add multiple authentication methods to their account. A user might sign up with email and password, then add FIDO2 for stronger security, and link their Google account for convenience. SuperTokens manages these multiple credentials under a single user identity.
+
+The multi-factor authentication recipe orchestrates complex flows where FIDO2 acts as a second factor after initial password authentication. Organizations can require FIDO2 verification for sensitive operations while allowing simpler authentication for routine access.
+
+### Future-Proof Implementation
+
+Starting with basic authentication and expanding capabilities as requirements evolve avoids over-engineering early systems. SuperTokens supports this gradual adoption through its recipe system. Add email and password authentication initially, then introduce FIDO2 when users request stronger security or passwordless access.
+
+The architecture remains consistent across authentication methods. Backend APIs, session handling, and security mechanisms work the same whether users authenticate via FIDO2, passwords, or social login. This consistency means adding new authentication methods requires minimal code changes.
+
+As passkey adoption increases, organizations already using SuperTokens can enable the feature by activating the WebAuthn recipe. Existing user accounts, session management, and security policies continue working without modification. Users can add passkeys to their accounts without creating new identities or losing access to their data.
+
+The open-source nature provides flexibility for custom requirements. Organizations needing specific authenticator attestation policies, custom user verification flows, or integration with proprietary systems can modify the WebAuthn recipe. The core remains maintained by SuperTokens while customizations address unique business needs.
