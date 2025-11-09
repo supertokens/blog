@@ -451,5 +451,8 @@
     },
     {
         "location": "https://supertokens.com/blog/cors-errors"
+    },
+    {
+        "location": "https://supertokens.com/blog/fido2_vs_u2f"
     }
 ]
