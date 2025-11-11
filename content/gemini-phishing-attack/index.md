@@ -1,6 +1,6 @@
 ---
 title: "Prompt Injection Attacks on LLMs: The Hidden AI Phishing Threat"
-date: "2025-08-03"
+date: "2025-10-15"
 description: "Prompt injection attacks can trick LLMs into phishing users. Learn how invisible HTML is being weaponized—and how to protect your app’s auth flows."
 cover: "gemini-phishing-attacks.png"
 category: "programming"
