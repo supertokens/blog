@@ -3323,7 +3323,7 @@
         "title": "Biometric Web Authentication: What It Is and How to Use It",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/biometric-auth\"\n            },\n            \"headline\": \"Understand biometric authentication on the web: how it works, use cases, security benefits, and how to implement it using WebAuthn.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/biometric-web-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    {    
+    {
         "path": "/blog/oidc-vs-saml",
         "metaTags": [
             "<meta name=\"description\" content=\"Compare OIDC and SAML for authentication use cases and see how SuperTokens lets you integrate both. Choose the right protocol for your app.\" />",
@@ -3369,7 +3369,7 @@
         "title": "Add MFA to Next.js in Minutes with SuperTokens",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/add-mfa-to-nextjs\"\n            },\n            \"headline\": \"Secure your Next.js app with multi-factor authentication fast. See TOTP, email OTP, passkeys, and a drop-in SuperTokens setup guide.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/add-mfa-to-nextjs.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    {    
+    {
         "path": "/blog/oauth-grant-types-explained",
         "metaTags": [
             "<meta name=\"description\" content=\"Confused by OAuth grant types? Learn how each one works, when to use it, and how SuperTokens simplifies implementation.\" />",
@@ -4564,5 +4564,28 @@
         ],
         "title": "Understanding Authentication Protocols: Types and Security Measures",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/authentication-protocols\"\n            },\n            \"headline\": \"Explore various authentication protocols, their types, and delve into email authentication methods like SPF, DKIM, and DMARC to enhance security.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/authentication-protocols.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/gemini-phishing-attack",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Prompt injection attacks can trick LLMs into phishing users. Learn how invisible HTML is being weaponized—and how to protect your app’s auth flows.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Prompt Injection Attacks on LLMs: The Hidden AI Phishing Threat\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/gemini-phishing-attack\" />",
+            "<meta property=\"og:description\" content=\"Prompt injection attacks can trick LLMs into phishing users. Learn how invisible HTML is being weaponized—and how to protect your app’s auth flows.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/gemini-phishing-attacks.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Prompt injection attacks can trick LLMs into phishing users. Learn how invisible HTML is being weaponized—and how to protect your app’s auth flows.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/gemini-phishing-attack\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/gemini-phishing-attacks.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/gemini-phishing-attack\">"
+        ],
+        "title": "Prompt Injection Attacks on LLMs: The Hidden AI Phishing Threat",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/gemini-phishing-attack\"\n            },\n            \"headline\": \"Prompt injection attacks can trick LLMs into phishing users. Learn how invisible HTML is being weaponized—and how to protect your app’s auth flows.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/gemini-phishing-attacks.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
