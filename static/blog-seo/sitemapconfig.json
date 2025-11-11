@@ -309,7 +309,13 @@
         "location": "https://supertokens.com/blog/identity-and-access-management-strategy"
     },
     {
-        "location": "https://supertokens.com/blog/solidjs-auth"
+        "location": "https://supertokens.com/blog/workos-alternatives"
+    },
+    {    
+        "location": "https://supertokens.com/blog/biometric-auth"
+    },
+    {
+      "location": "https://supertokens.com/blog/solidjs-auth"
     },
     {    
         "location": "https://supertokens.com/blog/biometric-auth"
