@@ -311,16 +311,28 @@
     {
         "location": "https://supertokens.com/blog/stytch-vs-auth0"
     },
+    {
+      "location": "https://supertokens.com/blog/auth0-vs-fusionauth"
+    },
+    {
+        "location": "https://supertokens.com/blog/workos-alternatives"
+    },
     {    
         "location": "https://supertokens.com/blog/biometric-auth"
     },
+    {
+      "location": "https://supertokens.com/blog/solidjs-auth"
+    },
     {    
+        "location": "https://supertokens.com/blog/biometric-auth"
+    },
+    {
         "location": "https://supertokens.com/blog/oidc-vs-saml"
     },
     {
         "location": "https://supertokens.com/blog/add-mfa-to-nextjs"
     },
-    {    
+    {
         "location": "https://supertokens.com/blog/oauth-grant-types-explained"
     },
     {
@@ -481,5 +493,8 @@
     },
     {
         "location": "https://supertokens.com/blog/authentication-protocols"
+    },
+    {
+        "location": "https://supertokens.com/blog/gemini-phishing-attack"
     }
 ]
