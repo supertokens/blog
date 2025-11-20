@@ -309,7 +309,10 @@
         "location": "https://supertokens.com/blog/identity-and-access-management-strategy"
     },
     {
-        "location": "https://supertokens.com/blog/auth0-vs-fusionauth"
+        "location": "https://supertokens.com/blog/stytch-vs-auth0"
+    },
+    {
+      "location": "https://supertokens.com/blog/auth0-vs-fusionauth"
     },
     {
         "location": "https://supertokens.com/blog/workos-alternatives"
