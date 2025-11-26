@@ -4659,6 +4659,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/authentication-protocols\"\n            },\n            \"headline\": \"Explore various authentication protocols, their types, and delve into email authentication methods like SPF, DKIM, and DMARC to enhance security.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/authentication-protocols.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/enterprise-identity-management",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore how enterprise identity management works, the challenges it solves, and what features modern orgs need for secure, scalable access control.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Enterprise Identity Management What You Need to Know in 2025\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/enterprise-identity-management\" />",
+            "<meta property=\"og:description\" content=\"Explore how enterprise identity management works, the challenges it solves, and what features modern orgs need for secure, scalable access control.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/EIM.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore how enterprise identity management works, the challenges it solves, and what features modern orgs need for secure, scalable access control.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/enterprise-identity-management\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/EIM.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/enterprise-identity-management\">"
+        ],
+        "title": "Enterprise Identity Management What You Need to Know in 2025",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/enterprise-identity-management\"\n            },\n            \"headline\": \"Explore how enterprise identity management works, the challenges it solves, and what features modern orgs need for secure, scalable access control.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/EIM.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
         "path": "/blog/gemini-phishing-attack",
         "metaTags": [
             "<meta name=\"description\" content=\"Prompt injection attacks can trick LLMs into phishing users. Learn how invisible HTML is being weaponized—and how to protect your app’s auth flows.\" />",
