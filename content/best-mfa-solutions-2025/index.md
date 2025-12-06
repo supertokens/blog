@@ -170,12 +170,12 @@ MFA economics change at scale. Pricing that works for hundreds of users becomes 
 
 SuperTokens' [MFA cost analysis](https://supertokens.com/blog/mfa-cost) examines how authentication expenses accumulate across deployment scenarios. Key findings:
 
-**Transparent pricing prevents surprises.** SuperTokens publishes rates without requiring sales conversations: free self-hosted, $0.02/MAU for managed service, $0.01/MAU for MFA add-ons with a $100/month minimum. This predictability enables accurate budgeting.
+**Transparent pricing prevents surprises**: SuperTokens publishes rates without requiring sales conversations: free self-hosted, $0.02/MAU for managed service, $0.01/MAU for MFA add-ons with a $100/month minimum. This predictability enables accurate budgeting.
 
-**Self-hosting eliminates per-user costs entirely.** Organizations with infrastructure capacity can run SuperTokens Core without licensing fees. The trade-off shifts from licensing to operational overhead for hosting and maintenance.
+**Self-hosting eliminates per-user costs entirely**: Organizations with infrastructure capacity can run SuperTokens Core without licensing fees. The trade-off shifts from licensing to operational overhead for hosting and maintenance.
 
-**Feature bundling affects total cost.** Enterprise MFA solutions bundle authentication with identity governance, access management, and compliance tools. Organizations needing only MFA pay for capabilities they don't use. SuperTokens' recipe architecture lets you add only the authentication features you need.
+**Feature bundling affects total cost**: Enterprise MFA solutions bundle authentication with identity governance, access management, and compliance tools. Organizations needing only MFA pay for capabilities they don't use. SuperTokens' recipe architecture lets you add only the authentication features you need.
 
-**Cost comparison requires scenario modeling.** A solution cheaper at 1,000 users might cost more at 50,000. SuperTokens' analysis provides frameworks for projecting costs across growth scenarios rather than evaluating only current state.
+**Cost comparison requires scenario modeling**: A solution cheaper at 1,000 users might cost more at 50,000. SuperTokens' analysis provides frameworks for projecting costs across growth scenarios rather than evaluating only current state.
 
 The cost calculation extends beyond monthly licensing. Factor in implementation effort, ongoing administration, support overhead, and scaling trajectory. The cheapest solution at current scale might be the most expensive choice over three years.
