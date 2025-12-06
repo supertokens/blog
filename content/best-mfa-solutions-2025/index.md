@@ -179,3 +179,49 @@ SuperTokens' [MFA cost analysis](https://supertokens.com/blog/mfa-cost) examines
 **Cost comparison requires scenario modeling**: A solution cheaper at 1,000 users might cost more at 50,000. SuperTokens' analysis provides frameworks for projecting costs across growth scenarios rather than evaluating only current state.
 
 The cost calculation extends beyond monthly licensing. Factor in implementation effort, ongoing administration, support overhead, and scaling trajectory. The cheapest solution at current scale might be the most expensive choice over three years.
+
+## Emerging Trends in MFA (2025 and Beyond)
+
+Authentication technology continues evolving in response to persistent threats and changing work patterns. Four trends are reshaping how organizations approach MFA implementation.
+
+### Passkeys and WebAuthn
+
+Passkeys represent the convergence of passwordless authentication and phishing resistance. Built on WebAuthn standards, passkeys use public-key cryptography bound to specific origins. The private key never leaves the user's device. Attackers can't phish credentials that don't exist as shared secrets.
+
+Apple, Google, and Microsoft now support passkeys across their ecosystems. Cross-device synchronization through platform keystores (iCloud Keychain, Google Password Manager) addresses the recovery problem that plagued earlier hardware-only approaches. Users authenticate with biometrics they already use to unlock their devices.
+
+Enterprise adoption is accelerating. GitHub, Shopify, and Kayak have deployed passkeys for customer authentication. The technology eliminates password reset costs while reducing account takeover incidents. Organizations evaluating MFA should consider passkey support as a baseline requirement rather than a future consideration.
+
+The transition isn't instant. Legacy applications need updates. Users need education. Fallback mechanisms remain necessary during the migration period. But the direction is clear: passwords are becoming optional, then deprecated, then legacy.
+
+### Adaptive Authentication
+
+Static authentication policies apply the same requirements regardless of context. Adaptive authentication evaluates risk signals before determining what verification to require.
+
+The inputs include device posture, geographic location, network reputation, time of access, and behavioral patterns. A login from a managed device on the corporate network might require only a password. The same user accessing sensitive data from an unfamiliar location on an unknown device triggers step-up authentication.
+
+Machine learning models improve risk scoring over time. Baseline behavior profiles detect anomalies that rule-based systems miss. Impossible travel detection flags logins from distant locations within implausible timeframes.
+
+The benefit extends beyond security. Low-risk authentications require less friction, improving user experience for routine access. High-risk scenarios get appropriate scrutiny. The system applies security proportional to actual risk rather than worst-case assumptions.
+
+### Zero Trust Architecture
+
+Zero trust treats every access request as potentially hostile regardless of network location. MFA becomes foundational rather than optional in this model.
+
+Traditional perimeter security assumed that users inside the network were trustworthy. VPN access granted broad connectivity. Zero trust inverts this: verify explicitly, use least privilege access, assume breach. Every resource access requires authentication and authorization.
+
+MFA fits naturally into zero trust frameworks. Continuous authentication extends beyond initial login to validate identity throughout sessions. Step-up authentication triggers when users access sensitive resources or perform privileged operations. Device posture assessment combines with user authentication to determine access decisions.
+
+Federal mandates are driving adoption. Executive Order 14028 requires zero trust architecture for US government agencies. Regulated industries follow federal guidance. Enterprise organizations adopt zero trust principles to satisfy compliance requirements and address evolving threats.
+
+### Offline and Edge MFA
+
+Not all authentication happens with reliable network connectivity. Industrial facilities, remote locations, and air-gapped environments need MFA that works without cloud dependencies.
+
+Hardware tokens with time-based OTP provide offline authentication. The shared secret and time synchronization enable code generation without network access. FIDO2 security keys work offline for local authentication after initial registration.
+
+Edge computing scenarios require authentication at the point of access rather than central identity providers. Distributed MFA architectures cache credentials and policies locally while synchronizing with central systems when connectivity permits.
+
+Operational technology (OT) environments present unique challenges. Legacy industrial control systems weren't designed for modern authentication. Solutions must balance security improvements against operational continuity and safety requirements.
+
+These trends share a common thread: authentication is becoming more sophisticated, more contextual, and more integrated into broader security architectures. Organizations planning MFA deployments should evaluate solutions against where authentication is heading, not just where it is today.
