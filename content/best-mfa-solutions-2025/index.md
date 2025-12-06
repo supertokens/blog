@@ -125,3 +125,57 @@ User experience and logistics present challenges: physical distribution, battery
 | **RSA SecurID** | Hardware assurance, FIPS validation, regulatory acceptance | Physical logistics, UX friction | Regulated industries requiring hardware tokens |
 
 The right choice depends on your starting point. Microsoft shops benefit from Entra ID's native integration. Legacy-heavy environments need Silverfort's agentless coverage. Development teams building products find SuperTokens' flexibility valuable. Enterprises standardizing identity often land on Okta despite the cost premium.
+
+## MFA Cost Considerations: What Really Matters
+
+MFA pricing appears straightforward until you deploy at scale. The gap between quoted per-user rates and actual total cost often surprises organizations during budget reviews.
+
+### Licensing Models
+
+Vendors structure pricing differently, and the model you choose affects costs as your organization evolves.
+
+**Per-user licensing** charges for each identity that can authenticate. This works predictably for stable employee populations but creates friction for customer-facing applications where user counts fluctuate. Some vendors count monthly active users, others count provisioned accounts regardless of activity.
+
+**Per-device licensing** charges for each registered authenticator. An employee with a phone and a hardware backup key counts as two devices. BYOD environments where users register personal and work devices multiply costs quickly.
+
+**Per-authenticator licensing** charges based on authentication method. TOTP might be included in base pricing while push notifications or hardware token support require premium tiers. Organizations often discover that the authentication methods they actually need sit behind additional paywalls.
+
+**Feature tiers** bundle capabilities at escalating price points. Adaptive MFA, advanced reporting, and API access frequently require enterprise licensing. The gap between "Starter" and "Enterprise" tiers can be 3-5x per user.
+
+### Hidden Costs
+
+Licensing represents only part of MFA expenditure. Operational costs accumulate in less visible ways.
+
+**Lost device replacement** generates ongoing expense. Hardware tokens cost $25-50 each plus shipping. Smartphone loss triggers re-enrollment workflows that consume IT time. Organizations replacing 5-10% of authenticators annually should budget accordingly.
+
+**User training** requires investment upfront and ongoing. Initial rollout needs documentation, communication campaigns, and support staff preparation. New employee onboarding includes MFA enrollment. Changes to authentication methods require retraining.
+
+**Help desk overhead** increases with MFA deployment. Password reset tickets decrease, but authentication troubleshooting tickets increase. Lockout recovery, device registration issues, and user confusion create support burden. Some organizations report 15-20% of help desk volume relates to MFA after deployment.
+
+**Administrative time** for policy management, user provisioning, and audit preparation adds up. Enterprises with complex policies spend significant hours maintaining authentication configurations across user populations and applications.
+
+### Scaling Challenges
+
+MFA economics change at scale. Pricing that works for hundreds of users becomes problematic at tens of thousands.
+
+**Volume thresholds** trigger pricing tier changes. A solution costing $3/user at 1,000 users might jump to $6/user at 10,000 when you cross into enterprise pricing. Some vendors offer volume discounts; others increase per-user costs as feature requirements grow with organizational complexity.
+
+**Feature creep** drives cost escalation. Small deployments work fine with basic TOTP. Larger deployments need adaptive policies, SSO integration, and compliance reporting. Each capability addition increases licensing costs.
+
+**Multi-tenant complexity** affects organizations managing authentication for customers or partners. Separate policies, branding, and administration per tenant add overhead that single-tenant pricing doesn't anticipate.
+
+**Contract negotiations** become necessary at enterprise scale. Published pricing often serves as a starting point rather than final cost. Organizations with leverage can negotiate significantly better rates, but this requires procurement expertise and competitive alternatives.
+
+### Insights from SuperTokens
+
+SuperTokens' [MFA cost analysis](https://supertokens.com/blog/mfa-cost) examines how authentication expenses accumulate across deployment scenarios. Key findings:
+
+**Transparent pricing prevents surprises.** SuperTokens publishes rates without requiring sales conversations: free self-hosted, $0.02/MAU for managed service, $0.01/MAU for MFA add-ons with a $100/month minimum. This predictability enables accurate budgeting.
+
+**Self-hosting eliminates per-user costs entirely.** Organizations with infrastructure capacity can run SuperTokens Core without licensing fees. The trade-off shifts from licensing to operational overhead for hosting and maintenance.
+
+**Feature bundling affects total cost.** Enterprise MFA solutions bundle authentication with identity governance, access management, and compliance tools. Organizations needing only MFA pay for capabilities they don't use. SuperTokens' recipe architecture lets you add only the authentication features you need.
+
+**Cost comparison requires scenario modeling.** A solution cheaper at 1,000 users might cost more at 50,000. SuperTokens' analysis provides frameworks for projecting costs across growth scenarios rather than evaluating only current state.
+
+The cost calculation extends beyond monthly licensing. Factor in implementation effort, ongoing administration, support overhead, and scaling trajectory. The cheapest solution at current scale might be the most expensive choice over three years.
