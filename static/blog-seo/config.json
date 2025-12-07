@@ -4702,5 +4702,28 @@
         ],
         "title": "Best MFA Solutions Compared (2025 Guide)",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/best-mfa-solutions-2025\"\n            },\n            \"headline\": \"Compare the best MFA solutions in 2025: features, costs, and trade-offs. Includes insights from SuperTokens’ MFA cost guide.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/best-mfa-solutions-2025",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Compare the best MFA solutions in 2025: features, costs, and trade-offs. Includes insights from SuperTokens’ MFA cost guide.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Best MFA Solutions Compared (2025 Guide)\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/best-mfa-solutions-2025\" />",
+            "<meta property=\"og:description\" content=\"Compare the best MFA solutions in 2025: features, costs, and trade-offs. Includes insights from SuperTokens’ MFA cost guide.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Compare the best MFA solutions in 2025: features, costs, and trade-offs. Includes insights from SuperTokens’ MFA cost guide.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/best-mfa-solutions-2025\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/best-mfa-solutions-2025\">"
+        ],
+        "title": "Best MFA Solutions Compared (2025 Guide)",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/best-mfa-solutions-2025\"\n            },\n            \"headline\": \"Compare the best MFA solutions in 2025: features, costs, and trade-offs. Includes insights from SuperTokens’ MFA cost guide.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
