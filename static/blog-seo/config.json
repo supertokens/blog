@@ -3324,6 +3324,99 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/supertokens-on-vercel\"\n            },\n            \"headline\": \"Step-by-step guide to deploying SuperTokens authentication on Vercel with Next.js. Learn setup, environment config, API routes, and deployment tips.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/supertokens-on-vercel.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {    
+        "path": "/blog/stytch-vs-auth0",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover how Stytch and Auth0 compare in pricing, features, developer experience, and fraud tools — plus explore an open-source, self-hosted alternative offering full control and transparency for modern authentication.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Stytch vs Auth0 (2025): Pricing, Features, and More\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/stytch-vs-auth0\" />",
+            "<meta property=\"og:description\" content=\"Discover how Stytch and Auth0 compare in pricing, features, developer experience, and fraud tools — plus explore an open-source, self-hosted alternative offering full control and transparency for modern authentication.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/stytch-vs-auth0.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Discover how Stytch and Auth0 compare in pricing, features, developer experience, and fraud tools — plus explore an open-source, self-hosted alternative offering full control and transparency for modern authentication.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/stytch-vs-auth0\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/stytch-vs-auth0.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/stytch-vs-auth0\">"
+        ],
+        "title": "Stytch vs Auth0 (2025): Pricing, Features, and More",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/stytch-vs-auth0\"\n            },\n            \"headline\": \"Discover how Stytch and Auth0 compare in pricing, features, developer experience, and fraud tools — plus explore an open-source, self-hosted alternative offering full control and transparency for modern authentication.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/stytch-vs-auth0.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+
+    },
+    {
+      "path": "/blog/auth0-vs-fusionauth",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Auth0 vs FusionAuth in 2025: pricing, hosting (SaaS vs self-host), DX, and best-fit use cases—plus an open-source alternative to consider.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Auth0 vs FusionAuth (2025): Pricing, Hosting, Use Cases\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/auth0-vs-fusionauth\" />",
+            "<meta property=\"og:description\" content=\"Auth0 vs FusionAuth in 2025: pricing, hosting (SaaS vs self-host), DX, and best-fit use cases—plus an open-source alternative to consider.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/auth0-vs-fusionauth.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Auth0 vs FusionAuth in 2025: pricing, hosting (SaaS vs self-host), DX, and best-fit use cases—plus an open-source alternative to consider.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/auth0-vs-fusionauth\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/auth0-vs-fusionauth.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/auth0-vs-fusionauth\">"
+        ],
+        "title": "Auth0 vs FusionAuth (2025): Pricing, Hosting, Use Cases",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/auth0-vs-fusionauth\"\n            },\n            \"headline\": \"Auth0 vs FusionAuth in 2025: pricing, hosting (SaaS vs self-host), DX, and best-fit use cases—plus an open-source alternative to consider.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/auth0-vs-fusionauth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+      "path": "/blog/workos-alternatives",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover the best WorkOS alternatives for SSO, SCIM, and audit logs — open-source and managed options, pricing signals, and when SuperTokens fits.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"WorkOS Alternatives (2025): SSO, SCIM, and Pricing Compared\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/workos-alternatives\" />",
+            "<meta property=\"og:description\" content=\"Discover the best WorkOS alternatives for SSO, SCIM, and audit logs — open-source and managed options, pricing signals, and when SuperTokens fits.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/workos-alternatives.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Discover the best WorkOS alternatives for SSO, SCIM, and audit logs — open-source and managed options, pricing signals, and when SuperTokens fits.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/workos-alternatives\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/workos-alternatives.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/workos-alternatives\">"
+        ],
+        "title": "WorkOS Alternatives (2025): SSO, SCIM, and Pricing Compared",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/workos-alternatives\"\n            },\n            \"headline\": \"Discover the best WorkOS alternatives for SSO, SCIM, and audit logs — open-source and managed options, pricing signals, and when SuperTokens fits.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/workos-alternatives.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/solidjs-auth",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how to add secure authentication to SolidJS apps. Compare authentication frameworks and see why SuperTokens is a SolidJS-ready solution.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"SolidJS Authentication: What Framework Should You Use?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/solidjs-auth\" />",
+            "<meta property=\"og:description\" content=\"Learn how to add secure authentication to SolidJS apps. Compare authentication frameworks and see why SuperTokens is a SolidJS-ready solution.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/solidjs-auth.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how to add secure authentication to SolidJS apps. Compare authentication frameworks and see why SuperTokens is a SolidJS-ready solution.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/solidjs-auth\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/solidjs-auth.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/solidjs-auth\">"
+        ],
+        "title": "SolidJS Authentication: What Framework Should You Use?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/solidjs-auth\"\n            },\n            \"headline\": \"Learn how to add secure authentication to SolidJS apps. Compare authentication frameworks and see why SuperTokens is a SolidJS-ready solution.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/solidjs-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {    
         "path": "/blog/biometric-auth",
         "metaTags": [
             "<meta name=\"description\" content=\"Understand biometric authentication on the web: how it works, use cases, security benefits, and how to implement it using WebAuthn.\" />",
@@ -3346,7 +3439,7 @@
         "title": "Biometric Web Authentication: What It Is and How to Use It",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/biometric-auth\"\n            },\n            \"headline\": \"Understand biometric authentication on the web: how it works, use cases, security benefits, and how to implement it using WebAuthn.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/biometric-web-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    {    
+    {
         "path": "/blog/oidc-vs-saml",
         "metaTags": [
             "<meta name=\"description\" content=\"Compare OIDC and SAML for authentication use cases and see how SuperTokens lets you integrate both. Choose the right protocol for your app.\" />",
@@ -3392,7 +3485,7 @@
         "title": "Add MFA to Next.js in Minutes with SuperTokens",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/add-mfa-to-nextjs\"\n            },\n            \"headline\": \"Secure your Next.js app with multi-factor authentication fast. See TOTP, email OTP, passkeys, and a drop-in SuperTokens setup guide.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/add-mfa-to-nextjs.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    {    
+    {
         "path": "/blog/oauth-grant-types-explained",
         "metaTags": [
             "<meta name=\"description\" content=\"Confused by OAuth grant types? Learn how each one works, when to use it, and how SuperTokens simplifies implementation.\" />",
@@ -4587,5 +4680,28 @@
         ],
         "title": "Understanding Authentication Protocols: Types and Security Measures",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/authentication-protocols\"\n            },\n            \"headline\": \"Explore various authentication protocols, their types, and delve into email authentication methods like SPF, DKIM, and DMARC to enhance security.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/authentication-protocols.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/gemini-phishing-attack",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Prompt injection attacks can trick LLMs into phishing users. Learn how invisible HTML is being weaponized—and how to protect your app’s auth flows.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Prompt Injection Attacks on LLMs: The Hidden AI Phishing Threat\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/gemini-phishing-attack\" />",
+            "<meta property=\"og:description\" content=\"Prompt injection attacks can trick LLMs into phishing users. Learn how invisible HTML is being weaponized—and how to protect your app’s auth flows.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/gemini-phishing-attacks.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Prompt injection attacks can trick LLMs into phishing users. Learn how invisible HTML is being weaponized—and how to protect your app’s auth flows.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/gemini-phishing-attack\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/gemini-phishing-attacks.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/gemini-phishing-attack\">"
+        ],
+        "title": "Prompt Injection Attacks on LLMs: The Hidden AI Phishing Threat",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/gemini-phishing-attack\"\n            },\n            \"headline\": \"Prompt injection attacks can trick LLMs into phishing users. Learn how invisible HTML is being weaponized—and how to protect your app’s auth flows.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/gemini-phishing-attacks.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
