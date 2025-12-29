@@ -3161,28 +3161,5 @@
         ],
         "title": "How to Build Effective Identity & Access Management Strategy",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-strategy\"\n            },\n            \"headline\": \"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-strategy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
-    },
-    {
-        "path": "/blog/frontegg-vs-auth0-vs-fusionauth",
-        "metaTags": [
-            "<meta name=\"description\" content=\"undefined\" />",
-            "",
-            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
-            "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"Frontegg vs Auth0 vs FusionAuth – Which Authentication Platform Fits You?\" />",
-            "<meta property=\"og:type\" content=\"article\" />",
-            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/frontegg-vs-auth0-vs-fusionauth\" />",
-            "<meta property=\"og:description\" content=\"undefined\"/>",
-            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/frontegg-vs-auth0-vs-fusionauth.jpg\" />",
-            "",
-            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"undefined\" />",
-            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/frontegg-vs-auth0-vs-fusionauth\" />",
-            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/frontegg-vs-auth0-vs-fusionauth.jpg\" /> ",
-            "<!--OG Tags-->",
-            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/frontegg-vs-auth0-vs-fusionauth\">"
-        ],
-        "title": "Frontegg vs Auth0 vs FusionAuth – Which Authentication Platform Fits You?",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/frontegg-vs-auth0-vs-fusionauth\"\n            },\n            \"headline\": \"undefined\",\n            \"image\": \"https://supertokens.com/blog-meta-images/frontegg-vs-auth0-vs-fusionauth.jpg\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
