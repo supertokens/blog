@@ -1,6 +1,6 @@
 ---
 title: "Deploying SuperTokens on Vercel with Next.js"
-date: "2025-10-28"
+date: "2025-11-18"
 description: "Step-by-step guide to deploying SuperTokens authentication on Vercel with Next.js. Learn setup, environment config, API routes, and deployment tips."
 cover: "supertokens-on-vercel.png"
 category: "programming"
