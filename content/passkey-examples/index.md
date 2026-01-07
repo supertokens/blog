@@ -4,6 +4,7 @@ date: "2025-12-09"
 description: "Discover real-world passkey examples across Apple, Google, Coinbase, iPhone, PHP, and more, plus step-by-step implementation guidance."
 cover: "passkey-examples.png"
 category: "programming"
+author: "Mostafa Ibrahim"
 ---
 
 Passkeys deliver frictionless, phishing-resistant login experiences across platforms, with [more than 1 billion people worldwide having activated at least one passkey as of January 2025](https://www.biometricupdate.com/202501/state-of-passkeys-2025-passkeys-move-to-mainstream). This guide provides an end-to-end tour of passkeys in action&mdash;examining how major platforms like Apple, Google, and Coinbase implement passwordless login, exploring practical code examples across different programming languages, and demonstrating how to properly name, register, and authenticate with passkeys in your own applications.
