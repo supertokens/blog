@@ -1,7 +1,7 @@
 ---
 title: "Frontegg vs Auth0 vs FusionAuth – Which Authentication Platform Fits You?"
 date: "2025-12-26"
-cover: "frontegg-vs-auth0-vs-fusionauth.jpg"
+cover: "frontegg-vs-auth0-vs-fusionauth.png"
 category: "programming"
 author: "Mostafa Ibrahim"
 ---
@@ -13,7 +13,7 @@ shows you how to pick the one that actually fits your technical stack and busine
 
 ## **Why the \"Big Three\" Authentication Platforms Matter in 2025**
 
-![The Big Three OF IAMCIAM](The-Big-Three-OF-IAMCIAM.jpg)
+![The Big Three OF IAMCIAM](The-Big-Three-OF-IAMCIAM.png)
 
 The identity and access management (IAM/CIAM) space has matured significantly in recent years. What was once a choice between building
 authentication in-house or using a basic OAuth provider has evolved into a broad ecosystem offering features like social login, enterprise SSO, and multi-tenant organization management. This growth is reflected in market data: [the global IAM market has grown from around \$20.4 billion in 2024 to nearly \$23 billion in 2025](https://perimeter.blog/perimeter-weekly-report-identity-access-management-iam-market-analysis/), driven by digital transformation and security needs. Customer IAM has followed a similar trajectory, growing at an annual rate of around 13 percent, underscoring sustained demand for scalable identity solutions designed for external users.
