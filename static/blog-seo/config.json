@@ -3323,6 +3323,29 @@
         "title": "Passkey Examples: Real-World Use Cases and Implementation",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/passkey-examples\"\n            },\n            \"headline\": \"Discover real-world passkey examples across Apple, Google, Coinbase, iPhone, PHP, and more, plus step-by-step implementation guidance.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/passkey-examples.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
+    {   
+        "path": "/blog/supertokens-on-vercel",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Step-by-step guide to deploying SuperTokens authentication on Vercel with Next.js. Learn setup, environment config, API routes, and deployment tips.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Deploying SuperTokens on Vercel with Next.js\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/supertokens-on-vercel\" />",
+            "<meta property=\"og:description\" content=\"Step-by-step guide to deploying SuperTokens authentication on Vercel with Next.js. Learn setup, environment config, API routes, and deployment tips.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/supertokens-on-vercel.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Step-by-step guide to deploying SuperTokens authentication on Vercel with Next.js. Learn setup, environment config, API routes, and deployment tips.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/supertokens-on-vercel\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/supertokens-on-vercel.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/supertokens-on-vercel\">"
+        ],
+        "title": "Deploying SuperTokens on Vercel with Next.js",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/supertokens-on-vercel\"\n            },\n            \"headline\": \"Step-by-step guide to deploying SuperTokens authentication on Vercel with Next.js. Learn setup, environment config, API routes, and deployment tips.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/supertokens-on-vercel.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
     {    
         "path": "/blog/stytch-vs-auth0",
         "metaTags": [
