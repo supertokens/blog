@@ -321,7 +321,7 @@ Passkey deployments benefit most when supported by strong operational and securi
 - **Use HTTPS everywhere** as WebAuthn APIs are mandatory requirements that will not function over insecure HTTP connections. All authentication flows, from registration through authentication, must occur over properly configured HTTPS with valid TLS certificates.
 - **Offer fallback authentication methods,** including traditional multi-factor authentication or recovery codes, for scenarios where passkey authentication fails. Users might encounter situations where biometric authentication is unavailable or devices are lost, requiring alternative authentication paths.
 - **Limit registered devices** by prompting users to review and remove old passkeys periodically. Accumulated credentials from replaced devices create security risks and user confusion, particularly when multiple outdated passkeys appear during authentication.
-- **Monitor signature counters** to detect credential cloning or misuse. WebAuthn includes signature counters that increment with each use&mdash;unexpected counter values indicate potential security issues requiring investigation and possible credential revocation.
+- **Monitor signature counters** to detect credential cloning or misuse. WebAuthn includes signature counters that increment with each use &mdash; unexpected counter values indicate potential security issues requiring investigation and possible credential revocation.
 -   **Educate users** through clear prompts explaining passkey functionality, security benefits, and naming guidance. User education reduces support burden while increasing adoption rates by building confidence in passwordless authentication.
 
 ## **Conclusion and Next Steps**
