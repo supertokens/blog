@@ -7,7 +7,7 @@ category: "programming"
 author: "Mostafa Ibrahim"
 ---
 
-Passkeys deliver frictionless, phishing-resistant login experiences across platforms, with [more than 1 billion people worldwide having activated at least one passkey as of January 2025](https://www.biometricupdate.com/202501/state-of-passkeys-2025-passkeys-move-to-mainstream). This guide provides an end-to-end tour of passkeys in action&mdash;examining how major platforms like Apple, Google, and Coinbase implement passwordless login, exploring practical code examples across different programming languages, and demonstrating how to properly name, register, and authenticate with passkeys in your own applications.
+Passkeys deliver frictionless, phishing-resistant login experiences across platforms, with [more than 1 billion people worldwide having activated at least one passkey as of January 2025](https://www.biometricupdate.com/202501/state-of-passkeys-2025-passkeys-move-to-mainstream). This guide provides an end-to-end tour of passkeys in action &mdash; examining how major platforms like Apple, Google, and Coinbase implement passwordless login; exploring practical code examples across different programming languages; and demonstrating how to properly name, register, and authenticate with passkeys in your own applications.
 
 Whether you\'re a developer evaluating passkey implementation for your application or a technology decision-maker assessing [passwordless authentication](https://supertokens.com/blog/what-is-passwordless-authentication) strategies, this comprehensive resource covers real-world examples, technical implementation details, and best practices that make passkey deployment successful.
 
@@ -20,7 +20,7 @@ passkeys use public-key cryptography to create unique authentication credentials
 
 **How passkeys work** relies on asymmetric cryptography, where a private key remains securely stored on the user\'s device while the corresponding public key resides on the server. During authentication, the device uses the private key to sign a challenge from the server, proving possession without ever transmitting the private key itself. This architecture fundamentally eliminates password-related vulnerabilities, including phishing attacks, credential stuffing, and database breaches exposing user credentials.
 
-The passkey authentication flow occurs nearly instantaneously, typically requiring only biometric verification like Face ID, Touch ID, or fingerprint recognition&mdash;the same gesture users already perform to
+The passkey authentication flow occurs nearly instantaneously, typically requiring only biometric verification like Face ID, Touch ID, or fingerprint recognition &mdash; the same gesture users already perform to
 unlock their devices. This seamless experience combines enhanced security with superior usability compared to traditional password-based authentication.
 
 ## **What Are Common Passkey Examples?**
@@ -29,20 +29,20 @@ unlock their devices. This seamless experience combines enhanced security with s
 
 ### **Apple Passkey Example**
 
-Apple has integrated passkey support comprehensively across iOS, iPadOS, and macOS, enabling users to authenticate using Face ID or Touch ID without passwords. A typical scenario involves accessing a banking application on an iPhone where, instead of entering a password, Face ID verifies the user\'s identity, and the passkey authenticates automatically with the server.
+Apple has integrated passkey support comprehensively across iOS, iPadOS, and macOS, enabling users to authenticate by using Face ID or Touch ID without passwords. A typical scenario involves accessing a banking application on an iPhone where, instead of entering a password, Face ID verifies the user\'s identity, and the passkey authenticates automatically with the server.
 
-Apple promotes passkeys through Safari and iCloud Keychain, with iOS 18 introducing new APIs that allow developers to create passkeys automatically for users. This native platform support means passkeys sync securely across all Apple devices through iCloud Keychain, enabling seamless authentication whether using an iPhone, iPad, or Mac.
+Apple promotes passkeys through Safari and iCloud Keychain,with iOS 18 introducing new APIs that allow developers to create passkeys automatically for users. This native platform support means passkeys sync securely across all Apple devices through iCloud Keychain, enabling seamless authentication whether using an iPhone, iPad, or Mac laptop.
 
 ### **Google Passkey Example**
 
-Google has made passkeys available and even the default for Google accounts, calling passkey adoption \"the beginning of the end\" for passwords. Chrome\'s built-in credential management enables users to sign into Gmail and other Google services using passkeys stored in Google Password Manager.
+Google has made passkeys available and even the default for Google accounts, calling passkey adoption \"the beginning of the end\" for passwords. Chrome\'s built-in credential management enables users to sign into Gmail and other Google services by using passkeys stored in Google Password Manager.
 
-The integration extends across Android devices, where users can authenticate using fingerprint sensors or face unlock, with passkeys synchronizing through Google Password Manager for cross-device compatibility. This ecosystem-wide support demonstrates Google\'s commitment to passwordless authentication as the future standard.
+The integration extends across Android devices, where users can authenticate by using fingerprint sensors or face unlock, with passkeys synchronizing through Google Password Manager for cross-device compatibility. This ecosystem-wide support demonstrates Google\'s commitment to passwordless authentication as the future standard.
 
 ### **Coinbase Passkey Example**
 
 Cryptocurrency exchanges like Coinbase rank highly in passkey adoption due to the critical importance of security for platforms managing digital assets worth billions. Coinbase supports biometric login through
-passkeys in both mobile applications and web browsers, allowing users to access their accounts using Face ID, fingerprint authentication, or device PINs.
+passkeys in both mobile applications and web browsers, allowing users to access their accounts by using Face ID, fingerprint authentication, or device PINs.
 
 The Coinbase Smart Wallet implementation demonstrates advanced passkey usage where the passkey itself protects access to blockchain wallets. Users create passkeys that verify ownership without managing complex seed phrases, combining enterprise-grade security with a simplified user
 experience. Coinbase\'s passkey implementation includes support for multiple devices and browsers, catering to technically sophisticated users while maintaining accessibility.
@@ -51,7 +51,7 @@ experience. Coinbase\'s passkey implementation includes support for multiple dev
 
 Modern websites implement passkey authentication through the WebAuthn API, creating flows where users click login buttons and immediately receive biometric prompts. A typical implementation in React or plain HTML triggers `navigator.credentials.get()`, which prompts the browser\'s native passkey interface.
 
-The user experience feels identical to unlocking a smartphone&mdash;tap the login button, authenticate with biometrics, and gain immediate access. No password typing, no remembering complex credentials, and no vulnerability to phishing attacks that might capture traditional login
+The user experience feels identical to unlocking a smartphone &mdash; tap the login button, authenticate with biometrics, and gain immediate access. No password typing, no remembering complex credentials, and no vulnerability to phishing attacks that might capture traditional login
 credentials.
 
 ### **Passkey Example iPhone**
@@ -59,7 +59,7 @@ credentials.
 Safari on iPhone displays prompts like \"Use Passkey for example.com\" when users visit sites offering passkey authentication. The seamless integration means iOS handles passkey storage through iCloud Keychain, automatically syncing across devices and prompting for Face ID or Touch
 ID when authentication is required.
 
-This native implementation requires no additional apps or configuration&mdash;users simply authenticate as they normally would to unlock their device, with the passkey authentication occurring transparently in the background.
+This native implementation requires no additional apps or configuration &mdash; users simply authenticate as they normally would to unlock their device, with the passkey authentication occurring transparently in the background.
 
 ## **How to Choose a Passkey Name and Nickname**
 
@@ -67,7 +67,7 @@ This native implementation requires no additional apps or configuration&mdash;us
 
 Clear, descriptive passkey names help users manage multiple credentials across different devices. A passkey name like \"My MacBook Pro\" immediately identifies which device the credential resides on, preventing confusion when selecting from multiple available passkeys.
 
-For example, Coinbase Smart Wallet automatically generates passkey names using creation dates like \"Smart Wallet 6/16/2024,\" providing temporal context that helps users track when credentials were established. This naming convention becomes particularly valuable when users need to identify and remove outdated passkeys.
+For example, Coinbase Smart Wallet automatically generates passkey names by using creation dates like \"Smart Wallet 6/16/2024,\" providing temporal context that helps users track when credentials were established. This naming convention becomes particularly valuable when users need to identify and remove outdated passkeys.
 
 ### **Passkey Nickname Example**
 
@@ -80,7 +80,7 @@ selecting the appropriate passkey from multiple available options.
 
 - **Keep names descriptive but concise** to ensure readability in selection interfaces that may display passkeys in compact lists. Names exceeding 20-30 characters risk truncation in user interfaces, potentially obscuring distinguishing information.
 - **Include device type and context** to create instantly recognizable identifiers. \"MacBook\" alone provides less context than \"MacBook Pro - Personal,\" which clarifies both device and usage.
--   **Update names when circumstances change**, such as when transitioning devices between work and personal use or when replacing hardware. Stale passkey names create confusion that undermines the security benefits of multi-device authentication.
+-   **Update names when circumstances change**, such as when transitioning devices between work and personal use, or when replacing hardware. Stale passkey names create confusion that undermines the security benefits of multi-device authentication.
 
 ## **How to Implement a Passkey Login Flow**
 
@@ -151,7 +151,7 @@ Server-side storage associates the public key with the user\'s account, enabling
 
 ### **Authenticate with a Passkey (WebAuthn Get)**
 
-Authentication requests credentials through `navigator.credentials.get()` using a server-provided challenge and a list of acceptable credential IDs:
+Authentication requests credentials through `navigator.credentials.get()` by using a server-provided challenge and a list of acceptable credential IDs:
 
 ```js
 // Request authentication options from server
@@ -178,7 +178,7 @@ const assertion = await navigator.credentials.get({
 
 ### **Verify Assertion on Server**
 
-Server-side verification validates the signed assertion using the stored public key:
+Server-side verification validates the signed assertion by using the stored public key:
 
 ```js
 // Send assertion to server for verification
@@ -203,13 +203,13 @@ const verifyResult = await verifyResponse.json();
 if (verifyResult.verified) {
     window.location.href = '/dashboard';}
 ```
-Successful verification confirms the user possesses the private key corresponding to the stored public key, completing passwordless authentication.
+Successful verification confirms the user possesses the private key corresponding to the stored public key, thus completing passwordless authentication.
 
 ## **Passkey Implementation Examples in Code**
 
 ### **PHP Passkey Example**
 
-PHP developers can implement WebAuthn using the `web-auth/webauthn-lib` library:
+PHP developers can implement WebAuthn by using the `web-auth/webauthn-lib` library:
 
 ```php
 <?php
@@ -307,14 +307,12 @@ await fetch('/verify-authentication', {
 
 ![Supertokens](Supertokens.png)
 
-Passkeys provide a modern, phishing-resistant alternative to passwords, allowing users to authenticate with simple device-based gestures instead of memorizing credentials.
-[SuperTokens](https://supertokens.com/) streamlines this
-approach by offering fully managed components that handle the complexity of WebAuthn and passkey infrastructure for developers.
+Passkeys provide a modern, phishing-resistant alternative to passwords, allowing users to authenticate by using simple device-based gestures instead of memorizing credentials. [SuperTokens](https://supertokens.com/) streamlines this approach by offering fully managed components that handle the complexity of WebAuthn and passkey infrastructure for developers.
 
 - **Built-in WebAuthn flows** automate challenge generation, credential verification, and session management without requiring developers to implement complex cryptographic operations. SuperTokens handles the entire passkey lifecycle from registration through authentication and credential revocation.
 - **Secure credential storage** manages public keys, signature counters, and device metadata in a hardened data store with encryption at rest. The platform tracks credential usage patterns and signature counters to detect potential security anomalies like credential cloning attempts.
 - **Device management UI** enables users to name, list, and revoke their passkeys through pre-built interfaces that integrate seamlessly with existing authentication flows. Users can manage multiple passkeys across different devices, removing credentials for lost or replaced hardware.
-- **CSRF and session integration** ensure passkey authentication coordinates properly with existing session management, providing seamless cookie handling alongside [passwordless login.](https://supertokens.com/features/passwordless-login) This integration maintains security across the complete authentication lifecycle without requiring developers to manually synchronize multiple authentication mechanisms.
+- **CSRF and session integration** ensure passkey authentication coordinates properly with existing session management, providing seamless cookie handling alongside [passwordless login.](https://supertokens.com/features/passwordless-login) This integration maintains security across the complete authentication lifecycle without requiring developers to synchronize multiple authentication mechanisms manually.
 
 ## **What Are the Best Practices for Passkey Implementation?**
 
