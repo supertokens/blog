@@ -3301,6 +3301,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-strategy\"\n            },\n            \"headline\": \"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-strategy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/captcha-supertokens",
+        "metaTags": [
+            "<meta name=\"description\" content=\" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How Do I Add CAPTCHA to My Login Page?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/captcha-supertokens\" />",
+            "<meta property=\"og:description\" content=\" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/captcha-supertokens.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/captcha-supertokens\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/captcha-supertokens.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/captcha-supertokens\">"
+        ],
+        "title": "How Do I Add CAPTCHA to My Login Page?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/captcha-supertokens\"\n            },\n            \"headline\": \" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/captcha-supertokens.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {    
         "path": "/blog/supertokens-on-vercel",
         "metaTags": [
             "<meta name=\"description\" content=\"Step-by-step guide to deploying SuperTokens authentication on Vercel with Next.js. Learn setup, environment config, API routes, and deployment tips.\" />",
