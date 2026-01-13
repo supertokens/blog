@@ -309,6 +309,15 @@
         "location": "https://supertokens.com/blog/identity-and-access-management-strategy"
     },
     {
+        "location": "https://supertokens.com/blog/captcha-supertokens"
+    },
+    {
+        "location": "https://supertokens.com/blog/supertokens-on-vercel"
+    },
+    {    
+        "location": "https://supertokens.com/blog/biometric-auth"
+    },
+    {
         "location": "https://supertokens.com/blog/stytch-vs-auth0"
     },
     {
@@ -484,6 +493,9 @@
     },
     {
         "location": "https://supertokens.com/blog/launch-week-02-open-source-auth-plugins"
+    },
+    {
+        "location": "https://supertokens.com/blog/enterprise-identity-management"
     },
     {
         "location": "https://supertokens.com/blog/magiclinks"
