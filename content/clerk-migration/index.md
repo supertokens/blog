@@ -1,9 +1,10 @@
 ---
 title: "How to Migrate from Clerk Efficiently and Safely"
-date: "2025-01-12"
-description: " Step-by-step guide on migrating from Clerk to SuperTokens&mdash;covering trickle, bulk import, export scripts, sessions, and security."
+date: "2026-01-12"
+description: " Step-by-step guide on migrating from Clerk to SuperTokens—covering trickle, bulk import, export scripts, sessions, and security."
 cover: "clerk-migration.png"
 category: "programming"
+author: "Mostafa Ibrahim"
 ---
 
 Migrating authentication systems represents a critical infrastructure decision that affects every user interaction with your application.
@@ -22,7 +23,7 @@ The selection of a migration strategy depends on the size of the user base, the 
 Users migrate individually upon their next login attempt. The system checks the Clerk first, validates credentials, imports the user into SuperTokens, and issues a new session. This approach requires maintaining both systems temporarily, but it distributes the migration load over time and targets active users first.
 
 - **Bulk Import** 
-Export all users from Clerk and import them into SuperTokens in batches using the /bulk-import/users API. This method migrates users upfront, enabling faster Clerk deprecation.
+Export all users from Clerk and import them into SuperTokens in batches using the `/bulk-import/users` API. This method migrates users upfront, enabling faster Clerk deprecation.
 
 - **Full Export/Import via Scripts** 
 Automated scripts extract users from Clerk, transform data into SuperTokens format, and execute imports. This approach offers maximum control for complex migration requirements.
@@ -58,7 +59,7 @@ Trickle migration enables seamless, incremental user transitions without bulk da
 
 ### **2. Bulk Import**
 
-Bulk import migrates all users upfront through SuperTokens\' /bulk-import/users endpoint, enabling rapid Clerk deprecation.
+Bulk import migrates all users upfront through SuperTokens\' `/bulk-import/users` endpoint, enabling rapid Clerk deprecation.
 
 **Key Steps:**
 
@@ -119,23 +120,23 @@ Successful migration depends on accurately exporting Clerk user data and transfo
 
 ```js
 {
-"id":"user_2abc123",
-"email_addresses":[
-{
-"email_address":"user@example.com",
-"verification":{"status":"verified"}
-}
-],
-"password_hash":"$2a$10$abcdefghijklmnopqrstuv",
-"password_hasher":"bcrypt",
-"totp_secrets":[
-{
-"secret":"JBSWY3DPEHPK3PXP",
-"verified":true
-}
-],
-"first_name":"John",
-"last_name":"Doe"
+  "id": "user_2abc123",
+  "email_addresses": [
+    {
+      "email_address": "user@example.com",
+      "verification": { "status": "verified" }
+    }
+  ],
+  "password_hash": "$2a$10$abcdefghijklmnopqrstuv",
+  "password_hasher": "bcrypt",
+  "totp_secrets": [
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "verified": true
+    }
+  ],
+  "first_name": "John",
+  "last_name": "Doe"
 }
 ```
 
@@ -165,35 +166,39 @@ SuperTokens bulk import API requires specific JSON structure with these required
 
 **Required Fields:**
 
-- externalUserId: Unique identifier (use Clerk\'s user ID)
-- loginMethods: Array of authentication methods
-- totpDevices: Array of MFA TOTP devices (optional)
-- userMetadata: Custom user data (optional)
+- `externalUserId`: Unique identifier (use Clerk\'s user ID)
+- `loginMethods`: Array of authentication methods
+- `totpDevices`: Array of MFA TOTP devices (optional)
+- `userMetadata`: Custom user data (optional)
 
 **Import Format:**
 
 ```js
 {
-"users":[
-{
-"externalUserId":"clerk_user_2abc123",
-"loginMethods":[
-{
-"email":"user@example.com",
-"passwordHash":"$2a$10$abcdefghijklmnopqrstuv",
-"hashingAlgorithm":"bcrypt",
-"verified":true
+  "users": [
+    {
+      "externalUserId": "clerk_user_2abc123",
+      "loginMethods": [
+        {
+          "email": "user@example.com",
+          "passwordHash": "$2a$10$abcdefghijklmnopqrstuv",
+          "hashingAlgorithm": "bcrypt",
+          "verified": true
+        }
+      ],
+      "totpDevices": [
+        {
+          "secretKey": "JBSWY3DPEHPK3PXP",
+          "deviceName": "Authenticator App"
+        }
+      ],
+      "userMetadata": {
+        "firstName": "John",
+        "lastName": "Doe"
+      }
+    }
+  ]
 }
-],
-"totpDevices":[
-{
-"secretKey":"JBSWY3DPEHPK3PXP",
-"deviceName":"Authenticator App"
-}],
-"userMetadata":{
-"firstName":"John",
-"lastName":"Doe"
-}}]}
 ```
 **Field Mapping Reference:**
 
@@ -226,6 +231,7 @@ For managed hosting, use SuperTokens Cloud and obtain connection URI from the da
 ```js
 # Backend
 npm install supertokens-node
+
 # Frontend (React)
 npm install supertokens-auth-react
 ```
@@ -236,22 +242,24 @@ npm install supertokens-auth-react
 import SuperTokens from "supertokens-node";
 import EmailPassword from "supertokens-node/recipe/emailpassword";
 import Session from "supertokens-node/recipe/session";
+
+
 SuperTokens.init({
-framework:"express",
-supertokens:{
-connectionURI:"http://localhost:3567"
-},
-appInfo:{
-appName:"Your App",
-apiDomain:"http://localhost:3001",
-websiteDomain:"http://localhost:3000",
-apiBasePath:"/auth",
-websiteBasePath:"/auth"
-},
-recipeList:[
-EmailPassword.init(),
-Session.init()
-]
+  framework: "express",
+  supertokens: {
+    connectionURI: "http://localhost:3567",
+  },
+  appInfo: {
+    appName: "Your App",
+    apiDomain: "http://localhost:3001",
+    websiteDomain: "http://localhost:3000",
+    apiBasePath: "/auth",
+    websiteBasePath: "/auth",
+  },
+  recipeList: [
+    EmailPassword.init(),
+    Session.init(),
+  ],
 });
 ```
 
@@ -261,18 +269,20 @@ Session.init()
 import SuperTokens from "supertokens-auth-react";
 import EmailPassword from "supertokens-auth-react/recipe/emailpassword";
 import Session from "supertokens-auth-react/recipe/session";
+
+
 SuperTokens.init({
-appInfo:{
-appName:"Your App",
-apiDomain:"http://localhost:3001",
-websiteDomain:"http://localhost:3000",
-apiBasePath:"/auth",
-websiteBasePath:"/auth"
-},
-recipeList:[
-EmailPassword.init(),
-Session.init()
-]
+  appInfo: {
+    appName: "Your App",
+    apiDomain: "http://localhost:3001",
+    websiteDomain: "http://localhost:3000",
+    apiBasePath: "/auth",
+    websiteBasePath: "/auth",
+  },
+  recipeList: [
+    EmailPassword.init(),
+    Session.init(),
+  ],
 });
 ```
 ### **Lazy/Trickle Migration Integration**
@@ -280,45 +290,44 @@ Session.init()
 Integrate lazy migration logic into your authentication flow:
 
 ```js
-app.post("/auth/signin",async(req,res)=>{
-const{email,password}=req.body;
-
-// Check SuperTokens first
-let user=await EmailPassword.getUserByEmail(email);
-
-if(!user){
-// User not migrated - check Clerk
-const clerkUser=await clerk.users.getUser({emailAddress:[email]});
-
-if(clerkUser&&await clerk.verifyPassword(clerkUser.id,password)){
-// Import to SuperTokens
-await fetch("http://localhost:3567/bulk-import/users",{
-method:"POST",
-body:JSON.stringify({
-users:[
-{
-externalUserId:clerkUser.id,
-loginMethods:[
-{
-email:clerkUser.emailAddresses[0].emailAddress,
-passwordHash:clerkUser.passwordDigest,
-hashingAlgorithm:"bcrypt"
-}
-]
-}
-]
-})
+app.post("/auth/signin", async (req, res) => {
+  const { email, password } = req.body;
+ 
+  // Check SuperTokens first
+  let user = await EmailPassword.getUserByEmail(email);
+ 
+  if (!user) {
+    // User not migrated - check Clerk
+    const clerkUser = await clerk.users.getUser({ emailAddress: [email] });
+   
+    if (clerkUser && await clerk.verifyPassword(clerkUser.id, password)) {
+      // Import to SuperTokens
+      await fetch("http://localhost:3567/bulk-import/users", {
+        method: "POST",
+        body: JSON.stringify({
+          users: [{
+            externalUserId: clerkUser.id,
+            loginMethods: [{
+              email: clerkUser.emailAddresses[0].emailAddress,
+              passwordHash: clerkUser.passwordDigest,
+              hashingAlgorithm: "bcrypt",
+            }],
+          }],
+        }),
+      });
+     
+      user = await EmailPassword.getUserByEmail(email);
+    }
+  }
+ 
+  // Create SuperTokens session
+  if (user) {
+    await Session.createNewSession(req, res, user.id);
+    res.json({ status: "OK" });
+  } else {
+    res.status(401).json({ error: "Invalid credentials" });
+  }
 });
-user=await EmailPassword.getUserByEmail(email);
-}}}
-// Create SuperTokens session
-if(user){
-await Session.createNewSession(req,res,user.id);
-res.json({status:"OK"});
-}else{
-res.status(401).json({error:"Invalid credentials"});
-}
-);
 ```
 
 ### **Bulk Import Use Case**
@@ -327,44 +336,48 @@ Execute bulk imports for complete user base migration:
 
 ```js
 import fs from "fs";
-async function bulkImportUsers(){
-const clerkUsers=JSON.parse(fs.readFileSync("clerk_export.json"));
-// Transform to SuperTokens format
-const superTokensUsers=clerkUsers.map(u=>({
-externalUserId:u.id,
-loginMethods:[
-{
-email:u.email_addresses[0].email_address,
-passwordHash:u.password_hash,
-hashingAlgorithm:"bcrypt"
+
+
+async function bulkImportUsers() {
+  const clerkUsers = JSON.parse(fs.readFileSync("clerk_export.json"));
+ 
+  // Transform to SuperTokens format
+  const superTokensUsers = clerkUsers.map(u => ({
+    externalUserId: u.id,
+    loginMethods: [{
+      email: u.email_addresses[0].email_address,
+      passwordHash: u.password_hash,
+      hashingAlgorithm: "bcrypt",
+    }],
+    totpDevices: u.totp_secrets?.map(s => ({
+      secretKey: s.secret,
+      deviceName: "Migrated Device",
+    })) || [],
+  }));
+ 
+  // Import in batches of 10,000
+  const batchSize = 10000;
+  for (let i = 0; i < superTokensUsers.length; i += batchSize) {
+    const batch = superTokensUsers.slice(i, i + batchSize);
+   
+    await fetch("http://localhost:3567/bulk-import/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ users: batch }),
+    });
+  }
 }
-],
-totpDevices:u.totp_secrets?.map(s=>({
-secretKey:s.secret,
-deviceName:"Migrated Device"
-}))||[]
-}));
-// Import in batches of 10,000
-const batchSize=10000;
-
-for(let i=0;i<superTokensUsers.length;i+=batchSize){
-const batch=superTokensUsers.slice(i,i+batchSize);
-
-await fetch("http://localhost:3567/bulk-import/users",{
-method:"POST",
-headers:{"Content-Type":"application/json"},
-body:JSON.stringify({users:batch})
-});
-}}
 ```
 
 **Monitor Import Progress:**
 
 ```js
 // Check status
-const response=await fetch("http://localhost:3567/bulk-import/users/status");
-const status=await response.json();
-console.log(`Total:${status.stats.total},Success:${status.stats.success},Failed:${status.stats.failed}`);
+const response = await fetch("http://localhost:3567/bulk-import/users/status");
+const status = await response.json();
+
+
+console.log(`Total: ${status.stats.total}, Success: ${status.stats.success}, Failed: ${status.stats.failed}`);
 ```
 
 ## **Handling Sessions, MFA, and Other Edge Cases**
@@ -378,18 +391,20 @@ Active Clerk sessions do not transfer to SuperTokens. Users with valid Clerk ses
 During transition, implement verification fallback:
 
 ```js
-async function verifySessionWithFallback(req,res,next){
-try{
-await verifySession()(req,res,next);
-}catch(error){
-// Try Clerk session as fallback
-const clerkSession=await clerk.sessions.verifySession(req.cookies.__session);
-if(clerkSession){
-req.clerkUserId=clerkSession.userId;
-next();
-}else{
-res.status(401).json({error:"Unauthorized"});
-}}}
+async function verifySessionWithFallback(req, res, next) {
+  try {
+    await verifySession()(req, res, next);
+  } catch (error) {
+    // Try Clerk session as fallback
+    const clerkSession = await clerk.sessions.verifySession(req.cookies.__session);
+    if (clerkSession) {
+      req.clerkUserId = clerkSession.userId;
+      next();
+    } else {
+      res.status(401).json({ error: "Unauthorized" });
+    }
+  }
+}
 ```
 
 ### **MFA/TOTP Data**
@@ -402,10 +417,13 @@ Clerk exports include TOTP secrets in user data:
 
 ```js
 {
-"totp_secrets":[{
-"secret":"JBSWY3DPEHPK3PXP",
-"verified":true
-}]}
+  "totp_secrets": [
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "verified": true
+    }
+  ]
+}
 ```
 
 **Import to SuperTokens:**
@@ -414,11 +432,14 @@ Include TOTP devices in the bulk import:
 
 ```js
 {
-"totpDevices":[{
-"secretKey":"JBSWY3DPEHPK3PXP",
-"deviceName":"Authenticator App",
-"verified":true
-}]}
+  "totpDevices": [
+    {
+      "secretKey": "JBSWY3DPEHPK3PXP",
+      "deviceName": "Authenticator App",
+      "verified": true
+    }
+  ]
+}
 ```
 
 ### **Ensuring userId Continuity**
@@ -431,7 +452,7 @@ Use the Clerk\'s user ID as SuperTokens\' externalUserId:
 
 ```js
 {
-"externalUserId":"clerk_user_2abc123"
+  "externalUserId": "clerk_user_2abc123"
 }
 ```
 
@@ -439,7 +460,7 @@ Use the Clerk\'s user ID as SuperTokens\' externalUserId:
 
 ```js
 const users = await SuperTokens.getUsersOldestFirst({
-externalUserId: clerkUserId,
+  externalUserId: clerkUserId,
 });
 const user = users.users[0];
 ```
@@ -573,7 +594,7 @@ disruption&mdash;users continue with Clerk sessions until expiration, then migra
 
 ### **How to import MFA secrets securely?**
 
-Include TOTP secrets under totpDevices in bulk import requests. SuperTokens stores MFA secrets encrypted at rest.
+Include TOTP secrets under `totpDevices` in bulk import requests. SuperTokens stores MFA secrets encrypted at rest.
 
 **Security Best Practices:**
 
@@ -597,7 +618,7 @@ Check failed imports via status endpoint:
 const response = await fetch("http://localhost:3567/bulk-import/users/status?status=FAILED");
 const failedImports = await response.json();
 
-failedImports.users.forEach(failed=>{
+failedImports.users.forEach(failed => {
   console.error(`User ${failed.externalUserId}: ${failed.error}`);
 });
 ```
