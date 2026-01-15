@@ -448,7 +448,7 @@ Maintain user ID consistency to preserve foreign key relationships in your appli
 
 **Strategy:**
 
-Use the Clerk\'s user ID as SuperTokens\' externalUserId:
+Use the Clerk\'s user ID as SuperTokens\' `externalUserId`:
 
 ```js
 {
