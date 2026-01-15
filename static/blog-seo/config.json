@@ -3324,6 +3324,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/passkey-examples\"\n            },\n            \"headline\": \"Discover real-world passkey examples across Apple, Google, Coinbase, iPhone, PHP, and more, plus step-by-step implementation guidance.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/passkey-examples.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {   
+        "path": "/blog/captcha-supertokens",
+        "metaTags": [
+            "<meta name=\"description\" content=\" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How Do I Add CAPTCHA to My Login Page?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/captcha-supertokens\" />",
+            "<meta property=\"og:description\" content=\" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/captcha-supertokens.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/captcha-supertokens\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/captcha-supertokens.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/captcha-supertokens\">"
+        ],
+        "title": "How Do I Add CAPTCHA to My Login Page?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/captcha-supertokens\"\n            },\n            \"headline\": \" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/captcha-supertokens.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
         "path": "/blog/supertokens-on-vercel",
         "metaTags": [
             "<meta name=\"description\" content=\"Step-by-step guide to deploying SuperTokens authentication on Vercel with Next.js. Learn setup, environment config, API routes, and deployment tips.\" />",
@@ -3346,7 +3369,7 @@
         "title": "Deploying SuperTokens on Vercel with Next.js",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/supertokens-on-vercel\"\n            },\n            \"headline\": \"Step-by-step guide to deploying SuperTokens authentication on Vercel with Next.js. Learn setup, environment config, API routes, and deployment tips.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/supertokens-on-vercel.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    {    
+    {
         "path": "/blog/stytch-vs-auth0",
         "metaTags": [
             "<meta name=\"description\" content=\"Discover how Stytch and Auth0 compare in pricing, features, developer experience, and fraud tools — plus explore an open-source, self-hosted alternative offering full control and transparency for modern authentication.\" />",
@@ -3368,10 +3391,9 @@
         ],
         "title": "Stytch vs Auth0 (2025): Pricing, Features, and More",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/stytch-vs-auth0\"\n            },\n            \"headline\": \"Discover how Stytch and Auth0 compare in pricing, features, developer experience, and fraud tools — plus explore an open-source, self-hosted alternative offering full control and transparency for modern authentication.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/stytch-vs-auth0.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
-
     },
     {
-      "path": "/blog/auth0-vs-fusionauth",
+        "path": "/blog/auth0-vs-fusionauth",
         "metaTags": [
             "<meta name=\"description\" content=\"Auth0 vs FusionAuth in 2025: pricing, hosting (SaaS vs self-host), DX, and best-fit use cases—plus an open-source alternative to consider.\" />",
             "",
@@ -3394,7 +3416,7 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/auth0-vs-fusionauth\"\n            },\n            \"headline\": \"Auth0 vs FusionAuth in 2025: pricing, hosting (SaaS vs self-host), DX, and best-fit use cases—plus an open-source alternative to consider.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/auth0-vs-fusionauth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
-      "path": "/blog/workos-alternatives",
+        "path": "/blog/workos-alternatives",
         "metaTags": [
             "<meta name=\"description\" content=\"Discover the best WorkOS alternatives for SSO, SCIM, and audit logs — open-source and managed options, pricing signals, and when SuperTokens fits.\" />",
             "",
@@ -3439,7 +3461,7 @@
         "title": "SolidJS Authentication: What Framework Should You Use?",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/solidjs-auth\"\n            },\n            \"headline\": \"Learn how to add secure authentication to SolidJS apps. Compare authentication frameworks and see why SuperTokens is a SolidJS-ready solution.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/solidjs-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    {    
+    {
         "path": "/blog/biometric-auth",
         "metaTags": [
             "<meta name=\"description\" content=\"Understand biometric authentication on the web: how it works, use cases, security benefits, and how to implement it using WebAuthn.\" />",
@@ -4726,5 +4748,28 @@
         ],
         "title": "Prompt Injection Attacks on LLMs: The Hidden AI Phishing Threat",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/gemini-phishing-attack\"\n            },\n            \"headline\": \"Prompt injection attacks can trick LLMs into phishing users. Learn how invisible HTML is being weaponized—and how to protect your app’s auth flows.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/gemini-phishing-attacks.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/clerk-pricing-the-complete-guide",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Clerk Pricing - The Complete Guide\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/clerk-pricing-the-complete-guide\" />",
+            "<meta property=\"og:description\" content=\"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/clerk-pricing-the-complete-guide\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/clerk-pricing-the-complete-guide\">"
+        ],
+        "title": "Clerk Pricing - The Complete Guide",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"\n            },\n            \"headline\": \"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]

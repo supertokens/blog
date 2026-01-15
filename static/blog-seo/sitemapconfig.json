@@ -311,28 +311,31 @@
     {
         "location": "https://supertokens.com/blog/passkey-examples"
     },
+    {    
+        "location": "https://supertokens.com/blog/captcha-supertokens"
+    },
     {
         "location": "https://supertokens.com/blog/supertokens-on-vercel"
     },
-    {    
+    {
         "location": "https://supertokens.com/blog/biometric-auth"
     },
     {
         "location": "https://supertokens.com/blog/stytch-vs-auth0"
     },
     {
-      "location": "https://supertokens.com/blog/auth0-vs-fusionauth"
+        "location": "https://supertokens.com/blog/auth0-vs-fusionauth"
     },
     {
         "location": "https://supertokens.com/blog/workos-alternatives"
     },
-    {    
+    {
         "location": "https://supertokens.com/blog/biometric-auth"
     },
     {
-      "location": "https://supertokens.com/blog/solidjs-auth"
+        "location": "https://supertokens.com/blog/solidjs-auth"
     },
-    {    
+    {
         "location": "https://supertokens.com/blog/biometric-auth"
     },
     {
@@ -508,5 +511,8 @@
     },
     {
         "location": "https://supertokens.com/blog/gemini-phishing-attack"
+    },
+    {
+        "location": "https://supertokens.com/blog/clerk-pricing-the-complete-guide"
     }
 ]
