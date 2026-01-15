@@ -4748,5 +4748,28 @@
         ],
         "title": "Clerk Pricing - The Complete Guide",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"\n            },\n            \"headline\": \"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/clerk-migration",
+        "metaTags": [
+            "<meta name=\"description\" content=\" Step-by-step guide on migrating from Clerk to SuperTokens&mdash;covering trickle, bulk import, export scripts, sessions, and security.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How to Migrate from Clerk Efficiently and Safely\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/clerk-migration\" />",
+            "<meta property=\"og:description\" content=\" Step-by-step guide on migrating from Clerk to SuperTokens&mdash;covering trickle, bulk import, export scripts, sessions, and security.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/clerk-migration.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\" Step-by-step guide on migrating from Clerk to SuperTokens&mdash;covering trickle, bulk import, export scripts, sessions, and security.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/clerk-migration\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/clerk-migration.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/clerk-migration\">"
+        ],
+        "title": "How to Migrate from Clerk Efficiently and Safely",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/clerk-migration\"\n            },\n            \"headline\": \" Step-by-step guide on migrating from Clerk to SuperTokens&mdash;covering trickle, bulk import, export scripts, sessions, and security.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/clerk-migration.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
