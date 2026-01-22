@@ -2,7 +2,7 @@
 title: Best MFA Solutions Compared (2025 Guide)
 description: "Compare the best MFA solutions in 2025: features, costs, and trade-offs. Includes insights from SuperTokens’ MFA cost guide."
 date: "2025-12-10"
-cover: "TODO.png"
+cover: "best_mfa_solutions_compared.png"
 category: "MFA, auth, guide"
 author: "Maurice Saldivar"
 ---
