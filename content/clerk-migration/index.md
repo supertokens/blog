@@ -23,10 +23,10 @@ The selection of a migration strategy depends on the size of the user base, the 
 Users migrate individually upon their next login attempt. The system checks the Clerk first, validates credentials, imports the user into SuperTokens, and issues a new session. This approach requires maintaining both systems temporarily, but it distributes the migration load over time and targets active users first.
 
 - **Bulk Import** 
-Export all users from Clerk and import them into SuperTokens in batches using the `/bulk-import/users` API. This method migrates users upfront, enabling faster Clerk deprecation.
+Export all users from Clerk and import them into SuperTokens in batches by using the `/bulk-import/users` API. This method migrates users upfront, enabling faster Clerk deprecation.
 
 - **Full Export/Import via Scripts** 
-Automated scripts extract users from Clerk, transform data into SuperTokens format, and execute imports. This approach offers maximum control for complex migration requirements.
+Automated scripts extract users from Clerk, transform data into the SuperTokens format, and execute imports. This approach offers maximum control for complex migration requirements.
 
 - **Hybrid Approach** 
 Combine bulk import for the majority of users with lazy migration for edge cases or recently registered accounts.
@@ -37,12 +37,12 @@ Trickle migration enables seamless, incremental user transitions without bulk da
 
 **How It Works:**
 
-1. User attempts to log in with email and password
-2. Check if the user exists in SuperTokens
-3. If not found, authenticate against Clerk
-4. Upon successful Clerk authentication, import the user into SuperTokens
-5. Issue SuperTokens session token
-6. Subsequent logins authenticate directly against SuperTokens
+1. User attempts to log in with email and password.
+2. Check if the user exists in SuperTokens.
+3. If not found, authenticate against Clerk.
+4. Upon successful Clerk authentication, import the user into SuperTokens.
+5. Issue SuperTokens session token.
+6. Subsequent logins authenticate directly against SuperTokens.
 
 **Advantages:**
 
@@ -54,7 +54,7 @@ Trickle migration enables seamless, incremental user transitions without bulk da
 **Considerations:**
 
 - Requires maintaining both systems during transition
-- The complete migration timeline depends on the user login frequency
+- Complete migration timeline depends on the user login frequency
 - Inactive users may never migrate without eventual bulk import
 
 ### **2. Bulk Import**
@@ -63,11 +63,11 @@ Bulk import migrates all users upfront through SuperTokens\' `/bulk-import/users
 
 **Key Steps:**
 
-1. Export the complete user dataset from the Clerk dashboard
-2. Transform data into SuperTokens bulk import format
-3. Submit batches (up to 10,000 users per request)
-4. Monitor import job status
-5. Handle failures and retry as needed
+1. Export the complete user dataset from the Clerk dashboard.
+2. Transform data into SuperTokens bulk import format.
+3. Submit batches (up to 10,000 users per request).
+4. Monitor import job status.
+5. Handle failures and retry as needed.
 
 **Advantages:**
 
@@ -104,15 +104,15 @@ Scripted migration provides maximum flexibility for complex requirements, inspir
 
 ## **Exporting and Importing Clerk Users**
 
-Successful migration depends on accurately exporting Clerk user data and transforming it into SuperTokens-compatible format.
+Successful migration depends on accurately exporting Clerk user data and transforming it into a SuperTokens-compatible format.
 
 ### **Export Users from Clerk Dashboard**
 
 **Steps:**
 
-1. Navigate to [Clerk Dashboard](https://clerk.com/user-authentication?utm_source=google&utm_medium=cpc&utm_campaign=%7Bcampaignname%7D&utm_adgroup=%7Badgroupname%7D&utm_term=clerk&gad_source=1&gad_campaignid=23228885670&gbraid=0AAAAAqJUiX7m311FiPI1I20vdkUmBaDeO&gclid=CjwKCAiAjojLBhAlEiwAcjhrDiP0PVXaecZ5o0nJRwjXDHnoC2VckT_z_i92YJMiQ4_PdGmy_7R0EBoCZZAQAvD_BwE) → Configure section → settings
-2. Click \"Export Users\"
-3. Download export file
+1. Navigate to **[Clerk Dashboard](https://clerk.com/user-authentication?utm_source=google&utm_medium=cpc&utm_campaign=%7Bcampaignname%7D&utm_adgroup=%7Badgroupname%7D&utm_term=clerk&gad_source=1&gad_campaignid=23228885670&gbraid=0AAAAAqJUiX7m311FiPI1I20vdkUmBaDeO&gclid=CjwKCAiAjojLBhAlEiwAcjhrDiP0PVXaecZ5o0nJRwjXDHnoC2VckT_z_i92YJMiQ4_PdGmy_7R0EBoCZZAQAvD_BwE) → Configure section → settings**.
+2. Click **Export Users**.
+3. Download an export file.
 
 ![Dashboard](Dashboard.png)
 
@@ -142,7 +142,7 @@ Successful migration depends on accurately exporting Clerk user data and transfo
 
 ### **Using Clerk Migration Scripts**
 
-SuperTokens community provides migration scripts that handle Clerk-specific data formats and common edge cases.
+The SuperTokens community provides migration scripts that handle Clerk-specific data formats and common edge cases.
 
 **Supported Password Hash Algorithms:**
 
@@ -162,14 +162,12 @@ SuperTokens community provides migration scripts that handle Clerk-specific data
 
 ### **Formatting for SuperTokens Bulk Import**
 
-SuperTokens bulk import API requires specific JSON structure with these required fields:
+SuperTokens bulk import API requires a specific JSON structure with the following required fields:
 
-**Required Fields:**
-
-- `externalUserId`: Unique identifier (use Clerk\'s user ID)
-- `loginMethods`: Array of authentication methods
-- `totpDevices`: Array of MFA TOTP devices (optional)
-- `userMetadata`: Custom user data (optional)
+- `externalUserId`: Unique identifier (use Clerk\'s user ID).
+- `loginMethods`: Array of authentication methods.
+- `totpDevices`: Array of MFA TOTP devices (optional).
+- `userMetadata`: Custom user data (optional).
 
 **Import Format:**
 
@@ -224,7 +222,7 @@ For self-hosted deployments:
 docker run -d -p 3567:3567 registry.supertokens.io/supertokens/supertokens-postgresql
 ```
 
-For managed hosting, use SuperTokens Cloud and obtain connection URI from the dashboard.
+For managed hosting, use SuperTokens Cloud and obtain the connection URI from the dashboard.
 
 **Install SDKs:**
 
@@ -384,7 +382,7 @@ console.log(`Total: ${status.stats.total}, Success: ${status.stats.success}, Fai
 
 ### **Migrating Session State**
 
-Active Clerk sessions do not transfer to SuperTokens. Users with valid Clerk sessions continue working until expiration; next login triggers migration and SuperTokens session creation.
+Active Clerk sessions do not transfer to SuperTokens. Users with valid Clerk sessions continue working until expiration; the next login triggers migration and SuperTokens session creation.
 
 **Session Fallback Logic:**
 
@@ -448,7 +446,7 @@ Maintain user ID consistency to preserve foreign key relationships in your appli
 
 **Strategy:**
 
-Use the Clerk\'s user ID as SuperTokens\' `externalUserId`:
+Use the Clerk\'s user ID as the SuperTokens\' `externalUserId`:
 
 ```js
 {
@@ -503,12 +501,12 @@ const user = users.users[0];
 
 After lazy migration stabilizes (typically 2-4 weeks):
 
-1. Export complete user list from Clerk
-2. Filter out already-migrated users
-3. Execute bulk import in batches
-4. Monitor import job status
-5. Verify data integrity
-6. Handle failed imports
+1. Export complete user list from Clerk.
+2. Filter out already-migrated users.
+3. Execute bulk import in batches.
+4. Monitor import job status.
+5. Verify data integrity.
+6. Handle failed imports.
 
 ### **4. Developer and UX Testing**
 
@@ -543,10 +541,10 @@ import { EmailPasswordAuth } from "supertokens-auth-react/recipe/emailpassword";
 
 **Communication:**
 
-- Notify users of the authentication system upgrade
-- Update documentation
-- Inform the support team
-- Prepare rollback plan
+- Notify users of the authentication system upgrade.
+- Update documentation.
+- Inform the support team.
+- Prepare a rollback plan.
 
 ## **Benefits of Migrating to SuperTokens**
 
@@ -589,8 +587,8 @@ SuperTokens provides official migration tooling:
 
 ### **Can existing sessions persist across platforms?**
 
-No, active sessions cannot transfer between Clerk and SuperTokens due to different token formats. However, lazy migration ensures minimal
-disruption&mdash;users continue with Clerk sessions until expiration, then migrate on next login.
+No. Active sessions cannot transfer between Clerk and SuperTokens, due to different token formats. However, lazy migration ensures minimal
+disruption&mdash;users continue with Clerk sessions until expiration, then migrate on their next login.
 
 ### **How to import MFA secrets securely?**
 
@@ -612,7 +610,7 @@ Include TOTP secrets under `totpDevices` in bulk import requests. SuperTokens st
 
 ### **How to debug import failures?**
 
-Check failed imports via status endpoint:
+Check failed imports via the status endpoint:
 
 ```js
 const response = await fetch("http://localhost:3567/bulk-import/users/status?status=FAILED");
@@ -627,43 +625,43 @@ failedImports.users.forEach(failed => {
 
 | Error                     | Solution                                  |
 |---------------------------|-------------------------------------------|
-| "Invalid password hash"   | Convert hashes or require password reset  |
-| "Duplicate email"         | Skip or update existing user              |
-| "Missing required field"  | Fix data transformation logic             |
-| "Invalid TOTP secret"     | Verify secret encoding                     |
+| "Invalid password hash"   | Convert hashes or require password reset.  |
+| "Duplicate email"         | Skip or update existing user.              |
+| "Missing required field"  | Fix data transformation logic.             |
+| "Invalid TOTP secret"     | Verify secret encoding.                    |
 
 
 ## **Conclusion and Next Steps**
 
 Migrating from Clerk to SuperTokens involves strategic planning, careful data handling, and systematic rollout. Key approaches include:
 
-- **Lazy/Trickle Migration**: Incremental migration upon login, targeting active users first
-- **Bulk Import**: Upfront migration via API for faster Clerk deprecation
-- **Hybrid Approach**: Combining both methods for optimal results
+- **Lazy/Trickle Migration**: Incremental migration upon login, targeting active users first.
+- **Bulk Import**: Upfront migration via API for faster Clerk deprecation.
+- **Hybrid Approach**: Combining both methods for optimal results.
 
 **Critical Considerations:**
 
-- Preserve MFA secrets to avoid forcing re-enrollment
-- Implement session fallback during transition
-- Use Clerk user IDs as SuperTokens external IDs for continuity
-- SuperTokens supports bcrypt, argon2, scrypt, and other hash algorithms
+- Preserve MFA secrets to avoid forcing re-enrollment.
+- Implement session fallback during transition.
+- Use Clerk user IDs as SuperTokens external IDs for continuity.
+- SuperTokens supports bcrypt, argon2, scrypt, and other hash algorithms.
 
 **SuperTokens Advantages:**
 
 - Open source with full code visibility
 - Self-hosting eliminates vendor lock-in
-- Flat-rate pricing vs per-user charges
+- Flat-rate pricing vs. per-user charges
 - Deep customization of all authentication flows
 - Built-in migration support
 
 **Next Steps:**
 
-1.  Review official SuperTokens migration docs at [https://supertokens.com/docs/emailpassword/migration/about](https://supertokens.com/docs/emailpassword/migration/about)
-2. Set up staging environment with both systems
-3. Export sample users and test migration scripts
-4. Start with lazy migration for low-risk rollout
-5. Schedule bulk import after validation
-6. Join SuperTokens Discord for migration support
+1.  Review the official SuperTokens migration docs at: [https://supertokens.com/docs/emailpassword/migration/about](https://supertokens.com/docs/emailpassword/migration/about).
+2. Set-up staging environment with both systems.
+3. Export sample users and test migration scripts.
+4. Start with lazy migration for low-risk rollout.
+5. Schedule bulk import after validation.
+6. Join the SuperTokens Discord for migration support.
 
 With proper planning and the strategies outlined in this guide, you can transition smoothly from Clerk to SuperTokens while maintaining
 security, preserving user data, and minimizing disruption.
