@@ -489,10 +489,6 @@
         "location": "https://supertokens.com/blog/cors-errors"
     },
     {
-
-        "location": "https://supertokens.com/blog/fido2_vs_u2f"
-    },
-    {
         "location": "https://supertokens.com/blog/webauthn-explained"
     },
     {
@@ -515,5 +511,8 @@
     },
     {
         "location": "https://supertokens.com/blog/clerk-pricing-the-complete-guide"
+    },
+    {
+        "location": "https://supertokens.com/blog/fido2_vs_u2f"
     }
 ]

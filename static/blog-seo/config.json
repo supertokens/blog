@@ -4748,5 +4748,28 @@
         ],
         "title": "Clerk Pricing - The Complete Guide",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"\n            },\n            \"headline\": \"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/fido2_vs_u2f",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Understand the differences between FIDO2 and U2F. Learn how each works, where they apply, and which authentication standard to choose.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"FIDO2 vs U2F 5 Key Differences Explained\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/fido2_vs_u2f\" />",
+            "<meta property=\"og:description\" content=\"Understand the differences between FIDO2 and U2F. Learn how each works, where they apply, and which authentication standard to choose.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/FIDO2_VS_U2F\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Understand the differences between FIDO2 and U2F. Learn how each works, where they apply, and which authentication standard to choose.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/fido2_vs_u2f\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/FIDO2_VS_U2F\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/fido2_vs_u2f\">"
+        ],
+        "title": "FIDO2 vs U2F 5 Key Differences Explained",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/fido2_vs_u2f\"\n            },\n            \"headline\": \"Understand the differences between FIDO2 and U2F. Learn how each works, where they apply, and which authentication standard to choose.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/FIDO2_VS_U2F\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
