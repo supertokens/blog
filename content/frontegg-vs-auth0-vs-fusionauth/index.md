@@ -1,6 +1,6 @@
 ---
 title: "Frontegg vs. Auth0 vs. FusionAuth – Which Authentication Platform Fits Your Needs?"
-date: "2025-12-26"
+date: "2026-01-05"
 cover: "frontegg-vs-auth0-vs-fusionauth.png"
 category: "programming"
 author: "Mostafa Ibrahim"
