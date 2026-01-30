@@ -3323,7 +3323,7 @@
         "title": "Frontegg vs Auth0 vs FusionAuth – Which Authentication Platform Fits You?",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/frontegg-vs-auth0-vs-fusionauth\"\n            },\n            \"headline\": \"undefined\",\n            \"image\": \"https://supertokens.com/blog-meta-images/frontegg-vs-auth0-vs-fusionauth.jpg\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    {    
+    {
         "path": "/blog/passkey-examples",
         "metaTags": [
             "<meta name=\"description\" content=\"Discover real-world passkey examples across Apple, Google, Coinbase, iPhone, PHP, and more, plus step-by-step implementation guidance.\" />",
@@ -3346,7 +3346,7 @@
         "title": "Passkey Examples: Real-World Use Cases and Implementation",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/passkey-examples\"\n            },\n            \"headline\": \"Discover real-world passkey examples across Apple, Google, Coinbase, iPhone, PHP, and more, plus step-by-step implementation guidance.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/passkey-examples.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    {   
+    {
         "path": "/blog/captcha-supertokens",
         "metaTags": [
             "<meta name=\"description\" content=\" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\" />",
@@ -4819,7 +4819,7 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/best-mfa-solutions-2025\"\n            },\n            \"headline\": \"Compare the best MFA solutions in 2025: features, costs, and trade-offs. Includes insights from SuperTokens’ MFA cost guide.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
-      "path": "/blog/clerk-pricing-the-complete-guide",
+        "path": "/blog/clerk-pricing-the-complete-guide",
         "metaTags": [
             "<meta name=\"description\" content=\"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\" />",
             "",
@@ -4863,5 +4863,28 @@
         ],
         "title": "How to Migrate from Clerk Efficiently and Safely",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/clerk-migration\"\n            },\n            \"headline\": \" Step-by-step guide on migrating from Clerk to SuperTokens&mdash;covering trickle, bulk import, export scripts, sessions, and security.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/clerk-migration.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/fideo2-and-u2f-differences",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Understand the differences between FIDO2 and U2F. Learn how each works, where they apply, and which authentication standard to choose.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"FIDO2 vs U2F 5 Key Differences Explained\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/fideo2-and-u2f-differences\" />",
+            "<meta property=\"og:description\" content=\"Understand the differences between FIDO2 and U2F. Learn how each works, where they apply, and which authentication standard to choose.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/fido2-vs-u2f.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Understand the differences between FIDO2 and U2F. Learn how each works, where they apply, and which authentication standard to choose.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/fideo2-and-u2f-differences\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/fido2-vs-u2f.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/fideo2-and-u2f-differences\">"
+        ],
+        "title": "FIDO2 vs U2F 5 Key Differences Explained",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/fideo2-and-u2f-differences\"\n            },\n            \"headline\": \"Understand the differences between FIDO2 and U2F. Learn how each works, where they apply, and which authentication standard to choose.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/fido2-vs-u2f.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
