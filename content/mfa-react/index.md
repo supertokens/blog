@@ -38,3 +38,21 @@ User accesses protected routes
 ```
 
 SuperTokens handles this coordination through its React SDK. Pre-built UI components manage factor setup and verification, while hooks let you check whether MFA is complete before rendering protected content. React components send user input to SuperTokens endpoints and render appropriate UI based on authentication state. Cryptographic operations stay server-side where they belong.
+
+## Key MFA Methods You Can Enable with SuperTokens
+
+SuperTokens supports three second-factor options, each with distinct trade-offs for security and user experience.
+
+**Time-Based One-Time Passwords (TOTP)**
+
+Users scan a QR code with an authenticator app like Google Authenticator or Authy. The app generates 6-digit codes that refresh every 30 seconds. Both the app and your server calculate codes from a shared secret, so verification works offline without network dependencies. TOTP suits technical users comfortable managing authenticator apps and provides strong security without per-verification costs.
+
+**Email/SMS One-Time Passcodes (OTP)**
+
+The server sends a temporary code to the user's verified email or phone number. Zero app installation required, making this the lowest-friction option for consumer SaaS products. The trade-off: each verification requires network delivery, and SMS is vulnerable to SIM-swapping attacks. Email OTP offers better security than SMS while maintaining accessibility for non-technical users.
+
+**Passkeys/WebAuthn**
+
+Hardware-backed authentication using security keys or device biometrics. The browser handles cryptographic verification with credentials bound to specific origins, providing phishing resistance that TOTP and OTP lack. When a user registers a passkey, their device generates a key pair. The private key never leaves the hardware. SuperTokens supports passkeys through its WebAuthn recipe, though adoption remains early compared to TOTP.
+
+The method you choose depends on your user base. Enterprise applications with security-conscious users lean toward TOTP or passkeys. Consumer products prioritizing conversion often start with email OTP.
