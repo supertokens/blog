@@ -76,3 +76,49 @@ Requiring MFA on every login from the same device frustrates users. Device trust
 **Scaling and Latency**
 
 MFA verification adds a round-trip to your auth flow. For large user bases, consider where session state lives. Centralized session stores (Redis, database) enable instant revocation but add latency. Stateless JWTs reduce database calls but complicate mid-session revocation. SuperTokens supports both patterns, with built-in token theft detection that works across either architecture.
+
+## Step-by-Step Integration Overview
+
+This roadmap covers the integration sequence. Full code examples live in the SuperTokens MFA documentation.
+
+**1. Spin Up SuperTokens Core**
+
+Run the core service via Docker or use SuperTokens' managed offering. The core handles session management, token generation, and factor verification logic.
+
+```bash
+docker run -p 3567:3567 -d registry.supertokens.io/supertokens/supertokens-postgresql
+```
+
+**2. Enable Email-Password and Session Recipes**
+
+Configure your backend SDK with the primary authentication recipe and session management. This establishes the first factor before adding MFA.
+
+**3. Add TOTP or OTP Recipe**
+
+Enable your chosen second factor in the recipe list. Configure requirements: whether MFA is mandatory for all users or triggered conditionally.
+
+```javascript
+import MultiFactorAuth from "supertokens-node/recipe/multifactorauth";
+import TOTP from "supertokens-node/recipe/totp";
+
+recipeList: [
+    EmailPassword.init(),
+    TOTP.init(),
+    MultiFactorAuth.init({
+        firstFactors: ["emailpassword"],
+    }),
+    Session.init()
+]
+```
+
+**4. Wire the Frontend SDK**
+
+Initialize SuperTokens in your React app. Pre-built UI components for login, factor setup, and verification auto-mount under `/auth`. Users see TOTP QR codes and input fields without custom component work.
+
+**5. Protect Routes with SessionAuth**
+
+Wrap protected components with `SessionAuth`. The wrapper checks session validity and MFA completion before rendering children. Incomplete sessions redirect to the appropriate challenge screen.
+
+**6. Test Token Rotation and Theft Detection**
+
+Verify that refresh tokens rotate on each use and that concurrent token usage triggers theft detection. SuperTokens automatically revokes sessions when replay attacks are detected.
