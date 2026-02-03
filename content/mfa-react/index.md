@@ -56,3 +56,23 @@ The server sends a temporary code to the user's verified email or phone number. 
 Hardware-backed authentication using security keys or device biometrics. The browser handles cryptographic verification with credentials bound to specific origins, providing phishing resistance that TOTP and OTP lack. When a user registers a passkey, their device generates a key pair. The private key never leaves the hardware. SuperTokens supports passkeys through its WebAuthn recipe, though adoption remains early compared to TOTP.
 
 The method you choose depends on your user base. Enterprise applications with security-conscious users lean toward TOTP or passkeys. Consumer products prioritizing conversion often start with email OTP.
+
+## Planning Your MFA Roll-Out: Critical Questions to Ask
+
+Before writing code, answer these architectural questions. Changing MFA policy after launch affects every user session.
+
+**Mandatory vs. Step-Up MFA**
+
+Should all logins require a second factor, or only high-risk actions? Mandatory MFA provides consistent security but adds friction to every authentication. Step-up MFA lets users browse freely, then triggers factor verification for sensitive operations like password changes, payment modifications, or admin actions. SuperTokens supports both models through claim validators that check MFA completion on specific routes.
+
+**Recovery Mechanism**
+
+Users will lose access to their second factor. Phones break, authenticator apps get deleted, email accounts change. Plan your recovery path before users need it. Options include backup codes generated at setup, secondary email verification, or administrative override with identity verification. Without a recovery mechanism, locked-out users become support tickets or abandoned accounts.
+
+**Device Remembering**
+
+Requiring MFA on every login from the same device frustrates users. Device trust lets users skip the second factor on recognized browsers for a configured period. The trade-off: a compromised device with remembered trust bypasses MFA entirely. Consider shorter trust periods (7-14 days) for sensitive applications or disabling device trust for admin accounts.
+
+**Scaling and Latency**
+
+MFA verification adds a round-trip to your auth flow. For large user bases, consider where session state lives. Centralized session stores (Redis, database) enable instant revocation but add latency. Stateless JWTs reduce database calls but complicate mid-session revocation. SuperTokens supports both patterns, with built-in token theft detection that works across either architecture.
