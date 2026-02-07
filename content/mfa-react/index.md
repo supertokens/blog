@@ -122,3 +122,27 @@ Wrap protected components with `SessionAuth`. The wrapper checks session validit
 **6. Test Token Rotation and Theft Detection**
 
 Verify that refresh tokens rotate on each use and that concurrent token usage triggers theft detection. SuperTokens automatically revokes sessions when replay attacks are detected.
+
+## Security Best Practices for React MFA
+
+MFA strengthens authentication, but implementation details determine whether that strength holds.
+
+**Rotate Refresh Tokens on Every Use**
+
+Single-use refresh tokens nullify stolen credentials. If an attacker captures a refresh token, the next legitimate refresh invalidates it. SuperTokens enables rotation by default, detecting when both parties attempt to use the same token.
+
+**Use Secure, HttpOnly Cookies**
+
+Store tokens in cookies with `Secure`, `HttpOnly`, and `SameSite` attributes. This prevents JavaScript access (blocking XSS extraction) and ensures transmission only over HTTPS. Avoid localStorage for authentication tokens in browser environments.
+
+**Set Short Access Token TTLs**
+
+Keep access tokens short-lived, ideally 15 minutes or less. Short TTLs limit the damage window if a token leaks. Pair this with silent refresh to maintain user sessions without re-prompting for credentials.
+
+**Log Token Theft Detection Events**
+
+When SuperTokens detects refresh token reuse, it fires `onTokenTheftDetected`. Pipe these events to your SIEM or monitoring system. Token theft attempts indicate active attacks against your users, not just background noise.
+
+**Serve All MFA Endpoints over HTTPS**
+
+TOTP secrets, OTP codes, and session tokens must never traverse unencrypted connections. Enforce HTTPS at the infrastructure level and reject plaintext requests. This applies to development environments too, since local testing habits become production configurations.
