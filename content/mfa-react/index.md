@@ -186,3 +186,19 @@ In service-mesh deployments, each service needs to validate tokens without calli
 **Analytics and A/B Testing**
 
 Track MFA adoption and drop-off rates through recipe hooks. SuperTokens exposes events for factor setup initiation, completion, and failure. Pipe these to your analytics system to measure conversion impact. Hook implementations receive session context without exposing TOTP secrets or verification codes, keeping sensitive data out of analytics pipelines.
+
+## Common Pitfalls and How to Avoid Them
+
+These mistakes undermine MFA security even when the rest of your implementation is solid.
+
+**Storing TOTP Secrets in Plaintext**
+
+TOTP secrets are equivalent to passwords. If an attacker accesses your database, plaintext secrets let them generate valid codes for any user. SuperTokens encrypts TOTP secrets at rest. If you're managing secrets manually, encrypt them with a key stored outside the database.
+
+**Skipping CSRF Protection on OTP Endpoints**
+
+OTP verification endpoints accept a code and upgrade session privileges. Without CSRF protection, an attacker who knows a user's OTP (via social engineering or interception) can submit it from a malicious site using the user's existing session cookie. SuperTokens includes anti-CSRF middleware by default. Don't disable it to "simplify" development.
+
+**Long-Lived JWTs**
+
+Extended token lifetimes feel convenient but defeat MFA's purpose. If an attacker captures a JWT valid for 24 hours, they have 24 hours of access regardless of MFA. The user can't revoke the session until expiration. Keep access tokens short (15 minutes or less) and use refresh token rotation. The minor latency cost of frequent refreshes is worth the security gain.
