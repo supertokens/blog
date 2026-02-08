@@ -202,3 +202,19 @@ OTP verification endpoints accept a code and upgrade session privileges. Without
 **Long-Lived JWTs**
 
 Extended token lifetimes feel convenient but defeat MFA's purpose. If an attacker captures a JWT valid for 24 hours, they have 24 hours of access regardless of MFA. The user can't revoke the session until expiration. Keep access tokens short (15 minutes or less) and use refresh token rotation. The minor latency cost of frequent refreshes is worth the security gain.
+
+## Future-Proofing Your MFA Stack
+
+Authentication standards evolve. Building on extensible infrastructure lets you adopt new factors without rewriting your auth system.
+
+**Passkeys and Device Public Keys**
+
+WebAuthn adoption is accelerating as browsers and operating systems add native support. Passkeys eliminate shared secrets entirely: users authenticate with device biometrics or security keys, and private keys never leave the hardware. SuperTokens supports WebAuthn integrations, positioning your app to offer passkeys as user adoption grows. Start with TOTP or OTP today, add passkeys as a secondary option for early adopters.
+
+**Risk-Based Adaptive MFA**
+
+Static MFA policies treat every login identically. Adaptive approaches analyze signals like user-agent changes, IP geolocation shifts, and login time patterns to adjust factor requirements dynamically. A user logging in from their usual device and location might skip MFA, while the same user connecting from a new country triggers additional verification. SuperTokens' claim validators provide the foundation for implementing risk scoring logic.
+
+**Zero-Knowledge Proof Factors**
+
+Emerging standards explore verification without revealing underlying data. A user could prove they possess a valid credential without transmitting the credential itself. These protocols remain experimental, but privacy regulations may drive adoption. Choosing an open-source, extensible auth platform keeps your options open as standards mature.
