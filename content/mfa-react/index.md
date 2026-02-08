@@ -218,3 +218,13 @@ Static MFA policies treat every login identically. Adaptive approaches analyze s
 **Zero-Knowledge Proof Factors**
 
 Emerging standards explore verification without revealing underlying data. A user could prove they possess a valid credential without transmitting the credential itself. These protocols remain experimental, but privacy regulations may drive adoption. Choosing an open-source, extensible auth platform keeps your options open as standards mature.
+
+## Conclusion: Ship MFA the Smart Way
+
+Password-only authentication is a liability. Credential breaches happen constantly, and users reuse passwords across services. MFA provides meaningful protection against account takeover, but only if you implement it correctly.
+
+Building MFA from scratch means handling TOTP secret encryption, token rotation, theft detection, recovery flows, and session state management. Each component introduces opportunities for security gaps. SuperTokens provides tested implementations of these pieces, letting you add MFA to React applications without rebuilding authentication infrastructure.
+
+Start with the factor that fits your users: TOTP for technical audiences, email OTP for consumer products, passkeys for security-forward applications. Plan your recovery mechanism before launch. Keep tokens short-lived and rotate them on every refresh.
+
+The SuperTokens documentation includes complete integration guides for React, Next.js, and backend frameworks. If you've followed along with this overview, you have the conceptual foundation. The implementation is straightforward from here.
