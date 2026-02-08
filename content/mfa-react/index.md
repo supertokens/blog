@@ -170,3 +170,19 @@ Switching from TOTP to email OTP requires a configuration change, not a rewrite.
 **Open Source and Self-Hostable**
 
 Run SuperTokens Core on your infrastructure to meet data residency requirements or compliance mandates. The open-source model means you can audit the code handling your authentication logic and avoid vendor lock-in.
+
+## Additional Technical Considerations
+
+MFA integration touches more than just login screens. Consider how your architecture affects implementation.
+
+**SSR and Next.js**
+
+Server-side rendering requires session verification on both client and server. The SuperTokens Next.js SDK handles this by checking sessions during server rendering and hydrating state on the client. Without proper SSR support, users see authentication flickers or incorrect UI states on initial page loads. Middleware integration lets you protect routes at the edge before rendering begins.
+
+**Microservices Architecture**
+
+In service-mesh deployments, each service needs to validate tokens without calling SuperTokens Core on every request. JWTs enable local validation using public keys, while Core remains the authority for revocation. When a session is revoked, services continue accepting the token until TTL expiration. Balance TTL length against your revocation latency requirements.
+
+**Analytics and A/B Testing**
+
+Track MFA adoption and drop-off rates through recipe hooks. SuperTokens exposes events for factor setup initiation, completion, and failure. Pipe these to your analytics system to measure conversion impact. Hook implementations receive session context without exposing TOTP secrets or verification codes, keeping sensitive data out of analytics pipelines.
