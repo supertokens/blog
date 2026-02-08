@@ -146,3 +146,27 @@ When SuperTokens detects refresh token reuse, it fires `onTokenTheftDetected`. P
 **Serve All MFA Endpoints over HTTPS**
 
 TOTP secrets, OTP codes, and session tokens must never traverse unencrypted connections. Enforce HTTPS at the infrastructure level and reject plaintext requests. This applies to development environments too, since local testing habits become production configurations.
+
+## How SuperTokens Simplifies React MFA
+
+Building MFA from scratch means implementing factor enrollment flows, token management, recovery mechanisms, and session state coordination. SuperTokens handles this infrastructure so you can focus on application logic.
+
+**Drop-In UI Components**
+
+Pre-built screens for signup, factor setup, and verification mount automatically under `/auth`. Users see polished flows for scanning TOTP QR codes, entering verification codes, and managing backup options. Custom styling is supported when defaults don't match your design system.
+
+**Flexible Policy Engine**
+
+Claim validators let you require MFA globally or on specific routes. Protect admin panels with mandatory second factors while letting standard users browse freely. Policies evaluate at request time, so changes apply without redeployment.
+
+**Built-In Token Theft Detection**
+
+When refresh tokens rotate, SuperTokens tracks expected values. If an attacker replays a stolen token while the legitimate user continues their session, the system detects the conflict and revokes all sessions for that user. No custom implementation required.
+
+**Pluggable Factors**
+
+Switching from TOTP to email OTP requires a configuration change, not a rewrite. Add multiple factor options and let users choose their preference. The underlying session management remains consistent regardless of which factor verifies the user.
+
+**Open Source and Self-Hostable**
+
+Run SuperTokens Core on your infrastructure to meet data residency requirements or compliance mandates. The open-source model means you can audit the code handling your authentication logic and avoid vendor lock-in.
