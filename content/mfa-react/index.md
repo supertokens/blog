@@ -7,7 +7,7 @@ category: "react, mfa, guide"
 author: "Maurice Saldivar"
 ---
 
-# Add MFA to React Fast with SuperTokens
+## Add MFA to React Fast with SuperTokens
 
 Passwords alone aren't enough. Credential stuffing attacks, phishing campaigns, and database breaches mean that even strong passwords end up in attacker hands. Multi-factor authentication addresses this by requiring a second verification step that attackers can't easily replicate.
 
