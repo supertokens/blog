@@ -1,7 +1,7 @@
 ---
 title: FIDO2 vs U2F 5 Key Differences Explained
 description: "Understand the differences between FIDO2 and U2F. Learn how each works, where they apply, and which authentication standard to choose."
-date: "2025-12-10"
+date: "2026-01-17"
 cover: "fido2-vs-u2f.png"
 category: "passwordless, u2f, best practices"
 author: "Maurice Saldivar"
