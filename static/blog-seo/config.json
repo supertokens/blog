@@ -3301,6 +3301,52 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/identity-and-access-management-strategy\"\n            },\n            \"headline\": \"Discover how to develop an effective Identity and Access Management (IAM) strategy that secures sensitive data, ensures compliance, and streamlines user experiences.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/iam-strategy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/frontegg-vs-auth0-vs-fusionauth",
+        "metaTags": [
+            "<meta name=\"description\" content=\"undefined\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Frontegg vs Auth0 vs FusionAuth – Which Authentication Platform Fits You?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/frontegg-vs-auth0-vs-fusionauth\" />",
+            "<meta property=\"og:description\" content=\"undefined\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/frontegg-vs-auth0-vs-fusionauth.jpg\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"undefined\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/frontegg-vs-auth0-vs-fusionauth\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/frontegg-vs-auth0-vs-fusionauth.jpg\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/frontegg-vs-auth0-vs-fusionauth\">"
+        ],
+        "title": "Frontegg vs Auth0 vs FusionAuth – Which Authentication Platform Fits You?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/frontegg-vs-auth0-vs-fusionauth\"\n            },\n            \"headline\": \"undefined\",\n            \"image\": \"https://supertokens.com/blog-meta-images/frontegg-vs-auth0-vs-fusionauth.jpg\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/passkey-examples",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Discover real-world passkey examples across Apple, Google, Coinbase, iPhone, PHP, and more, plus step-by-step implementation guidance.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Passkey Examples: Real-World Use Cases and Implementation\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/passkey-examples\" />",
+            "<meta property=\"og:description\" content=\"Discover real-world passkey examples across Apple, Google, Coinbase, iPhone, PHP, and more, plus step-by-step implementation guidance.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/passkey-examples.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Discover real-world passkey examples across Apple, Google, Coinbase, iPhone, PHP, and more, plus step-by-step implementation guidance.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/passkey-examples\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/passkey-examples.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/passkey-examples\">"
+        ],
+        "title": "Passkey Examples: Real-World Use Cases and Implementation",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/passkey-examples\"\n            },\n            \"headline\": \"Discover real-world passkey examples across Apple, Google, Coinbase, iPhone, PHP, and more, plus step-by-step implementation guidance.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/passkey-examples.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
         "path": "/blog/captcha-supertokens",
         "metaTags": [
             "<meta name=\"description\" content=\" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\" />",
@@ -4771,5 +4817,74 @@
         ],
         "title": "How Do I Add CAPTCHA to My Login Page?",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/captcha-supertokens\"\n            },\n            \"headline\": \" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/captcha-supertokens.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {    
+        "path": "/blog/clerk-migration",
+        "metaTags": [
+            "<meta name=\"description\" content=\" Step-by-step guide on migrating from Clerk to SuperTokens&mdash;covering trickle, bulk import, export scripts, sessions, and security.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How to Migrate from Clerk Efficiently and Safely\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/clerk-migration\" />",
+            "<meta property=\"og:description\" content=\" Step-by-step guide on migrating from Clerk to SuperTokens&mdash;covering trickle, bulk import, export scripts, sessions, and security.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/clerk-migration.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\" Step-by-step guide on migrating from Clerk to SuperTokens&mdash;covering trickle, bulk import, export scripts, sessions, and security.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/clerk-migration\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/clerk-migration.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/clerk-migration\">"
+        ],
+        "title": "How to Migrate from Clerk Efficiently and Safely",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/clerk-migration\"\n            },\n            \"headline\": \" Step-by-step guide on migrating from Clerk to SuperTokens&mdash;covering trickle, bulk import, export scripts, sessions, and security.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/clerk-migration.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/fideo2-and-u2f-differences",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Understand the differences between FIDO2 and U2F. Learn how each works, where they apply, and which authentication standard to choose.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"FIDO2 vs U2F 5 Key Differences Explained\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/fideo2-and-u2f-differences\" />",
+            "<meta property=\"og:description\" content=\"Understand the differences between FIDO2 and U2F. Learn how each works, where they apply, and which authentication standard to choose.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/fido2-vs-u2f.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Understand the differences between FIDO2 and U2F. Learn how each works, where they apply, and which authentication standard to choose.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/fideo2-and-u2f-differences\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/fido2-vs-u2f.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/fideo2-and-u2f-differences\">"
+        ],
+        "title": "FIDO2 vs U2F 5 Key Differences Explained",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/fideo2-and-u2f-differences\"\n            },\n            \"headline\": \"Understand the differences between FIDO2 and U2F. Learn how each works, where they apply, and which authentication standard to choose.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/fido2-vs-u2f.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/best-mfa-solutions-2025",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Compare the best MFA solutions in 2025: features, costs, and trade-offs. Includes insights from SuperTokens’ MFA cost guide.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Best MFA Solutions Compared (2025 Guide)\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/best-mfa-solutions-2025\" />",
+            "<meta property=\"og:description\" content=\"Compare the best MFA solutions in 2025: features, costs, and trade-offs. Includes insights from SuperTokens’ MFA cost guide.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/best-mfa-solutions-compared.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Compare the best MFA solutions in 2025: features, costs, and trade-offs. Includes insights from SuperTokens’ MFA cost guide.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/best-mfa-solutions-2025\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/best-mfa-solutions-compared.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/best-mfa-solutions-2025\">"
+        ],
+        "title": "Best MFA Solutions Compared (2025 Guide)",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/best-mfa-solutions-2025\"\n            },\n            \"headline\": \"Compare the best MFA solutions in 2025: features, costs, and trade-offs. Includes insights from SuperTokens’ MFA cost guide.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/best-mfa-solutions-compared.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]

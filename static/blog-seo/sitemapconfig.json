@@ -309,6 +309,12 @@
         "location": "https://supertokens.com/blog/identity-and-access-management-strategy"
     },
     {
+        "location": "https://supertokens.com/blog/frontegg-vs-auth0-vs-fusionauth"
+    },
+    {
+        "location": "https://supertokens.com/blog/passkey-examples"
+    },
+    {
         "location": "https://supertokens.com/blog/captcha-supertokens"
     },
     {
@@ -514,5 +520,14 @@
     },
     {
         "location": "https://supertokens.com/blog/captcha-supertokens"
+    },
+    {    
+        "location": "https://supertokens.com/blog/clerk-migration"
+    },
+    {
+        "location": "https://supertokens.com/blog/fideo2-and-u2f-differences"
+    },
+    {
+        "location": "https://supertokens.com/blog/best-mfa-solutions-2025"
     }
 ]
