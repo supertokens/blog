@@ -7,15 +7,15 @@ category: "react, mfa, guide"
 author: "Maurice Saldivar"
 ---
 
-## Add MFA to React Fast with SuperTokens
+## Add MFA to React Fast by using SuperTokens
 
-Passwords alone aren't enough. Credential stuffing attacks, phishing campaigns, and database breaches mean that even strong passwords end up in attacker hands. Multi-factor authentication addresses this by requiring a second verification step that attackers can't easily replicate.
+Passwords alone aren't enough. Credential-stuffing attacks, phishing campaigns, and database breaches mean that even strong passwords end up in the hands of attackers. Multi-factor authentication addresses this by requiring a second verification step, which attackers can't easily replicate.
 
-The challenge for React developers: building MFA flows from scratch involves token management, session state, UI routing for factor challenges, and recovery mechanisms. SuperTokens provides pre-built MFA recipes that handle these complexities, letting you add strong second-factor security with minimal custom code.
+The challenge for React developers: building MFA flows from scratch involves token management, session state, UI routing for factor challenges, and recovery mechanisms. The solution: SuperTokens provides pre-built MFA recipes that handle these complexities, letting you add strong second-factor security with minimal custom code.
 
 ## What Is MFA in a React Context?
 
-MFA requires users to prove their identity through multiple independent factors before granting access. After the primary login, users complete a second verification step using something they have (an authenticator app), something they know (a one-time code), or something they are (biometrics).
+MFA requires users to prove their identity through multiple independent factors before granting access. After the primary login, users complete a second verification step by using something they have (an authenticator app), something they know (a one-time code), or something they are (biometrics).
 
 ### How React Apps Handle MFA Flows
 
@@ -37,7 +37,7 @@ Backend validates factor, upgrades session
 User accesses protected routes
 ```
 
-SuperTokens handles this coordination through its React SDK. Pre-built UI components manage factor setup and verification, while hooks let you check whether MFA is complete before rendering protected content. React components send user input to SuperTokens endpoints and render appropriate UI based on authentication state. Cryptographic operations stay server-side where they belong.
+SuperTokens handles this coordination through its React SDK. Pre-built UI components manage factor setup and verification, while hooks let you check whether MFA is complete before rendering protected content. React components send user input to SuperTokens endpoints, and then render the appropriate UI based on the authentication state. Cryptographic operations stay server-side where they belong.
 
 ## Key MFA Methods You Can Enable with SuperTokens
 
@@ -45,15 +45,15 @@ SuperTokens supports three second-factor options, each with distinct trade-offs 
 
 **Time-Based One-Time Passwords (TOTP)**
 
-Users scan a QR code with an authenticator app like Google Authenticator or Authy. The app generates 6-digit codes that refresh every 30 seconds. Both the app and your server calculate codes from a shared secret, so verification works offline without network dependencies. TOTP suits technical users comfortable managing authenticator apps and provides strong security without per-verification costs.
+Users scan a QR code with an authenticator app like Google Authenticator or Authy. The app generates six-digit codes that refresh every 30 seconds. Both the app and your server calculate codes from a shared secret, so verification works offline without network dependencies. TOTP suits technical users who are comfortable managing authenticator apps and TOTP provides strong security without per-verification costs.
 
 **Email/SMS One-Time Passcodes (OTP)**
 
-The server sends a temporary code to the user's verified email or phone number. Zero app installation required, making this the lowest-friction option for consumer SaaS products. The trade-off: each verification requires network delivery, and SMS is vulnerable to SIM-swapping attacks. Email OTP offers better security than SMS while maintaining accessibility for non-technical users.
+The server sends a temporary code to the user's verified email or phone number. There is zero app installation required, making this the lowest-friction option for consumer SaaS products. The trade-off: each verification requires network delivery, and SMS is vulnerable to SIM-swapping attacks. Email OTP offers better security than SMS, while maintaining accessibility for non-technical users.
 
 **Passkeys/WebAuthn**
 
-Hardware-backed authentication using security keys or device biometrics. The browser handles cryptographic verification with credentials bound to specific origins, providing phishing resistance that TOTP and OTP lack. When a user registers a passkey, their device generates a key pair. The private key never leaves the hardware. SuperTokens supports passkeys through its WebAuthn recipe, though adoption remains early compared to TOTP.
+Hardware-backed authentication by using security keys or device biometrics. The browser handles cryptographic verification with credentials bound to specific origins, providing phishing resistance that TOTP and OTP lack. When a user registers a passkey, their device generates a key pair. The private key never leaves the hardware. SuperTokens supports passkeys through its WebAuthn recipe, though adoption remains early compared to TOTP.
 
 The method you choose depends on your user base. Enterprise applications with security-conscious users lean toward TOTP or passkeys. Consumer products prioritizing conversion often start with email OTP.
 
@@ -63,7 +63,7 @@ Before writing code, answer these architectural questions. Changing MFA policy a
 
 **Mandatory vs. Step-Up MFA**
 
-Should all logins require a second factor, or only high-risk actions? Mandatory MFA provides consistent security but adds friction to every authentication. Step-up MFA lets users browse freely, then triggers factor verification for sensitive operations like password changes, payment modifications, or admin actions. SuperTokens supports both models through claim validators that check MFA completion on specific routes.
+Should all logins require a second factor, or only high-risk actions? Mandatory MFA provides consistent security, but adds friction to every authentication. Step-up MFA lets users browse freely, then triggers additional verification for sensitive operations like password changes, payment modifications, or admin actions. SuperTokens supports both models through claim validators that check MFA completion on specific routes.
 
 **Recovery Mechanism**
 
@@ -75,7 +75,7 @@ Requiring MFA on every login from the same device frustrates users. Device trust
 
 **Scaling and Latency**
 
-MFA verification adds a round-trip to your auth flow. For large user bases, consider where session state lives. Centralized session stores (Redis, database) enable instant revocation but add latency. Stateless JWTs reduce database calls but complicate mid-session revocation. SuperTokens supports both patterns, with built-in token theft detection that works across either architecture.
+MFA verification adds a round-trip to your auth flow. For large user bases, consider where the session state lives. Centralized session stores (Redis, database) enable instant revocation, but add latency. Stateless JWTs reduce database calls, but complicate mid-session revocation. SuperTokens supports both patterns, with built-in token theft detection that works across either architecture.
 
 ## Step-by-Step Integration Overview
 
@@ -113,7 +113,7 @@ recipeList: [
 
 **4. Wire the Frontend SDK**
 
-Initialize SuperTokens in your React app. Pre-built UI components for login, factor setup, and verification auto-mount under `/auth`. Users see TOTP QR codes and input fields without custom component work.
+Initialize SuperTokens in your React app. The pre-built UI components for login, factor setup, and verification auto-mount under `/auth`. Users see TOTP QR codes and input fields,without custom component work.
 
 **5. Protect Routes with SessionAuth**
 
@@ -133,7 +133,7 @@ Single-use refresh tokens nullify stolen credentials. If an attacker captures a 
 
 **Use Secure, HttpOnly Cookies**
 
-Store tokens in cookies with `Secure`, `HttpOnly`, and `SameSite` attributes. This prevents JavaScript access (blocking XSS extraction) and ensures transmission only over HTTPS. Avoid localStorage for authentication tokens in browser environments.
+Store tokens in cookies by using the `Secure`, `HttpOnly`, and `SameSite` attributes. This prevents JavaScript access (blocking XSS extraction) and ensures transmission only over HTTPS. Avoid localStorage for authentication tokens in browser environments.
 
 **Set Short Access Token TTLs**
 
@@ -161,7 +161,7 @@ Claim validators let you require MFA globally or on specific routes. Protect adm
 
 **Built-In Token Theft Detection**
 
-When refresh tokens rotate, SuperTokens tracks expected values. If an attacker replays a stolen token while the legitimate user continues their session, the system detects the conflict and revokes all sessions for that user. No custom implementation required.
+When refresh tokens rotate, SuperTokens tracks expected values. If an attacker uses a stolen token while the legitimate user continues their session, the system detects the conflict and revokes all sessions for that user. No custom implementation required.
 
 **Pluggable Factors**
 
@@ -177,11 +177,11 @@ MFA integration touches more than just login screens. Consider how your architec
 
 **SSR and Next.js**
 
-Server-side rendering requires session verification on both client and server. The SuperTokens Next.js SDK handles this by checking sessions during server rendering and hydrating state on the client. Without proper SSR support, users see authentication flickers or incorrect UI states on initial page loads. Middleware integration lets you protect routes at the edge before rendering begins.
+Server-side rendering (SSR) requires session verification on both the client and server. The SuperTokens Next.js SDK handles this by checking sessions during server rendering and hydrating state on the client. Without proper SSR support, users see authentication flickers or incorrect UI states on initial page loads. Middleware integration lets you protect routes at the edge before rendering begins.
 
 **Microservices Architecture**
 
-In service-mesh deployments, each service needs to validate tokens without calling SuperTokens Core on every request. JWTs enable local validation using public keys, while Core remains the authority for revocation. When a session is revoked, services continue accepting the token until TTL expiration. Balance TTL length against your revocation latency requirements.
+In service-mesh deployments, each service needs to validate tokens without calling SuperTokens Core on every request. JWTs enable local validation by using public keys, while Core remains the authority for revocation. When a session is revoked, services continue accepting the token until TTL expiration. Balance TTL length against your revocation latency requirements.
 
 **Analytics and A/B Testing**
 
@@ -197,11 +197,11 @@ TOTP secrets are equivalent to passwords. If an attacker accesses your database,
 
 **Skipping CSRF Protection on OTP Endpoints**
 
-OTP verification endpoints accept a code and upgrade session privileges. Without CSRF protection, an attacker who knows a user's OTP (via social engineering or interception) can submit it from a malicious site using the user's existing session cookie. SuperTokens includes anti-CSRF middleware by default. Don't disable it to "simplify" development.
+OTP verification endpoints work by accepting a code and upgrading session privileges. Without CSRF protection, an attacker who knows a user's OTP (via social engineering or interception) can submit it from a malicious site by using the user's existing session cookie. SuperTokens includes anti-CSRF middleware by default. Don't disable it to "simplify" development.
 
 **Long-Lived JWTs**
 
-Extended token lifetimes feel convenient but defeat MFA's purpose. If an attacker captures a JWT valid for 24 hours, they have 24 hours of access regardless of MFA. The user can't revoke the session until expiration. Keep access tokens short (15 minutes or less) and use refresh token rotation. The minor latency cost of frequent refreshes is worth the security gain.
+Extended token lifetimes feel convenient but defeat MFA's purpose. If an attacker captures a JWT valid for 24 hours, they have 24 hours of access, regardless of MFA. The user can't revoke the session until expiration. Keep access tokens short (15 minutes or less) and use refresh token rotation. The minor latency cost of frequent refreshes is worth the security gain.
 
 ## Future-Proofing Your MFA Stack
 
@@ -217,7 +217,7 @@ Static MFA policies treat every login identically. Adaptive approaches analyze s
 
 **Zero-Knowledge Proof Factors**
 
-Emerging standards explore verification without revealing underlying data. A user could prove they possess a valid credential without transmitting the credential itself. These protocols remain experimental, but privacy regulations may drive adoption. Choosing an open-source, extensible auth platform keeps your options open as standards mature.
+Emerging standards explore verification without revealing underlying data. A user could prove they possess a valid credential without transmitting the credential itself. These protocols remain experimental, but privacy regulations may drive adoption. Choosing an open-source, extensible auth platform keeps your options open as standards evolve.
 
 ## Conclusion: Ship MFA the Smart Way
 
@@ -227,4 +227,4 @@ Building MFA from scratch means handling TOTP secret encryption, token rotation,
 
 Start with the factor that fits your users: TOTP for technical audiences, email OTP for consumer products, passkeys for security-forward applications. Plan your recovery mechanism before launch. Keep tokens short-lived and rotate them on every refresh.
 
-The SuperTokens documentation includes complete integration guides for React, Next.js, and backend frameworks. If you've followed along with this overview, you have the conceptual foundation. The implementation is straightforward from here.
+SuperTokens’ documentation includes complete integration guides for React, Next.js, and backend frameworks. If you've followed along with this overview, you have the conceptual foundation. The implementation is straightforward from here.
