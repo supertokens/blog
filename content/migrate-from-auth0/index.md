@@ -111,7 +111,7 @@ Full export and re-import executes a coordinated bulk transfer during a planned 
 
 This approach works best for organizations that can schedule downtime, need rapid Auth0 cost elimination, or have large inactive user bases that lazy migration wouldn't efficiently capture.
 
-## **How to Export Users from Auth0**
+## How to Export Users from Auth0
 
 Auth0 provides multiple user export mechanisms, each with different capabilities regarding password hash access and metadata completeness.
 
@@ -122,7 +122,7 @@ Auth0's management dashboard includes user export functionality through the User
 **Dashboard Export:**
 
 1. Navigate to Auth0 Dashboard → Users
-2. Click \"Export Users\" (or install User Import/Export extension if not available)
+2. Click "Export Users" (or install User Import/Export extension if not available)
 3. Configure export parameters:
     - Connection type (database, social, enterprise)
     - User fields to include
@@ -175,7 +175,7 @@ Exports include user identifiers, email addresses, metadata, and profile informa
 
 ### **Can You Export Users With Passwords?**
 
-Auth0 stores password hashes in secure internal storage inaccessible via standard APIs. If password migration is required, Auth0's Custom Database feature with \"migration mode\" enabled captures credentials progressively as users authenticate&mdash;create a Custom Database connection, implement a login script that verifies against SuperTokens with an Auth0 fallback, then enable \"Import Users to Auth0.\" Passwords transfer automatically as users log in.
+Auth0 stores password hashes in secure internal storage inaccessible via standard APIs. If password migration is required, Auth0's Custom Database feature with "migration mode" enabled captures credentials progressively as users authenticate&mdash;create a Custom Database connection, implement a login script that verifies against SuperTokens with an Auth0 fallback, then enable "Import Users to Auth0." Passwords transfer automatically as users log in.
 
 If that's not feasible, the simpler alternative is forcing password resets: export users without passwords, import to SuperTokens, and send reset emails during migration. Note that password hash algorithms (bcrypt, scrypt, PBKDF2) must match between systems for any direct hash import; mismatches require resets regardless.
 
@@ -183,7 +183,7 @@ If that's not feasible, the simpler alternative is forcing password resets: expo
 
 User exports contain sensitive personal information and should be treated as critical security artifacts throughout the migration process.Use HTTPS exclusively for all API calls; store export files in encrypted storage with automatic expiration; restrict filesystem permissions to migration service accounts; never commit export files to version control; and delete files immediately after successful import. Limit export access to the minimum required personnel, use short-lived API tokens, and require MFA for export initiation. Export only the fields needed, anonymize PII where possible, and document all operations for GDPR/CCPA audit trails.
 
-## **Implementing SuperTokens After Auth0**
+## Implementing SuperTokens After Auth0
 
 Successful migration requires proper SuperTokens configuration matching your application architecture and security requirements.
 
@@ -380,7 +380,7 @@ Applications using Auth0 for SSO across multiple domains require coordination:
 4. Use feature flags to control which apps use SuperTokens
 5. Ensure session token formats remain compatible across apps
 
-## **Planning Your Migration Rollout**
+## Planning Your Migration Rollout
 
 Structured rollout planning minimizes disruption while enabling rapid response to unexpected issues.
 
@@ -404,7 +404,7 @@ Proactive communication at every stage reduces support burden and maintains trus
 - **During Migration:** Provide status updates, clear password reset instructions, and escalation paths for blocked users.
 - **Post-Migration:** Send confirmation emails, announce new capabilities, and collect feedback on the authentication experience.
 
-## **Addressing Migration Challenges**
+## Addressing Migration Challenges
 
 Common migration obstacles have established solutions that reduce risk and complexity.
 
@@ -549,7 +549,7 @@ async function authenticate(email, password) {
 
 This approach enables rapid rollback if issues emerge while proving SuperTokens stability under real production load.
 
-## **How SuperTokens Simplifies the Migration Process**
+## How SuperTokens Simplifies the Migration Process
 
 ![Supertokens](Supertokens.png)
 
@@ -646,7 +646,7 @@ same SDKs, different infrastructure.
 
 This architecture prevents future vendor lock-in, reducing long-term risk regardless of authentication requirements.
 
-## **Conclusion**
+## Conclusion
 
 Migrating from Auth0 to SuperTokens requires choosing appropriate migration strategies: lazy, trickle, automatic, or full export, based on your user base characteristics, operational constraints, and risk tolerance. Lazy migration offers the safest gradual approach; automatic migration provides predictable timelines; full export enables controlled cutover timing.
 
