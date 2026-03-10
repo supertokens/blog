@@ -1,7 +1,7 @@
 ---
 title: Add MFA to React Fast with SuperTokens
 description: "Secure your React app with multi-factor authentication in minutes. Learn MFA options, setup steps, and best practices using SuperTokens."
-date: "02/20/2026"
+date: "2026-03-09"
 cover: "add_mfa_to_react.png"
 category: "react, mfa, guide"
 author: "Maurice Saldivar"
