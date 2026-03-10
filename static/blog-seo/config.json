@@ -4818,7 +4818,7 @@
         "title": "What Is Better Auth and Who's It For?",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/better-auth\"\n            },\n            \"headline\": \"undefined\",\n            \"image\": \"https://supertokens.com/blog-meta-images/better-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    {    
+    {
         "path": "/blog/captcha-supertokens",
         "metaTags": [
             "<meta name=\"description\" content=\" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\" />",
@@ -4841,7 +4841,7 @@
         "title": "How Do I Add CAPTCHA to My Login Page?",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/captcha-supertokens\"\n            },\n            \"headline\": \" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/captcha-supertokens.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    {    
+    {
         "path": "/blog/clerk-migration",
         "metaTags": [
             "<meta name=\"description\" content=\" Step-by-step guide on migrating from Clerk to SuperTokens&mdash;covering trickle, bulk import, export scripts, sessions, and security.\" />",
@@ -4909,5 +4909,28 @@
         ],
         "title": "Best MFA Solutions Compared (2025 Guide)",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/best-mfa-solutions-2025\"\n            },\n            \"headline\": \"Compare the best MFA solutions in 2025: features, costs, and trade-offs. Includes insights from SuperTokens’ MFA cost guide.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/best-mfa-solutions-compared.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/auth0-alternatives-for-large-enterprises",
+        "metaTags": [
+            "<meta name=\"description\" content=\"This blog aims to highlight the leading enterprise-ready Auth0 alternatives—what they do best, where they trade off, and how to choose based on your operational model and risk posture.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"7 Leading Auth0 Alternatives for Large Enterprises in 2026\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/auth0-alternatives-for-large-enterprises\" />",
+            "<meta property=\"og:description\" content=\"This blog aims to highlight the leading enterprise-ready Auth0 alternatives—what they do best, where they trade off, and how to choose based on your operational model and risk posture.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/auth0-alternatives-for-large-enterprises.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"This blog aims to highlight the leading enterprise-ready Auth0 alternatives—what they do best, where they trade off, and how to choose based on your operational model and risk posture.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/auth0-alternatives-for-large-enterprises\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/auth0-alternatives-for-large-enterprises.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/auth0-alternatives-for-large-enterprises\">"
+        ],
+        "title": "7 Leading Auth0 Alternatives for Large Enterprises in 2026",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/auth0-alternatives-for-large-enterprises\"\n            },\n            \"headline\": \"This blog aims to highlight the leading enterprise-ready Auth0 alternatives—what they do best, where they trade off, and how to choose based on your operational model and risk posture.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/auth0-alternatives-for-large-enterprises.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]

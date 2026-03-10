@@ -521,10 +521,10 @@
     {
         "location": "https://supertokens.com/blog/better-auth"
     },
-    {    
+    {
         "location": "https://supertokens.com/blog/captcha-supertokens"
     },
-    {    
+    {
         "location": "https://supertokens.com/blog/clerk-migration"
     },
     {
@@ -532,5 +532,8 @@
     },
     {
         "location": "https://supertokens.com/blog/best-mfa-solutions-2025"
+    },
+    {
+        "location": "https://supertokens.com/blog/auth0-alternatives-for-large-enterprises"
     }
 ]
