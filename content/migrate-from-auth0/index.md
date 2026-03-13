@@ -1,36 +1,36 @@
 ---
 title: "How to Migrate from Auth0 Securely and Efficiently"
 date: "2026-02-27"
-description: "Learn how to migrate from Auth0 to SuperTokens using lazy, automatic, or trickle migration. Includes secure export steps, pricing insights, and implementation tips."
+description: "Learn how to migrate from Auth0 to SuperTokens by using lazy, automatic, or trickle migration. Includes secure export steps, pricing insights, and implementation tips."
 cover: "migrate-from-auth0.png"
 category: "programming"
 author: "Mostafa Ibrahim"
 ---
 
-Authentication systems form the security foundation of modern applications. Migrating from [Auth0](https://auth0.com/) to [SuperTokens](https://supertokens.com/) involves transferring user credentials, preserving session state, and maintaining service continuity while users remain unaware of backend changes. Whether driven by cost optimization, control requirements, or feature needs, successful migration demands careful planning and execution.
+Authentication systems form the security foundation of modern applications. Migrating from [Auth0](https://auth0.com/) to [SuperTokens](https://supertokens.com/) involves transferring user credentials, preserving session state, and maintaining service continuity, while users remain unaware of backend changes. Whether driven by cost optimization, control requirements, or feature needs, successful migration demands careful planning and execution.
 
 This guide provides developers with practical strategies for Auth0-to-SuperTokens migration, covering user export procedures, migration pattern selection, implementation details, and common challenges.
 
 ## Choosing the Right Migration Strategy
 
-Migration strategy selection balances user disruption, engineering effort, and timeline constraints. Four primary approaches exist, each with distinct trade-offs regarding complexity, user impact, and migration completeness.
+Your migration strategy needs to balance user disruption, engineering effort, and timeline constraints. Four primary approaches exist, each with distinct trade-offs regarding complexity, user impact, and migration completeness.
 
 ### **What Are Your Auth0 Migration Options?**
 
-- **Lazy Migration** transfers users individually upon their next login attempt. The authentication system checks SuperTokens first; if the user doesn't exist, it authenticates against Auth0, imports the user to SuperTokens, and issues a new session. This gradual approach minimizes risk and distributes the load over time.
-- **Trickle Migration** triggers user transfers during specific events, such as logins, profile updates, password changes, or API usage. Similar to lazy migration, but extends beyond authentication events to capture users through various interaction points. This accelerates migration for active users while maintaininga gradual rollout.
-- **Automatic Migration** proactively transfers users using Auth0 webhooks, rules, or scheduled jobs. Rather than waiting for user-initiated events, automated scripts move users in batches. This requires capturing credentials during Auth0 authentication preserve password-based login.
-- **Full Export and Re-Import** exports all users from Auth0 and imports them into SuperTokens in bulk operations. Fastest migration path, but requires maintenance windows and coordination to avoid authentication failures during the transition.
+- **Lazy Migration** transfers users individually upon their next login attempt. The authentication system checks SuperTokens first; and if the user doesn't exist, it authenticates against Auth0, imports the user to SuperTokens, and issues a new session. This gradual approach minimizes risk and distributes the load over time.
+- **Trickle Migration** triggers user transfers during specific events, such as logins, profile updates, password changes, or API usage. It's similar to lazy migration, but extends beyond authentication events to capture users through various interaction points. This accelerates migration for active users while maintaining a gradual rollout.
+- **Automatic Migration** proactively transfers users by using Auth0 webhooks, rules, or scheduled jobs. Rather than waiting for user-initiated events, automated scripts move users in batches. This requires capturing credentials during Auth0 authentication, preserve password-based login.
+- **Full Export and Re-Import** exports all users from Auth0 and imports them into SuperTokens in bulk operations. This is the fastest migration path, but it requires maintenance windows and coordination to avoid authentication failures during the transition.
 
-Each strategy suits different scenarios. Small active user bases benefit from lazy migration's simplicity. Large inactive user populations may require automatic migration to ensure completeness. Enterprise applications with strict SLAs often choose full export to control cutover timing precisely.
+Each strategy suits different scenarios. Small active user bases benefit from the simplicity of lazy migration. Large inactive user populations may require automatic migration to ensure completeness. Enterprise applications with strict SLAs often choose full export to control cutover timing precisely.
 
 ### **Lazy Migration Explained**
 
-Lazy migration implements a fallback authentication pattern where SuperTokens becomes the primary source while Auth0 serves as a backup for unmigrated users.
+Lazy migration implements a fallback authentication pattern where SuperTokens becomes the primary source, while Auth0 serves as a backup for unmigrated users.
 
-- **Flow:** User submits credentials → application checks SuperTokens → if not found, authenticate against Auth0 → on success, create user in SuperTokens with metadata → issue SuperTokens session. Subsequent logins go directly to SuperTokens.
-- **Advantages:** Zero downtime with both systems running in parallel; users notice nothing; active users migrate automatically; easy rollback by disabling fallback logic.
-- **Considerations:** Requires maintaining both systems during transition; inactive users may never migrate without eventual bulk import; password hashes typically can't be transferred initially.
+- **Flow:** User submits credentials → application checks SuperTokens → if the user is not found, authenticate against Auth0 → on success, create user in SuperTokens with metadata → issue SuperTokens session. Subsequent logins go directly to SuperTokens.
+- **Advantages:** Zero downtime with both systems running in parallel, users notice nothing, active users migrate automatically, and easy rollback by disabling fallback logic.
+- **Considerations:** Requires maintaining both systems during transition, inactive users may never migrate without eventual bulk import, and password hashes typically can't be transferred initially.
 
 ### **Trickle Migration Explained**
 
@@ -60,15 +60,15 @@ async function migrateUserIfNeeded(userId, triggerEvent) {
   return stUser || await SuperTokens.getUserById(userId);
 }
 ```
-**Advantages:** Faster migration than pure lazy; multiple touchpoints capture more users; maintains gradual rollout safety; transparent to users.
+**Advantages:** Faster migration than a lazy migration, multiple touchpoints capture more users, maintains gradual rollout safety, and it is transparent to users.
 
-**Considerations:** More integration points increase code complexity; must handle migration failures gracefully across multiple flows; still requires eventual bulk import for completely inactive users.
+**Considerations:** More integration points increase code complexity, must handle migration failures gracefully across multiple flows, and it still requires eventual bulk import for completely inactive users.
 
 ### **Automatic Migration Explained**
 
-Automatic migration proactively transfers users using Auth0's extensibility mechanisms combined with scheduled batch jobs.
+Automatic migration proactively transfers users by using Auth0's extensibility mechanisms, combined with scheduled batch jobs.
 
-**Auth0 Rules-Based Migration:** Rules execute during authentication and can capture plaintext credentials before hashing, forwarding them to SuperTokens:
+**Auth0 Rules-Based Migration:** Rules execute during authentication and can capture plaintext credentials before hashing, and forward them to SuperTokens:
 
 ```js
 function migrateToSuperTokens(user, context, callback) {
@@ -95,19 +95,19 @@ function migrateToSuperTokens(user, context, callback) {
   });
 }
 ```
-For users who haven't logged in recently, scheduled batch jobs handle the remainder&mdash;though password hashes are typically unavailable, meaning those users must reset passwords on first SuperTokens login.
+For users who haven't logged in recently, scheduled batch jobs handle the remainder &mdash; though password hashes are typically unavailable, meaning those users must reset passwords on their first SuperTokens login.
 
-**Advantages:** Proactive migration independent of user activity; predictable, controllable timeline; captures inactive users.
+**Advantages:** Proactive migration independent of user activity, predictable, controllable timeline, and it captures inactive users.
 
-**Considerations:** Password capture only works during authentication events; Auth0 API rate limits constrain batch speed; requires careful credential handling.
+**Considerations:** Password capture only works during authentication events, Auth0 API rate limits constrain batch speed, and it requires careful credential handling.
 
 ### **Full Export and Re-Import Explained**
 
 Full export and re-import executes a coordinated bulk transfer during a planned cutover window: export the complete user database, transform the data, bulk import to SuperTokens in batches of 1,000--10,000, update application configuration, monitor traffic, and send password reset emails if needed.
 
-**Advantages:** Fastest path to complete migration; predictable timeline measured in hours or days rather than weeks; no dual-system complexity; captures inactive users immediately.
+**Advantages:** Fastest path to complete migration, predictable timeline measured in hours or days rather than weeks, no dual-system complexity, and it captures inactive users immediately.
 
-**Considerations:** Requires a maintenance window; users typically must reset passwords; higher risk since a single event impacts everyone; rollback is complex after cutover.
+**Considerations:** Requires a maintenance window, users typically must reset passwords, higher risk since a single event impacts everyone, and rollback is complex after cutover.
 
 This approach works best for organizations that can schedule downtime, need rapid Auth0 cost elimination, or have large inactive user bases that lazy migration wouldn't efficiently capture.
 
@@ -117,18 +117,18 @@ Auth0 provides multiple user export mechanisms, each with different capabilities
 
 ### **Using Auth0's User Import/Export Extension**
 
-Auth0's management dashboard includes user export functionality through the User Import/Export extension or Management API.
+Auth0's management dashboard includes user export functionality through the User Import/Export extension or the Management API.
 
 **Dashboard Export:**
 
-1. Navigate to Auth0 Dashboard → Users
-2. Click "Export Users" (or install User Import/Export extension if not available)
+1. Navigate to Auth0 Dashboard → Users.
+2. Click "Export Users" (or install the User Import/Export extension if not available).
 3. Configure export parameters:
     - Connection type (database, social, enterprise)
     - User fields to include
     - Export format (JSON or CSV)
-4. Initiate export job
-5. Download the resulting file via email link or dashboard
+4. Initiate export job.
+5. Download the resulting file via email link or dashboard.
 
 ![Import Export Extension](Import-Export-Extension.png)
 
@@ -167,25 +167,25 @@ async function exportUsers() {
 
 **Required Permissions:**
 
-- `read:users` scope for basic user data
-- `read:user_idp_tokens` for social connection tokens
-- Application must be authorized for the Management API
+- `read:users` scope for basic user data.
+- `read:user_idp_tokens` for social connection tokens.
+- Application must be authorized for the Management API.
 
-Exports include user identifiers, email addresses, metadata, and profile information but typically exclude password hashes for security reasons.
+Exports include user identifiers, email addresses, metadata, and profile information, but typically exclude password hashes for security reasons.
 
 ### **Can You Export Users With Passwords?**
 
-Auth0 stores password hashes in secure internal storage inaccessible via standard APIs. If password migration is required, Auth0's Custom Database feature with "migration mode" enabled captures credentials progressively as users authenticate&mdash;create a Custom Database connection, implement a login script that verifies against SuperTokens with an Auth0 fallback, then enable "Import Users to Auth0." Passwords transfer automatically as users log in.
+Auth0 stores password hashes in a secure internal storage inaccessible via standard APIs. If password migration is required, Auth0's Custom Database feature with "migration mode" enabled captures credentials progressively as users authenticate &mdash; create a Custom Database connection, implement a login script that verifies against SuperTokens with an Auth0 fallback, and then enable "Import Users to Auth0." Passwords transfer automatically as users log in.
 
-If that's not feasible, the simpler alternative is forcing password resets: export users without passwords, import to SuperTokens, and send reset emails during migration. Note that password hash algorithms (bcrypt, scrypt, PBKDF2) must match between systems for any direct hash import; mismatches require resets regardless.
+If that's not feasible, the simpler alternative is forcing password resets: export users without passwords, import to SuperTokens, and send reset emails during migration. Note that the password hash algorithm (bcrypt, scrypt, PBKDF2) must match between systems for any direct hash import, mismatches require resets regardless.
 
 ### **Secure User Export Tips**
 
-User exports contain sensitive personal information and should be treated as critical security artifacts throughout the migration process.Use HTTPS exclusively for all API calls; store export files in encrypted storage with automatic expiration; restrict filesystem permissions to migration service accounts; never commit export files to version control; and delete files immediately after successful import. Limit export access to the minimum required personnel, use short-lived API tokens, and require MFA for export initiation. Export only the fields needed, anonymize PII where possible, and document all operations for GDPR/CCPA audit trails.
+User exports contain sensitive personal information and should be treated as critical security artifacts throughout the migration process.Use HTTPS exclusively for all API calls, store export files in encrypted storage with automatic expiration, restrict filesystem permissions to migration service accounts, never commit export files to version control, and delete files immediately after successful import. Limit export access to the minimum required personnel, use short-lived API tokens, and require MFA for export initiation. Export only the fields needed, anonymize PII where possible, and document all operations for GDPR/CCPA audit trails.
 
 ## Implementing SuperTokens After Auth0
 
-Successful migration requires proper SuperTokens configuration matching your application architecture and security requirements.
+Successful migration requires proper SuperTokens configuration that matches your application architecture and security requirements.
 
 ### **SuperTokens Setup Essentials**
 
@@ -193,10 +193,10 @@ SuperTokens offers two deployment options: self-hosted or managed cloud service.
 
 **Managed Service Setup:**
 
-1. Create an account at supertokens.com
-2. Obtain connection URI and API key from the dashboard
-3. Configure backend SDK with credentials
-4. Deploy the frontend SDK in the application
+1. Create an account at supertokens.com.
+2. Obtain the connection URI and the API key from the dashboard.
+3. Configure the backend SDK with credentials.
+4. Deploy the frontend SDK in the application.
 
 **Self-Hosted Setup:**
 
@@ -204,9 +204,9 @@ SuperTokens offers two deployment options: self-hosted or managed cloud service.
 ```js
 docker run -p 3567:3567 -d registry.supertokens.io/supertokens/supertokens-postgresql
 ```
-2. Configure a PostgreSQL or MySQL database
-3. Set environment variables for the database connection
-4. Initialize backend SDK pointing to self-hosted core
+2. Configure a PostgreSQL or MySQL database.
+3. Set environment variables for the database connection.
+4. Initialize the backend SDK to point to the self-hosted core.
 
 **Backend Configuration:**
 
@@ -374,15 +374,15 @@ Session.init({
 
 Applications using Auth0 for SSO across multiple domains require coordination:
 
-1. Deploy SuperTokens with a matching domain configuration
-2. Maintain cookie domains consistent with the Auth0 setup
-3. Gradually migrate applications to SuperTokens sessions
-4. Use feature flags to control which apps use SuperTokens
-5. Ensure session token formats remain compatible across apps
+1. Deploy SuperTokens with a matching domain configuration.
+2. Maintain cookie domains consistent with the Auth0 setup.
+3. Gradually migrate applications to SuperTokens sessions.
+4. Use feature flags to control which apps use SuperTokens.
+5. Ensure session token formats remain compatible across apps.
 
 ## Planning Your Migration Rollout
 
-Structured rollout planning minimizes disruption while enabling rapid response to unexpected issues.
+Structured rollout planning minimizes disruption, while enabling rapid response to unexpected issues.
 
 ### **Define Your Migration Goals**
 
@@ -394,7 +394,7 @@ Clear, quantifiable objectives guide strategy selection and justify engineering 
 
 ### **Test in Staging First**
 
-Mirror production architecture with anonymized data and replicate the Auth0 configuration before touching production. Cover all critical test scenarios&mdash;SSO, passwordless authentication, RBAC, social login, MFA, password reset, and session management&mdash;then performance test authentication latency under load and stress test failover between both systems. Comprehensive staging validation prevents production incidents and builds confidence before cutover.
+Mirror production architecture with anonymized data and replicate the Auth0 configuration before touching production. Cover all critical test scenarios &mdash; SSO, passwordless authentication, RBAC, social login, MFA, password reset, and session management &mdash; then performance test authentication latency under load and stress test failover between both systems. Comprehensive staging validation prevents production incidents and builds confidence before cutover.
 
 ### **Communicate Clearly With Users**
 
@@ -410,7 +410,7 @@ Common migration obstacles have established solutions that reduce risk and compl
 
 ### **Dealing With Incomplete Data**
 
-Auth0 exports may lack required fields or contain inconsistent data:
+Auth0 exports may lack required fields or contain inconsistent data.
 
 **Missing Metadata:**
 
@@ -457,7 +457,7 @@ function validateUserData(user) {
 
 ### **Managing Rate Limits and Bulk Exports**
 
-Auth0 API rate limits constrain export and migration speed:
+Auth0 API rate limits constrain export and migration speed.
 
 **Rate Limit Handling:**
 
@@ -516,7 +516,7 @@ app.post("/auth0/webhook", async (req, res) => {
 
 ### **Ensuring Zero Downtime During Cutover**
 
-Feature flags enable gradual traffic shifting without downtime:
+Feature flags enable gradual traffic shifting without downtime.
 
 **Feature Flag Implementation:**
 
@@ -540,12 +540,12 @@ async function authenticate(email, password) {
 ```
 **Gradual Rollout:**
 
-1. Deploy SuperTokens with 0% traffic
-2. Increase to 5% and monitor for 24 hours
-3. Scale to 25% if no issues are detected
-4. Reach 50%, then 75%, then 100% incrementally
-5. Maintain Auth0 fallback for 30 days post-cutover
-6. Decommission Auth0 after stability confirmation
+1. Deploy SuperTokens with 0% traffic.
+2. Increase to 5% and monitor for 24 hours.
+3. Scale to 25% if no issues are detected.
+4. Reach 50%, then 75%, then 100% incrementally.
+5. Maintain Auth0 fallback for 30 days post-cutover.
+6. Decommission Auth0 after stability confirmation.
 
 This approach enables rapid rollback if issues emerge while proving SuperTokens stability under real production load.
 
@@ -557,7 +557,7 @@ SuperTokens provides migration-specific features, reducing implementation comple
 
 ### **Built-In Support for Lazy and Trickle Migration**
 
-SuperTokens documentation includes migration guides with code examples for common scenarios:
+SuperTokens documentation includes migration guides with code examples for common scenarios.
 
 **Custom Authentication APIs:**
 
@@ -601,7 +601,7 @@ This pattern integrates seamlessly with SuperTokens' existing authentication flo
 
 ### **Developer-Centric Tooling**
 
-SuperTokens prioritizes developer experience through comprehensive SDKs and debugging capabilities:
+SuperTokens prioritizes developer experience through comprehensive SDKs and debugging capabilities.
 
 **SDK Coverage:**
 
@@ -625,7 +625,7 @@ SuperTokens prioritizes developer experience through comprehensive SDKs and debu
 
 ### **Zero Lock-In Post-Migration**
 
-Unlike Auth0's proprietary systems, SuperTokens maintains portability:
+Unlike Auth0's proprietary systems, SuperTokens maintains portability.
 
 **Standard Formats:**
 
@@ -648,22 +648,22 @@ This architecture prevents future vendor lock-in, reducing long-term risk regard
 
 ## Conclusion
 
-Migrating from Auth0 to SuperTokens requires choosing appropriate migration strategies: lazy, trickle, automatic, or full export, based on your user base characteristics, operational constraints, and risk tolerance. Lazy migration offers the safest gradual approach; automatic migration provides predictable timelines; full export enables controlled cutover timing.
+Migrating from Auth0 to SuperTokens requires choosing an appropriate migration strategy: lazy, trickle, automatic, or full export; based on your user base characteristics, operational constraints, and risk tolerance. Lazy migration offers the safest gradual approach, automatic migration provides predictable timelines, full export enables controlled cutover timing.
 
 **Key Success Factors:**
 
-- Secure user export handling with encryption and access controls
-- Comprehensive staging environment testing before production deployment
-- Clear user communication throughout the migration lifecycle
-- Gradual rollout with feature flags enabling rapid rollback
-- Monitoring and observability to detect issues early
+- Secure user export handling with encryption and access controls.
+- Comprehensive staging environment testing before production deployment.
+- Clear user communication throughout the migration lifecycle.
+- Gradual rollout with feature flags enabling rapid rollback.
+- Monitoring and observability to detect issues early.
 
-SuperTokens simplifies migration through built-in support for common patterns, developer-friendly SDKs, and comprehensive documentation. The combination of managed service convenience and self-hosting flexibility prevents future lock-in while reducing immediate Auth0 costs.
+SuperTokens simplifies migration through built-in support for common patterns, developer-friendly SDKs, and comprehensive documentation. The combination of managed service convenience and self-hosting flexibility prevents future lock-in, while reducing immediate Auth0 costs.
 
 **Next Steps:**
 
-1. Review the official SuperTokens migration documentation at [https://supertokens.com/docs/migration/overview](https://supertokens.com/docs/migration/overview)
-2. Test migration strategies in the staging environment
-3. Calculate cost savings and timeline requirements
-4. Select a migration approach matching your constraints
-5. Implement a gradual rollout with monitoring
+1. Review the official SuperTokens migration documentation at [https://supertokens.com/docs/migration/overview](https://supertokens.com/docs/migration/overview).
+2. Test migration strategies in the staging environment.
+3. Calculate cost savings and timeline requirements.
+4. Select a migration approach that matches your constraints.
+5. Implement a gradual rollout with monitoring.
