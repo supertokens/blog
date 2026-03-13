@@ -4796,6 +4796,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"\n            },\n            \"headline\": \"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/migrate-from-auth0",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how to migrate from Auth0 to SuperTokens using lazy, automatic, or trickle migration. Includes secure export steps, pricing insights, and implementation tips.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How to Migrate from Auth0 Securely and Efficiently\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/migrate-from-auth0\" />",
+            "<meta property=\"og:description\" content=\"Learn how to migrate from Auth0 to SuperTokens using lazy, automatic, or trickle migration. Includes secure export steps, pricing insights, and implementation tips.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/migrate-from-auth0.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how to migrate from Auth0 to SuperTokens using lazy, automatic, or trickle migration. Includes secure export steps, pricing insights, and implementation tips.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/migrate-from-auth0\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/migrate-from-auth0.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/migrate-from-auth0\">"
+        ],
+        "title": "How to Migrate from Auth0 Securely and Efficiently",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/migrate-from-auth0\"\n            },\n            \"headline\": \"Learn how to migrate from Auth0 to SuperTokens using lazy, automatic, or trickle migration. Includes secure export steps, pricing insights, and implementation tips.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/migrate-from-auth0.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {   
         "path": "/blog/better-auth",
         "metaTags": [
             "<meta name=\"description\" content=\"undefined\" />",
