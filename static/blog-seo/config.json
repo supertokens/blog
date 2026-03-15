@@ -4796,6 +4796,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"\n            },\n            \"headline\": \"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/auth0-open-source",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Is Auth0 open source? What's actually OSS, and which open-source Auth0 alternatives (Keycloak, Ory, SuperTokens) fit your stack in 2026?\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Auth0 Open Source (2026): What's Free and Top OSS Alternatives\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/auth0-open-source\" />",
+            "<meta property=\"og:description\" content=\"Is Auth0 open source? What's actually OSS, and which open-source Auth0 alternatives (Keycloak, Ory, SuperTokens) fit your stack in 2026?\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/auth0-open-source.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Is Auth0 open source? What's actually OSS, and which open-source Auth0 alternatives (Keycloak, Ory, SuperTokens) fit your stack in 2026?\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/auth0-open-source\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/auth0-open-source.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/auth0-open-source\">"
+        ],
+        "title": "Auth0 Open Source (2026): What's Free and Top OSS Alternatives",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/auth0-open-source\"\n            },\n            \"headline\": \"Is Auth0 open source? What's actually OSS, and which open-source Auth0 alternatives (Keycloak, Ory, SuperTokens) fit your stack in 2026?\",\n            \"image\": \"https://supertokens.com/blog-meta-images/auth0-open-source.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
         "path": "/blog/better-auth",
         "metaTags": [
             "<meta name=\"description\" content=\"undefined\" />",
