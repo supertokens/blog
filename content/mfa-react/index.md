@@ -98,8 +98,10 @@ Configure your backend SDK with the primary authentication recipe and session ma
 Enable your chosen second factor in the recipe list. Configure requirements: whether MFA is mandatory for all users or triggered conditionally.
 
 ```javascript
+import EmailPassword from "supertokens-node/recipe/emailpassword";
 import MultiFactorAuth from "supertokens-node/recipe/multifactorauth";
 import TOTP from "supertokens-node/recipe/totp";
+import Session from "supertokens-node/recipe/session";
 
 recipeList: [
     EmailPassword.init(),
@@ -115,13 +117,68 @@ recipeList: [
 
 Initialize SuperTokens in your React app. The pre-built UI components for login, factor setup, and verification auto-mount under `/auth`. Users see TOTP QR codes and input fields,without custom component work.
 
+
+```javascript
+import supertokens from "supertokens-auth-react";
+import EmailPassword from "supertokens-auth-react/recipe/emailpassword";
+import MultiFactorAuth from "supertokens-auth-react/recipe/multifactorauth";
+import TOTP from "supertokens-auth-react/recipe/totp";
+import Session from "supertokens-auth-react/recipe/session";
+
+supertokens.init({
+    appInfo: {
+        appName: "...",
+        apiDomain: "...",
+        websiteDomain: "...",
+    },
+    recipeList: [
+        EmailPassword.init(),
+        TOTP.init(),
+        MultiFactorAuth.init({
+            firstFactors: ["emailpassword"],
+        }),
+        Session.init()
+    ]
+});
+```
+
 **5. Protect Routes with SessionAuth**
 
 Wrap protected components with `SessionAuth`. The wrapper checks session validity and MFA completion before rendering children. Incomplete sessions redirect to the appropriate challenge screen.
 
+```javascript
+import { SessionAuth } from "supertokens-auth-react/recipe/session";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+function App() {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route
+                    path="/dashboard"
+                    element={
+                        <SessionAuth>
+                            <Dashboard />
+                        </SessionAuth>
+                    }
+                />
+            </Routes>
+        </BrowserRouter>
+    );
+}
+```
+
 **6. Test Token Rotation and Theft Detection**
 
-Verify that refresh tokens rotate on each use and that concurrent token usage triggers theft detection. SuperTokens automatically revokes sessions when replay attacks are detected.
+You don't need to build token rotation or theft detection yourself. `Session.init()` handles both out of the box.
+
+Here's the mechanism. SuperTokens issues short-lived access tokens paired with long-lived refresh tokens. Every time the frontend calls the refresh endpoint, the server issues a brand new refresh token and invalidates the previous one. If an attacker steals an old refresh token and tries to use it after the legitimate user has already rotated, SuperTokens flags it as theft and revokes the entire session. Both the attacker and the real user get logged out, forcing re-authentication.
+
+One detail worth understanding: SuperTokens doesn't kill the old refresh token the instant it issues a new pair. It waits until the new tokens are actually used by the client. This prevents false lockouts when a refresh response gets dropped by a flaky network. The old token only becomes truly invalid once the new one is confirmed in play.
+
+To see this working in your app, open your browser DevTools and navigate to the Application tab. Under Cookies, watch the `sRefreshToken` value. Log in, then trigger a refresh (you can let the access token expire naturally or call a protected route). The `sRefreshToken` value changes on every rotation cycle. If you're running the [SuperTokens Dashboard](https://supertokens.com/docs/post-authentication/dashboard/about) (`Dashboard.init()` in your recipe list), you can view active sessions per user and watch them get revoked in real time when theft detection triggers.
+
+The important takeaway: this isn't something you configure or toggle on. It's baked into the session layer. If `Session.init()` is in your recipe list, you have rotating refresh tokens and theft detection running from day one.
 
 ## Security Best Practices for React MFA
 
@@ -129,7 +186,8 @@ MFA strengthens authentication, but implementation details determine whether tha
 
 **Rotate Refresh Tokens on Every Use**
 
-Single-use refresh tokens nullify stolen credentials. If an attacker captures a refresh token, the next legitimate refresh invalidates it. SuperTokens enables rotation by default, detecting when both parties attempt to use the same token.
+SuperTokens issues a new refresh token every time the current one is used. But the old token isn't invalidated immediately. It stays valid until the client confirms receipt by actually using the new token pair. This prevents false lockouts from dropped network responses. Once the new tokens are in use, the old refresh token is invalidated. If an attacker tries to use that old token after it's been invalidated, SuperTokens detects the reuse as theft and revokes the entire session, forcing both parties to re-authenticate. This rotation strategy is enabled by default in `Session.init()`.
+
 
 **Use Secure, HttpOnly Cookies**
 
@@ -141,7 +199,34 @@ Keep access tokens short-lived, ideally 15 minutes or less. Short TTLs limit the
 
 **Log Token Theft Detection Events**
 
-When SuperTokens detects refresh token reuse, it fires `onTokenTheftDetected`. Pipe these events to your SIEM or monitoring system. Token theft attempts indicate active attacks against your users, not just background noise.
+SuperTokens exposes an `onTokenTheftDetected` handler inside `Session.init()` that fires when rotating refresh token reuse is detected. The default behavior revokes the session and sends a `401`. You can hook into this to add logging before that happens.
+
+```javascript
+Session.init({
+    errorHandlers: {
+        onTokenTheftDetected: async (sessionHandle, userId, req, res, userContext) => {
+            // Log the event with whatever context matters to you
+            console.error("Token theft detected", {
+                sessionHandle,
+                userId,
+                ip: req.headers["x-forwarded-for"] || req.connection?.remoteAddress,
+                userAgent: req.headers["user-agent"],
+                timestamp: new Date().toISOString(),
+            });
+
+            // Revoke the compromised session and respond with 401
+            await Session.revokeSession(sessionHandle);
+            res.statusCode = 401;
+            res.json({ message: "session revoked" });
+        },
+    }
+})
+```
+
+The handler receives the `sessionHandle` and `userId` directly, so you don't need to extract them from the request. Replace `console.error` with your logging service of choice. The key point: this runs automatically when theft is detected. You're not polling or checking manually. SuperTokens calls this handler for you when it sees an invalidated refresh token get replayed.
+
+SuperTokens also provides `errorHandlers` for other session errors like `onUnauthorised` and `onTryRefreshToken`. Full details in the [error handling docs](https://supertokens.com/docs/post-authentication/session-management/advanced-workflows/customize-error-handling).
+
 
 **Serve All MFA Endpoints over HTTPS**
 
