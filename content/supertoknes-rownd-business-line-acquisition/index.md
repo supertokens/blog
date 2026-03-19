@@ -25,7 +25,7 @@ The transfer of Rownd’s authentication customer relationships marks an importa
 ## Important Dates and Transition Information
 
 To provide a clear roadmap for all stakeholders, SuperTokens has announced that it expects to sunset the legacy Rownd Authentication platform on June 20, 2026. Between now and the sunset date, SuperTokens and Rownd will provide migration paths to move users to the SuperTokens hosted environment. This timeline is intended to give customers sufficient time to plan and complete their transition.
-For more information on the transition and to begin your migration, please visit the transition resource center at [docs.rownd.io](https://www.docs.rownd.io) or [supertokens.com/migration-rownd](https://www.supertokens.com/migration-rownd).
+For more information on the transition and to begin your migration, please visit the transition resource center at [docs.rownd.io](https://docs.rownd.io) or [supertokens.com/migration-rownd](https://www.supertokens.com/migration-rownd).
 
 ## About SuperTokens
 
