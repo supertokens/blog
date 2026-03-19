@@ -19,7 +19,8 @@ As part of this transition, SuperTokens will work with Rownd customers to suppor
 ## Not Just a Migration, an Upgrade
 
 The transfer of Rownd’s authentication customer relationships marks an important milestone for Rownd as it focuses its resources on its AI line of business.
-*Rownd is entering an exciting new chapter as we focus on our AI business,* said Rob Thelen, CEO of Rownd. *We wanted to make sure our authentication customers were not just migrated, but moved to a platform we believe will serve them well for the long term. By handing the baton to SuperTokens, we know our customers are moving to the best hosted open-source solution in the market. We will be working closely with the SuperTokens team to help ensure customers are supported through this change.*
+
+>*Rownd is entering an exciting new chapter as we focus on our AI business, We wanted to make sure our authentication customers were not just migrated, but moved to a platform we believe will serve them well for the long term. By handing the baton to SuperTokens, we know our customers are moving to the best hosted open-source solution in the market. We will be working closely with the SuperTokens team to help ensure customers are supported through this change.* <br>- **Rob Thelen, CEO of Rownd.**
 
 ## Important Dates and Transition Information
 
