@@ -538,5 +538,8 @@
     },
     {
         "location": "https://supertokens.com/blog/auth0-alternatives-for-large-enterprises"
+    },
+    {
+        "location": "https://supertokens.com/blog/mfa-react"
     }
 ]
