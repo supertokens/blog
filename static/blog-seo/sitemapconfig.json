@@ -519,6 +519,9 @@
         "location": "https://supertokens.com/blog/clerk-pricing-the-complete-guide"
     },
     {
+        "location": "https://supertokens.com/blog/migrate-from-auth0"
+    },
+    {    
         "location": "https://supertokens.com/blog/better-auth"
     },
     {
@@ -538,5 +541,9 @@
     },
     {
         "location": "https://supertokens.com/blog/supertoknes-rownd-business-line-acquisition"
+    
+    },
+    {
+        "location": "https://supertokens.com/blog/mfa-react"
     }
 ]
