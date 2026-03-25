@@ -4819,6 +4819,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/build-vs-buy\"\n            },\n            \"headline\": \"undefined\",\n            \"image\": \"https://supertokens.com/blog-meta-images/build-vs-buy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {   
+        "path": "/blog/migrate-from-auth0",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how to migrate from Auth0 to SuperTokens using lazy, automatic, or trickle migration. Includes secure export steps, pricing insights, and implementation tips.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How to Migrate from Auth0 Securely and Efficiently\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/migrate-from-auth0\" />",
+            "<meta property=\"og:description\" content=\"Learn how to migrate from Auth0 to SuperTokens using lazy, automatic, or trickle migration. Includes secure export steps, pricing insights, and implementation tips.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/migrate-from-auth0.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how to migrate from Auth0 to SuperTokens using lazy, automatic, or trickle migration. Includes secure export steps, pricing insights, and implementation tips.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/migrate-from-auth0\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/migrate-from-auth0.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/migrate-from-auth0\">"
+        ],
+        "title": "How to Migrate from Auth0 Securely and Efficiently",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/migrate-from-auth0\"\n            },\n            \"headline\": \"Learn how to migrate from Auth0 to SuperTokens using lazy, automatic, or trickle migration. Includes secure export steps, pricing insights, and implementation tips.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/migrate-from-auth0.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {   
         "path": "/blog/better-auth",
         "metaTags": [
             "<meta name=\"description\" content=\"undefined\" />",
@@ -4955,5 +4978,51 @@
         ],
         "title": "7 Leading Auth0 Alternatives for Large Enterprises in 2026",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/auth0-alternatives-for-large-enterprises\"\n            },\n            \"headline\": \"This blog aims to highlight the leading enterprise-ready Auth0 alternatives—what they do best, where they trade off, and how to choose based on your operational model and risk posture.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/auth0-alternatives-for-large-enterprises.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/supertoknes-rownd-business-line-acquisition",
+        "metaTags": [
+            "<meta name=\"description\" content=\"SuperTokens and Rownd announce that SuperTokens has acquired the Rownd Authentication business line\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"SuperTokens and Rownd Announce Transition of Rownd Authentication Customers\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/supertoknes-rownd-business-line-acquisition\" />",
+            "<meta property=\"og:description\" content=\"SuperTokens and Rownd announce that SuperTokens has acquired the Rownd Authentication business line\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/supertokens-rownd-acquisition.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"SuperTokens and Rownd announce that SuperTokens has acquired the Rownd Authentication business line\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/supertoknes-rownd-business-line-acquisition\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/supertokens-rownd-acquisition.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/supertoknes-rownd-business-line-acquisition\">"
+        ],
+        "title": "SuperTokens and Rownd Announce Transition of Rownd Authentication Customers",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/supertoknes-rownd-business-line-acquisition\"\n            },\n            \"headline\": \"SuperTokens and Rownd announce that SuperTokens has acquired the Rownd Authentication business line\",\n            \"image\": \"https://supertokens.com/blog-meta-images/supertokens-rownd-acquisition.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+      },
+      {
+        "path": "/blog/mfa-react",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Secure your React app with multi-factor authentication in minutes. Learn MFA options, setup steps, and best practices using SuperTokens.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Add MFA to React Fast with SuperTokens\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/mfa-react\" />",
+            "<meta property=\"og:description\" content=\"Secure your React app with multi-factor authentication in minutes. Learn MFA options, setup steps, and best practices using SuperTokens.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/add_mfa_to_react.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Secure your React app with multi-factor authentication in minutes. Learn MFA options, setup steps, and best practices using SuperTokens.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/mfa-react\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/add_mfa_to_react.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/mfa-react\">"
+        ],
+        "title": "Add MFA to React Fast with SuperTokens",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/mfa-react\"\n            },\n            \"headline\": \"Secure your React app with multi-factor authentication in minutes. Learn MFA options, setup steps, and best practices using SuperTokens.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/add_mfa_to_react.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
