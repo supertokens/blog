@@ -1,9 +1,10 @@
 import * as React from "react"
 
 import "../styles/blog.css"
+import { categories } from "../blog-categories";
 
 const BlogHomeTemplate = (props) => {
-  const [selectedCategory, setSelectedCategory] = React.useState("all");
+  const [selectedCategory, setSelectedCategory] = React.useState(categories.ALL);
   const [classToHideList, setClassToHideList] = React.useState("visible");
 
   React.useEffect(() => {
@@ -31,31 +32,46 @@ const BlogHomeTemplate = (props) => {
         <div className="blog-categories">
           <button
             id="tab-1-id"
-            className={`blog-categories__category ${selectedCategory === "all" && "selected"}`}
-            onClick={() => updateCategory("all")}
-            >
+            className={`blog-categories__category ${selectedCategory === categories.ALL && "selected"}`}
+            onClick={() => updateCategory(categories.ALL)}
+          >
             All
           </button>
           <button
             id="tab-2-id"
-            className={`blog-categories__category ${selectedCategory === "sessions" && "selected"}`}
-            onClick={() => updateCategory("sessions")}
-            >
-            Sessions
+            className={`blog-categories__category ${selectedCategory === categories.ANNOUNCEMENTS && "selected"}`}
+            onClick={() => {updateCategory(categories.ANNOUNCEMENTS)}}
+          >
+            Announcements
           </button>
           <button
             id="tab-3-id"
-            className={`blog-categories__category ${selectedCategory === "featured" && "selected"}`}
-            onClick={() => updateCategory("featured")}
-            >
-            Featured
+            className={`blog-categories__category ${selectedCategory === categories.AUTHENTICATION && "selected"}`}
+            onre
+            onClick={() => updateCategory(categories.AUTHENTICATION)}
+          >
+            Authentication
           </button>
           <button
             id="tab-4-id"
-            className={`blog-categories__category ${selectedCategory === "programming" && "selected"}`}
-            onClick={() => updateCategory("programming")}
+            className={`blog-categories__category ${selectedCategory === categories.TUTORIALS && "selected"}`}
+            onClick={() => updateCategory(categories.TUTORIALS)}
           >
-            Programming
+            Tutorials
+          </button>
+          <button
+            id="tab-5-id"
+            className={`blog-categories__category ${selectedCategory === categories.SECURITY && "selected"}`}
+            onClick={() => updateCategory(categories.SECURITY)}
+          >
+            Security
+          </button>
+          <button
+            id="tab-6-id"
+            className={`blog-categories__category ${selectedCategory === categories.NEWS && "selected"}`}
+            onClick={() => updateCategory(categories.NEWS)}
+          >
+            News
           </button>
         </div>
       </div>
