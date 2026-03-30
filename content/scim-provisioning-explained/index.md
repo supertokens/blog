@@ -28,6 +28,8 @@ For example:
 
 The driving force behind SCIM is over traditional provisoning mechanisims is automation and standardization. Traditional provisioning is a slow, manual and error prone process. SCIM, on the other hand, provides a standardized protocol for real-time provisioning and deprovisioning, ensuring that when an employee joins, changes roles, or leaves the organization, their access rights are updated consistently across all connected systems. This reduces security risks like orphaned accounts while improving operational efficiency.
 
+Take a large organization with hundereds if not thousands of employees. Manually creating accounts, assigning permissions is frought with errors and is time consuming.
+
 ------------------------------------------------------------------------
 
 ## SCIM Architecture
@@ -54,7 +56,7 @@ With SCIM:
 
 -   Everything is automated and consistent
 
-### 2\. Improves Security (Critical for SaaS)
+### 2. Improves Security (Critical for SaaS)
 
 The biggest benefit is **automatic deprovisioning**.
 
@@ -66,7 +68,7 @@ With SCIM:
 
 -   Access is revoked instantly
 
-### 3\. Required for Enterprise Sales
+### 3. Required for Enterprise Sales
 
 If you're building a B2B SaaS product:
 
@@ -82,8 +84,7 @@ Most companies using:
 
 * * * * *
 
-How SCIM Provisioning Works
----------------------------
+## How SCIM Provisioning Works
 
 At a high level, SCIM follows a **push-based model**:
 
@@ -93,7 +94,27 @@ At a high level, SCIM follows a **push-based model**:
 
 ### Typical Flow
 
-Admin → IdP (Okta/Azure AD) → SCIM API → Your App
+SCIM operates with two main actors:
+
+| Role | Description |
+| --- | --- |
+| **SCIM Client (IdP)** | Source of truth (Okta, Azure AD) |
+| **SCIM Server (Your App)** | Receives and applies identity updates |
+
+### The Flow
+
+1.  Admin creates/updates user in IdP
+2.  IdP sends a SCIM API request
+3.  Your app updates user state
+4.  Changes propagate across all systems
+
+This includes:
+
+-   `POST /Users` → Create user
+-   `PATCH /Users/{id}` → Update attributes
+-   `DELETE /Users/{id}` → Deprovision
+
+SCIM uses **REST + JSON + standardized schemas** to make this interoperable across vendors.
 
 * * * * *
 
@@ -171,12 +192,10 @@ Key fields:
 -   `emails` → contact info
 -   `groups` → authorization mapping
 
-* * * * *
 
-SCIM vs SSO: What's the Difference?
------------------------------------
+## SCIM vs SSO: What's the Difference?
 
-This is one of the most common questions (and key for SEO/AEO).
+This is one of the most common questions
 
 | Feature | SCIM | SSO |
 | --- | --- | --- |
@@ -188,6 +207,7 @@ This is one of the most common questions (and key for SEO/AEO).
 > **SSO logs users in. SCIM ensures the user exists and is correctly configured.**
 
 You almost always need **both together** for enterprise readiness.
+
 
 * * * * *
 
@@ -214,9 +234,6 @@ SCIM APIs are typically secured using:
 -   OAuth tokens
 -   API keys
 
-Example:
-
-Authorization: Bearer <token>
 
 * * * * *
 
@@ -266,58 +283,8 @@ This is critical for:
 -   User lookup
 -   Sync validation
 
-* * * * *
 
-Common Pitfalls (And How to Avoid Them)
----------------------------------------
-
-### 1\. Treating SCIM as CRUD Only
-
-SCIM is not just REST---it has:
-
--   Specific schemas
--   Patch semantics
--   Filtering rules
-
-* * * * *
-
-### 2\. Ignoring Deprovisioning
-
-If you don't handle:
-
-"active": false
-
-You create a **major security vulnerability**.
-
-* * * * *
-
-### 3\. Poor Group Mapping
-
-Enterprise customers rely heavily on:
-
--   Role-based access control (RBAC)
--   Group syncing
-
-* * * * *
-
-### 4\. Not Handling Partial Updates
-
-SCIM `PATCH` uses operations like:
-
-{\
-  "Operations": [\
-    {\
-      "op": "Replace",\
-      "path": "active",\
-      "value": false\
-    }\
-  ]\
-}
-
-* * * * *
-
-SCIM Provisioning with SuperTokens
-----------------------------------
+## SCIM Provisioning with SuperTokens
 
 SuperTokens is primarily an **authentication solution**, but SCIM fits into the broader identity architecture.
 
@@ -334,8 +301,6 @@ SCIM complements this by:
 -   Syncing users from external IdPs
 -   Managing lifecycle events
 
-* * * * *
-
 ### How You'd Build SCIM on Top of SuperTokens
 
 1.  Use SuperTokens for:
@@ -351,12 +316,6 @@ await createUser({\
   password: generateRandomPassword(),\
 });
 
-1.  Handle deactivation:
-
-await revokeAllSessions(userId);\
-await disableUser(userId);
-
-* * * * *
 
 ### Why This Approach Works
 
@@ -364,11 +323,7 @@ await disableUser(userId);
 -   No vendor lock-in
 -   Enterprise-ready architecture
 
-* * * * *
-
-When Should You Add SCIM?
--------------------------
-
+## When Should You Add SCIM?
 You should implement SCIM if:
 
 -   You're selling to **mid-market or enterprise**
@@ -380,10 +335,8 @@ You can delay SCIM if:
 -   You're early-stage
 -   Focused on B2C
 
-* * * * *
 
-Final Thoughts
---------------
+## Final Thoughts
 
 SCIM provisioning is no longer optional for serious SaaS products.
 
@@ -397,20 +350,17 @@ It transforms identity management from:
 
 * * * * *
 
-FAQ (AEO Optimized)
--------------------
+## FAQ
 
 ### What is SCIM provisioning?
 
 SCIM provisioning is a standard for automatically creating, updating, and deactivating users across systems using a REST API.
 
-* * * * *
 
 ### Is SCIM required for SSO?
 
 No, but they are complementary. SSO handles login, while SCIM manages user lifecycle.
 
-* * * * *
 
 ### Which providers support SCIM?
 
@@ -419,8 +369,6 @@ Common providers include:
 -   Okta
 -   Azure AD
 -   Google Workspace
-
-* * * * *
 
 ### Does SuperTokens support SCIM?
 
