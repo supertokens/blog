@@ -1,7 +1,7 @@
 ---
-title: "How to Ban Users in Your Web App Using SuperTokens"
+title: "How to Ban Users in Your Web App By Using SuperTokens"
 date: "2026-03-22"
-description: "Learn how to ban or suspend users in your web app with SuperTokens."
+description: "Learn how to ban or suspend users in your web app by using SuperTokens."
 cover: "how-to-ban-users.png"
 category: "programming"
 author: "Mostafa Ibrahim"
@@ -15,7 +15,7 @@ This guide covers how to implement user banning correctly, where common approach
 
 If you are building a modern product, understanding how to ban users in web apps is not just a feature requirement; it is a core part of your security and trust model.
 
-Banning a user is an act of policy enforcement. The scenarios that require it are varied abusive behavior in a community product, a compromised account that needs immediate lockout, a terms of service violation, or a compliance restriction tied to geography or regulation.
+Banning a user is an act of policy enforcement. The scenarios that require it are varied: abusive behavior in a community product, a compromised account that needs immediate lockout, a terms of service violation, or a compliance restriction tied to geography or regulation.
 
 What all these scenarios share is urgency. When a ban is issued, it needs to take effect immediately, not at the next token refresh cycle or the next time the user logs in. The risk of weak banning logic is concrete: a user marked as banned in the database can continue making API calls, submitting forms, or running background jobs as long as a valid session token exists. The flag means nothing if the session verification layer never reads it.
 
@@ -31,7 +31,7 @@ The simplest approach is adding a `banned` boolean to the user record and checki
 
 ### **Manual Session Revocation**
 
-A step up from the flag-only approach is explicitly deleting session tokens or calling logout endpoints when a ban is issued. The problem is coverage. A user signed in across three devices, a mobile app, and an API client, requiring five separate revocation calls. Miss one and the ban is partial. In microservice architectures where session state may be distributed, the surface area for incomplete revocation grows quickly.
+A step up from the flag-only approach is explicitly deleting session tokens or calling logout endpoints when a ban is issued. The problem is coverage. A user signed in across three devices, a mobile app, and an API client &mdash; requiring five separate revocation calls. Miss one and the ban is partial. In microservice architectures where session state may be distributed, the surface area for incomplete revocation grows quickly.
 
 ### **Library-Based Solutions (BetterAuth, Passport.js)**
 
@@ -45,7 +45,7 @@ Libraries like Passport.js and BetterAuth provide authentication primitives but 
 
 ![Workflow](Workflow.png)
 
-Full implementation details are available in the [User Banning Docs.](https://supertokens.com/docs/post-authentication/user-management/user-banning)
+For more information, see [User Banning Docs.](https://supertokens.com/docs/post-authentication/user-management/user-banning)
 
 ### **Step-By-Step Implementation**
 
@@ -107,7 +107,7 @@ if (bannedUntil && Date.now() < bannedUntil) {
 }
 ```
 
-Feature-level restrictions are another pattern worth considering for community, gaming, or B2B applications. Instead of revoking full access, a claim like `canPost: false` or `canComment: false` restricts specific capabilities while leaving the account active. This is appropriate for graduated enforcement, a warning state before a full suspension.
+Feature-level restrictions are another pattern worth considering for community, gaming, or B2B applications. Instead of revoking full access, a claim like `canPost: false` or `canComment: false` restricts specific capabilities while leaving the account active. This is appropriate for graduated enforcement, such as a warning state before a full suspension.
 
 ## Security Considerations
 
@@ -115,11 +115,11 @@ Several implementation details determine whether a banning system is genuinely e
 
 ![Security Considerations](Security-Considerations.png)
 
-Ban status must be checked server-side on every request. A client-side check hiding a button, disabling a form, is a UX convenience, not an access control. Any client-side restriction can be bypassed with a direct API call.
+Ban status must be checked server-side on every request. A client-side check hiding a button or disabling a form is a UX convenience, not an access control. Any client-side restriction can be bypassed with a direct API call.
 
-Refresh tokens require explicit revocation. Revoking the access token without revoking the refresh token allows a banned user to silently obtain a new access token. SuperTokens' `revokeSession()` handles both, but custom implementations must address this explicitly.
+Refresh tokens require explicit revocation. Revoking the access token without revoking the refresh token allows a banned user to obtain a new access token silently. SuperTokens' `revokeSession()` handles both, but custom implementations must address this explicitly.
 
-For abuse scenarios, banning by user ID alone is often insufficient. A determined bad actor creates a new account. Combining user ID banning with IP address or device fingerprint restrictions raises the cost of evasion. These layers belong in the ban enforcement logic, not a separate system.
+For abuse scenarios, banning by user ID alone is often insufficient. A determined bad actor can create a new account. Combining user ID banning with IP address or device fingerprint restrictions raises the cost of evasion. These layers belong in the ban enforcement logic, not a separate system.
 
 Every ban action should produce an audit record: who was banned, when, by whom, and under what policy. This is a compliance requirement in regulated environments and a debugging tool everywhere else.
 
@@ -129,13 +129,13 @@ Banning integrates naturally with role-based access control. Assigning a `restri
 
 Pair banning with session rotation and token theft detection for a zero-trust access model. A session that rotates tokens on each request limits the window of exposure if a token is leaked. Token theft detection flags anomalous reuse patterns as a signal that a session may be compromised and a candidate for preemptive revocation.
 
-Further reading: [Session Management Overview](https://supertokens.com/docs/post-authentication/session-management/introduction) and [User Roles and Permissions.](https://supertokens.com/docs/additional-verification/user-roles/role-management-actions)
+For more information, see [Session Management Overview](https://supertokens.com/docs/post-authentication/session-management/introduction) and [User Roles and Permissions.](https://supertokens.com/docs/additional-verification/user-roles/role-management-actions)
 
 ## Common Mistakes to Avoid
 
 The most frequent implementation errors are not obscure edge cases; they are straightforward omissions that appear under time pressure:
 
-- **Not invalidating sessions after setting the ban flag.** The flag is inert until the session layer reads it. Revocation must happen at the time of the ban, not lazily on next login.
+- **Not invalidating sessions after setting the ban flag.** The flag is inert until the session layer reads it. Revocation must happen at the time of the ban, not lazily on the next login.
 - **Relying on front-end checks.** Any restriction enforced only in the UI is not a security control.
 - **Ignoring refresh tokens.** Revoking an access token without revoking the associated refresh token leaves a reauthentication path open.
 - **No audit logging.** A ban with no record is unverifiable, undebuggable, and non-compliant in regulated contexts.
@@ -146,4 +146,4 @@ User banning is access control combined with session lifecycle enforcement. The 
 
 SuperTokens simplifies this by placing enforcement at the session verification layer, which every authenticated request already passes through. Temporary bans, tiered restrictions, and audit hooks are incremental additions to the same foundation.
 
-For the complete implementation reference, see the official [How to Ban Users in SuperTokens](https://supertokens.com/docs/post-authentication/user-management/user-banning) guide. For patterns around token management and multi-device session handling, the [Migration Guide](https://supertokens.com/docs/migration/account-migration) covers the broader architecture.
+For the complete implementation documentation, see the official [How to Ban Users in SuperTokens](https://supertokens.com/docs/post-authentication/user-management/user-banning) guide. For more information about the patterns around token management and multi-device session handling, see [Migration Guide](https://supertokens.com/docs/migration/account-migration).
