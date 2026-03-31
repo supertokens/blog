@@ -17,10 +17,10 @@ This post maps the full authentication blueprint for AI agent systems: who the p
 
 Four distinct actors exist in a typical agentic system:
 
--   **End-user**: The human who initiates a task
--   **Application backend**: The service that authenticates the user and spawns the agent
--   **Agent runtime**: The LLM-backed process that plans and executes steps
--   **Tool servers**: APIs or microservices the agent calls to perform real-world actions
+-   **End-user**: The human who initiates a task.
+-   **Application backend**: The service that authenticates the user and spawns the agent.
+-   **Agent runtime**: The LLM-backed process that plans and executes steps.
+-   **Tool servers**: APIs or microservices the agent calls to perform real-world actions.
 
 Each actor has its own identity, and each boundary between them is a potential trust gap.
 
@@ -28,10 +28,10 @@ Each actor has its own identity, and each boundary between them is a potential t
 
 Classical web applications execute deterministic code paths. Agents do not. The primary new risks are:
 
--   **Tool chaining**: An agent may call ten tools in sequence; a compromise at step three poisons all downstream steps
--   **Unbounded actions**: Without explicit scope limits, an agent granted "write" access may write far more than intended
--   **Prompt injection**: Malicious content in tool outputs can hijack agent behavior mid-session
--   **Data exfiltration**: An agent with read access to sensitive data and outbound tool access can trivially leak it
+-   **Tool chaining**: An agent may call ten tools in sequence; a compromise at step three poisons all downstream steps.
+-   **Unbounded actions**: Without explicit scope limits, an agent granted "write" access may write far more than intended.
+-   **Prompt injection**: Malicious content in tool outputs can hijack agent behavior mid-session.
+-   **Data exfiltration**: An agent with read access to sensitive data and outbound tool access can leak it with trivial ease.
 
 ### **Blast Radius and Least-Privilege**
 
@@ -57,8 +57,8 @@ Each agent identity should be scoped to a single tenant or organization. An agen
 
 A healthy architecture separates session lifetimes into two tiers:
 
-1. **Long-lived user session**: Issued at login; backed by refresh tokens; hours to days in TTL
-2. **Short-lived agent session**: Derived from the user session at task start; minutes in TTL; non-refreshable by design
+1. **Long-lived user session**: Issued at login; backed by refresh tokens; hours to days in TTL.
+2. **Short-lived agent session**: Derived from the user session at task start; minutes in TTL; non-refreshable by design.
 
 Agent sessions should expire when the task completes or when the wall-clock TTL expires, whichever comes first.
 
@@ -81,8 +81,8 @@ Scopes flow strictly downward. A user token carrying `repo:read` can produce an 
 Standard bearer tokens can be replayed if intercepted. Sender-constrained tokens bind a token to the entity presenting it. Two
 standard mechanisms exist:
 
-- **DPoP (Demonstrating Proof-of-Possession)**: The agent signs each request with a private key; the token is only valid when accompanied by a matching proof JWT
-- **MTLS (Mutual TLS)**: The client certificate is bound to the token; the server verifies the certificate at the transport layer
+- **DPoP (Demonstrating Proof-of-Possession)**: The agent signs each request with a private key; the token is only valid when accompanied by a matching proof JWT.
+- **MTLS (Mutual TLS)**: The client certificate is bound to the token; the server verifies the certificate at the transport layer.
 
 DPoP is generally preferred for agent-to-tool communication because it works over standard HTTPS without requiring certificate infrastructure at every tool server.
 
@@ -90,9 +90,9 @@ DPoP is generally preferred for agent-to-tool communication because it works ove
 
 Use RFC 8693 (OAuth 2.0 Token Exchange) to derive capability tokens from agent session tokens. Key rules:
 
-- **Audience restriction**: Each capability token is valid for exactly one tool server
-- **TTL**: Capability tokens should expire in 60--300 seconds
-- **Break-glass flows**: Emergency elevated access should require explicit re-authentication, not scope widening on existing tokens
+- **Audience restriction**: Each capability token is valid for exactly one tool server.
+- **TTL**: Capability tokens should expire in 60--300 seconds.
+- **Break-glass flows**: Emergency elevated access should require explicit re-authentication, not scope widening on existing tokens.
 
 ## 4) Tool Permissions as Policy (RBAC/FGA)
 
@@ -112,14 +112,14 @@ Verbs, resource IDs, and any contextual constraints (time of day, rate limits, s
 
 RBAC (role-based access control) is sufficient when tool access maps cleanly to a small number of roles. It fails when:
 
-- Access depends on the relationship between the agent and a specific resource instance
-- Permissions vary per tenant, per data owner, or per environmental condition
+- Access depends on the relationship between the agent and a specific resource instance.
+- Permissions vary per tenant, per data owner, or per environmental condition.
 
 In those cases, fine-grained authorization (FGA) systems such as OpenFGA or AWS Cedar evaluate relationship graphs rather than flat role assignments.
 
 ### **Evaluate at the Tool Server**
 
-Policy must be evaluated by the tool server or a sidecar policy engine immediately adjacent to it. Evaluating policy inside the LLM prompt is not a security control; it is advisory text that a sufficiently crafted prompt can override. The tool server must return a structured allow or deny with a reason code, regardless of what the agent was told to do.
+Policy must be evaluated by the tool server or a sidecar policy engine immediately adjacent to it. Evaluating policy inside the LLM prompt is not a security control; it is advisory text that a sufficiently crafted prompt can override. The tool server must return a structured `allow` or `deny` response with a reason code, regardless of what the agent was told to do.
 
 **Minimal policy schema:**
 
@@ -149,9 +149,9 @@ Not every action requires human approval. A risk-scoring layer should route requ
 
 ### **UX Patterns**
 
-- **Inline approve/deny:** Push a notification to the authorizing user with full context; single-click decision
-- **Time-boxed holds:** If no approval arrives within N minutes, the agent abandons the task and notifies the user
-- **Bulk approvals:** For high-frequency agents, allow pre-approval of a category of actions within a session
+- **Inline approve/deny:** Push a notification to the authorizing user with full context; single-click decision.
+- **Time-boxed holds:** If no approval arrives within N minutes, the agent abandons the task and notifies the user.
+- **Bulk approvals:** For high-frequency agents, allow pre-approval of a category of actions within a session.
 
 ### **Evidence and Audit Capture**
 
@@ -165,9 +165,9 @@ API keys, database credentials, and tokens must never appear in the agent's cont
 
 ### **Minimize Data in Context**
 
-- Apply field-level masking before injecting query results into the prompt
-- Redact PII (emails, phone numbers, account numbers) unless the task explicitly requires them
-- Use allow-list field filters at the tool server, not inside the prompt
+- Apply field-level masking before injecting query results into the prompt.
+- Redact PII (emails, phone numbers, account numbers) unless the task explicitly requires them.
+- Use allow-list field filters at the tool server, not inside the prompt.
 
 ### **Output Validation**
 
@@ -175,10 +175,10 @@ Before any agent-generated content is committed to a downstream system, validate
 
 **Anti-patterns to avoid:**
 
-- Passing raw database rows into the prompt without redaction
-- Using the LLM's own output as a policy decision
-- Granting an agent a "super" token and filtering in-prompt
-- Logging full prompt content, including injected secrets
+- Passing raw database rows into the prompt without redaction.
+- Using the LLM's own output as a policy decision.
+- Granting an agent a "super" token and filtering in-prompt.
+- Logging full prompt content, including injected secrets.
 
 ## 7) Observability and Audit You'll Actually Use
 
@@ -211,13 +211,13 @@ Configure alerts on:
 
 | **Threat**                    | **Control**                                                                 |
 |-------------------------------|-----------------------------------------------------------------------------|
-| Prompt injection via tool output | Sanitize tool outputs; treat them as untrusted data, not instructions      |
-| Tool abuse / scope escalation | Allow-list tools per agent role; enforce at tool server                     |
-| Supply chain compromise       | Sign dependencies; maintain SBOMs; use runtime isolation (containers/VMs)  |
-| SSRF via agent-initiated HTTP calls | Egress allow-list on agent runtime network; block RFC 1918 ranges     |
-| Data exfiltration             | Content filters on outbound tool calls; canary data in sensitive datasets  |
-| Token replay                  | DPoP or MTLS on all agent-to-tool calls                                     |
-| Cross-tenant data access      | Tenant ID in every token claim; policy engine enforces isolation           |
+| Prompt injection via tool output | Sanitize tool outputs; treat them as untrusted data, not instructions.      |
+| Tool abuse / scope escalation | Allow-list tools per agent role; enforce at tool server.                     |
+| Supply chain compromise       | Sign dependencies; maintain SBOMs; use runtime isolation (containers/VMs).  |
+| SSRF via agent-initiated HTTP calls | Egress allow-list on agent runtime network; block RFC 1918 ranges.     |
+| Data exfiltration             | Content filters on outbound tool calls; canary data in sensitive datasets.  |
+| Token replay                  | DPoP or MTLS on all agent-to-tool calls.                                     |
+| Cross-tenant data access      | Tenant ID in every token claim; policy engine enforces isolation.           |
 
 ## 9) Reference Implementation with SuperTokens
 
@@ -338,7 +338,7 @@ hitl_triggers:
 ### **Promotion Phases**
 | **Phase**   | **Capability**                                | **Exit Criteria**                          |
 |-------------|-----------------------------------------------|--------------------------------------------|
-| Dev         | Full access in an isolated sandbox            | Zero policy violations in 48 h             |
+| Dev         | Full access in an isolated sandbox            | Zero policy violations in 48h             |
 | Shadow      | Live traffic; all actions logged but not executed | Deny rate < 1%                         |
 | Read-only   | Read operations only in production            | Stable for 5 business days                 |
 | Partial write | Writes to low-risk resources; HITL on all others | Approval rate < 20%                    |
@@ -350,7 +350,7 @@ hitl_triggers:
 - Deny rate (spikes indicate policy gaps or attack activity)
 - MTTR for stuck approvals (SLA: under 30 minutes during business hours)
 
-### **Kill-Switches**
+### **Kill Switches**
 
 Every agent deployment should have a per-tenant circuit breaker (disable one tenant's agent without affecting others), a feature flag (disable globally in under 30 seconds), and a hard cost cap (agent halts if cumulative spend exceeds threshold within a rolling window).
 
@@ -396,14 +396,14 @@ Conduct quarterly reviews of all agent scopes and capability token definitions. 
 
 ## 14) FAQs
 
-- **Do I need DPoP if already using MTLS?** No. MTLS is enough if you already have a certificate infrastructure. DPoP is a simpler alternative without full PKI. Both solve token replay and theft.
+- **Do I need DPoP if I'm already using MTLS?** No. MTLS is enough if you already have a certificate infrastructure. DPoP is a simpler alternative without full PKI. Both solve token replay and theft.
 - **Should agents share user tokens or get their own?** Agents must have their own tokens. Sharing user tokens breaks security, auditability, and revocation control.
 - **How do I sandbox tools that call the internet?** Use a network allow-list. Block all outbound traffic by default, allow only required domains, and filter requests/responses to prevent SSRF and data leaks.
 - **What is the simplest HITL pattern to start with?** Use a cost threshold. If a task exceeds a set limit, pause and ask for user approval.
 
 ## 15) CTA
 
-**Try the sample app:** A reference implementation of agent-safe authentication using SuperTokens, complete with scoped capability tokens, DPoP proof validation, HITL approval hooks, and a structured audit trail- is available as a runnable repository. It demonstrates every pattern covered in this post in a single deployable stack.
+**Try the sample app:** A reference implementation of agent-safe authentication by using SuperTokens, complete with scoped capability tokens, DPoP proof validation, HITL approval hooks, and a structured audit trail is available as a runnable repository. It demonstrates every pattern covered in this post in a single deployable stack.
 
 **Book 30-minute office hours:** Teams designing agent authentication architectures from scratch can schedule a design review session to walk through token strategy, policy modeling, and HITL trigger configuration for their specific use case.
 
