@@ -11,7 +11,7 @@ AI agents are no longer experimental. Production systems today delegate real act
 
 This post maps the full authentication blueprint for AI agent systems: who the principals are, how tokens flow across trust boundaries, where policy enforcement must sit, and when a human must approve before execution continues.
 
-## 1) What Changes When the "User" Is an Agent?
+## What Changes When the "User" Is an Agent?
 
 ### **Principles and Boundaries**
 
@@ -48,7 +48,7 @@ Tool Server → Policy Engine: evaluate(actor, action, resource)
 Policy Engine → Tool Server: allow | deny
 ```
 
-## 2) Core Architecture: Identity, Sessions, and Scopes
+## Core Architecture: Identity, Sessions, and Scopes
 
 ### **Workspace and Tenant Model**
 Each agent identity should be scoped to a single tenant or organization. An agent operating inside Org A must never present credentials that are valid inside Org B. Org IDs must be encoded into every token, every log line, and every policy evaluation. Cross-tenant isolation is not a nice-to-have; it is the foundational invariant.
@@ -66,7 +66,7 @@ Agent sessions should expire when the task completes or when the wall-clock TTL 
 
 Scopes flow strictly downward. A user token carrying `repo:read` can produce an agent token carrying `repo:read`, but never `repo:write.` An agent token can produce a per-tool capability token carrying an even narrower scope. The rule is: **only narrow, never widen.**
 
-## 3) Token Strategy That Actually Works
+## Token Strategy That Actually Works
 
 ### **Token Types**
 
@@ -94,7 +94,7 @@ Use RFC 8693 (OAuth 2.0 Token Exchange) to derive capability tokens from agent s
 - **TTL**: Capability tokens should expire in 60--300 seconds.
 - **Break-glass flows**: Emergency elevated access should require explicit re-authentication, not scope widening on existing tokens.
 
-## 4) Tool Permissions as Policy (RBAC/FGA)
+## Tool Permissions as Policy (RBAC/FGA)
 
 ### **Modeling Tools as Resources**
 
@@ -133,7 +133,7 @@ Policy must be evaluated by the tool server or a sidecar policy engine immediate
 }
 ```
 
-## 5) Human-in-the-Loop Where It Matters
+## Human-in-the-Loop Where It Matters
 
 ![Human-in-the-Loop](Human-in-the-Loop.png)
 
@@ -157,7 +157,7 @@ Not every action requires human approval. A risk-scoring layer should route requ
 
 Every approval or denial must be stored with: agent ID, tenant ID, action, resource, a hash of the input parameters, the approver identity, and a timestamp. This record is the chain of custody if an action is disputed later.
 
-## 6) Secrets, Data Boundaries, and Prompt-Safe Design
+## Secrets, Data Boundaries, and Prompt-Safe Design
 
 ### **No Secrets in Prompts**
 
@@ -180,7 +180,7 @@ Before any agent-generated content is committed to a downstream system, validate
 - Granting an agent a "super" token and filtering in-prompt.
 - Logging full prompt content, including injected secrets.
 
-## 7) Observability and Audit You'll Actually Use
+## Observability and Audit You'll Actually Use
 
 ### **Per-Tool Logs**
 
@@ -207,7 +207,7 @@ Configure alerts on:
 - Spend anomaly (agent cost >Y per hour)
 - Unusual tool access patterns (new tool called for the first time in production)
 
-## 8) Threat Models and Practical Mitigations
+## Threat Models and Practical Mitigations
 
 | **Threat**                    | **Control**                                                                 |
 |-------------------------------|-----------------------------------------------------------------------------|
@@ -219,7 +219,7 @@ Configure alerts on:
 | Token replay                  | DPoP or MTLS on all agent-to-tool calls.                                     |
 | Cross-tenant data access      | Tenant ID in every token claim; policy engine enforces isolation.           |
 
-## 9) Reference Implementation with SuperTokens
+## Reference Implementation with SuperTokens
 
 ![SuperTokens](Supertokens.png)
 
@@ -289,7 +289,7 @@ def evaluate_policy(token):
     return decision  # allow | deny + reason
 ```
 
-## 10) Example Build: "GitHub Triage" Agent (End-to-End)
+## Example Build: "GitHub Triage" Agent (End-to-End)
 
 ### **Allowed Actions**
 
@@ -333,7 +333,7 @@ hitl_triggers:
 }
 ```
 
-## 11) Rollout Plan and Guardrails
+## Rollout Plan and Guardrails
 
 ### **Promotion Phases**
 | **Phase**   | **Capability**                                | **Exit Criteria**                          |
@@ -354,7 +354,7 @@ hitl_triggers:
 
 Every agent deployment should have a per-tenant circuit breaker (disable one tenant's agent without affecting others), a feature flag (disable globally in under 30 seconds), and a hard cost cap (agent halts if cumulative spend exceeds threshold within a rolling window).
 
-## 12) Compliance and Data Residency
+## Compliance and Data Residency
 
 ### **PII in Prompts and Outputs**
 
@@ -368,7 +368,7 @@ Attach a `data_region` claim to every agent session. Route token issuance, key s
 
 Conduct quarterly reviews of all agent scopes and capability token definitions. Flag any scope that has not been exercised in 90 days as a candidate for removal. Automated scope-usage reporting from audit logs makes this tractable.
 
-## 13) Implementation Checklist
+## Implementation Checklist
 
 **Identity and Tokens**
 
@@ -394,14 +394,14 @@ Conduct quarterly reviews of all agent scopes and capability token definitions. 
 - Signed dependencies + restricted network egress
 - Content filters + replay protection
 
-## 14) FAQs
+## FAQs
 
 - **Do I need DPoP if I'm already using MTLS?** No. MTLS is enough if you already have a certificate infrastructure. DPoP is a simpler alternative without full PKI. Both solve token replay and theft.
 - **Should agents share user tokens or get their own?** Agents must have their own tokens. Sharing user tokens breaks security, auditability, and revocation control.
 - **How do I sandbox tools that call the internet?** Use a network allow-list. Block all outbound traffic by default, allow only required domains, and filter requests/responses to prevent SSRF and data leaks.
 - **What is the simplest HITL pattern to start with?** Use a cost threshold. If a task exceeds a set limit, pause and ask for user approval.
 
-## 15) CTA
+## CTA
 
 **Try the sample app:** A reference implementation of agent-safe authentication by using SuperTokens, complete with scoped capability tokens, DPoP proof validation, HITL approval hooks, and a structured audit trail is available as a runnable repository. It demonstrates every pattern covered in this post in a single deployable stack.
 
