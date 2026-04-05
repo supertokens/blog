@@ -94,3 +94,24 @@ Vendor lock-in is effectively zero. The core is [open source under Apache 2.0](h
 The deployment model is also flexible in a practical way. You can self-host from day one using the free open-source core, then move to the managed service if operational overhead becomes a distraction. Or start managed and migrate to self-hosted when compliance requirements demand it. The SDKs work identically in both modes because the only thing that changes is the `connectionURI` in your backend config.
 
 For teams that want to dig deeper, the [migration guide](https://supertokens.com/docs/migration/overview) covers transitioning from existing providers, and the [quickstart documentation](https://supertokens.com/docs/quickstart/introduction) walks through end-to-end setup with framework-specific examples. The community is active on [Discord](https://supertokens.com/discord), and the documentation is structured around practical implementation rather than abstract concepts.
+
+
+## Operational Trade-Offs of Self-Hosting
+
+Self-hosting authentication gives you control. It also gives you responsibility. Before committing, understand what you're signing up for.
+
+### Maintenance and Upgrades
+
+When you self-host, patching security vulnerabilities is your job. So are database backups, uptime monitoring, and version upgrades. This isn't a reason to avoid self-hosting, but it is a reason to pick a solution with a clear upgrade path and an active maintainer community. Keycloak's upgrade process between major versions has historically required manual migration steps that catch teams off guard. SuperTokens takes a different approach, the core service handles database migrations automatically on startup, and breaking changes are documented with explicit migration guides. That difference matters at 2 AM when a CVE drops.
+
+### Scalability and Reliability
+
+A single-instance auth service works fine for early-stage applications. Once you're handling thousands of concurrent sessions, the requirements change. You need horizontal scaling behind a load balancer, session replication or stateless token validation, reliable token revocation, and protection against brute-force and credential-stuffing attacks.
+
+Some platforms support this natively. SuperTokens' core is stateless and scales horizontally with PostgreSQL as the shared backing store. Its [Attack Protection Suite](https://supertokens.com/docs/additional-verification/attack-protection-suite/introduction) provides built-in rate limiting and anomaly detection. Keycloak scales through clustering with Infinispan, which works but adds operational complexity. Lighter solutions like Authelia were not designed for this kind of load and will hit ceilings that require architectural workarounds.
+
+### Developer Experience vs. Customization
+
+This is the fundamental tension in self-hosted auth. Lightweight tools like Authelia get you running in an afternoon but offer limited extensibility when requirements evolve. Heavyweight platforms like Keycloak give you deep control over every authentication flow but demand significant investment before you ship anything.
+
+SuperTokens positions itself between these extremes. Pre-built UI components and the `create-supertokens-app` CLI get a working auth flow running in minutes. When you need custom behavior, recipe overrides and hook functions let you modify flows without forking the core. You start simple and add complexity only when your application demands it.
