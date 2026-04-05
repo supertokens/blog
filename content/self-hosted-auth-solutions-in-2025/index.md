@@ -60,3 +60,23 @@ The open-source core supports email/password, passwordless, social login, multi-
 For teams evaluating self-hosted options, SuperTokens hits a particular sweet spot: you get the control of self-hosting without the operational weight of running Keycloak, and the developer experience of a managed service without the per-MAU pricing. The self-hosted core runs on PostgreSQL (MySQL and MongoDB support was dropped in v11.0.0 to simplify maintenance), deploys via Docker or binary, and scales horizontally behind a load balancer.
 
 The honest limitation is enterprise feature breadth. SuperTokens does not match Keycloak's protocol coverage (no native SAML, for example) or Zitadel's depth of multi-tenant management APIs. If your requirements include LDAP federation or SAML-based enterprise SSO as day-one features, you'll either need to layer those on top or look elsewhere. But for the majority of applications that need solid auth with OAuth 2.0/OIDC, MFA, and session management, SuperTokens delivers with less complexity and lower operational cost.
+
+## How to Choose the Right Self-Hosted Auth Solution
+
+Feature comparison tables are useful, but they don't tell you which solution fits your team. That requires honest assessment of your application's scale, your engineering capacity, and what you actually need on day one versus what you might need in two years.
+
+Here are the criteria that should drive the decision.
+
+**Protocol support.** If your application serves enterprise customers who require SAML-based SSO or LDAP federation, that narrows the field to Keycloak or Zitadel immediately. If your needs center on OAuth 2.0 and OIDC with social login providers, most options on this list will work. Don't pay the complexity tax for protocol coverage you won't use.
+
+**Multi-factor and passwordless options.** TOTP-based MFA is baseline. The more relevant question is whether you need WebAuthn/FIDO2 for phishing-resistant authentication, and whether the platform supports it as a first-class feature or a bolted-on extension. Check that the MFA implementation allows flexible enforcement policies, not just a global on/off toggle.
+
+**Session management and token protection.** This is where many comparisons fall short. Automatic token rotation, CSRF protection, secure cookie handling, and session revocation are not features you want to build yourself. Evaluate how each solution handles concurrent sessions, refresh token reuse detection, and what happens when a token is stolen. Weak session management undermines everything else in the auth stack.
+
+**Multi-tenant architecture.** B2B SaaS applications need tenant isolation for user pools, authentication policies, and branding. Some platforms treat multi-tenancy as a core primitive (Zitadel, SuperTokens). Others support it through workarounds like separate realms (Keycloak) that increase operational complexity as tenant count grows.
+
+**Operational overhead and upgrade path.** Consider who will maintain this system. A two-person startup choosing Keycloak is signing up for infrastructure work that competes directly with product development. Conversely, a platform team at a 200-person company might absorb that overhead without issue. Also evaluate the migration path: can you start managed and move to self-hosted later, or vice versa?
+
+**Total cost of ownership.** Per-MAU pricing from managed providers is easy to calculate but hard to control. Self-hosted solutions shift cost to compute, storage, and engineering time. The honest comparison includes developer hours spent on setup, upgrades, and incident response. A solution that takes two hours to integrate and runs on a single container has a fundamentally different cost profile than one requiring a dedicated Kubernetes namespace and a week of configuration.
+
+No single solution wins on every criterion. The goal is to match the tool to your constraints, not to find the theoretically best platform.
