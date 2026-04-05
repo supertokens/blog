@@ -80,3 +80,17 @@ Here are the criteria that should drive the decision.
 **Total cost of ownership.** Per-MAU pricing from managed providers is easy to calculate but hard to control. Self-hosted solutions shift cost to compute, storage, and engineering time. The honest comparison includes developer hours spent on setup, upgrades, and incident response. A solution that takes two hours to integrate and runs on a single container has a fundamentally different cost profile than one requiring a dedicated Kubernetes namespace and a week of configuration.
 
 No single solution wins on every criterion. The goal is to match the tool to your constraints, not to find the theoretically best platform.
+
+## Why SuperTokens Stands Out
+
+SuperTokens earns its position on this list by solving a problem the other options only partially address: giving application developers a self-hosted auth system that doesn't require a dedicated infrastructure team to run.
+
+The architecture is the differentiator. Instead of deploying a standalone identity server that your application talks to over redirect flows, SuperTokens embeds directly into your stack through [backend SDKs](https://supertokens.com/docs/references/backend-sdks/reference) for Node.js, Python, and Go and [frontend SDKs](https://supertokens.com/docs/references/frontend-sdks/reference) for React, Angular, Vue, and vanilla JavaScript. Authentication becomes part of your application rather than a separate service you maintain alongside it. The core runs as a lightweight HTTP service backed by PostgreSQL, deployable via Docker in minutes.
+
+Vendor lock-in is effectively zero. The core is [open source under Apache 2.0](https://github.com/supertokens/supertokens-core), your user data lives in your PostgreSQL instance, and password hashes use standard bcrypt. If you decide to move away from SuperTokens, your users don't need to reset passwords or re-register. That portability guarantee is rare in this space.
+
+[Session management](https://supertokens.com/docs/post-authentication/session-management/introduction) deserves specific mention. SuperTokens handles automatic token rotation, rotating refresh tokens with reuse detection, CSRF protection, and secure cookie configuration out of the box. These are the details that create real security vulnerabilities when implemented incorrectly, and SuperTokens removes that risk without requiring you to understand the internals.
+
+The deployment model is also flexible in a practical way. You can self-host from day one using the free open-source core, then move to the managed service if operational overhead becomes a distraction. Or start managed and migrate to self-hosted when compliance requirements demand it. The SDKs work identically in both modes because the only thing that changes is the `connectionURI` in your backend config.
+
+For teams that want to dig deeper, the [migration guide](https://supertokens.com/docs/migration/overview) covers transitioning from existing providers, and the [quickstart documentation](https://supertokens.com/docs/quickstart/introduction) walks through end-to-end setup with framework-specific examples. The community is active on [Discord](https://supertokens.com/discord), and the documentation is structured around practical implementation rather than abstract concepts.
