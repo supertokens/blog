@@ -537,6 +537,7 @@
         "location": "https://supertokens.com/blog/migrate-from-auth0"
     },
     {
+    {
         "location": "https://supertokens.com/blog/better-auth"
     },
     {
@@ -561,6 +562,6 @@
         "location": "https://supertokens.com/blog/mfa-react"
     },
     {
-        "location": "https://supertokens.com/blog/scim-provisioning-explained"
+        "location": "https://supertokens.com/blog/self-hosted-auth-solutions-in-2025"
     }
 ]

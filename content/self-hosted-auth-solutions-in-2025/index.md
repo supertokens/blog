@@ -1,7 +1,7 @@
 ---
 title: Best Self-Hosted Authentication Solutions in 2025
 description: "Compare the leading self-hosted authentication platforms for 2025 — scalability, control, cost, and developer-experience highlight how SuperTokens stands out."
-date: "2026-03-30"
+date: "2026-04-07"
 cover: "TODO.png"
 category: "self-hosted, guide, auth"
 author: "Maurice Saldivar"
