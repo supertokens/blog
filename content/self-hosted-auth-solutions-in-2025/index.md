@@ -21,8 +21,7 @@ Three forces are driving the shift toward self-hosted authentication in 2025.
 
 That said, not every self-hosted solution is worth evaluating. The ones that matter in 2025 share a common feature set: support for OAuth 2.0 and OpenID Connect, built-in MFA (TOTP, WebAuthn, or both), robust session management, extensibility through hooks or overrides, and multi-tenant support for B2B use cases. These are table stakes now, not differentiators.
 
-This guide compares the leading self-hosted authentication platforms against those criteria so you can make an informed decision for your stack.
-
+This guide compares the leading self-hosted authentication platforms against those criteria so you can make an informed decision for your stack. For teams specifically evaluating SSO capabilities across these platforms, our [comparison of open-source SSO providers](https://supertokens.com/blog/sso-providers) covers that angle in depth.
 ## Top Self-Hosted Authentication Providers to Evaluate
 
 Not all self-hosted auth solutions solve the same problems. Some are full identity platforms built for enterprises with dedicated infrastructure teams. Others are lightweight services that slot behind a reverse proxy with minimal config. The right choice depends on your team's operational capacity, your protocol requirements, and how much of the identity stack you actually need to own.
@@ -49,7 +48,7 @@ Authelia sits behind reverse proxies like Traefik or NGINX and provides centrali
 
 Authentik is a Python-based identity provider that supports OIDC, OAuth 2.0, SAML, LDAP, and proxy-mode authentication with customizable flows. It offers more flexibility than Authelia and appeals to teams that want a self-hosted IdP with a modern UI. The tradeoff is that advanced customization often requires Python scripting, and PostgreSQL is a hard dependency. Authentik is also a younger project, so teams evaluating it for production should weigh the maturity gap against their tolerance for breaking changes.
 
-Both are strong for their intended use cases but lack the SDK ecosystem and session management depth that application developers typically need.
+Both are strong for their intended use cases but lack the SDK ecosystem and session management depth that application developers typically need. For a deeper look at how these platforms compare, see our [Authentik vs. Keycloak breakdown](https://supertokens.com/blog/authentik-vs-keycloak) and [Authentik alternatives guide](https://supertokens.com/blog/7-authentik-alternatives-for-enhanced-identity-management-in-2024)
 
 ### SuperTokens
 
@@ -57,7 +56,7 @@ SuperTokens takes a different architectural approach. Rather than positioning it
 
 The open-source core supports email/password, passwordless, social login, multi-factor authentication (TOTP and WebAuthn), session management with automatic token rotation, and multi-tenancy. Backend SDKs are available for Node.js, Python, and Go. Frontend SDKs cover React, Angular, Vue, and vanilla JavaScript. Pre-built UI components get a basic auth flow running in minutes, but every component is overridable if you need custom behavior.
 
-For teams evaluating self-hosted options, SuperTokens hits a particular sweet spot: you get the control of self-hosting without the operational weight of running Keycloak, and the developer experience of a managed service without the per-MAU pricing. The self-hosted core runs on PostgreSQL (MySQL and MongoDB support was dropped in v11.0.0 to simplify maintenance), deploys via Docker or binary, and scales horizontally behind a load balancer.
+For teams evaluating self-hosted options, SuperTokens hits a particular sweet spot: you get the control of self-hosting without the operational weight of running Keycloak, and the developer experience of a managed service without the per-MAU pricing. The self-hosted core runs on PostgreSQL (MySQL and MongoDB support was dropped in v11.0.0 to simplify maintenance), deploys via Docker or binary, and scales horizontally behind a load balancer. The [self-hosting guide](https://supertokens.com/docs/deployment/self-host-supertokens) walks through the full setup including Docker Compose and Kubernetes helm charts.
 
 The honest limitation is enterprise feature breadth. SuperTokens does not match Keycloak's protocol coverage (no native SAML, for example) or Zitadel's depth of multi-tenant management APIs. If your requirements include LDAP federation or SAML-based enterprise SSO as day-one features, you'll either need to layer those on top or look elsewhere. But for the majority of applications that need solid auth with OAuth 2.0/OIDC, MFA, and session management, SuperTokens delivers with less complexity and lower operational cost.
 
