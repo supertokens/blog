@@ -4796,6 +4796,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"\n            },\n            \"headline\": \"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/how-to-ban-users",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how to ban or suspend users in your web app with SuperTokens.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How to Ban Users in Your Web App Using SuperTokens\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/how-to-ban-users\" />",
+            "<meta property=\"og:description\" content=\"Learn how to ban or suspend users in your web app with SuperTokens.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/how-to-ban-users.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how to ban or suspend users in your web app with SuperTokens.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/how-to-ban-users\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/how-to-ban-users.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/how-to-ban-users\">"
+        ],
+        "title": "How to Ban Users in Your Web App Using SuperTokens",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/how-to-ban-users\"\n            },\n            \"headline\": \"Learn how to ban or suspend users in your web app with SuperTokens.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/how-to-ban-users.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {   
         "path": "/blog/auth0-open-source",
         "metaTags": [
             "<meta name=\"description\" content=\"Is Auth0 open source? What's actually OSS, and which open-source Auth0 alternatives (Keycloak, Ory, SuperTokens) fit your stack in 2026?\" />",
