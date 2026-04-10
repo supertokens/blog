@@ -4911,7 +4911,6 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/migrate-from-auth0\"\n            },\n            \"headline\": \"Learn how to migrate from Auth0 to SuperTokens using lazy, automatic, or trickle migration. Includes secure export steps, pricing insights, and implementation tips.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/migrate-from-auth0.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
-    {
         "path": "/blog/better-auth",
         "metaTags": [
             "<meta name=\"description\" content=\"undefined\" />",
