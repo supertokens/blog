@@ -7,7 +7,7 @@ category: "self-hosted, guide, auth"
 author: "Maurice Saldivar"
 ---
 
-## Why Self-Host Your Auth in 2026
+## Why Self-Host Your Authentication in 2026
 
 The managed authentication market has a growing trust problem. Every year brings another breach disclosure from a major identity provider, another pricing overhaul that punishes growth, or another deprecation notice that forces an unplanned migration. Teams that built on managed auth for convenience are now rethinking that tradeoff as their user bases scale into the hundreds of thousands.
 
@@ -17,14 +17,14 @@ Three forces are driving the shift toward self-hosted authentication in 2026.
 
 **Vendor lock-in has real costs.** Migrating away from a managed auth provider means dealing with proprietary token formats, opaque session stores, and password hashes you may not even have access to. The deeper you integrate, the harder it gets to leave. Open-source, self-hosted solutions flip this dynamic. Your user data stays portable because you own the database.
 
-**Pricing becomes predictable.** Managed providers typically charge per monthly active user. That model works at small scale but becomes a serious line item once you cross 10,000 or 50,000 MAUs. Self-hosted auth decouples cost from user count. You pay for compute and storage, not per-login fees.
+**Pricing becomes predictable.** Managed providers typically charge per monthly active user. That model works at a small scale, but becomes a serious line item once you cross 10,000 or 50,000 MAUs. Self-hosted auth decouples cost from user count. You pay for compute and storage, not per-login fees.
 
 That said, not every self-hosted solution is worth evaluating. The ones that matter in 2026 share a common feature set: support for OAuth 2.0 and OpenID Connect, built-in MFA (TOTP, WebAuthn, or both), robust session management, extensibility through hooks or overrides, and multi-tenant support for B2B use cases. These are table stakes now, not differentiators.
 
 This guide compares the leading self-hosted authentication platforms against those criteria so you can make an informed decision for your stack. For teams specifically evaluating SSO capabilities across these platforms, our [comparison of open-source SSO providers](https://supertokens.com/blog/sso-providers) covers that angle in depth.
 ## Top Self-Hosted Authentication Providers to Evaluate
 
-Not all self-hosted auth solutions solve the same problems. Some are full identity platforms built for enterprises with dedicated infrastructure teams. Others are lightweight services that slot behind a reverse proxy with minimal config. The right choice depends on your team's operational capacity, your protocol requirements, and how much of the identity stack you actually need to own.
+Not all self-hosted authentication solutions solve the same problems. Some are full identity platforms built for enterprises with dedicated infrastructure teams. Others are lightweight services that slot behind a reverse proxy with minimal configuration. The right choice depends on your team's operational capacity, your protocol requirements, and how much of the identity stack you actually need to own.
 
 We'll evaluate each option across four dimensions: feature coverage, developer experience, scalability, and project maturity.
 
@@ -32,7 +32,7 @@ We'll evaluate each option across four dimensions: feature coverage, developer e
 
 Keycloak is the default answer when someone says "self-hosted auth." It has been around for over a decade, is backed by Red Hat, and supports virtually every identity protocol you'll encounter: OpenID Connect, OAuth 2.0, SAML 2.0, and LDAP. It handles identity brokering with external providers, fine-grained authorization policies, and multi-factor authentication out of the box. For enterprises that need broad protocol compliance across complex organizational structures, Keycloak covers the most ground.
 
-The tradeoffs are real though. Keycloak is a Java application with significant memory overhead, and tuning it for production requires genuine DevOps expertise. Initial configuration is steep, the admin console has a learning curve, and customizing authentication flows often means writing Java SPIs. Teams without dedicated infrastructure engineers regularly underestimate the operational burden. It works, it scales, and it's battle-tested. But "battle-tested" here also means "battle-scarred" if your team isn't staffed for it.
+The tradeoffs are real, though. Keycloak is a Java application with significant memory overhead, and tuning it for production requires genuine DevOps expertise. Initial configuration is steep, the admin console has a learning curve, and customizing authentication flows often means writing Java SPIs. Teams without dedicated infrastructure engineers regularly underestimate the operational burden. It works, it scales, and it's battle-tested. But "battle-tested" here also means "battle-scarred" if your team isn't staffed for it.
 
 ### Zitadel
 
@@ -44,25 +44,25 @@ Where Zitadel stands out is the developer experience for multi-tenant setups. Re
 
 These two occupy a different niche: lightweight, self-hosted identity providers optimized for smaller-scale or proxy-based deployments.
 
-Authelia sits behind reverse proxies like Traefik or NGINX and provides centralized login, SSO, and MFA with a remarkably small footprint. The compressed container image is under 20 megabytes and memory usage typically stays below 30 megabytes. It's an excellent choice for homelab setups, internal tools, or any scenario where you need authentication gating without a full IAM platform. The limitation is scope. Authelia is not designed for application-level identity management or complex multi-tenant configurations.
+Authelia sits behind reverse proxies like Traefik or NGINX and provides centralized login, SSO, and MFA with a remarkably small footprint. The compressed container image is under 20 MB and memory usage typically stays below 30 MB. It's an excellent choice for homelab setups, internal tools, or any scenario where you need authentication gating without a full IAM platform. The limitation is scope. Authelia is not designed for application-level identity management or complex multi-tenant configurations.
 
 Authentik is a Python-based identity provider that supports OIDC, OAuth 2.0, SAML, LDAP, and proxy-mode authentication with customizable flows. It offers more flexibility than Authelia and appeals to teams that want a self-hosted IdP with a modern UI. The tradeoff is that advanced customization often requires Python scripting, and PostgreSQL is a hard dependency. Authentik is also a younger project, so teams evaluating it for production should weigh the maturity gap against their tolerance for breaking changes.
 
-Both are strong for their intended use cases but lack the SDK ecosystem and session management depth that application developers typically need. For a deeper look at how these platforms compare, see our [Authentik vs. Keycloak breakdown](https://supertokens.com/blog/authentik-vs-keycloak) and [Authentik alternatives guide](https://supertokens.com/blog/7-authentik-alternatives-for-enhanced-identity-management-in-2024)
+Both are strong for their intended use cases, but lack the SDK ecosystem and session management depth that application developers typically need. For a deeper look at how these platforms compare, see our [Authentik vs. Keycloak breakdown](https://supertokens.com/blog/authentik-vs-keycloak) and [Authentik alternatives guide](https://supertokens.com/blog/7-authentik-alternatives-for-enhanced-identity-management-in-2024).
 
 ### SuperTokens
 
-SuperTokens takes a different architectural approach. Rather than positioning itself as a standalone identity provider, it integrates directly into your application stack through frontend and backend SDKs. The core service handles auth logic and database operations. Your backend SDK exposes the auth APIs. Your frontend SDK manages sessions and renders login UI. This three-tier architecture means authentication stays in your codebase, not behind an opaque admin console.
+SuperTokens takes a different architectural approach. Rather than positioning itself as a standalone identity provider, it integrates directly into your application stack through frontend and backend SDKs. The core service handles authentication logic and database operations. Your backend SDK exposes the auth APIs. Your frontend SDK manages sessions and renders login UI. This three-tier architecture means authentication stays in your codebase, not behind an opaque admin console.
 
-The open-source core supports email/password, passwordless, social login, multi-factor authentication (TOTP and WebAuthn), session management with automatic token rotation, and multi-tenancy. Backend SDKs are available for Node.js, Python, and Go. Frontend SDKs cover React, Angular, Vue, and vanilla JavaScript. Pre-built UI components get a basic auth flow running in minutes, but every component is overridable if you need custom behavior.
+The open-source core supports email/password, passwordless login, social login, multi-factor authentication (TOTP and WebAuthn), session management with automatic token rotation, and multi-tenancy. Backend SDKs are available for Node.js, Python, and Go. Frontend SDKs cover React, Angular, Vue, and vanilla JavaScript. Pre-built UI components get a basic auth flow running in minutes, but every component is overridable if you need custom behavior.
 
-For teams evaluating self-hosted options, SuperTokens hits a particular sweet spot: you get the control of self-hosting without the operational weight of running Keycloak, and the developer experience of a managed service without the per-MAU pricing. The self-hosted core runs on PostgreSQL (MySQL and MongoDB support was dropped in v11.0.0 to simplify maintenance), deploys via Docker or binary, and scales horizontally behind a load balancer. The [self-hosting guide](https://supertokens.com/docs/deployment/self-host-supertokens) walks through the full setup including Docker Compose and Kubernetes helm charts.
+For teams evaluating self-hosted options, SuperTokens hits a particular sweet spot: you get the control of self-hosting without the operational weight of running Keycloak, and the developer experience of a managed service without the per-MAU pricing. The self-hosted core runs on PostgreSQL (MySQL and MongoDB support was dropped in v11.0.0, to simplify maintenance), deploys via Docker or binary, and scales horizontally behind a load balancer. The [self-hosting guide](https://supertokens.com/docs/deployment/self-host-supertokens) walks through the full setup including Docker Compose and Kubernetes Helm Charts.
 
-The honest limitation is enterprise feature breadth. SuperTokens does not match Keycloak's protocol coverage (no native SAML, for example) or Zitadel's depth of multi-tenant management APIs. If your requirements include LDAP federation or SAML-based enterprise SSO as day-one features, you'll either need to layer those on top or look elsewhere. But for the majority of applications that need solid auth with OAuth 2.0/OIDC, MFA, and session management, SuperTokens delivers with less complexity and lower operational cost.
+The honest limitation is enterprise feature breadth. SuperTokens does not match Keycloak's protocol coverage (no native SAML, for example) or Zitadel's depth of multi-tenant management APIs. If your requirements include LDAP federation or SAML-based enterprise SSO as day-one features, you'll either need to layer those on top or look elsewhere. But for the majority of applications that need solid authentication with OAuth 2.0/OIDC, MFA, and session management, SuperTokens delivers with less complexity and lower operational cost.
 
-## How to Choose the Right Self-Hosted Auth Solution
+## How to Choose the Right Self-Hosted Authentication Solution
 
-Feature comparison tables are useful, but they don't tell you which solution fits your team. That requires honest assessment of your application's scale, your engineering capacity, and what you actually need on day one versus what you might need in two years.
+Feature comparison tables are useful, but they don't tell you which solution fits your team. That requires an honest assessment of your application's scale, your engineering capacity, and what you actually need on day one versus what you might need in two years.
 
 Here are the criteria that should drive the decision.
 
@@ -84,13 +84,13 @@ No single solution wins on every criterion. The goal is to match the tool to you
 
 SuperTokens earns its position on this list by solving a problem the other options only partially address: giving application developers a self-hosted auth system that doesn't require a dedicated infrastructure team to run.
 
-The architecture is the differentiator. Instead of deploying a standalone identity server that your application talks to over redirect flows, SuperTokens embeds directly into your stack through [backend SDKs](https://supertokens.com/docs/references/backend-sdks/reference) for Node.js, Python, and Go and [frontend SDKs](https://supertokens.com/docs/references/frontend-sdks/reference) for React, Angular, Vue, and vanilla JavaScript. Authentication becomes part of your application rather than a separate service you maintain alongside it. The core runs as a lightweight HTTP service backed by PostgreSQL, deployable via Docker in minutes.
+The SuperTokens architecture is the differentiator. Instead of deploying a standalone identity server that your application talks to over redirect flows, SuperTokens embeds directly into your stack through [backend SDKs](https://supertokens.com/docs/references/backend-sdks/reference) for Node.js, Python, and Go and [frontend SDKs](https://supertokens.com/docs/references/frontend-sdks/reference) for React, Angular, Vue, and vanilla JavaScript. Authentication becomes part of your application rather than a separate service you maintain alongside it. The core runs as a lightweight HTTP service backed by PostgreSQL, deployable via Docker in minutes.
 
 Vendor lock-in is effectively zero. The core is [open source under Apache 2.0](https://github.com/supertokens/supertokens-core), your user data lives in your PostgreSQL instance, and password hashes use standard bcrypt. If you decide to move away from SuperTokens, your users don't need to reset passwords or re-register. That portability guarantee is rare in this space.
 
-[Session management](https://supertokens.com/docs/post-authentication/session-management/introduction) deserves specific mention. SuperTokens handles automatic token rotation, rotating refresh tokens with reuse detection, CSRF protection, and secure cookie configuration out of the box. These are the details that create real security vulnerabilities when implemented incorrectly, and SuperTokens removes that risk without requiring you to understand the internals.
+[Session management](https://supertokens.com/docs/post-authentication/session-management/introduction) deserves a special mention. SuperTokens handles automatic token rotation, rotating refresh tokens with reuse detection, CSRF protection, and secure cookie configuration out of the box. These are the details that create real security vulnerabilities when implemented incorrectly, and SuperTokens removes that risk without requiring you to understand the internals.
 
-The deployment model is also flexible in a practical way. You can self-host from day one using the free open-source core, then move to the managed service if operational overhead becomes a distraction. Or start managed and migrate to self-hosted when compliance requirements demand it. The SDKs work identically in both modes because the only thing that changes is the `connectionURI` in your backend config.
+The deployment model is also flexible in a practical way. You can self-host from day one by using the free open-source core, then move to the managed service if operational overhead becomes a distraction. Or start managed and migrate to self-hosted when compliance requirements demand it. The SDKs work identically in both modes because the only thing that changes is the `connectionURI` in your backend config.
 
 For teams that want to dig deeper, the [migration guide](https://supertokens.com/docs/migration/overview) covers transitioning from existing providers, and the [quickstart documentation](https://supertokens.com/docs/quickstart/introduction) walks through end-to-end setup with framework-specific examples. The community is active on [Discord](https://supertokens.com/discord), and the documentation is structured around practical implementation rather than abstract concepts.
 
@@ -105,12 +105,12 @@ When you self-host, patching security vulnerabilities is your job. So are databa
 
 ### Scalability and Reliability
 
-A single-instance auth service works fine for early-stage applications. Once you're handling thousands of concurrent sessions, the requirements change. You need horizontal scaling behind a load balancer, session replication or stateless token validation, reliable token revocation, and protection against brute-force and credential-stuffing attacks.
+A single-instance authentication service works fine for early-stage applications. Once you're handling thousands of concurrent sessions, the requirements change. You need horizontal scaling behind a load balancer, session replication or stateless token validation, reliable token revocation, and protection against brute-force and credential-stuffing attacks.
 
 Some platforms support this natively. SuperTokens' core is stateless and scales horizontally with PostgreSQL as the shared backing store. Its [Attack Protection Suite](https://supertokens.com/docs/additional-verification/attack-protection-suite/introduction) provides built-in rate limiting and anomaly detection. Keycloak scales through clustering with Infinispan, which works but adds operational complexity. Lighter solutions like Authelia were not designed for this kind of load and will hit ceilings that require architectural workarounds.
 
 ### Developer Experience vs. Customization
 
-This is the fundamental tension in self-hosted auth. Lightweight tools like Authelia get you running in an afternoon but offer limited extensibility when requirements evolve. Heavyweight platforms like Keycloak give you deep control over every authentication flow but demand significant investment before you ship anything.
+This is the fundamental tension in self-hosted authentication. Lightweight tools like Authelia get you running in an afternoon but offer limited extensibility when requirements evolve. Heavyweight platforms like Keycloak give you deep control over every authentication flow but demand significant investment before you ship anything.
 
 SuperTokens positions itself between these extremes. Pre-built UI components and the `create-supertokens-app` CLI get a working auth flow running in minutes. When you need custom behavior, recipe overrides and hook functions let you modify flows without forking the core. You start simple and add complexity only when your application demands it.
