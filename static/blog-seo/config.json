@@ -4818,7 +4818,7 @@
         "title": "Authentication for AI Agents: Tokens, Tool Calls, and Human-in-the-Loop",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/auth-for-ai-agents\"\n            },\n            \"headline\": \"Secure AI agents with scoped tokens, DPoP, tool-level policies, and human approvals.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/auth-for-ai-agents.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    {  
+    {
         "path": "/blog/build-vs-buy",
         "metaTags": [
             "<meta name=\"description\" content=\"undefined\" />",
@@ -4841,7 +4841,7 @@
         "title": "Build vs. Buy Identity Management: 2026 Decision Matrix",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/build-vs-buy\"\n            },\n            \"headline\": \"undefined\",\n            \"image\": \"https://supertokens.com/blog-meta-images/build-vs-buy.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    {   
+    {
         "path": "/blog/how-to-ban-users",
         "metaTags": [
             "<meta name=\"description\" content=\"Learn how to ban or suspend users in your web app with SuperTokens.\" />",
@@ -4864,7 +4864,7 @@
         "title": "How to Ban Users in Your Web App Using SuperTokens",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/how-to-ban-users\"\n            },\n            \"headline\": \"Learn how to ban or suspend users in your web app with SuperTokens.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/how-to-ban-users.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    {   
+    {
         "path": "/blog/auth0-open-source",
         "metaTags": [
             "<meta name=\"description\" content=\"Is Auth0 open source? What's actually OSS, and which open-source Auth0 alternatives (Keycloak, Ory, SuperTokens) fit your stack in 2026?\" />",
@@ -5072,8 +5072,6 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/supertoknes-rownd-business-line-acquisition\"\n            },\n            \"headline\": \"SuperTokens and Rownd announce that SuperTokens has acquired the Rownd Authentication business line\",\n            \"image\": \"https://supertokens.com/blog-meta-images/supertokens-rownd-acquisition.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
-    },
-    {
         "path": "/blog/mfa-react",
         "metaTags": [
             "<meta name=\"description\" content=\"Secure your React app with multi-factor authentication in minutes. Learn MFA options, setup steps, and best practices using SuperTokens.\" />",
@@ -5097,26 +5095,49 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/mfa-react\"\n            },\n            \"headline\": \"Secure your React app with multi-factor authentication in minutes. Learn MFA options, setup steps, and best practices using SuperTokens.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/add_mfa_to_react.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
-        "path": "/blog/self-hosted-auth-solutions-in-2025",
+        "path": "/blog/scim-provisioning-explained",
         "metaTags": [
-            "<meta name=\"description\" content=\"Compare the leading self-hosted authentication platforms for 2025 — scalability, control, cost, and developer-experience highlight how SuperTokens stands out.\" />",
+            "<meta name=\"description\" content=\"Learn SCIM provisioning, implementation, edge cases, pricing impact, and how to build it with SuperTokens.\" />",
             "",
             "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"Best Self-Hosted Authentication Solutions in 2025\" />",
+            "<meta property=\"og:title\" content=\"SCIM Provisioning Explained: The Definitive Guide for Enterprise SaaS (2026)\" />",
             "<meta property=\"og:type\" content=\"article\" />",
-            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/self-hosted-auth-solutions-in-2025\" />",
-            "<meta property=\"og:description\" content=\"Compare the leading self-hosted authentication platforms for 2025 — scalability, control, cost, and developer-experience highlight how SuperTokens stands out.\"/>",
-            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/scim-provisioning-explained\" />",
+            "<meta property=\"og:description\" content=\"Learn SCIM provisioning, implementation, edge cases, pricing impact, and how to build it with SuperTokens.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/scim-provisioning-explained.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Compare the leading self-hosted authentication platforms for 2025 — scalability, control, cost, and developer-experience highlight how SuperTokens stands out.\" />",
-            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/self-hosted-auth-solutions-in-2025\" />",
-            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" /> ",
+            "<meta name=\"twitter:title\" content=\"Learn SCIM provisioning, implementation, edge cases, pricing impact, and how to build it with SuperTokens.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/scim-provisioning-explained\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/scim-provisioning-explained.png\" /> ",
             "<!--OG Tags-->",
-            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/self-hosted-auth-solutions-in-2025\">"
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/scim-provisioning-explained\">"
         ],
-        "title": "Best Self-Hosted Authentication Solutions in 2025",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/self-hosted-auth-solutions-in-2025\"\n            },\n            \"headline\": \"Compare the leading self-hosted authentication platforms for 2025 — scalability, control, cost, and developer-experience highlight how SuperTokens stands out.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+        "title": "SCIM Provisioning Explained: The Definitive Guide for Enterprise SaaS (2026)",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/scim-provisioning-explained\"\n            },\n            \"headline\": \"Learn SCIM provisioning, implementation, edge cases, pricing impact, and how to build it with SuperTokens.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/scim-provisioning-explained.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/self-hosted-auth-solutions-in-2026",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Compare the leading self-hosted authentication platforms for 2026 — scalability, control, cost, and developer-experience highlight how SuperTokens stands out.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Best Self-Hosted Authentication Solutions in 2026\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/self-hosted-auth-solutions-in-2026\" />",
+            "<meta property=\"og:description\" content=\"Compare the leading self-hosted authentication platforms for 2026 — scalability, control, cost, and developer-experience highlight how SuperTokens stands out.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/self-hosted_authentication_2026.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Compare the leading self-hosted authentication platforms for 2026 — scalability, control, cost, and developer-experience highlight how SuperTokens stands out.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/self-hosted-auth-solutions-in-2026\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/self-hosted_authentication_2026.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/self-hosted-auth-solutions-in-2026\">"
+        ],
+        "title": "Best Self-Hosted Authentication Solutions in 2026",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/self-hosted-auth-solutions-in-2026\"\n            },\n            \"headline\": \"Compare the leading self-hosted authentication platforms for 2026 — scalability, control, cost, and developer-experience highlight how SuperTokens stands out.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/self-hosted_authentication_2026.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
