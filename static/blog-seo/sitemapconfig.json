@@ -524,16 +524,16 @@
     {
         "location": "https://supertokens.com/blog/build-vs-buy"
     },
-    {    
+    {
         "location": "https://supertokens.com/blog/migrate-from-auth0"
     },
     {
         "location": "https://supertokens.com/blog/how-to-ban-users"
     },
-    {    
+    {
         "location": "https://supertokens.com/blog/auth0-open-source"
     },
-    {   
+    {
         "location": "https://supertokens.com/blog/migrate-from-auth0"
     },
     {
@@ -562,5 +562,8 @@
     },
     {
         "location": "https://supertokens.com/blog/scim-provisioning-explained"
+    },
+    {
+        "location": "https://supertokens.com/blog/self-hosted-auth-solutions-in-2026"
     }
 ]
