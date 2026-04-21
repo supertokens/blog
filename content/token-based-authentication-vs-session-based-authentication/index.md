@@ -10,7 +10,7 @@ author: "Darko Bozhinovski"
 
 Dealing with a question such as "Should I use tokens or sessions for my auth needs?" may seem like a tough choice make. And like many things in tech, the answer is... it depends! 😅 
 
-Let's break this down together and see what makes each approach tick. No mystical ["auth is hard"](/but-auth-is-hard) nonsense - just practical insights from someone who's had to make the choice more than once. 
+Let's break this down together and see what makes each approach tick. No mystical ["auth is hard"](https://supertokens.com/blog/but-auth-is-hard) nonsense - just practical insights from someone who's had to make the choice more than once. 
 
 ## Understanding Token-Based Authentication 
 

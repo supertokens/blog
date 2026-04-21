@@ -444,3 +444,229 @@
     font-size: 12px;
   }
 }
+
+.mcp-toolkit-interest-form {
+  margin: 48px auto;
+  max-width: 500px;
+  padding: 0 20px;
+}
+
+.mcp-toolkit-interest-form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.mcp-toolkit-interest-form-element {
+  width: 100%;
+  max-width: 400px;
+}
+
+.mcp-toolkit-interest-form-input-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9ecef;
+}
+
+.mcp-toolkit-interest-form-input {
+  flex: 1;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #333;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.mcp-toolkit-interest-form-input::placeholder {
+  color: #6c757d;
+  font-weight: 400;
+}
+
+.mcp-toolkit-interest-form-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.15);
+  transform: translateY(-1px);
+}
+
+.mcp-toolkit-interest-form-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #f8f9fa;
+}
+
+.mcp-toolkit-interest-form-submit-button {
+  padding: 16px 28px;
+  background: linear-gradient(135deg, #ff9933 0%, #ff8000 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(255, 153, 51, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.mcp-toolkit-interest-form-submit-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.mcp-toolkit-interest-form-submit-button:hover::before {
+  left: 100%;
+}
+
+.mcp-toolkit-interest-form-submit-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ff8000 0%, #e67300 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 153, 51, 0.4);
+}
+
+.mcp-toolkit-interest-form-submit-button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 153, 51, 0.3);
+}
+
+.mcp-toolkit-interest-form-submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mcp-toolkit-interest-form-submit-button.loading {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+.mcp-toolkit-interest-form-message {
+  padding: 16px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 16px;
+  animation: slideIn 0.3s ease-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  position: relative;
+}
+
+.mcp-toolkit-interest-form-message-text {
+  flex: 1;
+  text-align: left;
+}
+
+.mcp-toolkit-interest-form-message-close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.mcp-toolkit-interest-form-message-close:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+.mcp-toolkit-interest-form-message-close:active {
+  transform: scale(0.95);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mcp-toolkit-interest-form-message.success {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.mcp-toolkit-interest-form-message.error {
+  background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@media screen and (max-width: 768px) {
+  .mcp-toolkit-interest-form {
+    margin: 32px 16px;
+  }
+
+  .mcp-toolkit-interest-form-input-container {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .mcp-toolkit-interest-form-submit-button {
+    width: 100%;
+    padding: 18px 28px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mcp-toolkit-interest-form {
+    margin: 24px 12px;
+  }
+
+  .mcp-toolkit-interest-form-input {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+
+  .mcp-toolkit-interest-form-submit-button {
+    padding: 16px 24px;
+  }
+}

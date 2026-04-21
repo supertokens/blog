@@ -195,7 +195,7 @@ It’s clear that if using express-session, it’s very likely that an organisat
 
 ## Conclusion:
 
-We can see that SuperTokens clearly wins out on the metrics we have chosen. Not just that, it’s only going to get much better over time as we expand on the number of frameworks we support as well as add more amazing features! Overall, it is much more secure and complete. Of course, I am a little biased towards SuperTokens because I am one of the contributors to the library, but I think I have compared the two libraries fairly. If you find that there are some metrics I have missed where Express-session performs better, or if you have any general feedback, please drop a comment or send us an [email](mailto:team@supertokens.com).
+We can see that SuperTokens clearly wins out on the metrics we have chosen. Not just that, it’s only going to get much better over time as we expand on the number of frameworks we support as well as add more amazing features! Overall, it is much more secure and complete. Of course, I am a little biased towards SuperTokens because I am one of the contributors to the library, but I think I have compared the two libraries fairly. If you find that there are some metrics I have missed where Express-session performs better, or if you have any general feedback, please drop a comment or send us an [email](mailto:support@supertokens.com).
 
 To learn more about Sessions, please visit our other blogs and our website:
 

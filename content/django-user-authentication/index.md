@@ -228,7 +228,7 @@ Django internally uses [signals](https://docs.djangoproject.com/en/5.1/topics/si
 - `user_logged_out` is sent when the logout method is called
 - `user_login_failed` is sent when the login attempt fails
 
-You can find more details about each signal and their properties in the [official documentation](user_login_failed).
+You can find more details about each signal and their properties in the [official documentation](https://docs.djangoproject.com/en/5.1/topics/auth/default/).
 
 ### Session management
 

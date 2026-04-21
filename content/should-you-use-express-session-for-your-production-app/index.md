@@ -165,7 +165,7 @@ Express-session is a popular, widely used library. It is basic, functional and q
 After speaking to 100+ companies, we observed that close to 75% of startups and enterprises end up building a custom solution to manage user sessions. Many do it for the reasons highlighted above.
 
 
-With a negative final score, it’s clear that Express-session is not optimal for production apps – especially ones that care about user security and will likely scale with time. If you feel that I have judged unfairly, or missed out an important metric, please do comment or send us an [email](mailto:team@supertokens.com).
+With a negative final score, it’s clear that Express-session is not optimal for production apps – especially ones that care about user security and will likely scale with time. If you feel that I have judged unfairly, or missed out an important metric, please do comment or send us an [email](mailto:support@supertokens.com).
 
 There are many alternatives to Express-session and it is likely that you are considering building a custom solution. However, as an alternative to Express-session, we have built a secure, open source, and feature complete solution called [SuperTokens](https://supertokens.com/). It is already being used by 100s of developers. We’d love to hear your feedback on whether this is something you would use.
 

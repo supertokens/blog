@@ -140,10 +140,8 @@ Secure your app with seamless identity and access management – [try SuperToken
 **Internal Links:**
 - [Self-Hosted Authentication](https://supertokens.com/blog/self-hosted-authentication)
 - [Single Sign-On](https://supertokens.com/features/single-sign-on)
-- [IAM Tools](https://supertokens.com/blog/identity-and-access-management-tools)
 - [IAM Best Practices](https://supertokens.com/blog/identity-and-access-management-best-practices)
 - [IAM Challenges](https://supertokens.com/blog/iam-challenges)
-- [IAM Implementation](https://supertokens.com/blog/iam-implementation)
 - [Open Source Identity Management](https://supertokens.com/blog/open-source-identity-management)
 
 **External Links:**
