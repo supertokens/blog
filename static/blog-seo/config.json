@@ -4748,5 +4748,28 @@
         ],
         "title": "Clerk Pricing - The Complete Guide",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"\n            },\n            \"headline\": \"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/secure-multi-tenant-auth",
+        "metaTags": [
+            "<meta name=\"description\" content=\"For B2B SaaS and platform builders shipping tenant-aware authentication, SSO, and least-privilege access with open-source ergonomics and enterprise guarantees.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Secure Multi-Tenant Authentication: SaaS RBAC with SuperTokens\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/secure-multi-tenant-auth\" />",
+            "<meta property=\"og:description\" content=\"For B2B SaaS and platform builders shipping tenant-aware authentication, SSO, and least-privilege access with open-source ergonomics and enterprise guarantees.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/secure-multi-tenant-auth.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"For B2B SaaS and platform builders shipping tenant-aware authentication, SSO, and least-privilege access with open-source ergonomics and enterprise guarantees.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/secure-multi-tenant-auth\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/secure-multi-tenant-auth.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/secure-multi-tenant-auth\">"
+        ],
+        "title": "Secure Multi-Tenant Authentication: SaaS RBAC with SuperTokens",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/secure-multi-tenant-auth\"\n            },\n            \"headline\": \"For B2B SaaS and platform builders shipping tenant-aware authentication, SSO, and least-privilege access with open-source ergonomics and enterprise guarantees.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/secure-multi-tenant-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
