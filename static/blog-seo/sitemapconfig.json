@@ -309,6 +309,9 @@
         "location": "https://supertokens.com/blog/identity-and-access-management-strategy"
     },
     {
+        "location": "https://supertokens.com/blog/the-hidden-cost-of-building-your-own-auth-stacks"
+    },
+    {    
         "location": "https://supertokens.com/blog/frontegg-vs-auth0-vs-fusionauth"
     },
     {
