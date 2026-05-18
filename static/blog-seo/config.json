@@ -5185,5 +5185,28 @@
         ],
         "title": "Best Self-Hosted Authentication Solutions in 2026",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/self-hosted-auth-solutions-in-2026\"\n            },\n            \"headline\": \"Compare the leading self-hosted authentication platforms for 2026 — scalability, control, cost, and developer-experience highlight how SuperTokens stands out.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/self-hosted_authentication_2026.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/evergreen-hosting-announcement",
+        "metaTags": [
+            "<meta name=\"description\" content=\"SuperTokens managed instances will now automatically receive stable upgrades with zero downtime, instant rollback, and continuous monitoring\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Introducing Evergreen Hosting: Automatic Upgrades for SuperTokens\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/evergreen-hosting-announcement\" />",
+            "<meta property=\"og:description\" content=\"SuperTokens managed instances will now automatically receive stable upgrades with zero downtime, instant rollback, and continuous monitoring\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/evergreen-hosting-announcement.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"SuperTokens managed instances will now automatically receive stable upgrades with zero downtime, instant rollback, and continuous monitoring\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/evergreen-hosting-announcement\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/evergreen-hosting-announcement.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/evergreen-hosting-announcement\">"
+        ],
+        "title": "Introducing Evergreen Hosting: Automatic Upgrades for SuperTokens",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/evergreen-hosting-announcement\"\n            },\n            \"headline\": \"SuperTokens managed instances will now automatically receive stable upgrades with zero downtime, instant rollback, and continuous monitoring\",\n            \"image\": \"https://supertokens.com/blog-meta-images/evergreen-hosting-announcement.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     }
 ]
