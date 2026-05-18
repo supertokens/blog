@@ -3,8 +3,8 @@ title: "Introducing Evergreen Hosting: Automatic Upgrades for SuperTokens"
 date: "2026-05-07"
 description: "SuperTokens managed instances will now automatically receive stable upgrades with zero downtime, instant rollback, and continuous monitoring"
 cover: "evergreen-hosting-announcement.png"
-category: "company"
-author: "SuperTokens Team"
+category: "Announcements"
+author: "Joel Coutinho"
 ---
 
 ## Introducing Evergreen Hosting: Automatic Upgrades for SuperTokens
@@ -37,7 +37,7 @@ Evergreen Hosting is our response to that shift.
 
 ---
 
-# What Evergreen Hosting Does
+## What Evergreen Hosting Does
 
 With Evergreen Hosting enabled, your managed SuperTokens core instance will automatically upgrade to the latest stable version as releases roll out.
 
@@ -55,11 +55,11 @@ The upgrade happens entirely on the infrastructure side.
 
 ---
 
-# How Rollouts Work
+## How Rollouts Work
 
 We designed Evergreen Hosting around safety, progressive delivery, and rapid recovery.
 
-## 1. Gradual Rollouts
+### 1. Gradual Rollouts
 
 New releases are never deployed to every instance simultaneously.
 
@@ -73,15 +73,13 @@ This staged approach helps us detect issues early before they affect a broader s
 
 ---
 
-## 2. Progressive Traffic Shifting
+### 2. Progressive Traffic Shifting
 
 Even within an individual instance, traffic is migrated gradually to the new version rather than all at once.
 
 This allows us to observe real-world behavior under load while minimizing blast radius if something unexpected occurs.
 
----
-
-## 3. Continuous Monitoring
+### 3. Continuous Monitoring
 
 After every upgrade, instances are automatically monitored for:
 
@@ -92,8 +90,6 @@ After every upgrade, instances are automatically monitored for:
 
 Monitoring continues throughout rollout and after completion.
 
----
-
 ## 4. Instant Rollback
 
 If an issue is detected, rollback happens automatically within seconds.
@@ -102,7 +98,7 @@ Additionally, we maintain a one-week rollback safety window after rollout comple
 
 ---
 
-# Downtime Expectations
+## Downtime Expectations
 
 For the overwhelming majority of releases, upgrades happen with **zero downtime**.
 
@@ -110,47 +106,40 @@ Your authentication APIs continue serving traffic throughout the rollout process
 
 In rare cases involving significant data restructuring or major infrastructure transitions, a short maintenance window may be required. These windows are typically under a minute, and customers will receive advance notice beforehand.
 
----
 
-# Evergreen Hosting Does *Not* Change
+## What Evergreen Hosting Does *Not* Change
 
 Evergreen Hosting only changes how your managed instance is updated.
 
 It does **not** change:
 
-- your user data
-- authentication flows
+- Your user data
+- Authentication flows
 - SDK behavior
 - API contracts
-- endpoints
-- tenant configuration
-- dashboard settings
+- Endpoints
+- Tenant configuration
+- Dashboard settings
 
 Manual upgrades are also **not going away**.
 
 Teams that require strict change-management processes, internal QA validation, or version pinning can continue operating that way.
 
----
-
-# Opting Out
+## Opting Out
 
 We understand that some organizations need tighter control over deployment timing.
 
 You can opt out of Evergreen Hosting at any time.
 
-## Before Activation
+- **Before Activation**
+  - If you opt out before Evergreen Hosting activates for your instance, automatic upgrades will not begin.
 
-If you opt out before Evergreen Hosting activates for your instance, automatic upgrades will not begin.
-
-## After Activation
-
-You can also disable Evergreen Hosting later and return to manual upgrades whenever needed.
+- **After Activation**
+  - You can also disable Evergreen Hosting later and return to manual upgrades whenever needed.
 
 Your instance will remain on its current version until you manually upgrade again or re-enable automatic upgrades.
 
----
-
-# Version Pinning Support
+## Version Pinning Support
 
 For customers with compliance requirements, validation pipelines, or release certification processes, version pinning remains fully supported.
 
@@ -158,7 +147,7 @@ You can continue locking your instance to a specific version while performing in
 
 ---
 
-# Why We Believe This Is the Right Default
+## Why We Believe This Is the Right Default
 
 Infrastructure security increasingly depends on reducing operational delay.
 
@@ -171,27 +160,20 @@ Our goal with Evergreen Hosting is simple:
 - shorten patch adoption timelines
 - preserve reliability through careful rollout engineering
 
-while still respecting that some teams need manual control.
+While still respecting that some teams need manual control.
 
----
 
-# Timeline
+## Timeline
 
-## Now
+- **Now**
+  - Customers are being notified about Evergreen Hosting and the available opt-out path.
+- **Activation Phase**
+  - Managed instances that have not opted out will begin receiving automatic upgrades as part of future stable rollouts.
 
-Customers are being notified about Evergreen Hosting and the available opt-out path.
+- **Ongoing**
+  - Customers can opt out, opt back in, or pin versions at any time.
 
-## Activation Phase
-
-Managed instances that have not opted out will begin receiving automatic upgrades as part of future stable rollouts.
-
-## Ongoing
-
-Customers can opt out, opt back in, or pin versions at any time.
-
----
-
-# Questions?
+## Questions?
 
 If you have questions about rollout mechanics, rollback guarantees, version pinning, compliance workflows, or whether Evergreen Hosting is the right fit for your environment, reach out to the SuperTokens team.
 
