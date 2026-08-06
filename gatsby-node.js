@@ -1,5 +1,5 @@
 const { createFilePath } = require(`gatsby-source-filesystem`)
-
+const { categories } = require(`./src/blog-categories`)
 const webflowPosts = require("./src/blog-details")
 const getBlogCardString = require("./src/getBlogCardString")
 
@@ -49,16 +49,18 @@ exports.createPages = async ({ actions, graphql }) => {
 
 
   const postsAsHTMLString = {
-    all: "",
-    sessions: "",
-    featured: "",
-    programming: ""
+    All: "",
+    Authentication: "",
+    Security: "",
+    Tutorials: "",
+    Announcements: "",
+    News: "",
   }
 
-  const allFilters = ["all", "sessions", "featured", "programming"]
+  const allFilters = [categories.ALL, categories.ANNOUNCEMENTS, categories.AUTHENTICATION, categories.NEWS, categories.SECURITY, categories.SECURITY, categories.TUTORIALS]
   allFilters.forEach((filter) => {
     postsAsHTMLString[filter] = sortedPosts.filter((post) => {
-      if (filter === "all") {
+      if (filter === categories.ALL) {
         return true;
       }
 
