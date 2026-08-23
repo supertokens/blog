@@ -4863,7 +4863,30 @@
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/clerk-pricing-the-complete-guide\">"
         ],
         "title": "Clerk Pricing - The Complete Guide",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"\n            },\n            \"headline\": \"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Clerk Pricing - The Complete Guide\",\"item\":\"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"}]}</script>"
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"\n            },\n            \"headline\": \"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/implement-passkeys-nextjs",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Build a complete, self-hosted passkey flow in a Next.js App Router app with SuperTokens: registration, authentication, cross-device, recovery, and migration.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How to Implement Passkey Authentication in Next.js With SuperTokens\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/implement-passkeys-nextjs\" />",
+            "<meta property=\"og:description\" content=\"Build a complete, self-hosted passkey flow in a Next.js App Router app with SuperTokens: registration, authentication, cross-device, recovery, and migration.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/implement-passkeys-nextjs.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Build a complete, self-hosted passkey flow in a Next.js App Router app with SuperTokens: registration, authentication, cross-device, recovery, and migration.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/implement-passkeys-nextjs\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/implement-passkeys-nextjs.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/implement-passkeys-nextjs\">"
+        ],
+        "title": "How to Implement Passkey Authentication in Next.js With SuperTokens",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/implement-passkeys-nextjs\"\n            },\n            \"headline\": \"Build a complete, self-hosted passkey flow in a Next.js App Router app with SuperTokens: registration, authentication, cross-device, recovery, and migration.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/implement-passkeys-nextjs.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
         "path": "/blog/oauth-flows",
