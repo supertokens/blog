@@ -1,5 +1,5 @@
 ---
-title: Fixing CORS Errors What They Are and How to Resolve Them
+title: "Fixing CORS Errors: What They Are and How to Resolve Them (2026)"
 description: "Learn what causes CORS errors, how they impact your web app, and how to fix them securely with proper headers and backend configurations."
 date: "2025-07-20"
 cover: "cors_errors.png"
@@ -422,6 +422,8 @@ res.cookie('session', token, {
 
 > **Browser note:** Safari is notably stricter about cross-origin cookies than Chrome or Firefox. If your auth flows work in Chrome but fail in Safari, this is usually the cause. Third-party cookie restrictions in Safari's ITP (Intelligent Tracking Prevention) can block credentialed CORS requests even with correct headers.
 
+Getting this cookie configuration right by hand is error-prone, which is one reason many teams reach for a dedicated session-management layer. [SuperTokens](https://supertokens.com) sets these `SameSite=None; Secure; HttpOnly` cookie flags and the matching CORS headers for you, so cross-origin authenticated requests work consistently across browsers. If you're weighing cookies against other storage options, see [Cookies vs. `localStorage` for sessions](https://supertokens.com/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know) and [how session-based authentication works](https://supertokens.com/blog/session-based-authentication).
+
 ---
 
 ## Security Best Practices
@@ -684,3 +686,9 @@ The key principles:
 - **Preflight must succeed.** `OPTIONS` requests must be handled for any non-simple cross-origin request.
 
 With correct configuration, CORS becomes an ally rather than an obstacle — enforcing the right trust boundaries while letting your legitimate cross-origin traffic flow freely.
+
+## Related reading
+
+- [HTTP Error Codes: 401 vs. 403](https://supertokens.com/blog/http-error-codes-401-vs-403)
+- [What Is a 502 Bad Gateway Error and How to Fix It](https://supertokens.com/blog/what-is-502-bad-gateway-error)
+- [Cookies vs. `localStorage` for Sessions](https://supertokens.com/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know)

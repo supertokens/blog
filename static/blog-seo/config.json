@@ -398,25 +398,25 @@
     {
         "path": "/blog/password-hashing-salting",
         "metaTags": [
-            "<meta name=\"description\" content=\"How to hash and salt passwords in different languages and why it's important to do so\" />",
+            "<meta name=\"description\" content=\"A practical guide to password hashing and salting: how they work, which algorithms to use (bcrypt, Argon2, PBKDF2), and why they matter for security.\" />",
             "",
             "<meta name=\"keywords\" content=\"Authentication, password hashing, security, salting, SuperTokens\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"Password Hashing: How to hash and salt passwords in different languages and why it's important to do so\" />",
+            "<meta property=\"og:title\" content=\"Password Hashing and Salting: How It Works and Why It Matters (2026 Guide)\" />",
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/password-hashing-salting\" />",
-            "<meta property=\"og:description\" content=\"How to hash and salt passwords in different languages and why it's important to do so \"/>",
+            "<meta property=\"og:description\" content=\"A practical guide to password hashing and salting: how they work, which algorithms to use (bcrypt, Argon2, PBKDF2), and why they matter for security.\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/ory-vs-keycloak-vs-supertokens.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Password Hashing: How to hash and salt passwords in different languages and why it's important to do so\" />",
-            "<meta name=\"twitter:description\" content=\"How to hash and salt passwords in different languages and why it's important to do so \" />",
+            "<meta name=\"twitter:title\" content=\"Password Hashing and Salting: How It Works and Why It Matters (2026 Guide)\" />",
+            "<meta name=\"twitter:description\" content=\"A practical guide to password hashing and salting: how they work, which algorithms to use (bcrypt, Argon2, PBKDF2), and why they matter for security.\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/password-hashing-salting\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/static/assets/meta_images/blog/passwordhasingandsalting.png\" /> ",
             "<!--OG Tags-->"
         ],
-        "title": "How to hash and salt passwords in different languages and why it's important to do so",
-        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/password-hashing-salting\"},\"headline\":\"Password Hashing: How to hash and salt passwords in different languages and why it's important to do so\",\"description\":\"How to hash and salt passwords in different languages and why it's important to do so \",\"image\":\"https://supertokens.com/static/assets/meta_images/blog/passwordhasingandsalting.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to hash and salt passwords in different languages and why it's important to do so\",\"item\":\"https://supertokens.com/blog/password-hashing-salting\"}]}</script>"
+        "title": "Password Hashing and Salting: How It Works and Why It Matters (2026 Guide)",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/password-hashing-salting\"},\"headline\":\"Password Hashing and Salting: How It Works and Why It Matters (2026 Guide)\",\"description\":\"A practical guide to password hashing and salting: how they work, which algorithms to use (bcrypt, Argon2, PBKDF2), and why they matter for security.\",\"image\":\"https://supertokens.com/static/assets/meta_images/blog/passwordhasingandsalting.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     },
     {
         "path": "/blog/building-a-chatbot-that-is-an-expert-at-supertokens",
@@ -589,25 +589,25 @@
         "path": "/blog/http-error-codes-401-vs-403",
         "metaTags": [
             "<meta name=\"author\" content=\"Joel Coutinho\" /> ",
-            "<meta name=\"description\" content=\"HTTP error codes can be confusing and incorrect usage can result in security vulnerabilities. In  this blog we break down the differences between error codes 401 and 403\" />",
+            "<meta name=\"description\" content=\"Learn the difference between HTTP 401 Unauthorized and 403 Forbidden errors, when each applies, and how to handle them correctly in your app.\" />",
             "",
             "<meta name=\"keywords\" content=\"401 vs 403, http error codes, differences between 401 and 403\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"Demystifying HTTP Error Codes 401 vs 403\" />",
+            "<meta property=\"og:title\" content=\"Demystifying HTTP Error Codes: 401 vs 403 (2026)\" />",
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/http-error-codes-401-vs-403\" />",
-            "<meta property=\"og:description\" content=\"HTTP error codes can be confusing and incorrect usage can result in security vulnerabilities. In  this blog we break down the differences between error codes 401 and 403\" /\"/>",
+            "<meta property=\"og:description\" content=\"Learn the difference between HTTP 401 Unauthorized and 403 Forbidden errors, when each applies, and how to handle them correctly in your app.\" /\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/http-error-codes-401-vs-403.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Demystifying HTTP Error Codes 401 vs 403\" />",
-            "<meta name=\"twitter:description\" content=\"In this blog we will go over the http protocol error codes 401 and 403 and describe when is it appropriate to use each of them.\" />",
+            "<meta name=\"twitter:title\" content=\"Demystifying HTTP Error Codes: 401 vs 403 (2026)\" />",
+            "<meta name=\"twitter:description\" content=\"Learn the difference between HTTP 401 Unauthorized and 403 Forbidden errors, when each applies, and how to handle them correctly in your app.\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/http-error-codes-401-vs-403\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/http-error-codes-401-vs-403.png\" /> ",
             "<!--OG Tags-->"
         ],
-        "title": "Demystifying HTTP Error Codes 401 vs 403",
-        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/http-error-codes-401-vs-403\"},\"headline\":\"Demystifying HTTP Error Codes 401 vs 403\",\"image\":\"https://supertokens.com/blog-meta-images/http-error-codes-401-vs-403.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Demystifying HTTP Error Codes 401 vs 403\",\"item\":\"https://supertokens.com/blog/http-error-codes-401-vs-403\"}]}</script>"
+        "title": "Demystifying HTTP Error Codes: 401 vs 403 (2026)",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/http-error-codes-401-vs-403\"},\"headline\":\"Demystifying HTTP Error Codes: 401 vs 403 (2026)\",\"image\":\"https://supertokens.com/blog-meta-images/http-error-codes-401-vs-403.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     },
     {
         "path": "/blog/what-is-ldap",
@@ -1096,20 +1096,20 @@
             "",
             "<meta name=\"keywords\" content=\"502 error, bad gateway error, troubleshooting, preventing 502 errors\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"Everything You Need to Know About 502 Bad Gateway Errors\" />",
+            "<meta property=\"og:title\" content=\"Everything You Need to Know About 502 Bad Gateway Errors (2026)\" />",
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/what-is-502-bad-gateway-error\" />",
             "<meta property=\"og:description\" content=\"Discover the ins and outs of 502 Bad Gateway Errors. From understanding the causes to troubleshooting steps and preventive measures, navigate through server communication breakdowns seamlessly\" /\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-502-bad-gateway-error.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Discover the ins and outs of 502 Bad Gateway Errors. From understanding the causes to troubleshooting steps and preventive measures, navigate through server communication breakdowns seamlessly\" />",
+            "<meta name=\"twitter:title\" content=\"Everything You Need to Know About 502 Bad Gateway Errors (2026)\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-is-502-bad-gateway-error\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-502-bad-gateway-error.png\" /> ",
             "<!--OG Tags-->"
         ],
-        "title": "Everything You Need to Know About 502 Bad Gateway Errors",
-        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-502-bad-gateway-error\"},\"headline\":\"Everything You Need to Know About 502 Bad Gateway Errors\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-502-bad-gateway-error.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Everything You Need to Know About 502 Bad Gateway Errors\",\"item\":\"https://supertokens.com/blog/what-is-502-bad-gateway-error\"}]}</script>"
+        "title": "Everything You Need to Know About 502 Bad Gateway Errors (2026)",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-502-bad-gateway-error\"},\"headline\":\"Everything You Need to Know About 502 Bad Gateway Errors (2026)\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-502-bad-gateway-error.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     },
     {
         "path": "/blog/types-of-authentication",
@@ -1908,22 +1908,22 @@
             "",
             "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"What is JWT? Understand JSON Web Tokens | SuperTokens\" />",
+            "<meta property=\"og:title\" content=\"What is JWT? Understand JSON Web Tokens (2026 Guide) | SuperTokens\" />",
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/what-is-jwt\" />",
             "<meta property=\"og:description\" content=\"Discover the fundamentals of JWTs, their structure, use cases, and potential security risks. Learn how to manage tokens securely with SuperTokens.\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-jwt.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"What is JWT? Understand JSON Web Tokens | SuperTokens\" />",
+            "<meta name=\"twitter:title\" content=\"What is JWT? Understand JSON Web Tokens (2026 Guide) | SuperTokens\" />",
             "<meta name=\"twitter:description\" content=\"Discover the fundamentals of JWTs, their structure, use cases, and potential security risks. Learn how to manage tokens securely with SuperTokens.\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-is-jwt\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-jwt.png\" /> ",
             "<!--OG Tags-->",
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/what-is-jwt\">"
         ],
-        "title": "What is JWT? Understand JSON Web Tokens | SuperTokens",
-        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-jwt\"},\"headline\":\"What is JWT? Understand JSON Web Tokens | SuperTokens\",\"description\":\"Discover the fundamentals of JWTs, their structure, use cases, and potential security risks. Learn how to manage tokens securely with SuperTokens.\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-jwt.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"What is JWT? Understand JSON Web Tokens\",\"item\":\"https://supertokens.com/blog/what-is-jwt\"}]}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"What is a JWT?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"A JWT (JSON Web Token) is an open standard defined by RFC 7519 for securely passing information between a client and a server. Each token is digitally signed, so it can't be tampered with, and it carries claims — pieces of data about the user or session — directly inside it.\"}},{\"@type\":\"Question\",\"name\":\"What are the three parts of a JWT?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"A JWT has a header, payload, and signature, separated by dots (header.payload.signature). The header names the token type and signing algorithm, the payload holds the actual claims like user ID and expiry, and the signature verifies the token hasn't been altered.\"}},{\"@type\":\"Question\",\"name\":\"Are JWTs more secure than session-based authentication?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"JWTs aren't inherently more secure, but they're stateless — the server doesn't need to store session data, which helps with scaling. The tradeoff is that JWTs are harder to revoke immediately, since they stay valid until they expire.\"}},{\"@type\":\"Question\",\"name\":\"Where should I store a JWT on the client?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Store JWTs in HttpOnly cookies rather than localStorage, since HttpOnly cookies aren't accessible to JavaScript and are less exposed to XSS attacks. Pair short-lived access tokens with a longer-lived refresh token for a better security/usability balance.\"}},{\"@type\":\"Question\",\"name\":\"What signing algorithm should I use for JWTs?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Use RS256 or ES256 rather than weaker algorithms. These use public/private key pairs, so the party verifying the token doesn't need access to the signing secret, which reduces the risk if a verifier is compromised.\"}}]}</script>"
+        "title": "What is JWT? Understand JSON Web Tokens (2026 Guide) | SuperTokens",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/what-is-jwt\"},\"headline\":\"What is JWT? Understand JSON Web Tokens (2026 Guide) | SuperTokens\",\"description\":\"Discover the fundamentals of JWTs, their structure, use cases, and potential security risks. Learn how to manage tokens securely with SuperTokens.\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-jwt.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
     },
     {
         "path": "/blog/unified-login",
@@ -2097,21 +2097,21 @@
             "",
             "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"What is IDP Authentication: How Identity Providers Secure Your Apps\" />",
+            "<meta property=\"og:title\" content=\"What is IDP Authentication: How Identity Providers Secure Your Apps (2026)\" />",
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/idp-auth\" />",
             "<meta property=\"og:description\" content=\"Learn how IDP authentication works, why it’s critical for secure access management, and how to integrate tools like SuperTokens for seamless implementation.\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/idp-auth.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Learn how IDP authentication works, why it’s critical for secure access management, and how to integrate tools like SuperTokens for seamless implementation.\" />",
+            "<meta name=\"twitter:title\" content=\"What is IDP Authentication: How Identity Providers Secure Your Apps (2026)\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/idp-auth\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/idp-auth.png\" /> ",
             "<!--OG Tags-->",
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/idp-auth\">"
         ],
-        "title": "What is IDP Authentication: How Identity Providers Secure Your Apps",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/idp-auth\"\n            },\n            \"headline\": \"Learn how IDP authentication works, why it’s critical for secure access management, and how to integrate tools like SuperTokens for seamless implementation.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/idp-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"What is IDP Authentication: How Identity Providers Secure Your Apps\",\"item\":\"https://supertokens.com/blog/idp-auth\"}]}</script>"
+        "title": "What is IDP Authentication: How Identity Providers Secure Your Apps (2026)",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/idp-auth\"\n            },\n            \"headline\": \"Learn how IDP authentication works, why it’s critical for secure access management, and how to integrate tools like SuperTokens for seamless implementation.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/idp-auth.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
         "path": "/blog/open-source-identity-management",
@@ -3974,21 +3974,21 @@
             "",
             "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"4 Best Firebase Alternatives for Scalable App Development [2025 Guide]\" />",
+            "<meta property=\"og:title\" content=\"4 Best Firebase Alternatives for Scalable App Development [2026 Guide]\" />",
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/firebase-alternatives\" />",
             "<meta property=\"og:description\" content=\"Discover the top Firebase alternatives, their features, and how they compare. Learn why SuperTokens is the best authentication solution for secure and scalable apps.\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/firebase-alternatives.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Discover the top Firebase alternatives, their features, and how they compare. Learn why SuperTokens is the best authentication solution for secure and scalable apps.\" />",
+            "<meta name=\"twitter:title\" content=\"4 Best Firebase Alternatives for Scalable App Development [2026 Guide]\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/firebase-alternatives\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/firebase-alternatives.png\" /> ",
             "<!--OG Tags-->",
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/firebase-alternatives\">"
         ],
-        "title": "4 Best Firebase Alternatives for Scalable App Development [2025 Guide]",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/firebase-alternatives\"\n            },\n            \"headline\": \"Discover the top Firebase alternatives, their features, and how they compare. Learn why SuperTokens is the best authentication solution for secure and scalable apps.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/firebase-alternatives.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"4 Best Firebase Alternatives for Scalable App Development [2025 Guide]\",\"item\":\"https://supertokens.com/blog/firebase-alternatives\"}]}</script>"
+        "title": "4 Best Firebase Alternatives for Scalable App Development [2026 Guide]",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/firebase-alternatives\"\n            },\n            \"headline\": \"Discover the top Firebase alternatives, their features, and how they compare. Learn why SuperTokens is the best authentication solution for secure and scalable apps.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/firebase-alternatives.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
         "path": "/blog/enumeration-attack",
@@ -4020,21 +4020,21 @@
             "",
             "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"Webhook vs API: Key Differences and Use Cases\" />",
+            "<meta property=\"og:title\" content=\"Webhook vs API: Key Differences and Use Cases (2026)\" />",
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/webhook-vs-api\" />",
             "<meta property=\"og:description\" content=\"Explore the distinctions between webhooks and APIs, their functionalities, and determine the best scenarios for each in your integration strategy.\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/webhook-vs-api.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Explore the distinctions between webhooks and APIs, their functionalities, and determine the best scenarios for each in your integration strategy.\" />",
+            "<meta name=\"twitter:title\" content=\"Webhook vs API: Key Differences and Use Cases (2026)\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/webhook-vs-api\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/webhook-vs-api.png\" /> ",
             "<!--OG Tags-->",
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/webhook-vs-api\">"
         ],
-        "title": "Webhook vs API: Key Differences and Use Cases",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/webhook-vs-api\"\n            },\n            \"headline\": \"Explore the distinctions between webhooks and APIs, their functionalities, and determine the best scenarios for each in your integration strategy.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/webhook-vs-api.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Webhook vs API: Key Differences and Use Cases\",\"item\":\"https://supertokens.com/blog/webhook-vs-api\"}]}</script>"
+        "title": "Webhook vs API: Key Differences and Use Cases (2026)",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/webhook-vs-api\"\n            },\n            \"headline\": \"Explore the distinctions between webhooks and APIs, their functionalities, and determine the best scenarios for each in your integration strategy.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/webhook-vs-api.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
         "path": "/blog/pillars-of-a-ciam-strategy-secure-scale-and-personalize-customer-access",
@@ -4637,25 +4637,25 @@
     {
         "path": "/blog/sso-providers",
         "metaTags": [
-            "<meta name=\"description\" content=\"Compare the best open source SSO providers in 2025 and learn how to pick the right solution for your app’s security and scalability.\" />",
+            "<meta name=\"description\" content=\"Compare the best open source SSO providers in 2026 and learn how to pick the right solution for your app’s security and scalability.\" />",
             "",
             "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"Top Open Source SSO Providers to Know in 2025\" />",
+            "<meta property=\"og:title\" content=\"Top Open Source SSO Providers to Know in 2026\" />",
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/sso-providers\" />",
-            "<meta property=\"og:description\" content=\"Compare the best open source SSO providers in 2025 and learn how to pick the right solution for your app’s security and scalability.\"/>",
+            "<meta property=\"og:description\" content=\"Compare the best open source SSO providers in 2026 and learn how to pick the right solution for your app’s security and scalability.\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Compare the best open source SSO providers in 2025 and learn how to pick the right solution for your app’s security and scalability.\" />",
+            "<meta name=\"twitter:title\" content=\"Top Open Source SSO Providers to Know in 2026\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/sso-providers\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" /> ",
             "<!--OG Tags-->",
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/sso-providers\">"
         ],
-        "title": "Top Open Source SSO Providers to Know in 2025",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/sso-providers\"\n            },\n            \"headline\": \"Compare the best open source SSO providers in 2025 and learn how to pick the right solution for your app’s security and scalability.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Top Open Source SSO Providers to Know in 2025\",\"item\":\"https://supertokens.com/blog/sso-providers\"}]}</script>"
+        "title": "Top Open Source SSO Providers to Know in 2026",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/sso-providers\"\n            },\n            \"headline\": \"Compare the best open source SSO providers in 2025 and learn how to pick the right solution for your app’s security and scalability.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
         "path": "/blog/launch-week-1-recap",
@@ -4687,21 +4687,21 @@
             "",
             "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"Fixing CORS Errors What They Are and How to Resolve Them\" />",
+            "<meta property=\"og:title\" content=\"Fixing CORS Errors: What They Are and How to Resolve Them (2026)\" />",
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/cors-errors\" />",
             "<meta property=\"og:description\" content=\"Learn what causes CORS errors, how they impact your web app, and how to fix them securely with proper headers and backend configurations.\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/cors_errors.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Learn what causes CORS errors, how they impact your web app, and how to fix them securely with proper headers and backend configurations.\" />",
+            "<meta name=\"twitter:title\" content=\"Fixing CORS Errors: What They Are and How to Resolve Them (2026)\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/cors-errors\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/cors_errors.png\" /> ",
             "<!--OG Tags-->",
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/cors-errors\">"
         ],
-        "title": "Fixing CORS Errors What They Are and How to Resolve Them",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/cors-errors\"\n            },\n            \"headline\": \"Learn what causes CORS errors, how they impact your web app, and how to fix them securely with proper headers and backend configurations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/cors_errors.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Fixing CORS Errors What They Are and How to Resolve Them\",\"item\":\"https://supertokens.com/blog/cors-errors\"}]}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"What causes a CORS error?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"A CORS error happens when your browser blocks a cross-origin response because the server didn't include the required Access-Control-Allow-Origin header. The request often still completes on the server — CORS blocks your JavaScript from reading the response, not the request itself.\"}},{\"@type\":\"Question\",\"name\":\"How do I fix 'No Access-Control-Allow-Origin header is present'?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"This is fixed on the server, not the client — add the Access-Control-Allow-Origin header with your frontend's exact origin in the server's response. For third-party APIs you don't control, you'll need a proxy server instead.\"}},{\"@type\":\"Question\",\"name\":\"Can I fix a CORS error from the frontend?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No — CORS headers are set by the server and the browser ignores any Access-Control-Allow-Origin header you try to add in a fetch() call. During development you can route requests through a local proxy so they appear same-origin instead.\"}},{\"@type\":\"Question\",\"name\":\"Why can't I use a wildcard origin with credentials?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Browsers reject Access-Control-Allow-Origin: * whenever a request's credentials mode is 'include'. When cookies or auth headers are sent cross-origin, the server must specify an exact origin and return Access-Control-Allow-Credentials: true.\"}},{\"@type\":\"Question\",\"name\":\"What's the difference between a simple request and a preflighted request?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Simple requests (GET/HEAD/POST with no custom headers) go straight through, and the browser checks the CORS header afterward. Preflighted requests — anything with custom headers, other HTTP methods, or a JSON content type — trigger an OPTIONS check first to confirm the server allows them.\"}}]}</script>"
+        "title": "Fixing CORS Errors: What They Are and How to Resolve Them (2026)",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/cors-errors\"\n            },\n            \"headline\": \"Learn what causes CORS errors, how they impact your web app, and how to fix them securely with proper headers and backend configurations.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/cors_errors.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
         "path": "/blog/webauthn-explained",
@@ -4779,21 +4779,21 @@
             "",
             "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"What Is a YubiKey and When to Use It vs. Authenticator Apps\" />",
+            "<meta property=\"og:title\" content=\"What Is a YubiKey and When to Use It vs. Authenticator Apps (2026)\" />",
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/yubikeys\" />",
             "<meta property=\"og:description\" content=\"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what_is_a_yubikey.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\" />",
+            "<meta name=\"twitter:title\" content=\"What Is a YubiKey and When to Use It vs. Authenticator Apps (2026)\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/yubikeys\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what_is_a_yubikey.png\" /> ",
             "<!--OG Tags-->",
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/yubikeys\">"
         ],
-        "title": "What Is a YubiKey and When to Use It vs. Authenticator Apps",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/yubikeys\"\n            },\n            \"headline\": \"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/what_is_a_yubikey.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"What Is a YubiKey and When to Use It vs. Authenticator Apps\",\"item\":\"https://supertokens.com/blog/yubikeys\"}]}</script>"
+        "title": "What Is a YubiKey and When to Use It vs. Authenticator Apps (2026)",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/yubikeys\"\n            },\n            \"headline\": \"Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/what_is_a_yubikey.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
         "path": "/blog/authentication-protocols",
@@ -4865,6 +4865,52 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"\n            },\n            \"headline\": \"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Clerk Pricing - The Complete Guide\",\"item\":\"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"}]}</script>"
     },
     {
+        "path": "/blog/oauth-flows",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Understand different OAuth flows, when to use each, and how SuperTokens supports secure OAuth integration.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"OAuth Flows Explained: How They Work and When to Use Them\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/oauth-flows\" />",
+            "<meta property=\"og:description\" content=\"Understand different OAuth flows, when to use each, and how SuperTokens supports secure OAuth integration.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/oauth-flows.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Understand different OAuth flows, when to use each, and how SuperTokens supports secure OAuth integration.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/oauth-flows\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/oauth-flows.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/oauth-flows\">"
+        ],
+        "title": "OAuth Flows Explained: How They Work and When to Use Them",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/oauth-flows\"\n            },\n            \"headline\": \"Understand different OAuth flows, when to use each, and how SuperTokens supports secure OAuth integration.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/oauth-flows.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {  
+        "path": "/blog/session-hijacking-fixation",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Stop session hijacking and fixation with a layered plan: timeouts, cookie flags, rotation, and SuperTokens’ theft detection for secure authentication sessions.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Mastering Session Security: SuperTokens’ Attack Mitigation\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/session-hijacking-fixation\" />",
+            "<meta property=\"og:description\" content=\"Stop session hijacking and fixation with a layered plan: timeouts, cookie flags, rotation, and SuperTokens’ theft detection for secure authentication sessions.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/session-hijacking-fixation.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Stop session hijacking and fixation with a layered plan: timeouts, cookie flags, rotation, and SuperTokens’ theft detection for secure authentication sessions.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/session-hijacking-fixation\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/session-hijacking-fixation.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/session-hijacking-fixation\">"
+        ],
+        "title": "Mastering Session Security: SuperTokens’ Attack Mitigation",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/session-hijacking-fixation\"\n            },\n            \"headline\": \"Stop session hijacking and fixation with a layered plan: timeouts, cookie flags, rotation, and SuperTokens’ theft detection for secure authentication sessions.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/session-hijacking-fixation.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {    
         "path": "/blog/secure-multi-tenant-auth",
         "metaTags": [
             "<meta name=\"description\" content=\"For B2B SaaS and platform builders shipping tenant-aware authentication, SSO, and least-privilege access with open-source ergonomics and enterprise guarantees.\" />",

@@ -1,5 +1,5 @@
 ---
-title: What is a JWT? Understanding JSON Web Tokens 
+title: "What is a JWT? Understanding JSON Web Tokens (2026 Guide)"
 date: "2024-08-02"
 description: "Explore JWT tokens: secure, compact credentials for modern web authentication. Learn how they work, their benefits, and best practices for implementing them in your applications."
 cover: "what-is-jwt-cover.png"
@@ -190,9 +190,9 @@ Always verify both the **structure** and **signature** before trusting a decoded
 - **Mobile and Offline Ready** → Works with limited connectivity.
 
 ### Key Best Practices
-- Use **RS256** or **ES256** over weak algorithms.  
+- Use **[RS256 or ES256](https://supertokens.com/blog/rs256-vs-hs256)** over weak algorithms.  
 - Avoid storing sensitive data in the payload.  
-- Store JWTs in **HttpOnly cookies** instead of `localStorage`.  
+- Store JWTs in **[HttpOnly cookies instead of `localStorage`](https://supertokens.com/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know)**.  
 - Implement **token rotation** for added security.  
 - Rotate signing keys periodically.
 
@@ -235,4 +235,6 @@ Try the [SuperTokens JWT Encoder/Decoder Tool](https://supertokens.com/jwt-encod
 - [OAuth vs JWT: Key Differences Explained](https://supertokens.com/blog/oauth-vs-jwt)  
 - [Revoking Access with a JWT Blacklist](https://supertokens.com/blog/revoking-access-with-a-jwt-blacklist)  
 - [OpenID Connect & JWT Usage](https://openid.net/connect/)  
-- [Best Way to Securely Manage User Sessions](https://supertokens.com/blog/the-best-way-to-securely-manage-user-sessions)
+- [Best Way to Securely Manage User Sessions](https://supertokens.com/blog/the-best-way-to-securely-manage-user-sessions)  
+- [Session-Based Authentication: How It Works](https://supertokens.com/blog/session-based-authentication)  
+- [Token-Based Authentication for APIs: What It Is and How It Works](https://supertokens.com/blog/token-based-authentication-in-api)
