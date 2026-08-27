@@ -4862,7 +4862,30 @@
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/clerk-pricing-the-complete-guide\">"
         ],
         "title": "Clerk Pricing - The Complete Guide",
-        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"\n            },\n            \"headline\": \"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Clerk Pricing - The Complete Guide\",\"item\":\"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"}]}</script>"
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"\n            },\n            \"headline\": \"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
+        "path": "/blog/supertokens-vs-hanko",
+        "metaTags": [
+            "<meta name=\"description\" content=\"SuperTokens vs. Hanko: full-stack B2B authentication compared to passkey-first passwordless. Licensing, pricing, and features.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"SuperTokens vs. Hanko: Full-Stack Authentication vs. Passkey-First Open Source\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/supertokens-vs-hanko\" />",
+            "<meta property=\"og:description\" content=\"SuperTokens vs. Hanko: full-stack B2B authentication compared to passkey-first passwordless. Licensing, pricing, and features.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/supertokens-vs-hanko.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"SuperTokens vs. Hanko: full-stack B2B authentication compared to passkey-first passwordless. Licensing, pricing, and features.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/supertokens-vs-hanko\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/supertokens-vs-hanko.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/supertokens-vs-hanko\">"
+        ],
+        "title": "SuperTokens vs. Hanko: Full-Stack Authentication vs. Passkey-First Open Source",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/supertokens-vs-hanko\"\n            },\n            \"headline\": \"SuperTokens vs. Hanko: full-stack B2B authentication compared to passkey-first passwordless. Licensing, pricing, and features.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/supertokens-vs-hanko.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
         "path": "/blog/oauth-flows",
