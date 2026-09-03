@@ -4887,7 +4887,7 @@
         "title": "OAuth Flows Explained: How They Work and When to Use Them",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/oauth-flows\"\n            },\n            \"headline\": \"Understand different OAuth flows, when to use each, and how SuperTokens supports secure OAuth integration.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/oauth-flows.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    {  
+    {
         "path": "/blog/session-hijacking-fixation",
         "metaTags": [
             "<meta name=\"description\" content=\"Stop session hijacking and fixation with a layered plan: timeouts, cookie flags, rotation, and SuperTokens’ theft detection for secure authentication sessions.\" />",
@@ -4910,7 +4910,7 @@
         "title": "Mastering Session Security: SuperTokens’ Attack Mitigation",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/session-hijacking-fixation\"\n            },\n            \"headline\": \"Stop session hijacking and fixation with a layered plan: timeouts, cookie flags, rotation, and SuperTokens’ theft detection for secure authentication sessions.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/session-hijacking-fixation.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
-    {    
+    {
         "path": "/blog/secure-multi-tenant-auth",
         "metaTags": [
             "<meta name=\"description\" content=\"For B2B SaaS and platform builders shipping tenant-aware authentication, SSO, and least-privilege access with open-source ergonomics and enterprise guarantees.\" />",
@@ -5323,5 +5323,28 @@
         ],
         "title": "What Is the WebAuthn API (and How to Use It in Your Auth Flow)",
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/webauthin-api\"\n            },\n            \"headline\": \"Learn how the WebAuthn API enables passwordless, phishing-resistant login. Get step-by-step code and how to plug it into your auth stack.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/webauthn_api.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"What Is the WebAuthn API (and How to Use It in Your Auth Flow)\",\"item\":\"https://supertokens.com/blog/webauthin-api\"}]}</script>"
+    },
+    {
+        "path": "/blog/how-do-i-add-auth-nextjs-app",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how to add authentication to your Next.js app. Step-by-step guide on login, signup, and sessions with SuperTokens.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How do I add authentication to a Next.js app with SuperTokens?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/how-do-i-add-auth-nextjs-app\" />",
+            "<meta property=\"og:description\" content=\"Learn how to add authentication to your Next.js app. Step-by-step guide on login, signup, and sessions with SuperTokens.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how to add authentication to your Next.js app. Step-by-step guide on login, signup, and sessions with SuperTokens.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/how-do-i-add-auth-nextjs-app\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/how-do-i-add-auth-nextjs-app\">"
+        ],
+        "title": "How do I add authentication to a Next.js app with SuperTokens?",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/how-do-i-add-auth-nextjs-app\"\n            },\n            \"headline\": \"Learn how to add authentication to your Next.js app. Step-by-step guide on login, signup, and sessions with SuperTokens.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/TODO.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>\n<script type=\"application/ld+json\">\n        {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"BreadcrumbList\",\n            \"itemListElement\": [\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 1,\n                    \"name\": \"Home\",\n                    \"item\": \"https://supertokens.com\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 2,\n                    \"name\": \"Blog\",\n                    \"item\": \"https://supertokens.com/blog\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 3,\n                    \"name\": \"How do I add authentication to a Next.js app with SuperTokens?\",\n                    \"item\": \"https://supertokens.com/blog/how-do-i-add-auth-nextjs-app\"\n                }\n            ]\n        }</script>"
     }
 ]
