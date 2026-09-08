@@ -1,7 +1,7 @@
 ---
-title: Demystifying HTTP Error Codes 401 vs 403
+title: "Demystifying HTTP Error Codes: 401 vs 403 (2026)"
 date: "2023-09-01"
-description: "In this blog we will go over the http protocol error codes 401 and 403 and describe when is it appropriate to use each of them."
+description: "Learn the difference between HTTP 401 Unauthorized and 403 Forbidden errors, when each applies, and how to handle them correctly in your app."
 cover: "http-error-codes-401-vs-403.png"
 category: "programming"
 author: "Joel Coutinho"
@@ -49,5 +49,13 @@ While both HTTP error codes indicate access denial, their fundamental difference
 
 To summarize the main difference between the two, although both status codes represent access denial, 401 errors address authentication issues, and 403 errors point towards authorization problems.
 It is important to make this distinction as incorrectly handling these responses can leave you susceptible to exploits from malicious attackers.  
+
+Getting these responses right in practice comes down to how you handle authentication and authorization. A dedicated auth solution like [SuperTokens](https://supertokens.com) manages [user sessions](https://supertokens.com/blog/session-based-authentication) and role-based access control for you, so your app returns the correct 401 vs. 403 response consistently instead of leaving it to ad-hoc checks.
+
+## Related reading
+
+- [What Is a 502 Bad Gateway Error and How to Fix It](https://supertokens.com/blog/what-is-502-bad-gateway-error)
+- [How to Fix CORS Errors](https://supertokens.com/blog/cors-errors)
+- [Session-Based Authentication: How It Works](https://supertokens.com/blog/session-based-authentication)
 
 

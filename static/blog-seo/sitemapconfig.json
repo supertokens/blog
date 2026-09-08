@@ -309,6 +309,15 @@
         "location": "https://supertokens.com/blog/identity-and-access-management-strategy"
     },
     {
+        "location": "https://supertokens.com/blog/react-bootstrap-forms"
+    },
+    {
+        "location": "https://supertokens.com/blog/saml-vs-sso"
+    },
+    {    
+        "location": "https://supertokens.com/blog/the-hidden-cost-of-building-your-own-auth-stacks"
+    },
+    {
         "location": "https://supertokens.com/blog/frontegg-vs-auth0-vs-fusionauth"
     },
     {
@@ -519,21 +528,36 @@
         "location": "https://supertokens.com/blog/clerk-pricing-the-complete-guide"
     },
     {
+        "location": "https://supertokens.com/blog/what-are-passkeys"
+    },
+    {
+        "location": "https://supertokens.com/blog/passkeys-vs-passwords-vs-magic-links"
+    },
+    {
+        "location": "https://supertokens.com/blog/oauth-flows"
+    },
+    {  
+        "location": "https://supertokens.com/blog/session-hijacking-fixation"
+    },
+    {    
+        "location": "https://supertokens.com/blog/secure-multi-tenant-auth"
+    },
+    {
         "location": "https://supertokens.com/blog/auth-for-ai-agents"
     },
     {
         "location": "https://supertokens.com/blog/build-vs-buy"
     },
-    {    
+    {
         "location": "https://supertokens.com/blog/migrate-from-auth0"
     },
     {
         "location": "https://supertokens.com/blog/how-to-ban-users"
     },
-    {    
+    {
         "location": "https://supertokens.com/blog/auth0-open-source"
     },
-    {   
+    {
         "location": "https://supertokens.com/blog/migrate-from-auth0"
     },
     {
@@ -562,5 +586,14 @@
     },
     {
         "location": "https://supertokens.com/blog/scim-provisioning-explained"
+    },
+    {
+        "location": "https://supertokens.com/blog/self-hosted-auth-solutions-in-2026"
+    },
+    {
+        "location": "https://supertokens.com/blog/evergreen-hosting-announcement"
+    },
+    {
+        "location": "https://supertokens.com/blog/webauthin-api"
     }
 ]

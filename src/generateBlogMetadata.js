@@ -78,6 +78,31 @@ function appendBlogMetadataToFile(frontmatter, urlSlug, outputFilePath) {
                     "url": "https://supertokens.com/static/assets/dark-home/logo.png"
                 }
             }
+        }</script>
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://supertokens.com"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Blog",
+                    "item": "https://supertokens.com/blog"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "${title}",
+                    "item": "https://supertokens.com/blog/${urlSlug}"
+                }
+            ]
         }</script>`
     };
 
