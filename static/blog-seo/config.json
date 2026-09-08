@@ -4865,6 +4865,29 @@
         "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"\n            },\n            \"headline\": \"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
     },
     {
+        "path": "/blog/what-are-passkeys",
+        "metaTags": [
+            "<meta name=\"description\" content=\"A developer's guide to passkeys: what they are cryptographically, how WebAuthn and FIDO2 fit together, and where the real trade-offs live.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What Are Passkeys? A Developer's Guide to WebAuthn and FIDO2\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/what-are-passkeys\" />",
+            "<meta property=\"og:description\" content=\"A developer's guide to passkeys: what they are cryptographically, how WebAuthn and FIDO2 fit together, and where the real trade-offs live.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-are-passkeys.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"A developer's guide to passkeys: what they are cryptographically, how WebAuthn and FIDO2 fit together, and where the real trade-offs live.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/what-are-passkeys\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-are-passkeys.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/what-are-passkeys\">"
+        ],
+        "title": "What Are Passkeys? A Developer's Guide to WebAuthn and FIDO2",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/what-are-passkeys\"\n            },\n            \"headline\": \"A developer's guide to passkeys: what they are cryptographically, how WebAuthn and FIDO2 fit together, and where the real trade-offs live.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/what-are-passkeys.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {
         "path": "/blog/passkeys-vs-passwords-vs-magic-links",
         "metaTags": [
             "<meta name=\"description\" content=\"Passwords, magic links, OTP, and passkeys compared on phishing resistance, UX friction, and recovery, with a framework for picking one.\" />",
