@@ -61,6 +61,15 @@ author: "John Doe"
     - Must have the same name.
     - This name should be specified in the frontmatter's `cover` property.
 - **category:** The `category` property should be a string having all the categories for the blog post separated by a comma. For e.g. if we want a post that is visible in the _Featured_ and _Sessions_ tabs, the value would be `featured, sessions`.
+    - Category has the following filters:
+      - **Authentication & Identity**
+      - **Security & Compliance**
+      - **Developer Guides & Tutorials**
+      - **Product Updates & Announcements**
+      - **Company News & Events**
+      - **Case Studies & Customer Stories**
+      - **Industry Insights & Trends**
+
 - **author:** Name of the author of this post.
 
 #### Content for the post
