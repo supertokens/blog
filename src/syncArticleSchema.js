@@ -1,15 +1,15 @@
 /**
  * Updates the Article JSON-LD of every post in static/blog-seo/config.json with the post's
- * datePublished, dateModified and author, read from each post's frontmatter.
+ * headline, datePublished, dateModified and author, read from each post's frontmatter.
  *
- * Run after changing a post's `date`, `updated` or `author` frontmatter:
+ * Run after changing a post's `title`, `date`, `updated` or `author` frontmatter:
  *   node src/syncArticleSchema.js
  *
  * Safe to re-run: it only rewrites the Article block and leaves every other JSON-LD block as is.
  */
 const fs = require('fs');
 const path = require('path');
-const { applyPostMetadata } = require('./articleSchema');
+const { applyPostMetadata, buildHeadline } = require('./articleSchema');
 
 const CONTENT_DIR = path.join(__dirname, "../", "content");
 const CONFIG_PATH = path.join(__dirname, "../", "static", "blog-seo", "config.json");
@@ -59,6 +59,10 @@ for (const entry of config) {
             return block;
         }
         updatedCount++;
+        if (frontmatter.title) {
+            // The headline must match the post's visible title (not its description or another post's title).
+            parsed.headline = buildHeadline(frontmatter.title);
+        }
         return `${open}\n${JSON.stringify(applyPostMetadata(parsed, frontmatter))}${close}`;
     });
 }
