@@ -1480,29 +1480,6 @@
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/cognito-alternatives\"},\"headline\":\"Cognito Alternatives: Access Services That Pair With Any Set-Up\",\"image\":\"https://supertokens.com/blog-meta-images/cognito-alternatives.png\",\"datePublished\":\"2024-06-04\",\"dateModified\":\"2024-06-04\",\"author\":{\"@type\":\"Person\",\"name\":\"Dejan Lukic\",\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Cognito Alternatives: Access Services That Pair With Any Set-Up\",\"item\":\"https://supertokens.com/blog/cognito-alternatives\"}]}</script>"
     },
     {
-        "path": "/blog/stytch-alternatives",
-        "metaTags": [
-            "<meta name=\"author\" content=\"Mostafa Ibrahim\" /> ",
-            "<meta name=\"description\" content=\"This blog explores top Stytch alternatives for user access management, including SuperTokens, Auth0, and Firebase Authentication. We compare their features, flexibility, and pricing to help you choose the right solution. We also discuss open-source vs. proprietary systems and the benefits of building a custom security flow vs. using ready-made software.\" />",
-            "",
-            "<meta name=\"keywords\" content=\"Stytch alternatives, SuperTokens vs Stytch, Auth0 vs Stytch, user access management\" />",
-            "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"Stytch Alternatives For More Flexible User Access\" />",
-            "<meta property=\"og:type\" content=\"article\" />",
-            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/stytch-alternatives\" />",
-            "<meta property=\"og:description\" content=\"This blog explores top Stytch alternatives for user access management, including SuperTokens, Auth0, and Firebase Authentication. We compare their features, flexibility, and pricing to help you choose the right solution. We also discuss open-source vs. proprietary systems and the benefits of building a custom security flow vs. using ready-made software.\" /\"/>",
-            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/stytch-alternatives.png\" />",
-            "",
-            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Stytch Alternatives For More Flexible User Access/>",
-            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/stytch-alternatives\" />",
-            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/stytch-alternatives.png\" /> ",
-            "<!--OG Tags-->"
-        ],
-        "title": "Stytch Alternatives For More Flexible User Access",
-        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/stytch-alternatives\"},\"headline\":\"Cognito Alternatives: Access Services That Pair With Any Set-Up\",\"image\":\"https://supertokens.com/blog-meta-images/stytch-alternatives.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Stytch Alternatives For More Flexible User Access\",\"item\":\"https://supertokens.com/blog/stytch-alternatives\"}]}</script>"
-    },
-    {
         "path": "/blog/auth0-alternatives",
         "metaTags": [
             "<meta name=\"author\" content=\"Mostafa Ibrahim\" /> ",
@@ -1974,7 +1951,7 @@
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/user-authentication-in-node\"},\"headline\":\"How to Authenticate and Authorize Users in a Node.js Express App\",\"description\":\"A step by step guide on how to Authenticate and Authorize Users in a Node.js Express App\",\"image\":\"https://supertokens.com/blog-meta-images/user-authentication-in-node.png\",\"datePublished\":\"2024-11-02\",\"dateModified\":\"2024-11-02\",\"author\":{\"@type\":\"Person\",\"name\":\"Mostafa Ibrahim\",\"jobTitle\":\"Senior Software Engineer\",\"url\":\"https://twitter.com/mostafa41490059?\",\"sameAs\":[\"https://twitter.com/mostafa41490059?\",\"https://www.linkedin.com/in/mostafa-ibrahim-948004151/\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Authenticate and Authorize Users in a Node.js Express App\",\"item\":\"https://supertokens.com/blog/user-authentication-in-node\"}]}</script>"
     },
     {
-        "path": "/blog/7-common-iam-risks-and-how-to-avoid-theme",
+        "path": "/blog/7-common-iam-risks-and-how-to-avoid-them",
         "metaTags": [
             "<meta name=\"description\" content=\"Reveal the 7 critical IAM risks that pose a threat to your business. Discover actionable advice to reduce these risks and strengthen your security measures.\" />",
             "",
@@ -1982,20 +1959,20 @@
             "<!--OG Tags-->",
             "<meta property=\"og:title\" content=\"7 Common IAM Risks and How to Avoid Them\" />",
             "<meta property=\"og:type\" content=\"article\" />",
-            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/7-common-iam-risks-and-how-to-avoid-theme\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/7-common-iam-risks-and-how-to-avoid-them\" />",
             "<meta property=\"og:description\" content=\"Reveal the 7 critical IAM risks that pose a threat to your business. Discover actionable advice to reduce these risks and strengthen your security measures.\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/7-common-iam-risks-and-how-to-avoid-theme.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
             "<meta name=\"twitter:title\" content=\"7 Common IAM Risks and How to Avoid Them\" />",
             "<meta name=\"twitter:description\" content=\"Reveal the 7 critical IAM risks that pose a threat to your business. Discover actionable advice to reduce these risks and strengthen your security measures.\" />",
-            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/7-common-iam-risks-and-how-to-avoid-theme\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/7-common-iam-risks-and-how-to-avoid-them\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/7-common-iam-risks-and-how-to-avoid-theme.png\" /> ",
             "<!--OG Tags-->",
-            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/7-common-iam-risks-and-how-to-avoid-theme\">"
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/7-common-iam-risks-and-how-to-avoid-them\">"
         ],
         "title": "7 Common IAM Risks and How to Avoid Them",
-        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/7-common-iam-risks-and-how-to-avoid-theme\"},\"headline\":\"7 Common IAM Risks and How to Avoid Them\",\"description\":\"Reveal the 7 critical IAM risks that pose a threat to your business. Discover actionable advice to reduce these risks and strengthen your security measures.\",\"image\":\"https://supertokens.com/blog-meta-images/7-common-iam-risks-and-how-to-avoid-theme.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"7 Common IAM Risks and How to Avoid Them\",\"item\":\"https://supertokens.com/blog/7-common-iam-risks-and-how-to-avoid-theme\"}]}</script>"
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/7-common-iam-risks-and-how-to-avoid-them\"},\"headline\":\"7 Common IAM Risks and How to Avoid Them\",\"description\":\"Reveal the 7 critical IAM risks that pose a threat to your business. Discover actionable advice to reduce these risks and strengthen your security measures.\",\"image\":\"https://supertokens.com/blog-meta-images/7-common-iam-risks-and-how-to-avoid-theme.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"7 Common IAM Risks and How to Avoid Them\",\"item\":\"https://supertokens.com/blog/7-common-iam-risks-and-how-to-avoid-them\"}]}</script>"
     },
     {
         "path": "/blog/flask-user-authentication",
@@ -3068,7 +3045,7 @@
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/express-session-vs-supertokens-for-handling-user-sessions\"},\"headline\":\"Express-session vs SuperTokens for handling user sessions\",\"description\":\"Learn the pros and cons of using Express Session vs SuperTokens. Find out which solution offers better session management for your project.\",\"image\":\"https://supertokens.com/blog-meta-images/express-session-vs-supertokens-for-handling-user-sessions.png\",\"datePublished\":\"2020-06-11\",\"dateModified\":\"2020-06-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Advait Ruia\",\"jobTitle\":\"Co-Founder and CEO at SuperTokens\",\"url\":\"https://twitter.com/Advait_Ruia\",\"sameAs\":[\"https://twitter.com/Advait_Ruia\",\"https://www.linkedin.com/in/advait-ruia-2aa52a85/\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Express Session vs SuperTokens: Which One to Use?\",\"item\":\"https://supertokens.com/blog/express-session-vs-supertokens-for-handling-user-sessions\"}]}</script>"
     },
     {
-        "path": "/blog/should-you-use-express-session-for-your-production-ap",
+        "path": "/blog/should-you-use-express-session-for-your-production-app",
         "metaTags": [
             "<meta name=\"description\" content=\"Explore the challenges of using Express Session in production apps. Learn when to switch to more scalable solutions like SuperTokens.\" />",
             "",
@@ -3076,20 +3053,20 @@
             "<!--OG Tags-->",
             "<meta property=\"og:title\" content=\"Express Session in Production: Is It Right for You? | SuperTokens\" />",
             "<meta property=\"og:type\" content=\"article\" />",
-            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/should-you-use-express-session-for-your-production-ap\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/should-you-use-express-session-for-your-production-app\" />",
             "<meta property=\"og:description\" content=\"Explore the challenges of using Express Session in production apps. Learn when to switch to more scalable solutions like SuperTokens.\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/should-you-use-express-session-for-your-production-ap.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
             "<meta name=\"twitter:title\" content=\"Express Session in Production: Is It Right for You? | SuperTokens\" />",
             "<meta name=\"twitter:description\" content=\"Explore the challenges of using Express Session in production apps. Learn when to switch to more scalable solutions like SuperTokens.\" />",
-            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/should-you-use-express-session-for-your-production-ap\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/should-you-use-express-session-for-your-production-app\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/should-you-use-express-session-for-your-production-ap.png\" /> ",
             "<!--OG Tags-->",
-            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/should-you-use-express-session-for-your-production-ap\">"
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/should-you-use-express-session-for-your-production-app\">"
         ],
         "title": "Express Session in Production: Is It Right for You? | SuperTokens",
-        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/should-you-use-express-session-for-your-production-ap\"},\"headline\":\"Express Session in Production: Is It Right for You? | SuperTokens\",\"description\":\"Explore the challenges of using Express Session in production apps. Learn when to switch to more scalable solutions like SuperTokens.\",\"image\":\"https://supertokens.com/blog-meta-images/should-you-use-express-session-for-your-production-ap.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Express Session in Production: Is It Right for You?\",\"item\":\"https://supertokens.com/blog/should-you-use-express-session-for-your-production-ap\"}]}</script>"
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/should-you-use-express-session-for-your-production-app\"},\"headline\":\"Express Session in Production: Is It Right for You? | SuperTokens\",\"description\":\"Explore the challenges of using Express Session in production apps. Learn when to switch to more scalable solutions like SuperTokens.\",\"image\":\"https://supertokens.com/blog-meta-images/should-you-use-express-session-for-your-production-ap.png\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Express Session in Production: Is It Right for You?\",\"item\":\"https://supertokens.com/blog/should-you-use-express-session-for-your-production-app\"}]}</script>"
     },
     {
         "path": "/blog/speed-up-your-web-development-time-by-integrating-webflow-into-a-react-application",
@@ -5118,29 +5095,6 @@
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/better-auth\"},\"headline\":\"What Is Better Auth and Who's It For?\",\"image\":\"https://supertokens.com/blog-meta-images/better-auth.png\",\"datePublished\":\"2026-01-26\",\"dateModified\":\"2026-01-26\",\"author\":{\"@type\":\"Person\",\"name\":\"Mostafa Ibrahim\",\"jobTitle\":\"Senior Software Engineer\",\"url\":\"https://twitter.com/mostafa41490059?\",\"sameAs\":[\"https://twitter.com/mostafa41490059?\",\"https://www.linkedin.com/in/mostafa-ibrahim-948004151/\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"What Is Better Auth and Who's It For?\",\"item\":\"https://supertokens.com/blog/better-auth\"}]}</script>"
     },
     {
-        "path": "/blog/captcha-supertokens",
-        "metaTags": [
-            "<meta name=\"description\" content=\" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\" />",
-            "",
-            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
-            "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"How Do I Add CAPTCHA to My Login Page?\" />",
-            "<meta property=\"og:type\" content=\"article\" />",
-            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/captcha-supertokens\" />",
-            "<meta property=\"og:description\" content=\" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\"/>",
-            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/captcha-supertokens.png\" />",
-            "",
-            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\" />",
-            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/captcha-supertokens\" />",
-            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/captcha-supertokens.png\" /> ",
-            "<!--OG Tags-->",
-            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/captcha-supertokens\">"
-        ],
-        "title": "How Do I Add CAPTCHA to My Login Page?",
-        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/captcha-supertokens\"},\"headline\":\"How Do I Add CAPTCHA to My Login Page?\",\"image\":\"https://supertokens.com/blog-meta-images/captcha-supertokens.png\",\"datePublished\":\"2025-12-26\",\"dateModified\":\"2025-12-26\",\"author\":{\"@type\":\"Person\",\"name\":\"Mostafa Ibrahim\",\"jobTitle\":\"Senior Software Engineer\",\"url\":\"https://twitter.com/mostafa41490059?\",\"sameAs\":[\"https://twitter.com/mostafa41490059?\",\"https://www.linkedin.com/in/mostafa-ibrahim-948004151/\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How Do I Add CAPTCHA to My Login Page?\",\"item\":\"https://supertokens.com/blog/captcha-supertokens\"}]}</script>"
-    },
-    {
         "path": "/blog/clerk-migration",
         "metaTags": [
             "<meta name=\"description\" content=\" Step-by-step guide on migrating from Clerk to SuperTokens&mdash;covering trickle, bulk import, export scripts, sessions, and security.\" />",
@@ -5369,5 +5323,166 @@
         ],
         "title": "What Is the WebAuthn API (and How to Use It in Your Auth Flow)",
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/webauthin-api\"},\"headline\":\"What Is the WebAuthn API (and How to Use It in Your Auth Flow)\",\"image\":\"https://supertokens.com/blog-meta-images/webauthn_api.png\",\"datePublished\":\"2026-06-09\",\"dateModified\":\"2026-06-09\",\"author\":{\"@type\":\"Person\",\"name\":\"Maurice Saldivar\",\"jobTitle\":\"Technical Writer\",\"url\":\"https://github.com/msaldivar\",\"sameAs\":[\"https://github.com/msaldivar\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"What Is the WebAuthn API (and How to Use It in Your Auth Flow)\",\"item\":\"https://supertokens.com/blog/webauthin-api\"}]}</script>"
+    },
+    {
+        "path": "/blog/auth-bypass",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn what authentication bypass is, how attackers exploit it, and how to secure your apps against auth bypass vulnerabilities.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What Is Authentication Bypass?\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/auth-bypass\" />",
+            "<meta property=\"og:description\" content=\"Learn what authentication bypass is, how attackers exploit it, and how to secure your apps against auth bypass vulnerabilities.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/authentication_bypass.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn what authentication bypass is, how attackers exploit it, and how to secure your apps against auth bypass vulnerabilities.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/auth-bypass\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/authentication_bypass.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/auth-bypass\">"
+        ],
+        "title": "What Is Authentication Bypass?",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/auth-bypass\"},\"headline\":\"What Is Authentication Bypass?\",\"description\":\"Learn what authentication bypass is, how attackers exploit it, and how to secure your apps against auth bypass vulnerabilities.\",\"image\":\"https://supertokens.com/blog-meta-images/authentication_bypass.png\",\"datePublished\":\"2025-05-23\",\"dateModified\":\"2025-05-23\",\"author\":{\"@type\":\"Person\",\"name\":\"Mostafa Ibrahim\",\"jobTitle\":\"Senior Software Engineer\",\"url\":\"https://twitter.com/mostafa41490059?\",\"sameAs\":[\"https://twitter.com/mostafa41490059?\",\"https://www.linkedin.com/in/mostafa-ibrahim-948004151/\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n        {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"BreadcrumbList\",\n            \"itemListElement\": [\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 1,\n                    \"name\": \"Home\",\n                    \"item\": \"https://supertokens.com\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 2,\n                    \"name\": \"Blog\",\n                    \"item\": \"https://supertokens.com/blog\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 3,\n                    \"name\": \"What Is Authentication Bypass?\",\n                    \"item\": \"https://supertokens.com/blog/auth-bypass\"\n                }\n            ]\n        }</script>"
+    },
+    {
+        "path": "/blog/auth0-sso",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Learn how Auth0 SSO works, where it falls short, and discover a simpler open-source alternative for modern authentication flows.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Auth0 SSO: Setup and Tips\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/auth0-sso\" />",
+            "<meta property=\"og:description\" content=\"Learn how Auth0 SSO works, where it falls short, and discover a simpler open-source alternative for modern authentication flows.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/auth0_sso.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Learn how Auth0 SSO works, where it falls short, and discover a simpler open-source alternative for modern authentication flows.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/auth0-sso\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/auth0_sso.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/auth0-sso\">"
+        ],
+        "title": "Auth0 SSO: Setup and Tips",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/auth0-sso\"},\"headline\":\"Auth0 SSO: Setup and Tips\",\"description\":\"Learn how Auth0 SSO works, where it falls short, and discover a simpler open-source alternative for modern authentication flows.\",\"image\":\"https://supertokens.com/blog-meta-images/auth0_sso.png\",\"datePublished\":\"2025-05-14\",\"dateModified\":\"2025-05-14\",\"author\":{\"@type\":\"Person\",\"name\":\"Mostafa Ibrahim\",\"jobTitle\":\"Senior Software Engineer\",\"url\":\"https://twitter.com/mostafa41490059?\",\"sameAs\":[\"https://twitter.com/mostafa41490059?\",\"https://www.linkedin.com/in/mostafa-ibrahim-948004151/\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n        {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"BreadcrumbList\",\n            \"itemListElement\": [\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 1,\n                    \"name\": \"Home\",\n                    \"item\": \"https://supertokens.com\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 2,\n                    \"name\": \"Blog\",\n                    \"item\": \"https://supertokens.com/blog\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 3,\n                    \"name\": \"Auth0 SSO: Setup and Tips\",\n                    \"item\": \"https://supertokens.com/blog/auth0-sso\"\n                }\n            ]\n        }</script>"
+    },
+    {
+        "path": "/blog/cheapest-auth-alternatives",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Looking for the cheapest Auth0 alternatives? See free and low-cost options (OSS + managed), pricing gotchas, and when SuperTokens is the better fit.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Cheapest Auth0 Alternatives (2026): Open Source and Low-Cost Picks\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/cheapest-auth-alternatives\" />",
+            "<meta property=\"og:description\" content=\"Looking for the cheapest Auth0 alternatives? See free and low-cost options (OSS + managed), pricing gotchas, and when SuperTokens is the better fit.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/cheapest-auth-alternatives.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Looking for the cheapest Auth0 alternatives? See free and low-cost options (OSS + managed), pricing gotchas, and when SuperTokens is the better fit.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/cheapest-auth-alternatives\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/cheapest-auth-alternatives.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/cheapest-auth-alternatives\">"
+        ],
+        "title": "Cheapest Auth0 Alternatives (2026): Open Source and Low-Cost Picks",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/cheapest-auth-alternatives\"},\"headline\":\"Cheapest Auth0 Alternatives (2026): Open Source and Low-Cost Picks\",\"description\":\"Looking for the cheapest Auth0 alternatives? See free and low-cost options (OSS + managed), pricing gotchas, and when SuperTokens is the better fit.\",\"image\":\"https://supertokens.com/blog-meta-images/cheapest-auth-alternatives.png\",\"datePublished\":\"2026-02-13\",\"dateModified\":\"2026-02-13\",\"author\":{\"@type\":\"Person\",\"name\":\"Mostafa Ibrahim\",\"jobTitle\":\"Senior Software Engineer\",\"url\":\"https://twitter.com/mostafa41490059?\",\"sameAs\":[\"https://twitter.com/mostafa41490059?\",\"https://www.linkedin.com/in/mostafa-ibrahim-948004151/\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n        {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"BreadcrumbList\",\n            \"itemListElement\": [\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 1,\n                    \"name\": \"Home\",\n                    \"item\": \"https://supertokens.com\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 2,\n                    \"name\": \"Blog\",\n                    \"item\": \"https://supertokens.com/blog\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 3,\n                    \"name\": \"Cheapest Auth0 Alternatives (2026): Open Source and Low-Cost Picks\",\n                    \"item\": \"https://supertokens.com/blog/cheapest-auth-alternatives\"\n                }\n            ]\n        }</script>"
+    },
+    {
+        "path": "/blog/enterprise-identity-management",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Explore how enterprise identity management works, the challenges it solves, and what features modern orgs need for secure, scalable access control.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"Enterprise Identity Management What You Need to Know in 2025\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/enterprise-identity-management\" />",
+            "<meta property=\"og:description\" content=\"Explore how enterprise identity management works, the challenges it solves, and what features modern orgs need for secure, scalable access control.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/EIM.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Explore how enterprise identity management works, the challenges it solves, and what features modern orgs need for secure, scalable access control.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/enterprise-identity-management\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/EIM.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/enterprise-identity-management\">"
+        ],
+        "title": "Enterprise Identity Management What You Need to Know in 2025",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/enterprise-identity-management\"},\"headline\":\"Enterprise Identity Management What You Need to Know in 2025\",\"description\":\"Explore how enterprise identity management works, the challenges it solves, and what features modern orgs need for secure, scalable access control.\",\"image\":\"https://supertokens.com/blog-meta-images/EIM.png\",\"datePublished\":\"2025-12-05\",\"dateModified\":\"2025-12-05\",\"author\":{\"@type\":\"Person\",\"name\":\"Maurice Saldivar\",\"jobTitle\":\"Technical Writer\",\"url\":\"https://github.com/msaldivar\",\"sameAs\":[\"https://github.com/msaldivar\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n        {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"BreadcrumbList\",\n            \"itemListElement\": [\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 1,\n                    \"name\": \"Home\",\n                    \"item\": \"https://supertokens.com\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 2,\n                    \"name\": \"Blog\",\n                    \"item\": \"https://supertokens.com/blog\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 3,\n                    \"name\": \"Enterprise Identity Management What You Need to Know in 2025\",\n                    \"item\": \"https://supertokens.com/blog/enterprise-identity-management\"\n                }\n            ]\n        }</script>"
+    },
+    {
+        "path": "/blog/how-to-customise-supertokens-apis",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Any auth solution must provide the ability to customise their APIs. In this blog we discuss how to customise the auth APIs provided by SuperTokens using its “Override” feature\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How to customise SuperTokens APIs\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/how-to-customise-supertokens-apis\" />",
+            "<meta property=\"og:description\" content=\"Any auth solution must provide the ability to customise their APIs. In this blog we discuss how to customise the auth APIs provided by SuperTokens using its “Override” feature\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/how-to-customise-supertokens-apis.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Any auth solution must provide the ability to customise their APIs. In this blog we discuss how to customise the auth APIs provided by SuperTokens using its “Override” feature\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/how-to-customise-supertokens-apis\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/how-to-customise-supertokens-apis.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/how-to-customise-supertokens-apis\">"
+        ],
+        "title": "How to customise SuperTokens APIs",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/how-to-customise-supertokens-apis\"},\"headline\":\"How to customise SuperTokens APIs\",\"description\":\"Any auth solution must provide the ability to customise their APIs. In this blog we discuss how to customise the auth APIs provided by SuperTokens using its “Override” feature\",\"image\":\"https://supertokens.com/blog-meta-images/how-to-customise-supertokens-apis.png\",\"datePublished\":\"2021-12-13\",\"dateModified\":\"2021-12-13\",\"author\":{\"@type\":\"Person\",\"name\":\"Rishabh Poddar\",\"jobTitle\":\"Ex-CTO at SuperTokens\",\"url\":\"https://twitter.com/rishpoddar\",\"sameAs\":[\"https://twitter.com/rishpoddar\",\"https://www.linkedin.com/in/rishabh-poddar-b64b73129/\",\"https://github.com/rishabhpoddar\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n        {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"BreadcrumbList\",\n            \"itemListElement\": [\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 1,\n                    \"name\": \"Home\",\n                    \"item\": \"https://supertokens.com\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 2,\n                    \"name\": \"Blog\",\n                    \"item\": \"https://supertokens.com/blog\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 3,\n                    \"name\": \"How to customise SuperTokens APIs\",\n                    \"item\": \"https://supertokens.com/blog/how-to-customise-supertokens-apis\"\n                }\n            ]\n        }</script>"
+    },
+    {
+        "path": "/blog/launch-week-1",
+        "metaTags": [
+            "<meta name=\"description\" content=\"How we're making authentication easier to work with, one announcement at a time.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"SuperTokens Launch Week: Five Days of Auth Improvements\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/launch-week-1\" />",
+            "<meta property=\"og:description\" content=\"How we're making authentication easier to work with, one announcement at a time.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/launch-week-1-cover.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"How we're making authentication easier to work with, one announcement at a time.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/launch-week-1\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/launch-week-1-cover.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/launch-week-1\">"
+        ],
+        "title": "SuperTokens Launch Week: Five Days of Auth Improvements",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/launch-week-1\"},\"headline\":\"SuperTokens Launch Week: Five Days of Auth Improvements\",\"description\":\"How we're making authentication easier to work with, one announcement at a time.\",\"image\":\"https://supertokens.com/blog-meta-images/launch-week-1-cover.png\",\"datePublished\":\"2025-06-27\",\"dateModified\":\"2025-06-27\",\"author\":{\"@type\":\"Person\",\"name\":\"Darko Bozhinovski\",\"jobTitle\":\" DevRel at SuperTokens\",\"url\":\"https://www.linkedin.com/in/darkobozhinovski/\",\"sameAs\":[\"https://www.linkedin.com/in/darkobozhinovski/\",\"https://twitter.com/d_bozhinovski\",\"https://github.com/DBozhinovski\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n        {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"BreadcrumbList\",\n            \"itemListElement\": [\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 1,\n                    \"name\": \"Home\",\n                    \"item\": \"https://supertokens.com\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 2,\n                    \"name\": \"Blog\",\n                    \"item\": \"https://supertokens.com/blog\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 3,\n                    \"name\": \"SuperTokens Launch Week: Five Days of Auth Improvements\",\n                    \"item\": \"https://supertokens.com/blog/launch-week-1\"\n                }\n            ]\n        }</script>"
+    },
+    {
+        "path": "/blog/step-up-auth",
+        "metaTags": [
+            "<meta name=\"description\" content=\"An in-depth guide to step-up authentication—when to use it and how to implement it to secure high-risk actions in your app.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"What Is Step-Up Authentication? A Guide for Secure Access\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/step-up-auth\" />",
+            "<meta property=\"og:description\" content=\"An in-depth guide to step-up authentication—when to use it and how to implement it to secure high-risk actions in your app.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/what-is-step-up-authentication.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"An in-depth guide to step-up authentication—when to use it and how to implement it to secure high-risk actions in your app.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/step-up-auth\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/what-is-step-up-authentication.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/step-up-auth\">"
+        ],
+        "title": "What Is Step-Up Authentication? A Guide for Secure Access",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/step-up-auth\"},\"headline\":\"What Is Step-Up Authentication? A Guide for Secure Access\",\"description\":\"An in-depth guide to step-up authentication—when to use it and how to implement it to secure high-risk actions in your app.\",\"image\":\"https://supertokens.com/blog-meta-images/what-is-step-up-authentication.png\",\"datePublished\":\"2025-04-30\",\"dateModified\":\"2025-04-30\",\"author\":{\"@type\":\"Person\",\"name\":\"Mostafa Ibrahim\",\"jobTitle\":\"Senior Software Engineer\",\"url\":\"https://twitter.com/mostafa41490059?\",\"sameAs\":[\"https://twitter.com/mostafa41490059?\",\"https://www.linkedin.com/in/mostafa-ibrahim-948004151/\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n        {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"BreadcrumbList\",\n            \"itemListElement\": [\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 1,\n                    \"name\": \"Home\",\n                    \"item\": \"https://supertokens.com\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 2,\n                    \"name\": \"Blog\",\n                    \"item\": \"https://supertokens.com/blog\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 3,\n                    \"name\": \"What Is Step-Up Authentication? A Guide for Secure Access\",\n                    \"item\": \"https://supertokens.com/blog/step-up-auth\"\n                }\n            ]\n        }</script>"
     }
 ]
