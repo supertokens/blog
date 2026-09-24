@@ -12,7 +12,7 @@ author: "Mostafa Ibrahim"
 ## **Introduction**
 
 As digital transformation accelerates, organizations increasingly
-recognize the need for [passwordless authentication solutions](https://supertokens.com/blog/passwordless-authentication)
+recognize the need for [passwordless authentication solutions](https://supertokens.com/blog/what-is-passwordless-authentication)
 to enhance security and improve user experience.
 
 The market for passwordless authentication solutions is showing
