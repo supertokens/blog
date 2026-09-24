@@ -1,5 +1,5 @@
 ---
-title: "Keycloak Guide 2024: Pricing, Features, & Limitations 🔐"
+title: "Keycloak Guide 2024: Pricing, Features, & Limitations"
 date: "2024-12-25"
 description: "Discover Keycloak, a robust open-source IAM solution for enterprise-grade authentication needs like SSO, 2FA, and fine-grained access control. Compare it with SuperTokens, a lightweight, developer-friendly alternative for modern authentication requirements."
 cover: "keycloak-pricing.png"

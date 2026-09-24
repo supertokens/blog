@@ -1,5 +1,5 @@
 ---
-title: "Top Password Cracking Techniques and How to Protect Against Them 🔐"
+title: "Top Password Cracking Techniques and How to Protect Against Them"
 description: "Learn the most common password cracking techniques used by hackers and practical strategies to secure your accounts from such threats."
 date: "2025-02-05"
 cover: "password-cracking.png"
