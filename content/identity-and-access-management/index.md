@@ -138,7 +138,7 @@ Secure your app with seamless identity and access management – [try SuperToken
 ---
 
 **Internal Links:**
-- [Self-Hosted Authentication](https://supertokens.com/blog/self-hosted-authentication)
+- [Self-Hosted Authentication](https://supertokens.com/blog/self-hosted-auth-solutions-in-2026)
 - [Single Sign-On](https://supertokens.com/features/single-sign-on)
 - [IAM Best Practices](https://supertokens.com/blog/identity-and-access-management-best-practices)
 - [IAM Challenges](https://supertokens.com/blog/iam-challenges)
