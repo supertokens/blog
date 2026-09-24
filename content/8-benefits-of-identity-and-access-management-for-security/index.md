@@ -210,4 +210,4 @@ In summary, Identity and Access Management is a cornerstone of effective cyberse
 
 ![Supertokens homepage](./supertokens-homepage.png)
 
-Get seamless security and efficiency in your organization with SuperTokens—your ultimate solution for Identity and Access Management! For more insights on self-hosted authentication solutions, visit our blog [here](https://supertokens.com/blog/self-hosted-authentication/).
+Get seamless security and efficiency in your organization with SuperTokens—your ultimate solution for Identity and Access Management! For more insights on self-hosted authentication solutions, visit our blog [here](https://supertokens.com/blog/self-hosted-auth-solutions-in-2026).

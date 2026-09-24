@@ -101,6 +101,6 @@ APIs often use OAuth to secure access. For example, a weather application using 
 
 OAuth is a versatile and essential protocol for modern web and mobile applications. It enables secure authorization and access delegation, improving both security and user experience. Understanding the different OAuth flows and how to apply them in various scenarios is crucial for developers.
 
-To implement OAuth using SuperTokens, check out our [documentation](https://supertokens.com/docs/thirdparty/introduction). For further reading, you can explore our blogs on [OAuth vs JWT](https://supertokens.com/blog/oauth-vs-jwt), [OAuth vs OIDC](https://supertokens.com/blog/oauth-vs-oidc), and [OAuth 2 vs Session Management](https://supertokens.com/blog/oauth-2-vs-session-management).
+To implement OAuth using SuperTokens, check out our [documentation](https://supertokens.com/docs/thirdparty/introduction). For further reading, you can explore our blogs on [OAuth vs JWT](https://supertokens.com/blog/oauth-vs-jwt), [OAuth vs OIDC](https://supertokens.com/blog/openid-connect-vs-oauth2), and [OAuth 2 vs Session Management](https://supertokens.com/blog/oauth-2-vs-session-management).
 
 For more information on OAuth, visit [Wikipedia](https://en.wikipedia.org/wiki/OAuth) or check out this simple explanation on [Stack Overflow](https://stackoverflow.com/a/4201618).

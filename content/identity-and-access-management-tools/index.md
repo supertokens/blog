@@ -72,7 +72,7 @@ Auth0 consistently receives high marks on platforms like G2 and Gartner Peer Ins
 - Costs can escalate as user counts grow.
 - Enterprise support plans are relatively expensive.
 
-Read more about [Auth0's alternatives on our blog](https://supertokens.com/blog/auth0-alternatives-auth0-vs-okta-vs-cognito-vs-supertokens) or our [complete Auth0 pricing breakdown](https://supertokens.com/blog/auth0-pricing-the-complete-guide).
+Read more about [Auth0's alternatives on our blog](https://supertokens.com/blog/auth0-alternatives) or our [complete Auth0 pricing breakdown](https://supertokens.com/blog/auth0-pricing-the-complete-guide).
 
 ## 3. Okta
 
@@ -248,6 +248,6 @@ IAM tools deliver tangible benefits, particularly as organizations navigate comp
 
 Implementing a robust IAM solution is no longer a luxury—it’s a necessity. The right platform can strengthen security, improve compliance posture, and deliver seamless user experiences. Whether you prefer a fully managed cloud service or an open-source tool you can self-host, you have numerous options. **[SuperTokens](https://supertokens.com/product)**, with its open-source nature and developer-friendly features, is a standout choice for organizations seeking control, cost-effectiveness, and flexibility.
 
-**Ready to enhance your organization's security and user access?** [SuperTokens](https://supertokens.com/product) is the perfect IAM tool to meet your needs! As you explore your options, consider checking out additional resources on [self-hosted authentication](https://supertokens.com/blog/self-hosted-authentication/) to ensure a successful rollout.
+**Ready to enhance your organization's security and user access?** [SuperTokens](https://supertokens.com/product) is the perfect IAM tool to meet your needs! As you explore your options, consider checking out additional resources on [self-hosted authentication](https://supertokens.com/blog/self-hosted-auth-solutions-in-2026) to ensure a successful rollout.
 
 For more insights, read industry reports from reputable organizations like [Gartner](https://www.gartner.com/en) and [Forrester](https://www.forrester.com/) on the evolving landscape of IAM. With the right solution in place, you’ll be well-prepared to protect both your users and critical data assets.
