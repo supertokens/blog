@@ -5095,29 +5095,6 @@
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/better-auth\"},\"headline\":\"What Is Better Auth and Who's It For?\",\"image\":\"https://supertokens.com/blog-meta-images/better-auth.png\",\"datePublished\":\"2026-01-26\",\"dateModified\":\"2026-01-26\",\"author\":{\"@type\":\"Person\",\"name\":\"Mostafa Ibrahim\",\"jobTitle\":\"Senior Software Engineer\",\"url\":\"https://twitter.com/mostafa41490059?\",\"sameAs\":[\"https://twitter.com/mostafa41490059?\",\"https://www.linkedin.com/in/mostafa-ibrahim-948004151/\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"What Is Better Auth and Who's It For?\",\"item\":\"https://supertokens.com/blog/better-auth\"}]}</script>"
     },
     {
-        "path": "/blog/captcha-supertokens",
-        "metaTags": [
-            "<meta name=\"description\" content=\" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\" />",
-            "",
-            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
-            "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"How Do I Add CAPTCHA to My Login Page?\" />",
-            "<meta property=\"og:type\" content=\"article\" />",
-            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/captcha-supertokens\" />",
-            "<meta property=\"og:description\" content=\" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\"/>",
-            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/captcha-supertokens.png\" />",
-            "",
-            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\" Learn how to add CAPTCHA to login and signup pages, protect your app from bots, and see how SuperTokens makes it simple.\" />",
-            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/captcha-supertokens\" />",
-            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/captcha-supertokens.png\" /> ",
-            "<!--OG Tags-->",
-            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/captcha-supertokens\">"
-        ],
-        "title": "How Do I Add CAPTCHA to My Login Page?",
-        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/captcha-supertokens\"},\"headline\":\"How Do I Add CAPTCHA to My Login Page?\",\"image\":\"https://supertokens.com/blog-meta-images/captcha-supertokens.png\",\"datePublished\":\"2025-12-26\",\"dateModified\":\"2025-12-26\",\"author\":{\"@type\":\"Person\",\"name\":\"Mostafa Ibrahim\",\"jobTitle\":\"Senior Software Engineer\",\"url\":\"https://twitter.com/mostafa41490059?\",\"sameAs\":[\"https://twitter.com/mostafa41490059?\",\"https://www.linkedin.com/in/mostafa-ibrahim-948004151/\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How Do I Add CAPTCHA to My Login Page?\",\"item\":\"https://supertokens.com/blog/captcha-supertokens\"}]}</script>"
-    },
-    {
         "path": "/blog/clerk-migration",
         "metaTags": [
             "<meta name=\"description\" content=\" Step-by-step guide on migrating from Clerk to SuperTokens&mdash;covering trickle, bulk import, export scripts, sessions, and security.\" />",
