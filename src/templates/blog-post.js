@@ -58,7 +58,11 @@ const BlogPostTemplate = ({ data, location }) => {
             />
           )}
           <div className="blog-header-content-container">
-            <p className="blog-date">{post.frontmatter.date}</p>
+            <p className="blog-date">
+              {post.frontmatter.updated
+                ? `Updated ${post.frontmatter.updated} · Published ${post.frontmatter.date}`
+                : post.frontmatter.date}
+            </p>
             <h1 itemProp="headline">{post.frontmatter.title}</h1>
             <p className="blog-description">{post.frontmatter.description}</p>
             {post.frontmatter.author && (
