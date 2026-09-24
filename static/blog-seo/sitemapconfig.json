@@ -93,9 +93,6 @@
         "location": "https://supertokens.com/blog/demystifying-saml"
     },
     {
-        "location": "https://supertokens.com/blog/localstorage-vs-sessionstorage"
-    },
-    {
         "location": "https://supertokens.com/blog/what-is-credential-stuffing"
     },
     {
@@ -115,9 +112,6 @@
     },
     {
         "location": "https://supertokens.com/blog/phishing-attacks-in-2024"
-    },
-    {
-        "location": "https://supertokens.com/blog/openid-connect-vs-oauth2"
     },
     {
         "location": "https://supertokens.com/blog/openid-connect-vs-oauth2"
@@ -163,9 +157,6 @@
     },
     {
         "location": "https://supertokens.com/blog/cognito-alternatives"
-    },
-    {
-        "location": "https://supertokens.com/blog/stytch-alternatives"
     },
     {
         "location": "https://supertokens.com/blog/auth0-alternatives"
@@ -219,9 +210,6 @@
         "location": "https://supertokens.com/blog/7-common-iam-risks-and-how-to-avoid-them"
     },
     {
-        "location": "https://supertokens.com/blog/flask-user-auth"
-    },
-    {
         "location": "https://supertokens.com/blog/multi-factor-authentication-examples"
     },
     {
@@ -270,12 +258,6 @@
         "location": "https://supertokens.com/blog/identity-and-access-management-best-practices"
     },
     {
-        "location": "https://supertokens.com/blog/indentity-and-access-management"
-    },
-    {
-        "location": "https://supertokens.com/blog/identity-and-access-management-frameworks"
-    },
-    {
         "location": "https://supertokens.com/blog/identity-and-access-management-frameworks"
     },
     {
@@ -314,7 +296,7 @@
     {
         "location": "https://supertokens.com/blog/saml-vs-sso"
     },
-    {    
+    {
         "location": "https://supertokens.com/blog/the-hidden-cost-of-building-your-own-auth-stacks"
     },
     {
@@ -342,13 +324,7 @@
         "location": "https://supertokens.com/blog/workos-alternatives"
     },
     {
-        "location": "https://supertokens.com/blog/biometric-auth"
-    },
-    {
         "location": "https://supertokens.com/blog/solidjs-auth"
-    },
-    {
-        "location": "https://supertokens.com/blog/biometric-auth"
     },
     {
         "location": "https://supertokens.com/blog/oidc-vs-saml"
@@ -403,9 +379,6 @@
     },
     {
         "location": "https://supertokens.com/blog/risk-based-authentication"
-    },
-    {
-        "location": "https://supertokens.com/blog/what-is-passwordless-authentication"
     },
     {
         "location": "https://supertokens.com/blog/firebase-alternatives"
@@ -536,10 +509,10 @@
     {
         "location": "https://supertokens.com/blog/oauth-flows"
     },
-    {  
+    {
         "location": "https://supertokens.com/blog/session-hijacking-fixation"
     },
-    {    
+    {
         "location": "https://supertokens.com/blog/secure-multi-tenant-auth"
     },
     {
@@ -558,13 +531,7 @@
         "location": "https://supertokens.com/blog/auth0-open-source"
     },
     {
-        "location": "https://supertokens.com/blog/migrate-from-auth0"
-    },
-    {
         "location": "https://supertokens.com/blog/better-auth"
-    },
-    {
-        "location": "https://supertokens.com/blog/captcha-supertokens"
     },
     {
         "location": "https://supertokens.com/blog/clerk-migration"
@@ -595,5 +562,146 @@
     },
     {
         "location": "https://supertokens.com/blog/webauthin-api"
+    },
+    {
+        "location": "https://supertokens.com/blog/auth-bypass"
+    },
+    {
+        "location": "https://supertokens.com/blog/auth0-sso"
+    },
+    {
+        "location": "https://supertokens.com/blog/cheapest-auth-alternatives"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-to-customise-supertokens-apis"
+    },
+    {
+        "location": "https://supertokens.com/blog/launch-week-1"
+    },
+    {
+        "location": "https://supertokens.com/blog/step-up-auth"
+    },
+    {
+        "location": "https://supertokens.com/blog/adding-social-login-to-your-website-with-supertokens"
+    },
+    {
+        "location": "https://supertokens.com/blog/all-you-need-to-know-about-user-session-security"
+    },
+    {
+        "location": "https://supertokens.com/blog/are-you-using-jwts-for-user-sessions-in-the-correct-way"
+    },
+    {
+        "location": "https://supertokens.com/blog/building-a-chatbot-that-is-an-expert-at-supertokens"
+    },
+    {
+        "location": "https://supertokens.com/blog/building-a-login-screen-with-react-and-bootstrap"
+    },
+    {
+        "location": "https://supertokens.com/blog/cognito-pricing-the-complete-guide"
+    },
+    {
+        "location": "https://supertokens.com/blog/connect-supertokens-to-database"
+    },
+    {
+        "location": "https://supertokens.com/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know"
+    },
+    {
+        "location": "https://supertokens.com/blog/express-session-vs-supertokens-for-handling-user-sessions"
+    },
+    {
+        "location": "https://supertokens.com/blog/fedcm-how-are-oauth-flows-affected-in-the-post-third-party-cookie-era"
+    },
+    {
+        "location": "https://supertokens.com/blog/flask-user-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/frontegg-alternatives"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-to-deploy-supertokens-with-react-nodejs-express-on-vercel"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-to-set-up-social-and-email-password-login-with-reactjs"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-to-use-supertokens-custom-ui-with-vuejs"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-to-use-supertokens-pre-built-ui-with-vuejs"
+    },
+    {
+        "location": "https://supertokens.com/blog/identity-and-access-management"
+    },
+    {
+        "location": "https://supertokens.com/blog/implementing-a-forgot-password-flow"
+    },
+    {
+        "location": "https://supertokens.com/blog/introducing-user-roles-authorization-with-supertokens"
+    },
+    {
+        "location": "https://supertokens.com/blog/localstorage-vs-session-storage"
+    },
+    {
+        "location": "https://supertokens.com/blog/oauth-vs-jwt"
+    },
+    {
+        "location": "https://supertokens.com/blog/oidc-token"
+    },
+    {
+        "location": "https://supertokens.com/blog/okta-pricing-the-complete-guide"
+    },
+    {
+        "location": "https://supertokens.com/blog/passkey-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/password-hashing-salting"
+    },
+    {
+        "location": "https://supertokens.com/blog/passwordless-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/revoking-access-with-a-jwt-blacklist"
+    },
+    {
+        "location": "https://supertokens.com/blog/should-you-use-express-session-for-your-production-app"
+    },
+    {
+        "location": "https://supertokens.com/blog/solve-the-problem-of-vendor-lock-in"
+    },
+    {
+        "location": "https://supertokens.com/blog/speed-up-your-web-development-time-by-integrating-webflow-into-a-react-application"
+    },
+    {
+        "location": "https://supertokens.com/blog/stych-alternatives"
+    },
+    {
+        "location": "https://supertokens.com/blog/supabase-auth-comparison-with-supertokens-integration"
+    },
+    {
+        "location": "https://supertokens.com/blog/supertokens-vs-clerk"
+    },
+    {
+        "location": "https://supertokens.com/blog/supertokens-vs-keycloak"
+    },
+    {
+        "location": "https://supertokens.com/blog/the-best-way-to-securely-manage-user-sessions"
+    },
+    {
+        "location": "https://supertokens.com/blog/the-real-reason-okta-spent-on-auth0"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-502-bad-gateway-error"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-cross-origin-resource-sharing"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-jwt"
+    },
+    {
+        "location": "https://supertokens.com/blog/what-is-roles-based-access-control-vs-abac"
+    },
+    {
+        "location": "https://supertokens.com/blog/why-is-redux-state-immutable"
     }
 ]
