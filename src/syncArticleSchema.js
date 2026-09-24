@@ -1,6 +1,7 @@
 /**
  * Updates the Article JSON-LD of every post in static/blog-seo/config.json with the post's
- * headline, datePublished, dateModified and author, read from each post's frontmatter.
+ * headline, datePublished, dateModified and author, read from each post's frontmatter. Posts with a
+ * visible "## Frequently Asked Questions" section also get a FAQPage block generated from it.
  *
  * Run after changing a post's `title`, `date`, `updated` or `author` frontmatter:
  *   node src/syncArticleSchema.js
@@ -9,7 +10,7 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { applyPostMetadata, buildHeadline } = require('./articleSchema');
+const { applyPostMetadata, buildHeadline, buildFaqSchema } = require('./articleSchema');
 
 const CONTENT_DIR = path.join(__dirname, "../", "content");
 const CONFIG_PATH = path.join(__dirname, "../", "static", "blog-seo", "config.json");
@@ -25,7 +26,7 @@ function readFrontmatter(slug) {
     if (!match) {
         return undefined;
     }
-    const frontmatter = {};
+    const frontmatter = { body: content.slice(match[0].length) };
     for (const line of match[1].split('\n')) {
         const [key, ...valueParts] = line.split(':');
         if (!key || valueParts.length === 0) {
@@ -38,6 +39,7 @@ function readFrontmatter(slug) {
 
 const config = JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf-8'));
 let updatedCount = 0;
+let faqCount = 0;
 const missing = [];
 
 for (const entry of config) {
@@ -65,10 +67,24 @@ for (const entry of config) {
         }
         return `${open}\n${JSON.stringify(applyPostMetadata(parsed, frontmatter))}${close}`;
     });
+
+    const faq = buildFaqSchema(frontmatter.body);
+    if (faq) {
+        // Replace any hand-written FAQPage block with one generated from the visible FAQ section.
+        entry.schema = entry.schema.replace(LD_JSON_BLOCK, (block, open, body) => {
+            try {
+                return JSON.parse(body)["@type"] === "FAQPage" ? "" : block;
+            } catch (e) {
+                return block;
+            }
+        }).trimEnd();
+        entry.schema += `\n<script type="application/ld+json">\n${JSON.stringify(faq)}</script>`;
+        faqCount++;
+    }
 }
 
 fs.writeFileSync(CONFIG_PATH, JSON.stringify(config, null, 4), 'utf-8');
-console.log(`Updated Article schema for ${updatedCount} posts.`);
+console.log(`Updated Article schema for ${updatedCount} posts; generated FAQPage for ${faqCount}.`);
 if (missing.length > 0) {
     console.log(`No content/<slug>/index.md found for: ${missing.join(', ')}`);
 }
