@@ -268,7 +268,7 @@ Here are the key considerations for implementation:
 
 Every system has different security requirements, and authentication protocols must reflect the sensitivity of the data they protect. For applications handling personally identifiable information (PII), financial records, or health data, the use of strong, phishing-resistant protocols such as FIDO2, WebAuthn, and multi-factor authentication (MFA) is essential.
 
-For example, if you're building a user-facing platform with high-security requirements, integrating passwordless flows that use biometrics or hardware-backed authentication provides a strong defense against phishing and credential stuffing. [SuperTokens’ guide on building secure passwordless flows](https://supertokens.com/blog/passwordless-authentication) walks you through the implementation process for modern, secure sign-in systems.
+For example, if you're building a user-facing platform with high-security requirements, integrating passwordless flows that use biometrics or hardware-backed authentication provides a strong defense against phishing and credential stuffing. [SuperTokens’ guide on building secure passwordless flows](https://supertokens.com/blog/what-is-passwordless-authentication) walks you through the implementation process for modern, secure sign-in systems.
 
 Organizations must also weigh threat modeling, such as how attackers might try to bypass authentication or exploit session vulnerabilities. Using standards like OAuth 2.0, OpenID Connect, or SAML (in enterprise SSO contexts) can ensure token exchange and identity federation are both secure and scalable.
 

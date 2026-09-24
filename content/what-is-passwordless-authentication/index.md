@@ -1,11 +1,14 @@
 ---
 title: "What Is Passwordless Authentication? Methods, Benefits and Challenges"
 date: "2025-01-27"
+updated: "2026-09-24"
 description: "What is passwordless authentication? Solve login challenges, explore methods, benefits, and tools for secure implementations."
 cover: "what-is-passwordless-auth.png"
 category: "featured"
 author: "Maria Shimkovska"
 ---
+
+**Passwordless authentication** is any login method that verifies a user without a password or other memorized secret. Instead, the user proves who they are with something they have (a device, a passkey, access to an email inbox or phone number) or something they are (a fingerprint or face scan). Common methods are passkeys, magic links, one-time passcodes (OTPs) and biometrics.
 
 As people, we share a lot in common. We love good food, quality time with friends and family, and sleeping in on the weekends. But there’s one less flattering connection we all have as well, we are bad at choosing secure passwords. 
 
@@ -24,7 +27,7 @@ tight: true
 toHeading: 3
 ```
 
-## Common Problems With Password Based Authentication 🤔
+## Common Problems With Password Based Authentication
 Here are the most common password based authentication problems: 
 
 ### Human error
@@ -47,7 +50,7 @@ To make password based authentication stronger, users are encouraged to use pass
 
 While these measures help mitigate password problems, they don’t eliminate them entirely. This leads to the search for better solutions, like **passwordless authentication**.
 
-## The Passwordless Solution: How It Works 🔑🚫
+## The Passwordless Solution: How It Works
 
 **Passwordless authentication** is a method of authenticating a user without passwords. Nice! Who would have thought. 
 
@@ -61,26 +64,42 @@ It’s worth noting the 3 key factors of authentication in general:
 Passwordless authentication works by verifying a user’s identity through possession or inherence (or both), rather than knowledge. 
 
 Let’s break down the common passwordless auth methods: 
-### Magic Links ✨
+### Passkeys
+Passkeys are FIDO2/WebAuthn credentials: a public/private key pair where the private key never leaves the user's device and is unlocked with a fingerprint, face scan or device PIN. Because each passkey is bound to the website's domain, it can't be phished or replayed on a look-alike site, which makes passkeys the most phishing-resistant passwordless option. Learn more in [What are passkeys?](/blog/what-are-passkeys) and [Passkeys vs passwords vs magic links](/blog/passkeys-vs-passwords-vs-magic-links).
+
+### Magic Links
 Magic links are URLs with embedded tokens that when clicked allow users to log in without a password. The magic links are typically delivered through a user’s email, but can also be sent through a text message. Magic links verify a user’s identity by using something the user has, like their email address or phone number.  Platforms like Medium and Pinterest use magic links, eliminating the need for passwords. Simply click the link, and you’re in!
 
-### Biometrics 🐾
+### Biometrics
 As the name suggests, biometric authentication uses a person’s physical traits. Popular biometric authentication methods include fingerprint scanning and facial recognition. Because biometric authentication is based on who a user is, they are much harder to steal than passwords, or other forms of knowledge based authentication. Apps like Apple Pay and Google Pay use facial recognition or fingerprints to authenticate users, allowing secure access without a password. 
 
-### One-Time Passcodes📱
+### One-Time Passcodes
 One-time passcodes are generated numbers or letters sent to a user either through email or text message allowing the user to log in without a password. The user receives the OTP and must then enter the OTP on the client side of the application they are trying to log onto. They are similar to magic links, except instead of a link a user receives a code they must enter to verify their identity.  Services like Amazon send a one time passcode to a user’s email or phone. Entering the code gives them access to the app without a password. 
 
-### Hardware Tokens 💳
+### Hardware Tokens
 Hardware tokens generate a one-time code that’s used to access a system. The token is usually a small device that looks like a credit card or a keychain fob. Hardware tokens are a secure and reliable way to verify a user’s identity. Think of having a hotel card tapping you into a room. 
 
-## 3 Transformative Benefits of Going Passwordless 🚀
+## 3 Transformative Benefits of Going Passwordless
 1. **Improved Security** – Passwordless auth is more secure than traditional, password based authentication. It removes the risks that come with passwords, like weak and reused passwords. Passwords are the weakest link in a security chain because they rely on users creating them and the majority of people typically don’t have cybersecurity in mind. So by going passwordless you eliminate the risks of brute-force attacks and credential stuffing. 
 
 2. **Lower Long-Term Costs** – There are two main costs associated with password based authentication, the legal costs of security breaches and the administrative costs of password changes. Passwordless authentication can also be more scalable than traditional password-based authentication, because you don’t have to store and manage all the users’ credentials in a database. 
 
 3. **Better User Experience** – Passwordless authentication can provide a much better user  experience. That’s because it can make onboarding easier for users. By using a passwordless approach, you eliminate the friction of having a user think of a password, open up their password manager, save the password, and then log in. While these steps are not substantial and are easy to go through, removing them makes your app more likely to gain users. During the Covid pandemic a video game called Among Us became insanely popular. The barrier to entry was none! It’s what made it so easy to get into. Granted, Among Us did not need you to have an account, but it shows how removing barriers, or making them simpler, can skyrocket your application. 
 
-## Choosing The Right Passwordless Method ⚙️
+## Passwordless Authentication vs. 2FA and MFA
+Passwordless authentication and multi-factor authentication (MFA) solve different problems. Passwordless removes the password from the login step; MFA requires two or more independent factors. They are often combined: a passkey unlocked with a fingerprint already covers two factors (possession of the device and a biometric), and an email magic link can be paired with a TOTP code for higher-risk actions. Passwordless login via email or phone also verifies the user's contact details as a side effect, while a second factor gives users a way to recover their account if they lose access to their primary login method.
+
+## Is Passwordless Authentication Secure?
+Passwordless authentication is generally more secure than passwords because there is no shared secret to guess, reuse or leak in a breach. How secure it is depends on the method:
+
+- **Passkeys and hardware security keys** are phishing-resistant, because the credential is bound to the site's domain.
+- **Magic links and email OTPs** are only as secure as the user's email account.
+- **SMS OTPs** are vulnerable to [SIM swapping](/blog/sim-swapping) and interception, and to [OTP bots](/blog/otp-bots) that trick users into reading out codes.
+- **Biometrics** are convenient, but biometric data can't be changed if it is ever exposed, so it should only unlock a credential stored on the device, not be sent to a server.
+
+Other benefits include no password resets, no credential stuffing, and verified email or phone numbers at sign-up. The main downsides are dependence on the user's device, email or phone, and the cost of migrating an existing password-based system.
+
+## Choosing The Right Passwordless Method
 To choose the right passwordless method you have to consider your resources and your users. If you have a financial app, investing in a more secure system like multi-factor authentication is the right choice, even with passwordless authentication. 
 
 If you are creating something new and want more people to try the application, it’s worth considering how you can balance the ease of use with the amount of security. 
@@ -89,7 +108,7 @@ If you have a mobile application, choosing something like an OTP can be a good c
 
 Regardless of what method you choose, SuperTokens is here to make your implementation easy to develop.
 
-## Challenges of Implementing Passwordless Authentication  🚧
+## Challenges of Implementing Passwordless Authentication
 Like with anything else, passwordless authentication is not all roses and sunshine. Going passwordless can be challenging if you already have a password based authentication system set up.
 
 Here’s why:
@@ -102,8 +121,8 @@ Here’s why:
 
 * **Device loss or email access issues** – Relying on a user’s email address or device (for texts) can be a problem if they lose access to either. This is something to consider if your only form of authenticating a user depends on their email or phone number. To solve this you could offer a user an alternative method of signing in. 
 
-## Solving Passwordless Challenges with SuperTokens 💡
-We have written a guide to implementing passwordless login using SuperTokens. Check it out! 
+## Solving Passwordless Challenges with SuperTokens
+We have written a [step-by-step guide to implementing magic link login](/blog/a-guide-to-implementing-passwordless-login). Check it out!
 
 Here are some ways we solve passwordless challenges for you: 
 1. Easy, out of the box, prebuilt UI for your login. 
@@ -113,7 +132,7 @@ Here are some ways we solve passwordless challenges for you:
 
 Check out our [example app](https://supertokens.com/docs/quickstart/example-apps/generate-example-app?recipe=passwordless) to play around with how easy it is to set up with your chosen framework! 
 
-## The Future of Authentication: Why Passwordless is Here to Stay 🔮
+## The Future of Authentication: Why Passwordless is Here to Stay
 Every year, we use more apps, which means creating more logins. With password-based authentication, users must create strong, unique passwords for each app, leading to password fatigue. 
 
 Passwordless authentication offers a simpler solution. Many companies are now removing passwords from sign-up pages, making it easier for users to try new apps quickly. This benefits both users and businesses by reducing friction in the sign-up process.

@@ -71,7 +71,7 @@ SuperTokens has emerged as a powerful contender in the authentication space, par
 
 ### **Pricing:**
 
-- The [self-hosted](https://supertokens.com/blog/self-hosted-authentication) version is free and open-source
+- The [self-hosted](https://supertokens.com/blog/self-hosted-auth-solutions-in-2026) version is free and open-source
 
 - Managed service available with tiered pricing based on usage
 

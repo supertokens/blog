@@ -1,7 +1,7 @@
 ---
-title: A Guide to Implementing Passwordless Login
+title: "How to Implement Magic Link Login: A Step-by-Step Guide"
 date: "2023-02-23"
-description: "Passwordless is one of the most popular authentication methods"
+description: "Build passwordless email magic link login step by step: generate secure tokens, send the link, verify it, and handle edge cases and security risks."
 cover: "passwordless_banner.png"
 category: "programming"
 author: "Rishabh Poddar"
@@ -17,7 +17,7 @@ A driving factor for its increasing adoption is that it’s inherently less pron
 
 There are a few downsides to passwordless. UX becomes more complicated when the user navigates away from the page. Additionally, some implementations come with increased cost (e.g. with physical tokens), and of course - no system is completely infallible against malicious actors.
 
-If you’re looking for a good primer on the different options possible with passworldess, you can refer to this [guide](https://supertokens.com/blog/passwordless-for-product-managers)
+If you’re looking for a primer on the different passwordless options (passkeys, magic links, OTPs and biometrics), read [What is passwordless authentication?](/blog/what-is-passwordless-authentication)
 
 For the sake of this post, we’ll focus on a software-based implementation - in our example it’ll be with email magic links.
 
