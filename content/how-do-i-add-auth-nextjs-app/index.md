@@ -1,8 +1,8 @@
 ---
 title: How do I add authentication to a Next.js app with SuperTokens?
 description: "Learn how to add authentication to your Next.js app. Step-by-step guide on login, signup, and sessions with SuperTokens."
-date: "2026-09-09"
-cover: "TODO.png"
+date: "2026-09-27"
+cover: "nextjs-supertokens-auth.png"
 category: "next.js, auth, guide"
 author: "Maurice Saldivar"
 ---
