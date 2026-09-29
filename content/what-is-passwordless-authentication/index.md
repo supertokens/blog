@@ -1,5 +1,5 @@
 ---
-title: "What is Passwordless Authentication: The Cool Kid on The Block? 🔒🚫"
+title: "What Is Passwordless Authentication? Methods, Benefits and Challenges"
 date: "2025-01-27"
 description: "What is passwordless authentication? Solve login challenges, explore methods, benefits, and tools for secure implementations."
 cover: "what-is-passwordless-auth.png"
