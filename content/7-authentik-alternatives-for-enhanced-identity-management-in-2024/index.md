@@ -47,7 +47,7 @@ limitations, and how they address the pain points expressed by users.
 
 -   **Customizable Authentication Flows:** Organizations can tailor authentication processes to meet their specific requirements, providing a personalized experience for users.
 
--   **Managed and Self-hosted Options:** Supertokens offers both [self-hosted](https://supertokens.com/blog/self-hosted-authentication) and managed hosting solutions, allowing organizations to choose the deployment method that best suits their needs.
+-   **Managed and Self-hosted Options:** Supertokens offers both [self-hosted](https://supertokens.com/blog/self-hosted-auth-solutions-in-2026) and managed hosting solutions, allowing organizations to choose the deployment method that best suits their needs.
 
 ### **Pricing:**
 
