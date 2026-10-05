@@ -60,6 +60,11 @@ For teams evaluating self-hosted options, SuperTokens hits a particular sweet sp
 
 The honest limitation is enterprise feature breadth. SuperTokens does not match Keycloak's protocol coverage (no native SAML, for example) or Zitadel's depth of multi-tenant management APIs. If your requirements include LDAP federation or SAML-based enterprise SSO as day-one features, you'll either need to layer those on top or look elsewhere. But for the majority of applications that need solid authentication with OAuth 2.0/OIDC, MFA, and session management, SuperTokens delivers with less complexity and lower operational cost.
 
+### Other Self-Hosted Options Worth a Look
+
+- **[FusionAuth](https://fusionauth.io/)**: a developer-focused identity server you can run anywhere, with OAuth 2.0, OIDC and SAML support, multi-tenancy and extensive APIs. A free Community edition is available; some advanced features require a paid licence.
+- **[Hanko](https://www.hanko.io/)**: an open-source, passkey-first authentication service built on WebAuthn. It can be self-hosted or used as a managed cloud service, and suits teams that want to go passwordless from day one.
+
 ## How to Choose the Right Self-Hosted Authentication Solution
 
 Feature comparison tables are useful, but they don't tell you which solution fits your team. That requires an honest assessment of your application's scale, your engineering capacity, and what you actually need on day one versus what you might need in two years.
