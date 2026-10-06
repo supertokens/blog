@@ -53,6 +53,8 @@ For B2B SaaS, the balance tips toward SuperTokens.
 
 Hanko's multi-tenancy is still developing and is not yet comparable for a platform that needs to onboard many isolated business customers. SAML SSO is a bright spot for Hanko, which supports it natively, whereas SuperTokens reaches SAML through a documented SAML Jackson (BoxyHQ) integration rather than a first-party feature. Neither product ships native SCIM. SuperTokens documents a SCIM path through that same SAML Jackson integration, so provisioning is achievable with extra wiring; Hanko has no SCIM story at present.
 
+SuperTokens is also highly customizable. Its override system lets you modify any backend or frontend function, such as sign-up, sign-in, or session creation, directly in your own code, without routing logic through webhooks. Hanko typically extends behavior via webhooks, which adds a network hop and an external endpoint to maintain, and on Hanko Cloud webhooks are only available on the paid Pro plan, not the free Starter tier.
+
 The takeaway is clean: SuperTokens is the stronger fit for multi-tenant B2B SaaS, and Hanko is aimed squarely at B2C passwordless-first consumer apps.
 
 ## Pricing
