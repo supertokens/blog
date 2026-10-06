@@ -1,5 +1,5 @@
 ---
-title: "Supertokens Vs AuthO: Self-Hosted Vs. Managed Solutions"
+title: "SuperTokens vs. Auth0: Self-Hosted vs. Managed Solutions"
 date: "2024-06-16"
 description: "Explore the core differences between SuperTokens and Auth0 including their key features, pros and cons, and practical workflows. Whether you need full control with SuperTokens' self-hosted, open-source approach or the convenience of Auth0's managed service, this guide will help you choose the right authentication solution for your project."
 cover: "supertokens-vs-auth0.png"
