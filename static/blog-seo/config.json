@@ -3947,25 +3947,25 @@
     {
         "path": "/blog/firebase-alternatives",
         "metaTags": [
-            "<meta name=\"description\" content=\"Discover the top Firebase alternatives, their features, and how they compare. Learn why SuperTokens is the best authentication solution for secure and scalable apps.\" />",
+            "<meta name=\"description\" content=\"Compare the best Firebase alternatives in 2026: Supabase, Appwrite, Convex, PocketBase, Nhost, AWS Amplify and Backendless. Pricing, open source status, databases and which to choose.\" />",
             "",
             "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"4 Best Firebase Alternatives for Scalable App Development [2026 Guide]\" />",
+            "<meta property=\"og:title\" content=\"7 Best Firebase Alternatives in 2026: Supabase, Appwrite, Convex and More\" />",
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/firebase-alternatives\" />",
-            "<meta property=\"og:description\" content=\"Discover the top Firebase alternatives, their features, and how they compare. Learn why SuperTokens is the best authentication solution for secure and scalable apps.\"/>",
+            "<meta property=\"og:description\" content=\"Compare the best Firebase alternatives in 2026: Supabase, Appwrite, Convex, PocketBase, Nhost, AWS Amplify and Backendless. Pricing, open source status, databases and which to choose.\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/firebase-alternatives.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"4 Best Firebase Alternatives for Scalable App Development [2026 Guide]\" />",
+            "<meta name=\"twitter:title\" content=\"7 Best Firebase Alternatives in 2026: Supabase, Appwrite, Convex and More\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/firebase-alternatives\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/firebase-alternatives.png\" /> ",
             "<!--OG Tags-->",
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/firebase-alternatives\">"
         ],
-        "title": "4 Best Firebase Alternatives for Scalable App Development [2026 Guide]",
-        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/firebase-alternatives\"},\"headline\":\"4 Best Firebase Alternatives for Scalable App Development [2026 Guide]\",\"image\":\"https://supertokens.com/blog-meta-images/firebase-alternatives.png\",\"datePublished\":\"2025-03-08\",\"dateModified\":\"2025-03-08\",\"author\":{\"@type\":\"Person\",\"name\":\"Maria Shimkovska\",\"jobTitle\":\"Technical Writer\",\"url\":\"https://www.linkedin.com/in/maria-shimkovska/\",\"sameAs\":[\"https://www.linkedin.com/in/maria-shimkovska/\",\"https://github.com/meems1996\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"4 Best Firebase Alternatives for Scalable App Development [2026 Guide]\",\"item\":\"https://supertokens.com/blog/firebase-alternatives\"}]}</script>"
+        "title": "7 Best Firebase Alternatives in 2026: Supabase, Appwrite, Convex and More",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/firebase-alternatives\"},\"headline\":\"7 Best Firebase Alternatives in 2026: Supabase, Appwrite, Convex and More\",\"image\":\"https://supertokens.com/blog-meta-images/firebase-alternatives.png\",\"datePublished\":\"2025-03-08\",\"dateModified\":\"2026-09-24\",\"author\":{\"@type\":\"Person\",\"name\":\"Maria Shimkovska\",\"jobTitle\":\"Technical Writer\",\"url\":\"https://www.linkedin.com/in/maria-shimkovska/\",\"sameAs\":[\"https://www.linkedin.com/in/maria-shimkovska/\",\"https://github.com/meems1996\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"7 Best Firebase Alternatives in 2026: Supabase, Appwrite, Convex and More\",\"item\":\"https://supertokens.com/blog/firebase-alternatives\"}]}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"What is the best Firebase alternative?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"For most teams, Supabase is the best Firebase alternative: it offers authentication, storage, real-time updates and edge functions on top of PostgreSQL, is open source, and has a free tier with up to 50,000 monthly active users. Choose Appwrite if you want an all-in-one open source backend to self-host, or Convex if you want Firebase-style real-time updates in TypeScript.\"}},{\"@type\":\"Question\",\"name\":\"Is there an open source alternative to Firebase?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Supabase, Appwrite (BSD-3-Clause), PocketBase (MIT) and Nhost are open source and can be self-hosted. Convex also offers a self-hosted version of its backend.\"}},{\"@type\":\"Question\",\"name\":\"Is Supabase better than Firebase?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Supabase is better if you need relational data, SQL queries, row-level security or the option to self-host. Firebase is better for mobile apps that depend on offline sync and for teams deeply invested in Google Cloud. Both have free tiers, and Supabase Pro starts at $25/month.\"}},{\"@type\":\"Question\",\"name\":\"What is the cheapest Firebase alternative?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"PocketBase is the cheapest to run: it is free and open source, and runs as a single binary on a small server. Among managed services, Supabase, Nhost and Convex all have free tiers, with paid plans starting at $25/month (per developer for Convex).\"}},{\"@type\":\"Question\",\"name\":\"Can I replace only Firebase Authentication?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. You can keep your database and move authentication to a dedicated provider such as SuperTokens, which works with any backend and can be self-hosted. See Firebase Auth pricing and cheapest auth alternatives.\"}}]}</script>"
     },
     {
         "path": "/blog/enumeration-attack",
@@ -4614,25 +4614,25 @@
     {
         "path": "/blog/sso-providers",
         "metaTags": [
-            "<meta name=\"description\" content=\"Compare the best open source SSO providers in 2026 and learn how to pick the right solution for your app’s security and scalability.\" />",
+            "<meta name=\"description\" content=\"Compare the best open source SSO providers in 2026: Keycloak, authentik, Authelia, ZITADEL, Apereo CAS, Ory and SuperTokens. Licenses, supported protocols, pricing and which to choose.\" />",
             "",
             "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"Top Open Source SSO Providers to Know in 2026\" />",
+            "<meta property=\"og:title\" content=\"Top Open Source SSO Providers in 2026: Keycloak, authentik, Authelia, ZITADEL and More\" />",
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/sso-providers\" />",
-            "<meta property=\"og:description\" content=\"Compare the best open source SSO providers in 2026 and learn how to pick the right solution for your app’s security and scalability.\"/>",
+            "<meta property=\"og:description\" content=\"Compare the best open source SSO providers in 2026: Keycloak, authentik, Authelia, ZITADEL, Apereo CAS, Ory and SuperTokens. Licenses, supported protocols, pricing and which to choose.\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Top Open Source SSO Providers to Know in 2026\" />",
+            "<meta name=\"twitter:title\" content=\"Top Open Source SSO Providers in 2026: Keycloak, authentik, Authelia, ZITADEL and More\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/sso-providers\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/TODO.png\" /> ",
             "<!--OG Tags-->",
             "<link rel=\"canonical\" href=\"https://supertokens.com/blog/sso-providers\">"
         ],
-        "title": "Top Open Source SSO Providers to Know in 2026",
-        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/sso-providers\"},\"headline\":\"Top Open Source SSO Providers to Know in 2026\",\"image\":\"https://supertokens.com/blog-meta-images/TODO.png\",\"datePublished\":\"2025-07-07\",\"dateModified\":\"2025-07-07\",\"author\":{\"@type\":\"Person\",\"name\":\"Maurice Saldivar\",\"jobTitle\":\"Technical Writer\",\"url\":\"https://github.com/msaldivar\",\"sameAs\":[\"https://github.com/msaldivar\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Top Open Source SSO Providers to Know in 2026\",\"item\":\"https://supertokens.com/blog/sso-providers\"}]}</script>"
+        "title": "Top Open Source SSO Providers in 2026: Keycloak, authentik, Authelia, ZITADEL and More",
+        "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/sso-providers\"},\"headline\":\"Top Open Source SSO Providers in 2026: Keycloak, authentik, Authelia, ZITADEL and More\",\"image\":\"https://supertokens.com/blog-meta-images/TODO.png\",\"datePublished\":\"2025-07-07\",\"dateModified\":\"2026-09-24\",\"author\":{\"@type\":\"Person\",\"name\":\"Maurice Saldivar\",\"jobTitle\":\"Technical Writer\",\"url\":\"https://github.com/msaldivar\",\"sameAs\":[\"https://github.com/msaldivar\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Top Open Source SSO Providers in 2026: Keycloak, authentik, Authelia, ZITADEL and More\",\"item\":\"https://supertokens.com/blog/sso-providers\"}]}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"What is the best open source SSO provider?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"There is no single best option. Keycloak is the most widely used general-purpose choice. authentik covers the most protocols for self-hosters. Authelia is the lightest option for putting SSO in front of self-hosted apps. SuperTokens and ZITADEL are designed for adding SSO to your own SaaS product.\"}},{\"@type\":\"Question\",\"name\":\"Is Keycloak free?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Keycloak is open source under the Apache 2.0 license and free to use, including commercially. You pay only for the infrastructure you run it on, or for optional commercial support such as the Red Hat build of Keycloak.\"}},{\"@type\":\"Question\",\"name\":\"Does Authelia support SAML?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No. Authelia acts as an OpenID Connect 1.0 / OAuth 2.0 provider and a forward-auth server for reverse proxies, but it does not act as a SAML identity provider. If you need SAML, consider authentik, Keycloak, ZITADEL or Apereo CAS.\"}},{\"@type\":\"Question\",\"name\":\"What is the difference between an SSO provider and an identity provider?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"In practice the terms overlap. An identity provider (IdP) authenticates users and issues assertions or tokens. An SSO provider is an IdP used so that one sign-in grants access to many applications. See What is an identity provider?\"}},{\"@type\":\"Question\",\"name\":\"Can I add enterprise SSO (SAML) to my own SaaS app with open source tools?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. SuperTokens (through its paid multi-tenancy feature), ZITADEL and Keycloak all let each of your business customers sign in through their own SAML or OIDC identity provider, such as Okta or Microsoft Entra ID.\"}}]}</script>"
     },
     {
         "path": "/blog/launch-week-1-recap",
@@ -4821,18 +4821,18 @@
     {
         "path": "/blog/clerk-pricing-the-complete-guide",
         "metaTags": [
-            "<meta name=\"description\" content=\"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\" />",
+            "<meta name=\"description\" content=\"Clerk pricing explained: the free 50K MRU tier, Pro and Business plans, per-user and per-organization overage rates, add-ons, worked cost examples, and how it compares with Auth0 and SuperTokens.\" />",
             "",
             "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
             "<!--OG Tags-->",
-            "<meta property=\"og:title\" content=\"Clerk Pricing - The Complete Guide\" />",
+            "<meta property=\"og:title\" content=\"Clerk Pricing (2026): Free Tier, Plans, Overage Costs and Hidden Fees\" />",
             "<meta property=\"og:type\" content=\"article\" />",
             "<meta property=\"og:url\" content=\"https://supertokens.com/blog/clerk-pricing-the-complete-guide\" />",
-            "<meta property=\"og:description\" content=\"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\"/>",
+            "<meta property=\"og:description\" content=\"Clerk pricing explained: the free 50K MRU tier, Pro and Business plans, per-user and per-organization overage rates, add-ons, worked cost examples, and how it compares with Auth0 and SuperTokens.\"/>",
             "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\" />",
             "",
             "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
-            "<meta name=\"twitter:title\" content=\"Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity.\" />",
+            "<meta name=\"twitter:title\" content=\"Clerk Pricing (2026): Free Tier, Plans, Overage Costs and Hidden Fees\" />",
             "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/clerk-pricing-the-complete-guide\" />",
             "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\" /> ",
             "<!--OG Tags-->",
@@ -4842,6 +4842,29 @@
         "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"},\"headline\":\"Clerk Pricing (2026): Free Tier, Costs, and Hidden Fees Explained\",\"image\":\"https://supertokens.com/blog-meta-images/clerk-pricing-the-complete-guide.png\",\"datePublished\":\"2026-02-16\",\"dateModified\":\"2026-02-16\",\"author\":{\"@type\":\"Person\",\"name\":\"Joel Coutinho\",\"jobTitle\":\"Software Developer at SuperTokens\",\"url\":\"https://github.com/jscyo\",\"sameAs\":[\"https://github.com/jscyo\",\"https://www.linkedin.com/in/joel-coutinho-7bbb89143\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://supertokens.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://supertokens.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Clerk Pricing (2026): Free Tier, Costs, and Hidden Fees Explained\",\"item\":\"https://supertokens.com/blog/clerk-pricing-the-complete-guide\"}]}</script>"
     },
     {
+        "path": "/blog/implement-passkeys-nextjs",
+        "metaTags": [
+            "<meta name=\"description\" content=\"Build a complete, self-hosted passkey flow in a Next.js App Router app with SuperTokens: registration, authentication, cross-device, recovery, and migration.\" />",
+            "",
+            "<meta name=\"keywords\" content=\"Authentication, Open Source, Authorization, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<!--OG Tags-->",
+            "<meta property=\"og:title\" content=\"How to Implement Passkey Authentication in Next.js With SuperTokens\" />",
+            "<meta property=\"og:type\" content=\"article\" />",
+            "<meta property=\"og:url\" content=\"https://supertokens.com/blog/implement-passkeys-nextjs\" />",
+            "<meta property=\"og:description\" content=\"Build a complete, self-hosted passkey flow in a Next.js App Router app with SuperTokens: registration, authentication, cross-device, recovery, and migration.\"/>",
+            "<meta property=\"og:image\" content=\"https://supertokens.com/blog-meta-images/implement-passkeys-nextjs.png\" />",
+            "",
+            "<meta name=\"twitter:card\" content=\"summary_large_image\" />",
+            "<meta name=\"twitter:title\" content=\"Build a complete, self-hosted passkey flow in a Next.js App Router app with SuperTokens: registration, authentication, cross-device, recovery, and migration.\" />",
+            "<meta name=\"twitter:url\" content=\"https://supertokens.com/blog/implement-passkeys-nextjs\" />",
+            "<meta name=\"twitter:image\" content=\"https://supertokens.com/blog-meta-images/implement-passkeys-nextjs.png\" /> ",
+            "<!--OG Tags-->",
+            "<link rel=\"canonical\" href=\"https://supertokens.com/blog/implement-passkeys-nextjs\">"
+        ],
+        "title": "How to Implement Passkey Authentication in Next.js With SuperTokens",
+        "schema": "<script type=\"application/ld+json\"> {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Article\",\n            \"mainEntityOfPage\": {\n                \"@type\": \"WebPage\",\n                \"@id\": \"https://supertokens.com/blog/implement-passkeys-nextjs\"\n            },\n            \"headline\": \"Build a complete, self-hosted passkey flow in a Next.js App Router app with SuperTokens: registration, authentication, cross-device, recovery, and migration.\",\n            \"image\": \"https://supertokens.com/blog-meta-images/implement-passkeys-nextjs.png\",\n            \"author\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"url\": \"https://supertokens.com\"\n            },\n            \"publisher\": {\n                \"@type\": \"Organization\",\n                \"name\": \"SuperTokens\",\n                \"logo\": {\n                    \"@type\": \"ImageObject\",\n                    \"url\": \"https://supertokens.com/static/assets/dark-home/logo.png\"\n                }\n            }\n        }</script>"
+    },
+    {   
         "path": "/blog/what-are-passkeys",
         "metaTags": [
             "<meta name=\"description\" content=\"A developer's guide to passkeys: what they are cryptographically, how WebAuthn and FIDO2 fit together, and where the real trade-offs live.\" />",
