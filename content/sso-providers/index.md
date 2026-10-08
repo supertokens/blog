@@ -1,442 +1,210 @@
 ---
-title: Top Open Source SSO Providers to Know in 2026
-description: "Compare the best open source SSO providers in 2026 and learn how to pick the right solution for your app’s security and scalability."
+title: "Top Open Source SSO Providers in 2026: Keycloak, authentik, Authelia, ZITADEL and More"
+description: "Compare the best open source SSO providers in 2026: Keycloak, authentik, Authelia, ZITADEL, Apereo CAS, Ory and SuperTokens. Licenses, supported protocols, pricing and which to choose."
 date: "2025-07-07"
+updated: "2026-09-24"
 cover: "sso_providers_2025.png"
 category: "sso, sso providers, guide"
 author: "Maurice Saldivar"
 ---
 
-# Introduction
+**The leading open source SSO providers in 2026 are Keycloak, authentik, Authelia, ZITADEL, Apereo CAS, Ory and SuperTokens.** Keycloak is the most widely deployed general-purpose option. authentik and ZITADEL cover the most protocols in a modern package. Authelia is the lightest choice for putting SSO in front of self-hosted apps behind a reverse proxy. SuperTokens is built for adding login and SSO to your own product.
 
-Managing multiple credentials across dozens of applications has become a security and usability nightmare for modern organizations. Single Sign-On (SSO) solves this by allowing users to access multiple applications with one set of credentials, while centralizing authentication for better security and user management.
+*License, protocol and pricing details checked against each project's GitHub repository and pricing page on 24 September 2026. GitHub star counts are rounded and as of the same date.*
 
-Open source SSO providers have matured significantly, offering enterprise-grade features without vendor lock-in or hefty licensing costs. They provide the flexibility to customize authentication systems while maintaining robust security standards.
+## Table of Contents
 
-This guide explores top SSO providers some open source and others not so you gain a better view of the authentication landscape in 2025, helping you choose the right solution for your organization's needs.
+- [Open source SSO providers at a glance](#open-source-sso-providers-at-a-glance)
+- [Protocol support compared](#protocol-support-compared)
+- [Keycloak](#keycloak)
+- [authentik](#authentik)
+- [Authelia](#authelia)
+- [ZITADEL](#zitadel)
+- [Apereo CAS](#apereo-cas)
+- [Ory](#ory)
+- [SuperTokens](#supertokens)
+- [What about Microsoft Entra ID, Okta and Auth0?](#what-about-microsoft-entra-id-okta-and-auth0)
+- [How to choose an open source SSO provider](#how-to-choose-an-open-source-sso-provider)
+- [What is SSO and how does it work?](#what-is-sso-and-how-does-it-work)
+- [SSO best practices](#sso-best-practices)
+- [Frequently Asked Questions](#frequently-asked-questions)
 
-## What is SSO?
+## Open Source SSO Providers at a Glance
 
-Single Sign-On (SSO) is an authentication mechanism that allows users to access multiple applications and services using a single set of credentials. Instead of maintaining separate usernames and passwords for each application, users authenticate once and gain seamless access to all connected systems.
+| Provider | License | Best for | Paid option | GitHub stars |
+|---|---|---|---|---|
+| **Keycloak** | Apache 2.0 | General-purpose IAM for workforce and customer apps; large enterprises | Commercial support via the Red Hat build of Keycloak | ~37k |
+| **authentik** | MIT (core); proprietary enterprise features | Self-hosters who want one IdP for SAML, OIDC, LDAP and RADIUS | Enterprise: $5/internal user/month, $0.02/external user/month | ~26k |
+| **Authelia** | Apache 2.0 | Adding SSO and 2FA in front of self-hosted apps via a reverse proxy | None (community project) | ~29k |
+| **ZITADEL** | AGPL-3.0 (some directories Apache 2.0/MIT) | Multi-tenant B2B SaaS that needs SAML, OIDC and SCIM | Managed ZITADEL Cloud | ~15k |
+| **Apereo CAS** | Apache 2.0 | Universities and enterprises with CAS, SAML or WS-Federation estates | Commercial support from Apereo partners | ~11k |
+| **Ory** (Hydra, Kratos) | Apache 2.0 | Teams building their own login UI on a certified OAuth 2.0/OIDC server | Managed Ory Network | ~18k (Hydra) |
+| **SuperTokens** | Apache 2.0 (core); enterprise features under a separate licence | Adding login, sessions and enterprise SSO to your own product | Managed service; multi-tenancy/enterprise SSO is a paid add-on | ~15k |
 
-### How SSO Works
+## Protocol Support Compared
 
-The SSO process involves three key components:
+| | OIDC / OAuth 2.0 | SAML 2.0 | LDAP | SCIM | Passkeys / WebAuthn | Reverse-proxy auth |
+|---|---|---|---|---|---|---|
+| Keycloak | Yes | Yes | Yes (user federation) | Preview (native SCIM API since 26.7) | Yes | Via companion proxies |
+| authentik | Yes | Yes | Yes (LDAP provider) | Yes | Yes | Yes (built-in proxy) |
+| Authelia | Yes (OpenID Certified) | No | Yes (user backend) | No | Yes | Yes (core use case) |
+| ZITADEL | Yes (OpenID Certified) | Yes | Yes | Yes | Yes | No |
+| Apereo CAS | Yes | Yes | Yes | Yes | Yes | No |
+| Ory | Yes (Hydra is OpenID Certified) | Not in the open source projects | No | No | Yes (Kratos) | Via Ory Oathkeeper |
+| SuperTokens | Yes (social and enterprise OIDC providers) | Yes, via the paid multi-tenancy feature | No | No | Yes | No |
 
-**Identity Provider (IdP)**: The central authentication service that verifies user credentials and issues authentication tokens. Examples include SuperTokens, Microsoft Entra ID, Auth0 Okta, and Keycloak.
+"Yes" means the capability is built in or officially supported. Check each project's documentation for version-specific details.
 
-**Service Provider (SP)**: The application or service that users want to access. These rely on the IdP for user authentication rather than managing credentials directly.
+## Keycloak
 
-**Authentication Tokens**: Secure digital certificates that prove a user's identity. These tokens are passed between the IdP and SPs to grant access without re-entering credentials.
+[Keycloak](https://github.com/keycloak/keycloak) is the most widely adopted open source identity and access management server. It is a CNCF project, originally created by Red Hat, and licensed under Apache 2.0.
 
-### The SSO Authentication Flow
+- **Protocols:** OpenID Connect, OAuth 2.0 and SAML 2.0, with user federation from LDAP and Active Directory
+- **Features:** Realms for multi-tenancy, identity brokering to external IdPs, fine-grained authorization, passkeys/WebAuthn, themeable login pages and an admin console
+- **Pricing:** Free. Red Hat offers commercial support through the Red Hat build of Keycloak.
+- **Watch out for:** Running Keycloak well (clustering, upgrades, database tuning) takes real DevOps effort, and deep UI customisation means working with its theme system.
 
-**Step 1: First Login**
-```
-User → Gmail → Identity Provider (login required)
-User enters credentials → Token generated → Access granted
-```
+**Choose Keycloak if** you need a proven, standards-complete IdP and have the operations capacity to run it. See [Keycloak alternatives](/blog/keycloak-alternatives) if it feels too heavy.
 
-**Step 2: Accessing Other Apps**
-```
-User → Slack → Identity Provider (checks existing token)
-Token valid → Instant access (no login needed)
-```
+## authentik
 
-**Key Points:**
-- Login once at the Identity Provider 
-- Token shared across all connected applications
-- No re-authentication needed for additional services
+[authentik](https://github.com/goauthentik/authentik) is a self-hosted identity provider positioned as an open source replacement for Okta, Auth0 and Entra ID. Its core is MIT-licensed.
 
-## Benefits of Implementing SSO in Your Applications
+- **Protocols:** OAuth 2.0/OIDC, SAML, LDAP and RADIUS providers, SCIM, plus a built-in reverse proxy for apps with no SSO support
+- **Features:** Visual "flows" for customising login, enrollment and recovery; passkeys/WebAuthn; deployable with Docker Compose, Kubernetes (Helm) or AWS CloudFormation
+- **Pricing:** The open source edition is free. Enterprise is $5 per internal user per month and $0.02 per external user per month, billed annually. Enterprise Plus starts at $20,000 per year.
+- **Watch out for:** Flows are powerful but take time to learn, and some features are only in the paid Enterprise edition.
 
-### Simplified User Experience
+**Choose authentik if** you want one self-hosted IdP that covers almost every protocol, including legacy LDAP and RADIUS. Compare it head-to-head in [authentik vs Keycloak](/blog/authentik-vs-keycloak).
 
-Password fatigue is real. Users often resort to weak, repeated credentials, changing as few characters as needed. SSO eliminates this burden by providing seamless access to all applications through a single authentication point.
+## Authelia
 
-Users can move fluidly between tools without interruption, this improved usability directly translates to higher productivity and user satisfaction.
+[Authelia](https://github.com/authelia/authelia) is a lightweight authentication and authorization server that sits beside a reverse proxy such as Traefik, nginx, Caddy, Envoy or HAProxy and enforces login and two-factor authentication for the apps behind it.
 
-### Improved Security for End Users
+- **Protocols:** OpenID Connect 1.0 / OAuth 2.0 provider (OpenID Certified™ for several OP profiles). No SAML.
+- **Features:** Forward-auth access control rules per domain and path; 2FA with security keys (WebAuthn), TOTP and Duo push
+- **Pricing:** Free and community-maintained, with no commercial tier
+- **Watch out for:** It is not a full user-management platform, and without SAML it can't serve apps that only speak SAML.
 
-SSO strengthens security by addressing the weakest link in most systems: password management. When users only need to remember one strong password, they're more likely to create and maintain secure credentials.
+**Choose Authelia if** you want SSO and 2FA in front of self-hosted services with minimal resources. See [Authelia vs Keycloak](/blog/authelia-vs-keycloak) and [Authelia alternatives](/blog/authelia-alternatives).
 
-SSO enables organizations to enforce consistent security policies across all applications, including multi-factor authentication (MFA), password complexity requirements, and session management. Centralized authentication also provides better audit trails and makes it easier to detect suspicious login patterns or unauthorized access attempts.
+## ZITADEL
 
-For compliance-heavy industries like healthcare or finance, SSO supports regulatory requirements by providing detailed access logs and ensuring consistent security controls across all systems.
+[ZITADEL](https://github.com/zitadel/zitadel) is a cloud-native identity platform with first-class multi-tenancy, designed for B2B SaaS. It is licensed under AGPL-3.0, with Apache 2.0 and MIT exceptions for specific directories.
 
-### Operational Efficiency
+- **Protocols:** OpenID Connect (certified), OAuth 2.0, SAML 2.0 and LDAP, with a SCIM 2.0 server for user provisioning
+- **Features:** Organizations for customer tenants, passkeys (FIDO2/WebAuthn), audit trail built on event sourcing, managed cloud or self-hosted
+- **Watch out for:** AGPL-3.0 has obligations if you modify ZITADEL and offer it as a network service, so check with your legal team.
 
-IT teams spend countless hours on password related issues, account lockouts, and access problems that consume significant resources. SSO dramatically reduces these support tickets by eliminating most password management issues.
+**Choose ZITADEL if** you are building multi-tenant B2B SaaS and need SAML, OIDC and SCIM from one open source project.
 
-When employees leave or change roles, administrators can instantly revoke or modify access across all connected applications from a single point, rather than manually updating dozens of individual systems. This centralized user management reduces security risks and administrative overhead.
+## Apereo CAS
 
-The time savings extend beyond IT support. Employees spend less time on authentication related tasks, and onboarding new users becomes streamlined when they gain immediate access to all necessary tools through one account setup.
+[Apereo CAS](https://github.com/apereo/cas) is a long-running Java (Spring Boot) identity provider maintained by the Apereo Foundation, widely used in higher education.
 
-## Common SSO Protocols
+- **Protocols:** CAS v1–v3, SAML v1 and v2, OAuth 2.0, OpenID Connect and WS-Federation
+- **Features:** Very broad protocol and authentication-source support, MFA integrations, extensive configuration options
+- **Watch out for:** Configuration is extensive and Java-centric, and the UI and developer experience feel dated compared with newer projects.
 
-SSO implementations rely on standardized protocols to securely exchange authentication data between identity providers and applications.
+**Choose Apereo CAS if** you already run CAS or WS-Federation, or need the widest protocol coverage in one server.
 
-### SAML (Security Assertion Markup Language)
+## Ory
 
-SAML is an XML-based protocol that exchanges authentication data via assertions-structured XML documents containing user identity information. When a user logs in, the identity provider creates a SAML assertion and sends it to the service provider for access.
+[Ory](https://github.com/ory/hydra) is a set of Apache 2.0 building blocks: **Hydra** (an OpenID Certified OAuth 2.0 and OpenID Connect server), **Kratos** (identity and user management) and **Oathkeeper** (an identity-aware proxy).
 
-Best for enterprise applications and legacy systems requiring detailed user attributes.
+- **Protocols:** OAuth 2.0 and OpenID Connect via Hydra; passkeys and social sign-in via Kratos
+- **Features:** Headless by design (you build the login and consent UI), high throughput, low resource use; a managed version is available as Ory Network
+- **Watch out for:** Hydra doesn't include user management or a login UI, so you'll combine several components. SAML isn't part of the open source projects.
 
-### OAuth 2.0
+**Choose Ory if** you want a certified, headless OAuth 2.0/OIDC server and are happy to build your own UI. See [Ory vs Keycloak vs SuperTokens](/blog/ory-vs-keycloak-vs-supertokens).
 
-OAuth is an authorization framework that uses access tokens to grant limited access to user resources without exposing passwords. Applications receive tokens from the authorization server to access protected resources.
+## SuperTokens
 
-Ideal for modern web and mobile applications, API integrations, and granular access control.
+[SuperTokens](https://github.com/supertokens/supertokens-core) is an open source authentication platform for adding login, session management and SSO to your own web and mobile apps. The core is Apache 2.0, and enterprise features are under a separate licence.
 
-### OpenID Connect
+- **Protocols:** Social and enterprise OIDC/OAuth providers; enterprise SSO including SAML through the multi-tenancy feature, with login methods configurable per tenant
+- **Features:** Pre-built and custom UI, secure cookie-based sessions with automatic token rotation, passwordless and [passkeys](/blog/what-are-passkeys), MFA, roles, machine-to-machine auth, backend SDKs for Node.js, Python and Go
+- **Pricing:** Self-hosted core features are free with no user limit. The managed service is free under 5,000 MAUs, then $0.02 per MAU. MFA ($0.01/MAU, minimum $100/month), account linking and multi-tenancy/enterprise SSO are paid add-ons. See [supertokens.com/pricing](https://supertokens.com/pricing).
+- **Watch out for:** SuperTokens is built for customer-facing authentication in your product. It isn't a workforce IdP for signing employees into third-party SaaS apps.
 
-OpenID Connect builds on OAuth 2.0 to add an authentication layer by providing ID tokens that contain user identity information alongside OAuth's access tokens.
+**Choose SuperTokens if** you are building a product and want users (or your B2B customers' employees, via their corporate IdP) to sign in with SSO, without running a full IAM server.
 
-Perfect for applications needing both user authentication and API access.
+### Adding SSO to your app with SuperTokens
 
-## Key Features to Look for in an SSO Provider
-
-### Integration Capabilities
-
-Your SSO provider must connect seamlessly with existing systems and third-party applications. Look for solutions that support multiple protocols (SAML, OAuth, OpenID Connect) and offer pre-built connectors for popular apps.
-
-API availability is crucial for custom integrations and automation. The provider should offer comprehensive documentation and SDKs for different programming languages.
-
-### Scalability
-
-The SSO solution should handle growth in users and applications without performance degradation. Consider providers that offer horizontal scaling capabilities and can support your organization's projected growth over the next few years.
-
-Performance metrics like response times and uptime guarantees indicate how well the system will handle increased load during peak usage periods.
-
-### User Experience Customization
-
-The ability to customize login interfaces to match your branding creates a cohesive user experience. Look for providers that allow custom logos, colors, and domain names to maintain brand consistency.
-
-Advanced customization options include custom authentication flows, conditional access policies, and personalized user dashboards that align with your organization's workflow.
-
-### Analytics and Reporting
-
-Monitoring user access patterns helps detect anomalies and security threats while providing insights into application usage. Essential reporting features include login frequency, failed authentication attempts, and access patterns across different applications.
-
-Real-time alerts for suspicious activities and comprehensive audit logs support both security monitoring and compliance requirements.
-
-This process uses standard protocols like SAML, OAuth 2.0, or OpenID Connect to ensure secure communication between all components.
-
-## Comparing SSO Providers
-
-| Provider | Key Features | Pricing | Ideal Use Cases |
-|----------|-------------|---------|-----------------|
-| **Keycloak** | • SAML, OAuth 2.0, OIDC<br>• Passwordless & social logins<br>• User federation (LDAP/AD)<br>• Multi-tenancy<br>• Self-hosted only<br>• Open source<br>• All cloud providers | • Completely free<br>• Infrastructure costs only<br>• Red Hat SSO for enterprise support | Large enterprises, government agencies, organizations needing data sovereignty, teams with strong DevOps capabilities |
-| **SuperTokens** | • OAuth 2.0, OIDC, SAML<br>• Cookie-based sessions<br>• Passwordless & social logins<br>• Machine to machine auth<br>• Self-hosted & managed options<br>• Open source<br>• All cloud providers | • Self-hosted: Free<br>• Managed: Free up to 5K MAU<br>• Then $0.02/MAU<br>• Provides add-ons for more features: multi-factor auth $0.01/MAU ($100/mo minimum) | Cost-conscious startups, dev teams wanting high customization, organizations prioritizing ease of use |
-| **Microsoft Entra ID** | • All major protocols<br>• Conditional Access<br>• Privileged Identity Management<br>• Microsoft 365 integration<br>• Azure ecosystem integration | • Not Open Source <br>• Free tier available<br>• P1: $6/user/month<br>• P2: $9/user/month<br>• Included with M365 licenses | Microsoft-centric organizations, hybrid cloud environments, enterprises using Azure/M365 |
-| **Authentik** | • OAuth 2.0, OIDC, SAML<br>• LDAP, RADIUS, SCIM<br>• Passwordless & social logins<br>• WebAuthn/Passkeys<br>• User federation (LDAP/AD)<br>• Multi-tenancy<br>• Self-hosted only<br>• Open source<br>• All cloud providers | • Self-hosted: Free, unlimited users<br>• Professional support: $5/user/month w/ ticket support for subscriptions over $1k/year min<br>• Enterprise: $20,000+/year<br>• No per-user fees in free tier | Technical teams wanting full control, organizations with data sovereignty requirements, cost-conscious companies with DevOps capabilities
-
-Each provider addresses different organizational needs. Consider your technical requirements, budget constraints, existing infrastructure, and team expertise when making your selection.
-
-Here's a table comparing ideal use cases:
-
-| Provider | **Best For** | **Key Advantage** | **Main Limitation** |
-|----------|-------------|-------------------|-------------------|
-| **Keycloak** | Large enterprises & government agencies | Completely free, battle-tested, enterprise-scale | Requires significant DevOps expertise |
-| **SuperTokens** | Growing startups & developer teams | Modern DX, flexible pricing that scales with growth | Limited enterprise features compared to others |
-| **Microsoft Entra ID** | Microsoft-centric organizations | Seamless M365/Azure integration, enterprise-grade | Expensive, vendor lock-in, not open source |
-| **Authentik** | Technical teams wanting full control | Unlimited free users, modern architecture | Self-hosted only, requires technical expertise |
-
-
-## Implementing SSO with SuperTokens
-
-SuperTokens takes a developer first approach to SSO implementation, turning what's traditionally a complex integration into a straightforward process. Unlike heavyweight enterprise solutions, SuperTokens provides flexible, open-source authentication that scales from startup MVPs to enterprise deployments.
-
-SuperTokens Core serves as the main authentication service handling all the auth logic. It can be self-hosted or use SuperTokens service. The backend sdk integrates with your APIs exposing the auth endpoints, and the frontend sdk manages the auth UI and session handling on the client side.
-
-### Backend Details
-
-The `connection_uri` is the link between your backend and the SuperTokens Core service. For dev environments you can make use of the demo instance:
-
-`connection_uri="https://try.supertokens.com"`
-
-In production, this should be your self-hosted instance or the managed service endpoint. 
-
-For a Python/FastAPI implementation, the complete configuration structure requires both connection details and app information: 
-
-```python
-# config.py
-supertokens_config = SupertokensConfig(
-    connection_uri="https://try.supertokens.com"
-)
-
-app_info = InputAppInfo(
-    app_name="SuperTokens Proof of Concept",
-    api_domain=get_api_domain(),
-    website_domain=get_website_domain(),
-    api_base_path="/auth",
-    website_base_path="/auth"
-)
-
-```
-
-In the same file you can add SuperTokens recipes, these recipes provide expanded pre-built auth features. Let's use the [Social Login](https://supertokens.com/docs/authentication/social/introduction) Recipe to add Github SSO as a login method. 
-
-
-
-```python
-# config.py
-from supertokens_python import InputAppInfo, SupertokensConfig, init
-from supertokens_python.recipe import dashboard, session, thirdparty, userroles
-from supertokens_python.recipe.thirdparty.provider import (
-    ProviderClientConfig,
-    ProviderConfig,
-    ProviderInput,
-)
-
-
-def get_api_domain() -> str:
-    api_port = str(3001)
-    api_url = f"http://localhost:{api_port}"
-    return api_url
-
-def get_website_domain() -> str:
-    website_port = str(3000)
-    website_url = f"http://localhost:{website_port}"
-    return website_url
-
-supertokens_config = SupertokensConfig(
-    connection_uri="https://try.supertokens.com"
-)
-
-app_info = InputAppInfo(
-    app_name="SuperTokens Proof of Concept",
-    api_domain=get_api_domain(),
-    website_domain=get_website_domain(),
-    api_base_path="/auth",
-    website_base_path="/auth"
-)
-
-recipe_list = [
-    session.init(),
-    dashboard.init(),
-    userroles.init(),
-    thirdparty.init(
-        sign_in_and_up_feature=thirdparty.SignInAndUpFeature(
-            providers=[
-                ProviderInput(
-                    config=ProviderConfig(
-                        third_party_id="github",
-                        clients=[
-                            ProviderClientConfig(
-                                client_id="YOUR_CLIENT_ID_FROM_GITHUB",
-                                client_secret="YOUR_CLIENT_SECRET_FROM_GITHUB"
-                            )
-                        ]
-                    )
-                ),
-                ]
-        )
-    )
-]
-
-init(
-    supertokens_config=supertokens_config,
-    app_info=app_info,
-    framework="fastapi",
-    recipe_list=recipe_list,
-    mode="asgi",
-    telemetry=False
-)
-
-```
-
-The `get_api_domain()`, and `get_website_domain()` must match your deployment urls to prevent cors issues, while the base paths define where SuperTokens routes are mounted. 
-
-### Frontend Details
-SuperTokens provides pre-built UI components and an interface for custom UIs, more information can be found in the [docs](https://supertokens.com/docs/quickstart/frontend-setup).
-
-Using the `supertokens-web-js` sdk we'll add auth functionality to our angular frontend. 
-
-Note the providers, we currently only specify github but SuperTokens has support for several others e.g Apple, Google, Discord. Check docs for a complete list of growing providers. 
-
-```javascript
-// config.ts
-import SuperTokens from "supertokens-web-js";
-import Session from "supertokens-web-js/recipe/session";
-
-const isMultitenancy = false;
-
-export function getApiDomain() {
-    const apiPort = 3001;
-    const apiUrl = `http://localhost:${apiPort}`;
-    return apiUrl;
-}
-
-export function getWebsiteDomain() {
-    const websitePort = 3000;
-    const websiteUrl = `http://localhost:${websitePort}`;
-    return websiteUrl;
-}
-
-export function initSuperTokensUI() {
-    (window as any).supertokensUIInit("supertokensui", {
-        appInfo: {
-            websiteDomain: getWebsiteDomain(),
-            apiDomain: getApiDomain(),
-            appName: "SuperTokens Proof of Concept",
-            websiteBasePath: "/auth",
-            apiBasePath: "/auth",
-        },
-        
-        recipeList: [
-            (window as any).supertokensUISession.init(),
-            (window as any).supertokensUIThirdParty.init({
-                signInAndUpFeature: {
-                    providers: [
-                        (window as any).supertokensUIThirdParty.Github.init(),
-                    ],
-                },
-            })
-        ],
-        getRedirectionURL: async (context: any) => {
-            if (context.action === "SUCCESS") {
-                return "/dashboard";
-            }
-            return undefined;
-        },
-    });
-}
-
-export function initSuperTokensWebJS() {
-    SuperTokens.init({
-        appInfo: {
-            appName: "SuperTokens Proof of Concept",
-            apiDomain: getApiDomain(),
-            apiBasePath: "/auth",
-        },
-        recipeList: [
-            Session.init()
-        ]
-    });
-
-    if (isMultitenancy) {
-        initTenantSelectorInterface();
-    }
-}
-
-export async function initTenantSelectorInterface() { };;
-```
-
-Lastly we need to update the FastAPI middleware file `app.py` to ensure proper request interception. 
-
-```python
-# app.py
-import uvicorn
-
-from fastapi import FastAPI, Depends
-from starlette.middleware.cors import CORSMiddleware
-
-from supertokens_python import init, get_all_cors_headers
-from supertokens_python.framework.fastapi import get_middleware
-from supertokens_python.recipe.session import SessionContainer
-from supertokens_python.recipe.session.framework.fastapi import verify_session
-from supertokens_python.recipe.multitenancy.asyncio import list_all_tenants
-
-import config
-
-# SuperTokens init should happen in config.py
-app = FastAPI(
-    title="SuperTokens Proof of Concept",
-    # Disable automatic trailing slash redirection
-    redirect_slashes=False
-)
-app.add_middleware(get_middleware())
-
-async def get_session_info(s: SessionContainer = Depends(verify_session())):
-    return {
-        "sessionHandle": s.get_handle(),
-        "userId": s.get_user_id(),
-        "accessTokenPayload": s.get_access_token_payload(),
-    }
-
-# Add routes for both with and without trailing slash
-app.get("/sessioninfo")(get_session_info)
-app.get("/sessioninfo/")(get_session_info)
-```
-The `verify_session()` dependency automatically validates sessions and refreshes tokens when needed. For custom session validation logic, you can access the SessionContainer object which provides methods to read and modify session data.
-
-If you would like to see a full end-to-end solution you can run the following cmd to generate an example app 
+Generate a working example app with social login (for example GitHub or Google) in one command:
 
 ```bash
-npx create-supertokens-app --appname=sso-with-supertokens --recipe=thirdparty --frontend=angular --backend=python
+npx create-supertokens-app@latest --appname=sso-with-supertokens --recipe=thirdparty
 ```
 
+Then follow the [social login guide](https://supertokens.com/docs/authentication/social/introduction) to configure providers, or the [enterprise login guide](https://supertokens.com/docs/authentication/enterprise/introduction) to let each B2B customer (tenant) sign in through their own SAML or OIDC identity provider.
 
-### Why SuperTokens for SSO?
+## What About Microsoft Entra ID, Okta and Auth0?
 
-**Open Source Flexibility**: Self-host for free with complete control over your authentication infrastructure, or use their managed service for hassle-free maintenance. No vendor lock-in means you own your user data and can customize every aspect of the authentication flow. Unlike Auth0 or Okta where you're at the mercy of their feature roadmap, with SuperTokens you can fork the core and add that weird edge case your enterprise client demands.
+These are the most common commercial SSO providers. None is open source, but they are often shortlisted alongside the projects above:
 
-**Modern Protocol Support**: SuperTokens handles OAuth 2.0, OpenID Connect, and even SAML through clever integrations. The framework abstracts away protocol complexity while maintaining compliance with industry standards. Need to support that ancient LDAP system? You can build a custom provider on top of SuperTokens' extensible architecture. The recipe system means you're not dragging along authentication methods you'll never use, just include what you need.
+| Provider | Model | Pricing (as of Sep 2026) |
+|---|---|---|
+| Microsoft Entra ID | Workforce IdP, deeply integrated with Microsoft 365 and Azure | Free tier with M365/Azure; P1 $7/user/month, P2 $10/user/month, paid yearly |
+| Okta | Workforce and customer identity (Auth0 is Okta's customer identity product) | See [Okta pricing](/blog/okta-pricing-the-complete-guide) |
+| Auth0 | Customer identity (CIAM) SaaS | Free up to 25,000 MAUs; paid plans from $35/month. See [Auth0 pricing](/blog/auth0-pricing-the-complete-guide) |
 
-**Developer Experience**: Pre-built UI components get you running in minutes, while comprehensive SDKs for Node.js, Python, and Go provide the flexibility to build custom flows. Clean easy to understand docss with plenty of examples. Error messages tell you what went wrong AND how to fix it. The three-tier architecture means your debugging stays in familiar territory: your own backend logs, not some opaque third-party service.
+Choose a commercial provider if you'd rather pay per user than operate identity infrastructure. Choose open source if you need data residency, deep customisation, or costs that don't grow per user.
 
-**Session Management That Just Works**: Automatic token refresh, CSRF protection, and secure cookie handling come built-in, you don't need a PhD in web security to implement auth correctly. The SDK handles the gnarly bits like token rotation and concurrent request handling that typically cause race conditions in homegrown solutions.
+## How to Choose an Open Source SSO Provider
 
-**Cost-Effective Scaling**: The self-hosted option remains free regardless of user count. Even the managed service pricing stays reasonable as you grow, avoiding the painful pricing tiers of traditional auth providers. That surprise bill when you hit 10,001 monthly active users? Not happening here. Your auth costs become predictable infrastructure costs, not per-user taxes.
+1. **Workforce or customer SSO?** To sign employees into internal and third-party apps, look at Keycloak, authentik, Authelia or Apereo CAS. To add SSO to your own product for your customers, look at SuperTokens, ZITADEL, Ory or Keycloak.
+2. **Which protocols do your apps speak?** If any app needs SAML, rule out Authelia and open source Ory. For LDAP or RADIUS clients, authentik is the most complete.
+3. **Do you need multi-tenancy?** For B2B SaaS where each customer brings its own IdP, ZITADEL, SuperTokens (multi-tenancy) and Keycloak (realms or organizations) are designed for it.
+4. **How much operations capacity do you have?** Authelia is the lightest to run. Keycloak and CAS need the most care. ZITADEL, Ory and SuperTokens also offer managed versions.
+5. **Is the license acceptable?** Apache 2.0 and MIT are permissive. AGPL-3.0 (ZITADEL) has obligations if you modify it and offer it as a network service. Open-core projects keep some features in a paid tier.
 
-**True Framework Agnostic**: While our examples use Angular and Python, SuperTokens genuinely works with any stack. React, Vue, Svelte on the frontend? Covered. Express, FastAPI, Rails, Laravel on the backend? All supported. The standardized API means switching frameworks doesn't mean rewriting your entire auth layer.
+## What Is SSO and How Does It Work?
 
+Single sign-on (SSO) lets a user sign in once with an **identity provider (IdP)** and then access multiple applications (**service providers**) without signing in again. The IdP authenticates the user and issues a signed assertion (SAML) or token (OpenID Connect) that each application trusts.
 
-## Best Practices for SSO Implementation
+A typical flow:
 
-### User Education
+1. The user opens an app and is redirected to the IdP.
+2. The user signs in at the IdP, ideally with MFA or a passkey.
+3. The IdP sends a signed SAML assertion or OIDC ID token back to the app, which creates a session.
+4. When the user opens a second app, the IdP recognises the existing session and signs them in without a new prompt.
 
-Rolling out SSO without user communication is like deploying without release notes: technically it works, but everyone's confused.
+The main protocols are:
 
-**Before launch:** Send a simple email explaining the benefits: one password, faster access, better security. Skip the 20-page policy document.
+- **SAML 2.0:** XML-based and dominant in enterprise workforce apps. See [SAML vs OAuth](/blog/saml-vs-oauth) and [OIDC vs SAML](/blog/oidc-vs-saml).
+- **OAuth 2.0:** A delegated *authorization* framework, not an authentication protocol on its own.
+- **OpenID Connect (OIDC):** An identity layer on top of OAuth 2.0, and the default for modern web and mobile apps. See [OpenID Connect vs OAuth 2.0](/blog/openid-connect-vs-oauth2).
 
-**During rollout:** Provide visual guides showing the new login flow. Include screenshots of what users will actually see. Cover common scenarios like mobile access and timeout behavior.
+For a step-by-step rollout, see our [SSO implementation guide](/blog/sso-implementation).
 
-**After launch:** Expect support tickets in the first 48 hours. Most issues? Users trying old passwords or not understanding redirects. A good FAQ cuts tickets by 80%.
+## SSO Best Practices
 
-### Security Considerations
+- **Enforce phishing-resistant MFA at the IdP.** SSO concentrates risk in one account, so protect it with passkeys or security keys rather than SMS codes, which are vulnerable to [SIM swapping](/blog/sim-swapping).
+- **Automate deprovisioning.** Use SCIM where possible so that removing a user at the IdP removes their access everywhere.
+- **Set sensible session lifetimes** and re-authenticate for sensitive actions ([step-up authentication](/blog/step-up-auth)).
+- **Monitor sign-ins centrally.** Alert on spikes in failed logins and impossible-travel patterns.
+- **Plan for IdP outages.** Keep documented break-glass accounts for critical systems.
+- **Test every integration.** See [how to test an SSO implementation](/blog/testing-sso-implementation).
 
-SSO concentrates risk: one compromised account means total access. MFA isn't optional.
+## Frequently Asked Questions
 
-**MFA Strategy:** Implement at the SSO level, not per-app. Skip SMS (vulnerable to SIM swapping) in favor of push notifications, hardware tokens, or biometrics.
+### What is the best open source SSO provider?
 
-**Monitor Everything:**
-- Flag unusual login patterns (Bob logging in from three continents in an hour)
-- Revoke access immediately when employees leave
-- Set 8-hour session timeouts with sliding extensions
-- Alert on failed login spikes (3 failures = forgotten password, 300 = attack)
+There is no single best option. Keycloak is the most widely used general-purpose choice. authentik covers the most protocols for self-hosters. Authelia is the lightest option for putting SSO in front of self-hosted apps. SuperTokens and ZITADEL are designed for adding SSO to your own SaaS product.
 
-### Compliance and Governance
+### Is Keycloak free?
 
-Centralized auth means centralized audit logs. When auditors arrive, you pull one report instead of diving through dozens of application logs.
+Yes. Keycloak is open source under the Apache 2.0 license and free to use, including commercially. You pay only for the infrastructure you run it on, or for optional commercial support such as the Red Hat build of Keycloak.
 
-**Industry Requirements:**
-- HIPAA: Auto-logoff and encryption
-- SOC 2: Access controls and monitoring
-- GDPR: Data minimization in user attributes
+### Does Authelia support SAML?
 
-**Governance Basics:**
-- Define who approves new SSO integrations
-- Schedule quarterly access reviews
-- Document which attributes each app receives
-- Create break-glass procedures for SSO outages
+No. Authelia acts as an OpenID Connect 1.0 / OAuth 2.0 provider and a forward-auth server for reverse proxies, but it does not act as a SAML identity provider. If you need SAML, consider authentik, Keycloak, ZITADEL or Apereo CAS.
 
-Document your architecture with the why, not just the what: "We chose SAML for legacy app X because their OAuth implementation was held together with duct tape."
+### What is the difference between an SSO provider and an identity provider?
 
-## Conclusion
+In practice the terms overlap. An identity provider (IdP) authenticates users and issues assertions or tokens. An SSO provider is an IdP used so that one sign-in grants access to many applications. See [What is an identity provider?](/blog/what-is-an-identity-provider)
 
-Open source SSO has matured beyond "good enough" to genuinely excellent. Whether you need Keycloak's enterprise features or SuperTokens' developer experience, there's a solution that fits.
+### Can I add enterprise SSO (SAML) to my own SaaS app with open source tools?
 
-Choose based on your actual needs: technical expertise, integrations, scale, and compliance. Start small with a pilot, gather feedback, iterate. Perfect authentication on day one isn't the goal, building a sustainable system is.
-
-Your users get fewer passwords. Security gets centralized monitoring. Developers skip building another login system. Everyone wins.
-
-Ready to simplify authentication? Pick a provider, build a proof of concept, and watch your password reset tickets disappear. The future of auth is open, flexible, and refreshingly straightforward.
-
-## Related reading
-
-- [Implementing SSO: A Step-by-Step Guide](https://supertokens.com/blog/sso-implementation)
-- [SAML vs. OAuth: What's the Difference?](https://supertokens.com/blog/saml-vs-oauth)
-- [What Is IDP Authentication?](https://supertokens.com/blog/idp-auth)
-- [What Is an Identity Provider (IDP)?](https://supertokens.com/blog/what-is-an-identity-provider)
+Yes. SuperTokens (through its paid multi-tenancy feature), ZITADEL and Keycloak all let each of your business customers sign in through their own SAML or OIDC identity provider, such as Okta or Microsoft Entra ID.
