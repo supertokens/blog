@@ -1,5 +1,5 @@
 ---
-title: How to create an invite-only auth flow in 2023
+title: "How to Create an Invite-Only Auth Flow"
 date: "2023-09-28"
 description: "Invite only flows can drive exclusivity and enhance user engagement. In this blog we will go over how you can customize SuperTokens authentication to create an invite only flow"
 cover: "how-to-create-an-invite-only-auth-flow.png"

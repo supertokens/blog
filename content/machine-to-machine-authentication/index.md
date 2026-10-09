@@ -1,5 +1,5 @@
 ---
-title: "Understanding Machine-to-Machine (M2M) Authentication: 2025 Guide"
+title: "Understanding Machine-to-Machine (M2M) Authentication"
 description: "Explore the essentials of machine-to-machine authentication and best practices for implementing secure M2M communication."
 date: "2025-03-18"
 cover: "M2M.png"

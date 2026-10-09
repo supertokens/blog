@@ -63,7 +63,7 @@ SAML is a protocol that allows two parties to exchange authentication and author
 
 OAuth/OpenID Connect is the new kid on the block (by auth standards, anyway). It's a more modern and secure way to handle authentication. If SAML is the old reliable, OAuth/OpenID Connect is the new hotness. Certainly better for modern apps, especially mobile.
 
-Once you've got the token, you can use it to access the application. More on OAuth and OIDC and the differences between them in our [OIDC vs OAuth](https://supertokens.com/blog/oauth-vs-oidc) article.
+Once you've got the token, you can use it to access the application. More on OAuth and OIDC and the differences between them in our [OIDC vs OAuth](https://supertokens.com/blog/openid-connect-vs-oauth2) article.
 
 ## Popular Real-World SSO Examples
 
