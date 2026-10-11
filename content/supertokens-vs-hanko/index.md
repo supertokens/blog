@@ -21,8 +21,8 @@ This comparison covers where each one fits, what the licensing actually obligate
 |Paid tier (cloud)|~$0.02/MAU above free tier|~$0.01/MAU above free tier|
 |Passkeys / WebAuthn|Supported|Primary focus, FIDO2-certified|
 |Multi-tenancy|First-class, API-driven|Basic, developing|
-|SAML SSO|Via SAML Jackson (BoxyHQ)|Native|
-|SCIM|Via SAML Jackson (BoxyHQ), not native|No|
+|SAML SSO|Native (SAML recipe, paid feature)|Native|
+|SCIM|Not native (build on top)|No|
 |Session security|Rotating refresh tokens, theft detection|Standard sessions|
 
 ## Passkeys: Hanko's Edge
@@ -51,7 +51,7 @@ For B2B SaaS, the balance tips toward SuperTokens.
 
 **Multi-tenancy** is first-class in SuperTokens: isolated user pools per tenant, per-tenant login methods and SSO, data isolation between tenants, all driven through the API. Role-based access control is built in through its user-roles recipe. Session security is the standout feature, with rotating refresh tokens and token theft detection modeled on the OAuth 2.0 specification, an area where most authentication providers stop at basic session handling.
 
-Hanko's multi-tenancy is still developing and is not yet comparable for a platform that needs to onboard many isolated business customers. SAML SSO is a bright spot for Hanko, which supports it natively, whereas SuperTokens reaches SAML through a documented SAML Jackson (BoxyHQ) integration rather than a first-party feature. Neither product ships native SCIM. SuperTokens documents a SCIM path through that same SAML Jackson integration, so provisioning is achievable with extra wiring; Hanko has no SCIM story at present.
+Hanko's multi-tenancy is still developing and is not yet comparable for a platform that needs to onboard many isolated business customers. Both products support SAML natively. SuperTokens has a [first-party SAML recipe](https://supertokens.com/docs/authentication/enterprise/saml) (Core 12.0+, Node.js and Python SDKs, listed as a paid feature in its docs), and its older SAML Jackson (BoxyHQ) route is now documented as legacy. Hanko supports SAML on its Pro plan as a $49/month per-connection add-on. Neither product ships native SCIM. SuperTokens' own guidance is to build SCIM endpoints on top of it, and Hanko has no SCIM story at present.
 
 SuperTokens is also highly customizable. Its override system lets you modify any backend or frontend function, such as sign-up, sign-in, or session creation, directly in your own code, without routing logic through webhooks. Hanko typically extends behavior via webhooks, which adds a network hop and an external endpoint to maintain, and on Hanko Cloud webhooks are only available on the paid Pro plan, not the free Starter tier.
 
