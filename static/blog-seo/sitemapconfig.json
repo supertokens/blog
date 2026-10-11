@@ -511,5 +511,8 @@
     },
     {
         "location": "https://supertokens.com/blog/clerk-pricing-the-complete-guide"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-to-add-auth-to-tanstack-start-with-supertokens"
     }
 ]
