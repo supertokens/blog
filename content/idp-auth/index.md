@@ -1,5 +1,5 @@
 ---
-title: "What is IDP Authentication: How Identity Providers Secure Your Apps"
+title: "What is IDP Authentication: How Identity Providers Secure Your Apps (2026)"
 date: "2025-01-27"
 description: "Learn how IDP authentication works, why it’s critical for secure access management, and how to integrate tools like SuperTokens for seamless implementation."
 cover: "idp-auth.png"
@@ -301,3 +301,9 @@ Passwordless authentication, such as biometrics and magic links, is rapidly gain
 IDP authentication is essential for modern applications, providing secure, streamlined access management while enhancing user experiences. By centralizing identity verification and leveraging robust protocols like OAuth 2.0 and SAML, organizations can protect sensitive resources and simplify workflows for both users and administrators.
 
 SuperTokens stands out as a developer-friendly solution, offering seamless integration, flexibility, and advanced features like multi-tenancy and secure session management. Explore [SuperTokens](https://supertokens.com) today to implement scalable, secure, and customizable IDP authentication tailored to your application's needs.
+
+## Related reading
+
+- [What Is an Identity Provider (IDP)?](https://supertokens.com/blog/what-is-an-identity-provider)
+- [SSO Providers: Choosing the Right One](https://supertokens.com/blog/sso-providers)
+- [SAML vs. OAuth: What's the Difference?](https://supertokens.com/blog/saml-vs-oauth)

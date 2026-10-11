@@ -1,5 +1,5 @@
 ---
-title: "AuthO Vs. Clerk: Features, Pricing, And Pros & Cons"
+title: "Auth0 vs. Clerk: Features, Pricing, and Pros & Cons"
 description: "Explore a comprehensive comparison of Auth0 and Clerk, two leading authentication providers. Discover their unique features, pricing, and best use cases to help you choose the right tool for your project"
 date: "2024-10-12"
 cover: "auth0-vs-clerk.png"

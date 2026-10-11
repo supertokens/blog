@@ -1,7 +1,7 @@
 ---
-title: "What is Password Hashing and why is it important"
+title: "What is Password Hashing and Why is it Important? (2026 Guide)"
 date: "2024-06-25"
-description: "A guide on password hashing and salting in different languages and why it's important to do so"
+description: "A practical guide to password hashing and salting: how they work, which algorithms to use (bcrypt, Argon2, PBKDF2), and why they matter for security."
 cover: "password_hashing_and_salting.png"
 category: "programming"
 author: "Dejan Lukic"
@@ -232,6 +232,10 @@ public class PasswordHashing {
     }
 }
 ```
+
+## How SuperTokens Handles Password Hashing
+
+As the footnotes below stress, password hashing is not something you should implement yourself. [SuperTokens](https://supertokens.com) handles this for you: it hashes and salts credentials using battle-tested algorithms (bcrypt and Argon2) with sensible work-factor defaults, so you get secure password storage without maintaining crypto code. It's [open source](https://supertokens.com/blog/open-source-identity-management), and pairs password storage with secure [session management](https://supertokens.com/blog/session-based-authentication) out of the box.
 
 ## Footnotes
 

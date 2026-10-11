@@ -1,5 +1,5 @@
 ---
-title: Multi-Tenant Authentication in 2024
+title: "Multi-Tenant Authentication Explained"
 date: "2023-12-01"
 description: "Multi-tenant systems allow a single instance of a software application to serve multiple different tenants. This allows for a number of benefits that will be explored in this blog"
 cover: "multi-tenancy-in-2024.png"

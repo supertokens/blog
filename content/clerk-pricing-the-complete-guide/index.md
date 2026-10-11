@@ -1,203 +1,225 @@
 ---
-title: "Clerk Pricing - The Complete Guide"
-date: "2025-11-02"
-description: "Deep dive into Clerk’s free & paid tiers, real cost examples, hidden fees, and comparison with Auth0/Okta for pricing clarity."
+title: "Clerk Pricing (2026): Free Tier, Plans, Overage Costs and Hidden Fees"
+date: "2026-02-16"
+updated: "2026-09-24"
+description: "Clerk pricing explained: the free 50K MRU tier, Pro and Business plans, per-user and per-organization overage rates, add-ons, worked cost examples, and how it compares with Auth0 and SuperTokens."
 cover: "clerk-pricing-the-complete-guide.png"
 category: "programming"
 author: "Joel Coutinho"
 ---
 
-## Introduction
+**Clerk is free for up to 50,000 monthly retained users (MRUs) per application on its Hobby plan. Paid plans start at $25/month for Pro ($20/month billed annually) and $300/month for Business ($250/month annually), each including 50,000 MRUs. Beyond that, Clerk charges $0.02 per MRU, falling to $0.012 at very high volume, plus separate fees for organizations, enterprise SSO connections and add-ons.**
 
-Clerk has become one of the most developer-friendly authentication platforms in the modern React/Next.js ecosystem. Teams choose Clerk because it ships fully-styled UI components, admin dashboards, user and organization management, and seamless multi-tenant support. Its **free tier---10,000 Monthly Active Users (MAUs) and 100 Monthly Active Organizations (MAOs)**---makes it appealing for early-stage products. Beyond that, Clerk follows a **pay-as-you-grow**model that scales with your user base.
+*Prices checked on 24 September 2026 against [clerk.com/pricing](https://clerk.com/pricing). Clerk changes its pricing regularly, so confirm current rates before you budget.*
 
-This guide breaks down every part of Clerk pricing: free limits, per-user costs, B2B org charges, real-world cost examples, hidden fees, comparison with Auth0/Okta, and how to estimate your spend reliably.
+## Table of Contents
 
+- [Clerk pricing at a glance](#clerk-pricing-at-a-glance)
+- [How Clerk counts users: Monthly Retained Users](#how-clerk-counts-users-monthly-retained-users)
+- [The free Hobby plan](#the-free-hobby-plan)
+- [Per-user overage pricing](#per-user-overage-pricing)
+- [Organization pricing for B2B SaaS](#organization-pricing-for-b2b-saas)
+- [Enterprise SSO connections](#enterprise-sso-connections)
+- [Add-ons](#add-ons)
+- [Worked cost examples](#worked-cost-examples)
+- [Costs that are easy to miss](#costs-that-are-easy-to-miss)
+- [Clerk vs Auth0 vs SuperTokens pricing](#clerk-vs-auth0-vs-supertokens-pricing)
+- [When Clerk makes sense](#when-clerk-makes-sense)
+- [Frequently Asked Questions](#frequently-asked-questions)
 
-## What Is Clerk and How Does It Price?
+## Clerk Pricing at a Glance
 
+| Plan | Monthly price | Billed annually | Included users | Best for |
+|---|---|---|---|---|
+| Hobby | Free | Free | 50,000 MRUs per app | Prototypes and early-stage products |
+| Pro | $25/month | $20/month | 50,000 MRUs per app, 1 enterprise connection | Production apps that need MFA and no Clerk branding |
+| Business | $300/month | $250/month | 50,000 MRUs per app, 1 enterprise connection, 10 dashboard seats | Teams that need a SOC 2 report, enhanced roles and priority support |
+| Enterprise | Custom (annual only) | Custom | Negotiated | 99.99% uptime SLA, HIPAA BAA, custom log retention |
 
-Clerk is an authentication and identity platform offering:
+All plans allow unlimited applications. Usage limits such as the 50,000 included MRUs apply **per application**.
 
--   User management
+## How Clerk Counts Users: Monthly Retained Users
 
--   Organization and team management for B2B apps
+Clerk bills on **Monthly Retained Users (MRUs)**, not monthly active users. An MRU is a user who comes back to your app at least one day after signing up. Clerk calls this "First Day Free": someone who signs up and never returns is never billed.
 
--   Social providers
+This matters if you run campaigns that bring in lots of sign-ups who don't come back. Those users don't count toward your bill, whereas most other providers count every monthly active user.
 
--   Multi-tenant support
+## The Free Hobby Plan
 
--   Custom domains
+The Hobby plan includes:
 
--   Admin dashboards
+- 50,000 MRUs per application
+- 100 monthly retained organizations, with up to 20 members each
+- Prebuilt sign-in and sign-up components, social login and custom domains
+- Up to 3 dashboard seats
+- 7-day fixed sessions and 1-day log retention
 
--   Embedded UI components
+What it does **not** include: multi-factor authentication (MFA), removal of Clerk branding, custom session lengths, or enterprise SSO connections. These start on Pro.
 
-According to Reddit discussions, reviews on G2, and community writeups, Clerk is praised for its fast integration and modern DX---especially for Next.js---but also criticized for cost escalation at scale.
+If a Hobby application goes over 50,000 MRUs, Clerk requires you to upgrade to Pro. You get a one-month grace period before service is affected.
 
-### Clerk's Pricing Model
+## Per-User Overage Pricing
 
-#### Free Tier
+Pro and Business include 50,000 MRUs per application. Additional MRUs are billed on a sliding scale:
 
--   **10,000 MAUs**
+| MRUs per month | Price per MRU |
+|---|---|
+| First 50,000 | Included |
+| 50,001 – 100,000 | $0.02 |
+| 100,001 – 1,000,000 | $0.018 |
+| 1,000,001 – 10,000,000 | $0.015 |
+| 10,000,001+ | $0.012 |
 
--   **100 MAOs**
+Each rate applies only to the users within its band, so 150,000 MRUs costs 50,000 × $0.02 + 50,000 × $0.018 = $1,900/month in overage, on top of the plan fee.
 
--   Includes essential auth, UI components, social logins
+## Organization Pricing for B2B SaaS
 
-#### Pro Tier
+Clerk models B2B customers as **organizations**. Every plan includes 100 monthly retained organizations (MROs) per application. Beyond that:
 
--   **$0.02 per MAU** beyond 10,000
+| Organizations per month | Price per organization |
+|---|---|
+| First 100 | Included |
+| 101 – 1,000 | $1.00 |
+| 1,001 – 10,000 | $0.90 |
+| 10,001 – 100,000 | $0.75 |
+| 100,001+ | $0.60 |
 
--   **$1 per MAO** beyond 100
+By default an organization can have up to 20 members. Unlimited members, verified domains with automatic invitations, custom roles, and linking enterprise connections to organizations all require the **B2B Authentication add-on** (see [Add-ons](#add-ons)).
 
--   **$100/mo** for *Enhanced Authentication* add-on
+Few providers charge per organization, so for B2B products with many small customer accounts this can become the largest part of the bill.
 
--   **$100/mo** for *Admin* add-on
+## Enterprise SSO Connections
 
-This linear model is simpler than Auth0/Okta, though Clerk introduces unique MAO-based costs that catch teams by surprise.
+Pro and Business each include one enterprise connection (SAML or OIDC, for example to Okta or Microsoft Entra ID). Additional connections are priced per month:
 
-## A Breakdown of Clerk Pricing Tiers
+| Connections | Price per connection |
+|---|---|
+| 1 | Included (Pro and Business) |
+| 2 – 15 | $75 |
+| 16 – 100 | $60 |
+| 101 – 500 | $30 |
+| 501+ | $15 |
 
-Based on clerk.com/pricing:
+If you sell to enterprises, expect roughly one connection per enterprise customer.
 
-| Tier / Feature | Free | Pro |
-| --- | --- | --- |
-| MAUs | 10,000 included | $0.02 per MAU beyond 10K |
-| MAOs (Organizations) | 100 included | $1 per MAO beyond 100 |
-| SSO | Included | Included |
-| Social logins | Included | Included |
-| Custom Domain | Included | Included |
-| Multi-tenant support | Included | Included |
-| Enhanced Authentication (MFA, biometrics, passkeys) | Add-on $100/mo | Add-on $100/mo |
-| Admin Dashboard | Add-on $100/mo | Add-on $100/mo |
-| Dashboard seats | 3 included | $10/mo per additional seat |
-| SLA / Support | Shared support | Paid plans / Enterprise |
+## Add-ons
 
-## What Does Clerk Actually Cost?
+| Add-on | Price | What it unlocks |
+|---|---|---|
+| B2B Authentication | $100/month ($85/month annually) | Unlimited organization members, verified domains, enterprise connections linked to organizations, custom roles and role sets |
+| Administration | $100/month ($85/month annually) | Unlimited user impersonation |
+| Additional dashboard seats (Business) | $20/month each | Seats beyond the 10 included |
+| SMS authentication | $0.01 per SMS (US and Canada); market rate elsewhere | SMS one-time passcodes |
 
-A large portion of online feedback---especially on Reddit and Hacker News---focuses on cost surprises. Let's break down real examples.
+## Worked Cost Examples
 
-### **Example 1: 15K MAUs and 80 Orgs**
+The examples below use monthly (not annual) pricing.
 
--   Free MAUs: 10,000
+### Example 1: Early-stage B2C app on Hobby
 
--   Billable MAUs: 5,000 × $0.02 = **$100/mo**
+- 20,000 MRUs, no MFA requirement, Clerk branding acceptable
 
--   Orgs < 100 → **$0**
+**Total: $0/month.** Moving to Pro for MFA and unbranded UI makes it $25/month.
 
--   No add-ons
+### Example 2: Growing consumer app on Pro
 
-**Total: $100/mo**
+- 80,000 MRUs
 
-### **Example 2: B2B at Scale (200 Orgs)**
+| Item | Cost |
+|---|---|
+| Pro plan | $25 |
+| 30,000 MRUs × $0.02 | $600 |
+| **Total** | **$625/month** |
 
--   Free MAOs: 100
+### Example 3: B2B SaaS on Pro
 
--   Billable MAOs: 100 × $1 = **$100/mo**
+- 40,000 MRUs across 500 customer organizations
+- Some customers have more than 20 users, so the B2B Authentication add-on is needed
+- 3 customers require SAML SSO
 
--   With add-ons: Enhanced Auth + Admin = **$200/mo**
+| Item | Cost |
+|---|---|
+| Pro plan | $25 |
+| MRUs (within the 50,000 included) | $0 |
+| 400 organizations × $1 | $400 |
+| B2B Authentication add-on | $100 |
+| 2 additional enterprise connections × $75 | $150 |
+| **Total** | **$675/month** |
 
-**Total: $300/mo**
+### Example 4: Scaling app on Pro
 
-### **Community Feedback**
+- 300,000 MRUs
 
-Quotes from Reddit, G2, and AppSumo consistently mention:
+| Item | Cost |
+|---|---|
+| Pro plan | $25 |
+| 50,000 MRUs × $0.02 | $1,000 |
+| 200,000 MRUs × $0.018 | $3,600 |
+| **Total** | **$4,625/month** |
 
--   "Clerk is expensive but their B2B features are hard to match."
+## Costs That Are Easy to Miss
 
--   "Pricing skyrockets once you grow past the free tier."
+1. **Organizations.** B2B products often grow faster in customer accounts than in users. At 1,000 organizations you pay $900/month in organization fees alone.
+2. **The 20-member limit.** Once any customer organization needs more than 20 members, you need the $100/month B2B Authentication add-on.
+3. **Enterprise connections.** Each enterprise customer asking for SAML SSO adds about $75/month after the first connection.
+4. **Features gated to Pro.** MFA, custom session lengths and removal of Clerk branding are not in the free plan, so most production apps pay at least $25/month.
+5. **Per-application limits.** The 50,000 included MRUs and 100 included organizations apply to each application separately.
+6. **Log retention and compliance.** A SOC 2 report and 30-day logs require Business ($300/month). HIPAA BAAs are Enterprise-only.
 
--   "Super clean developer experience---the cost is the trade-off."
+## Clerk vs Auth0 vs SuperTokens Pricing
 
-## Hidden Costs to Watch Out For
+*As of September 2026, from each vendor's public pricing page.*
 
-While Clerk's pricing page appears simple, real-world usage reveals additional charges.
+| | Clerk | Auth0 | SuperTokens |
+|---|---|---|---|
+| Free tier | 50,000 MRUs per app (Hobby, no MFA) | Up to 25,000 MAUs (Free plan) | Self-hosted: core features free with no user limit. Managed: free under 5,000 MAUs |
+| Entry paid plan | Pro: $25/month | B2C Essentials: from $35/month (500 MAUs); B2B Essentials: from $150/month (500 MAUs) | Managed: $0.02 per MAU above 5,000 |
+| How users are counted | Retained users (first day free) | Monthly active users | Monthly active users (managed service) |
+| Organizations / multi-tenancy | 100 included, then $1 → $0.60 each | 5 on Free; unlimited on B2B plans | Multi-tenancy is a paid add-on (custom pricing) |
+| Enterprise SSO connections | 1 included on Pro; $75 each for 2–15 | 1 on Free; 3 (Essentials) or 5 (Professional) on B2B plans, then $100/month each | Via the multi-tenancy add-on |
+| MFA | Pro and above | Varies by plan (see [Auth0 pricing](https://auth0.com/pricing)) | Add-on: $0.01 per MAU (minimum $100/month) |
+| Self-hosting | No | No | Yes |
 
-### 1. Per-MAO Fees
+Clerk usually costs the least for consumer apps under 50,000 retained users, especially if many sign-ups never return. Auth0's B2B plans include more organizations and SSO connections but start at a higher price. SuperTokens can be self-hosted, so core authentication costs nothing per user no matter how many users you have. You pay for your own infrastructure, plus any paid add-ons such as MFA and multi-tenancy. See [SuperTokens pricing](https://supertokens.com/pricing) for details.
 
-Once you exceed 100 organizations, **each one costs $1/mo.**
+For a feature comparison rather than pricing, see [Auth0 vs Clerk](/blog/auth0-vs-clerk) and [Clerk alternatives](/blog/clerk-alternatives). For Auth0's costs in detail, see the [Auth0 pricing guide](/blog/auth0-pricing-the-complete-guide).
 
-For B2B SaaS, org counts scale faster than user counts---this becomes the most significant pricing lever.
+## When Clerk Makes Sense
 
-### 2. Add-On Costs
+Clerk is a strong fit when:
 
-Two add-ons, both **$100/mo**:
+- You are building with Next.js, React, Remix or Expo and want prebuilt, embeddable UI components
+- Your app is consumer-facing and likely to stay near or under 50,000 retained users
+- You want organizations and invitations without building them yourself, and your customer accounts are small
 
--   Enhanced Authentication (MFA, biometrics, passkeys)
+Consider modeling costs carefully, or looking at alternatives, when:
 
--   Admin tools
+- You expect hundreds or thousands of B2B customer organizations
+- Many customers will need enterprise SSO
+- You need to self-host authentication for compliance or data-residency reasons
 
-If you need both, that's **$200/mo** flat.
+## Frequently Asked Questions
 
-### 3. Dashboard Seats
+### Is Clerk free?
 
-Clerk includes 3 dashboard seats.
-Every additional seat costs **$10/mo**.
+Yes. Clerk's Hobby plan is free for up to 50,000 monthly retained users per application, with prebuilt UI, social login and custom domains. MFA, removing Clerk branding and enterprise SSO require the Pro plan or higher.
 
-### 4. Support Responsiveness
+### How much does Clerk cost for 100,000 users?
 
-Reviews on G2 and GetApp note:
+On the Pro plan, 100,000 monthly retained users costs $1,025/month: the $25 plan fee plus 50,000 additional users at $0.02 each. Organization, enterprise connection and add-on fees are extra.
 
--   Slow response times
+### What is a Monthly Retained User (MRU) in Clerk?
 
--   Limited support unless on higher tiers
+An MRU is a user who returns to your app at least one day after signing up during a billing month. Users who sign up and never come back are not billed, which Clerk calls "First Day Free".
 
--   Inconsistent SLA experience
+### Does Clerk charge per organization?
 
-This becomes a consideration for production systems requiring guaranteed uptime.
+Yes. Each application includes 100 monthly retained organizations. Beyond that, organizations cost $1 each per month for 101–1,000, then decreasing to $0.60 each above 100,000. Organizations with more than 20 members need the $100/month B2B Authentication add-on.
 
-## How Clerk Pricing Compares to Auth0 & Okta
+### How much do enterprise SSO connections cost on Clerk?
 
-Clerk has a more generous free tier but introduces org-based billing, which competitors typically avoid.
+Pro and Business include one enterprise connection. Connections 2 to 15 cost $75 each per month, with lower per-connection prices at higher volumes ($60, $30 and then $15 each).
 
-### Feature & Pricing Comparison
+### Is Clerk cheaper than Auth0?
 
-| Dimension | Clerk | Auth0 | Okta |
-| --- | --- | --- | --- |
-| Free MAUs | **10,000** | 7,000 | ~1,000 |
-| Free B2B orgs | **100** | None | None |
-| Per-MAU pricing | **$0.02** linear | Tiered + jumps | Tiered + enterprise |
-| MAO / org pricing | **$1 per org** | Not charged | Not charged |
-| MFA | Add-on | Paid tier | Paid tier |
-| Admin features | Add-on | Paid tier | Paid tier |
-| Developer experience | Excellent | Moderate | Enterprise-heavy |
-
-**Summary:**
-Clerk is cheaper at low scale but often more expensive beyond 10K MAUs or 100 orgs.
-
-## Why Teams Choose SuperTokens Over Clerk
-
-Teams often migrate from Clerk to SuperTokens when they hit scaling thresholds.
-
-### Benefits of SuperTokens
-
--   **Self-hosted or managed**, fully open-source
-
--   **Predictable pricing** without per-user or per-org charges
-
--   **No add-ons**---MFA, admin functionality, and SSO included
-
--   **Lower TCO** at scale
-
--   **Better support responsiveness**
-
-This appeals especially to B2B companies with growing org bases.
-
-## Final Comparison
-
-Clerk offers a modern developer experience, generous free tier, and built-in B2B capabilities. But costs rise quickly as MAUs and MAOs increase---especially when add-ons and dashboard seats are added.
-
-### **Ideal for**
-
--   Early startups
-
--   Teams that need fast B2B setup
-
--   Products with fewer orgs and predictable usage
-
-### **Before choosing Clerk**
-
-Estimate costs carefully, consider long-term org growth, and compare with alternatives like **SuperTokens**, which deliver predictable pricing and full feature access without per-user or per-org charges.
-
-If you want this blog formatted for WordPress/MD, or need a downloadable SEO-optimized version, just let me know.
+For consumer apps under 50,000 retained users, Clerk is usually cheaper: its free tier is larger and Pro starts at $25/month. For B2B apps with many organizations and SSO connections, compare carefully. Clerk charges per organization, while Auth0's B2B plans include unlimited organizations but start at $150/month.

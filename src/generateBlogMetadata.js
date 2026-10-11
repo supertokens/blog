@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { buildArticleSchema } = require('./articleSchema');
 
 const OUTPUT_FILE_PATH = path.join(__dirname,"../","static","blog-seo","config.json")
 const SITEMAP_CONFIG_PATH = path.join(__dirname,"../","static","blog-seo","sitemapconfig.json")
@@ -32,7 +33,7 @@ function appendBlogMetadataToFile(frontmatter, urlSlug, outputFilePath) {
      */
 
     // Extract values from frontmatter
-    const { title, description, cover } = frontmatter;
+    const { title, description, cover, date, updated, author } = frontmatter;
 
     // Construct JSON metadata
     const metadata = {
@@ -56,28 +57,32 @@ function appendBlogMetadataToFile(frontmatter, urlSlug, outputFilePath) {
             `<link rel=\"canonical\" href=\"https://supertokens.com/blog/${urlSlug}\">`
         ],
         title: title,
-        schema: `<script type="application/ld+json"> {
+        schema: `<script type="application/ld+json">
+${JSON.stringify(buildArticleSchema({ urlSlug, title, description, cover, date, updated, author }))}</script>
+<script type="application/ld+json">
+        {
             "@context": "https://schema.org",
-            "@type": "Article",
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://supertokens.com/blog/${urlSlug}"
-            },
-            "headline": "${description}",
-            "image": "https://supertokens.com/blog-meta-images/${cover}",
-            "author": {
-                "@type": "Organization",
-                "name": "SuperTokens",
-                "url": "https://supertokens.com"
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "SuperTokens",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://supertokens.com/static/assets/dark-home/logo.png"
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://supertokens.com"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Blog",
+                    "item": "https://supertokens.com/blog"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "${title}",
+                    "item": "https://supertokens.com/blog/${urlSlug}"
                 }
-            }
+            ]
         }</script>`
     };
 

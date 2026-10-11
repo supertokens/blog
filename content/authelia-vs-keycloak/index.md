@@ -105,7 +105,7 @@ Both Authelia and Keycloak support SSO, but their implementations differ signifi
 * Authelia provides forward authentication (forward auth), meaning it integrates with a reverse proxy like Traefik, NGINX, or Apache to authenticate users before granting access to backend applications. This makes it ideal for self-hosted environments where authentication needs to be enforced at the proxy level.
 * Keycloak, on the other hand, is a full-fledged identity provider (IdP) that supports OAuth 2.0, OIDC, and SAML for SSO. It allows applications to delegate authentication to Keycloak, making it more suitable for enterprise IAM and large-scale, distributed systems.
 
-For organizations looking for self-hosted authentication alternatives to Keycloak, this guide on [self-hosted authentication solutions](https://supertokens.com/blog/self-hosted-authentication) provides insights into other platforms like SuperTokens and Authentik.
+For organizations looking for self-hosted authentication alternatives to Keycloak, this guide on [self-hosted authentication solutions](https://supertokens.com/blog/self-hosted-auth-solutions-in-2026) provides insights into other platforms like SuperTokens and Authentik.
 
 ### Integration Options
 
@@ -182,6 +182,6 @@ Keycloak is the better choice if:
 
 When it comes to authentication and IAM, Authelia and Keycloak each carve out their own niche. Authelia excels as a lightweight, self-hosted solution, tailor-made for reverse proxy integrations and multi-factor authentication (MFA). Meanwhile, Keycloak stands out as a scalable, enterprise-ready identity provider, offering robust features like role-based access control (RBAC), identity federation, and OAuth2-based authentication.
 
-If Keycloak isn’t quite your match, alternatives like Authentik, SuperTokens, and Ory offer fresh approaches to identity and access management. For a more in-depth look at how these self-hosted solutions compare, you can explore [this detailed guide](https://supertokens.com/blog/self-hosted-authentication). After all, finding the right tool is half the battle in keeping your systems secure\!
+If Keycloak isn’t quite your match, alternatives like Authentik, SuperTokens, and Ory offer fresh approaches to identity and access management. For a more in-depth look at how these self-hosted solutions compare, you can explore [this detailed guide](https://supertokens.com/blog/self-hosted-auth-solutions-in-2026). After all, finding the right tool is half the battle in keeping your systems secure\!
 
 Want an alternative with unique features from a developer's perspective? Give [SuperTokens](https://supertokens.com/product) a go\!

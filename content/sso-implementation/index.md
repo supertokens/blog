@@ -1,5 +1,5 @@
 ---
-title: "A Comprehensive Guide to SSO Implementation 2024"
+title: "A Comprehensive Guide to SSO Implementation"
 description: "This blog explores the benefits and functionalities of Single Sign-On (SSO), highlighting how it simplifies user authentication, enhances security, and integrates with modern identity management systems. It also covers how open standards like OAuth 2.0 and OIDC enable seamless access to applications, including the use of social logins from services like Google, Facebook, and Twitter."
 date: "2024-12-02"
 cover: "sso-implementation.png"

@@ -1,5 +1,5 @@
 ---
-title: What Is a YubiKey and When to Use It vs. Authenticator Apps
+title: "What Is a YubiKey and When to Use It vs. Authenticator Apps (2026)"
 description: "Discover how YubiKeys work, when to choose them over authenticator apps, and how to integrate both in your auth flow."
 date: "2025-08-18"
 cover: "what_is_a_yubikey.png"
@@ -1623,5 +1623,9 @@ Real data from your users beats security architecture debates. Deploy, measure, 
 - [MFA Introduction](https://supertokens.com/docs/additional-verification/mfa/introduction)
 - [SuperTokens Passkey Concepts](https://supertokens.com/docs/authentication/passkeys/important-concepts)
 - [Migration ](https://supertokens.com/docs/migration/overview)
+
+**Related Reading**
+- [Passkey Examples: How Passwordless Login Works in Practice](https://supertokens.com/blog/passkey-examples)
+- [The Benefits of Multi-Factor Authentication](https://supertokens.com/blog/benefits-of-multi-factor-authentication)
 
 Start with SuperTokens' extensible architecture, implement the authentication methods your users need, and evolve based on actual usage patterns. The best security is the one your users will actually use.

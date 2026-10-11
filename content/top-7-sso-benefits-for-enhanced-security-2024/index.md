@@ -1,5 +1,5 @@
 ---
-title: Top 7 SSO Benefits for Enhanced Security [2024]
+title: "Top 7 SSO Benefits for Enhanced Security"
 date: "2024-12-17"
 description: "Discover the top 7 SSO benefits for 2024 to enhance your security. Learn how to protect your data and streamline user access effectively."
 cover: "top-7-sso-benefits-for-enhanced-security-2024.png"
