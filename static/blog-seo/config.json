@@ -2617,7 +2617,7 @@
         "metaTags": [
             "<meta name=\"description\" content=\"OAuth is an authorization framework; JWT is a token format. Compare OAuth vs JWT, JWT vs opaque tokens, OAuth 2.1 changes and when to use each in 2026.\" />",
             "",
-            "<meta name=\"keywords\" content=\"Authentication, Open Source, SAML, User Management, OAuth, Enterprise SSO, Security\" />",
+            "<meta name=\"keywords\" content=\"OAuth vs JWT, JWT vs opaque token, OAuth 2.1, JWT access token, OAuth access token, token introspection, Authentication, Security\" />",
             "<!--OG Tags-->",
             "<meta property=\"og:title\" content=\"OAuth vs JWT: Key Differences Explained (2026) | SuperTokens\" />",
             "<meta property=\"og:type\" content=\"article\" />",
