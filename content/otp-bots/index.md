@@ -148,7 +148,7 @@ According to a [Proofpoint report](https://www.certitudesecurity.com/wp-content/
 OTP bots exploit vulnerabilities in 2FA systems, making it easier for attackers to gain unauthorized access to accounts even with an added security layer.
 
 ### 💳 Account Takeover 
-Attackers use OTP bots to take control of user accounts, leading to identity theft, financial fraud, or misuse of sensitive information.
+Attackers use OTP bots to take control of user accounts, leading to identity theft, financial fraud, or misuse of sensitive information. Once the attacker completes the login, they are issued a valid session or access token like any other user, so short-lived tokens and fast revocation matter (see [OAuth vs JWT](https://supertokens.com/blog/oauth-vs-jwt#jwt-vs-opaque-tokens) for how token format affects how quickly you can cut off access).
 
 ###  💸 Financial Losses
 OTP bots are often used to drain bank accounts, make unauthorized purchases, or transfer funds fraudulently.
