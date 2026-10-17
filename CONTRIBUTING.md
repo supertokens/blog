@@ -40,6 +40,7 @@ The `index.md` file starts with a frontmatter where we specify some information 
 title: "Title for your new blog post"
 description: "This is a description that will be visible on the blog's card in the blog landing page"
 date: "2022-02-20"
+updated: "2022-06-15" # optional
 cover: "cover-image-for-my-blog-post.png"
 category: "programming, featured"
 author: "John Doe"
@@ -47,7 +48,8 @@ author: "John Doe"
 ```
 - **title:** Title of the blog post.
 - **description:** Description of the post that will be visible on the blog's card.
-- **date:** Date on which the post was created. It is a string of the format `YYYY-MM-DD`.
+- **date:** Date on which the post was published. It is a string of the format `YYYY-MM-DD`. It is used as `datePublished` in the post's Article schema.
+- **updated (optional):** Date of the last substantive content update, in the format `YYYY-MM-DD`. Only set this when the content has meaningfully changed (not for typo fixes). When set, the post header shows "Updated: <updated>" and "Published: <date>" on separate lines, and it is used as `dateModified` in the Article schema. When it is not set, the header shows only "Published: <date>" and `dateModified` falls back to `date`. After adding or changing it on an existing post, run the [Article schema sync](#keeping-the-article-schema-in-sync).
 - **cover**
   - Two cover images are required for each post:
     1. **High-resolution image:**
@@ -61,7 +63,7 @@ author: "John Doe"
     - Must have the same name.
     - This name should be specified in the frontmatter's `cover` property.
 - **category:** The `category` property should be a string having all the categories for the blog post separated by a comma. For e.g. if we want a post that is visible in the _Featured_ and _Sessions_ tabs, the value would be `featured, sessions`.
-- **author:** Name of the author of this post.
+- **author:** Name of the author of this post. It must match an author's `name` in `src/authors-details.js` (see [below](#author-information-for-the-post)). It is used as the `Person` author in the Article schema.
 
 #### Content for the post
 All the content for the post is added in the `index.md` file, after the frontmatter. Check out all the markdown features supported by Gatsby [here](https://www.gatsbyjs.com/docs/reference/markdown-syntax/).
@@ -75,6 +77,8 @@ Following are some examples-
 
 #### Author information for the post.
 To add/edit the author information for existing or new author of the blog that needs to be published you need to add necessary information of that author in `src/authors-details.js` and the name property of the author object should match with the author value in frontmatter in your blogs `index.md` file.
+
+The author's `jobTitle` and `socials` URLs are also used in the post's Article schema (`jobTitle`, `url` and `sameAs`), so keep them accurate. If the name does not match any entry, the schema still credits the author by name, but without these details. After editing an author's details, run the [Article schema sync](#keeping-the-article-schema-in-sync) so existing posts pick up the change.
 
 ##### Example
 
@@ -177,11 +181,27 @@ The metadata should be added in the following format:
         "<!--OG Tags-->"
     ],
     "title": "<TODO>",
-    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/<SLUG>\"},\"headline\":\"<TODO>\",\"description\":\"<TODO>\",\"image\":\"https://supertokens.com/blog-meta-images/<IMAGE_NAME>.ext\",\"author\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
+    "schema": "<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://supertokens.com/blog/<SLUG>\"},\"headline\":\"<TODO>\",\"description\":\"<TODO>\",\"image\":\"https://supertokens.com/blog-meta-images/<IMAGE_NAME>.ext\",\"datePublished\":\"<DATE>\",\"dateModified\":\"<UPDATED_OR_DATE>\",\"author\":{\"@type\":\"Person\",\"name\":\"<AUTHOR>\",\"jobTitle\":\"<TODO>\",\"url\":\"<TODO>\",\"sameAs\":[\"<TODO>\"],\"worksFor\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"url\":\"https://supertokens.com\"}},\"publisher\":{\"@type\":\"Organization\",\"name\":\"SuperTokens\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://supertokens.com/static/assets/dark-home/logo.png\"}}}</script>"
 }
 ```
 
+The `generate-metadata` script fills in the Article schema for you:
+
+- `headline` comes from the post's title (the part before any ` | `), cut to at most 110 characters as Google recommends.
+- `datePublished` comes from the `date` frontmatter, and `dateModified` from `updated` (or `date` if `updated` is not set).
+- `author` is a `Person` built from the `author` frontmatter and that author's entry in `src/authors-details.js`. If a post has no `author`, it falls back to the SuperTokens organization.
+
 After publishing these meta tags will be used (on both the test and production site)
+
+##### Keeping the Article schema in sync
+
+Existing posts' Article schema is not regenerated automatically. After you change a post's `date`, `updated` or `author` frontmatter, or an author's details in `src/authors-details.js`, run:
+
+```bash
+node src/syncArticleSchema.js
+```
+
+This updates the dates and author in the Article schema of every post in `/static/blog-seo/config.json`, and leaves the other JSON-LD blocks and meta tags as they are. It is safe to run more than once. Commit the updated `config.json` with your change.
 
 ### Adding cannonical tags
 
@@ -246,7 +266,7 @@ If you are creating a pull request for changes other than adding a new blog post
 - Submit PR to supertokens/blog repo
   - Upload cover image to static/cover folder
   - Upload a reduced 250px height cover image to static/card-cover folder
-  - Upload title, description, category, and author
+  - Upload title, description, date, category, and author (and `updated` when refreshing an existing post)
     - “Programming” - if it has code - even if it’s a product launch
     - “Featured” - general educational content
     - “Sessions” - if it relates to sessions

@@ -1,5 +1,5 @@
 ---
-title: "Session-Based Authentication: A Detailed Guide [2024]"
+title: "Session-Based Authentication: A Detailed Guide"
 date: "2024-11-18"
 description: "Session-based authentication is a cornerstone of web security, providing a simple and controlled method to manage user sessions. This guide delves into its workings, advantages, and implementation, while addressing challenges like security vulnerabilities and scalability concerns."
 cover: "session-based-authentication.png"

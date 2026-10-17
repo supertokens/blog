@@ -96,7 +96,7 @@ SuperTokens simplifies implementing secure and user-friendly authentication flow
 OAuth grant types provide a flexible framework for securing access to user resources in third-party applications. By choosing the right grant type and implementing best practices for security and user experience, developers can ensure robust authentication and authorization mechanisms. SuperTokens offers comprehensive tools and resources to simplify OAuth integration, making it easier to build secure and user-friendly applications.
 
 For more in-depth comparisons and guides, check out our other blogs:
-- [OAuth vs OIDC](https://supertokens.com/blog/oauth-vs-oidc/)
+- [OAuth vs OIDC](https://supertokens.com/blog/openid-connect-vs-oauth2)
 - [OAuth 2 vs Session Management](https://supertokens.com/blog/oauth-2-vs-session-management/)
 - [OAuth vs JWT](https://supertokens.com/blog/oauth-vs-jwt/)
 

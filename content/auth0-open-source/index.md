@@ -246,7 +246,7 @@ Best for teams comfortable with microservices who want to pick exactly which aut
 
 Best for teams prioritizing speed over control, with budget for per-user pricing as you scale. Good if you want everything managed for you.
 
-For a broader comparison of Auth0 alternatives, see the [top Auth0 alternatives in 2025](https://supertokens.com/blog/top-auth0-alternatives-in-2025) guide.
+For a broader comparison of Auth0 alternatives, see the [top Auth0 alternatives in 2025](https://supertokens.com/blog/auth0-alternatives) guide.
 
 ## Conclusion
 
