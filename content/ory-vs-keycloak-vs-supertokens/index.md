@@ -116,3 +116,5 @@ As an open-source startup, SuperTokens offers a managed service that abstracts t
 Compared to a couple of years ago, developers have far more choice in choosing an open-source authentication provider. All three are great options, used in production across startups and large enterprises alike.
 
 By Github stars, SuperTokens is the fastest growing of the three and was one of the fastest growing open source companies in 2022 [Link]. Keycloak is the oldest, most feature rich and is 100% free. Ory is somewhere in the middle of the two.
+
+Want a deeper head-to-head? See [SuperTokens vs Ory](/blog/supertokens-vs-ory).

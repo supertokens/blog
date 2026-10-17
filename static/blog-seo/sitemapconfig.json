@@ -706,5 +706,8 @@
     },
     {
         "location": "https://supertokens.com/blog/why-is-redux-state-immutable"
+    },
+    {
+        "location": "https://supertokens.com/blog/supertokens-vs-ory"
     }
 ]
