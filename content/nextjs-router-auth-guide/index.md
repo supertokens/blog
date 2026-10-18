@@ -212,3 +212,271 @@ The next section builds `verifySession()` out into a full Data Access Layer.
 You can test for this whole class of bug without reproducing any CVE. In a test environment, remove a protected route from your Proxy matcher, then load the page and call its Server Actions and Route Handlers directly. If anything protected comes back, a Proxy bypass would hand it out too.
 
 A bug in Proxy should cost you a redirect, not your users' data.
+
+
+## Defense in Depth: The Data Access Layer Pattern
+
+The fixed page at the end of the last section still had one weak spot. It queried the database itself, and it was safe only because someone remembered to call `verifySession()` first. The next page someone writes might not.
+
+A Data Access Layer (DAL) removes the need to remember. It's a server-only module that owns every read and write, and every function in it checks the session before it touches data. Pages, Server Actions, and Route Handlers call the DAL instead of the database, so a check that's missing at the edge doesn't turn into a leak. The Next.js team [recommends this pattern](https://nextjs.org/blog/security-nextjs-server-components-actions) for new projects. This section builds the full module.
+
+### The Rules
+
+- **Only the DAL touches the database.** Pages and actions import functions like `getMyInvoices()`, never the database client.
+- **Every exported function checks the session itself.** No function assumes its caller already did.
+- **Ownership lives in the query.** Reads and writes filter by the signed-in user's ID, so a guessed or leaked record ID finds nothing.
+- **Only DTOs leave.** Functions return the fields the UI needs and nothing else, because anything a Server Component passes to a Client Component is serialized into the payload the browser downloads.
+- **The DAL decides, the caller responds.** The DAL throws a typed error, and each context turns it into the right response: a redirect, an error result, or a `401`.
+
+### The Session Module
+
+The examples assume sign-in created a row in a `session` table and set a signed cookie carrying that row's ID. The session strategy section covers that side. They use a Prisma-style client, but the structure doesn't depend on the ORM.
+
+```ts
+// lib/dal/session.ts
+import 'server-only'
+import { cache } from 'react'
+import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
+import { jwtVerify } from 'jose'
+import { db } from '@/lib/db'
+
+export type Session = {
+  sessionId: string
+  userId: string
+  role: 'member' | 'admin'
+}
+
+export class AuthError extends Error {
+  constructor(readonly status: 401 | 403) {
+    super(status === 401 ? 'Authentication required' : 'Not allowed')
+    this.name = 'AuthError'
+  }
+}
+
+function signingKey() {
+  const secret = process.env.SESSION_SECRET
+  if (!secret) throw new Error('SESSION_SECRET is not set')
+  return new TextEncoder().encode(secret)
+}
+
+// The only provider-specific code in the DAL. Swap this body for your auth library.
+async function readSession(): Promise<Session | null> {
+  const token = (await cookies()).get('session')?.value
+  if (!token) return null
+
+  let sessionId: string
+  try {
+    const { payload } = await jwtVerify(token, signingKey(), { algorithms: ['HS256'] })
+    if (typeof payload.sid !== 'string') return null
+    sessionId = payload.sid
+  } catch {
+    return null // bad signature, expired token, or malformed cookie
+  }
+
+  // The signature proves we issued the cookie. The database proves it still counts.
+  const record = await db.session.findUnique({
+    where: { id: sessionId },
+    select: { userId: true, expiresAt: true, revokedAt: true, user: { select: { role: true } } },
+  })
+  if (!record || record.revokedAt || record.expiresAt <= new Date()) return null
+
+  return { sessionId, userId: record.userId, role: record.user.role }
+}
+
+// Deduplicated within a render, so ten components cost one lookup
+export const getSession = cache(readSession)
+
+// Pages and layouts: send signed-out users to the login page
+export async function verifySession(): Promise<Session> {
+  const session = await getSession()
+  if (!session) redirect('/login')
+  return session
+}
+
+// Data functions: fail closed with a status the caller can translate
+export async function requireSession(): Promise<Session> {
+  const session = await getSession()
+  if (!session) throw new AuthError(401)
+  return session
+}
+
+export async function requireRole(role: Session['role']): Promise<Session> {
+  const session = await requireSession()
+  if (session.role !== role) throw new AuthError(403)
+  return session
+}
+```
+
+Key implementation decisions:
+
+- **`readSession()` is the authoritative check.** A valid signature isn't enough. The session row has to exist, be unexpired, and not be revoked, so signing out everywhere or banning a user takes effect on the next request. Proxy keeps its cheap signature-only check for redirects.
+- **The role comes from the database, not the token.** A demoted admin loses access on their next request instead of whenever a token happens to expire.
+- **Only token problems mean "signed out."** A database outage throws and surfaces as a 500 instead of quietly logging everyone out.
+- **`cache()` only dedupes within a render.** A page that makes ten DAL calls does one session lookup. Server Actions and Route Handlers aren't part of a render pass, so each DAL call there runs its own lookup.
+
+The four exported helpers differ only in what happens when there's no valid session:
+
+| Function | With no valid session | Use it in |
+|----------|-----------------------|-----------|
+| `getSession()` | Returns `null` | UI that branches, like a header with a "Sign in" link |
+| `verifySession()` | Redirects to `/login` | Pages and layouts |
+| `requireSession()` | Throws `AuthError(401)` | DAL data functions |
+| `requireRole()` | Throws `AuthError(401)` or `AuthError(403)` | DAL functions that need a role |
+
+### The Data Functions
+
+```ts
+// lib/dal/invoices.ts
+import 'server-only'
+import { db } from '@/lib/db'
+import { requireRole, requireSession } from './session'
+
+// The only invoice fields that ever leave the DAL
+const invoiceFields = {
+  id: true,
+  number: true,
+  amountCents: true,
+  status: true,
+  dueDate: true,
+} as const
+
+export type InvoiceDTO = {
+  id: string
+  number: string
+  amountCents: number
+  status: 'draft' | 'sent' | 'paid'
+  dueDate: Date
+}
+
+export async function getMyInvoices(): Promise<InvoiceDTO[]> {
+  const { userId } = await requireSession()
+  return db.invoice.findMany({
+    where: { userId },
+    select: invoiceFields,
+    orderBy: { dueDate: 'desc' },
+  })
+}
+
+export async function getInvoice(invoiceId: string): Promise<InvoiceDTO | null> {
+  const { userId } = await requireSession()
+  // Ownership lives in the query, so another user's invoice ID finds nothing
+  return db.invoice.findFirst({
+    where: { id: invoiceId, userId },
+    select: invoiceFields,
+  })
+}
+
+export async function markInvoicePaid(invoiceId: string): Promise<boolean> {
+  const { userId } = await requireSession()
+  const { count } = await db.invoice.updateMany({
+    where: { id: invoiceId, userId, status: 'sent' },
+    data: { status: 'paid' },
+  })
+  return count === 1
+}
+
+export async function getOverdueInvoices(): Promise<InvoiceDTO[]> {
+  await requireRole('admin')
+  return db.invoice.findMany({
+    where: { status: 'sent', dueDate: { lt: new Date() } },
+    select: invoiceFields,
+  })
+}
+```
+
+```ts
+// lib/dal/index.ts
+export { AuthError, getSession, verifySession, type Session } from './session'
+export { getInvoice, getMyInvoices, getOverdueInvoices, markInvoicePaid } from './invoices'
+```
+
+`invoiceFields` is the DTO in practice: an allowlist of columns. Adding a `stripeCustomerId` or `internalNotes` column later doesn't quietly ship it to the browser. `getInvoice()` returns `null` for an invoice that belongs to someone else, which tells a curious user nothing about whether it exists. And `requireSession()` and `requireRole()` stay out of the index file, so app code can only reach data through a function that already checks.
+
+### Calling the DAL from Every Context
+
+The same functions work in all three server contexts. What changes is how each one responds to an `AuthError`.
+
+```tsx
+// app/dashboard/invoices/page.tsx
+import { getMyInvoices, verifySession } from '@/lib/dal'
+import { InvoiceList } from './invoice-list'
+
+export default async function InvoicesPage() {
+  await verifySession() // signed-out users get a redirect, not an error page
+  const invoices = await getMyInvoices() // checks again, using the cached lookup
+  return <InvoiceList invoices={invoices} />
+}
+```
+
+```ts
+// app/dashboard/invoices/actions.ts
+'use server'
+
+import { revalidatePath } from 'next/cache'
+import { AuthError, markInvoicePaid } from '@/lib/dal'
+
+export async function markPaid(invoiceId: unknown) {
+  // Arguments come from the client, whatever the call site's types say
+  if (typeof invoiceId !== 'string') return { ok: false, error: 'Invalid invoice' }
+
+  try {
+    const updated = await markInvoicePaid(invoiceId)
+    if (!updated) return { ok: false, error: 'Invoice not found' }
+  } catch (error) {
+    if (error instanceof AuthError) return { ok: false, error: error.message }
+    throw error
+  }
+
+  revalidatePath('/dashboard/invoices')
+  return { ok: true }
+}
+```
+
+```ts
+// app/api/invoices/route.ts
+import { AuthError, getMyInvoices } from '@/lib/dal'
+
+export async function GET() {
+  try {
+    return Response.json(await getMyInvoices())
+  } catch (error) {
+    if (error instanceof AuthError) {
+      return Response.json({ error: error.message }, { status: error.status })
+    }
+    throw error
+  }
+}
+```
+
+The page redirects, the action returns a result the form can display, and the Route Handler answers with a `401` instead of the 307 redirect from the first section. The allow-or-deny decision happens once, in the DAL, and none of the three call sites can skip it. The sections on each context go deeper, including bearer tokens for Route Handlers that mobile clients call.
+
+If you've turned on the experimental [`authInterrupts`](https://nextjs.org/docs/app/api-reference/config/next-config-js/authInterrupts) flag, `unauthorized()` and `forbidden()` from `next/navigation` can replace `AuthError` in pages and Route Handlers. A typed error works today, without a flag.
+
+### Keeping the DAL the Only Way In
+
+Two guards turn the rules into build errors. The first is `import 'server-only'` at the top of every DAL file, which fails the build if a Client Component imports it (install it with `npm install server-only`). The second is a lint rule that stops app code from importing the database client directly:
+
+```js
+// eslint.config.mjs
+export default [
+  // ...your existing config
+  {
+    files: ['app/**/*.{ts,tsx}'],
+    rules: {
+      'no-restricted-imports': ['error', {
+        patterns: [{
+          group: ['@/lib/db', '**/lib/db'],
+          message: 'Read and write data through @/lib/dal so every query checks the session.',
+        }],
+      }],
+    },
+  },
+]
+```
+
+With that rule on, the fixed page from the last section fails lint, because it imports `db` directly. That's the point. It was safe only as long as everyone remembered the check.
+
+A request for invoice data now passes four checks. Proxy turns signed-out users away early. The page redirects anyone Proxy missed. The DAL refuses anyone the page missed. The ownership filter refuses requests for someone else's invoices. Proxy or the page can fail and the worst outcome is a confusing error page. The DAL is the layer that can't fail, which is why every function in it checks for itself and why it's the only code allowed near the database.
+
+Proxy decides where a request goes. The DAL decides what it gets.
