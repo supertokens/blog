@@ -579,3 +579,137 @@ Here's what a test app on Next.js 16.4.2 returned for a signed-out request, depe
 | Layout that swaps `{children}` for a sign-in prompt | Prompt, with the page's output in the payload | `200` |
 
 Check in the page, fetch through the DAL, and let Proxy own the status code.
+
+## Protecting Server Actions
+
+A Server Action reads like a function call, which makes it easy to forget that it's also a public endpoint. The [Next.js docs](https://nextjs.org/docs/app/guides/server-actions#security) put it bluntly: "Treat every action as an untrusted entry point."
+
+### What a Call Looks Like
+
+Here's the request behind `markPaid('inv_1')` from the DAL section:
+
+```http
+POST /dashboard/invoices HTTP/1.1
+Next-Action: 7f3a9c0e…
+Content-Type: text/plain;charset=UTF-8
+Cookie: session=…
+
+["inv_1"]
+```
+
+The URL is whatever page the user is on, the `Next-Action` header names the function, and the body carries its arguments. Next.js encrypts action IDs, rotates them over time, and strips unused actions from client bundles, but an ID isn't a secret. Any action your UI can call has its ID somewhere in what the browser downloads. [CVE-2026-64643](https://github.com/vercel/next.js/security/advisories/GHSA-955p-x3mx-jcvp), patched in July 2026, went further: IDs for actions used on signed-in pages could be read from static chunks served to anyone. Its workaround is the rule for this whole section: "Always authenticate within the boundary," meaning inside the `'use server'` function itself.
+
+### Proxy Coverage Doesn't Follow the Action
+
+Proxy matches URLs, and an action doesn't have one of its own. When the POST lands on a path the matcher covers, Proxy runs and can turn it away. The [Proxy docs](https://nextjs.org/docs/app/api-reference/file-conventions/proxy#execution-order) spell out the catch: "a Proxy matcher that excludes a path will also skip Server Function calls on that path," and "a refactor that moves a Server Function to a different route can silently remove Proxy coverage."
+
+A shared file can do the same without moving anything. Here's a pattern that looks safe:
+
+```ts
+// app/actions.ts
+'use server'
+
+import { db } from '@/lib/db'
+
+export async function likePost(formData: FormData) {
+  // used by a form on the public blog page
+}
+
+// WRONG: "only the admin page renders this form, and Proxy guards /admin"
+export async function deleteInvoice(formData: FormData) {
+  await db.invoice.deleteMany({ where: { id: String(formData.get('invoiceId')) } })
+}
+```
+
+In a test app on Next.js 16.4.2, the public blog page and an admin page both imported this file into Server Component forms. Next.js registered every action in the file for both pages, so a POST to the blog page carrying `deleteInvoice`'s ID ran the delete, with no session cookie at all. Proxy's `/admin` rule never saw the request, because the request never went to `/admin`. When Client Components imported the same actions instead, Next.js routed the call to the admin page, where Proxy blocked it. That's an implementation detail, not a security boundary. Don't build on it.
+
+The lint rule from the DAL section already flags this file, because it imports the database directly.
+
+### The Auth Check Inside Every Action
+
+The fix puts the check where the write happens. Add an admin-only delete to the DAL and export it from `lib/dal/index.ts`:
+
+```ts
+// lib/dal/invoices.ts
+// Admins can delete any invoice, so there's no owner filter, which makes the role check mandatory
+export async function deleteInvoice(invoiceId: string): Promise<boolean> {
+  await requireRole('admin')
+  const { count } = await db.invoice.deleteMany({ where: { id: invoiceId } })
+  return count === 1
+}
+```
+
+Then keep the action thin. It validates, calls the DAL, and shapes the result:
+
+```ts
+// app/admin/invoices/actions.ts
+'use server'
+
+import { z } from 'zod'
+import { revalidatePath } from 'next/cache'
+import { AuthError, deleteInvoice } from '@/lib/dal'
+
+export type ActionResult = { ok: true } | { ok: false; error: string } | null
+
+const DeleteInvoiceInput = z.object({
+  invoiceId: z.string().min(1).max(64),
+})
+
+export async function deleteInvoiceAction(_prev: ActionResult, formData: FormData): Promise<ActionResult> {
+  // Form fields are whatever the client sent, hidden inputs included
+  const input = DeleteInvoiceInput.safeParse({ invoiceId: formData.get('invoiceId') })
+  if (!input.success) return { ok: false, error: 'Invalid invoice' }
+
+  try {
+    // The role check lives in the DAL, so it runs on every call, from any page
+    const deleted = await deleteInvoice(input.data.invoiceId)
+    if (!deleted) return { ok: false, error: 'Invoice not found' }
+  } catch (error) {
+    if (error instanceof AuthError) return { ok: false, error: error.message }
+    throw error
+  }
+
+  revalidatePath('/admin/invoices')
+  return { ok: true }
+}
+```
+
+```tsx
+// app/admin/invoices/delete-invoice-button.tsx
+'use client'
+
+import { useActionState } from 'react'
+import { deleteInvoiceAction } from './actions'
+
+export function DeleteInvoiceButton({ invoiceId }: { invoiceId: string }) {
+  const [state, formAction, pending] = useActionState(deleteInvoiceAction, null)
+
+  return (
+    <form action={formAction}>
+      <input type="hidden" name="invoiceId" value={invoiceId} />
+      <button disabled={pending}>Delete invoice</button>
+      {state && !state.ok && <p role="alert">{state.error}</p>}
+    </form>
+  )
+}
+```
+
+In the shared file from the test, an action calling the same DAL function refused the request through the public blog page: "Not allowed" for a signed-in member and "Authentication required" with no cookie. An admin on the admin page could still delete. Every action needs the same three steps:
+
+- **Validate first.** Arguments, form fields, and hidden inputs are whatever the client sent. TypeScript types don't exist at runtime, and a schema checks shape, not ownership.
+- **Authorize through the DAL.** The check runs in the action's own call path, never in the page that rendered the form. The Next.js guide is explicit that render-time gating "is not a security boundary, because requests can be sent without going through the UI."
+- **Return only what the UI renders.** Return values are serialized to the browser, so send back `{ ok, error }`, not database rows or raw error messages.
+
+### Bound Arguments Are Input Too
+
+The [Forms guide](https://nextjs.org/docs/app/guides/forms#passing-additional-arguments) uses `.bind()` to pass an action extra arguments, like an ID, and contrasts it with a hidden input, whose value "will not be encoded." That makes `.bind()` sound safer than it is. Next.js encrypts variables an inline action captures from its scope, but bound arguments are only encoded: in the test app, a bound invoice ID showed up in the page's HTML as a readable hidden field, and anyone can change it before the request goes out.
+
+Treat bound arguments like any other input. The `markPaid` action from the DAL section takes its invoice ID as an argument and already does: it checks the type, and the DAL's ownership filter means a swapped ID finds nothing. If you run more than one instance, set `NEXT_SERVER_ACTIONS_ENCRYPTION_KEY` to one stable key so every instance can decrypt what another encrypted.
+
+### CSRF and Patching
+
+Next.js only accepts actions as POST requests and compares the `Origin` header with the `Host`. A cross-site `Origin` got "Invalid Server Actions request" in the test app. If a reverse proxy or CDN serves your app from another domain, add that domain to [`experimental.serverActions.allowedOrigins`](https://nextjs.org/docs/app/api-reference/config/next-config-js/serverActions#allowedorigins). Cookies add a second layer: browsers don't send `SameSite=Lax` or `Strict` cookies with a cross-site POST, so a forged action arrives signed out and the check inside the action refuses it. The session strategy section sets those attributes.
+
+Both layers matter, because the framework's checks have needed fixes of their own. [CVE-2026-27978](https://github.com/vercel/next.js/security/advisories/GHSA-mq59-m269-xvcx) treated `Origin: null`, which browsers send from opaque contexts like sandboxed iframes, as a missing origin and skipped the check until 16.1.7. React2Shell ([CVE-2025-55182](https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components)), disclosed in December 2025 and rated CVSS 10.0, was worse: a crafted request to a Server Function endpoint could run code on the server while React decoded the payload, before any check inside the action ran. Keeping Next.js and React patched is part of protecting actions.
+
+The form is UI. The action is an endpoint. Check it like one.
