@@ -1010,3 +1010,206 @@ Next.js 16.4.2 still runs `middleware.ts` on the Edge runtime, with a build warn
 If you stay on Edge, the constraint that bites is libraries. The [Edge runtime](https://nextjs.org/docs/app/api-reference/edge) has Web APIs, not Node.js built-ins. In the test app, a `middleware.ts` that verified tokens with jsonwebtoken, a widely used JWT library built on Node's `crypto` module, built with no complaint about the library. At runtime, every valid session went to `/login`: the library threw "The edge runtime does not support Node.js 'crypto' module," and the middleware's `catch` block read that as a bad token. That's why the Proxy above uses jose and rethrows anything that isn't one of jose's own errors. A runtime that can't verify tokens should fail loudly, not sign everyone out.
 
 Proxy can tell you a token is real. Only the DAL can tell you it still counts.
+
+## Session and Token Strategy
+
+The DAL section assumed sign-in had already set a signed cookie with a session ID in it. This section builds that side. A session here is two tokens with two jobs. The access token is short-lived, and Proxy and the DAL verify it on every request. The refresh token is long-lived, goes to exactly one endpoint, and works exactly once.
+
+### Two Tokens, Two Jobs
+
+| | Access token | Refresh token |
+|---|---|---|
+| What it is | Signed JWT holding the session ID | 32 random bytes, stored only as a hash |
+| Lifetime | 15 minutes | Until the session goes idle or ends |
+| Cookie | `session`, `Path=/`, `SameSite=Lax` | `refresh`, `Path=/api/auth/refresh`, `SameSite=Strict` |
+| Read by | Proxy and the DAL | The refresh endpoint, nothing else |
+| Used | On every request | Once |
+
+If the DAL checks the database on every request, why expire the access token at all? Because not every layer checks the database. Revoking a session takes effect immediately for anything that reads data through the DAL. The access token's lifetime is how long the layers that only check signatures, like Proxy, keep waving a revoked session through. If nothing in your app verifies tokens without the database, one long-lived session ID is simpler, and the Next.js authentication guide covers that design as [database sessions](https://nextjs.org/docs/app/guides/authentication#database-sessions).
+
+### Issuing and Rotating Tokens
+
+Sign-in creates a session row and both tokens. Every refresh spends one refresh token and issues a new pair. Export `signingKey()` from `lib/dal/session.ts` first, so both sides sign and verify with the same key:
+
+```ts
+// lib/auth/tokens.ts
+import 'server-only'
+import { createHash, randomBytes } from 'node:crypto'
+import { cookies } from 'next/headers'
+import { SignJWT } from 'jose'
+import { signingKey } from '@/lib/dal/session'
+import { db } from '@/lib/db'
+
+const ACCESS_TOKEN_TTL = 15 * 60 // seconds a revoked session can still get past Proxy
+const IDLE_TIMEOUT = 7 * 24 * 60 * 60 // a week without a refresh means signing in again
+const ABSOLUTE_TIMEOUT = 30 * 24 * 60 * 60 // 30 days after sign-in, however active the user is
+const REFRESH_PATH = '/api/auth/refresh'
+
+export type SessionTokens = { accessToken: string; refreshToken: string; expiresAt: Date }
+
+// Only a hash is stored, so a leaked table can't be replayed
+const hash = (token: string) => createHash('sha256').update(token).digest('base64url')
+
+async function issueTokens(sessionId: string, sessionEnds: Date): Promise<SessionTokens> {
+  const expiresAt = new Date(Math.min(Date.now() + IDLE_TIMEOUT * 1000, sessionEnds.getTime()))
+  const refreshToken = randomBytes(32).toString('base64url')
+  await db.refreshToken.create({ data: { hash: hash(refreshToken), sessionId, expiresAt } })
+
+  const accessToken = await new SignJWT({ sid: sessionId })
+    .setProtectedHeader({ alg: 'HS256' })
+    .setExpirationTime(`${ACCESS_TOKEN_TTL}s`)
+    .sign(signingKey())
+  return { accessToken, refreshToken, expiresAt }
+}
+
+// Call after your sign-in code has checked the user's credentials
+export async function createSession(userId: string): Promise<SessionTokens> {
+  const expiresAt = new Date(Date.now() + ABSOLUTE_TIMEOUT * 1000)
+  const session = await db.session.create({ data: { userId, expiresAt }, select: { id: true } })
+  return issueTokens(session.id, expiresAt)
+}
+
+// A refresh token works once. A second use is a race or a theft, and either one ends the session.
+export async function rotateRefreshToken(presented: string): Promise<SessionTokens | null> {
+  const record = await db.refreshToken.findUnique({
+    where: { hash: hash(presented) },
+    select: { id: true, sessionId: true, expiresAt: true, session: { select: { revokedAt: true, expiresAt: true } } },
+  })
+  if (!record || record.session.revokedAt || record.expiresAt <= new Date()) return null
+
+  // A conditional update, so two requests carrying the same token can't both win
+  const { count } = await db.refreshToken.updateMany({
+    where: { id: record.id, usedAt: null },
+    data: { usedAt: new Date() },
+  })
+  if (count !== 1) {
+    await db.session.update({ where: { id: record.sessionId }, data: { revokedAt: new Date() } })
+    return null
+  }
+  return issueTokens(record.sessionId, record.session.expiresAt)
+}
+
+export async function setSessionCookies({ accessToken, refreshToken, expiresAt }: SessionTokens) {
+  const jar = await cookies()
+  // Outlives the 15-minute token inside it, so Proxy can tell "expired" from "signed out"
+  jar.set('session', accessToken, { httpOnly: true, secure: true, sameSite: 'lax', path: '/', expires: expiresAt })
+  // Sent only to the refresh endpoint, and never with a request another site started
+  jar.set('refresh', refreshToken, { httpOnly: true, secure: true, sameSite: 'strict', path: REFRESH_PATH, expires: expiresAt })
+}
+
+export async function clearSessionCookies() {
+  const jar = await cookies()
+  jar.set('session', '', { path: '/', maxAge: 0 })
+  jar.set('refresh', '', { path: REFRESH_PATH, maxAge: 0 }) // a path-scoped cookie is cleared on its path
+}
+```
+
+Your sign-in action calls `setSessionCookies(await createSession(user.id))` once the credentials check passes. Sign-out sets `revokedAt` on the session row and calls `clearSessionCookies()`. With an auth library, this whole file is the library's job, and the SuperTokens section shows how it maps.
+
+Key implementation decisions:
+
+- **Three clocks, not one.** The access token lasts 15 minutes, the session ends after a week without a refresh, and it ends after 30 days no matter what. The [OWASP Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) calls expiration timeouts "mandatory" for every session. Its examples run much shorter, with idle timeouts of 15 to 30 minutes for low-risk apps, so treat these numbers as product decisions, not defaults to copy.
+- **The cookies outlive the access token.** Both cookies expire with the refresh token. Until then, the browser keeps sending an expired but genuine access token, which is how Proxy knows to send the user to `/refresh` instead of `/login`. Once the idle timeout passes, both cookies are gone, and Proxy goes straight to `/login`.
+- **Refresh tokens are hashed and single-use.** Only a SHA-256 hash reaches the database, and the conditional update lets exactly one request spend a token. Any second use, whether a race or a stolen copy, revokes the whole session. That's the trade [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700#section-4.14) describes for rotation: it "stops the attack at the cost of forcing the legitimate client to obtain a fresh authorization grant."
+- **The refresh cookie goes nowhere else.** `Path=/api/auth/refresh` keeps it off page loads, API calls, and Proxy, in line with OWASP's advice to set the path "as restrictive as possible." `SameSite=Strict` keeps it off any request another site starts. The session cookie stays `Lax`, so a link from an email still arrives signed in. Set `SameSite` explicitly either way: [MDN notes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie) that browsers applying `Lax` by default still send cookies on POSTs for two minutes after they're set.
+- **Every sign-in gets a new session.** `createSession()` never reuses an ID. That covers OWASP's rule that the session ID "must be renewed or regenerated" after a privilege change like signing in, the standard defense against session fixation.
+
+### The Refresh Endpoint
+
+One endpoint serves browsers and mobile apps. A browser sends the refresh cookie and gets new cookies back. A mobile app sends the token in the body and gets JSON back. It keeps both tokens in secure storage (the Keychain on iOS, the Keystore on Android) and sends the access token as a bearer token, as in the Route Handler section.
+
+```ts
+// app/api/auth/refresh/route.ts
+import { cookies } from 'next/headers'
+import { AuthError } from '@/lib/dal'
+import { apiHandler } from '@/lib/api/handler'
+import { clearSessionCookies, rotateRefreshToken, setSessionCookies } from '@/lib/auth/tokens'
+
+export const POST = apiHandler(async (request) => {
+  // Browsers send the refresh cookie. Mobile apps send the token in the body and get JSON back.
+  const fromCookie = (await cookies()).get('refresh')?.value
+  const fromBody = fromCookie ? undefined : (await request.json().catch(() => null))?.refreshToken
+  const presented = fromCookie ?? (typeof fromBody === 'string' ? fromBody : undefined)
+  if (!presented) throw new AuthError(401)
+
+  const tokens = await rotateRefreshToken(presented)
+  if (!tokens) {
+    if (fromCookie) await clearSessionCookies()
+    throw new AuthError(401)
+  }
+  if (!fromCookie) return Response.json({ accessToken: tokens.accessToken, refreshToken: tokens.refreshToken })
+
+  await setSessionCookies(tokens)
+  return new Response(null, { status: 204 })
+})
+```
+
+It runs through `apiHandler()` from the Route Handler section, so cross-site cookie POSTs get a `403` and every response gets `Cache-Control: private, no-store`. A failed refresh returns the same `401` as every other handler. In the test app, a replayed refresh token got that `401`, cleared both cookies, and revoked the session, so the legitimate token issued after it failed too.
+
+### Refreshing Without Racing
+
+Proxy sends a page load with an expired access token to `/refresh`. That page has one job: spend the refresh token once and go back. The hard part is "once." Restoring a browser with three tabs open sends all three to `/refresh` together, and each tab holds the same refresh cookie. In the test app, three tabs refreshing at the same time got `401`, `204`, `401`, and the session was revoked. Five parallel requests with one token got one `204` and four `401`s. Rotation did its job, and everyone got signed out anyway.
+
+The fix is to make refreshes take turns. The [Web Locks API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Locks_API), available in every major browser since March 2022, gives every tab of an origin one shared queue:
+
+```ts
+// lib/client/session.ts
+let pending: Promise<boolean> | null = null
+
+// navigator.locks queues callers from every tab of this origin, so one refresh runs at a time
+async function refreshWithLock(): Promise<boolean> {
+  return navigator.locks.request('session-refresh', async () => {
+    const response = await fetch('/api/auth/refresh', { method: 'POST' })
+    return response.ok
+  })
+}
+
+// Two tabs spending the same refresh token at once would look like theft and end the session
+export function refreshSession(): Promise<boolean> {
+  const current = pending ?? refreshWithLock().finally(() => (pending = null))
+  pending = current
+  return current
+}
+
+// For your own API calls: on an expired token, refresh once and retry once
+export async function apiFetch(input: string, init?: RequestInit): Promise<Response> {
+  const response = await fetch(input, init)
+  const expired = response.status === 401 && response.headers.get('WWW-Authenticate')?.includes('invalid_token')
+  if (!expired || !(await refreshSession())) return response
+  return fetch(input, init)
+}
+```
+
+```tsx
+// app/refresh/refresh-session.tsx
+'use client'
+
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+import { refreshSession } from '@/lib/client/session'
+
+// `next` comes from the URL, so only follow it to a path on this site
+function localPath(next: string | null): string {
+  const origin = window.location.origin
+  if (!next || !URL.canParse(next, origin)) return '/'
+  const url = new URL(next, origin)
+  return url.origin === origin ? url.pathname + url.search : '/'
+}
+
+export function RefreshSession() {
+  const router = useRouter()
+
+  useEffect(() => {
+    const next = localPath(new URLSearchParams(window.location.search).get('next'))
+    refreshSession().then((ok) => router.replace(ok ? next : `/login?next=${encodeURIComponent(next)}`))
+  }, [router])
+
+  return <p>Refreshing your session…</p>
+}
+```
+
+`app/refresh/page.tsx` just renders `<RefreshSession />`. With the lock in place, the same three tabs refreshed one after another, `204`, `204`, `204`. Each tab waited its turn, then spent the token the tab before it had just received, and all three landed back on the invoices page still signed in. The `next` check sent `//evil.example/steal` and `https://evil.example/x` to `/`, and a page load with no refresh cookie ended at `/login?next=%2Fdashboard%2Finvoices`.
+
+`apiFetch()` handles API calls the same way: the `invalid_token` challenge that Proxy and the Route Handlers send for an expired token triggers one refresh and one retry. A page that needs to refresh in place, the case from the Server Components section, can call `refreshSession()` and then `router.refresh()`.
+
+An expired token should cost a round trip, not a sign-in.
