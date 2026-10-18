@@ -6,7 +6,6 @@ cover: "TODO.png"
 category: "nextjs, authentication, guide"
 author: "Maurice Saldivar"
 ---
-
 ## Why App Router Changes Authentication
 
 In March 2025, the Next.js team disclosed [CVE-2025-29927](https://github.com/vercel/next.js/security/advisories/GHSA-f82v-jwr5-mffw), a critical (CVSS 9.1) authorization bypass in middleware. A request carrying one internal header, `x-middleware-subrequest`, set to the right value, skipped middleware entirely and went straight to the route behind it. Self-hosted apps from Next.js 11.1.4 onward were exposed until they upgraded to a fixed release.
@@ -213,7 +212,6 @@ You can test for this whole class of bug without reproducing any CVE. In a test 
 
 A bug in Proxy should cost you a redirect, not your users' data.
 
-
 ## Defense in Depth: The Data Access Layer Pattern
 
 The fixed page at the end of the last section still had one weak spot. It queried the database itself, and it was safe only because someone remembered to call `verifySession()` first. The next page someone writes might not.
@@ -408,6 +406,8 @@ export default async function InvoicesPage() {
   return <InvoiceList invoices={invoices} />
 }
 ```
+
+> **Note:** If Cache Components is on (the default for new apps since Next.js 16.4), this page needs a Suspense boundary to build. The next section shows how.
 
 ```ts
 // app/dashboard/invoices/actions.ts
