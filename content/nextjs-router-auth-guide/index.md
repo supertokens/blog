@@ -713,3 +713,183 @@ Next.js only accepts actions as POST requests and compares the `Origin` header w
 Both layers matter, because the framework's checks have needed fixes of their own. [CVE-2026-27978](https://github.com/vercel/next.js/security/advisories/GHSA-mq59-m269-xvcx) treated `Origin: null`, which browsers send from opaque contexts like sandboxed iframes, as a missing origin and skipped the check until 16.1.7. React2Shell ([CVE-2025-55182](https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components)), disclosed in December 2025 and rated CVSS 10.0, was worse: a crafted request to a Server Function endpoint could run code on the server while React decoded the payload, before any check inside the action ran. Keeping Next.js and React patched is part of protecting actions.
 
 The form is UI. The action is an endpoint. Check it like one.
+
+## Protecting Route Handlers
+
+A Route Handler is an HTTP endpoint with no page attached, and the [Next.js docs](https://nextjs.org/docs/app/guides/backend-for-frontend#public-endpoints) describe it in two sentences: "Route Handlers are public HTTP endpoints. Any client can access them." Many of those clients are mobile apps, scripts, and other services, and none of them read error pages. They read status codes. Protecting a Route Handler means refusing the request with the right one.
+
+### What a Redirect Does to an API Client
+
+The DAL's `verifySession()` is built for pages. It redirects when there's no session, and in a Route Handler that redirect is all the caller gets:
+
+```ts
+// app/api/account/route.ts
+import { verifySession } from '@/lib/dal'
+
+// WRONG: verifySession() redirects when there's no session, so this 401 never runs
+export async function GET() {
+  const session = await verifySession()
+  if (!session) return new Response(null, { status: 401 })
+  return Response.json({ userId: session.userId })
+}
+```
+
+The [Route Handler example in the Next.js authentication guide](https://nextjs.org/docs/app/guides/authentication#route-handlers) has the same shape. Its `verifySession()` calls `redirect('/login')` when the session is missing or invalid, so the `401` branch after it never runs.
+
+On Next.js 16.4.2, a signed-out `curl` request to the handler above got a `307` to `/login` with an empty body. `fetch()` follows redirects by default, so a client using it never saw the 307. It got a `200` with the login page's HTML, and `res.json()` threw `SyntaxError: Unexpected token '<'`. That's a strange way to find out you're signed out. A POST did worse: a 307 keeps the method and body, so `fetch()` re-sent the POST to `/login` and got a `405`.
+
+Proxy causes the same failure when its matcher covers `/api` and it answers with a redirect. When Proxy turns away an API request, it should return the `401` itself, the way the [Proxy docs' example](https://nextjs.org/docs/app/api-reference/file-conventions/proxy#producing-a-response) does. In an app built from the authentication guide, the question never comes up: its Proxy example excludes `api` from the matcher, so Route Handlers under `/api` get no Proxy check at all.
+
+### 401, 403, or 404
+
+Each refusal tells the client something different, and well-behaved clients act on the difference:
+
+| Status | Means | The client should | Example |
+|--------|-------|-------------------|---------|
+| `401` | No valid credentials | Refresh its token or sign in, then retry | No session, or a revoked one |
+| `403` | Signed in, but not allowed | Stop retrying with the same credentials | A member calling an admin endpoint |
+| `404` | Not found, or not yours | Treat the resource as missing | Another user's invoice |
+
+[RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#section-15.5.2) adds two rules that are easy to miss. A server sending a `401` "MUST send a WWW-Authenticate header field" naming at least one way to authenticate. And a server that wants to hide a resource from someone who can't access it ["MAY instead respond with a status code of 404"](https://www.rfc-editor.org/rfc/rfc9110#section-15.5.4). The DAL makes that one free: its ownership filter returns nothing for another user's invoice, so the handler can't tell it apart from one that doesn't exist.
+
+### Bearer Tokens for Non-Browser Clients
+
+Mobile apps and CLIs usually send an `Authorization: Bearer` header instead of a cookie. The DAL needs one small change to accept both:
+
+```ts
+// lib/dal/session.ts
+import { cookies, headers } from 'next/headers'
+
+// Browsers never attach a bearer token on their own, which matters for CSRF later
+export function bearerToken(requestHeaders: Pick<Headers, 'get'>): string | undefined {
+  return requestHeaders.get('authorization')?.match(/^Bearer\s+(\S+)$/i)?.[1]
+}
+
+// The only provider-specific code in the DAL. Swap this body for your auth library.
+async function readSession(): Promise<Session | null> {
+  // Mobile apps and CLIs send the same token in an Authorization header
+  const token = bearerToken(await headers()) ?? (await cookies()).get('session')?.value
+  if (!token) return null
+
+  // ...unchanged from here: verify the signature, then check the session row
+}
+```
+
+Export `bearerToken` from `lib/dal/index.ts` too, since the wrapper below uses it. The bearer token is the same signed token the cookie carries, so the database check, revocation, and roles work the same way for both. The session strategy section covers how an app gets that token and refreshes it.
+
+### One Wrapper for Every Handler
+
+Every handler needs the same three things on top of the DAL: refusals turned into status codes, a CSRF check for cookie-authenticated writes, and a cache header for per-user responses. Server Actions get an `Origin` check from Next.js. Route Handlers don't, and the [Next.js security post](https://nextjs.org/blog/security-nextjs-server-components-actions#csrf) says so plainly: in Route Handlers, "CSRF protection has to be done manually."
+
+```ts
+// lib/api/handler.ts
+import 'server-only'
+import { AuthError, bearerToken } from '@/lib/dal'
+
+type Handler<Ctx> = (request: Request, context: Ctx) => Promise<Response>
+
+// Server Actions get this check from Next.js. Route Handlers don't.
+function isCrossSiteCookieWrite(request: Request): boolean {
+  if (['GET', 'HEAD', 'OPTIONS'].includes(request.method)) return false
+  if (bearerToken(request.headers)) return false // a cross-site page can't attach the user's token
+  const origin = request.headers.get('origin')
+  if (origin === null) return false // not a browser: browsers send Origin on every write
+  if (!URL.canParse(origin)) return true // includes 'null' from sandboxed iframes
+  const host = request.headers.get('x-forwarded-host') ?? request.headers.get('host')
+  return new URL(origin).host !== host
+}
+
+export function apiHandler<Ctx>(handler: Handler<Ctx>): Handler<Ctx> {
+  return async (request, context) => {
+    if (isCrossSiteCookieWrite(request)) {
+      return Response.json({ error: 'Cross-site request' }, { status: 403 })
+    }
+
+    let response: Response
+    try {
+      response = await handler(request, context)
+    } catch (error) {
+      if (!(error instanceof AuthError)) throw error // a database outage stays a 500
+      // RFC 9110 requires a challenge on every 401. RFC 6750 defines this one.
+      const challenge = bearerToken(request.headers) ? 'Bearer error="invalid_token"' : 'Bearer'
+      return Response.json(
+        { error: error.message },
+        { status: error.status, headers: error.status === 401 ? { 'WWW-Authenticate': challenge } : {} },
+      )
+    }
+
+    // Next.js sets no Cache-Control on dynamic Route Handler responses, and these carry per-user data
+    if (response.headers.has('Cache-Control')) return response
+    const uncached = new Response(response.body, response) // a fetched Response has read-only headers
+    uncached.headers.set('Cache-Control', 'private, no-store')
+    return uncached
+  }
+}
+```
+
+Here's how the invoice endpoints use it:
+
+```ts
+// app/api/invoices/[id]/route.ts
+import { z } from 'zod'
+import { getInvoice, markInvoicePaid } from '@/lib/dal'
+import { apiHandler } from '@/lib/api/handler'
+
+type Context = { params: Promise<{ id: string }> }
+
+export const GET = apiHandler(async (_request, { params }: Context) => {
+  const invoice = await getInvoice((await params).id)
+  // Someone else's invoice gets the same 404 as one that doesn't exist
+  if (!invoice) return Response.json({ error: 'Invoice not found' }, { status: 404 })
+  return Response.json(invoice)
+})
+
+const PatchBody = z.object({ status: z.literal('paid') })
+
+// Each exported method is its own endpoint, so PATCH goes through the DAL too
+export const PATCH = apiHandler(async (request, { params }: Context) => {
+  const body = PatchBody.safeParse(await request.json().catch(() => null))
+  if (!body.success) return Response.json({ error: 'Invalid body' }, { status: 400 })
+
+  const updated = await markInvoicePaid((await params).id)
+  if (!updated) return Response.json({ error: 'Invoice not found' }, { status: 404 })
+  return new Response(null, { status: 204 })
+})
+```
+
+```ts
+// app/api/admin/overdue/route.ts
+import { getOverdueInvoices } from '@/lib/dal'
+import { apiHandler } from '@/lib/api/handler'
+
+// requireRole('admin') inside the DAL: 401 when signed out, 403 for members
+export const GET = apiHandler(async () => Response.json(await getOverdueInvoices()))
+```
+
+Key implementation decisions:
+
+- **The wrapper doesn't authenticate anything.** The DAL does, inside `getInvoice()` and `markInvoicePaid()`. The wrapper only translates its refusals. Anything else still throws, so a database outage stays a 500 instead of becoming a 401 that sends clients into a sign-in loop.
+- **Every 401 tells the client what to send.** Callers without a bearer token get `WWW-Authenticate: Bearer`. A bearer caller whose token failed gets `error="invalid_token"`, which [RFC 6750](https://datatracker.ietf.org/doc/html/rfc6750#section-3.1) uses for a token that's "expired, revoked, malformed, or invalid for other reasons." That's the client's cue to refresh once and retry.
+- **The CSRF check only runs when a cookie is the credential.** Browsers attach cookies automatically, which is what CSRF exploits, but they never attach a bearer token on their own. `SameSite=Lax` cookies already stop most cross-site writes, and the `Origin` check covers what they don't, like a request from a sibling subdomain. A missing `Origin` means a non-browser client, since [browsers send one](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Origin) with every POST, PUT, PATCH, and DELETE.
+- **Per-user responses get `private, no-store`.** Next.js sends a no-store header with dynamic pages, but in the test app, Route Handler responses had no `Cache-Control` at all, including 200s carrying a user's invoice. [RFC 9111](https://www.rfc-editor.org/rfc/rfc9111#section-3.5) keeps shared caches from reusing responses to requests with an `Authorization` header, so bearer calls are covered by the spec. Cookie calls aren't.
+- **Each exported method is its own endpoint.** `GET` and `PATCH` each call the DAL. A check in one doesn't protect the other, and a method the file doesn't export gets an automatic `405`.
+
+### What the Handlers Returned
+
+Here's what the finished handlers returned on Next.js 16.4.2:
+
+| Request | Response |
+|---------|----------|
+| No credentials, from `curl` or `fetch()` | `401`, `WWW-Authenticate: Bearer`, nothing to follow |
+| Revoked or malformed bearer token | `401`, `WWW-Authenticate: Bearer error="invalid_token"` |
+| Member reading another user's invoice | `404`, same body as a missing invoice |
+| Member calling `/api/admin/overdue` | `403` |
+| Cookie `PATCH` with a cross-site or `null` `Origin` | `403` before the handler ran |
+| Bearer `PATCH` with a cross-site `Origin` | `204`, since bearer calls skip the CSRF check |
+| `DELETE`, which the file doesn't export | `405` |
+
+### Prerendered Handlers Are Public
+
+Turning on Cache Components raises the cost of skipping the check. A `GET` handler that never touches request data can then be [prerendered at build time](https://nextjs.org/docs/app/getting-started/route-handlers#with-cache-components), and `'use cache'` lets database results into that prerender. In the test app, an admin stats handler with no check of its own sat outside the Proxy matcher. It was built once and served to a signed-out request with `Cache-Control: s-maxage=3600`, an invitation for any CDN in front of it to keep a copy for an hour. A handler that calls the DAL reads cookies and headers, which stops prerendering, so it always runs per request.
+
+Redirects are for people. Status codes are for everything else.
