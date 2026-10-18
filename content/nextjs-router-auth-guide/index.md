@@ -893,3 +893,120 @@ Here's what the finished handlers returned on Next.js 16.4.2:
 Turning on Cache Components raises the cost of skipping the check. A `GET` handler that never touches request data can then be [prerendered at build time](https://nextjs.org/docs/app/getting-started/route-handlers#with-cache-components), and `'use cache'` lets database results into that prerender. In the test app, an admin stats handler with no check of its own sat outside the Proxy matcher. It was built once and served to a signed-out request with `Cache-Control: s-maxage=3600`, an invitation for any CDN in front of it to keep a copy for an hour. A handler that calls the DAL reads cookies and headers, which stops prerendering, so it always runs per request.
 
 Redirects are for people. Status codes are for everything else.
+
+## Middleware at the Edge: What It's For and What It Isn't
+
+Next.js 16 moved middleware off the Edge runtime and renamed it Proxy. The [upgrade guide](https://nextjs.org/docs/app/guides/upgrading/version-16#middleware-to-proxy) says so in capitals: "The `edge` runtime is NOT supported in `proxy`." Apps that still want Edge can keep the deprecated `middleware.ts`. Either way, the job is the same, and the [Proxy docs](https://nextjs.org/docs/app/getting-started/proxy#use-cases) set its limit in one line: Proxy "should not be used as a full session management or authorization solution." This section covers what that leaves Proxy to do, and builds one that runs on both runtimes.
+
+### What a Token Check Can Know
+
+Wherever it runs, Proxy works from what the request carries. Without a database call, that's the token's signature, its expiry, and the claims inside it:
+
+| Question | Proxy, from the token | DAL, from the database |
+|----------|-----------------------|------------------------|
+| Did we issue this token? | Yes, from the signature | Yes |
+| Has it expired? | Yes | Yes |
+| Was the session revoked? | No | Yes |
+| What's the user's role right now? | Only what the token said when it was issued | Yes |
+| Does this record belong to them? | No | Yes, in the query |
+
+Proxy on Node.js could make that database call now. The [authentication guide](https://nextjs.org/docs/app/guides/authentication#optimistic-checks-with-proxy-optional) still says not to, because Proxy runs on every matched route, prefetches included. On Next.js 16.4.2, one view of a page with ten links ran Proxy 15 times: once for the page and 14 times for prefetches. With Cache Components and partial prefetching on, it ran 6 times. A session lookup in Proxy would have run on every one of those. Add the matcher gaps from the Server Actions section and the bypasses from the CVE section, and Proxy is a fast first answer, never the final one.
+
+### An Edge-Compatible Proxy
+
+This version uses [jose](https://github.com/panva/jose), which verifies tokens with Web Crypto, so the same file runs as `proxy.ts` on Node.js or as `middleware.ts` on the Edge runtime. It reads the token the way the DAL does, bearer header first, then cookie, and sorts every request into one of four states:
+
+```ts
+// proxy.ts
+import { NextResponse, type NextRequest } from 'next/server'
+import { errors, jwtVerify } from 'jose'
+
+// Deny by default: any route not listed here needs a session
+const PUBLIC_PATHS = ['/', '/login', '/signup', '/refresh', '/api/auth']
+
+function isPublic(pathname: string) {
+  return PUBLIC_PATHS.some((path) => pathname === path || (path !== '/' && pathname.startsWith(`${path}/`)))
+}
+
+type TokenState = 'valid' | 'expired' | 'missing' | 'invalid'
+
+// Signature and expiry only. No database, so no revocation, roles, or ownership.
+async function readTokenState(request: NextRequest): Promise<TokenState> {
+  const bearer = request.headers.get('authorization')?.match(/^Bearer\s+(\S+)$/i)?.[1]
+  const token = bearer ?? request.cookies.get('session')?.value // same order as the DAL
+  if (!token) return 'missing'
+
+  const secret = process.env.SESSION_SECRET
+  if (!secret) throw new Error('SESSION_SECRET is not set')
+  try {
+    await jwtVerify(token, new TextEncoder().encode(secret), { algorithms: ['HS256'] })
+    return 'valid'
+  } catch (error) {
+    if (!(error instanceof errors.JOSEError)) throw error // a broken runtime isn't a bad token
+    // jose checks the signature before the expiry, so an expired token is still one we issued
+    return error instanceof errors.JWTExpired ? 'expired' : 'invalid'
+  }
+}
+
+export async function proxy(request: NextRequest) {
+  const { pathname, search } = request.nextUrl
+  if (isPublic(pathname)) return NextResponse.next()
+
+  const state = await readTokenState(request)
+  if (state === 'valid') return NextResponse.next()
+
+  if (pathname.startsWith('/api/')) {
+    const challenge = state === 'missing' ? 'Bearer' : 'Bearer error="invalid_token"'
+    return Response.json(
+      { error: 'Authentication required' },
+      { status: 401, headers: { 'WWW-Authenticate': challenge } },
+    )
+  }
+
+  // Server Actions and other writes check for themselves, in a format their caller can read
+  if (request.method !== 'GET' && request.method !== 'HEAD') return NextResponse.next()
+
+  // An expired token isn't a signed-out user. Send them to refresh, not to sign in.
+  const destination = new URL(state === 'expired' ? '/refresh' : '/login', request.url)
+  destination.searchParams.set('next', pathname + search)
+  return NextResponse.redirect(destination)
+}
+
+export const config = {
+  // Everything except build output, crawler files, and images, so new routes are covered by default
+  matcher: ['/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|.*\\.(?:png|jpg|jpeg|gif|svg|webp|ico)$).*)'],
+}
+```
+
+Key implementation decisions:
+
+- **Deny by default.** Every route needs a session unless `PUBLIC_PATHS` lists it, so a page someone adds next month is covered on day one. The [Next.js security post](https://nextjs.org/blog/security-nextjs-server-components-actions#custom-routes-and-middleware) recommends the same for middleware: "an allow list rather than a deny list." The cost is that public routes need listing too. In the test app, `/.well-known/security.txt` redirected to the login page because nobody had listed it.
+- **Expired isn't signed out.** An expired token's owner probably still has a valid refresh token, so Proxy sends them to `/refresh` instead of `/login`, and API callers get the `invalid_token` challenge from the Route Handler section. Proxy doesn't refresh the token itself. Parallel requests and prefetches would each try to spend the same refresh token, and under [refresh token rotation](https://www.rfc-editor.org/rfc/rfc9700#section-4.14) a reused token looks like theft, so the server revokes the session. The session strategy section builds `/refresh`.
+- **Only page loads get redirects.** Server Actions and other writes pass through and check for themselves. In the test app, a Server Action called with an expired token returned "Authentication required" to the page. When a test version of Proxy redirected that POST instead, the action threw "An unexpected response was received from the server."
+- **`next` is user input.** The login and refresh pages should only follow it to a local path, the same rule the Next.js docs apply to [callback URLs](https://nextjs.org/docs/app/guides/backend-for-frontend#webhooks-and-callback-urls). Otherwise it's an open redirect.
+
+One thing is missing on purpose: Proxy forwards nothing about the user in a header. As the CVE section showed, a header is only as trustworthy as the code that set it, and that's the code a bypass skips.
+
+### What It Returned
+
+Here's what the Proxy above returned on Next.js 16.4.2:
+
+| Request | Proxy's answer |
+|---------|----------------|
+| Page, no token or a forged one | `307` to `/login?next=…` |
+| Page, expired token | `307` to `/refresh?next=…` |
+| Page, forged token with a past expiry | `307` to `/login`, because the signature failed first |
+| API, no token | `401`, `WWW-Authenticate: Bearer` |
+| API, expired or forged token | `401`, `WWW-Authenticate: Bearer error="invalid_token"` |
+| Server Action, expired token | Passed through; the action returned "Authentication required" |
+| Revoked session, valid signature | Passed through; the page's DAL check redirected it to `/login` |
+
+The same file as `middleware.ts`, with the function renamed `middleware`, returned identical results on the Edge runtime. The revoked row is the first table in this section at work: the token was real, so Proxy let it in, and only the DAL knew it no longer counted.
+
+### Staying on the Edge
+
+Next.js 16.4.2 still runs `middleware.ts` on the Edge runtime, with a build warning: `The "middleware" file convention is deprecated. Please use "proxy" instead.` Keeping both files fails the build, and so does asking `proxy.ts` for Edge, with "Proxy does not support Edge runtime." The upgrade guide's checklist covers the migration in one line: "Edge middleware is not blindly renamed to proxy."
+
+If you stay on Edge, the constraint that bites is libraries. The [Edge runtime](https://nextjs.org/docs/app/api-reference/edge) has Web APIs, not Node.js built-ins. In the test app, a `middleware.ts` that verified tokens with jsonwebtoken, a widely used JWT library built on Node's `crypto` module, built with no complaint about the library. At runtime, every valid session went to `/login`: the library threw "The edge runtime does not support Node.js 'crypto' module," and the middleware's `catch` block read that as a bad token. That's why the Proxy above uses jose and rethrows anything that isn't one of jose's own errors. A runtime that can't verify tokens should fail loudly, not sign everyone out.
+
+Proxy can tell you a token is real. Only the DAL can tell you it still counts.
