@@ -480,3 +480,102 @@ With that rule on, the fixed page from the last section fails lint, because it i
 A request for invoice data now passes four checks. Proxy turns signed-out users away early. The page redirects anyone Proxy missed. The DAL refuses anyone the page missed. The ownership filter refuses requests for someone else's invoices. Proxy or the page can fail and the worst outcome is a confusing error page. The DAL is the layer that can't fail, which is why every function in it checks for itself and why it's the only code allowed near the database.
 
 Proxy decides where a request goes. The DAL decides what it gets.
+
+## Protecting Server Components
+
+Server Components are where the DAL gets called most, so most of the protection is already in place. What's left is timing. "Redirect before anything renders" only holds under specific conditions in Next.js 16, and those conditions changed when [Next.js 16.4](https://nextjs.org/blog/next-16-4) turned Cache Components on for every new app.
+
+### The Baseline: Check, Then Fetch
+
+```tsx
+// app/dashboard/invoices/[id]/page.tsx
+import { notFound } from 'next/navigation'
+import { getInvoice, verifySession } from '@/lib/dal'
+import { InvoiceDetail } from './invoice-detail'
+
+export default async function InvoicePage({ params }: { params: Promise<{ id: string }> }) {
+  await verifySession() // first, before any data or JSX
+  const { id } = await params
+  const invoice = await getInvoice(id) // null when it isn't this user's invoice
+  if (!invoice) notFound()
+  return <InvoiceDetail invoice={invoice} />
+}
+```
+
+Without Cache Components, and with no `loading.js` above it, nothing streams until this function returns. A signed-out request gets a real `307` to `/login`, and another user's invoice ID gets a real `404`. Two habits keep it that way:
+
+- **Keep `verifySession()` out of `try/catch`.** `redirect()` and `notFound()` work by throwing, and a catch block swallows them. If you have to catch around them, rethrow with `unstable_rethrow`.
+- **Route `generateMetadata` through the DAL too.** It runs alongside the page, not after it, so a title built from a direct database query is one more unchecked read.
+
+### When a Redirect Stops Being a Redirect
+
+The [status code is fixed](https://nextjs.org/docs/app/api-reference/file-conventions/loading#status-codes) the moment the response starts streaming, and streaming starts as soon as a Suspense fallback renders, including the one `loading.js` wraps around a page. Add a `loading.tsx` next to the page above and a signed-out request gets a `200`: the loading UI first, then a `<meta http-equiv="refresh">` tag and a client-side redirect to `/login`. `notFound()`, `forbidden()`, and `unauthorized()` downgrade the same way, to a `200` with a `noindex` tag.
+
+The data stays protected either way, because the component that reads it never renders. What changes is the status code that monitoring, crawlers, and non-browser clients see.
+
+### Cache Components Move Every Check Behind Suspense
+
+New apps from `create-next-app` 16.4 have Cache Components on, and it becomes the default for everyone in Next.js 17. With it on, [reading `cookies()` outside a Suspense boundary is a build error](https://nextjs.org/docs/app/guides/authentication-with-cache-components). The baseline page above, and the invoices page from the DAL section, both fail `next build` with "Next.js encountered uncached or runtime data during prerendering."
+
+The fix is to move the check and the data into a component inside a boundary:
+
+```tsx
+// app/dashboard/invoices/[id]/page.tsx (Cache Components on)
+import { Suspense } from 'react'
+import { notFound } from 'next/navigation'
+import { getInvoice, verifySession } from '@/lib/dal'
+import { InvoiceDetail } from './invoice-detail'
+
+export default function InvoicePage({ params }: { params: Promise<{ id: string }> }) {
+  return (
+    <main>
+      <Suspense fallback={<p>Loading invoice…</p>}>
+        <Invoice params={params} />
+      </Suspense>
+    </main>
+  )
+}
+
+async function Invoice({ params }: { params: Promise<{ id: string }> }) {
+  await verifySession()
+  const { id } = await params
+  const invoice = await getInvoice(id)
+  if (!invoice) notFound()
+  return <InvoiceDetail invoice={invoice} />
+}
+```
+
+That turns every Server Component check into a post-streaming check, with the `200` behavior described above. The build error also suggests `export const instant = false`, and that compiles, but the response to a signed-out visitor was still a `200`, with the redirect carried in the RSC payload. With Cache Components on, Proxy is the only layer that runs before the shell is sent, which makes it the only place that can still return a real `307`.
+
+### The Static Shell Is Public
+
+With Cache Components, everything outside a Suspense boundary is prerendered into the static shell and served to every visitor before any check runs. That includes components marked `'use cache'`. A cached "members only" announcement placed above the gated section reached signed-out visitors right along with their redirect.
+
+If a signed-out visitor shouldn't see it, it goes behind the boundary and through the DAL, or the route gets a Proxy check. The Next.js authentication guide gives the same advice for static content shared between users: protect it with Proxy.
+
+### Layouts Don't Guard Pages
+
+Layouts don't re-render on client-side navigation, so a check in a layout runs once for a whole section of the app, not on every page view. The [Next.js docs](https://nextjs.org/docs/app/guides/authentication#layouts-and-auth-checks) add a second problem: a layout doesn't control whether the route below it renders. Pages and parallel route slots render on their own, and their output still lands in the RSC payload.
+
+That's easy to underestimate, so here's what it looks like with Cache Components off. A layout that calls `verifySession()` returned a `307` for signed-out requests, and the body of that `307` still contained the page's rendered output, just ahead of the redirect marker. Browsers follow the redirect and never show it. `curl` shows it fine. A layout that rendered "Please sign in" in place of `{children}` returned a `200` with the page's output in the payload. In both cases the page function ran.
+
+Use layouts for shared UI that reads the session through `getSession()`, like a header with the user's name, and keep the check in every page, through the DAL.
+
+### Expired Access Tokens
+
+Server Components can't set cookies, so if your sessions use short-lived access tokens, a page that finds an expired one can't refresh it in place. Redirecting to `/login` at that point signs out someone whose refresh token is still valid, and if your login page sends signed-in users back where they came from, it can start a loop. Render a small Client Component instead, one that calls your refresh endpoint and then `router.refresh()`. The session strategy section builds the endpoint, and the SuperTokens section shows the SDK's version.
+
+### What Signed-Out Visitors Actually Get
+
+Here's what a test app on Next.js 16.4.2 returned for a signed-out request, depending on where the check ran:
+
+| Where the check runs | Response | Status |
+|----------------------|----------|--------|
+| Proxy | Redirect before anything renders | `307` |
+| Page, no Suspense above it (Cache Components off) | Redirect before anything streams | `307` |
+| Page under `loading.js` or inside `<Suspense>` | Loading UI, then a client-side redirect | `200` |
+| Any Server Component, Cache Components on | Static shell, then a client-side redirect | `200` |
+| Layout only (Cache Components off) | Redirect, with the page's output in the body | `307` |
+| Layout that swaps `{children}` for a sign-in prompt | Prompt, with the page's output in the payload | `200` |
+
+Check in the page, fetch through the DAL, and let Proxy own the status code.
