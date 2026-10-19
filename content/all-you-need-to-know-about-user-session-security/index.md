@@ -4,7 +4,7 @@ date: "2019-06-07"
 description: "This article covers extensive conversations with over 70+ developers exploring different session management practices, identifying issues and converging on a solution to these issues. "
 cover: "all-you-need-to-know-about-user-session-security.png"
 category: "sessions, featured"
-author: "Rishabh Poddar"
+author: "Advait Ruia"
 ---
 
 What follows is a 2 part series on session management — inspired by extensive conversations with over 70 developers and our own intensive research. We will explore different session management practices, identify issues and converge on a solution to these issues. Through it all, I hope to leave you with clarity on deciding how to manage user sessions (and auth tokens) for your application. In 20 minutes, we summarise all the important information it took us hundreds of hours to obtain and document.
