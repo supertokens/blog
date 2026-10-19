@@ -1213,3 +1213,130 @@ export function RefreshSession() {
 `apiFetch()` handles API calls the same way: the `invalid_token` challenge that Proxy and the Route Handlers send for an expired token triggers one refresh and one retry. A page that needs to refresh in place, the case from the Server Components section, can call `refreshSession()` and then `router.refresh()`.
 
 An expired token should cost a round trip, not a sign-in.
+
+## Streaming Auth with Suspense
+
+Streaming changes what an auth check costs. On a blocking page, the session lookup and every query behind it run before the first byte leaves the server. With Suspense, the page's shell goes out immediately and each check runs next to the data it protects. This guide calls that **shell-first auth**, and it comes down to three rules:
+
+1. **The shell holds nothing that depends on who's asking.** It's sent before any check runs, and with Cache Components it's prerendered once for everyone.
+2. **Every boundary that does depend on the viewer checks for itself, through the DAL.** React's `cache()` turns those checks into a single session lookup per render.
+3. **Proxy decides who gets the shell at all.** Once the first chunk is sent, the [status code is fixed at `200`](https://nextjs.org/docs/app/guides/streaming#the-http-contract), so a real redirect for signed-out visitors has to come from Proxy.
+
+### The Pattern in Code
+
+The header needs the viewer's name, so the DAL gets one more function, exported from `lib/dal/index.ts` with the others:
+
+```ts
+// lib/dal/users.ts
+import 'server-only'
+import { cache } from 'react'
+import { db } from '@/lib/db'
+import { getSession } from './session'
+
+export type CurrentUser = { name: string; role: 'member' | 'admin' }
+
+// For UI that changes with the viewer: null when signed out, never a redirect
+export const getCurrentUser = cache(async (): Promise<CurrentUser | null> => {
+  const session = await getSession()
+  if (!session) return null
+  const user = await db.user.findUnique({ where: { id: session.userId }, select: { name: true } })
+  return user ? { name: user.name, role: session.role } : null
+})
+```
+
+The layout puts the only viewer-dependent part of the header in its own boundary:
+
+```tsx
+// app/dashboard/layout.tsx
+import { Suspense } from 'react'
+import Link from 'next/link'
+import { getCurrentUser } from '@/lib/dal'
+
+export default function DashboardLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <header>
+        <Link href="/dashboard">Invoices</Link>
+        {/* The only part of the header that depends on who's asking */}
+        <Suspense fallback={<span className="avatar-placeholder" />}>
+          <UserMenu />
+        </Suspense>
+      </header>
+      {children}
+    </>
+  )
+}
+
+async function UserMenu() {
+  const user = await getCurrentUser()
+  if (!user) return <Link href="/login">Sign in</Link>
+  return <span>{user.name}</span>
+}
+```
+
+The page does the same with its two data sections, one for every member and one only admins see:
+
+```tsx
+// app/dashboard/page.tsx
+import { Suspense } from 'react'
+import { getCurrentUser, getMyInvoices, getOverdueInvoices, verifySession } from '@/lib/dal'
+import { InvoiceList } from './invoices/invoice-list'
+
+export default function DashboardPage() {
+  return (
+    <main>
+      <h1>Dashboard</h1>
+      <Suspense fallback={<p>Loading your invoices…</p>}>
+        <MyInvoices />
+      </Suspense>
+      <Suspense fallback={null}>
+        <OverdueSummary />
+      </Suspense>
+    </main>
+  )
+}
+
+async function MyInvoices() {
+  await verifySession() // Proxy turned signed-out visitors away; this catches revoked sessions
+  return <InvoiceList invoices={await getMyInvoices()} />
+}
+
+async function OverdueSummary() {
+  const user = await getCurrentUser()
+  if (user?.role !== 'admin') return null // a UI decision: getOverdueInvoices() checks the role again
+  const overdue = await getOverdueInvoices()
+  return <p>{overdue.length} overdue invoices across all customers</p>
+}
+```
+
+Key implementation decisions:
+
+- **Nothing awaits at the top.** Neither the layout nor the page reads the session itself. Each boundary does its own reading, which the Next.js streaming guide calls [pushing dynamic access down](https://nextjs.org/docs/app/guides/streaming#push-dynamic-access-down). One `await` at the top of the layout would hold the whole page behind it.
+- **The header never decides the page.** `getCurrentUser()` returns `null` instead of redirecting, because a layout doesn't guard the page below it. The page's own boundary calls `verifySession()`.
+- **The admin check is a UI decision, and only that.** `OverdueSummary` skips rendering for members, and `getOverdueInvoices()` still calls `requireRole('admin')` inside the DAL.
+- **Repeated checks are cheap.** In the test app, one render of this page ran one session lookup and one user lookup, shared by all three components that needed the viewer.
+
+If you cache per-user data inside a boundary, the DAL's rule still holds. The exported function reads the session and passes the user ID to an unexported `'use cache'` function, which is the pattern the Next.js [Cache Components authentication guide](https://nextjs.org/docs/app/guides/authentication-with-cache-components#step-4-cache-session-derived-data) uses so no caller can ask for someone else's cached data.
+
+### What Streaming Changed
+
+To make the difference visible, the test app delayed every database call by 200 ms and compared this page with a version that awaits the same data before rendering anything:
+
+| Next.js 16.4.2, 200 ms per query | First byte | Last byte |
+|----------------------------------|------------|-----------|
+| Blocking page, member | 417 ms | 417 ms |
+| Shell-first page, member | 15 ms | 417 ms |
+| Blocking page, admin | 614 ms | 615 ms |
+| Shell-first page, admin | 12 ms | 615 ms |
+
+Streaming didn't make the data any faster. The admin still waited 600 ms for the overdue count. What changed is that nothing else waited for it: the header, the heading, and the fallbacks arrived in the first chunk. With Cache Components on, the same page built as a partial prerender and sent its first byte in 10 to 12 ms.
+
+The responses held up too. A member's page contained no overdue data at all, not even an empty panel. A revoked session passes Proxy, because its signature is valid. It got the shell, a "Sign in" link in the header, and a client-side redirect, with no invoice and no name anywhere in the response. A signed-out visitor never got the shell: Proxy answered with a `307`.
+
+### Refusals Inside a Boundary
+
+A boundary that might be refused needs to handle the refusal itself. In the test app, a page whose second boundary called `getOverdueInvoices()` as a member, with nothing to catch the `AuthError`, didn't lose one section. It lost all of them: the browser showed Next.js's "This page couldn't load" screen, with a `200`. Adding an `error.tsx` kept the layout, but its error UI still replaced the whole page, including the boundary that had loaded fine.
+
+So decide inside the component. For a section the viewer can't see, check first and return `null`, the way `OverdueSummary` does. For a page the viewer shouldn't be on, call `verifySession()`, which redirects instead of throwing an error. Save `error.tsx` for real failures, like a database outage, which the DAL deliberately lets throw.
+
+The shell is for everyone. Each boundary decides who gets the rest.
