@@ -1340,3 +1340,246 @@ A boundary that might be refused needs to handle the refusal itself. In the test
 So decide inside the component. For a section the viewer can't see, check first and return `null`, the way `OverdueSummary` does. For a page the viewer shouldn't be on, call `verifySession()`, which redirects instead of throwing an error. Save `error.tsx` for real failures, like a database outage, which the DAL deliberately lets throw.
 
 The shell is for everyone. Each boundary decides who gets the rest.
+
+## Implementing This with SuperTokens
+
+The architecture so far kept provider-specific code in three places. `readSession()` was the only part of the DAL that knew where sessions come from, `readTokenState()` was the only part of Proxy, and `lib/auth/tokens.ts` was the whole token system. With SuperTokens, the first two get new bodies and the third goes away, along with the refresh endpoint and most of the client refresh code. Server Actions, Route Handlers, and the streaming pages don't change.
+
+Here's how the session strategy section's pieces map:
+
+| Hand-built | SuperTokens |
+|------------|-------------|
+| `lib/auth/tokens.ts` issues and rotates tokens | The SuperTokens core, behind the SDK's sign-in and refresh APIs |
+| 15-minute HS256 access token | RS256 token signed by the core, one hour by default ([`access_token_validity`](https://github.com/supertokens/supertokens-core/blob/master/config.yaml)) |
+| `session` cookie, `Path=/`, `SameSite=Lax` | `sAccessToken`, `Path=/`, `SameSite=Lax`, a one-year cookie |
+| `refresh` cookie, `Path=/api/auth/refresh`, `SameSite=Strict` | `sRefreshToken`, `Path=/api/auth/session/refresh`, `SameSite=Lax` |
+| 7-day idle timeout | [`refresh_token_validity`](https://github.com/supertokens/supertokens-core/blob/master/config.yaml), 100 days by default, extended as the session is used |
+| 30-day absolute timeout | No setting. `Session.getSessionInformation()` returns `timeCreated` if you need one |
+| Single-use refresh tokens | Rotated on every refresh, and reusing a retired token counts as theft |
+| `navigator.locks` and `apiFetch()` | The frontend SDK's cross-tab lock and fetch interceptor |
+| Mobile refresh with a JSON body | Header mode, with `st-auth-mode: header` |
+| Sign-out revokes the row and clears both cookies | `Session.signOut()` in the browser does both. `revokeAllSessionsForUser()` ends every session a user has |
+
+One cell looks weaker than it is. SuperTokens sets both cookies from one `cookieSameSite` value, `Lax` by default when the site and API share a domain, so the refresh cookie isn't `Strict`. But its refresh API only answers `POST`, and browsers don't send a `Lax` cookie with a POST another site starts.
+
+The setup comes from SuperTokens' [App Router guide](https://supertokens.com/docs/integrations/nextjs/app-directory/about): config files, a provider in the root layout, the sign-in UI at `/auth`, and the auth API at `app/api/auth/[[...path]]/route.ts`. Two settings tie it to this architecture. Set `apiBasePath: '/api/auth'` in `appInfo` to match that route, which also keeps every SuperTokens API under the prefix Proxy already treats as public. And add `UserRoles.init()` to the backend recipe list, because the DAL reads roles from the core. The code below ran on supertokens-node 24.0.3 and supertokens-auth-react 0.51.3 against a self-hosted core 12.3.1, with access tokens cut to 20 seconds so they'd expire mid-test.
+
+### A New Body for readSession()
+
+Everything else in `lib/dal/session.ts` stays, except that `signingKey()` goes away and `verifySession()` now redirects to `/auth`:
+
+```ts
+// lib/dal/session.ts
+import 'server-only'
+import { cache } from 'react'
+import { cookies, headers } from 'next/headers'
+import { redirect } from 'next/navigation'
+import SuperTokensSession from 'supertokens-node/recipe/session'
+import UserRoles from 'supertokens-node/recipe/userroles'
+import { ensureSuperTokensInit } from '@/app/config/backend'
+
+ensureSuperTokensInit()
+
+// Session, AuthError, and bearerToken() are unchanged
+
+// Expired or forged tokens, and sessions the core no longer has
+const SIGNED_OUT = new Set<string>([SuperTokensSession.Error.TRY_REFRESH_TOKEN, SuperTokensSession.Error.UNAUTHORISED])
+
+// The only provider-specific code in the DAL
+async function readSession(): Promise<Session | null> {
+  const token = bearerToken(await headers()) ?? (await cookies()).get('sAccessToken')?.value
+  if (!token) return null
+
+  const session = await SuperTokensSession.getSessionWithoutRequestResponse(token, undefined, {
+    checkDatabase: true, // asks the core, so a revoked session fails on its next request
+    antiCsrfCheck: false, // Next.js checks Server Actions, and apiHandler() checks Route Handlers
+  }).catch((error) => {
+    // Anything else, like an unreachable core, stays a 500
+    if (SuperTokensSession.Error.isErrorFromSuperTokens(error) && SIGNED_OUT.has(error.type)) return null
+    throw error
+  })
+  if (!session) return null
+
+  // Roles from the core, not the copy in the token, so a demotion counts on the next request
+  const { roles } = await UserRoles.getRolesForUser(session.getTenantId(), session.getUserId())
+  return {
+    sessionId: session.getHandle(),
+    userId: session.getUserId(),
+    role: roles.includes('admin') ? 'admin' : 'member',
+  }
+}
+```
+
+Key implementation decisions:
+
+- **`checkDatabase: true` is the revocation check.** SuperTokens [verifies sessions statelessly by default](https://supertokens.com/docs/post-authentication/session-management/advanced-workflows/access-token-blacklisting), so a revoked session works until its access token expires. With the core consulted, `revokeAllSessionsForUser()` took effect on the next request. `getSSRSession()`, which SuperTokens' guide uses in Server Components, skips this check, and SuperTokens' own [SSR docs](https://supertokens.com/docs/additional-verification/session-verification/ssr) say to verify against the database before rendering sensitive data.
+- **Roles come from the core, not the token.** The UserRoles recipe copies a user's roles into the access token as `st-role` at sign-in, and refreshes carry that copy forward unchanged. In the test app, an admin whose role was removed still had `admin` in a freshly refreshed token, and their next request got a `403` anyway.
+- **Each render makes two calls to the core.** `cache()` holds it at two however many components ask, and shell-first streaming keeps them out of the first byte. On the managed service, they count toward a [rate limit](https://supertokens.com/docs/deployment/rate-limits) per app and IP address: 50 requests per second on the free tier, or about 25 renders per second from one server. Paid plans start at 100, and a self-hosted core has no limit.
+- **The replacement token gets dropped.** With supertokens-node 24.0.3, each verify after a refresh returns a replacement access token that the SDK expects you to write to the response, and a Server Component can't set cookies. In the test app, ignoring it cost only work on the core: verification, later refreshes, and theft detection all behaved normally.
+- **An unreachable core is a `500`, with one gap.** Once the SDK has the core's signing keys, a failed verify call throws and the page fails, instead of signing everyone out. But the SDK caches those keys for four hours and reports a failure to fetch them as `TRY_REFRESH_TOKEN`. A test server started while the core was down treated every valid token as expired, in Proxy and the DAL alike.
+
+### Proxy on the SDK
+
+Proxy keeps its job: signature and expiry, no database. The SDK's `getSSRSession()` checks both against the core's public keys, so it replaces the jose call and the shared secret:
+
+```ts
+// proxy.ts
+import { NextResponse, type NextRequest } from 'next/server'
+import { getSSRSession } from 'supertokens-node/nextjs'
+import { ensureSuperTokensInit } from '@/app/config/backend'
+
+ensureSuperTokensInit()
+
+// Deny by default. /auth is the SuperTokens sign-in UI and /api/auth its API.
+const PUBLIC_PATHS = ['/', '/auth', '/refresh', '/api/auth']
+
+function isPublic(pathname: string) {
+  return PUBLIC_PATHS.some((path) => pathname === path || (path !== '/' && pathname.startsWith(`${path}/`)))
+}
+
+type TokenState = 'valid' | 'expired' | 'missing'
+
+// Signature and expiry only, against the core's public keys. No revocation, roles, or ownership.
+async function readTokenState(request: NextRequest): Promise<TokenState> {
+  const bearer = request.headers.get('authorization')?.match(/^Bearer\s+(\S+)$/i)?.[1]
+  // getSSRSession() looks for sAccessToken in a cookie list, so a bearer token goes in as one
+  const cookies = bearer ? [{ name: 'sAccessToken', value: bearer }] : request.cookies.getAll()
+  const { accessTokenPayload, hasToken, error } = await getSSRSession(cookies)
+  if (error) throw error // SuperTokens isn't initialized, which isn't a bad token
+  if (!hasToken) return 'missing'
+  // Expired and forged tokens look the same here. Both go to /refresh, and a forged one fails there.
+  return accessTokenPayload ? 'valid' : 'expired'
+}
+
+export async function proxy(request: NextRequest) {
+  const { pathname, search } = request.nextUrl
+  if (isPublic(pathname)) return NextResponse.next()
+
+  const state = await readTokenState(request)
+  if (state === 'valid') return NextResponse.next()
+
+  if (pathname.startsWith('/api/')) {
+    const challenge = state === 'missing' ? 'Bearer' : 'Bearer error="invalid_token"'
+    return Response.json(
+      { error: 'Authentication required' },
+      { status: 401, headers: { 'WWW-Authenticate': challenge } },
+    )
+  }
+
+  // Server Actions and other writes check for themselves, in a format their caller can read
+  if (request.method !== 'GET' && request.method !== 'HEAD') return NextResponse.next()
+
+  // An expired token isn't a signed-out user. Send them to refresh, not to sign in.
+  const destination = new URL(state === 'expired' ? '/refresh' : '/auth', request.url)
+  destination.searchParams.set('redirectToPath', pathname + search) // the name SuperTokens' sign-in page reads
+  return NextResponse.redirect(destination)
+}
+
+export const config = {
+  // Everything except build output, crawler files, and images, so new routes are covered by default
+  matcher: ['/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|.*\\.(?:png|jpg|jpeg|gif|svg|webp|ico)$).*)'],
+}
+```
+
+Key implementation decisions:
+
+- **Three states instead of four.** `getSSRSession()` doesn't say why a token failed, so an expired token and a forged one both go to `/refresh`. Without a valid refresh token behind it, the forged one ends up at sign-in. SuperTokens' SSR docs route invalid and expired tokens through a refresh page the same way.
+- **It still runs on the Edge.** The same file as `middleware.ts`, with the function renamed, ran on the Edge runtime in Next.js 16.4.2 and gave the same answers for valid, missing, expired, and forged tokens.
+- **No user ID in a header.** SuperTokens' guide also offers a [Proxy that forwards `x-user-id`](https://supertokens.com/docs/integrations/nextjs/app-directory/protecting-backend/session-verification-middleware) to Route Handlers. It deletes any copy the client sent, but as the CVE section showed, that deletion only happens when Proxy runs. The DAL reads the session itself.
+
+### Refresh, Rotation, and the Lock
+
+The SDK replaces `lib/auth/tokens.ts`, the refresh Route Handler, and `lib/client/session.ts`. Its fetch interceptor watches every request to your API domain, and on a `401` it refreshes under a cross-tab lock and retries, which covers Route Handlers without any code. Proxy still sends expired page loads to `/refresh`, which now calls the SDK:
+
+```tsx
+// app/refresh/refresh-session.tsx
+'use client'
+
+import { useEffect, useState } from 'react'
+import Session from 'supertokens-auth-react/recipe/session'
+import { localPath } from '@/lib/client/local-path'
+
+export function RefreshSession() {
+  const [failed, setFailed] = useState(false)
+
+  useEffect(() => {
+    const next = localPath(new URLSearchParams(window.location.search).get('redirectToPath'))
+    // Takes the same cross-tab lock as the SDK's fetch interceptor
+    Session.attemptRefreshingSession()
+      // A full page load, so nothing the router fetched with the expired token gets reused
+      .then((ok) => window.location.replace(ok ? next : `/auth?redirectToPath=${encodeURIComponent(next)}`))
+      .catch(() => setFailed(true)) // the refresh call itself failed, which isn't the same as signed out
+  }, [])
+
+  return <p>{failed ? 'Something went wrong. Reload to try again.' : 'Refreshing your session…'}</p>
+}
+```
+
+`localPath()` moves, unchanged, from the session strategy section into `lib/client/local-path.ts`, because the sign-in page needs it too. Proxy sends signed-out users to `/auth?redirectToPath=…`, and the Proxy section's rule applies there as well: only follow it to a path on this site. Add the check to the frontend config from SuperTokens' guide:
+
+```ts
+// app/config/frontend.tsx, in the object frontendConfig() returns
+getRedirectionURL: async (context) => {
+  // After sign-in, follow redirectToPath only to a path on this site
+  if (context.action === 'SUCCESS') return localPath(context.redirectToPath ?? null)
+  return undefined // SuperTokens' default for everything else
+},
+```
+
+In the test app, no `redirectToPath` value left the site after sign-in, and local paths kept their query strings.
+
+Rotation keeps the hand-built rule on a different schedule. Replaying a refresh token after the tokens that replaced it had been used got a `401` with "token theft detected," cleared both cookies, and revoked the session, the SDK's [default response](https://supertokens.com/docs/post-authentication/session-management/advanced-workflows/customize-error-handling) to theft. But with supertokens-node 24.0.3, the core retires a refresh token when its replacement is first used, not when it's spent, so two refreshes sent at once with the same token both succeeded. The race from the session strategy section is survivable until two requests use different token pairs: when one went out with the first pair's access token while the cookie jar kept the second, the next refresh tripped theft detection. The cross-tab lock keeps the pairs from splitting: three tabs refreshing together made one or two refresh calls between them, never three, and all three landed back on the invoices page signed in. Core 12.1 added rotation at refresh time, with a 30-second grace period for the old token, for SDKs on its newer driver interface, and supertokens-node 24.0.3 isn't one of them.
+
+The page-level refresh from the Server Components section has an SDK version too: the guide's [`TryRefreshComponent`](https://supertokens.com/docs/integrations/nextjs/app-directory/protecting-route) calls `Session.attemptRefreshingSession()`, then `router.refresh()`, or `redirectToAuth()` if the refresh fails. For a page Proxy doesn't cover, render it when the DAL rejects a token the request still carries:
+
+```tsx
+// Inside a page that Proxy doesn't cover
+const session = await getSession()
+if (!session) {
+  // A token the DAL couldn't use: expired, revoked, or forged. The refresh endpoint sorts them out.
+  if ((await cookies()).has('sAccessToken')) return <TryRefreshComponent key={Date.now()} />
+  redirect('/auth')
+}
+```
+
+In the test app, that page refreshed once and rendered with the new token.
+
+Mobile apps use [header mode](https://supertokens.com/docs/post-authentication/session-management/switch-between-cookies-and-header-authentication), the default in SuperTokens' mobile SDKs. A sign-in request with `st-auth-mode: header` gets its tokens back in `st-access-token` and `st-refresh-token` response headers instead of cookies. The app sends the access token as a bearer token, which the DAL and Proxy already read, and refreshes by sending the refresh token as the bearer token to `/api/auth/session/refresh`.
+
+### Server Actions After an Expiry
+
+The fetch interceptor refreshes on a `401`, and the actions in this guide never return one. They answer an expired token with `{ ok: false, error: 'Authentication required' }` and a `200`, and that's exactly what the test app got, with no refresh attempt. With a one-hour access token, that's anyone who leaves a tab open over lunch. Wrap the action on the client:
+
+```ts
+// lib/client/with-refresh.ts
+import Session from 'supertokens-auth-react/recipe/session'
+
+type Result = { ok: boolean; error?: string } | null
+
+// Server Actions answer 200 even when the DAL refuses, so the SDK's fetch interceptor never sees a 401
+export function withRefresh<Args extends unknown[], R extends Result>(action: (...args: Args) => Promise<R>) {
+  return async (...args: Args): Promise<R> => {
+    const result = await action(...args)
+    if (result === null || result.ok || result.error !== 'Authentication required') return result
+    // Most likely an expired access token: refresh once, then retry once
+    return (await Session.attemptRefreshingSession()) ? action(...args) : result
+  }
+}
+```
+
+The delete button then calls `useActionState(withRefresh(deleteInvoiceAction), null)`. Retrying is safe because the DAL refused before anything was written.
+
+### What It Returned
+
+| Request | Result |
+|---------|--------|
+| Page, no session | `307` to `/auth?redirectToPath=…` |
+| Page load or client-side navigation, expired token | `/refresh`, one refresh, then the page |
+| `fetch()` to a Route Handler, expired token | `401`, one refresh, an automatic retry, `200` |
+| Server Action, expired token | "Authentication required", or `{ ok: true }` through `withRefresh()` |
+| Session revoked with `revokeAllSessionsForUser()` | Passed Proxy; pages redirected to `/auth`, Route Handlers returned `401` |
+| Admin role removed mid-session | `403` on the next request |
+| Old refresh token replayed | `401`, "token theft detected", session revoked |
+| Member and admin on the streaming dashboard | Same as before: the overdue count for the admin only |
+
+Let SuperTokens own the tokens. Keep the checks in your DAL.
