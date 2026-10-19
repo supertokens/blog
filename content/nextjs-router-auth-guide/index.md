@@ -1583,3 +1583,55 @@ The delete button then calls `useActionState(withRefresh(deleteInvoiceAction), n
 | Member and admin on the streaming dashboard | Same as before: the overdue count for the admin only |
 
 Let SuperTokens own the tokens. Keep the checks in your DAL.
+
+## FAQ
+
+### Is Middleware Enough to Protect a Next.js App?
+
+No. Proxy, the Next.js 16 name for middleware, runs before the route does, which makes it the fastest check and the easiest one to skip. A path outside its matcher never reaches it, a Server Action is covered only if the page it posts to is, and CVE-2025-29927 plus five advisories in 2026 all let requests reach protected routes without it running. The [Next.js docs](https://nextjs.org/docs/app/getting-started/proxy#use-cases) say Proxy "should not be used as a full session management or authorization solution." Keep it as a fast first check, and make the DAL the one every page, action, and handler goes through.
+
+### Was My App Affected by CVE-2025-29927, and Is Upgrading Enough?
+
+If you self-hosted with `next start` or `output: 'standalone'`, you were exposed from 11.1.4 until your release line's fix: 15.2.3, 14.2.25, 13.5.9, or 12.3.5. The 11.x line never got one. Apps on Vercel, Netlify, and Cloudflare Workers weren't exposed, and static exports don't run middleware. A follow-up, [CVE-2025-30218](https://github.com/vercel/next.js/security/advisories/GHSA-223j-4rm8-mrmf), moved the floor to 15.2.4, 14.2.26, 13.5.10, and 12.3.6. Upgrading closes that bypass, not the pattern: the 2026 advisories found new ways around a patched Proxy. Patch, and keep the authorization check in the DAL.
+
+### What Is a Data Access Layer in Next.js?
+
+A server-only module that owns every database read and write, where every exported function checks the session before it touches data. Pages, Server Actions, and Route Handlers call functions like `getMyInvoices()` instead of the database, so a check that's missing somewhere else doesn't become a leak. Ownership lives in the query, and only the fields the UI needs leave the module. The [Next.js team recommends](https://nextjs.org/blog/security-nextjs-server-components-actions) it for new projects, and the DAL section builds a complete one.
+
+### Do I Need Proxy at All?
+
+Not to protect your data. The DAL covers everything fetched at request time, and the Next.js authentication guide marks Proxy as [optional](https://nextjs.org/docs/app/guides/authentication#optimistic-checks-with-proxy-optional). Proxy still earns its place in three ways. It's the only layer that can still return a real `307` for a page that streams. It's the only protection for static routes that share data between users, where nothing runs per request. And it can send expired tokens to `/refresh` before anything renders. The cost is that it runs on every matched request, prefetches included: in the test app, one view of a page with ten links ran it 15 times.
+
+### Should Proxy Run on the Edge or Node.js Runtime?
+
+On Next.js 16, `proxy.ts` only runs on Node.js, and asking it for Edge fails the build with "Proxy does not support Edge runtime." The deprecated `middleware.ts` still runs on the Edge, and an app can't have both. Node.js is the simpler choice, since any library works there, though Proxy still shouldn't query the database. If you stay on the Edge, verify tokens with a library built on Web Crypto, like [jose](https://github.com/panva/jose). In the test app, a JWT library that depends on Node's `crypto` module compiled without complaint in Edge middleware, then sent every valid session to the login page.
+
+### How Do I Protect Server Actions?
+
+Check inside every action, through the DAL. A Server Action is a POST to whatever page the user is on, with a header naming the function, so a page-level check doesn't cover it, and Proxy covers it only when that page's path is in the matcher. Validate the input first, hidden fields and bound arguments included, let the DAL decide who's allowed, and return only what the UI renders. The [Next.js docs](https://nextjs.org/docs/app/guides/server-actions#security) put it in one line: "Treat every action as an untrusted entry point."
+
+### Why Does My Server Component Get a 401 from My Own Route Handler?
+
+A `fetch` from the server doesn't carry the browser's cookies, so the handler sees a signed-out request. In the test app, a page's plain `fetch` to its own `/api/invoices/inv_1` got a `401`. Forwarding the cookie header got a `200`, at the cost of an HTTP round trip to its own server. The [Next.js docs](https://nextjs.org/docs/app/guides/backend-for-frontend#server-components) say to fetch data in Server Components "directly from its source, not via Route Handlers." With a DAL, that means calling `getInvoice()` instead of the endpoint that wraps it.
+
+### Why Does My Auth Redirect Return a 200?
+
+Because the response had already started streaming. Once a `loading.js` fallback, a Suspense boundary, or a Cache Components shell goes out, the [status code is fixed](https://nextjs.org/docs/app/api-reference/file-conventions/loading#status-codes) at `200`, and `redirect()` turns into a meta refresh and a client-side redirect. The protected data still never renders. What changes is what crawlers, monitors, and API clients see. For a real `307`, the check has to run before anything streams: in Proxy, or, with Cache Components off, at the top of a page with nothing suspended above it.
+
+### Does Cache Components Change How Authentication Works?
+
+It changes where checks can run. With it on, reading cookies outside a Suspense boundary [fails the build](https://nextjs.org/docs/app/guides/authentication-with-cache-components), so checks move into components inside boundaries, and everything outside them becomes a static shell that every visitor gets, signed in or not. GET Route Handlers that never read the request can be prerendered too. In the test app, one with no check of its own was served to a signed-out request with `s-maxage=3600`. Keep anything viewer-specific behind a boundary and the DAL, and use Proxy for anything the shell itself shouldn't show.
+
+### Should Session Tokens Go in Cookies or localStorage?
+
+In a browser, `httpOnly` cookies. Anything in `localStorage` is readable by every script on the page, so one XSS bug hands over the session. OWASP's [HTML5 Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html) is direct about it: "Do not store session identifiers in local storage as the data is always accessible by JavaScript." Cookies bring CSRF into play, which `SameSite`, Next.js's `Origin` check on Server Actions, and the `Origin` check from the Route Handler section cover. Mobile apps are the exception: they keep tokens in the Keychain or Keystore and send them as bearer tokens.
+
+### How Long Should Access Tokens Live?
+
+As long as you're willing to let a revoked session through the checks that skip the database. When the DAL checks the session store on every request, revocation is immediate for data, and the access token's lifetime only limits what Proxy lets through. This guide used 15 minutes. SuperTokens defaults to an hour, set by `access_token_validity`. Shorter tokens mean more refreshes and more chances for the refresh race from the session strategy section, which is what the cross-tab lock is for.
+
+### Do I Need SuperTokens for Next.js App Router Authentication?
+
+No. Everything before the SuperTokens section is provider-neutral, and the provider lives in three places: `readSession()`, Proxy's `readTokenState()`, and the token code. Any auth library that can verify a session on the server, revocation included, fits there. SuperTokens fills all three with an [open-source core](https://github.com/supertokens/supertokens-core) you can self-host or run on its managed service, plus the refresh handling and cross-tab lock you'd otherwise build. The trade-off is two calls to the core for each render that reads data, which count against the managed service's rate limit.
+
+Check where the data is. Everything else is a fast first answer.
