@@ -2,7 +2,7 @@
 title: "Next.js App Router authentication complete guide"
 description: "Learn how to secure Next.js App Router authentication after CVE-2025-29927, across Server Components, Server Actions, and Route Handlers, using SuperTokens."
 date: "2025-08-18"
-cover: "TODO.png"
+cover: "nextjs-app-router-auth-cover.png"
 category: "nextjs, authentication, guide"
 author: "Maurice Saldivar"
 ---
