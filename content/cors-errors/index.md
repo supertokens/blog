@@ -692,4 +692,3 @@ With correct configuration, CORS becomes an ally rather than an obstacle — enf
 - [HTTP Error Codes: 401 vs. 403](https://supertokens.com/blog/http-error-codes-401-vs-403)
 - [What Is a 502 Bad Gateway Error and How to Fix It](https://supertokens.com/blog/what-is-502-bad-gateway-error)
 - [Cookies vs. `localStorage` for Sessions](https://supertokens.com/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know)
-- [OAuth vs JWT: Key Differences Explained](https://supertokens.com/blog/oauth-vs-jwt)
