@@ -36,7 +36,7 @@ Every agentic system has four distinct principals, and every boundary between th
 |Agent runtime|Agent identity, derived per task|Plans and executes steps, requests capability tokens|
 |Tool or resource server|Service identity|Executes actions, enforces scope and policy|
 
-The agent runtime is most often modeled wrong. Handing the agent the user's own token makes every action indistinguishable from the user's in logs. Giving it a long-lived service account detaches it from user consent. The correct model gives the agent its own agentic identity, derived from the user's session at task start, scoped to that task, and expiring with it. Every token should answer: which user authorized this, which agent is acting, and which task is it acting for.
+The agent runtime is most often modeled wrong. Handing the agent the user's own token makes every action indistinguishable from the user's in logs. Giving it a long-lived service account detaches it from user consent. The correct model gives the agent its own agentic identity, derived from the user's session at task start, scoped to that task, and expiring with it. Every token should answer: which user authorized this, which agent is acting, and which task is it acting for. (For how the service identities in this table authenticate to each other, see [machine-to-machine authentication](https://supertokens.com/blog/machine-to-machine-authentication).)
 
 ## Scoped Tokens and the "Narrow, Never Widen" Rule
 
