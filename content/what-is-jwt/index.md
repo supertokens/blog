@@ -203,7 +203,7 @@ Always verify both the **structure** and **signature** before trusting a decoded
 ### Token Expiration and Refresh Strategy
 Use **short-lived access tokens** with **longer-lived refresh tokens** for optimal balance between security and usability.
 
-The refresh token (typically opaque) can safely regenerate JWTs when access tokens expire — as recommended in [RFC 6749 OAuth2 Spec](https://datatracker.ietf.org/doc/html/rfc6749). JWTs are often issued as part of this OAuth flow — see [OAuth vs JWT: Key Differences Explained](https://supertokens.com/blog/oauth-vs-jwt) for how the two standards fit together.
+The refresh token (typically opaque) can safely regenerate JWTs when access tokens expire — as recommended in [RFC 6749 OAuth2 Spec](https://datatracker.ietf.org/doc/html/rfc6749). JWTs are often issued as part of this OAuth flow — see [OAuth vs JWT: Key Differences Explained](https://supertokens.com/blog/oauth-vs-jwt) for how the two standards fit together, and when an opaque token is the better choice than a JWT.
 
 ### Secure Transport and Storage
 Always use **HTTPS**, validate claims server-side, and prevent client-side tampering through secure storage mechanisms.
