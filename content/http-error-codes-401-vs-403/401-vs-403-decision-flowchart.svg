@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 640" width="740" height="640" role="img" aria-labelledby="title desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="title">401 vs 403 vs 404 decision flowchart</title>
+  <desc id="desc">Start with a request for a protected resource. If it does not carry valid credentials, return 401 Unauthorized with a WWW-Authenticate header. If it does, check whether this identity is allowed to perform the action. If allowed, process the request with a 2xx response. If not allowed, decide whether the resource's existence should be hidden: if yes, return 404 Not Found; if no, return 403 Forbidden.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="740" height="640" fill="#ffffff"/>
+
+  <!-- Start -->
+  <rect x="210" y="16" width="320" height="48" rx="24" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
+  <text x="370" y="46" text-anchor="middle" font-size="16" fill="#222">Request for a protected resource</text>
+  <line x1="370" y1="64" x2="370" y2="98" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Decision 1: authentication -->
+  <polygon points="370,100 530,160 370,220 210,160" fill="#fff7ec" stroke="#f93" stroke-width="2"/>
+  <text x="370" y="156" text-anchor="middle" font-size="16" font-weight="600" fill="#222">Valid credentials?</text>
+  <text x="370" y="177" text-anchor="middle" font-size="12" fill="#555">present, unexpired, verifiable</text>
+  <line x1="530" y1="160" x2="578" y2="160" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="554" y="150" text-anchor="middle" font-size="13" font-weight="600" fill="#555">No</text>
+  <rect x="580" y="124" width="150" height="72" rx="8" fill="#fff1d6" stroke="#c77700" stroke-width="2"/>
+  <text x="655" y="155" text-anchor="middle" font-size="16" font-weight="700" fill="#7a4900">401 Unauthorized</text>
+  <text x="655" y="177" text-anchor="middle" font-size="12" fill="#7a4900">+ WWW-Authenticate</text>
+  <line x1="370" y1="220" x2="370" y2="268" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="384" y="249" font-size="13" font-weight="600" fill="#555">Yes</text>
+
+  <!-- Decision 2: authorization -->
+  <polygon points="370,270 530,330 370,390 210,330" fill="#fff7ec" stroke="#f93" stroke-width="2"/>
+  <text x="370" y="326" text-anchor="middle" font-size="16" font-weight="600" fill="#222">Allowed to do this?</text>
+  <text x="370" y="347" text-anchor="middle" font-size="12" fill="#555">role, scope, ownership</text>
+  <line x1="530" y1="330" x2="578" y2="330" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="554" y="320" text-anchor="middle" font-size="13" font-weight="600" fill="#555">Yes</text>
+  <rect x="580" y="294" width="150" height="72" rx="8" fill="#e6f6ea" stroke="#2e8540" stroke-width="2"/>
+  <text x="655" y="325" text-anchor="middle" font-size="16" font-weight="700" fill="#1d5a2b">Process it</text>
+  <text x="655" y="347" text-anchor="middle" font-size="12" fill="#1d5a2b">2xx response</text>
+  <line x1="370" y1="390" x2="370" y2="438" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="384" y="419" font-size="13" font-weight="600" fill="#555">No</text>
+
+  <!-- Decision 3: disclosure -->
+  <polygon points="370,440 530,500 370,560 210,500" fill="#fff7ec" stroke="#f93" stroke-width="2"/>
+  <text x="370" y="496" text-anchor="middle" font-size="16" font-weight="600" fill="#222">Hide that it exists?</text>
+  <text x="370" y="517" text-anchor="middle" font-size="12" fill="#555">caller shouldn't learn it's there</text>
+  <line x1="530" y1="500" x2="578" y2="500" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="554" y="490" text-anchor="middle" font-size="13" font-weight="600" fill="#555">Yes</text>
+  <rect x="580" y="464" width="150" height="72" rx="8" fill="#eeeeee" stroke="#666" stroke-width="2"/>
+  <text x="655" y="505" text-anchor="middle" font-size="16" font-weight="700" fill="#333">404 Not Found</text>
+  <line x1="210" y1="500" x2="162" y2="500" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="186" y="490" text-anchor="middle" font-size="13" font-weight="600" fill="#555">No</text>
+  <rect x="10" y="464" width="150" height="72" rx="8" fill="#fde8e8" stroke="#c0392b" stroke-width="2"/>
+  <text x="85" y="505" text-anchor="middle" font-size="16" font-weight="700" fill="#8e1f14">403 Forbidden</text>
+
+  <text x="370" y="612" text-anchor="middle" font-size="13" fill="#666">Authenticate before you check existence, or anonymous callers can probe which resources exist.</text>
+</svg>

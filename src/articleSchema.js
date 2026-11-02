@@ -90,7 +90,9 @@ function stripMarkdown(text) {
     return text
         .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
         .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
-        .replace(/[*_`]+/g, "")
+        .replace(/[*`]+/g, "")
+        // Underscores only mark emphasis at word edges; keep snake_case identifiers like invalid_token.
+        .replace(/(^|\W)_+|_+(?=\W|$)/g, "$1")
         .replace(/\s+/g, " ")
         .trim();
 }
