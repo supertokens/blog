@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 380" width="740" height="380" role="img" aria-labelledby="title desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="title">JWKS signing key rotation timeline</title>
+  <desc id="desc">Two rows show an old key and a new key over time. At T0 the new key is added to the JWKS but not used. After waiting at least the verifiers' JWKS cache lifetime, at T1 the issuer starts signing with the new key and the old key becomes verify-only. After waiting at least the longest token lifetime, at T2 the old key is removed from the JWKS and its private key is destroyed.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="740" height="380" fill="#ffffff"/>
+
+  <!-- Legend -->
+  <rect x="140" y="16" width="22" height="14" rx="3" fill="#f93" stroke="#c77700" stroke-width="1.5"/>
+  <text x="170" y="28" font-size="13" fill="#222">Signs new tokens</text>
+  <rect x="310" y="16" width="22" height="14" rx="3" fill="#fff1d6" stroke="#c77700" stroke-width="1.5"/>
+  <text x="340" y="28" font-size="13" fill="#222">In the JWKS, verify only</text>
+
+  <!-- Row labels -->
+  <text x="20" y="94" font-size="15" font-weight="600" fill="#222">Old key</text>
+  <text x="20" y="112" font-size="12" fill="#555">kid: key-2026-08</text>
+  <text x="20" y="164" font-size="15" font-weight="600" fill="#222">New key</text>
+  <text x="20" y="182" font-size="12" fill="#555">kid: key-2026-11</text>
+
+  <!-- Old key: signing until T1, verify-only until T2 -->
+  <rect x="140" y="80" width="240" height="40" rx="6" fill="#f93" stroke="#c77700" stroke-width="1.5"/>
+  <text x="310" y="105" text-anchor="middle" font-size="13" font-weight="600" fill="#222">signing</text>
+  <rect x="380" y="80" width="180" height="40" rx="6" fill="#fff1d6" stroke="#c77700" stroke-width="1.5"/>
+  <text x="470" y="105" text-anchor="middle" font-size="13" fill="#7a4900">verify only</text>
+  <text x="590" y="105" font-size="13" fill="#999">removed</text>
+
+  <!-- New key: published at T0, signing from T1 -->
+  <rect x="240" y="150" width="140" height="40" rx="6" fill="#fff1d6" stroke="#c77700" stroke-width="1.5"/>
+  <text x="310" y="175" text-anchor="middle" font-size="13" fill="#7a4900">published</text>
+  <rect x="380" y="150" width="340" height="40" rx="6" fill="#f93" stroke="#c77700" stroke-width="1.5"/>
+  <text x="640" y="175" text-anchor="middle" font-size="13" font-weight="600" fill="#222">signing</text>
+
+  <!-- Time axis -->
+  <line x1="140" y1="222" x2="725" y2="222" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="725" y="242" text-anchor="end" font-size="12" fill="#555">time</text>
+
+  <!-- T markers -->
+  <line x1="240" y1="70" x2="240" y2="230" stroke="#555" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="380" y1="70" x2="380" y2="230" stroke="#555" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="560" y1="70" x2="560" y2="230" stroke="#555" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="240" y="250" text-anchor="middle" font-size="14" font-weight="700" fill="#222">T0</text>
+  <text x="380" y="250" text-anchor="middle" font-size="14" font-weight="700" fill="#222">T1</text>
+  <text x="560" y="250" text-anchor="middle" font-size="14" font-weight="700" fill="#222">T2</text>
+
+  <!-- Wait brackets -->
+  <line x1="244" y1="272" x2="376" y2="272" stroke="#c77700" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="310" y="292" text-anchor="middle" font-size="12" font-weight="600" fill="#7a4900">wait ≥ JWKS cache TTL</text>
+  <line x1="384" y1="272" x2="556" y2="272" stroke="#c77700" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="470" y="292" text-anchor="middle" font-size="12" font-weight="600" fill="#7a4900">wait ≥ longest token TTL</text>
+
+  <!-- Step captions -->
+  <text x="240" y="326" text-anchor="middle" font-size="13" fill="#222">Add new key</text>
+  <text x="240" y="344" text-anchor="middle" font-size="13" fill="#222">to the JWKS</text>
+  <text x="380" y="326" text-anchor="middle" font-size="13" fill="#222">Start signing</text>
+  <text x="380" y="344" text-anchor="middle" font-size="13" fill="#222">with new key</text>
+  <text x="560" y="326" text-anchor="middle" font-size="13" fill="#222">Remove old key,</text>
+  <text x="560" y="344" text-anchor="middle" font-size="13" fill="#222">destroy private half</text>
+</svg>
