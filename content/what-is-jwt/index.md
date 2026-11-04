@@ -121,7 +121,7 @@ JWT authentication typically follows this flow:
 2. **JWT issued** — Server signs and returns a JWT containing claims.  
 3. **Client stores token** — Usually in HttpOnly cookies or secure storage.  
 4. **Requests authenticated** — Client includes JWT in headers (e.g., `Authorization: Bearer <token>`).  
-5. **Server verifies JWT** — Using its secret or public key, checks signature validity and claim expiry.
+5. **Server verifies JWT** — Using its secret or public key, checks signature validity and claim expiry. Public keys are usually fetched from the issuer's [JWKS (JSON Web Key Set)](https://supertokens.com/blog/understanding-jwks).
 
 This stateless model removes the need for a centralized session store, boosting scalability.
 
@@ -233,6 +233,7 @@ Try the [SuperTokens JWT Encoder/Decoder Tool](https://supertokens.com/jwt-encod
 
 - [JWT, JWS, and JWE for Not-So-Dummies](https://medium.facilelogin.com/jwt-jws-and-jwe-for-not-so-dummies-b63310d201a3)  
 - [OAuth vs JWT: Key Differences Explained](https://supertokens.com/blog/oauth-vs-jwt)  
+- [What Is a JWKS? JSON Web Key Sets Explained](https://supertokens.com/blog/understanding-jwks)  
 - [Revoking Access with a JWT Blacklist](https://supertokens.com/blog/revoking-access-with-a-jwt-blacklist)  
 - [OpenID Connect & JWT Usage](https://openid.net/connect/)  
 - [Best Way to Securely Manage User Sessions](https://supertokens.com/blog/the-best-way-to-securely-manage-user-sessions)  
