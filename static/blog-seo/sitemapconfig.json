@@ -709,5 +709,8 @@
     },
     {
         "location": "https://supertokens.com/blog/why-is-redux-state-immutable"
+    },
+    {
+        "location": "https://supertokens.com/blog/nextjs-router-auth-guide"
     }
 ]
