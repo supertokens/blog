@@ -712,5 +712,8 @@
     },
     {
         "location": "https://supertokens.com/blog/nextjs-app-router-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-do-i-add-auth-nextjs-app"
     }
 ]
