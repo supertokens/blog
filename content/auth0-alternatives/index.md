@@ -1,177 +1,222 @@
 ---
-title: "Auth0 Alternatives: Features, Pricing & Flexibility Compared"
+title: "Best Auth0 Alternatives in 2026: Pricing, Features and Open Source Options Compared"
 date: "2024-06-10"
-description: "This blog explores alternatives to Auth0, a leading IAM platform, highlighting options like SuperTokens, Okta, Firebase Authentication, AWS Cognito, FusionAuth, and Keycloak. It discusses key considerations such as pricing, customization, scalability, and integration, helping you choose the best authentication solution for your needs."
+updated: "2026-09-24"
+description: "Compare the best Auth0 alternatives in 2026: SuperTokens, Clerk, Keycloak, WorkOS, Stytch, Descope, FusionAuth, Amazon Cognito, Firebase Auth and Supabase Auth, with verified pricing and worked cost examples."
 cover: "auth0-alternatives.png"
 category: "featured"
 author: "Mostafa Ibrahim"
 ---
 
+**The best Auth0 alternatives in 2026 are SuperTokens, Clerk, Keycloak, WorkOS, Stytch, Descope, FusionAuth, Amazon Cognito, Firebase Authentication and Supabase Auth.** For open source or self-hosting, choose SuperTokens, Keycloak or FusionAuth. For B2B SaaS with enterprise SSO, WorkOS, Stytch and Descope are purpose-built. For consumer apps on a budget, Clerk, Firebase Authentication and Supabase Auth have the largest free tiers. Okta is not a real alternative, because Okta owns Auth0.
+
+*Pricing checked against each vendor's pricing page on 24 September 2026. Auth identity pricing changes frequently, so confirm current rates before you migrate.*
+
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [When To Search Outside Of Auth0 For Access Management](#when-to-search-outside-of-auth0-for-access-management)
-3. [Understanding Your Priorities: What To Look For In Auth Services](#understanding-your-priorities-what-to-look-for-in-auth-services)
-4. [Top Auth0 Alternatives For Secure Authentication & Authorization](#top-auth0-alternatives-for-secure-authentication--authorization)
-5. [Comparing Features & Pricing: Auth0 vs. Alternatives](#comparing-features--pricing-auth0-vs-alternatives)
-6. [Is Open Source Important?](#is-open-source-important)
-7. [Custom vs. Out-Of-The-Box Auth Providers](#custom-vs-out-of-the-box-auth-providers)
-8. [Conclusion](#conclusion)
+- [Auth0 alternatives at a glance](#auth0-alternatives-at-a-glance)
+- [Why teams look for Auth0 alternatives](#why-teams-look-for-auth0-alternatives)
+- [What does Auth0 cost?](#what-does-auth0-cost)
+- [The best Auth0 alternatives](#the-best-auth0-alternatives)
+- [Worked cost examples](#worked-cost-examples)
+- [How to choose an Auth0 alternative](#how-to-choose-an-auth0-alternative)
+- [Migrating away from Auth0](#migrating-away-from-auth0)
+- [Frequently Asked Questions](#frequently-asked-questions)
 
+## Auth0 Alternatives at a Glance
 
-## Introduction
+| Alternative | Open source / self-host | Free tier | Paid pricing (as of Sep 2026) | Best for |
+|---|---|---|---|---|
+| **SuperTokens** | Yes (Apache 2.0 core) | Self-hosted: no user limit. Managed: under 5,000 MAUs | Managed: $0.02/MAU above 5,000; MFA, account linking and multi-tenancy are add-ons | Teams that want open source auth they can self-host or run managed |
+| **Clerk** | No | 50,000 monthly retained users per app | Pro $25/month, then $0.02 → $0.012 per user; orgs and SSO connections extra | React/Next.js apps that want prebuilt UI |
+| **Keycloak** | Yes (Apache 2.0) | Free | Free; you pay for hosting and operations | Enterprises that want a full self-hosted IAM server |
+| **WorkOS** | No | AuthKit free up to 1M MAUs | SSO and Directory Sync from $125/connection/month | B2B SaaS selling to enterprises |
+| **Stytch** | No | 10,000 MAUs, unlimited orgs, 5 SSO/SCIM connections | $125 per extra SSO/SCIM connection; MAU overage | B2B apps and AI-agent auth |
+| **Descope** | No | 7,500 MAUs, 10 tenants, 3 SSO connections | Pro from $249/month; Growth from $799/month (annual) | No-code auth flows |
+| **FusionAuth** | Self-hostable (free Community edition) | Community: self-hosted, no stated MAU limit | Starter from $162/month (annual) | Teams that want a self-hostable commercial product |
+| **Amazon Cognito** | No | 10,000 MAUs (Lite/Essentials); 50 federated MAUs | Essentials $0.015/MAU; Lite from $0.0055/MAU | Apps already on AWS |
+| **Firebase Authentication** | No | 50,000 MAUs; 50 SAML/OIDC MAUs | Identity Platform pricing beyond the free tier | Mobile and Firebase apps |
+| **Supabase Auth** | Yes | 50,000 MAUs (free plan) | Pro $25/month including 100,000 MAUs | Apps using Supabase's Postgres backend |
 
-In today's digital landscape, access management has become a critical component of any application or service. Auth0, a leading identity and access management (IAM) platform, has gained significant popularity for its comprehensive set of features and robust security measures. However, as with any solution, Auth0 may not be the perfect fit for every organization's unique requirements. That's why we're here to explore some alternatives that might better suit your needs, focusing on features, pricing, flexibility, and implementation.
+## Why Teams Look for Auth0 Alternatives
 
-## When To Search Outside Of Auth0 For Access Management
+Teams rarely leave Auth0 because it stops working. They leave when:
 
-While Auth0 is a powerful and widely adopted solution, there are several reasons why you might want to consider exploring alternatives:
+- **Pricing jumps with growth.** Auth0's free plan covers 25,000 MAUs, but paid B2C plans start at $35/month and B2B plans at $150/month for just 500 MAUs, and costs rise with MAU tiers.
+- **Enterprise SSO gets expensive.** B2B Essentials includes 3 enterprise connections and Professional includes 5. Each additional connection costs $100/month, up to a maximum of 30.
+- **Key features are gated to higher tiers.** Organizations, enterprise connections and advanced MFA vary by plan and by B2C vs B2B pricing.
+- **They want to own the auth layer.** Auth0 is SaaS-only, and some teams need self-hosting for data residency, compliance or cost control.
+- **Vendor consolidation.** Auth0 has been part of Okta since 2021, so "moving to Okta" doesn't change vendors. See [why Okta bought Auth0](/blog/the-real-reason-okta-spent-on-auth0).
 
-- **High pricing of Auth0:** Auth0's pricing model can be quite expensive, especially for smaller organizations or projects with limited budgets.
-- **Specific customization needs:** If you require highly customized authentication or authorization features that Auth0 doesn't offer out-of-the-box, an alternative solution might be a better fit.
-- **Scalability concerns:** Depending on your application's growth trajectory, Auth0's price can increase dramatically and your product revenue might not be able to keep up.
-- **Integration challenges with existing systems:** Integrating Auth0 with your existing systems and workflows might be complex or require significant effort.
+## What Does Auth0 Cost?
 
-So in short, Auth0 might not be the ideal choice for scenarios where you need extensive customization, self-hosting capabilities, or a more cost-effective solution for smaller projects or startups. Additionally, if you have specific compliance or regulatory requirements that Auth0 doesn't fully address, exploring alternatives could be beneficial.
+| Plan | B2C | B2B |
+|---|---|---|
+| Free | Up to 25,000 MAUs, 5 organizations, 1 enterprise connection | Same as B2C |
+| Essentials | From $35/month (500 MAUs); 10 organizations; no enterprise connections | From $150/month (500 MAUs); unlimited organizations; 3 enterprise connections |
+| Professional | From $240/month (500 MAUs); 10 organizations; no enterprise connections | From $800/month (500 MAUs); unlimited organizations; 5 enterprise connections |
+| Extra enterprise connections | n/a | $100/month each (max 30 total) |
 
-## Understanding Your Priorities: What To Look For In Auth Services
+For a full breakdown, see the [Auth0 pricing guide](/blog/auth0-pricing-the-complete-guide).
 
-Before diving into the alternatives, it's crucial to understand your priorities and what features you should be looking for in an authentication and authorization service:
+## The Best Auth0 Alternatives
 
-### Key considerations and features
+### 1. SuperTokens
 
-- **Security features:** Robust security measures like multi-factor authentication (MFA), strong encryption standards, and compliance with regulations such as GDPR and SOC2 are essential.
-- **Ease of implementation:** The quality of documentation, community support, and overall ease of integration with your existing systems can significantly impact the implementation process.
-- **Customizability:** The availability of SDKs, APIs, and customization options if you need to tailor the solution to your specific requirements.
-- **Scalability:** Handling high traffic volumes, multi-tenant support, and the ability to scale seamlessly as your application grows are crucial factors to consider.
-- **Pricing structure:** Evaluate the pricing models, including free tiers, pay-as-you-go options, and enterprise pricing, to find the most cost-effective solution for your needs.
-- **Support and maintenance:** The level of support provided, whether it's a service-level agreement (SLA), community support, or dedicated support, can be a deciding factor, especially for mission-critical applications.
+[SuperTokens](https://supertokens.com) is an open source authentication platform (Apache 2.0 core) that you can self-host or use as a managed service.
 
-## Top Auth0 Alternatives For Secure Authentication & Authorization
-Now, let's dive into some of the top Auth0 alternatives and explore their unique selling points:
+- **Features:** Email/password, passwordless, [passkeys](/blog/what-are-passkeys), social login, MFA, secure cookie-based session management with token rotation, roles and permissions, multi-tenancy with per-tenant enterprise SSO, machine-to-machine auth, pre-built or fully custom UI
+- **Pricing:** Self-hosted core features are free with no user limit. The managed service is free under 5,000 MAUs, then $0.02 per MAU. MFA ($0.01/MAU, minimum $100/month), account linking ($0.005/MAU, minimum $100/month) and multi-tenancy (custom pricing) are paid add-ons. See [pricing](https://supertokens.com/pricing).
+- **Limitations:** Multi-tenancy/enterprise SSO is a paid feature, and self-hosting means running the SuperTokens core and its database.
+- **Best for:** Teams that want Auth0-level features without per-user lock-in, and the option to self-host.
 
-![SuperTokens](https://raw.githubusercontent.com/supertokens/supertokens-logo/master/images/Artboard%20%E2%80%93%2027%402x.png)
-- **SuperTokens (Customizable, open-source, developer-friendly):** SuperTokens is a highly flexible and customizable authentication solution that offers a wide range of features, including support for various authentication mechanisms, multi-factor authentication, and session management. Its open-source nature and developer-friendly approach make it an attractive choice for organizations seeking transparency and control over their authentication system.
+Comparisons: [SuperTokens vs Auth0](/blog/supertokens-vs-auth0), [migrating from Auth0](/blog/migrate-from-auth0).
 
-![Okta](./okta.png)
-- **Okta (Enterprise-focused, robust security, extensive integrations):** Okta is a well-established and enterprise-grade identity management platform known for its robust security features and extensive integrations with various applications and services. It's particularly well-suited for larger organizations with complex authentication and authorization requirements.
+### 2. Clerk
 
-![Firebase](./firebase.png)
-- **Firebase Authentication (Strong Google ecosystem integration, ease of use):** Firebase Authentication is a part of the Firebase suite of products offered by Google. It seamlessly integrates with other Firebase services and the broader Google ecosystem, making it an excellent choice for developers already invested in Google's technology stack. Its ease of use and comprehensive documentation make it a popular option, especially for smaller projects.
+[Clerk](https://clerk.com) offers embeddable sign-in components and user management, and is especially popular with React and Next.js teams.
 
-![Cognito](./cognito.png)
-- **Cognito (AWS integration, good for scaling, complex setup):** Amazon Cognito is AWS's authentication and user management service. It offers tight integration with other AWS services, making it a natural choice for applications built on the AWS platform. Cognito is particularly well-suited for applications that require scalability and high availability, but its setup can be more complex compared to some alternatives.
+- **Pricing:** Hobby is free for 50,000 monthly retained users per app. Pro is $25/month ($20 annually), and extra users cost $0.02 each, falling to $0.012 at volume. Organizations beyond 100 cost $1 each, falling to $0.60, and enterprise connections beyond the first cost $75 each.
+- **Limitations:** SaaS only. Per-organization and per-connection fees add up for B2B products.
+- **Best for:** Consumer and early-stage SaaS apps on modern JavaScript frameworks.
 
-![Fusion Auth](./fusion-auth.png)
-- **FusionAuth (Full-featured, great for self-hosting, community-focused):** FusionAuth is a full-featured authentication and authorization solution that can be self-hosted or used as a cloud service. It offers a wide range of features, including support for various authentication mechanisms, multi-factor authentication, and advanced customization options. FusionAuth has a strong community focus and is well-suited for organizations that prioritize self-hosting and customization.
+Details: [Clerk pricing](/blog/clerk-pricing-the-complete-guide), [Auth0 vs Clerk](/blog/auth0-vs-clerk).
 
-![Keycloak](./keycloak.png)
-- **Keycloak (Open-source, highly customizable, strong community):** Keycloak is an open-source identity and access management solution that offers a high degree of customization and flexibility. It's particularly popular in the Java ecosystem and has a strong community backing. Keycloak is a great choice for organizations that value open-source solutions and require extensive customization capabilities.
+### 3. Keycloak
 
-## Comparing Features & Pricing: Auth0 vs. Alternatives
-To help you make an informed decision, let's compare the features and pricing structures of Auth0 and the alternatives we've discussed:
+[Keycloak](https://www.keycloak.org) is a free, open source (Apache 2.0) identity and access management server and a CNCF project.
 
-- **Security:** Auth0 and most of the alternatives offer robust security features like MFA, strong encryption, and SSO capabilities. However, some solutions like SuperTokens and Keycloak provide more flexibility and customization options for advanced security requirements.
-- **Customization:** While Auth0 offers a good level of customization through APIs and SDKs, solutions like SuperTokens, FusionAuth, and Keycloak excel in providing extensive customization options, including the ability to modify the underlying code and user interfaces.
-- **Scalability:** Auth0, Cognito, and Okta are generally well-suited for handling high traffic volumes and supporting a large number of users. However, solutions like SuperTokens and FusionAuth also offer robust scalability features, particularly when self-hosted.
+- **Features:** OIDC, OAuth 2.0 and SAML 2.0, LDAP/AD federation, identity brokering, realms and organizations, fine-grained authorization
+- **Pricing:** Free. Commercial support is available through the Red Hat build of Keycloak.
+- **Limitations:** You operate it yourself (clustering, upgrades, database), and customising the login UI means working with Keycloak's theme system.
+- **Best for:** Enterprises with DevOps capacity that want a complete, self-hosted IAM server.
 
-### Auth0 Pricing
+Details: [Keycloak pricing](/blog/keycloak-pricing), [Keycloak alternatives](/blog/keycloak-alternatives).
 
-Auth0 pricing tiers and structure: Auth0 offers a free tier for up to 7,500 active users, followed by various paid tiers based on the number of active users and additional features required. The pricing can become quite expensive for larger organizations or projects with a high number of users.
+### 4. WorkOS
 
-| Plans       | Free | Essentials | Professional | Enterprise |
-|-------------|------|------------|--------------|------------|
-| Auth0       | $0   | $35/month  | $240/month   | Contact    |
+[WorkOS](https://workos.com) focuses on making apps enterprise-ready: SSO, Directory Sync (SCIM), audit logs and an admin portal your customers use to configure their own connections.
 
-Many alternatives, like Keycloak and FusionAuth, offer open-source versions with no user-based pricing, making them more cost-effective for smaller projects or those with a large user base. FusionAuth also offers hosting-based pricing.
+- **Pricing:** AuthKit user management is free for the first 1 million MAUs, then $2,500/month per additional million. SSO and Directory Sync each cost $125 per connection per month for 1–15 connections, dropping to $100, $80 and $65 at higher volumes.
+- **Limitations:** Costs are driven by the number of enterprise customers, and it is SaaS only.
+- **Best for:** B2B SaaS companies selling to enterprises. See [WorkOS alternatives](/blog/workos-alternatives).
 
-### FusionAuth pricing
+### 5. Stytch
 
-#### Cloud Hosting
+[Stytch](https://stytch.com) provides API-first authentication for consumer and B2B apps, including authentication for AI agents.
 
-| Basic  | Business | High Availability |
-|--------|----------|--------------------|
-| $37/month | $225/month | $500 / month (starting) |
+- **Pricing:** Free plan with 10,000 MAUs (and AI agents), unlimited organizations, 5 SSO or SCIM connections and 1,000 M2M tokens. Additional SSO/SCIM connections cost $125 each. MAU overage and enterprise pricing are available on request.
+- **Best for:** B2B apps that need organizations and SSO from day one. See [Stytch vs Auth0](/blog/stytch-vs-auth0) and [Stytch pricing](/blog/stytch-pricing).
 
-#### Self Hosted
+### 6. Descope
 
-| Community | Starter  | Essential | Enterprise |
-|-----------|----------|-----------|------------|
-| Free     | $125/month| $850/month | $3300/month |
+[Descope](https://www.descope.com) lets you design authentication journeys with a visual, no-code flow editor.
 
-### Okta pricing
+- **Pricing:** Free for 7,500 MAUs, 10 tenants and 3 SSO connections. Pro starts at $249/month (10,000 MAUs, 35 tenants, 5 SSO connections), and Growth at $799/month (25,000 MAUs, 100 tenants, 10 SSO connections), billed annually.
+- **Best for:** Teams that want to change login flows without code. See [Descope pricing](/blog/descope-pricing).
 
-Okta offers diverse plans for both the Workforce Identity Cloud and the Customer Identity Cloud. Their pricing is flexible, catering to various organizational needs.
+### 7. FusionAuth
 
-| Okta Plans  | Essential | Professional |
-|-----------|----------|-----------|
-| B2C |$35/mo      | $240/mo   |
-| B2B | $150/mo      | $800/mo |
-| Enterprise | Contact      | Contact |
+[FusionAuth](https://fusionauth.io) is a commercial identity platform you can self-host or run in FusionAuth Cloud.
 
+- **Pricing:** The Community edition is free and self-hosted, with core authentication features and no stated MAU limit. Paid plans start with Starter at $162/month (billed annually) and add premium features such as breached-password detection, advanced MFA and machine-to-machine auth.
+- **Best for:** Teams that want a self-hostable commercial product with paid support. See [Auth0 vs FusionAuth](/blog/auth0-vs-fusionauth).
 
-### Cognito pricing
+### 8. Amazon Cognito
 
-Solutions like Cognito typically have usage-based (pay-as-you-go) pricing models, which can be more cost-effective for larger organizations or projects with fluctuating user volumes.
+[Amazon Cognito](https://aws.amazon.com/cognito/) is AWS's managed user directory and authentication service.
 
-Unlike many competitors that charge based on user count, SuperTokens' pricing is primarily based on the features you require. To truly understand how SuperTokens' pricing stacks up against the competition, we encourage you to explore their detailed feature comparison page. This comprehensive resource allows you to see at a glance how SuperTokens compares to other authentication solutions across key factors like pricing, customizability, scalability, and more.
+- **Pricing:** Lite and Essentials include 10,000 MAUs per month free. After that, Essentials (the default) costs $0.015 per MAU, Lite $0.0055 per MAU for the first 100,000, and Plus $0.020 per MAU. SAML/OIDC federated users are free for 50 MAUs, then $0.015 each.
+- **Limitations:** Customising the hosted UI and flows is limited, and it is tightly coupled to AWS.
+- **Best for:** Apps already built on AWS. See [Cognito pricing](/blog/cognito-pricing-the-complete-guide) and [Cognito alternatives](/blog/cognito-alternatives).
 
-Don't just take our word for it – see for yourself how SuperTokens' flexible and cost-effective approach can benefit your organization.
+### 9. Firebase Authentication
 
-## Is Open Source Important?
+[Firebase Authentication](https://firebase.google.com/products/auth) handles email/password, phone and social login for Firebase apps.
 
-When evaluating authentication solutions, the open-source aspect is a crucial factor to consider. Open-source solutions like SuperTokens, Keycloak, and FusionAuth offer several benefits:
+- **Pricing:** Free up to 50,000 MAUs on both the Spark and Blaze plans. SAML and OIDC sign-ins are free only up to 50 MAUs, and usage beyond the free tier moves to Google Cloud Identity Platform pricing.
+- **Limitations:** Limited B2B features (organizations, enterprise SSO at scale) and tied to Google Cloud.
+- **Best for:** Mobile and web apps already on Firebase. See [Firebase pricing](/blog/firebase-pricing).
 
-### Benefits of open-source authentication solutions:
+### 10. Supabase Auth
 
-- **Transparency:** With access to the source code, you can thoroughly review and understand how the solution works, ensuring it aligns with your security and privacy requirements.
-- **Customizability:** Open-source solutions often provide greater flexibility for customization and integration with your existing systems and workflows.
-- **Cost-effectiveness:** Many open-source solutions offer free or more cost-effective pricing models, particularly for smaller projects or those with a large user base.
-- **Community support:** Active open-source communities can provide valuable resources, support, and contributions to continuously improve the solution.
+[Supabase Auth](https://supabase.com/auth) is part of Supabase's open source Postgres backend, with row-level security that ties users to your data.
 
-However, it's important to note that open-source solutions also come with their own set of challenges:
+- **Pricing:** The free plan includes 50,000 MAUs (with 2 active projects, which pause when inactive). Pro costs $25/month and includes 100,000 MAUs.
+- **Best for:** Apps that use Supabase as their database and backend. See [Supabase Auth vs SuperTokens](/blog/supabase-auth-comparison-with-supertokens-integration).
 
-### Challenges of open-source authentication solutions:
+## Worked Cost Examples
 
-- **Maintenance and updates:** While the community contributes to ongoing development, you may need dedicated resources to maintain and update the solution according to your specific requirements.
-- **Security responsibilities:** With open-source solutions, you assume greater responsibility for ensuring the security and compliance of the solution within your environment.
-- **Lack of dedicated support:** While community support can be valuable, you may not have access to dedicated support resources like those offered by commercial vendors.
+These use list prices on each vendor's pricing page as of 24 September 2026, before discounts. "Quote" means the vendor doesn't publish a price at that volume.
 
-## Custom vs. Out-Of-The-Box Auth Providers
- 
-Another important consideration is whether to go with a custom authentication solution or an out-of-the-box provider. Both approaches have their advantages and disadvantages:
+### Scenario A: Consumer app with 50,000 monthly active users
 
-### Custom solutions:
+Email and social login, no enterprise SSO.
 
-**Pros:** Tailored to specific needs, full control over features.
- 
-- Custom solutions can be tailored to meet your organization's exact requirements, ensuring a perfect fit for your specific use cases and workflows.
-- You have complete control over the features, security measures, and customization options, allowing for maximum flexibility.
+| Provider | Estimated monthly cost |
+|---|---|
+| Auth0 | Above the 25,000-MAU free plan, so a paid B2C plan is required (MAU-tiered; quote via the pricing calculator) |
+| Clerk | $0 on Hobby if every user counts as retained; $25 on Pro for MFA and no Clerk branding |
+| Firebase Authentication | $0 (within 50,000 free MAUs) |
+| Supabase Auth | $0 on the free plan; $25 on Pro |
+| WorkOS AuthKit | $0 (within 1M free MAUs) |
+| Amazon Cognito (Essentials) | 40,000 × $0.015 = **$600** |
+| Amazon Cognito (Lite) | 40,000 × $0.0055 = **$220** |
+| SuperTokens (managed) | 45,000 × $0.02 = **$900** |
+| SuperTokens, Keycloak or FusionAuth Community (self-hosted) | $0 in licence fees, plus your hosting costs |
 
-**Cons:** Higher development time, maintenance, and cost.
+### Scenario B: B2B SaaS with 10,000 users and 20 enterprise customers on SAML SSO
 
-- Building a custom authentication solution from scratch can be a time-consuming and resource-intensive process, requiring a dedicated development team and ongoing maintenance efforts.
-- The costs associated with development, testing, and maintenance can be significantly higher compared to out-of-the-box solutions, especially for small to medium-sized organizations.
+| Provider | Estimated monthly cost |
+|---|---|
+| Amazon Cognito | 10,000 federated MAUs: (10,000 − 50) × $0.015 ≈ **$149** |
+| Clerk (Pro) | $25 + $100 B2B add-on + 14 connections × $75 + 5 × $60 = **$1,475** |
+| Stytch | 15 connections beyond the 5 included × $125 = **$1,875** |
+| WorkOS | 15 × $125 + 5 × $100 = **$2,375** (AuthKit users free) |
+| Auth0 (B2B Essentials) | 17 connections beyond the 3 included × $100 = $1,700, plus the MAU-based plan price |
+| Descope | 20 SSO connections exceeds Growth's 10, so Enterprise (quote) |
+| SuperTokens | Enterprise SSO via the multi-tenancy add-on (quote); self-hosting avoids per-user fees |
+| Keycloak | $0 in licence fees, plus hosting and operations |
 
-### Out-of-the-box providers
+The cheapest option depends heavily on your mix of users and enterprise connections. Model your own numbers before you migrate.
 
-**Pros:** Quick implementation, lower initial cost, regular updates.
+## How to Choose an Auth0 Alternative
 
-- Out-of-the-box authentication providers offer a faster and more straightforward implementation process, allowing you to quickly integrate authentication capabilities into your application.
-- The initial costs are typically lower compared to building a custom solution, making them more accessible for organizations with limited resources.
-- Most providers offer regular updates and security patches, ensuring that your authentication system remains up-to-date and secure.
+1. **Do you need to self-host?** For data residency, compliance or cost control, shortlist SuperTokens, Keycloak and FusionAuth.
+2. **Are you B2B?** If customers will ask for SAML SSO and SCIM, compare per-connection pricing (WorkOS, Stytch, Clerk, Auth0) against flat or self-hosted options.
+3. **How much UI control do you need?** Clerk and Descope give polished, prebuilt experiences. SuperTokens, Keycloak and FusionAuth let you fully customise or build your own UI.
+4. **Which ecosystem are you in?** Cognito fits AWS, Firebase Auth fits Firebase, and Supabase Auth fits Supabase.
+5. **What will it cost at 10× your current size?** Run the worked examples above with your own projected MAUs, organizations and SSO connections.
 
-**Cons:** Less flexibility, potential for vendor lock-in.
+## Migrating Away From Auth0
 
-- While many out-of-the-box providers offer customization options, they may not always meet your specific requirements or integrate seamlessly with your existing systems.
-- There is a risk of vendor lock-in, where switching to a different authentication provider in the future can be a complex and costly process.
+- **Export users and password hashes.** Auth0 can export users, but exporting password hashes requires a support ticket. Plan for either a hash import or lazy migration, where users are moved the next time they log in.
+- **Avoid forcing a mass password reset.** Most alternatives, including SuperTokens, support importing bcrypt hashes or migrating users on first login.
+- **Re-create social and enterprise connections** and update redirect URIs with each identity provider.
+- **Run both systems in parallel** during the cutover. See [migrating users without downtime](/blog/migrating-users-without-downtime-in-your-service) and the [Auth0 to SuperTokens migration guide](/blog/migrate-from-auth0).
 
-## Conclusion
+## Frequently Asked Questions
 
-Choosing the right authentication solution is crucial for the security and success of your application. While Auth0 is a popular option, exploring alternatives that better align with your specific needs and priorities can be beneficial.
+### What is the best alternative to Auth0?
 
-In this article, we've covered a range of Auth0 alternatives, including SuperTokens, Okta, Firebase Authentication, AWS Cognito, FusionAuth, and Keycloak, each with its unique strengths and capabilities.
+It depends on your needs. SuperTokens and Keycloak are the leading open source alternatives you can self-host. Clerk is popular for React and Next.js consumer apps. WorkOS and Stytch are strong for B2B SaaS that needs enterprise SSO. Amazon Cognito and Firebase Authentication suit apps already on AWS or Firebase.
 
-If you're seeking a flexible, developer-friendly, and cost-effective solution, SuperTokens is definitely worth considering. With its open-source core, extensive customization options, and affordable pricing models, SuperTokens offers a compelling choice for projects of all sizes and budgets.
+### Is there a free alternative to Auth0?
 
-Ultimately, the right authentication solution is the one that seamlessly integrates with your systems, meets your security and compliance requirements, and provides the flexibility and scalability to grow with your organization. Take the time to evaluate your options carefully, and don't hesitate to seek expert advice or engage with the developer communities surrounding these solutions.
+Yes. Keycloak and self-hosted SuperTokens are free and open source with no user limits. You pay only for hosting. Among managed services, Clerk (50,000 retained users), Firebase Authentication (50,000 MAUs), Supabase Auth (50,000 MAUs) and WorkOS AuthKit (1 million MAUs) have large free tiers.
+
+### Is Okta an alternative to Auth0?
+
+Not really. Okta acquired Auth0 in 2021, and Auth0 is Okta's customer identity product. Okta's own Workforce Identity is designed for employee access rather than login for your app's users. See [Okta alternatives](/blog/okta-alternatives).
+
+### What is the cheapest Auth0 alternative?
+
+For self-hosting, Keycloak and SuperTokens have no licence fees. For managed services, it depends on scale: Firebase Authentication, Supabase Auth and Clerk are free at 50,000 users, while Amazon Cognito is usually cheapest for large numbers of SAML-federated B2B users. See [cheapest Auth0 alternatives](/blog/cheapest-auth-alternatives).
+
+### Is there an open source Auth0 alternative?
+
+Yes. SuperTokens (Apache 2.0 core), Keycloak (Apache 2.0) and Supabase Auth are open source, and FusionAuth offers a free, self-hosted Community edition.
+
+### Can I migrate from Auth0 without resetting user passwords?
+
+Usually, yes. You can request a password-hash export from Auth0 support and import the hashes into a provider that supports them, or migrate users lazily the next time they log in. Either approach avoids a forced password reset.
