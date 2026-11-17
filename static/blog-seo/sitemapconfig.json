@@ -501,6 +501,12 @@
         "location": "https://supertokens.com/blog/clerk-pricing-the-complete-guide"
     },
     {
+        "location": "https://supertokens.com/blog/how-to-add-auth-to-tanstack-start-with-supertokens"
+    },
+    {   
+        "location": "https://supertokens.com/blog/supertokens-vs-hanko"
+    },
+    {
         "location": "https://supertokens.com/blog/implement-passkeys-nextjs"
     },
     {
@@ -706,5 +712,11 @@
     },
     {
         "location": "https://supertokens.com/blog/why-is-redux-state-immutable"
+    },
+    {
+        "location": "https://supertokens.com/blog/nextjs-app-router-authentication"
+    },
+    {
+        "location": "https://supertokens.com/blog/how-do-i-add-auth-nextjs-app"
     }
 ]

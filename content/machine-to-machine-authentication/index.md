@@ -1,374 +1,341 @@
 ---
-title: "Understanding Machine-to-Machine (M2M) Authentication"
-description: "Explore the essentials of machine-to-machine authentication and best practices for implementing secure M2M communication."
+title: "Machine-to-Machine (M2M) Authentication: Methods and AI Agents"
+description: "How services, workloads and AI agents authenticate with no user present: API keys, client credentials, private_key_jwt, mTLS, workload identity and MCP."
 date: "2025-03-18"
+updated: "2026-11-02"
 cover: "M2M.png"
-category: "featured"
+category: "featured, programming"
 author: "Maria Shimkovska"
 ---
 
-**When you think of authentication, your mind probably jumps to the classic user-to-machine scenario &mdash; like logging into your favorite social media app or checking your bank account. You know the drill: type in your username, punch in your password, and hope you didn’t forget it (again).**
+**Machine-to-machine (M2M) authentication is how one piece of software proves its identity to another when no user is involved, such as a backend service calling an API, a cron job writing to a database, or an AI agent calling a tool server.** The standard approach is the OAuth 2.0 client credentials grant: the calling service authenticates to an authorization server and gets a short-lived, scoped access token, which it sends to the API. The service proves who it is with a client secret, a signed JWT (`private_key_jwt`), a TLS client certificate (mTLS), or a credential issued by its platform (workload identity).
 
-But humans aren’t the only ones logging in &mdash; machines do it too, and they’re far busier than we are. As we go about our day (and even while we sleep), machines are constantly exchanging data behind the scenes.
+*Last updated 2 November 2026. Checked against [RFC 6749](https://www.rfc-editor.org/rfc/rfc6749.html) (OAuth 2.0), [RFC 7523](https://www.rfc-editor.org/rfc/rfc7523.html) (JWT client authentication), [RFC 8705](https://www.rfc-editor.org/rfc/rfc8705.html) (mTLS), [RFC 8693](https://www.rfc-editor.org/rfc/rfc8693.html) (token exchange), the [MCP authorization specification](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization) (version 2026-07-28) and the SuperTokens docs.*
 
-This non-stop chatter is called **machine-to-machine (M2M) communication**, and just like with any digital conversation, we need to make sure only the right participants have access. That’s why we authenticate ourselves before accessing certain information &mdash; and machines need to do the same to keep sneaky bad actors from getting their hands on sensitive data.
+## Table of contents
 
-Enter **machine-to-machine (M2M) authentication** &mdash; the key to ensuring machines can securely prove they’re who they claim to be.
+- [What counts as M2M authentication](#what-counts-as-m2m-authentication)
+- [The main M2M authentication methods](#the-main-m2m-authentication-methods)
+- [How the client credentials flow works](#how-the-client-credentials-flow-works)
+- [Verifying M2M access tokens](#verifying-m2m-access-tokens)
+- [M2M authentication for AI agents and workload identity](#m2m-authentication-for-ai-agents-and-workload-identity)
+- [Implementing M2M authentication with SuperTokens](#implementing-m2m-authentication-with-supertokens)
+- [M2M security checklist](#m2m-security-checklist)
+- [Frequently Asked Questions](#frequently-asked-questions)
 
-Let's boot up and explore the world of machines.  🤖
+## What counts as M2M authentication
 
-![A GIF of robot arms working together](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjR4dXE5Zmg5MDRoazdtNG9hZ2o1d3RleTY4bHRiOXh4dXhjdDJhYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Yn23Blov9gNxmrY74K/giphy.gif)
+A "machine" here is any non-human caller: a microservice, a background worker, a CI pipeline, a serverless function, a CLI running in a script, or an AI agent. This guide covers software talking to software over HTTP, not device-level protocols for IoT hardware.
 
-```toc
-tight: true
-toHeading: 3
+| | User authentication | M2M authentication |
+|---|---|---|
+| Who proves identity | A person, with a password, passkey or social login | A service, with a client credential or platform-issued identity |
+| Interaction | Interactive (login form, redirect, MFA prompt) | Fully automated |
+| Typical OAuth flow | Authorization code with PKCE | Client credentials |
+| Access tied to | A user session | A client or workload identity |
+| Token subject (`sub`) | The user | The client itself |
+
+M2M authentication answers *which service is calling*. Authorization answers *what that service may do*, usually through scopes and audiences on its token. The two are easy to blur, so see [authentication vs authorization](https://supertokens.com/blog/authentication-vs-authorization) if you want the long version.
+
+## The main M2M authentication methods
+
+### API keys
+
+A static string sent in a header, such as `X-API-Key`. API keys are simple and every HTTP client supports them, but they are long-lived bearer secrets: anyone who copies the key *is* the service until someone notices and rotates it. Most have no built-in expiry, scope or audience. They work for low-risk internal calls or as a simple developer onboarding path for a public API, but you have to build hashing, rotation and per-key permissions yourself.
+
+### OAuth 2.0 client credentials with a client secret
+
+The service sends its `client_id` and `client_secret` to the authorization server's token endpoint and receives an access token ([RFC 6749, Section 4.4](https://www.rfc-editor.org/rfc/rfc6749.html#section-4.4)). The API only ever sees the short-lived token, never the secret, and the token carries scopes and an audience. The spec limits this grant to confidential clients, meaning ones that can keep a secret, and says the response SHOULD NOT include a refresh token: the client simply requests a new access token.
+
+The secret is still a static shared secret, but it travels only to the token endpoint, and the authorization server can revoke it centrally.
+
+### `private_key_jwt` (JWT client assertion)
+
+Instead of a shared secret, the service holds a private key and signs a short-lived JWT, the *client assertion*, for each token request ([RFC 7523, Section 2.2](https://www.rfc-editor.org/rfc/rfc7523.html#section-2.2)). The authorization server holds only the public key, registered directly or fetched from the client's [JWKS](https://supertokens.com/blog/understanding-jwks). Nothing secret crosses the network, and a leaked assertion expires in minutes.
+
+```js
+import * as jose from "jose";
+import { randomUUID } from "node:crypto";
+
+const TOKEN_URL = "https://auth.example.com/oauth2/token";
+const CLIENT_ID = "reporting-service";
+
+// Only this service holds the private key. The auth server has the public key,
+// registered directly or published at a jwks_uri.
+const privateKey = await jose.importPKCS8(process.env.CLIENT_PRIVATE_KEY_PEM, "ES256");
+
+const clientAssertion = await new jose.SignJWT({})
+  .setProtectedHeader({ alg: "ES256", kid: "reporting-service-2026-11" })
+  .setIssuer(CLIENT_ID)
+  .setSubject(CLIENT_ID)
+  .setAudience(TOKEN_URL) // must identify the authorization server
+  .setJti(randomUUID()) // lets the server reject replays
+  .setIssuedAt()
+  .setExpirationTime("2m")
+  .sign(privateKey);
+
+const res = await fetch(TOKEN_URL, {
+  method: "POST",
+  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  body: new URLSearchParams({
+    grant_type: "client_credentials",
+    client_assertion_type: "urn:ietf:params:oauth:client-assertion-type:jwt-bearer",
+    client_assertion: clientAssertion,
+    scope: "reports.read",
+  }),
+});
+const { access_token } = await res.json();
 ```
-## What is a Machine? 
-In machine-to-machine communication, the term "machine" covers a lot of ground. It can mean servers, applications, APIs, Internet of Things (IoT) devices, or even cronjobs.
 
-For this article, we're focusing on authentication between services &mdash; not IoT gadgets like robots or smart home devices.
+RFC 7523 requires `iss`, `sub` (the `client_id`), `aud` (the authorization server) and `exp`. `jti` is optional in the RFC, but include it so the server can detect replays.
 
-## M2M Communication
-Simply put, M2M communication is the automated exchange of information between machines &mdash; no human involvement required. ❌🧑
+### Mutual TLS (mTLS)
 
-### Examples of M2M Communication: 
-- ☁️ A cloud service retrieving data from a database
-- 🔄 An API fetching information from another service 
-- 📡 Two or more IoT devices syncing their status
+The service presents an X.509 client certificate during the TLS handshake. [RFC 8705](https://www.rfc-editor.org/rfc/rfc8705.html) defines two ways to use this at the token endpoint: `tls_client_auth` (a CA-issued certificate whose subject matches the registered client) and `self_signed_tls_client_auth` (a certificate registered in advance). It also defines **certificate-bound access tokens**: the token carries a `cnf` claim with the certificate's SHA-256 thumbprint, and the API rejects the token if it arrives over a connection that used any other certificate. A stolen token is useless without the private key.
 
-Unlike human-to-machine communication (like logging into a website with a username and password 💻), where a **person's** identity needs to be verified, M2M communication requires authentication methods that confirm the **identity of a machine**, instead.
+mTLS is strong, but you need a PKI to issue and rotate certificates, and TLS must reach the service rather than terminating at a load balancer. Service meshes and SPIFFE (covered below) take care of much of that.
 
-## M2M Authentication
+[DPoP (RFC 9449)](https://www.rfc-editor.org/rfc/rfc9449.html) gives the same sender-constraining at the application layer: the client signs a proof JWT for each request, and the token is bound to that key's thumbprint. It works where mTLS can't, for example behind TLS-terminating proxies.
 
-Machine-to-machine (M2M) authentication is the process of verifying the identity of a machine that’s trying to communicate with another machine. While this sounds straightforward, it covers a broad range of scenarios.
+### Which method to use
 
-M2M communication &mdash; and therefore authentication &mdash; can happen in both hardware and software.
+| Method | What the caller proves | Secret held by the caller | Token lifetime | Best for |
+|---|---|---|---|---|
+| API key | It has the key | Long-lived shared key | Usually none | Low-risk internal calls, simple public APIs |
+| Client credentials + secret | It has the client secret | Long-lived shared secret, sent only to the token endpoint | Short (minutes to an hour) | Most service-to-service calls |
+| `private_key_jwt` | It holds a private key | Private key that never leaves the service | Short; assertion lasts minutes | Higher-assurance clients, regulated APIs |
+| mTLS | It holds a certificate's private key | Private key plus certificate | Short, and token can be cert-bound | Meshes and zero-trust networks with a PKI |
+| Workload identity | The platform vouches for it | Nothing static; platform issues short-lived tokens | Short, rotated automatically | Kubernetes, cloud and CI workloads |
 
-Take the Mars Rover, for example. This iconic piece of hardware needs to communicate securely with other systems to send data back to Earth &mdash; and those systems must authenticate each other to ensure the data isn't intercepted or altered.  
+The usual progression: use client credentials with a secret by default, move to `private_key_jwt` or mTLS when the secret is the weak point, and use workload identity wherever your platform offers it, so there's no static secret at all.
 
-In software, M2M communication happens constantly. Services exchange data, make requests, and pass information back and forth &mdash; and this needs to happen securely. Authenticating these services ensures sensitive data doesn't end up in the wrong hands. 🦾 
+## How the client credentials flow works
 
-**Common methods include:**
-- API keys
-- OAuth tokens
-- Mutual TLS (mTLS)
-- Cryptographic certificates 
+![Client credentials flow between two microservices: 1. Microservice A requests an access token from the authorization server with its client ID and secret. 2. The server validates the credentials. 3. It returns an access token. 4. Microservice A calls Microservice B with the token. 5. Microservice B validates the token. 6. It returns the protected resource.](./client-credentials-flow.png)
 
-| **User Authentication 👤** | **M2M Authentication 🤖** |
-|----------------------------|----------------------------|
-| Requires human interaction (e.g., login form, password) | Fully automated (no human input) |
-| Uses username/password or social logins (OAuth Authorization Code Flow) | Uses **client ID and secret** or service accounts |
-| Access is tied to a user session | Access is tied to a **machine identity** |
-| Example: A user logs into a social media site and gets a session token | Example: A backend service calls an API by using a client credentials token |
+1. The client service sends a token request to the authorization server, authenticating with its credentials.
+2. The authorization server checks the credentials and the scopes requested.
+3. It returns an access token, typically valid for minutes to an hour.
+4. The client calls the API (the resource server) with `Authorization: Bearer <token>`.
+5. The API validates the token's signature, expiry, issuer, audience and scopes.
+6. If everything checks out, it serves the request.
 
-By ensuring machines can confidently identify each other, M2M authentication plays a crucial role in keeping modern digital ecosystems secure.
+On the wire, the token request looks like this:
 
-## M2M Authentication vs M2M Authorization
-Developers often mix up M2M authentication and M2M authorization, but they’re not the same. Here's a simple way to remember the difference:
+```http
+POST /oauth2/token HTTP/1.1
+Host: auth.example.com
+Authorization: Basic dGFzay1zZXJ2aWNlOjxDTElFTlRfU0VDUkVUPg==
+Content-Type: application/x-www-form-urlencoded
 
-- **M2M authentication** verifies *who* the machine is.
-- **M2M authorization** determines *what* that verified machine can do or access. 
-
-Think of it like this:
-- 🔐 **Authentication** is like showing your ID to prove who you are.
-- 🛂 **Authorization** is like getting a backstage pass that defines where you can go and what you can do once you're inside.
-
-For a deeper dive into these concepts, check out the article: [**Authentication vs Authorization: What's the difference?**](https://supertokens.com/blog/authentication-vs-authorization)
-
-## ✨ A Closer Look at How M2M Authentication Works ✨
-
-### 1. Device Identification and Authentication
-Devices authenticate themselves by presenting a unique Client ID and Secret to an OAuth 2.0 Authorization server. This process verifies the device's identity before granting any permissions.
-
-### 2. Access Token Issuance
-Upon successful authentication, the authorization server issues an Access Token. This token carries specific permissions that allow the device to perform authorized tasks or access designated resources.
-
-### 3. Secure Communication
-Only devices with valid tokens can initiate communication, ensuring that unauthorized entities are blocked. This strengthens data security by reducing the risk of malicious access.
-
-### 4. Communication Standards
-M2M systems often rely on protocols like MQTT, CoAP, and others to optimize data exchange for different use cases. These standards ensure efficient communication even in resource-constrained environments.
-
-### 5. Enhanced Security and Efficiency 
-By enforcing strict authentication protocols, M2M communication prevents unauthorized access and ensures that data exchanges remain secure. This method is especially valuable in large-scale systems such as IoT networks and cloud infrastructures.
-
-### 6. Autonomous Operations
-M2M authentication enables devices to perform tasks independently, reducing the need for human oversight and improving operational efficiency in automated environments.
-
-
-### 🚀 Step-by-Step: The Client Credentials Grant Flow
-
-M2M authentication often uses the [**Client Credentials Grant Flow**](https://datatracker.ietf.org/doc/html/rfc6749#section-4.4) in OAuth 2.0. 
-
-The **Client Credentials Grant Flow** involves an application exchanging its application credentials, such as client ID and client secret, for an access token. This flow is ideal for M2M applications where the system needs to authenticate and authorize the application itself rather than a user.
-
-Here's how it works:
-1. The **Client** authenticates with the **Authorization Server** by using its **Client ID** and **Client Secret**.
-2. The **Authorization Server** verifies the credentials.
-3. If valid, the **Authorization Server** issues an **OAuth2 Access Token**.
-4. The **Client** includes the **Access Token** in its requests to the **Resource Server**.
-5. The **Resource Server** verifies the Access Token.
-6. If the token is valid, the **Resource Server** grants access to the requested resource.
-
-![General Client Credentials Flow chart about how it works with two microservices as examples](client-credentials-flow.png)
-
-This flow ensures secure, efficient authentication — keeping your data safe while allowing machines to communicate seamlessly.
-
-## Why Is Machine-to-Machine Authentication Important? 🛡️
-
-### 1. Prevents Unauthorized Access
-By verifying machine identities, M2M authentication ensures that only trusted devices can connect and exchange data.
-
-### 2. Protect Sensitive Data
-Strong authentication mechanisms prevent unverified machines from accessing confidential information, reducing the risk of data leaks.
-
-### 3. Enables Scalable Systems
-M2M authentication simplifies security management in large networks, allowing new devices to authenticate securely without manual intervention.
-
-### 4. Ensures Compliance 
-Implementing proper authentication protocols helps organizations meet security and privacy standards in industries like healthcare, finance, and IoT.
-
-### 5. Improves Operational Efficiency
-By automating the authentication process, M2M authentication minimizes human involvement, streamlining communication between services.
-
-## How to Secure Your Machine Communication With SuperTokens
-SuperTokens recommends securing your machine-to-machine communication with **OAuth2 specifications**. You have to create an **OAuth2 Provider** and use the **OAuth2 Client Credentials Flow** for authorization. 
-
-1. **Service A** reaches out to the **SuperTokens Backend SDK** to get an **OAuth Access Token**.
-2. The **SuperTokens Backend SDK** responds back to **Service A** with an **OAuth2 Access Token**.
-3. **Service A** then communicates with **Service B** by using the **OAuth Access Token**.
-4. **Service B** talks to the **SuperTokens Core Service** to validate the **OAuth Access Token**.
-5. If the **OAuth Access Token** is valid, then **Service B** returns the requested resource. 
-
-![SuperTokens' Client Credentials Flow Diagram Between Two Services - Service A and Service B](machine-to-machine.png)
-
-## Steps to Implementing M2M Authentication with SuperTokens &mdash; Super Simple Set Up
-
-✅ SuperTokens makes OAuth2 setup straightforward with its dashboard and API.
-
-✅ Each service should have its own Client ID and Secret for secure authentication.
-
-✅ Tokens ensure services can only perform authorized tasks.
-
-✅ Token validation helps confirm the authenticity and permissions of each request.
-
-### 🚀 Step 1: Enable OAuth2 in SuperTokens Dashboard
-
-In the **SuperTokens Dashboard**, you need to enable the **OAuth2 feature**. This feature allows services (like APIs or background jobs) to authenticate securely without user involvement. Once enabled, you'll see OAuth options in your application settings.
-
-- Go to your **SuperTokens.com Dashboard**.
-- Enable the **OAuth2 feature**.
-- This unlocks OAuth recipes for your applications.
-
-### 🔧 Step 2: Create OAuth2 Clients
-Each service that needs authentication will need its own OAuth2 client. Think of this like giving each service its own ID badge.
-
-- For each service (e.g., Task Service, Calendar Service), create a unique OAuth2 client.
-- Use this code snippet to create a client:
-
-```javascript
-const BASE_URL = '<CORE_API_ENDPOINT>';
-const API_KEY = '<YOUR_API_KEY>';
-
-const url = `${BASE_URL}/recipe/oauth/clients`;
-const options = {
-  method: 'POST',
-  headers: {
-    'api-key': API_KEY,
-    'Content-Type': 'application/json; charset=utf-8',
-  },
-  body: JSON.stringify({
-    clientName: "TaskService",
-    grantTypes: ["client_credentials"],
-    scope: "event.create",
-    audience: ["event"],
-  })
-};
-
-fetch(url, options)
-  .then(response => response.json())
-  .then(json => console.log(json))
-  .catch(err => console.error(err));
+grant_type=client_credentials&scope=event.create
 ```
-✅ This registers your service so it can request access tokens later.
 
-**Key Details:**
-- `"clientName"` identifies the service (e.g., `TaskService`).
-- `"grantTypes": ["client_credentials"]` specifies that this client will authenticate using M2M.
-- `"scope"` defines the permissions this client will have.
+The credentials go in an HTTP Basic header (base64 of `client_id:client_secret`; the value above encodes a placeholder). RFC 6749 requires authorization servers to support Basic authentication and calls putting `client_secret` in the request body "NOT RECOMMENDED". The body is form-encoded, not JSON.
 
+The client should cache the token and reuse it until shortly before it expires, rather than requesting a new token for every call.
 
-### 🏗️ Step 3: Single App vs Multi App Setup
-**Single App Setup:** For one project (e.g., a web app or API) that handles everything.<br>
-**Multi App Setup:** For larger projects where multiple services share one SuperTokens core.
-- **Single App Example URL:** `BASE_URL = "<CORE_API_ENDPOINT>"`
-- **Multi App Example URL:** `BASE_URL = "<CORE_API_ENDPOINT>/appid-task_service"`
-*If you're managing several services, the multi-app setup keeps things organized.*
+## Verifying M2M access tokens
 
-### 🔐 Step 4: Set Up the Authorization Service
-This is where you tell your app how to handle OAuth2 tokens.
+The API has two options. If the access tokens are JWTs, it verifies them locally with the issuer's public keys. [Understanding JWKS](https://supertokens.com/blog/understanding-jwks) walks through that, including caching and key rotation. If the tokens are opaque, the API calls the authorization server's introspection endpoint for each token, or caches the results.
 
-**Code Example:**
-```javascript
-import supertokens from "supertokens-node";
+[RFC 9068](https://www.rfc-editor.org/rfc/rfc9068.html) standardizes JWT access tokens. A resource server should check:
+
+- `typ` is `at+jwt`, so an ID token or other JWT can't pass as an access token
+- `iss` exactly matches the expected issuer
+- `aud` includes this API's identifier
+- the signature, using an algorithm allowlist (never `none`)
+- `exp`, with a small clock-skew allowance
+- the scopes needed for this operation
+
+For client credentials tokens, RFC 9068 says `sub` should identify the client itself, and `client_id` names it too. Return 401 when the token is missing or invalid, and 403 when it's valid but lacks the scope. [401 vs 403](https://supertokens.com/blog/http-error-codes-401-vs-403) explains why that distinction matters to clients.
+
+## M2M authentication for AI agents and workload identity
+
+Classic M2M assumes a small number of long-running services, each with a client secret in its config. Two newer kinds of caller break that model.
+
+- **Workloads** are pods, functions and CI jobs that start and stop by the thousand. Handing each one a copy of a static secret means the secret ends up in environment variables, container images and build logs, and rotating it means redeploying everything.
+- **AI agents** decide at runtime which tools to call, often on behalf of a user. That raises questions classic M2M doesn't: whose authority is the agent using, how far does it extend, and does the audit log show the agent or the user?
+
+### Short-lived credentials from the platform, not static secrets
+
+Platforms can already tell which workload is running, so they can issue it a short-lived, signed identity token. You exchange that token for access instead of storing a secret.
+
+- **Kubernetes projected service account tokens.** Kubernetes mounts a short-lived, automatically rotated JWT into the pod, with an `audience` you choose and an `expirationSeconds` that defaults to 1 hour (minimum 10 minutes). On EKS, for example, external systems verify it against the cluster's public OIDC discovery endpoint, which publishes the signing keys.
+- **AWS.** With IAM roles for service accounts (IRSA), a pod's projected token is passed to STS `AssumeRoleWithWebIdentity` for temporary IAM credentials. EKS Pod Identity is the newer, simpler option, which AWS describes as not needing an OIDC identity provider. Either way, no access keys live in the pod.
+- **Google Cloud Workload Identity Federation.** Workloads outside Google Cloud exchange an external credential (from AWS, Azure, GitHub, GitLab, Kubernetes, any OIDC or SAML 2.0 provider, or an X.509 certificate) at Google's Security Token Service, which follows RFC 8693, for a short-lived access token. Google's docs describe this as an alternative to service account keys.
+- **Microsoft Entra workload identity federation.** A *federated identity credential* on an app registration or user-assigned managed identity trusts tokens from an external issuer, such as GitHub Actions, a Kubernetes cluster or SPIFFE, and swaps them for Entra access tokens. Workloads running in Azure can use managed identities directly.
+- **SPIFFE/SPIRE.** A vendor-neutral standard for workload identity. Each workload gets a SPIFFE ID (`spiffe://<trust-domain>/<path>`) and short-lived, automatically rotated credentials called SVIDs: an X.509-SVID for mTLS, or a JWT-SVID when a proxy sits in between. SPIFFE recommends X.509-SVIDs where possible because JWT-SVIDs can be replayed.
+
+At the IETF, the WIMSE working group is developing standards for workload identity across platforms. For now, the building blocks are the OAuth and JOSE RFCs above.
+
+### Delegation and on-behalf-of with token exchange
+
+When an agent acts for a user, it shouldn't reuse the user's token, and it shouldn't use a broad service credential that ignores who the user is. [RFC 8693 token exchange](https://www.rfc-editor.org/rfc/rfc8693.html) lets the agent trade the user's token for a new one that's narrower and records both parties:
+
+```http
+POST /oauth2/token HTTP/1.1
+Host: auth.example.com
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=urn:ietf:params:oauth:grant-type:token-exchange
+&subject_token=<USER_ACCESS_TOKEN>
+&subject_token_type=urn:ietf:params:oauth:token-type:access_token
+&actor_token=<AGENT_CREDENTIAL>
+&actor_token_type=urn:ietf:params:oauth:token-type:jwt
+&audience=calendar-api
+&scope=event.read
+```
+
+(The agent also authenticates as a client on this request; that's omitted here.) RFC 8693 separates **impersonation**, where the new token simply says "the user", from **delegation**, where the agent keeps its own identity and acts for the user. Delegated tokens carry an `act` (actor) claim naming the agent, with nested `act` claims when agents call other agents. Prefer delegation: your logs and policies can then tell "Alice did this" apart from "Alice's agent did this". The authorization server decides which actors may act for which subjects, and can use a `may_act` claim to express that.
+
+### Scope and audience on every token
+
+- **One audience per token.** Request tokens for a specific API using the `resource` parameter from [RFC 8707](https://www.rfc-editor.org/rfc/rfc8707.html) or an `audience` parameter, and have every API reject tokens whose `aud` isn't its own. A token stolen from one tool server then can't be replayed against another.
+- **Narrow scopes, short lifetimes.** An agent should hold only the scopes the current task needs, for minutes rather than hours.
+- **Sender-constraining for high-value calls.** Binding tokens to a key with mTLS or DPoP means a token leaked through logs or prompt injection can't be used on its own.
+
+### Where MCP authorization fits
+
+The [Model Context Protocol authorization spec](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization) (version 2026-07-28) brings these rules to AI tool servers:
+
+- Authorization is optional. HTTP-based transports SHOULD follow the spec. Local stdio servers SHOULD NOT, and take credentials from the environment instead.
+- An MCP server is an OAuth 2.1 resource server. It MUST publish [RFC 9728](https://www.rfc-editor.org/rfc/rfc9728.html) protected resource metadata naming its authorization server, and point clients to it from the `WWW-Authenticate` header of a 401 response or at a well-known URI.
+- Clients MUST send the RFC 8707 `resource` parameter naming the MCP server. Servers MUST check that tokens were issued for them and MUST NOT pass tokens they receive on to other services.
+- For client registration, Client ID Metadata Documents are the SHOULD. Dynamic Client Registration is deprecated, kept for backward compatibility.
+
+The core flow is user-delegated (authorization code with PKCE). For agents with no user at all, MCP has an **OAuth Client Credentials** extension, marked stable at the same 2026-07-28 revision, which recommends JWT client authentication (RFC 7523) over a client secret. A separate **Enterprise-Managed Authorization** extension lets a company's identity provider issue access to MCP servers, using token exchange followed by a JWT bearer grant. Both are optional.
+
+The spec builds on OAuth 2.1, which is still an IETF Internet-Draft (draft -17, dated 31 October 2026), not an RFC. Expect details to keep changing, and pin the MCP spec version you implement.
+
+For the full agent architecture, including per-action authorization, human approval gates and revocation, see [AI agent authentication](https://supertokens.com/blog/auth-for-ai-agents). For MCP servers built on SuperTokens, see the [SuperTokens MCP toolkit](https://supertokens.com/blog/supertokens-mcp-toolkit).
+
+## Implementing M2M authentication with SuperTokens
+
+SuperTokens supports M2M through its OAuth2 provider and the client credentials flow. Per the [SuperTokens M2M docs](https://supertokens.com/docs/authentication/m2m/introduction), this is a paid feature of the managed service, with Node.js and Python backend SDK support. (A [legacy flow](https://supertokens.com/docs/authentication/m2m/legacy-flow) remains for backward compatibility.)
+
+![SuperTokens client credentials flow: 1. Service A requests a token from the authorization service (SuperTokens backend SDK with SuperTokens Core). 2. It receives an OAuth2 access token. 3. Service A calls Service B with the token. 4. Service B validates the token. 5. Service B returns the resource.](./machine-to-machine.png)
+
+Using the docs' example, a **Task Service** creates events on a **Calendar Service**:
+
+1. **Enable M2M Authentication** for your managed deployment under **Features** in the SuperTokens.com dashboard.
+2. **Create one OAuth2 client per service** through the SuperTokens Core API (`POST /appid-<appId>/recipe/oauth/clients`) with a stable `clientId`, `grantTypes: ["client_credentials"]`, a space-separated `scope` such as `"event.create"` and an `audience` list such as `["event"]`. Keep the API key and the returned client secret in a secret manager.
+3. **Add the OAuth2Provider recipe** to the backend that acts as the authorization server: `recipeList: [OAuth2Provider.init()]`.
+4. **Request tokens** from `<YOUR_API_DOMAIN>/auth/oauth/token`, with the client credentials in an HTTP Basic header and a form-encoded body:
+
+```js
+const TOKEN_URL = "https://api.example.com/auth/oauth/token";
+
+let cached; // { accessToken, expiresAt }
+
+export async function getAccessToken() {
+  // Reuse the token until a minute before it expires.
+  if (cached && Date.now() < cached.expiresAt - 60_000) return cached.accessToken;
+
+  // Credentials come from the environment or a secret manager, never from code.
+  const credentials = `${process.env.CLIENT_ID}:${process.env.CLIENT_SECRET}`;
+  const res = await fetch(TOKEN_URL, {
+    method: "POST",
+    headers: {
+      Authorization: `Basic ${Buffer.from(credentials).toString("base64")}`,
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({
+      grant_type: "client_credentials",
+      scope: "event.create",
+      audience: "event",
+    }),
+  });
+  if (!res.ok) throw new Error(`Token request failed with ${res.status}`);
+
+  const { access_token, expires_in } = await res.json();
+  cached = { accessToken: access_token, expiresAt: Date.now() + expires_in * 1000 };
+  return access_token;
+}
+```
+
+The response contains `access_token`, `expires_in` (3600 seconds in the docs' example), `token_type` and `scope`. Each target service needs its own token, because each has its own audience.
+
+5. **Validate tokens in the Calendar Service** with the SDK, which checks the signature, expiry and token type, plus the audience, client and scopes you require. Also check the issuer:
+
+```ts
+import express from "express";
 import OAuth2Provider from "supertokens-node/recipe/oauth2provider";
 
-supertokens.init({
-    supertokens: {
-        connectionURI: "...",
-        apiKey: "...",
-    },
-    appInfo: {
-        appName: "...",
-        apiDomain: "...",
-        websiteDomain: "...",
-    },
-    recipeList: [
-      OAuth2Provider.init(),
-    ]
-});
-```
-This setup tells SuperTokens:
-- Where to find your core server (connectionURI).
-- The app’s name and domains.
-- To include the OAuth2 provider.
+const app = express();
 
-### 🔄 Step 5: Generate Access Tokens
-
-To generate a token, you send a POST request like this:
-
-```javascript
-import fetch from "node-fetch";
-
-const response = await fetch("<YOUR_API_DOMAIN>/auth/oauth/token", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    clientId: "<CLIENT_ID>",
-    clientSecret: "<CLIENT_SECRET>",
-    grantType: "client_credentials",
-    scope: ["event.create"],
-    audience: "event"
-  })
-});
-
-const data = await response.json();
-console.log(data.accessToken);
-```
-**Response Example:**
-
-```json
-{
-  "accessToken": "<TOKEN_VALUE>",
-  "expiresIn": 3600
-}
-```
-*The token is valid for **60 minutes**. After that, you'll need to request a new one.*
-
-### ✅ Step 6: Verify an Access Token
-To confirm a token is valid:
-**Code Example Using `jose`:**
-
-```javascript
-import jose from "jose";
-
-const JWKS = jose.createRemoteJWKSet(new URL('<YOUR_API_DOMAIN>/auth/jwt/jwks.json'))
-
-async function validateClientCredentialsToken(jwt) {
-  const requiredScope = "event.create";
-  const audience = "event";
-
+app.post("/events", async (req, res) => {
+  const [scheme, token] = (req.headers.authorization ?? "").split(" ");
+  if (scheme !== "Bearer" || !token) {
+    return res.set("WWW-Authenticate", 'Bearer realm="calendar"').sendStatus(401);
+  }
   try {
-    const { payload } = await jose.jwtVerify(jwt, JWKS, {
-      audience,
-      requiredClaims: ['stt', 'scp'],
+    // Checks signature, expiry, token type, audience, client and scopes.
+    // It throws on any failure, including a missing scope.
+    const { payload } = await OAuth2Provider.validateOAuth2AccessToken(token, {
+      audience: "event",
+      clientId: "task-service",
+      scopes: ["event.create"],
     });
-
-    if (payload.stt !== 1) return false;
-    return payload.scp.includes(requiredScope);
-  } catch (err) {
-    return false;
-  }
-}
-```
-This checks:
-- **stt (SuperTokens Token Type)** &mdash; Ensures it's an OAuth2 token.
-- **scp (Scope)** &mdash; Confirms the token has the required permission.
-
-### 🌍 Step 7: Example of Two Services Communicating By Using M2M
-Imagine you have two services:
-
-- Task Service &mdash; Creates tasks.
-- Calendar Service &mdash; Manages events.
-
-**Flow:**
-1. Task Service requests a token from the Authorization Server.
-2. Using that token, Task Service makes a POST request to Calendar Service to create an event.
-
-#### Step 1: Task Service Requests Token
-
-```javascript
-const tokenResponse = await fetch("<YOUR_API_DOMAIN>/auth/oauth/token", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    clientId: "task_service",
-    clientSecret: "super_secret_value",
-    grantType: "client_credentials",
-    scope: ["event.create"],
-    audience: "event"
-  })
-});
-
-const { accessToken } = await tokenResponse.json();
-```
-
-#### Step 2: Task Service Sends Request to Calendar Service
-
-```javascript
-await fetch("https://calendar.example.com/events", {
-  method: "POST",
-  headers: {
-    "Authorization": `Bearer ${accessToken}`,
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    title: "Team Meeting",
-    date: "2025-03-25",
-    location: "Conference Room A"
-  })
-});
-```
-
-#### Step 3: Calendar Service Verifies the Token
-
-```javascript
-app.post('/events', async (req, res) => {
-  const token = req.headers['authorization']?.split('Bearer ')[1];
-
-  if (!token) return res.status(401).send("Unauthorized");
-
-  try {
-    const valid = await validateClientCredentialsToken(token);
-    if (!valid) return res.status(403).send("Forbidden");
-
-    // Token is valid — proceed with event creation
-    res.status(201).send({ message: "Event created successfully!" });
+    if (payload.iss !== "https://api.example.com/auth") throw new Error("Unexpected issuer");
   } catch {
-    res.status(403).send("Invalid token");
+    return res.set("WWW-Authenticate", 'Bearer realm="calendar", error="invalid_token"').sendStatus(401);
   }
+  res.status(201).json({ created: true });
 });
 ```
 
-## Conclusion 
+This assumes `supertokens.init` has already run in the Calendar Service. Services without a SuperTokens SDK can verify the same tokens against the JWKS, as described in [Understanding JWKS](https://supertokens.com/blog/understanding-jwks). The docs also point out that token validation doesn't make a request replay-safe: for create and update endpoints, add an idempotency key tied to the client and request body.
 
-**Machine-to-machine (M2M) authentication** is a way for services to communicate securely, without human involvement. Instead of a person logging in, one service presents a token or key to prove its identity to another service.
+The [client credentials guide](https://supertokens.com/docs/authentication/m2m/client-credentials) in the SuperTokens docs has the full setup, including Python and routes that accept both session tokens and OAuth2 tokens.
 
-M2M authentication is especially important for:
-- ✅ **Microservices** that need to share data securely.
-- ✅ **Automated systems** like order processing, data syncing, or scheduled tasks.
-- ✅ **API integrations** that connect external services safely.
+## M2M security checklist
 
-By implementing M2M authentication, you ensure that your services can trust one another, thereby reducing the risk of unauthorized access and improving overall system security.
+- **No static secrets where the platform can vouch for the workload.** Use Kubernetes, cloud or SPIFFE workload identity first.
+- **One identity per service or agent.** Never share a client between services. Separate clients make revocation and audit logs meaningful.
+- **Least-privilege scopes**, requested per task rather than "everything this client may do".
+- **Audience on every token**, and every API rejects tokens issued for a different `aud`.
+- **Short token lifetimes.** Minutes to an hour, cached by the client and renewed shortly before expiry.
+- **Secrets in a secret manager**, not in code, images, CI logs or command-line arguments.
+- **Rotation that's automated and overlapping.** Client secrets and signing keys both need a window where old and new are valid. [Key rotation, step by step](https://supertokens.com/blog/understanding-jwks#key-rotation-step-by-step) covers the signing-key side.
+- **Asymmetric client authentication or sender-constrained tokens** (`private_key_jwt`, mTLS, DPoP) for high-value APIs.
+- **Delegation, not impersonation, for agents**, so the actor is visible in tokens and logs.
+- **Correct error codes:** 401 for missing or invalid tokens, 403 for valid tokens without the required scope.
 
-Whether you're working with microservices, internal APIs, or third-party integrations, this method offers a solid, lightweight solution for secure communication.
+## Frequently Asked Questions
+
+### What is machine-to-machine authentication?
+
+M2M authentication is how a service, job, workload or AI agent proves its identity to another service with no user involved. Most systems use the OAuth 2.0 client credentials grant: the caller authenticates to an authorization server with a client secret, a signed JWT, a certificate or a platform-issued workload identity, and gets a short-lived access token to send to the API.
+
+### Is the client credentials flow secure?
+
+Yes, when used as intended. RFC 6749 limits it to confidential clients that can keep their credentials secret. The API only receives short-lived, scoped tokens, never the client secret. The weak point is the client secret itself, which is why higher-assurance setups use `private_key_jwt`, mTLS or workload identity instead.
+
+### What's the difference between an API key and OAuth client credentials?
+
+An API key is a long-lived secret sent with every request, usually without expiry, scopes or audience. With client credentials, the secret goes only to the authorization server, which issues short-lived tokens with scopes and an audience. That limits the damage from a leaked token and lets you revoke the client centrally.
+
+### What is private_key_jwt?
+
+`private_key_jwt` is an OAuth client authentication method from RFC 7523. Instead of sending a client secret, the client signs a short-lived JWT assertion with its private key and sends it as `client_assertion`. The authorization server verifies it with the client's registered public key or JWKS, so no shared secret exists to leak.
+
+### Should I use mTLS or OAuth for service-to-service authentication?
+
+They complement each other. mTLS authenticates the connection and, under RFC 8705, can bind access tokens to the client certificate. OAuth adds scopes, audiences and central revocation. Use OAuth client credentials as the baseline, and add mTLS (or DPoP) where you need tokens that are useless if stolen and you can run a PKI or service mesh.
+
+### How do AI agents authenticate to APIs and MCP servers?
+
+An agent acting for a user should get a delegated token through OAuth: the authorization code flow, or RFC 8693 token exchange, which records the agent in an `act` claim. An agent with no user can use the client credentials grant. The MCP authorization spec (version 2026-07-28) requires audience-bound tokens and, through its stable OAuth Client Credentials extension, recommends JWT client authentication for agents that act on their own behalf.
+
+### What is workload identity federation?
+
+Workload identity federation lets a workload use a short-lived token issued by its platform, such as a Kubernetes service account token, a GitHub Actions OIDC token or a SPIFFE SVID, to get access in another system without storing a long-lived secret. AWS (IRSA and EKS Pod Identity), Google Cloud Workload Identity Federation and Microsoft Entra federated identity credentials all work this way.
+
+## Related reading
+
+- [AI Agent Authentication: Scoped Tokens, MCP, and Per-Action Authorization](https://supertokens.com/blog/auth-for-ai-agents)
+- [What Is a JWKS? JSON Web Key Sets Explained](https://supertokens.com/blog/understanding-jwks)
+- [Choosing the Right OAuth Grant Types](https://supertokens.com/blog/oauth-grant-types)
+- [OAuth vs JWT: An In-Depth Comparison](https://supertokens.com/blog/oauth-vs-jwt)
+- [Authentication vs Authorization: What's the Difference?](https://supertokens.com/blog/authentication-vs-authorization)
