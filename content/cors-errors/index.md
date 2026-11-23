@@ -1,17 +1,34 @@
 ---
-title: "Fixing CORS Errors: What They Are and How to Resolve Them (2026)"
-description: "Learn what causes CORS errors, how they impact your web app, and how to fix them securely with proper headers and backend configurations."
+title: "CORS Errors Explained: Every Browser Error Message and How to Fix It"
+description: "Look up your exact CORS error message, see what causes it and fix it. Tested Express, Next.js and Nginx configs, plus preflight, credentials and debugging tips."
 date: "2025-07-20"
+updated: "2026-11-23"
 cover: "cors_errors.png"
 category: "cors errors, development tips, best practices"
 author: "Maurice Saldivar"
 ---
 
+**A CORS error means the browser blocked your JavaScript from reading a cross-origin response because the server didn't send the right `Access-Control-Allow-*` headers. The request usually reached the server. Fix it on the server: return `Access-Control-Allow-Origin` with your exact frontend origin, answer `OPTIONS` preflights with a 2xx, and add `Access-Control-Allow-Credentials: true` when sending cookies.**
+
+*Last updated 23 November 2026. Error messages captured from Chromium 156 and checked against [MDN's Firefox CORS error reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS/Errors). Config snippets tested with Express 5.3 and `cors` 2.8.6, Next.js 16.4 and Nginx 1.30.*
+
+## Table of Contents
+
+- [What is a CORS error and why does it happen?](#what-is-a-cors-error-and-why-does-it-happen)
+- [CORS error lookup table: message, cause, fix](#cors-error-lookup-table-message-cause-fix)
+- [Common CORS errors in detail](#common-cors-errors-and-what-they-mean)
+- [Fix CORS in Express](#nodejs--express-with-the-cors-package)
+- [Fix CORS in Next.js](#nextjs-route-handlers-proxy-and-nextconfig-headers)
+- [Fix CORS in Nginx](#nginx-reverse-proxy)
+- [CORS and authentication](#cors-and-authentication)
+- [Debugging CORS issues](#debugging-cors-issues)
+- [Frequently Asked Questions](#frequently-asked-questions)
+
 ## What Is a CORS Error and Why Does It Happen?
 
 ### What Is CORS?
 
-Cross-Origin Resource Sharing (CORS) is a browser security mechanism that controls whether JavaScript running on one website can access resources from another. It extends the **Same-Origin Policy (SOP)** — the browser's fundamental security boundary that prevents one site from reading data belonging to another.
+Cross-Origin Resource Sharing (CORS) is a browser security mechanism that controls whether JavaScript running on one website can access resources from another. For a deeper introduction, see [What is Cross-Origin Resource Sharing (CORS)?](https://supertokens.com/blog/what-is-cross-origin-resource-sharing). It relaxes the **Same-Origin Policy (SOP)** — the browser's fundamental security boundary that prevents one site from reading data belonging to another.
 
 An **origin** is defined by three components:
 
@@ -94,6 +111,25 @@ Access-Control-Allow-Origin: http://localhost:3000
 ```
 
 This two-step process explains why JSON API calls appear slower in browsers than in Postman — browsers complete the preflight first, while tools like Postman bypass CORS entirely.
+
+---
+
+## CORS Error Lookup Table: Message, Cause, Fix
+
+Find the message from your browser console in the first column. Chrome and Edge (and other Chromium browsers) print it after "Access to fetch at '…' from origin '…' has been blocked by CORS policy:". Firefox prints a shorter "Reason:" line, linked here to MDN's page for it.
+
+| Error message | What it means | Fix |
+|---|---|---|
+| **Chrome/Edge:** "No 'Access-Control-Allow-Origin' header is present on the requested resource."<br>**Firefox:** [CORS header 'Access-Control-Allow-Origin' missing](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin) | The response has no `Access-Control-Allow-Origin` header. Often it's an error page (404, 500) from a server or proxy that doesn't add CORS headers to errors. | Return `Access-Control-Allow-Origin: <your frontend origin>` on every response, including errors (in Nginx, use `always`). |
+| **Chrome/Edge:** "Response to preflight request doesn't pass access control check: It does not have HTTP ok status."<br>**Firefox:** [CORS preflight channel did not succeed](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSPreflightDidNotSucceed) | The `OPTIONS` preflight got a non-2xx response, usually 401/403 from auth middleware, 404 or 405 because no route handles `OPTIONS`, or a 500. | Answer `OPTIONS` with 204 before authentication runs. Don't require auth on preflights; browsers never send credentials with them. |
+| **Chrome/Edge:** "Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource."<br>**Firefox:** [CORS header 'Access-Control-Allow-Origin' missing](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin) | The preflight returned 2xx but without CORS headers, for example an automatic `OPTIONS` response from your framework. | Make your CORS middleware run for `OPTIONS` requests and add the headers there. |
+| **Chrome/Edge:** "The value of the 'Access-Control-Allow-Origin' header in the response must not be the wildcard '*' when the request's credentials mode is 'include'."<br>**Firefox:** [Credential is not supported if the CORS header 'Access-Control-Allow-Origin' is '*'](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials) | You're sending cookies (`credentials: 'include'` or `withCredentials: true`), and the server answers `*`. | Reflect the exact origin from an allow-list instead of `*`, and add `Vary: Origin`. |
+| **Chrome/Edge:** "The value of the 'Access-Control-Allow-Credentials' header in the response is '' which must be 'true' when the request's credentials mode is 'include'."<br>**Firefox:** [expected 'true' in CORS header 'Access-Control-Allow-Credentials'](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials) | The origin is allowed, but the server didn't opt in to credentials. | Add `Access-Control-Allow-Credentials: true` (in the `cors` package: `credentials: true`). |
+| **Chrome/Edge:** "Request header field x-api-key is not allowed by Access-Control-Allow-Headers in preflight response."<br>**Firefox:** [missing token 'xyz' in CORS header 'Access-Control-Allow-Headers' from CORS preflight channel](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowHeaderFromPreflight) | Your request sends a header (here `X-API-Key`) that the preflight response doesn't list. | Add the header to `Access-Control-Allow-Headers`, or stop sending it. |
+| **Chrome/Edge:** "Method DELETE is not allowed by Access-Control-Allow-Methods in preflight response."<br>**Firefox:** [Did not find method in CORS header 'Access-Control-Allow-Methods'](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound) | The preflight response doesn't list the method you're using. | Add the method to `Access-Control-Allow-Methods`. |
+| **Chrome/Edge:** "Response to preflight request doesn't pass access control check: Redirect is not allowed for a preflight request." | The `OPTIONS` request got a 301/302/307/308, typically HTTP→HTTPS, a trailing-slash redirect or a redirect to a login page. | Call the final URL directly (correct scheme, host and trailing slash), and don't redirect `OPTIONS` requests. |
+| **Chrome/Edge:** "The 'Access-Control-Allow-Origin' header has a value 'https://app.example.com' that is not equal to the supplied origin."<br>**Firefox:** [CORS header 'Access-Control-Allow-Origin' does not match 'xyz'](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSAllowOriginNotMatchingOrigin) | The server allows a different origin. Common causes: `www` vs no `www`, `http` vs `https`, a different port, or a cached response for another origin. | Add the exact origin (scheme + host + port) to the allow-list and send `Vary: Origin`. |
+| **Chrome/Edge:** "The 'Access-Control-Allow-Origin' header contains multiple values '…, …', but only one is allowed."<br>**Firefox:** [Multiple CORS header 'Access-Control-Allow-Origin' not allowed](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSMultipleAllowOriginNotAllowed) | Two layers both add the header (say, Nginx and your app), or you put a comma-separated list in it. | Set CORS headers in exactly one place, and send a single origin per response. |
 
 ---
 
@@ -211,8 +247,9 @@ res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-API-K
 // Allow cookies and auth headers
 res.header('Access-Control-Allow-Credentials', 'true');
 
-// Cache preflight for 24 hours (reduces OPTIONS round-trips)
-res.header('Access-Control-Max-Age', '86400');
+// Cache the preflight result (seconds). Chromium caps this at 7200 (2 hours),
+// Firefox at 86400 (24 hours).
+res.header('Access-Control-Max-Age', '7200');
 
 // IMPORTANT: Tell caches that responses vary by origin
 res.header('Vary', 'Origin');
@@ -222,57 +259,237 @@ res.header('Vary', 'Origin');
 
 ### Node.js / Express with the `cors` Package
 
+This works with Express 5 (the current major version) and Express 4:
+
 ```javascript
-const cors = require('cors');
+// server.js (Express 5 + cors 2.8)
+const express = require("express");
+const cors = require("cors");
+
+const app = express();
+
+const allowedOrigins = new Set([
+  "https://app.example.com",
+  "http://localhost:3000",
+]);
 
 const corsOptions = {
-  origin: function (origin, callback) {
-    const allowedOrigins = [
-      'https://app.example.com',
-      'https://admin.example.com',
-      'http://localhost:3000'
-    ];
-
-    // Allow server-to-server requests (no origin header)
-    if (!origin) return callback(null, true);
-
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
+  origin(origin, callback) {
+    // Requests with no Origin header (curl, server-to-server) aren't CORS requests.
+    // Allowed origins get their origin reflected back; anything else gets no CORS headers.
+    callback(null, !origin || allowedOrigins.has(origin));
   },
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  maxAge: 86400
+  credentials: true, // sends Access-Control-Allow-Credentials: true
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  maxAge: 7200, // Chromium caps preflight caching at 2 hours anyway
 };
 
+// Before your routes. This also answers OPTIONS preflights with 204,
+// so you don't need app.options("*") (that path syntax throws in Express 5).
 app.use(cors(corsOptions));
 
-// Explicitly handle preflight for all routes
-app.options('*', cors(corsOptions));
+app.get("/api/profile", (req, res) => res.json({ name: "Ada" }));
+app.delete("/api/items/:id", (req, res) => res.sendStatus(204));
+
+app.listen(4000);
 ```
+
+Two things that trip people up:
+
+- **`app.options('*', cors())` crashes Express 5** with `Missing parameter name at index 1: *`, because Express 5's router no longer accepts a bare `*`. You don't need it: `app.use(cors(...))` already answers preflights for every route.
+- **Rejecting with `callback(new Error(...))` turns a blocked origin into a 500.** Passing `false` instead just omits the CORS headers, so the browser blocks the response and your logs stay clean.
+
+The `cors` package adds `Vary: Origin` automatically when it reflects an origin. Checked with curl, the config above returns:
+
+```http
+OPTIONS /api/items/1   Origin: http://localhost:3000
+HTTP/1.1 204 No Content
+Access-Control-Allow-Origin: http://localhost:3000
+Vary: Origin
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE
+Access-Control-Allow-Headers: Content-Type,Authorization
+Access-Control-Max-Age: 7200
+```
+
+### Next.js: Route Handlers, Proxy and `next.config` Headers
+
+Next.js gives you three places to set CORS headers. Pick one per route, not all three, or you'll get the "multiple values" error.
+
+**1. In a Route Handler** (App Router). Best when only a few routes are called cross-origin. Export an `OPTIONS` handler for the preflight and add the headers to each response:
+
+```typescript
+// app/api/data/route.ts
+const allowedOrigins = ["https://app.example.com", "http://localhost:3000"];
+
+function corsHeaders(origin: string | null): Record<string, string> {
+  const headers: Record<string, string> = { Vary: "Origin" };
+  if (origin && allowedOrigins.includes(origin)) {
+    headers["Access-Control-Allow-Origin"] = origin;
+    headers["Access-Control-Allow-Credentials"] = "true";
+  }
+  return headers;
+}
+
+// Answers the browser's preflight
+export async function OPTIONS(request: Request) {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      ...corsHeaders(request.headers.get("origin")),
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      "Access-Control-Max-Age": "7200",
+    },
+  });
+}
+
+export async function GET(request: Request) {
+  return Response.json(
+    { message: "hello" },
+    { headers: corsHeaders(request.headers.get("origin")) },
+  );
+}
+```
+
+**2. In `proxy.ts`** (called `middleware.ts` before Next.js 16). Best for a whole group of API routes. It answers preflights before they reach a route, and adds headers to everything else:
+
+```typescript
+// proxy.ts (called middleware.ts before Next.js 16)
+import { NextResponse, type NextRequest } from "next/server";
+
+const allowedOrigins = ["https://app.example.com", "http://localhost:3000"];
+
+export function proxy(request: NextRequest) {
+  const origin = request.headers.get("origin") ?? "";
+  const isAllowed = allowedOrigins.includes(origin);
+
+  // Preflight: answer it here, before it reaches a route
+  if (request.method === "OPTIONS") {
+    const headers: Record<string, string> = { Vary: "Origin" };
+    if (isAllowed) {
+      Object.assign(headers, {
+        "Access-Control-Allow-Origin": origin,
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        "Access-Control-Max-Age": "7200",
+      });
+    }
+    return new NextResponse(null, { status: 204, headers });
+  }
+
+  // Actual request: let it through, then add the CORS headers
+  const response = NextResponse.next();
+  response.headers.set("Vary", "Origin");
+  if (isAllowed) {
+    response.headers.set("Access-Control-Allow-Origin", origin);
+    response.headers.set("Access-Control-Allow-Credentials", "true");
+  }
+  return response;
+}
+
+export const config = { matcher: "/api/:path*" };
+```
+
+On Next.js 15 or earlier, name the file `middleware.ts` and the function `middleware`.
+
+**3. In `next.config` headers.** Simplest, but static: you can allow only one fixed origin, because the config can't read the request's `Origin`. Fine for a single known frontend without cookies:
+
+```typescript
+// next.config.ts
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  async headers() {
+    return [
+      {
+        source: "/api/public/:path*",
+        headers: [
+          { key: "Access-Control-Allow-Origin", value: "https://app.example.com" },
+          { key: "Access-Control-Allow-Methods", value: "GET, OPTIONS" },
+          { key: "Access-Control-Allow-Headers", value: "Content-Type" },
+        ],
+      },
+    ];
+  },
+};
+
+export default nextConfig;
+```
+
+All three were tested on a production build (`next build && next start`) with curl. If your frontend calls an API on another domain only to dodge CORS, a [`rewrites()` proxy](#what-actually-works-dev-proxy) that makes the request same-origin is often simpler than any of these.
+
+### Nginx (Reverse Proxy)
+
+If Nginx sits in front of your app, you can handle CORS there. Use a `map` as the allow-list, answer preflights directly, and add `always` so the headers are also sent on error responses:
+
+```nginx
+# Allow-list: map the request's Origin to itself if allowed, else to "".
+# (map goes in the http {} context; conf.d/*.conf files are included there.)
+map $http_origin $cors_origin {
+    default                     "";
+    "https://app.example.com"   $http_origin;
+    "http://localhost:3000"     $http_origin;
+}
+
+server {
+    listen 80;
+    server_name api.example.com;
+
+    location /api/ {
+        # Preflight: answer it here, don't pass it to the app.
+        if ($request_method = OPTIONS) {
+            add_header Access-Control-Allow-Origin      $cors_origin always;
+            add_header Access-Control-Allow-Credentials "true" always;
+            add_header Access-Control-Allow-Methods     "GET, POST, PUT, DELETE" always;
+            add_header Access-Control-Allow-Headers     "Content-Type, Authorization" always;
+            add_header Access-Control-Max-Age           7200 always;
+            add_header Vary                             Origin always;
+            return 204;
+        }
+
+        # Actual request. "always" keeps the headers on 4xx/5xx responses too,
+        # so the browser shows your API's real error instead of a CORS error.
+        add_header Access-Control-Allow-Origin      $cors_origin always;
+        add_header Access-Control-Allow-Credentials "true" always;
+        add_header Vary                             Origin always;
+
+        proxy_pass http://app:4000;
+        # If the app also sets CORS headers, strip them so they aren't duplicated:
+        proxy_hide_header Access-Control-Allow-Origin;
+        proxy_hide_header Access-Control-Allow-Credentials;
+    }
+}
+```
+
+Why each piece matters:
+
+- **When `$cors_origin` is empty, Nginx doesn't send the header at all**, so disallowed origins are blocked by the browser.
+- **Without `always`**, `add_header` only applies to 2xx and 3xx responses. A 404 or 500 from your app then arrives without CORS headers, and the browser reports a CORS error instead of the real one.
+- **`add_header` directives aren't inherited** into a block that has its own `add_header`. That's why the preflight branch repeats every header.
+- **`proxy_hide_header`** prevents the "multiple values" error when the upstream app sets CORS headers too.
+
+Tested with `nginx -t` and curl on Nginx 1.30.7 in front of the Express app above.
 
 ### Flask (Python)
 
 ```python
-from flask import Flask, jsonify, request
+from flask import Flask
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, origins=["https://app.example.com"], supports_credentials=True)
 
-@app.after_request
-def after_request(response):
-    origin = request.headers.get('Origin')
-    if origin in ['https://app.example.com', 'http://localhost:3000']:
-        response.headers['Access-Control-Allow-Origin'] = origin
-        response.headers['Access-Control-Allow-Credentials'] = 'true'
-        response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
-        response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
-        response.headers['Vary'] = 'Origin'
-    return response
+# Flask-CORS answers preflights and reflects allowed origins (with Vary: Origin).
+# Don't also set CORS headers in an after_request hook: you'd send them twice.
+CORS(
+    app,
+    origins=["https://app.example.com", "http://localhost:3000"],
+    supports_credentials=True,
+    allow_headers=["Content-Type", "Authorization"],
+    methods=["GET", "POST", "PUT", "DELETE"],
+)
 ```
 
 ### Django (Python)
@@ -308,8 +525,8 @@ CORS_ALLOW_HEADERS = [
 ### Spring Boot (Java)
 
 ```java
+// Don't add @EnableWebMvc in Spring Boot: it switches off Boot's MVC auto-configuration.
 @Configuration
-@EnableWebMvc
 public class WebConfig implements WebMvcConfigurer {
 
     @Override
@@ -422,7 +639,7 @@ res.cookie('session', token, {
 
 > **Browser note:** Safari is notably stricter about cross-origin cookies than Chrome or Firefox. If your auth flows work in Chrome but fail in Safari, this is usually the cause. Third-party cookie restrictions in Safari's ITP (Intelligent Tracking Prevention) can block credentialed CORS requests even with correct headers.
 
-Getting this cookie configuration right by hand is error-prone, which is one reason many teams reach for a dedicated session-management layer. [SuperTokens](https://supertokens.com) sets these `SameSite=None; Secure; HttpOnly` cookie flags and the matching CORS headers for you, so cross-origin authenticated requests work consistently across browsers. If you're weighing cookies against other storage options, see [Cookies vs. `localStorage` for sessions](https://supertokens.com/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know) and [how session-based authentication works](https://supertokens.com/blog/session-based-authentication).
+Getting this cookie configuration right by hand is error-prone, which is one reason many teams reach for a dedicated session-management layer. [SuperTokens](https://supertokens.com) sets its session cookies' `SameSite` and `Secure` flags based on your website and API domains (see [session security settings](https://supertokens.com/docs/post-authentication/session-management/security)), and `supertokens.getAllCORSHeaders()` returns the extra headers your CORS config must allow. The [quickstart shows the CORS setup](https://supertokens.com/docs/quickstart#23-add-the-supertokens-apis-and-configure-cors) for each backend framework. If you're weighing cookies against other storage options, see [Cookies vs. `localStorage` for sessions](https://supertokens.com/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know) and [how session-based authentication works](https://supertokens.com/blog/session-based-authentication).
 
 ---
 
@@ -509,7 +726,7 @@ app.use((req, res, next) => {
 
 ### 5. Consider `Sec-Fetch-*` Headers as a Defense Layer
 
-Modern browsers send `Sec-Fetch-Site`, `Sec-Fetch-Mode`, and `Sec-Fetch-Dest` headers with every request. These headers are set by the browser and cannot be forged by JavaScript, making them a useful complement to CORS for server-side request validation:
+Modern browsers send `Sec-Fetch-Site`, `Sec-Fetch-Mode`, and `Sec-Fetch-Dest` headers on requests to HTTPS (and localhost) URLs. These headers are set by the browser and cannot be forged by JavaScript, making them a useful complement to CORS for server-side request validation:
 
 ```javascript
 app.use((req, res, next) => {
@@ -538,14 +755,14 @@ Open the **Network tab** and look for:
 
 ```
 # Healthy flow
-OPTIONS /api/users   204   2ms    (preflight approved)
-POST    /api/users   201   45ms   (request succeeded)
+OPTIONS /api/users   204          (preflight approved)
+POST    /api/users   201          (request succeeded)
 
 # CORS failure
-POST    /api/users   ---   0ms    (blocked before preflight even sent)
+OPTIONS /api/users   CORS error   (preflight rejected; the POST is never sent)
 ```
 
-> **Note:** CORS errors in the browser console don't show the specific cause for security reasons. The Network tab is the only reliable place to see the actual headers exchanged.
+> **Note:** The browser *console* shows the specific reason (see the [lookup table](#cors-error-lookup-table-message-cause-fix)), but your JavaScript doesn't get it: `fetch` just rejects with `TypeError: Failed to fetch`. That's deliberate, so scripts can't probe other sites. Use the console message and the Network tab's response headers to debug.
 
 ### Testing with `curl`
 
@@ -653,7 +870,7 @@ curl -s -X GET "$API_DOMAIN/api/health" \
 | `Access-Control-Allow-Methods` | Allowed HTTP methods (preflight response) | For preflighted requests |
 | `Access-Control-Allow-Headers` | Allowed request headers (preflight response) | For custom headers |
 | `Access-Control-Allow-Credentials` | Whether cookies/auth are allowed | For credentialed requests |
-| `Access-Control-Max-Age` | How long to cache the preflight result (seconds) | Optional but recommended |
+| `Access-Control-Max-Age` | How long to cache the preflight result (seconds; Chromium caps at 7200, Firefox at 86400) | Optional but recommended |
 | `Access-Control-Expose-Headers` | Which response headers JS can read | When using non-standard headers |
 | `Vary: Origin` | Signals that responses differ by origin | When reflecting dynamic origins |
 
@@ -687,9 +904,31 @@ The key principles:
 
 With correct configuration, CORS becomes an ally rather than an obstacle — enforcing the right trust boundaries while letting your legitimate cross-origin traffic flow freely.
 
+## Frequently Asked Questions
+
+### Why does my request work in Postman or curl but fail in the browser?
+CORS is enforced by browsers, not servers. Postman and curl don't apply the Same-Origin Policy, so they show the response no matter which headers the server sends. In a browser, JavaScript on another origin can only read the response if the server returns the right Access-Control-Allow-Origin header.
+
+### Can I fix a CORS error from the frontend?
+No. CORS headers have to come from the server that sends the response. Setting Access-Control-Allow-Origin on your fetch request does nothing, and mode: 'no-cors' gives you an opaque response you can't read. If you don't control the API, call it through your own backend or a same-origin proxy such as a Vite proxy or Next.js rewrites.
+
+### Is it safe to allow all origins with a wildcard?
+Only for public, read-only data that needs no cookies or auth. A wildcard lets any website read the response, and browsers reject it entirely when the request includes credentials. For anything user-specific, return the exact origin from an allow-list and add Vary: Origin.
+
+### Why is there an OPTIONS request before my POST?
+That's the CORS preflight. Browsers send it before cross-origin requests that use methods other than GET, HEAD or POST, custom headers such as Authorization, or a Content-Type like application/json. The server must answer it with a 2xx status and the matching Access-Control-Allow-* headers, or the real request is never sent.
+
+### Does a CORS error mean the request didn't reach the server?
+Not necessarily. For simple requests, the server receives and processes the request, and the browser only blocks your JavaScript from reading the response. So a blocked POST can still create a record. For preflighted requests, a failed preflight means the real request is never sent.
+
+### How do I allow multiple origins?
+Access-Control-Allow-Origin takes exactly one origin. To allow several, keep an allow-list on the server, check the request's Origin header against it, and echo back the matching origin. Add Vary: Origin so caches don't serve one origin's response to another.
+
 ## Related reading
 
+- [What Is Cross-Origin Resource Sharing (CORS)?](https://supertokens.com/blog/what-is-cross-origin-resource-sharing)
 - [HTTP Error Codes: 401 vs. 403](https://supertokens.com/blog/http-error-codes-401-vs-403)
 - [What Is a 502 Bad Gateway Error and How to Fix It](https://supertokens.com/blog/what-is-502-bad-gateway-error)
 - [Cookies vs. `localStorage` for Sessions](https://supertokens.com/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know)
 - [OAuth vs JWT: Key Differences Explained](https://supertokens.com/blog/oauth-vs-jwt)
+- [Session-Based Authentication: How It Works](https://supertokens.com/blog/session-based-authentication)
