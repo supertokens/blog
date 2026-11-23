@@ -1,23 +1,24 @@
 ---
 title: "One-Time Password (OTP) Bots: How They Work and How to Defend Against Them"
-description: "Explore how OTP bots bypass two-factor authentication (2FA), their growing threats, and strategies to protect your application using tools like SuperTokens."
+description: "How OTP bots trick users into sharing 2FA codes, the warning signs, and a detection and mitigation checklist: rate limits, risk signals, passkeys and transaction binding."
 date: "2025-02-17"
+updated: "2026-11-23"
 cover: "otp-bots.png"
 category: "featured"
 author: "Maria Shimkovska"
 ---
 
-You finally switched to **Two-Factor Authentication (2FA)**, feeling secure and ahead of the game. But just as we start winning, cybercriminals move the goalpost by introducing **OTP bots**. 
+**An OTP bot is an automated tool that calls or texts a victim, pretends to be their bank or another trusted company, and talks them into sharing the one-time code that protects their account. It doesn't break the code; it tricks the person. The strongest defense is phishing-resistant MFA such as passkeys, backed by rate limiting and risk signals.**
 
-**OTP (One-Time Password) bots are automated software**, most often designed to be malicious (**crimeware-as-a-service**), designed to bypass 2FA and steal access to user accounts. They are most often sold through Telegram, a texting app. 
+*Last updated 23 November 2026. Sources: [Kaspersky's research on OTP bots](https://securelist.com/2fa-phishing/112805/) (June 2024), [NIST SP 800-63B-4](https://csrc.nist.gov/pubs/sp/800/63/b/4/final) (July 2025) and the [European Banking Authority's guidance on dynamic linking](https://www.eba.europa.eu/single-rule-book-qa/qna/view/publicId/2019_4556). This article explains OTP bots so you can recognize and stop them. It doesn't describe how to build or use one.*
 
-Now imagine you're yelling at your game controller because the NPC just betrayed you in the worst way, when you receive a text from your bank. *"We've detected suspicious activity. Reply with the **OTP** we just sent to secure your account."* 
+You finally switched to **Two-Factor Authentication (2FA)**, feeling secure and ahead of the game. But just as we start winning, cybercriminals move the goalpost by introducing **OTP bots**.
 
-Panicked (*and wanting to get back to your game*), you comply and are unaware you’ve just handed over your account to a cyber cockroach scuttling through security flaws. 🪳🔓
+Now imagine you're yelling at your game controller because the NPC just betrayed you in the worst way, when your phone rings. It's "your bank". *"We've detected a suspicious payment. To block it, please read out the code we just sent you."*
 
-This is what a typical OTP bot attack can look like. These attacks are getting smarter, targeting individuals, employees, and even entire businesses. But don’t worry. We don’t back down from challenges. 🥊 
+Panicked (*and wanting to get back to your game*), you read it out, unaware you've just handed your account to a cyber cockroach. 🪳🔓
 
-Let’s break down how OTP bots work and, more importantly, how to fight them.
+That's a typical OTP bot attack. These attacks target individuals, employees and businesses. But don't worry. We don't back down from challenges. 🥊 Let's look at how OTP bots work, how to spot them and, most importantly, how to stop them.
 
 ```toc
 tight: true
@@ -26,170 +27,175 @@ toHeading: 3
 
 ## Understanding Two-Factor Authentication (2FA) & One-Time Passwords (OTPs) 🔐📲
 
-A **Two-Factor Authentication (2FA)** is a second layer of authentication for added security, very commonly a **One-Time Password (OTP)**. 
+**Two-Factor Authentication (2FA)** adds a second layer of security on top of your password, very commonly a **One-Time Password (OTP)**.
 
 Authentication generally falls into three categories:</br>
 ✅ **Something you know** (your password)</br>
-✅ **Something you have** (your phone)</br>
+✅ **Something you have** (your phone or a security key)</br>
 ✅ **Something you are** (your fingerprint or face)</br>
 
-Your password is the first layer of security (**something you know**), but 2FA strengthens this by requiring a second factor, typically an OTP sent to your phone (**something you have**) or biometric verification (**something you are**).
+Your password is the first layer of security (**something you know**). 2FA strengthens it by requiring a second factor, typically an OTP sent to your phone (**something you have**) or biometric verification (**something you are**).
 
 ### Why 2FA Matters
 🔴 **Without 2FA**: A hacker only needs to steal your password to access your account.</br>
-🟢 **With 2FA (OTP Layer)**: Even if your password is compromised, an attacker still needs the second authentication factor, making unauthorized access much harder.
+🟢 **With 2FA (OTP layer)**: Even if your password is compromised, an attacker still needs the second factor, which makes unauthorized access much harder.
 
 </br>
-<img src="./without-2FA.png"/>
+<img src="./without-2FA.png" alt="Without 2FA: an attacker who has stolen a user's password can log in to their account directly." />
 </br>
 </br>
 
 Without 2FA, stealing your password is all it takes for an attacker to access your account.
 
 </br>
-<img src="./with-2FA.png"/>
+<img src="./with-2FA.png" alt="With 2FA: an attacker who has the user's password is still blocked, because the login also needs a one-time password sent to the user's phone." />
 
-With 2FA, having the second layer of authentication (the OTP) **prevents** a hacker from accessing your account even if they have your password.
+With 2FA, the second layer (the OTP) **stops** an attacker who only has your password.
 
-### What Are OTPs? 
-A **One-Time Password (OTP)** is a temporary and time-sensitive code sent to you via an app, SMS, or email to verify a login attempt. Even if a hacker steals your password, they still need this unique code, which adds a crucial extra layer of security to your account. 
+### What Are OTPs?
+A **One-Time Password (OTP)** is a short, temporary code sent by SMS or email, or generated by an authenticator app, to confirm a login or an action. Each code works once and expires quickly. (For the differences between code types, see [OTP vs TOTP vs HOTP](https://supertokens.com/blog/otp-vs-totp-vs-hotp).)
 
-For years, we’ve been told that OTP-based 2FA is the ultimate defense. Many apps now push users to enable it, giving us a reassuring sense of security.
-
-But here’s the catch, cybercriminals have found a way around it. 
-
-Welcome to the world of **OTP bots** where attackers use automation to bypass 2FA and steal access to accounts. Let’s dive into how they work and, more importantly, how to stop them. 🚨🥊
+For years, we've been told that OTP-based 2FA is the ultimate defense. It's still far better than a password alone. But a code that a person can read and type can also be **read out to the wrong person**. That's the gap OTP bots exploit.
 
 ## What Are OTP Bots? 🤖
 
-**OTP bots** are advanced programs designed to intercept and steal One-Time Passwords (OTPs), allowing attackers to gain unauthorized access to protected accounts. Their rise coincides with the growing use of Two-Factor Authentication (2FA). OTP bots are considered to be a **form of social engineering**.
+Kaspersky defines it simply: *"An OTP bot is a piece of software programmed to intercept OTPs with the help of social engineering."*
 
-These bots cause significant harm to both individuals and businesses. Industries like banking, e-commerce, and SaaS platforms are frequent targets for OTP bots because they often store sensitive user information, including payment details. 
+In other words, an OTP bot doesn't crack or guess the code. It **automates the phone call or message** that persuades the real user to hand the code over. That makes OTP bots a form of **social engineering**, run at scale.
 
-Most OTP bots are **purchased by attackers on platforms like Telegram**. They are designed to be very easy to implement.  
+OTP bots are sold as a subscription service (sometimes called **crimeware-as-a-service**), so attackers don't need technical skills. Kaspersky found plans priced from **$140 to $420 per week**, often managed through a Telegram bot or a web panel. That low barrier is a big part of why these attacks are common.
 
-> It’s important to note that falling for social engineering doesn’t mean you’re careless. Attackers are aware of growing security awareness and craft their tools to exploit even cautious users.
+Banking, payments, e-commerce, crypto and SaaS accounts are frequent targets, because a single code can unlock money or sensitive data.
 
-SMSRanger is one of the most popular OTP bots currently in operation. It began during the pandemic when most people were working from home. The attacker can select a package to purchase and make the payment to the company providing the bot. It's as simple as that. 
+> It's important to note that falling for social engineering doesn't mean you're careless. These calls are designed to sound official and to create panic, so even cautious people can be caught off guard.
 
 ## How Do OTP Bots Work? 🔍
 
-OTP bots use a combination of automation and social engineering tactics to wreak havoc upon your systems. 
-
-### A Diagram of How An OTP Bot Attack Generally Works 
+At a high level, an OTP bot attack combines a stolen password with a convincing call or message.
 
 </br>
-<img src="./otp-bot-flow.png"/>
+<img src="./otp-bot-flow.png" alt="OTP bot attack flow: the criminal gives the victim's information to the bot; the bot poses as the company; the bot calls the victim and asks for the OTP; the victim enters the OTP on their phone; the bot keeps the victim busy while the criminal accesses the account; the criminal steals money or data." />
 </br>
 
-In the above diagram, the attacker does the account takeover (ATO), but some OTP bot services offer to do that as well. 
+1. **The attacker already has the password.** It usually comes from phishing, a data breach or [credential stuffing](https://supertokens.com/blog/what-is-credential-stuffing).
+2. **The attacker starts a login**, which makes the real service send a genuine OTP to the victim.
+3. **The bot contacts the victim**, pretending to be the bank or service, often warning about a "suspicious transaction" to create urgency.
+4. **The victim shares the code**, believing they're protecting their account.
+5. **The attacker uses the code** to finish logging in, often while the bot keeps the victim on the line.
 
-The script an OTP bot uses can be completely customizable, from the language used to the music they play when you are on hold. 
+The key point for defenders: **the code itself is real and valid**. The service did everything right, but the code ended up with the wrong person. Anything that can be read aloud or typed (SMS codes, email codes and authenticator app codes) can be phished this way.
 
-### Steps to an OTP Bot Attack 
+### Common Tactics
+- **Urgency and fear**: "Your account is being hacked", "A payment of $900 is about to go through".
+- **Impersonation**: the call or message uses the company's name, a spoofed caller ID or a familiar sender name.
+- **Automated voice calls**: scripted, often professional-sounding calls, sometimes with synthetic voices and multiple languages, which let one attacker target many people.
+- **Fake websites paired with bots**: a phishing page captures the password, and the bot follows up to collect the code.
 
-1. **Attacker Initiates the Attack** – Armed with a stolen password (from phishing, data breaches, or credential stuffing), the attacker hands it over to an OTP bot.
-2. **Bot Impersonates a Trusted Entity** – The bot calls or texts the victim, pretending to be a legitimate company (like a bank or service provider) and warns them about a suspicious transaction.
-3. **Victim Falls for the Trap** – Believing the message is real, the victim provides the OTP they just received, thinking they're securing their account.
-4. **Bot Completes the Attack** – While keeping the victim engaged, the bot forwards the OTP to the attacker, who swiftly logs in and gains unauthorized access, often stealing money or sensitive information in seconds.
+Separately from OTP bots, SMS codes can also be stolen through **SIM swapping** or weaknesses in telephone networks. That's one reason NIST classes SMS and voice codes as a **"restricted"** authenticator in [SP 800-63B-4](https://pages.nist.gov/800-63-4/sp800-63b.html).
 
-### Common Tactics Used by OTP Bots 
-Understanding these tactics is key to defending against them. Let’s break down how you can stay protected. 🔐 
+## Warning Signs of an OTP Bot Attack 🚩
 
-#### 🧠 Exploiting Human Vulnerabilities
-The biggest weakness OTP bots exploit is human error. Using social engineering, attackers trick users into willingly sharing their OTPs. Since people are used to entering or sharing codes, they’re less likely to question a request, especially if the attacker convincingly impersonates a trusted source, like a bank or SaaS platform. 
+### For users
+- 📞 Someone **calls or texts asking you to read out, type in or forward** a code. Real banks and services don't do this. As Kaspersky puts it, *"Real banks and other companies never use this method to verify the identity of their clients."*
+- 📩 You receive a login or verification code **you didn't request**. That usually means someone has your password.
+- ⏱️ The caller **pressures you to act right now** or stay on the line.
+- 🔁 The code message itself says something like "never share this code", but the caller asks for it anyway.
 
-#### 📲 Real-Time OTP Interception
-Attackers can intercept OTPs in real-time using techniques like phishing or malware. Once they capture your password, they immediately prompt for an OTP, ensuring they can log in before the code expires. A big reason why real-time OTP interception is possible is because of vulnerabilities in the SS7 (Common Channel Signaling System No. 7) protocol, which powers most of our network communication worldwide.
+If this happens: **hang up**, don't share the code, then contact the company through its official app or the number on your card, and change your password.
 
-#### 🤖 Automated Call Bots
-Sophisticated bots make automated phone calls, posing as legitimate organizations, and manipulate victims into providing OTPs. The urgency and professionalism of these calls often catch users off guard. The nature of automated calls also makes them insanely scalable, allowing more attacks to be done in a short period of time. 
+### For businesses (signals in your logs)
+- An OTP is requested for a login from a **new device, new location or suspicious IP**, especially right after a successful password check.
+- **Impossible travel**: the code is requested and entered from locations too far apart to be the same person.
+- **Unusual OTP volume**: many codes sent to the same phone number, or many accounts triggering codes from the same IP range.
+- A login is followed within minutes by **high-risk actions**: changing the email or phone number, adding a new payee, or a large transfer.
+- Spikes in support tickets or user reports about **suspicious calls** claiming to be from your company.
 
-#### 🔑 Credential Stuffing with OTP Prompts
-Attackers use stolen credentials from data breaches and attempt to log in on multiple sites. If 2FA is enabled, they trigger OTP prompts and use bots or social engineering to collect the codes, completing the login process. 
+## Detection and Mitigation Checklist ✅
 
-## Types of OTP Bots & Their Sneaky Tactics 🤖💀
-### Voice Bots
-**Automated calls** impersonate real people and organizations using **AI-generated voices**, accents, and languages to sound convincing.
+Use this checklist to reduce OTP bot risk in your app. The items are ordered roughly from most to least effective.
 
-### SMS Bots
-**Fake texts mimic official messages**, use number spoofing, and even exploit **SS7 vulnerabilities** to intercept OTPs.
+| Control | What to do | Why it helps against OTP bots |
+|---|---|---|
+| **Phishing-resistant MFA** | Offer passkeys or security keys (WebAuthn/FIDO2) and encourage users to adopt them | Passkeys are bound to your real website. There's no code for a victim to read out, so an OTP bot has nothing to steal. NIST requires services to offer at least one phishing-resistant option at AAL2. |
+| **Transaction binding** | For payments and sensitive changes, show the amount and payee (or the exact action) in the confirmation message, and make the code valid only for that action | A code approved for "Change phone number" or "Pay $20 to Alice" can't be reused for "Pay $2,000 to Mallory". EU payment rules require this "dynamic linking" for remote payments. |
+| **Clear code messages** | Say what the code is for and add "We will never call or text you to ask for this code" | Gives the user a last chance to notice the scam at the moment they're being pressured |
+| **Rate limiting** | Limit OTP sends per account, phone number and IP; limit verification attempts per code; keep code lifetimes short | Slows automated attacks and stops brute-forcing of short codes |
+| **Device and risk signals** | Check new device, impossible travel, suspicious IPs and bot traffic before sending a code; require extra verification or block high-risk logins | Most OTP bot logins come from a device and location the real user has never used |
+| **Breached-password detection** | Reject passwords found in known breaches at sign-up and password change | The attack starts with a stolen password. Taking that away stops it before a code is ever sent. |
+| **Step-up authentication** | Ask for a fresh, strong factor before changing email/phone, adding payees or moving money | Limits what an attacker can do even after a successful login |
+| **Fast alerts and revocation** | Notify users of new logins and sensitive changes, and let them end all sessions in one tap | Shrinks the window between takeover and response |
+| **User education** | Tell users, in onboarding and in code messages, that you will never ask for codes by phone | The attack depends entirely on the user believing the caller |
 
-### App-based Bots
-**Exploit authentication apps**, tricking users into entering OTPs into **fake interfaces** or abusing security flaws.
-
-### Email Phishing Bots
-Send realistic emails using **domain spoofing** and **personalized content** to trick victims into sharing OTPs.
-
-### Social Media Bots
-Use public info to craft **convincing scams**, impersonating friends, companies, or influencers to steal OTPs.
-
-### Browser Based Bots
-Inject **malicious scripts** to intercept OTPs or alter website appearances in real-time, fooling users.
-
-### API-Exploiting Bots
-Target **insecure APIs**, intercepting OTPs before they reach the verification system.
+> **What about authenticator apps (TOTP)?** TOTP codes are better than SMS because they can't be intercepted through SIM swaps or phone networks. But a user can still read a TOTP code out to a caller, so TOTP **does not** stop OTP bots on its own. Passkeys do. See [phishing-resistant MFA](https://supertokens.com/blog/phishing-resistant-mfa).
 
 ## Why OTP Bots Are a Growing Threat 👾
-As OTPs become a key security feature in 2FA and passwordless login systems, they also become a target for hackers to exploit.
 
- The more businesses and users begin to rely on OTPs to secure their accounts, the more attackers will continue to focus on bypassing this layer of security, like they have done with passwords. 
+As more apps rely on OTPs for 2FA and passwordless login, attackers have shifted their attention to getting around them, just as they did with passwords.
 
- Additionally, hackers don’t need superhacking skills anymore, like some sort of hacker supervillains, to launch their attacks. OTP bot services are readily available for them to purchase. These services have made it easier for attackers to launch their attacks with minimal effort and cost. 
+Kaspersky's research gives a sense of the scale. In May 2024 alone, Kaspersky products blocked **69,984 attempts** to visit sites created by phishing kits that target bank customers, and its technology detected **1,262 phishing pages** generated by 10 kits built for real-time OTP interception ([Kaspersky, June 2024](https://securelist.com/2fa-phishing/112805/)).
 
- So this combination of widespread OTP usage and easy access to hacking tools makes OTP bots a serious threat to users and the businesses their accounts are on. 
+The impact on a business goes beyond the stolen account:
 
-## Security Risks Posed by OTP Bots
-OTP bots pose immense risk to businesses and users, so both need to act urgently in protecting their data and information.
+- 💳 **Account takeover**: Once the attacker completes the login, they get a valid session like any other user. Short-lived tokens and fast revocation matter (see [OAuth vs JWT](https://supertokens.com/blog/oauth-vs-jwt#jwt-vs-opaque-tokens) for how token format affects how quickly you can cut off access).
+- 💸 **Financial loss**: drained balances, unauthorized purchases and fraudulent transfers, plus the cost of refunds and investigations.
+- 🏢 **Reputation damage**: users blame the service whose name the attacker used.
+- 🔐 **Lost trust in 2FA**: repeated takeovers can make users doubt security features that still matter.
 
-According to a [Proofpoint report](https://www.certitudesecurity.com/wp-content/uploads/2022/06/The-Human-Factor-2022_Certitude-Security.pdf), attackers launch over 100,000 phone-based attacks daily. The growing use of OTP bots and challenges in detecting real-time attacks make mitigation efforts increasingly difficult.
+## Mitigating OTP Bot Risks with SuperTokens 🛡️
 
-### 🛡️ Bypassing Two-Factor Authentication (2FA)
-OTP bots exploit vulnerabilities in 2FA systems, making it easier for attackers to gain unauthorized access to accounts even with an added security layer.
+SuperTokens gives you several of the controls in the checklist above out of the box.
 
-### 💳 Account Takeover 
-Attackers use OTP bots to take control of user accounts, leading to identity theft, financial fraud, or misuse of sensitive information. Once the attacker completes the login, they are issued a valid session or access token like any other user, so short-lived tokens and fast revocation matter (see [OAuth vs JWT](https://supertokens.com/blog/oauth-vs-jwt#jwt-vs-opaque-tokens) for how token format affects how quickly you can cut off access).
+### Passkeys and Phishing-Resistant MFA
+SuperTokens [supports MFA](https://supertokens.com/docs/additional-verification/mfa/introduction) with email or SMS OTP, TOTP, and **WebAuthn passkeys**. You can [add passkeys as a factor](https://supertokens.com/docs/additional-verification/mfa/webauthn-setup) so users can move off codes that can be read aloud. To get started with passkeys in general, see [what are passkeys?](https://supertokens.com/blog/what-are-passkeys)
 
-###  💸 Financial Losses
-OTP bots are often used to drain bank accounts, make unauthorized purchases, or transfer funds fraudulently.
+### Step-Up Authentication
+With [step-up authentication](https://supertokens.com/docs/additional-verification/mfa/step-up-auth), you can require a fresh second factor before sensitive actions, such as changing a phone number or making a payment, even inside an existing session.
 
-### 🏢 Reputation Damage
-Businesses targeted by OTP bot attacks risk losing customer trust, resulting in reputational harm and potential loss of business.
+### OTP Attempt Limits and Code Lifetime
+For OTP logins, SuperTokens limits how many times a code can be entered (5 attempts by default) and lets you set how long a code stays valid. Both are configurable in the core; see [customize the OTP](https://supertokens.com/docs/authentication/passwordless/customize-the-otp).
 
-### 🔓 Security Breaches
-With access to accounts, attackers can extract personal or business information, leading to further breaches or data leaks. These bots can automate and execute attacks at scale, compromising multiple accounts in a short amount of time.
+### Attack Protection Suite
+The [SuperTokens attack protection suite](https://supertokens.com/docs/additional-verification/attack-protection-suite/introduction) adds risk signals you can use to block a login or ask for extra verification before a code is ever sent:
 
-### 💼 Increased Costs for Businesses
-Organizations face higher expenses for recovery, fraud prevention, and implementing advanced security measures post-attack.
-
-### 🔐 Undermining Confidence in Security Systems
-Frequent successful attacks may discourage users from relying on 2FA systems, undermining overall trust in digital security.
-
-## Mitigating OTP Bot Risks with SuperTokens
-
-### Password Breach Detection 
-The first step in an OTP bot attack is the hacker having the user's credentials, like a password. Preventing password leaks stops the attacks before they even have a chance to begin. **Password breach detections** checks passwords against a database of leaked passwords to see if they've been leaked before. This helps keep accounts safe by avoiding weak passwords.
-
-Password breach detection **prevents OTP bot attacks at the source** by ensuring users do not use previously leaked passwords, cutting off the attack before credentials are compromised.
-
-### Bot Detection 
-**Bot detection** identifies and prevents automated scripts or bots from performing malicious activities such as credential stuffing, account takeover attempts, or scraping sensitive data. It uses advanced algorithms to analyze user behavior, request patterns, and other indicators to distinguish between human users and automated bots.
-
-By identifying and blocking automated scripts, bot detection **stops OTP bots from initiating login attempts or exploiting vulnerabilities**.
-
-### Suspicious IP Detection 
-**Suspicious IP detection** finds suspicious IP addresses that are known for malicious activities. This includes detecting the use of VPNs, TOR, proxy servers, or other network configurations that may be used to hide the user's true location or identity.
-
-Suspicious IP detection **prevents OTP bots by flagging and blocking requests from high-risk IP addresses** often associated with malicious activities.
+- **Password breach detection** checks passwords against known leaked passwords. Because an OTP bot attack starts with a stolen password, this cuts the attack off at the source.
+- **Bot detection** identifies automated scripts performing credential stuffing or account takeover attempts.
+- **Suspicious IP detection** flags requests from IPs known for malicious activity, including some VPNs, Tor and proxies.
+- **New device detection** and **impossible travel detection** flag logins from an unseen device or from a location the user couldn't have reached in time.
+- **Brute force detection** stops repeated attempts in a short time.
 
 ### TOTP Authentication
-**TOTP (Time-Based One-Time Passwords)** is a two-factor authentication method designed for high-security scenarios, particularly for sensitive use cases like financial transactions in fintech or cryptocurrency platforms, or accessing company HR or payroll systems. **It requires users to prove possession of their device by generating a unique code that changes every 30, 60, or 90 seconds.** 
+**TOTP (Time-Based One-Time Passwords)** codes are generated on the user's device and usually change every 30 seconds. They protect against SMS interception and SIM swapping, which makes them a good step up from SMS. Just remember that, like any code, a TOTP code can still be shared with a convincing caller, so pair TOTP with the risk signals above, or move high-risk users to passkeys. Learn more in [TOTP: why you need it and how it works](https://supertokens.com/blog/totp-why-you-need-it-and-how-it-works).
 
-TOTP authentication strengthens defense against OTP bots by requiring time-sensitive, device-generated codes, making it nearly impossible for attackers to intercept or reuse the authentication tokens.
+## Frequently Asked Questions
+
+### What is an OTP bot?
+An OTP bot is automated software that tricks people into giving away their one-time passwords. It calls or texts a victim while pretending to be their bank or another trusted company, and asks for the code that was just sent to them. The attacker, who already has the victim's password, then uses the code to log in.
+
+### Can OTP bots get around authenticator apps?
+Yes, if the user reads the code out. Authenticator app (TOTP) codes can't be intercepted through phone networks or SIM swaps, but an OTP bot doesn't intercept anything. It persuades the user to share the code. Passkeys and security keys are phishing-resistant because there's no code to share.
+
+### How can I tell if a call asking for my code is a scam?
+Assume it is. Legitimate banks and services don't call or text to ask for a one-time code. Warning signs include urgency, a code you didn't request, and a caller who asks you to read or type in the code. Hang up and contact the company through its official app or website.
+
+### What should I do if I shared my OTP with a caller?
+Act quickly. Contact the company through its official app or phone number, change your password, sign out of all sessions, and check for changes to your email, phone number, payees or recent transactions. If money was moved, report it to your bank immediately.
+
+### Is SMS 2FA still worth using?
+Yes, it's much better than a password alone. But it's the weakest form of 2FA: NIST classes SMS and voice codes as "restricted" because they can be phished, intercepted or redirected through SIM swaps. Where possible, offer users passkeys, and use authenticator apps as a step up from SMS.
+
+### What is the most effective defense against OTP bots for businesses?
+Phishing-resistant MFA such as passkeys, because there's no code for a bot to collect. Combine it with rate limits on code sends and attempts, device and location risk signals, breached-password detection, step-up authentication for sensitive actions, and code messages that clearly say you'll never ask for the code.
 
 ## Conclusion
-**OTP bot** cybercriminals might be clever, but we’re smarter. While Two-Factor Authentication (2FA) is still one of the best defenses out there, it’s clear that we need to stay sharp and keep evolving our security game.
+**OTP bot** operators might be clever, but we're smarter. One-time codes are still far better than passwords alone, but any code a person can read out can be talked out of them.
 
-Understanding how OTP bots work is the first step to beating them. The next? Using tools like SuperTokens to stop them in their tracks. **Whether it’s detecting bots, flagging suspicious activity, or upgrading to TOTP**, there’s no shortage of ways to fight back.
+The fix is layered: make the code harder to misuse (rate limits, short lifetimes, transaction binding, clear messages), notice when something is off (device and risk signals), and, best of all, move users to **passkeys**, where there's no code to steal at all.
 
-So, don’t wait for trouble to knock on your door. Strengthen your defenses, stay alert, and keep your accounts, and your peace of mind, secure. We’ve got this. 💪🔐
+So don't wait for trouble to knock on your door. Strengthen your defenses, stay alert, and keep your accounts, and your peace of mind, secure. We've got this. 💪🔐
+
+## Related Reading
+- [Phishing-Resistant MFA](https://supertokens.com/blog/phishing-resistant-mfa)
+- [What Are Passkeys?](https://supertokens.com/blog/what-are-passkeys)
+- [OTP vs TOTP vs HOTP](https://supertokens.com/blog/otp-vs-totp-vs-hotp)
+- [What Is Credential Stuffing?](https://supertokens.com/blog/what-is-credential-stuffing)
+- [MFA Best Practices](https://supertokens.com/blog/mfa-best-practices)
