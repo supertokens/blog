@@ -1,48 +1,40 @@
 ---
-title: "What is a JWT? Understanding JSON Web Tokens (2026 Guide)"
+title: "What Is a JWT? JSON Web Tokens Explained, With Examples"
 date: "2024-08-02"
-description: "Explore JWT tokens: secure, compact credentials for modern web authentication. Learn how they work, their benefits, and best practices for implementing them in your applications."
+updated: "2026-11-23"
+description: "A JWT is a signed, URL-safe token that carries claims between two parties. Learn the header.payload.signature structure, claims, verification and JWT vs sessions."
 cover: "what-is-jwt-cover.png"
 category: "sessions"
 author: "Mostafa Ibrahim"
 ---
 
+**A JSON Web Token (JWT) is a compact, URL-safe way to send claims between two parties, defined in [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519.html). It's three base64url-encoded parts joined by dots, `header.payload.signature`. The signature lets a server check that the claims weren't changed, so APIs can verify who a user is without a database lookup.**
+
+*Last updated 23 November 2026. Checked against [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519.html) (JWT) and [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725.html) (JWT Best Current Practices, BCP 225).*
+
 ## Table of Contents
-- [Introduction](#introduction)
 - [What is a JWT?](#what-is-a-jwt)
-- [What are Tokens and Why Are They Needed?](#what-are-tokens-and-why-are-they-needed)
-- [Structure of a JWT](#structure-of-a-jwt)
-- [JWT Claim Convention](#jwt-claim-convention)
-- [How Do JWTs Work?](#how-do-jwts-work)
-- [Pros and Cons of JWTs](#pros-and-cons-of-jwts)
-- [Common Use Cases for JWT Decoding](#common-use-cases-for-jwt-decoding)
-- [Common Issues During Development](#common-issues-during-development)
-- [Benefits of Using JWT Tokens](#benefits-of-using-jwt-tokens)
-- [Challenges and Considerations](#challenges-and-considerations)
-- [Implementing JWT Decoding with SuperTokens](#implementing-jwt-decoding-with-supertokens)
-- [Further Reading Material](#further-reading-material)
-
----
-
-## Introduction
-
-Authentication and authorization are cornerstones of modern web security. They ensure that users are who they claim to be and that they can only access resources they are authorized for.
-
-Traditional session-based authentication stores user information on the server. While this worked well for early monolithic apps, it introduced scaling challenges in distributed systems — where maintaining session state across multiple servers or microservices quickly became complex and inefficient.
-
-**JSON Web Tokens (JWTs)** solve this by being **stateless**, **self-contained**, and easily verifiable. A JWT carries all necessary user information within the token itself, eliminating the need for frequent database lookups and enabling fast, scalable authentication across APIs, mobile apps, and microservices.
-
-JWTs are most commonly used to **identify authenticated users**, issued by an authentication server and consumed by your APIs or frontend applications.
+- [Why tokens, and why JWTs?](#why-tokens-and-why-jwts)
+- [Anatomy of a JWT: header.payload.signature](#anatomy-of-a-jwt-headerpayloadsignature)
+- [Registered JWT claims](#registered-jwt-claims)
+- [How JWT authentication works](#how-jwt-authentication-works)
+- [JWT vs session-based authentication](#jwt-vs-session-based-authentication)
+- [Pros and cons of JWTs](#pros-and-cons-of-jwts)
+- [JWT security best practices](#jwt-security-best-practices)
+- [Common JWT errors during development](#common-jwt-errors-during-development)
+- [JWTs in SuperTokens](#jwts-in-supertokens)
+- [Frequently Asked Questions](#frequently-asked-questions)
+- [Further reading](#further-reading)
 
 ---
 
 ## What is a JWT?
 
-A **JSON Web Token (JWT)** is an open standard ([RFC 7519](https://tools.ietf.org/html/rfc7519)) for securely transmitting information between two parties — typically a **client** and a **server**.
+A **JSON Web Token (JWT)** is an open standard, [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519.html) (published May 2015), for passing a set of **claims** (statements about a user or session) between two parties, usually an auth server and an API.
 
-Each JWT is digitally signed to prevent tampering and contains claims (pieces of information) about the user or session.
+The claims are a JSON object. In almost every real-world use, that object is **signed** using JSON Web Signature ([RFC 7515](https://www.rfc-editor.org/rfc/rfc7515.html)), which makes it tamper-evident but still readable by anyone. Less often, it's **encrypted** using JSON Web Encryption ([RFC 7516](https://www.rfc-editor.org/rfc/rfc7516.html)). When people say "JWT" they nearly always mean a signed JWT, and that's what this article covers.
 
-Here’s an example JWT issued by Google during sign-in:
+Here's the payload of an ID token Google issues during sign-in, taken from [Google's OpenID Connect documentation](https://developers.google.com/identity/openid-connect/openid-connect):
 
 ```json
 {
@@ -59,183 +51,204 @@ Here’s an example JWT issued by Google during sign-in:
 }
 ```
 
-This lets your app verify **who the user is**, **when the token was issued**, and **whether it’s still valid** — all without calling Google’s servers.
+Once your app has verified the token's signature, these claims tell it **who the user is** (`sub`, `email`), **who issued the token** (`iss`), **which app it was meant for** (`aud`) and **whether it's still valid** (`exp`). It doesn't need to call Google to find out.
 
 ---
 
-## What are Tokens and Why Are They Needed?
+## Why tokens, and why JWTs?
 
-If an authentication server simply sent user data as plain JSON, malicious users could modify fields (like the user ID) before sending it back to the server.
+If an auth server sent user data back as plain JSON, a malicious user could change a field (say, their user ID) before sending it to your API. Tokens fix this by **binding the data to a signature** that only the issuer can produce.
 
-Tokens solve this problem by **encapsulating and cryptographically signing** data, ensuring the receiver can trust its authenticity.
+There are two main kinds of token:
 
-There are two major token types:
+- **Opaque tokens**: random strings that point to session data stored on the server. The server has to look them up on every request.
+- **JWTs**: self-contained tokens that carry their claims inside them. Any service with the right key can verify them **locally**, with no database call.
 
-- **Opaque tokens** — random identifiers referencing session data on the server.
-- **JWTs** — self-contained tokens that include verifiable claims directly within the token.
-
-JWTs allow **local verification** without needing a database call, enabling stateless, high-performance authentication.
+That local verification is why JWTs became the default for APIs, microservices, mobile apps and OAuth 2.0 access tokens ([RFC 9068](https://www.rfc-editor.org/rfc/rfc9068.html) standardises the JWT access token format).
 
 ---
 
-## Structure of a JWT
+## Anatomy of a JWT: header.payload.signature
 
-A JWT has three parts, separated by dots (`.`):
+A signed JWT is "a sequence of URL-safe parts separated by period ('.') characters" ([RFC 7519, Section 3](https://www.rfc-editor.org/rfc/rfc7519.html#section-3)). Each part is base64url-encoded:
 
-### 1. Header
-Defines the type (`JWT`) and the algorithm used to sign the token (e.g., `HS256`).
+<img src="./jwt-anatomy.svg" alt="Anatomy of a JWT. An encoded HS256 token is split at its two dots into three base64url parts. The header decodes to alg HS256 and typ JWT. The payload decodes to the claims sub, iss, aud, iat and exp. The signature is HMAC-SHA256 of the encoded header, a dot and the encoded payload, using a secret key. The header and payload are encoded, not encrypted, so anyone can read them; the signature lets the server detect tampering." width="760" height="520" style="width: 100%; max-width: 760px; height: auto;" />
 
-### 2. Payload
-Contains the actual claims — such as user ID, expiration time, and roles.
-
-### 3. Signature
-Ensures integrity by signing the header and payload using a secret or public/private key pair.
+Here's the token from the diagram. It was signed with a throwaway demo secret, so you can paste it into the [SuperTokens JWT encoder/decoder](https://supertokens.com/jwt-encoder-decoder) to see the decoded parts:
 
 ```text
-header.payload.signature
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzEyMyIsImlzcyI6Imh0dHBzOi8vYXBpLmV4YW1wbGUuY29tIiwiYXVkIjoiZXhhbXBsZS1hcHAiLCJpYXQiOjE3OTUzOTIwMDAsImV4cCI6MTc5NTM5MjkwMH0.fqJXOxlkFVSblENMdS1ejL-2i38114HsB00_rpYT1YI
 ```
 
----
+### 1. Header
+The header names the signing algorithm (`alg`) and usually the token type (`typ`). For tokens signed with a key pair it also carries a `kid` (key ID), which tells the verifier which public key in the issuer's [JWKS (JSON Web Key Set)](https://supertokens.com/blog/understanding-jwks) to use.
 
-## JWT Claim Convention
+```json
+{ "alg": "HS256", "typ": "JWT" }
+```
 
-JWTs follow standard claim conventions defined in [RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519):
+### 2. Payload
+The payload holds the claims: who the token is about, who issued it, who it's for and when it expires, plus any application claims such as roles.
 
-- **iss** — Issuer (the authority generating the token)
-- **sub** — Subject (user identifier)
-- **aud** — Audience (the intended recipient app)
-- **exp** — Expiration time
-- **iat** — Issued at time
-- **nbf** — Not before (token validity start)
-- **email**, **email_verified**, **roles** — Application-specific claims
+```json
+{
+  "sub": "user_123",
+  "iss": "https://api.example.com",
+  "aud": "example-app",
+  "iat": 1795392000,
+  "exp": 1795392900
+}
+```
 
-Using standardized claims ensures interoperability across libraries and identity providers (e.g., Auth0, AWS Cognito, SuperTokens, Google Identity).
+### 3. Signature
+The signature is computed over the encoded header and payload:
 
----
+```text
+HMACSHA256(base64url(header) + "." + base64url(payload), secret)
+```
 
-## How Do JWTs Work?
+With HS256 the same shared secret signs and verifies. With RS256 or ES256, the issuer signs with a private key and anyone can verify with the matching public key. See [RS256 vs HS256](https://supertokens.com/blog/rs256-vs-hs256) for when to use each.
 
-JWT authentication typically follows this flow:
-
-1. **User logs in** — Authentication server validates credentials.  
-2. **JWT issued** — Server signs and returns a JWT containing claims.  
-3. **Client stores token** — Usually in HttpOnly cookies or secure storage.  
-4. **Requests authenticated** — Client includes JWT in headers (e.g., `Authorization: Bearer <token>`).  
-5. **Server verifies JWT** — Using its secret or public key, checks signature validity and claim expiry. Public keys are usually fetched from the issuer's [JWKS (JSON Web Key Set)](https://supertokens.com/blog/understanding-jwks).
-
-This stateless model removes the need for a centralized session store, boosting scalability.
-
----
-
-## Pros and Cons of JWTs
-
-### ✅ Advantages
-- **Secure**: Cryptographically signed and tamper-proof.  
-- **Stateless**: No need for server-side session storage.  
-- **Cross-domain ready**: Works seamlessly for APIs, SPAs, and mobile apps.  
-- **Fast**: Eliminates frequent database lookups.
-
-### ⚠️ Limitations
-- **Difficult to revoke**: Tokens remain valid until expiration.  
-- **Key compromise risk**: A leaked secret allows attackers to forge tokens.  
-- **Size overhead**: Larger than opaque tokens due to embedded JSON.
-
-For more on immediate revocation, see [Revoking Access with a JWT Blacklist](https://supertokens.com/blog/revoking-access-with-a-jwt-blacklist).
+> **Encoded is not encrypted.** Base64url is just an encoding. Anyone who holds a signed JWT can read its header and payload, so never put passwords, secrets or sensitive personal data in the payload.
 
 ---
 
-## Common Use Cases for JWT Decoding
+## Registered JWT claims
 
-JWT decoding isn’t just for curiosity — it’s a vital tool in modern authentication.
+[RFC 7519, Section 4.1](https://www.rfc-editor.org/rfc/rfc7519.html#section-4.1) registers seven claim names. All of them are optional in the spec, but most auth systems use `iss`, `sub`, `aud` and `exp` at least.
 
-### 1. Debugging Authentication and Authorization
-Decoding tokens helps developers identify expired credentials, invalid issuers, or mismatched audiences — streamlining debugging during OAuth2 or OpenID Connect integrations.  
-*(Verified by [Auth0 Docs](https://auth0.com/docs/secure/tokens/json-web-tokens/validate-json-web-tokens) and [RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519)).*
+| Claim | Name | What it means |
+|---|---|---|
+| `iss` | Issuer | Who created and signed the token |
+| `sub` | Subject | Who the token is about, usually a user ID |
+| `aud` | Audience | Who the token is for; a recipient not listed must reject it |
+| `exp` | Expiration time | The token must not be accepted on or after this time |
+| `nbf` | Not before | The token must not be accepted before this time |
+| `iat` | Issued at | When the token was created |
+| `jti` | JWT ID | A unique ID for the token, useful for preventing replay |
 
-### 2. Inspecting User Claims and Permissions
-Decoded JWTs expose roles and scopes that control access within APIs or UIs — allowing developers to confirm if a user has the right permissions.  
-*(Referenced by [AWS Cognito Developer Guide](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens.html)).*
-
-### 3. Validating Client-Side Token Reception
-SPAs and mobile apps often decode JWTs to verify `iss`, `aud`, or `exp` before making network requests, reducing unnecessary API calls.  
-*(Supported by [OWASP JWT Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_Cheat_Sheet.html)).*
-
-### 4. Single Sign-On (SSO) Across Services
-In multi-app ecosystems, JWTs carry identity across domains — decoded locally to synchronize sessions and user information.  
-*(Based on [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0.html)).*
-
-### 5. Edge and Mobile Use Cases
-Edge services or mobile SDKs decode JWTs to optimize caching, routing, or offline validation of user sessions.  
-*(Verified by [Cloudflare Developer Docs](https://developers.cloudflare.com/workers/examples/verify-jwt/)).*
+Times are Unix timestamps in seconds. Anything else in the payload, such as `email`, `roles` or `tenant_id`, is an application-specific claim. Using the registered names keeps your tokens compatible with standard libraries and identity providers such as Google, AWS Cognito and SuperTokens.
 
 ---
 
-## Common Issues During Development
+## How JWT authentication works
 
-- **JWT Rejected** — Expired token or mismatched signature.  
-- **Invalid Scope** — App expects higher privileges than the token allows.  
-- **Decode Failed** — Malformed or incorrectly encoded JWT.
+1. **The user logs in.** The auth server checks their credentials.
+2. **The server issues a JWT.** It signs a token containing the user's claims and a short expiry.
+3. **The client stores the token**, ideally in an `HttpOnly`, `Secure` cookie (see [cookies vs localStorage for sessions](https://supertokens.com/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know)).
+4. **The client sends the token on each request**, as a cookie or in an `Authorization: Bearer <token>` header.
+5. **The API verifies the token** by checking the signature with the secret or the issuer's public key (fetched from its [JWKS](https://supertokens.com/blog/understanding-jwks)), then checking `exp`, `iss` and `aud`.
+6. **The token expires** and the client gets a new one, usually by sending a longer-lived refresh token to the auth server.
 
-Always verify both the **structure** and **signature** before trusting a decoded JWT.
-
----
-
-## Benefits of Using JWT Tokens
-
-- **Stateless Authentication** → Simplifies scaling and load balancing.  
-- **Compact and Portable** → Fits in headers, cookies, or query parameters.  
-- **Cross-Domain Compatibility** → Ideal for distributed microservice systems.  
-- **Customizable Claims** → Store user metadata securely.  
-- **Performance Boost** → Reduces I/O from database lookups.  
-- **Mobile and Offline Ready** → Works with limited connectivity.
-
-### Key Best Practices
-- Use **[RS256 or ES256](https://supertokens.com/blog/rs256-vs-hs256)** over weak algorithms.  
-- Avoid storing sensitive data in the payload.  
-- Store JWTs in **[HttpOnly cookies instead of `localStorage`](https://supertokens.com/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know)**.  
-- Implement **token rotation** for added security.  
-- Rotate signing keys periodically.
+Because step 5 needs only a key, any number of servers can verify tokens without sharing a session store.
 
 ---
 
-## Challenges and Considerations
+## JWT vs session-based authentication
 
-### Token Expiration and Refresh Strategy
-Use **short-lived access tokens** with **longer-lived refresh tokens** for optimal balance between security and usability.
+With [session-based authentication](https://supertokens.com/blog/session-based-authentication), the server stores session state and gives the browser an opaque session ID. With JWTs, the state travels inside the token. Here's how they compare:
 
-The refresh token (typically opaque) can safely regenerate JWTs when access tokens expire — as recommended in [RFC 6749 OAuth2 Spec](https://datatracker.ietf.org/doc/html/rfc6749). JWTs are often issued as part of this OAuth flow — see [OAuth vs JWT: Key Differences Explained](https://supertokens.com/blog/oauth-vs-jwt) for how the two standards fit together, and when an opaque token is the better choice than a JWT.
+| | JWT (stateless token) | Server-side session (opaque ID) |
+|---|---|---|
+| **Where the state lives** | In the token, signed by the issuer | In a server-side store (database, Redis) |
+| **How a request is verified** | Check the signature and claims locally | Look up the session ID in the store |
+| **Revoking access** | Hard: the token is valid until `exp` unless you keep a denylist | Easy: delete the session |
+| **Scaling across servers and services** | Easy: any service with the key can verify | Every service needs access to the shared store |
+| **Size on the wire** | Larger: carries all the claims | Small: just an ID |
+| **Can the client read the data?** | Yes, the payload is only encoded | No, the ID is meaningless on its own |
+| **Typical fit** | APIs, microservices, mobile apps, OAuth access tokens | Traditional server-rendered web apps |
 
-### Secure Transport and Storage
-Always use **HTTPS**, validate claims server-side, and prevent client-side tampering through secure storage mechanisms.
-
----
-
-## Implementing JWT Decoding with SuperTokens
-
-SuperTokens simplifies JWT creation, validation, and rotation.
-
-### Integration Steps
-1. Install SuperTokens with your preferred framework.  
-2. Enable JWT session mode (built-in).  
-3. Use its APIs to issue, verify, and decode JWTs — no custom logic required.
-
-### Why SuperTokens?
-- ✅ **Open-source & self-hostable**  
-- ⚙️ **Zero-config JWT management**  
-- 🔐 **Automatic rotation & signature validation**  
-- 🌍 **Support for OAuth2, OIDC, and session revocation**
-
-Try the [SuperTokens JWT Encoder/Decoder Tool](https://supertokens.com/jwt-encoder-decoder) to inspect your own tokens securely.
+**You don't have to choose one.** A common pattern, and the one SuperTokens uses, is a hybrid: a **short-lived JWT access token** that APIs verify locally, plus a **long-lived opaque refresh token** that's checked against the database. You get stateless verification on most requests and can still revoke a session. [OAuth vs JWT](https://supertokens.com/blog/oauth-vs-jwt) covers where OAuth fits into this.
 
 ---
 
-## Further Reading Material
+## Pros and cons of JWTs
 
-- [JWT, JWS, and JWE for Not-So-Dummies](https://medium.facilelogin.com/jwt-jws-and-jwe-for-not-so-dummies-b63310d201a3)  
-- [OAuth vs JWT: Key Differences Explained](https://supertokens.com/blog/oauth-vs-jwt)  
-- [What Is a JWKS? JSON Web Key Sets Explained](https://supertokens.com/blog/understanding-jwks)  
-- [Revoking Access with a JWT Blacklist](https://supertokens.com/blog/revoking-access-with-a-jwt-blacklist)  
-- [OpenID Connect & JWT Usage](https://openid.net/connect/)  
-- [Best Way to Securely Manage User Sessions](https://supertokens.com/blog/the-best-way-to-securely-manage-user-sessions)  
-- [Session-Based Authentication: How It Works](https://supertokens.com/blog/session-based-authentication)  
-- [Token-Based Authentication for APIs: What It Is and How It Works](https://supertokens.com/blog/token-based-authentication-in-api)
+### Advantages
+- **Tamper-evident**: any change to the header or payload breaks the signature.
+- **Stateless verification**: no session lookup on each request.
+- **Works across domains and services**: suits APIs, SPAs, mobile apps and microservices.
+- **Standard and interoperable**: libraries exist for every major language, and OAuth 2.0 and OpenID Connect use JWTs.
+
+### Limitations
+- **Hard to revoke**: a token stays valid until it expires. Immediate revocation needs a denylist, which brings back server-side state (see [Revoking Access with a JWT Blacklist](https://supertokens.com/blog/revoking-access-with-a-jwt-blacklist)).
+- **Key compromise is serious**: whoever has the signing key can mint valid tokens for any user.
+- **Readable payload**: claims are visible to anyone holding the token.
+- **Bigger than an opaque ID**: every request carries the full set of claims.
+
+---
+
+## JWT security best practices
+
+Most of these come from [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725.html), the IETF's JWT Best Current Practices, and the [OWASP JWT Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_Cheat_Sheet.html).
+
+- **Pin the allowed algorithms.** Don't trust the `alg` header. Tell your library which algorithms you accept, and never accept `none` (RFC 8725, Sections 3.1 and 3.2).
+- **Always validate `iss`, `aud` and `exp`**, not just the signature. RFC 8725 says a relying party "MUST validate the audience value" (Section 3.9).
+- **Prefer asymmetric signing (RS256, ES256, EdDSA)** when more than one service verifies tokens, so only the issuer holds the private key.
+- **Keep access tokens short-lived**, and use refresh tokens, ideally rotating ones, to get new access tokens.
+- **Store tokens in `HttpOnly`, `Secure` cookies** rather than `localStorage`, where any XSS can read them.
+- **Rotate signing keys** and publish them through a JWKS with `kid` values, so verifiers pick up new keys without downtime. The [JWKS key rotation walkthrough](https://supertokens.com/blog/understanding-jwks) shows how.
+- **Don't put secrets or sensitive data in the payload.**
+- **Use explicit typing** (`typ`) when you issue more than one kind of JWT, so one kind can't be passed off as another (RFC 8725, Section 3.11).
+
+---
+
+## Common JWT errors during development
+
+| Error | Usual cause | Fix |
+|---|---|---|
+| `jwt expired` / `TokenExpiredError` | `exp` is in the past | Refresh the token; check for clock skew between servers |
+| `invalid signature` | Wrong secret or public key, or the token was changed | Check the key, and the `kid` against the issuer's JWKS |
+| `jwt audience invalid` / `invalid issuer` | `aud` or `iss` doesn't match what the API expects | Align the issuer config with the API's expected values |
+| `jwt malformed` | Not three dot-separated base64url parts, or a stray `Bearer ` prefix | Strip the prefix; make sure the whole token is sent |
+| `invalid algorithm` | Token `alg` isn't in your allowed list | Fix the issuer's algorithm, or the verifier's allowed list |
+
+Decoding a token (for example in the [JWT encoder/decoder](https://supertokens.com/jwt-encoder-decoder)) is a quick way to inspect `exp`, `iss` and `aud`. But decoding isn't verifying: never trust a decoded payload until the signature has been checked.
+
+---
+
+## JWTs in SuperTokens
+
+SuperTokens uses the hybrid model described above. Its [session management](https://supertokens.com/docs/post-authentication/session-management/introduction) issues a short-lived JWT access token and a rotating opaque refresh token, stored in `HttpOnly` cookies by default. You don't write any JWT code yourself:
+
+- **Signing and key rotation** are handled by the SuperTokens core, which publishes its public keys as a JWKS.
+- **Verification** is a single call. [Protect your API routes](https://supertokens.com/docs/additional-verification/session-verification/protect-api-routes) with the backend SDK's session verification, and add [claim validation](https://supertokens.com/docs/additional-verification/session-verification/claim-validation) for roles or email verification.
+- **Revocation** works despite the stateless access token, because sessions can be [invalidated](https://supertokens.com/docs/post-authentication/session-management/session-invalidation) through the refresh token.
+
+SuperTokens is open source and can be self-hosted or used as a managed service.
+
+---
+
+## Frequently Asked Questions
+
+### Is a JWT encrypted?
+No, not usually. A standard JWT is signed (JWS), not encrypted: its header and payload are only base64url-encoded, so anyone holding the token can read them. The signature stops them being changed, not read. If the claims must stay confidential, use an encrypted JWT (JWE, RFC 7516) or keep the data on the server.
+
+### What is the difference between decoding and verifying a JWT?
+Decoding just base64url-decodes the header and payload so you can read them, and needs no key. Verifying checks the signature with the secret or the issuer's public key, then checks claims such as exp, iss and aud. Only a verified token should be trusted.
+
+### Should I use JWTs or sessions for authentication?
+Use server-side sessions when one web app talks to one backend and you need instant logout. Use JWTs when several services or APIs must verify users without a shared session store. Many production systems combine them: short-lived JWT access tokens with a revocable, opaque refresh token.
+
+### Where should I store a JWT in the browser?
+In an HttpOnly, Secure cookie with a suitable SameSite setting. JavaScript can't read HttpOnly cookies, so an XSS bug can't steal the token. Tokens in localStorage or sessionStorage can be read by any script running on the page.
+
+### Can you revoke a JWT?
+Not directly. A signed JWT stays valid until its exp time. To cut access early, keep access tokens short-lived and revoke the refresh token, or check each token against a denylist, which reintroduces a server-side lookup.
+
+### How long should a JWT be valid?
+Keep access tokens short-lived, measured in minutes rather than days, and use a refresh token to get new ones. The shorter the lifetime, the less time a stolen token is useful. The right value depends on your risk tolerance and how often clients can refresh.
+
+---
+
+## Further reading
+
+- [RFC 7519: JSON Web Token](https://www.rfc-editor.org/rfc/rfc7519.html) and [RFC 8725: JWT Best Current Practices](https://www.rfc-editor.org/rfc/rfc8725.html)
+- [OWASP JSON Web Token Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_Cheat_Sheet.html)
+- [OAuth vs JWT: Key Differences Explained](https://supertokens.com/blog/oauth-vs-jwt)
+- [What Is a JWKS? JSON Web Key Sets Explained](https://supertokens.com/blog/understanding-jwks)
+- [RS256 vs HS256: Which JWT Signing Algorithm to Use](https://supertokens.com/blog/rs256-vs-hs256)
+- [Are You Using JWTs for User Sessions in the Correct Way?](https://supertokens.com/blog/are-you-using-jwts-for-user-sessions-in-the-correct-way)
+- [Revoking Access with a JWT Blacklist](https://supertokens.com/blog/revoking-access-with-a-jwt-blacklist)
+- [Session-Based Authentication: How It Works](https://supertokens.com/blog/session-based-authentication)
+- [Token-Based Authentication for APIs](https://supertokens.com/blog/token-based-authentication-in-api)

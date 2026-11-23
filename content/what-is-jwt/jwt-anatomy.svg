@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520" role="img" aria-labelledby="title desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="title">Anatomy of a JWT: header.payload.signature</title>
+  <desc id="desc">An encoded HS256 JWT is split at its two dots into three base64url parts. The header decodes to {"alg":"HS256","typ":"JWT"}. The payload decodes to the claims sub, iss, aud, iat and exp. The signature is HMAC-SHA256 of the encoded header, a dot and the encoded payload, using the server's secret key. The header and payload are encoded, not encrypted, so anyone can read them; the signature lets the server detect tampering.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="760" height="520" fill="#ffffff"/>
+
+  <!-- Encoded token -->
+  <text x="30" y="34" font-size="15" font-weight="600" fill="#222">Encoded JWT (what is sent in the Authorization header or cookie)</text>
+  <rect x="30" y="48" width="700" height="104" rx="8" fill="#f7f7f8" stroke="#d4d4d8"/>
+  <g font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13">
+    <text x="46" y="74"><tspan fill="#c2410c" font-weight="600">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</tspan><tspan fill="#222" font-weight="700">.</tspan></text>
+    <text x="46" y="94" fill="#6d28d9" font-weight="600">eyJzdWIiOiJ1c2VyXzEyMyIsImlzcyI6Imh0dHBzOi8vYXBpLmV4YW1wbGUuY29tIiwiYXVk</text>
+    <text x="46" y="114"><tspan fill="#6d28d9" font-weight="600">IjoiZXhhbXBsZS1hcHAiLCJpYXQiOjE3OTUzOTIwMDAsImV4cCI6MTc5NTM5MjkwMH0</tspan><tspan fill="#222" font-weight="700">.</tspan></text>
+    <text x="46" y="134" fill="#0369a1" font-weight="600">fqJXOxlkFVSblENMdS1ejL-2i38114HsB00_rpYT1YI</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="120" y1="156" x2="120" y2="204" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="375" y1="156" x2="375" y2="204" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="635" y1="156" x2="635" y2="204" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="445" y="186" font-size="12" fill="#555" text-anchor="middle">base64url-decode</text>
+
+  <!-- Header box -->
+  <rect x="30" y="210" width="180" height="200" rx="8" fill="#fff4ed" stroke="#c2410c" stroke-width="1.5"/>
+  <text x="46" y="236" font-size="15" font-weight="700" fill="#c2410c">1. Header</text>
+  <text x="46" y="256" font-size="12" fill="#555">Signing algorithm</text>
+  <text x="46" y="272" font-size="12" fill="#555">and token type</text>
+  <g font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" fill="#222">
+    <text x="46" y="300">{</text>
+    <text x="58" y="318">"alg": "HS256",</text>
+    <text x="58" y="336">"typ": "JWT"</text>
+    <text x="46" y="354">}</text>
+  </g>
+
+  <!-- Payload box -->
+  <rect x="225" y="210" width="300" height="200" rx="8" fill="#f5f3ff" stroke="#6d28d9" stroke-width="1.5"/>
+  <text x="241" y="236" font-size="15" font-weight="700" fill="#6d28d9">2. Payload</text>
+  <text x="241" y="256" font-size="12" fill="#555">Claims about the user and the token</text>
+  <g font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" fill="#222">
+    <text x="241" y="288">{</text>
+    <text x="253" y="306">"sub": "user_123",</text>
+    <text x="253" y="324">"iss": "https://api.example.com",</text>
+    <text x="253" y="342">"aud": "example-app",</text>
+    <text x="253" y="360">"iat": 1795392000,</text>
+    <text x="253" y="378">"exp": 1795392900</text>
+    <text x="241" y="396">}</text>
+  </g>
+
+  <!-- Signature box -->
+  <rect x="540" y="210" width="190" height="200" rx="8" fill="#f0f9ff" stroke="#0369a1" stroke-width="1.5"/>
+  <text x="556" y="236" font-size="15" font-weight="700" fill="#0369a1">3. Signature</text>
+  <text x="556" y="256" font-size="12" fill="#555">Proves the first two parts</text>
+  <text x="556" y="272" font-size="12" fill="#555">weren't changed</text>
+  <g font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#222">
+    <text x="556" y="302">HMACSHA256(</text>
+    <text x="568" y="320">base64url(header)</text>
+    <text x="568" y="338">+ "." +</text>
+    <text x="568" y="356">base64url(payload),</text>
+    <text x="568" y="374">secret</text>
+    <text x="556" y="392">)</text>
+  </g>
+
+  <!-- Footnote -->
+  <text x="30" y="446" font-size="13" fill="#222"><tspan font-weight="600">Encoded, not encrypted:</tspan> anyone holding the token can read the header and payload.</text>
+  <text x="30" y="468" font-size="13" fill="#222">Only a server with the secret (HS256) or the issuer's public key (RS256, ES256) can check the signature,</text>
+  <text x="30" y="490" font-size="13" fill="#222">so a changed payload is rejected. iat and exp are Unix timestamps; this token is valid for 15 minutes.</text>
+</svg>
