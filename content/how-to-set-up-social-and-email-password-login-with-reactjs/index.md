@@ -265,7 +265,7 @@ supertokens.init({
  framework: "express",
  supertokens: {
    connectionURI:
-     "https://try.superotkens.io",
+     "https://try.supertokens.com",
  },
  appInfo: {
 

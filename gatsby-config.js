@@ -102,29 +102,27 @@ module.exports = {
       `,
         output:'/sitemaps',
         resolveSiteUrl: () => 'https://supertokens.com/',
+        // Emit one canonical URL per page. The site uses trailingSlash: 'never' and
+        // every canonical tag points at the no-slash form, so the sitemap must too.
+        // The trailing-slash variants 301 to these on supertokens-backend-website.
         resolvePages: ({
-          allSitePage: { nodes:allPages }
+          allSitePage: { nodes: allPages }
         }) => {
-          const webflowBlogsWithTrailingSlashes = webflowPosts.reduce((acc,currentPage)=>{
+          const toCanonicalPath = (path) => {
+            const withLeadingSlash = path.startsWith('/') ? path : `/${path}`;
+            return withLeadingSlash.length > 1 ? withLeadingSlash.replace(/\/+$/, '') : withLeadingSlash;
+          };
 
-            if(currentPage.fields.slug === undefined){
-              return acc
-            }
+          const gatsbyPaths = allPages
+            .filter((page) => !ignorePaths.includes(page.path))
+            .map((page) => page.path);
 
-            return [...acc , {path: `blog${currentPage.fields.slug}`}, {path:`blog${currentPage.fields.slug}/`}];
-          },[])
+          const webflowPaths = webflowPosts
+            .filter((post) => post.fields.slug !== undefined)
+            .map((post) => `blog${post.fields.slug}`);
 
-          const allPagesWithTralingSlashes = allPages.reduce((acc,currentPage)=>{
-
-            if(ignorePaths.includes(currentPage.path)){
-              return acc;
-            }
-
-            const pathWithTrailingSlash = { path: currentPage.path + '/' }
-            return [...acc, currentPage, pathWithTrailingSlash]
-          },[])
-          
-          return [...allPagesWithTralingSlashes, ...webflowBlogsWithTrailingSlashes];
+          const uniquePaths = [...new Set([...gatsbyPaths, ...webflowPaths].map(toCanonicalPath))];
+          return uniquePaths.map((path) => ({ path }));
         },
         serialize: ({ path }) => {
           return {
